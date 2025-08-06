@@ -1,0 +1,63 @@
+/* 上部バー（トップバー） */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 80%;
+  height: 50px;
+  background-color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 15px;
+  z-index: 1000;
+  font-size: 20px;
+}
+
+/* 下部ナビゲーションバー */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  height: 60px;
+  background-color: #666;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #999;
+  z-index: 999;
+}
+
+/* ナビゲーションアイテム（リンク） */
+.nav-item {
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #555;
+}
+
+/* アイコン部分（span） */
+.nav-icon {
+  display: block;
+}
+
+/* 戻る＆メニューボタン */
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-button:hover {
+  opacity: 0.8;
+}

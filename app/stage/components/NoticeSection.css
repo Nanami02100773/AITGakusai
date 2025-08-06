@@ -1,0 +1,43 @@
+/* お知らせ：セクション全体（.notice-section） */
+.notice-section {
+  margin: 80px auto;
+  text-align: center;
+}
+
+/* お知らせ：タイトル見出し（.title1） */
+.title1 {
+  background-color: #999;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 300px;
+  margin: 20px auto 10px;
+}
+
+/* お知らせ：リストボックス背景（.box3） */
+.box3 {
+  background-color: #b3b3b3;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  max-height: 137px;
+  overflow-y: auto;
+}
+
+/* お知らせ：リスト項目（.notice-item） */
+.notice-item {
+  background-color: #f4f4f4;
+  padding: 13px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* お知らせ：リスト項目ホバー時（.notice-item:hover） */
+.notice-item:hover {
+  background-color: #e0e0e0;
+}

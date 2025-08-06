@@ -1,0 +1,38 @@
+body {
+  overflow-x: auto; /* ← hidden は絶対NG */
+  margin: 0;
+  padding: 0;
+}
+
+
+.section-title {
+  background-color: #999;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  width: 250px;
+  overflow: hidden;
+}
+
+.description-container {
+  overflow: hidden;
+}
+
+
+.description-box {
+  width: 100%;         /* ← まずは画面にフィットさせる */
+  max-width: 700px;    /* ← 最大700pxの制限 */
+  margin: 0 auto 16px auto;
+  background: #e0e0e0;
+  border-radius: 12px;
+  min-height: 36px;
+  padding: 8px 12px;
+  color: #333;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+

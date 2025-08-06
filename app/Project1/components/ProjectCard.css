@@ -1,0 +1,59 @@
+.project-list {
+  display: flex; /* ← gridからflexに変更 */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+  max-width: 660px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+
+.project-card {
+  background: #e0e0e0;
+  border-radius: 30px;
+  height: 200px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ← アニメーション追加 */
+  cursor: pointer; /* ← 手の形カーソルでクリック感を演出 */
+}
+
+.project-card:hover {
+  transform: scale(1.025); /* ← ホバー時に拡大 */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* ← 影を少し強調 */
+}
+
+.project-card::before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 130px;
+  margin: 13px auto 0 auto;
+  background: #b3b3b3;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.project-title {
+  width: 200px;
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 18px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-top: auto;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}

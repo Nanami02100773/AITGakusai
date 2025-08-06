@@ -1,0 +1,118 @@
+/* ===== 全体レイアウト ===== */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.wakuwakuland-title {
+  background-color: #999;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 20px; /* タイトルも丸く */
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  width: 250px;
+  margin: 40px auto 20px;
+  overflow: hidden;
+}
+
+.card-list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== カード全体枠 ===== */
+.card {
+  display: flex;
+  background: #ddd;
+  margin-bottom: 12px;
+  overflow: hidden;
+  width: 700px;
+  height: 190px;
+}
+
+/* ===== 縦の仕切り線 ===== */
+.card-divider {
+  width: 3px;
+  background: #ffffff;
+  margin: 10px 0;
+  flex-shrink: 0;
+}
+
+/* ===== 左側領域（画像エリア） ===== */
+.card-left {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== ラッパー ===== */
+.thumb-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+/* ===== 画像ボックス ===== */
+.thumb {
+  background: #aaa;
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+}
+
+/* ===== ラベル ===== */
+.label {
+  background: #ccc;
+  height: 30px;
+  width: 60%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* ===== 右のテキストエリア ===== */
+.card-right {
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title {
+  background: #bbb;
+  padding: 4px 8px;
+  width: fit-content;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  display: inline-block;
+}
+
+.desc {
+  background: #bbb;
+  padding: 4px 8px;
+  width: fit-content;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  display: inline-block;
+}

@@ -1,0 +1,106 @@
+/* ===== 全体レイアウト ===== */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.game-title {
+  background-color: #999;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 20px; /* タイトルも丸く */
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  width: 250px;
+  margin: 40px auto 20px;
+  overflow: hidden;
+}
+
+.card-list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== カード全体枠 ===== */
+.card {
+  display: flex;
+  background: #ddd;
+  margin-bottom: 152x;
+  overflow: hidden;
+  width: 700px;
+  height: auto;
+  min-height: 190px;
+}
+
+/* ===== 縦の仕切り線 ===== */
+.card-divider {
+  width: 3px;
+  background: #ffffff;
+  margin: 10px 0;
+  flex-shrink: 0;
+}
+
+/* ===== 左側領域（画像エリア） ===== */
+.card-left {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.thumb {
+  background: #aaa;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover; /* ← 実際にimgを使う場合に重要 */
+}
+
+
+
+
+/* ===== 右のテキストエリア ===== */
+.card-right {
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.title {
+  background: #bbb;
+  padding: 4px 8px;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  white-space: normal;
+  word-break: break-word;
+}

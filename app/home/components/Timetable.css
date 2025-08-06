@@ -1,0 +1,95 @@
+/* タイトル */
+.title.time_table {
+  background-color: #999;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px auto 10px;
+  text-align: center;
+  width: 300px;
+}
+
+/* セクション全体 */
+.timetable-section {
+  text-align: center;
+}
+
+/* テーブル外枠ボックス */
+.box {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #b3b3b3;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-height: 600px;
+  overflow-y: auto;
+  max-width: 800px;
+}
+
+/* テーブル本体 */
+table {
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-family: sans-serif;
+  table-layout: fixed;
+}
+
+/* 各セル */
+td, th {
+  border: 5px solid #b3b3b3;
+  padding: 12px;
+  text-align: center;
+}
+
+/* 最初の列 */
+td:first-child, th:first-child {
+  width: 150px;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* ヘッダー行 */
+th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 15px solid #b3b3b3;
+}
+
+thead th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  height: 35px;
+  font-size: 13px;
+  background-color: #e6e6e6;
+}
+
+thead th:first-child {
+  background-color: #e6e6e6 !important;
+}
+
+/* 中央黒線セル */
+.divider-cell {
+  width: 13px;
+  background-color: rgb(108, 108, 108);
+  border-left: 8px solid #b3b3b3;
+  border-right: 8px solid #b3b3b3;
+  padding: 0;
+}
+
+/* 中央線のヘッダーだけ色を変える */
+.divider-cell.divider-head {
+  background-color: #b3b3b3;
+}
+
+/* 表示調整用に空にするだけのセル（中身なし） */
+.divider-space {
+  display: none;
+}
+

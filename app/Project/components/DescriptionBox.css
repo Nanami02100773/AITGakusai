@@ -1,0 +1,24 @@
+/* タイトル1：section-title（セクションの見出しラベル） */
+.section-title {
+  display: inline-block;
+  background: #999;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 20px;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+
+/* タイトル2：description-box（説明ボックス） */
+.description-box {
+  width: 90%;
+  margin: 0 auto 16px auto;
+  background: #e0e0e0;
+  border-radius: 12px;
+  min-height: 36px;
+  padding: 8px 12px;
+  color: #333;
+  font-size: 1rem;
+}

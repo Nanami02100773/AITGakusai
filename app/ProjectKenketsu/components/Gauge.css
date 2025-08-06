@@ -1,0 +1,97 @@
+body {
+  font-family: sans-serif;
+  background: #ffffff;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.donation-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gauge-container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: auto;
+}
+
+.gauge-base {
+  stroke: #ddd;
+  stroke-width: 10;
+  fill: none;
+}
+
+.gauge-progress {
+  stroke: #e74c3c;
+  stroke-width: 10;
+  fill: none;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+#gaugeDot {
+  transition: cx 0.6s ease, cy 0.6s ease;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+.center-box {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 50px;
+  background: #eee;
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: bold;
+  color: #333;
+}
+
+.goal-text {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.gauge-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+.update-time {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.input-section {
+  margin-top: 20px;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 6px;
+  margin-right: 8px;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

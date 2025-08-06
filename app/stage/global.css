@@ -1,0 +1,8 @@
+.background-box {
+  background-color: #e7e7e7;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}

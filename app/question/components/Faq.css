@@ -1,0 +1,30 @@
+/* FAQ全体：外枠ラッパー（.faq-wrapper） */
+.faq-wrapper {
+  padding: 0 16px;
+}
+
+/* FAQ：タイトル見出し（.faq-box-title） */
+.faq-box-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #999;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 20px;
+  display: block;
+  width: 300px;
+  margin: 100px auto 70px;
+}
+
+/* FAQ：セクション全体（.faq-container） */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto 300px auto;
+  padding: 1.25rem;
+  font-family: sans-serif;
+  background-color: #d1d1d1;
+  padding-top: 80px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,62 @@
+.image-carousel {
+  /* width: 96%; */
+  width: 100vw; /* 画面横幅いっぱい */
+  /* margin: 32px auto 16px auto; */
+  margin: 0px 0 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 220px; /* 高さを大きく */
+  overflow: visible;
+  background: rgba(0, 0, 0, 0.15); /* 背景を少し暗く */
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-image {
+  position: absolute;
+  transition: all 0.5s cubic-bezier(.4,0,.2,1);
+  opacity: 0;
+  z-index: 1;
+  border-radius: 16px;
+  background: #e0e0e0;
+  width: 320px;   /* 幅を大きく */
+  height: 200px;  /* 高さを大きく */
+}
+
+.carousel-image.center {
+  left: 50%;
+  transform: translateX(-50%) scale(1.1);
+  opacity: 1;
+  z-index: 3;
+  width: 80%;         /* 横幅を80%に */
+  height: 180px;  
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.carousel-image.left,
+.carousel-image.right {
+  width: 80%;    
+  height: 180px;
+}
+
+.carousel-image.left {
+  left: -50%;    
+  transform: scale(0.8);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.carousel-image.right {
+  left: 70%;
+  transform: scale(0.8);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.carousel-image.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

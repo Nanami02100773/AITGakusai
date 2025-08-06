@@ -1,0 +1,58 @@
+/* タイトル1：h2（グランプリ） */
+.title1 {
+  background-color: #999;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 20px;
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px auto 10px;
+  text-align: center;
+  width: 300px;
+}
+
+/* 説明文ボックス（h3） */
+.box1 {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #b3b3b3;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* タイトル2の補足スタイル */
+.title2 {
+  background-color: #999;
+  color: white;
+  font-size: 18px;
+  margin: 20px auto 10px;
+  width: 800px;
+}
+
+/* 賞リストを囲む外枠 */
+.box2 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #b3b3b3;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+/* 賞の個別カード */
+.award-card {
+  background-color: #eee;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* 賞の説明 */
+.award-desc {
+  padding: 10px;
+  color: #555;
+}
