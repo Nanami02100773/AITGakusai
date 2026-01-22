@@ -1,86 +1,147 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+
+import { useEffect, useRef, useState } from "react";
 import "./Carousel.css";
 
-const items = Array.from({ length: 8 }, (_, i) => ({
-  id: i,
-  title: `アイテム ${i + 1}`,
-  imgUrl: `https://picsum.photos/seed/${i + 1}/400/300`
-}));
+export default function Carousel({ items = [] }) {
+  const containerRef = useRef(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [isStopped, setIsStopped] = useState(false);
 
-const LoopingAutoCarousel = () => {
-  const scrollRef = useRef(null);
-  const [pageIndex, setPageIndex] = useState(0);
-  const itemWidth = 240 + 16;
-  const loopedItems = [...items, ...items, ...items]; // ★ 3倍に複製
-  const middleIndex = items.length;
+  // items が空のときのダミー（6ページ）
+  const fallbackItems = [
+    { title: "学園祭のお知らせ①", description: "各企画を準備中です", image: "https://placehold.jp/600x400.png" },
+    { title: "学園祭のお知らせ②", description: "ステージ企画を準備中", image: "https://placehold.jp/600x400.png" },
+    { title: "学園祭のお知らせ③", description: "屋台情報を更新予定", image: "https://placehold.jp/600x400.png" },
+    { title: "学園祭のお知らせ④", description: "参加団体を紹介します", image: "https://placehold.jp/600x400.png" },
+    { title: "学園祭のお知らせ⑤", description: "タイムテーブル公開予定", image: "https://placehold.jp/600x400.png" },
+    { title: "学園祭のお知らせ⑥", description: "最新情報をお楽しみに", image: "https://placehold.jp/600x400.png" },
+  ];
+
+  const displayItems = items.length > 0 ? items : fallbackItems;
 
   useEffect(() => {
-    const container = scrollRef.current;
+    const container = containerRef.current;
     if (!container) return;
 
-    // 真ん中から開始
-    container.scrollLeft = middleIndex * itemWidth;
+    let animationId;
+    const speed = 1.2;        // 自動スクロール速度
+    const stopTime = 800;     // 中央で止まる時間
+    const cardWidth = 420 + 40;
 
-    const scrollStep = 1; // ★ 1pxずつ進む速度
-    const interval = 20;  // ★ 更新間隔(ms)
+    let isPaused = false;
+    let isUserInteracting = false;
+    let lastStoppedIndex = -1;
 
-    const loop = setInterval(() => {
-      if (!container) return;
-      container.scrollLeft += scrollStep;
+    const scroll = () => {
+      if (!isPaused && !isUserInteracting) {
+        setIsStopped(false);
+        container.scrollLeft += speed;
 
-      // 半分より先に行ったら真ん中へ戻す
-      if (container.scrollLeft >= (loopedItems.length - middleIndex) * itemWidth) {
-        container.scrollLeft = middleIndex * itemWidth;
+        const center = container.scrollLeft + container.clientWidth / 2;
+        const index = Math.floor(center / cardWidth);
+        const cardCenter = index * cardWidth + cardWidth / 2;
+
+        setCurrentPage(index % displayItems.length);
+
+        // 中央に来たら一回止まる
+        if (
+          Math.abs(center - cardCenter) < speed &&
+          index !== lastStoppedIndex
+        ) {
+          isPaused = true;
+          lastStoppedIndex = index;
+          setIsStopped(true);
+
+          setTimeout(() => {
+            isPaused = false;
+            setIsStopped(false);
+          }, stopTime);
+        }
+
+        // 無限ループ
+        if (
+          container.scrollLeft >=
+          container.scrollWidth - container.clientWidth
+        ) {
+          container.scrollLeft = 0;
+          lastStoppedIndex = -1;
+        }
       }
 
-      // インジケータ用の現在インデックスを計算
-      const index = Math.round(container.scrollLeft / itemWidth) % items.length;
-      setPageIndex(index);
-    }, interval);
+      animationId = requestAnimationFrame(scroll);
+    };
 
-    return () => clearInterval(loop);
-  }, []);
+    // 手動操作検知
+    const onMouseDown = () => (isUserInteracting = true);
+    const onMouseUp = () => (isUserInteracting = false);
+    const onMouseLeave = () => (isUserInteracting = false);
+    const onTouchStart = () => (isUserInteracting = true);
+    const onTouchEnd = () => (isUserInteracting = false);
+
+    container.addEventListener("mousedown", onMouseDown);
+    container.addEventListener("mouseup", onMouseUp);
+    container.addEventListener("mouseleave", onMouseLeave);
+    container.addEventListener("touchstart", onTouchStart);
+    container.addEventListener("touchend", onTouchEnd);
+
+    animationId = requestAnimationFrame(scroll);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      container.removeEventListener("mousedown", onMouseDown);
+      container.removeEventListener("mouseup", onMouseUp);
+      container.removeEventListener("mouseleave", onMouseLeave);
+      container.removeEventListener("touchstart", onTouchStart);
+      container.removeEventListener("touchend", onTouchEnd);
+    };
+  }, [displayItems.length]);
 
   return (
-    <div className="bg-gray-200 rounded-xl p-6 shadow-lg max-w-7xl mx-auto">
-      <div className="max-w-6xl mx-auto px-4 py-6 flex justify-center">
-        {/* カルーセル本体 */}
-        <div
-          ref={scrollRef}
-          className="carousel-container flex overflow-hidden space-x-4"
-          style={{ width: `${itemWidth * 3}px` }} // 常に3枚分の幅
-        >
-          {loopedItems.map((item, index) => (
-            <div
-              key={index}
-              className="min-w-[240px] rounded-xl shadow-md overflow-hidden bg-white"
-            >
-              <img
-                src={item.imgUrl}
-                alt={item.title}
-                className="w-full h-56 object-cover"
-              />
-            </div>
-          ))}
+    <div className="carousel-wrapper">
+      <div ref={containerRef} className="carousel-container horizontal">
+        <div className="carousel-list horizontal">
+          {displayItems.concat(displayItems).map((item, index) => {
+            const pageNumber = (index % displayItems.length) + 1;
+            const isCenter = index % displayItems.length === currentPage;
+            const shouldScale = isCenter && isStopped;
+
+            return (
+              <div
+                key={index}
+                className={`carousel-card horizontal ${
+                  shouldScale ? "is-center" : ""
+                }`}
+              >
+                <div className="carousel-page">{pageNumber}</div>
+
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="carousel-image"
+                  />
+                )}
+
+                <h2 className="carousel-title">{item.title}</h2>
+                <p className="carousel-description">{item.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
 
-      {/* ドットインジケータ */}
-      <div className="mt-4 flex justify-center">
-        <div className="bg-white px-4 py-2 rounded-xl flex space-x-2 shadow-inner max-w-fit mx-auto">
-          {items.map((_, i) => (
-            <div
-              key={i}
-              className={`w-3 h-3 rounded-full ${
-                i === pageIndex ? "bg-gray-800" : "bg-gray-400"
-              } transition duration-300`}
-            />
-          ))}
-        </div>
+      {/* ページインジケータ */}
+      <div className="carousel-indicator">
+        {displayItems.map((_, index) => (
+          <span
+            key={index}
+            className={`indicator-dot ${
+              index === currentPage ? "active" : ""
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
-};
-
-export default LoopingAutoCarousel;
+}

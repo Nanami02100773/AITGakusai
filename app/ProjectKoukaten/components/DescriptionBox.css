@@ -1,29 +1,20 @@
-body {
-  overflow-x: auto; /* ← hidden は絶対NG */
-  margin: 0;
-  padding: 0;
-}
-
-
-.section-title {
-  background-color: #999;
-  color: white;
-  padding: 10px 40px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
+.Koukaten-section-title {
+  display: block;
   width: 250px;
-  overflow: hidden;
+  max-width: 100%;
+  margin: 4px auto 10px;
+  text-align: center;
+  background: #999;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
-.description-container {
-  overflow: hidden;
-}
 
-
-.description-box {
-  width: 100%;         /* ← まずは画面にフィットさせる */
+.Koukaten-description-box {
+  width: 700px;         /* ← まずは画面にフィットさせる */
   max-width: 700px;    /* ← 最大700pxの制限 */
   margin: 0 auto 16px auto;
   background: #e0e0e0;

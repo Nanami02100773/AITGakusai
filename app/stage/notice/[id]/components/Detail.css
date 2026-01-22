@@ -1,0 +1,90 @@
+.notice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 96px;     /* ← 上ナビ分の余白 */
+  padding-bottom: 96px;  /* ← 下ナビ分の余白 */
+}
+
+
+/* ===== 上部バー ===== */
+.notice-top-bar {
+  width: 85%;
+  max-width: 640px;
+  height: 44px;
+  background: #848484;           /* 黒 */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 28px;
+}
+
+.notice-top-text {
+  color: #fff;                /* 白 */
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== 外枠カード ===== */
+.notice-card {
+  width: 90%;
+  max-width: 680px;
+  background: #d9d9d9;        /* グレー */
+  border-radius: 28px;
+  padding: 18px;
+}
+
+/* ===== 内側 ===== */
+.notice-card-inner {
+  background: #f2f2f2;        /* 明るいグレー */
+  border-radius: 22px;
+  padding: 24px;
+  min-height: 220px;
+}
+
+/* 区切り線の上の文言 */
+.notice-inner-title {
+  font-size: 13px;
+  color: #848484;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* 細い区切り線 */
+.notice-divider {
+  height: 2px;
+  width: 100%;
+  background: #929292;
+  margin-bottom: 20px;
+}
+
+/* テキスト */
+.notice-text {
+  font-size: 14px;
+  color: #979797;
+}
+
+/* ===== 外枠カード内のバー ===== */
+.notice-card-bar {
+  background: #848484;
+  border-radius: 12px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 14px;
+}
+
+.notice-card-bar-text {
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

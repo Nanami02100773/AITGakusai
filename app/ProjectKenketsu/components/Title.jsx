@@ -1,8 +1,8 @@
 import './Title.css';
 
-function Title({ text = "MAKE" }) {
+function Title({ text = "献血" }) {
   return (
-    <div className="project_title">{text}</div>
+    <div className="Kenketsu-project-title">{text}</div>
   );
 }
 

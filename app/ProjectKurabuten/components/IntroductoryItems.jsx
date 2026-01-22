@@ -52,31 +52,51 @@ const cardData = [
   },
 ];
 
-const Koukaten = () => {
+const Kurabuten = () => {
   return (
-    <main className="card-list">
-      <div className="koukaten-title">出展団体</div>
+    <section>
+      {/* セクションタイトル */}
+      <div className="ProjectKurabuten-section-wrapper">
+        <div className="ProjectKurabuten-section-title">出展団体</div>
+      </div>
 
-      {cardData.map((item, index) => (
-        <div className="card" key={index}>
-          <div className="card-left">
-            <div className="thumb-wrapper">
-              <div className="thumb"></div>
-              <div className="label">{item.label}</div>
-              <div className="overlay-box">{item.overlayText}</div>
+      {/* カード一覧 */}
+      <main className="ProjectKurabuten-card-list">
+        {cardData.map((item, index) => (
+          <div className="ProjectKurabuten-card" key={index}>
+            <div className="ProjectKurabuten-card-left">
+              <div className="ProjectKurabuten-thumb-wrapper">
+                <div className="ProjectKurabuten-thumb"></div>
+                <div className="ProjectKurabuten-label">
+                  {item.label}
+                </div>
+                <div className="ProjectKurabuten-overlay-box">
+                  {item.overlayText}
+                </div>
+              </div>
+            </div>
+
+            <div className="ProjectKurabuten-card-divider"></div>
+
+            <div className="ProjectKurabuten-card-right">
+              <div className="ProjectKurabuten-sub1-title">
+                {item.title}
+              </div>
+              <div className="ProjectKurabuten-introduction1-subdesc">
+                {item.subdesc1}
+              </div>
+              <div className="ProjectKurabuten-sub2-title">
+                {item.location}
+              </div>
+              <div className="ProjectKurabuten-introduction2-subdesc">
+                {item.subdesc2}
+              </div>
             </div>
           </div>
-          <div className="card-divider"></div>
-          <div className="card-right">
-            <div className="title">{item.title}</div>
-            <div className="subdesc">{item.subdesc1}</div>
-            <div className="desc">{item.location}</div>
-            <div className="subdesc">{item.subdesc2}</div>
-          </div>
-        </div>
-      ))}
-    </main>
+        ))}
+      </main>
+    </section>
   );
 };
 
-export default Koukaten;
+export default Kurabuten;

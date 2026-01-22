@@ -4,16 +4,17 @@ body {
   font-family: sans-serif;
   background: #f2f2f2;
   display: flex;
-  justify-content: center; /* 横方向中央 */
-  align-items: flex-start; /* 縦スクロールを許可 */
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
 }
 
-.koukaten-title {
+/* ===== タイトル ===== */
+.Make-title {
   background-color: #999;
   color: white;
   padding: 10px 40px;
-  border-radius: 20px; /* タイトルも丸く */
+  border-radius: 20px;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
@@ -22,50 +23,50 @@ body {
   overflow: hidden;
 }
 
-/* ===== カード全体枠 ===== */
-.card {
+/* ===== カード全体 ===== */
+.Make-card {
   display: flex;
   background: #ddd;
   margin-bottom: 12px;
   overflow: hidden;
   width: 700px;
   height: 190px;
-  border-radius: 15px; /* カードを角丸に */
+  border-radius: 15px;
 }
 
-/* ===== 縦の仕切り線 ===== */
-.card-divider {
+/* ===== 仕切り線 ===== */
+.Make-card-divider {
   width: 3px;
   background: #ffffff;
   margin: 10px 0;
-  flex-shrink: 0; /* 幅が潰れないように固定 */
+  flex-shrink: 0;
 }
 
-/* ===== 左側領域（画像エリア） ===== */
-.card-left {
+/* ===== 左側（画像） ===== */
+.Make-card-left {
   width: 300px;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 15px 0 0 15px; /* 左側の角を丸く */
+  border-radius: 15px 0 0 15px;
   overflow: hidden;
 }
 
-/* ===== ラッパー ===== */
-.thumb-wrapper {
+/* ===== 画像ラッパー ===== */
+.Make-thumb-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-end;  /* 下寄せ */
+  align-items: flex-end;
   justify-content: center;
   overflow: visible;
   border-radius: 10px;
 }
 
-/* ===== 濃いグレー画像ボックス ===== */
-.thumb {
+/* ===== 画像ボックス ===== */
+.Make-thumb {
   background: #aaa;
   width: 100%;
   height: 80%;
@@ -74,26 +75,26 @@ body {
   border-radius: 10px;
 }
 
-/* ===== 重ねる薄いグレーボックス ===== */
-.overlay-box {
+/* ===== 上のオーバーレイ ===== */
+.Make-overlay-box {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 200px;
   height: 30px;
   background: #a1a1a1;
   z-index: 10;
-  display: flex;             /* 文字を中央揃えするため */
-  align-items: center;       /* 縦方向中央 */
-  justify-content: center;   /* 横方向中央 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: bold;
-  color: #fff;               /* 白文字にすると読みやすい */
+  color: #fff;
   border-radius: 8px;
 }
 
 /* ===== 下のラベル ===== */
-.label {
+.Make-label {
   position: absolute;
   bottom: 8px;
   left: 8px;
@@ -104,73 +105,47 @@ body {
   border-radius: 6px;
 }
 
-/* ===== 右のテキストエリア ===== */
-.card-right {
-  width: 60%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  border-radius: 0 15px 15px 0; /* 右側の角を丸く */
-  overflow: hidden;
-}
-
-.card-right {
+/* ===== 右側テキスト ===== */
+.Make-card-right {
   width: 60%;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10px; /* ← 20pxから10pxへ調整 */
+  gap: 10px;
   border-radius: 0 15px 15px 0;
   overflow: hidden;
 }
 
-.title {
-  background: #bbb;
-  margin: 0; /* ← 余計な余白をカット */
-  padding: 4px 8px;
-  border-radius: 6px;
-  display: inline-block;
-  width: fit-content;
-  max-width: 100%;
-  white-space: normal;
-  word-break: break-word;
-}
-
-.desc {
-  background: #bbb;
-  margin: 0;
-  padding: 4px 8px;
-  border-radius: 6px;
-  display: inline-block;
-  width: fit-content;
-  max-width: 100%;
-  white-space: normal;
-  word-break: break-word;
-}
-
-.extra-text {
+.Make-title-box {
   background: #bbb;
   padding: 4px 8px;
   border-radius: 6px;
   width: fit-content;
   max-width: 100%;
-  white-space: normal;
   word-break: break-word;
 }
 
-.subdesc {
+.Make-desc {
+  background: #bbb;
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: fit-content;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.Make-subdesc {
   font-size: 0.85em;
   color: #333;
   padding-left: 6px;
   margin: -4px 0 8px 0;
 }
 
-.card-list {
+/* ===== リスト全体 ===== */
+.Make-card-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 80px; /* ここで下に空間を作る */
+  padding-bottom: 80px;
 }

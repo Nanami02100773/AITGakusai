@@ -1,4 +1,5 @@
 "use client";
+import "./page.css"
 import React from "react";
 import Title from "./components/Title";
 import ImageCarousel from "./components/ImageCarousel";
@@ -14,7 +15,7 @@ import img3 from "./components/images/スクリーンショット 2024-07-03 114
 
 export default function Page() {
   return (
-    <div>
+    <div className="koukaten">
       <Title/>
       <ImageCarousel images={[img1, img2, img3]} />
       <DescriptionBox />

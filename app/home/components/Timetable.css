@@ -12,6 +12,16 @@
   width: 300px;
 }
 
+/* 1日目 用（コンパクト） */
+.title.time_table.day-title {
+  width: 160px;          /* ← 今より狭い */
+  padding: 6px 20px;     /* 高さも少し小さく */
+  font-size: 18px;       /* 文字サイズも調整 */
+  border-radius: 16px;
+  margin: 16px auto 8px;
+}
+
+
 /* セクション全体 */
 .timetable-section {
   text-align: center;

@@ -52,26 +52,30 @@ const cardData = [
   },
 ];
 
-const Koukaten = () => {
+const MakeIntroductoryItems = () => {
   return (
-    <main className="card-list">
-      <div className="koukaten-title">出展団体</div>
+    <main className="Make-card-list">
+      <div className="Make-title">出展団体</div>
 
       {cardData.map((item, index) => (
-        <div className="card" key={index}>
-          <div className="card-left">
-            <div className="thumb-wrapper">
-              <div className="thumb"></div>
-              <div className="label">{item.label}</div>
-              <div className="overlay-box">{item.overlayText}</div>
+        <div className="Make-card" key={index}>
+          <div className="Make-card-left">
+            <div className="Make-thumb-wrapper">
+              <div className="Make-thumb"></div>
+              <div className="Make-label">{item.label}</div>
+              <div className="Make-overlay-box">
+                {item.overlayText}
+              </div>
             </div>
           </div>
-          <div className="card-divider"></div>
-          <div className="card-right">
-            <div className="title">{item.title}</div>
-            <div className="subdesc">{item.subdesc1}</div>
-            <div className="desc">{item.location}</div>
-            <div className="subdesc">{item.subdesc2}</div>
+
+          <div className="Make-card-divider"></div>
+
+          <div className="Make-card-right">
+            <div className="Make-title-box">{item.title}</div>
+            <div className="Make-subdesc">{item.subdesc1}</div>
+            <div className="Make-desc">{item.location}</div>
+            <div className="Make-subdesc">{item.subdesc2}</div>
           </div>
         </div>
       ))}
@@ -79,4 +83,4 @@ const Koukaten = () => {
   );
 };
 
-export default Koukaten;
+export default MakeIntroductoryItems;

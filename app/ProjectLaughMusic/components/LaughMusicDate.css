@@ -1,0 +1,32 @@
+/* 日付切り替え：ラッパー */
+.LaughMusicDate-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0 18px;
+}
+
+/* ボタン通常状態 */
+.LaughMusicDate-toggle button {
+  padding: 10px 36px;
+  font-size: 13px;
+  background-color: #f7f7f7;
+  color: #444;
+  border: 1.5px solid #ccc;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ホバー時 */
+.LaughMusicDate-toggle button:hover {
+  background-color: #ededed;
+}
+
+/* 選択状態 */
+.LaughMusicDate-toggle button.active {
+  background-color: #444;
+  color: #fff;
+  border-color: #444;
+  font-weight: 600;
+}

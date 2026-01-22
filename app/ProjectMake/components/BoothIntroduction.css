@@ -1,71 +1,37 @@
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #ffffff;
-}
-
-.Make-title {
-  background-color: #999;
-  color: white;
-  padding: 10px 40px;
-  border-radius: 20px; /* タイトルも丸く */
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  width: 250px;
-  margin: 40px auto 20px;
-  overflow: hidden;
-   margin-bottom: 30px;
-}
-
-
-.section-title {
-  background-color: #888;
-  color: #fff;
-  display: inline-block;
-  padding: 5px 15px;
-  border-radius: 10px;
-  font-size: 16px;
-  margin: 20px auto;
-  text-align: center;
-  display: block;          /* ← 中央揃えにするために block に */
-  width: fit-content;      /* タイトルの幅を中身に合わせて調整 */
-}
-
-.booth-list {
+/* ブース一覧 */
+.Make-booth-list {
   display: flex;
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
   margin-top: 20px;
-  margin-bottom: 100px; /* ← これを追加！ */
+  margin-bottom: 100px;
 }
 
-
-.booth-item {
+.Make-booth-item {
   width: 200px;
 }
 
-.booth-card {
+.Make-booth-card {
   background-color: #bebebe;
-  padding: 15px 10px;       /* 上下の余白も拡大 */
+  padding: 15px 10px;
   text-align: center;
-  height: 160px;            /* 高さを明示的に大きく */
+  height: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* 中身を上下中央に */
-    border-radius: 5px;
+  justify-content: center;
+  border-radius: 5px;
 }
 
-.booth-image {
+.Make-booth-image {
   width: 100%;
-  height: 150px;            /* 画像も高くする */
+  height: 150px;
   background-color: #e3e3e3;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
-.booth-label {
+.Make-booth-label {
   font-size: 15px;
   color: white;
   margin: 0;

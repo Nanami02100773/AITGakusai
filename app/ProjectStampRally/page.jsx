@@ -4,6 +4,7 @@ import Title from "./components/Title";
 import ImageCarousel from "./components/ImageCarousel";
 import DescriptionBox from "./components/DescriptionBox";
 import DetailTable from "./components/DetailTable";
+import StampPoint from "./components/StampPonit";
 import NavigationBar from "./components/NavigationBar";
 
 import img1 from "./components/images/スクリーンショット (1).png";
@@ -17,6 +18,7 @@ export default function Page() {
       <ImageCarousel images={[img1, img2, img3]} />
       <DescriptionBox />
       <DetailTable />
+      <StampPoint/>
       <NavigationBar />
     </div>
   );

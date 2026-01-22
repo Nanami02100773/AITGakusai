@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './ImageCarousel.css';
+import React, { useState, useEffect } from "react";
+import "./ImageCarousel.css";
 
 function ImageCarousel({ images = [] }) {
   const [current, setCurrent] = useState(0);
@@ -12,17 +12,26 @@ function ImageCarousel({ images = [] }) {
   }, [images.length]);
 
   return (
-    <div className="image-carousel">
-      {Array.isArray(images) && images.map((src, idx) => {
-        let className = "carousel-image";
-        if (idx === current) className += " center";
-        else if (idx === (current + 1) % images.length) className += " right";
-        else if (idx === (current - 1 + images.length) % images.length) className += " left";
-        else className += " hidden";
-        return (
-          <img className={className} src={src} alt={`carousel-${idx}`} key={idx} />
-        );
-      })}
+    <div className="Kenketsu-image-carousel">
+      {Array.isArray(images) &&
+        images.map((src, idx) => {
+          let className = "Kenketsu-carousel-image";
+
+          if (idx === current) className += " center";
+          else if (idx === (current + 1) % images.length) className += " right";
+          else if (idx === (current - 1 + images.length) % images.length)
+            className += " left";
+          else className += " hidden";
+
+          return (
+            <img
+              className={className}
+              src={src}
+              alt={`carousel-${idx}`}
+              key={idx}
+            />
+          );
+        })}
     </div>
   );
 }

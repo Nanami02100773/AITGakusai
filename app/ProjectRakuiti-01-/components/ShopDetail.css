@@ -1,0 +1,141 @@
+.Rakuiti-01-shop-detail {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  background: #fff;
+  font-family: sans-serif;
+  padding-bottom: 100px;
+}
+
+/* =========================
+   アイコン
+========================= */
+.Rakuiti-01-shop-icon-area {
+  background: #f0f0f0;
+  height: 250px;
+  margin: 60px 20px 0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================
+   店名
+========================= */
+.Rakuiti-01-shop-name {
+  margin: 20px auto 4px;
+  width: 250px;
+  text-align: center;
+  background: #bdbdbd;
+  border-radius: 20px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.Rakuiti-01-shop-org {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   タブ
+========================= */
+.Rakuiti-01-shop-tabs {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.Rakuiti-01-tab {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #777;
+  cursor: pointer;
+}
+
+.Rakuiti-01-tab-active {
+  color: #000;
+  border-bottom: 2px solid #999;
+}
+
+/* =========================
+   本文
+========================= */
+.Rakuiti-01-shop-description {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* =========================
+   お店の紹介
+========================= */
+.Rakuiti-01-shop-focus {
+  margin-top: 32px;
+}
+
+.Rakuiti-01-shop-focus-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.Rakuiti-01-shop-focus-images {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.Rakuiti-01-image-box {
+  width: 200px;
+  height: 140px;
+  background: #d9d9d9;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   メニュー
+========================= */
+.Rakuiti-01-shop-menu {
+  padding: 32px 20px;
+}
+
+.Rakuiti-01-menu-sheet {
+  display: flex;
+  align-items: stretch;
+}
+
+.Rakuiti-01-menu-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 16px;
+  color: #444;
+}
+
+.Rakuiti-01-menu-col-left {
+  width: 45%;
+}
+
+.Rakuiti-01-menu-col-right {
+  width: 45%;
+  text-align: right;
+}
+
+.Rakuiti-01-menu-line {
+  width: 1px;
+  background: #bbb;
+  margin: 0 16px;
+}
+
+.Rakuiti-01-menu-row {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}

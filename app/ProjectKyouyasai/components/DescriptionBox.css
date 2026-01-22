@@ -1,0 +1,28 @@
+.Kyouyasai-section-title {
+  display: block;
+  width: 250px;
+  max-width: 100%;
+  margin: 4px auto 10px;
+  text-align: center;
+  background: #999;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.Kyouyasai-description-box {
+  width: 700px;
+  max-width: 700px;
+  margin: 0 auto 16px auto;
+  background: #e0e0e0;
+  border-radius: 12px;
+  min-height: 36px;
+  padding: 8px 12px;
+  color: #333;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+

@@ -12,9 +12,9 @@ function ImageCarousel({ images = [] }) {
   }, [images.length]);
 
   return (
-    <div className="image-carousel">
+    <div className="Projectkoukaten-image-carousel">
       {Array.isArray(images) && images.map((src, idx) => {
-        let className = "carousel-image";
+        let className = "Projectkoukaten-carousel-image";
         if (idx === current) className += " center";
         else if (idx === (current + 1) % images.length) className += " right";
         else if (idx === (current - 1 + images.length) % images.length) className += " left";

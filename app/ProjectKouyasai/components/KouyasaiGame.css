@@ -1,0 +1,52 @@
+/* ===== Game Corner ===== */
+.Kouyasai-gameCorner-list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.Kouyasai-gameCorner-item {
+  width: 200px;
+}
+
+.Kouyasai-gameCorner-card {
+  background-color: #bebebe;
+  padding: 15px 10px;
+  text-align: center;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.Kouyasai-gameCorner-image {
+  width: 100%;
+  height: 150px;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.Kouyasai-gameCorner-label {
+  font-size: 15px;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* ===== セクションタイトル ===== */
+.Kouyasai-section-title {
+  display: block;
+  width: 220px;
+  margin: 0 auto 12px;
+  text-align: center;
+  background: #999;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-size: 1rem;
+}

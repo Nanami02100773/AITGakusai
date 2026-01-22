@@ -2,7 +2,7 @@ import './Title.css';
 
 function Title({ text = "脱出ゲーム" }) {
   return (
-    <div className="project_title">{text}</div>
+    <div className="Dasstsu-project-title">{text}</div>
   );
 }
 

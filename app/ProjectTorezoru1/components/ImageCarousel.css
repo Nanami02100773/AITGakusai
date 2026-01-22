@@ -1,0 +1,55 @@
+.Torezoru-image-carousel {
+  position: relative;
+  width: 700px;
+  height: 220px;
+  margin: 32px auto;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-top: 30px;
+}
+
+.Torezoru-carousel-image {
+  position: absolute;
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+/* 中央画像 */
+.Torezoru-carousel-image.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* 左右画像 */
+.Torezoru-carousel-image.left,
+.Torezoru-carousel-image.right {
+  top: 50%;
+  transform: translateY(-50%) scale(0.85);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.Torezoru-carousel-image.left {
+  left: 0%;
+}
+
+.Torezoru-carousel-image.right {
+  left: 55%;
+}
+
+.Torezoru-carousel-image.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}

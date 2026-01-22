@@ -1,0 +1,32 @@
+/* 日付切り替え：ラッパー */
+.TorezoruDate-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 20px;              /* ← 詰める */
+  margin: 10px 0 18px;   /* ← タイトル直下感 */
+}
+
+/* ボタン通常状態 */
+.TorezoruDate-toggle button {
+  padding: 10px 36px;    /* ← 小さく */
+  font-size: 13px;       /* ← 控えめ */
+  background-color: #f7f7f7;
+  color: #444;
+  border: 1.5px solid #ccc; /* ← 軽く */
+  border-radius: 16px;   /* ← タイトルより小 */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ホバー時 */
+.TorezoruDate-toggle button:hover {
+  background-color: #ededed;
+}
+
+/* 選択状態 */
+.TorezoruDate-toggle button.active {
+  background-color: #444;  /* ← タイトルと同系 */
+  color: #fff;
+  border-color: #444;
+  font-weight: 600;        /* ← bold にしない */
+}

@@ -14,7 +14,7 @@
 
 /* 説明文ボックス（h3） */
 .box1 {
-  width: 90%;
+  max-width: 800px;   /* box2 と同じ */
   margin: 0 auto;
   padding: 20px;
   background-color: #b3b3b3;
@@ -29,8 +29,9 @@
   color: white;
   font-size: 18px;
   margin: 20px auto 10px;
-  width: 800px;
+  /* widthは削除 */
 }
+
 
 /* 賞リストを囲む外枠 */
 .box2 {

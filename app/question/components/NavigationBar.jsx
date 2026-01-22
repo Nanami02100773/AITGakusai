@@ -31,7 +31,7 @@ const NavigationBar = () => {
         <Link href="/map" className="nav-item">
           <span className="nav-icon">📍</span>
         </Link>
-        <Link href="/Project1" className="nav-item">
+        <Link href="/Project2" className="nav-item">
           <span className="nav-icon">📅</span>
         </Link>
         <Link href="/question" className="nav-item">

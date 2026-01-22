@@ -1,11 +1,13 @@
 "use client";
+import "./page.css"
 import React from "react";
 import Title from "./components/Title";
 import ImageCarousel from "./components/ImageCarousel";
+// もしファイル名が DescriptionBox.jsx の場合：
 import DescriptionBox from "./components/DescriptionBox";
 import DetailTable from "./components/DetailTable";
+import Playground from "./components/Playground";
 import NavigationBar from "./components/NavigationBar";
-import Playground from "./components/Playground"
 
 import img1 from "./components/images/スクリーンショット (1).png";
 import img2 from "./components/images/スクリーンショット 2024-06-12 110056.png";
@@ -13,13 +15,13 @@ import img3 from "./components/images/スクリーンショット 2024-07-03 114
 
 export default function Page() {
   return (
-    <div>
+    <div className="koukaten">
       <Title/>
       <ImageCarousel images={[img1, img2, img3]} />
       <DescriptionBox />
       <DetailTable />
+      <Playground />
       <NavigationBar />
-      <Playground/>
     </div>
   );
 }

@@ -1,0 +1,88 @@
+.home-notice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+/* ===== 上部バー ===== */
+.home-notice-top-bar {
+  width: 85%;
+  max-width: 640px;
+  height: 44px;
+  background: #848484;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 28px;
+}
+
+.home-notice-top-text {
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== 外枠カード ===== */
+.home-notice-card {
+  width: 90%;
+  max-width: 680px;
+  background: #d9d9d9;
+  border-radius: 28px;
+  padding: 18px;
+}
+
+/* ===== 内側 ===== */
+.home-notice-card-inner {
+  background: #f2f2f2;
+  border-radius: 22px;
+  padding: 24px;
+  min-height: 220px;
+}
+
+/* 区切り線の上の文言 */
+.home-notice-inner-title {
+  font-size: 13px;
+  color: #848484;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 細い区切り線 */
+.home-notice-divider {
+  height: 2px;
+  width: 100%;
+  background: #929292;
+  margin-bottom: 20px;
+}
+
+/* テキスト */
+.home-notice-text {
+  font-size: 14px;
+  color: #979797;
+}
+
+/* ===== 外枠カード内のバー ===== */
+.home-notice-card-bar {
+  background: #848484;
+  border-radius: 12px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 14px;
+}
+
+.home-notice-card-bar-text {
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

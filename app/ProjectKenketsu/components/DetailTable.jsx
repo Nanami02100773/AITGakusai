@@ -1,7 +1,7 @@
 import React from "react";
 import "./DetailTable.css";
 
-function DetailTable() {
+function KenketsuDetailTable() {
   const details = [
     { label: "場所", value: "〇〇教室" },
     { label: "時間", value: "10:00～16:00" },
@@ -9,18 +9,29 @@ function DetailTable() {
   ];
 
   return (
-    <div>
-      <div className="detail-title">企画詳細</div>
-      <div className="detail-table">
+    <section>
+      {/* セクションタイトル */}
+      <div className="Kenketsu-section-wrapper">
+        <div className="Kenketsu-section-title">
+          詳細情報
+        </div>
+      </div>
+
+      {/* 詳細テーブル */}
+      <div className="Kenketsu-detail-table">
         {details.map((d, i) => (
-          <div className="detail-row" key={i}>
-            <span className="detail-label">{d.label}</span>
-            <span className="detail-value">{d.value}</span>
+          <div className="Kenketsu-detail-row" key={i}>
+            <span className="Kenketsu-detail-label">
+              {d.label}
+            </span>
+            <span className="Kenketsu-detail-value">
+              {d.value}
+            </span>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
-export default DetailTable;
+export default KenketsuDetailTable;

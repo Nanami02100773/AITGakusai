@@ -9,17 +9,28 @@ function DetailTable() {
   ];
 
   return (
-    <div>
-      <div className="detail-title">企画詳細</div>
-      <div className="detail-table">
+    <section>
+      {/* セクションタイトル */}
+      <div className="ProjectStampRally-section-wrapper">
+        <div className="ProjectStampRally-section-title">
+          詳細情報
+        </div>
+      </div>
+
+      {/* 詳細テーブル */}
+      <div className="ProjectStampRally-detail-table">
         {details.map((d, i) => (
-          <div className="detail-row" key={i}>
-            <span className="detail-label">{d.label}</span>
-            <span className="detail-value">{d.value}</span>
+          <div className="ProjectStampRally-detail-row" key={i}>
+            <span className="ProjectStampRally-detail-label">
+              {d.label}
+            </span>
+            <span className="ProjectStampRally-detail-value">
+              {d.value}
+            </span>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

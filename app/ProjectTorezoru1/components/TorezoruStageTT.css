@@ -1,0 +1,121 @@
+/* =========================
+   全体
+========================= */
+.TorezoruStageTT {
+  background: #c6c5c5;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 0 auto;
+  margin: 0 auto 24px; /* ← 下に空間 */
+  width: 700px;
+}
+
+
+/* スクロール */
+.TorezoruStageTT-scroll-area {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.TorezoruStageTT-wrapper {
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+
+/* =========================
+   タイムスロット
+========================= */
+.TorezoruStageTT-time-slot {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.TorezoruStageTT-time-slot::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 32px;     /* ← 上の〇に当たらない位置 */
+  bottom: 70px;  /* ← 下の〇に当たらない位置 */
+  width: 3px;
+  background: #ccc;
+}
+
+.TorezoruStageTT-time-slot-item {
+  position: relative;
+  padding: 16px 0 16px 32px;
+  border-bottom: 1px solid #ddd;
+}
+
+.TorezoruStageTT-time-slot-item::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: white;
+  border: 3px solid #888;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 22px;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+.TorezoruStageTT-slot-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.TorezoruStageTT-time {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* イベント */
+.TorezoruStageTT-event {
+  background: #cdcdcd;
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* =========================
+   詳細
+========================= */
+.TorezoruStageTT-event-detail {
+  margin-top: 10px;
+  background: #e9e9e9;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+
+.TorezoruStageTT-day-switch {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 12px 0 20px;
+}
+
+.TorezoruStageTT-day-switch button {
+  width: 140px;
+  padding: 10px 0;
+  border-radius: 20px;
+  border: 2px solid #999;
+  background: white;
+  font-weight: bold;
+}
+
+.TorezoruStageTT-day-switch button.active {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}

@@ -2,7 +2,7 @@ import './Title.css';
 
 function Title({ text = "楽市楽座" }) {
   return (
-    <div className="project_title">{text}</div>
+    <div className="Rakuiti-project-title">{text}</div>
   );
 }
 

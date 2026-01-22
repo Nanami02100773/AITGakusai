@@ -1,24 +1,19 @@
-import './globals.css'; // ✅ これが必要です
+import NavigationBar from "./components/NavigationBar";
+import Detail from "./components/Detail";
+import { homeNoticeData } from "../../components/data/homeNoticeData";
+
 export default function NoticePage({ params }) {
-  const { id } = params;
+  const notice = homeNoticeData.find(
+    (item) => item.id === params.id
+  );
 
   return (
-    <div className="notice-wrapper">
-      <div className="notice-label">お知らせ</div>
-
-      <div className="notice-card">
-        <div className="notice-card-header">
-          <div className="notice-dot" />
-          <button className="notice-arrow">&#8963;</button>
-        </div>
-
-        <div className="notice-card-content">
-          <h1>お知らせ No.{id}</h1>
-          <p>
-            このページは <code>/notice/{id}</code> に対応する動的ルートです。
-          </p>
-        </div>
-      </div>
-    </div>
+    <main>
+      <NavigationBar />
+      <Detail
+        title={notice?.title ?? "お知らせ"}
+        body={notice?.body ?? "該当するお知らせがありません。"}
+      />
+    </main>
   );
 }

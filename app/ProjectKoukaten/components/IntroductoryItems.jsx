@@ -54,28 +54,46 @@ const cardData = [
 
 const Koukaten = () => {
   return (
-    <main className="card-list">
-      <div className="koukaten-title">出展団体</div>
+    <section>
+      {/* セクションタイトル */}
+      <div className="ProjectKoukaten-section-wrapper">
+        <div className="Koukaten-section-title">出展団体</div>
+      </div>
 
-      {cardData.map((item, index) => (
-        <div className="card" key={index}>
-          <div className="card-left">
-            <div className="thumb-wrapper">
-              <div className="thumb"></div>
-              <div className="label">{item.label}</div>
-              <div className="overlay-box">{item.overlayText}</div>
+      {/* カード一覧 */}
+      <main className="ProjectKoukaten-card-list">
+        {cardData.map((item, index) => (
+          <div className="ProjectKoukaten-card" key={index}>
+            <div className="ProjectKoukaten-card-left">
+              <div className="ProjectKoukaten-thumb-wrapper">
+                <div className="ProjectKoukaten-thumb"></div>
+                <div className="ProjectKoukaten-label">{item.label}</div>
+                <div className="ProjectKoukaten-overlay-box">
+                  {item.overlayText}
+                </div>
+              </div>
+            </div>
+
+            <div className="ProjectKoukaten-card-divider"></div>
+
+            <div className="ProjectKoukaten-card-right">
+              <div className="ProjectKoukaten-sub1-title">
+                {item.title}
+              </div>
+              <div className="ProjectKoukaten-introduction1-subdesc">
+                {item.subdesc1}
+              </div>
+              <div className="ProjectKoukaten-sub2-title">
+                {item.location}
+              </div>
+              <div className="ProjectKoukaten-introduction2-subdesc">
+                {item.subdesc2}
+              </div>
             </div>
           </div>
-          <div className="card-divider"></div>
-          <div className="card-right">
-            <div className="title">{item.title}</div>
-            <div className="subdesc">{item.subdesc1}</div>
-            <div className="desc">{item.location}</div>
-            <div className="subdesc">{item.subdesc2}</div>
-          </div>
-        </div>
-      ))}
-    </main>
+        ))}
+      </main>
+    </section>
   );
 };
 

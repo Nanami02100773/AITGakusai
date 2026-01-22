@@ -1,0 +1,104 @@
+/* ===== カード一覧 ===== */
+.Torezoru-card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+/* ===== カード ===== */
+.Torezoru-card {
+  display: flex;
+  background: #ddd;
+  margin-bottom: 12px;
+  overflow: hidden;
+  width: 700px;
+  height: 190px;
+  border-radius: 15px;
+}
+
+/* ===== 仕切り線 ===== */
+.Torezoru-card-divider {
+  width: 3px;
+  background: #ffffff;
+  margin: 10px 0;
+  flex-shrink: 0;
+}
+
+/* ===== 左側 ===== */
+.Torezoru-card-left {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 0 0 15px;
+  overflow: hidden;
+}
+
+.Torezoru-thumb-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: visible;
+  border-radius: 10px;
+}
+
+.Torezoru-thumb {
+  background: #aaa;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.Torezoru-overlay-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 30px;
+  background: #a1a1a1;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* ===== 右側 ===== */
+.Torezoru-card-right {
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  border-radius: 0 15px 15px 0;
+  overflow: hidden;
+}
+
+.Torezoru-item-title {
+  background: #bbb;
+  margin: 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.Torezoru-subdesc {
+  font-size: 0.85em;
+  color: #333;
+  padding-left: 6px;
+  margin: -4px 0 8px 0;
+}

@@ -1,0 +1,108 @@
+/* =========================
+   全体（下ナビ被り防止）
+========================= */
+.Concert {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+
+  /* 👇 上は元に戻す（何もしない） */
+  padding-top: 0;
+
+  /* 👇 下だけナビ分あける */
+  padding-bottom: 80px; /* ナビの高さ分 */
+}
+
+/* =========================
+   タイトル
+========================= */
+.Concert-title {
+  display: inline-block;
+  padding: 6px 24px;
+  background: #9c9c9c;
+  color: #fff;
+  border-radius: 20px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+/* =========================
+   アーティスト名
+========================= */
+.Concert-name {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  color: #333;
+}
+
+/* =========================
+   カード
+========================= */
+.Concert-card {
+  background: #d9d9d9;
+  border-radius: 16px;
+  overflow: hidden;
+
+  width: 640px;      /* ← ここで少し小さく */
+  margin: 0 auto;    /* 中央寄せ */
+}
+
+
+/* 画像エリア */
+.Concert-image {
+  height: 220px;
+  background: #cfcfcf;
+}
+
+/* 紹介文 */
+.Concert-description {
+  background: #bfbfbf;
+  padding: 12px;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   SNS
+========================= */
+.Concert-sns-title {
+  margin: 24px 0 12px;
+  color: #666;
+}
+
+.Concert-sns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.Concert-sns span {
+  width: 48px;
+  height: 48px;
+  background: #bdbdbd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+
+
+/* 紹介文（外側） */
+.Concert-description {
+  background: #bfbfbf;
+  padding: 12px;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* 👇 中の薄いボックス */
+.Concert-description-inner {
+  background: #e3e3e3;     /* 少し薄い灰色 */
+  border-radius: 10px;
+  padding: 10px 12px;
+}

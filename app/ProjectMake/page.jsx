@@ -5,7 +5,7 @@ import ImageCarousel from "./components/ImageCarousel";
 import DescriptionBox from "./components/DescriptionBox";
 import DetailTable from "./components/DetailTable";
 import NavigationBar from "./components/NavigationBar";
-import BoothIntroduction from "./components/BoothIntroduction"
+import BoothIntroduction from "./components/BoothIntroduction";
 
 import img1 from "./components/images/スクリーンショット (1).png";
 import img2 from "./components/images/スクリーンショット 2024-06-12 110056.png";
@@ -14,12 +14,14 @@ import img3 from "./components/images/スクリーンショット 2024-07-03 114
 export default function Page() {
   return (
     <div>
+      <div>
       <Title/>
       <ImageCarousel images={[img1, img2, img3]} />
       <DescriptionBox />
       <DetailTable />
       <NavigationBar />
       <BoothIntroduction/>
+      </div>
     </div>
   );
 }

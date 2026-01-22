@@ -1,8 +1,8 @@
 import './Title.css';
 
-function Title({ text = "MAKE" }) {
+function Title({ text = "MAKE"}) {
   return (
-    <div className="project_title">{text}</div>
+    <div className="Make-project-title">{text}</div>
   );
 }
 

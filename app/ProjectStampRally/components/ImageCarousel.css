@@ -1,54 +1,60 @@
-.image-carousel {
+.ProjectStampRally-image-carousel {
   position: relative;
-  width: 700px;
+  width: 95%;           /* 画面幅に応じて伸縮 */
+  max-width: 700px;     /* PCでは今まで通り */
   height: 220px;
-  margin: 32px auto; /* ← これで中央揃え */
+  margin: 32px auto;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  margin-top: 30px; /* ← 上に40pxの空間ができる */
+  margin-top: 30px;
 }
 
-.carousel-image {
+
+.ProjectStampRally-carousel-image {
   position: absolute;
-  width: 320px;
+  width: 45vw;          /* 画面幅基準 */
+  max-width: 320px;     /* PCでは固定サイズ */
   height: 180px;
+  aspect-ratio: 16 / 10; /* 高さを自動調整 */
   object-fit: cover;
   border-radius: 16px;
   transition: all 0.5s ease;
   opacity: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border: 1px solid #ccc;
-  background-color: white; 
+  background-color: white;
 }
 
+
 /* 中央画像 */
-.carousel-image.center {
+.ProjectStampRally-carousel-image.center {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(1); /* ← 中央配置 */
+  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   z-index: 2;
 }
 
 /* 左右画像 */
-.carousel-image.left,
-.carousel-image.right {
+.ProjectStampRally-carousel-image.left,
+.ProjectStampRally-carousel-image.right {
   top: 50%;
   transform: translateY(-50%) scale(0.85);
   opacity: 0.6;
   z-index: 1;
 }
 
-.carousel-image.left {
-  left: 0%;
+.ProjectStampRally-carousel-image.left {
+  left: 5%;
 }
 
-.carousel-image.right {
-  left: 55%;
+.ProjectStampRally-carousel-image.right {
+  left: 45%;
 }
 
-.carousel-image.hidden {
+
+.ProjectStampRally-carousel-image.hidden {
   opacity: 0;
   pointer-events: none;
   z-index: 0;
