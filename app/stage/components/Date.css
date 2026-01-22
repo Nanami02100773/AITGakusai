@@ -1,29 +1,33 @@
-/* 日付切り替え：ラッパー（.date-toggle） */
+/* 日付切り替え：ラッパー */
 .date-toggle {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 20px;           /* 間隔を狭く */
   margin-bottom: 20px;
 }
 
-/* 日付切り替え：ボタン通常状態（.date-toggle button） */
+/* ボタン通常状態 */
 .date-toggle button {
-  padding: 16px 90px;
+  padding: 10px 24px;  /* ← 小さく */
   font-size: 14px;
   background-color: #ffffff;
   color: #333;
   border: 2px solid #999;
-  border-radius: 20px;
+  border-radius: 16px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+
+  /* 文字を横書き・1行に */
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
 }
 
-/* 日付切り替え：ボタンホバー時（.date-toggle button:hover） */
+/* ホバー */
 .date-toggle button:hover {
   background-color: #f0f0f0;
 }
 
-/* 日付切り替え：ボタン選択状態（.date-toggle button.active） */
+/* 選択中 */
 .date-toggle button.active {
   background-color: #333;
   color: white;

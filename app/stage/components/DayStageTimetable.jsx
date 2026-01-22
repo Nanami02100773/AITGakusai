@@ -11,6 +11,7 @@ const DayStageTimetable = ({ data }) => {
 
   return (
     <section className="timetable-section">
+    
 
       {/* 👇 出演者様紹介と同じ「独立タイトル」 */}
       <h2 className="timetable-heading">タイムテーブル</h2>
