@@ -30,6 +30,7 @@
   grid-template-columns: 200px 200px; /* ← 2列・固定幅 */
   gap: 18px;
   justify-content: center;
+  padding: 0 24px; /* ← 左右に余白 */
 }
 
 /* カード */

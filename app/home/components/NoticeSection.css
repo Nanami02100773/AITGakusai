@@ -1,53 +1,57 @@
 /* お知らせ：セクション全体 */
-.home-notice-section {
+.Home-notice-section {
   margin: 30px auto;
   text-align: center;
 }
 
 /* リンク（li 全体クリック可能） */
-.home-notice-link {
-  display: block;          /* li 全体をクリック可能に */
+.Home-notice-link {
+  display: block;
   width: 100%;
   height: 100%;
-  color: inherit;          /* 文字色を li に合わせる */
-  text-decoration: none;  /* 下線を消す */
+  color: inherit;
+  text-decoration: none;
 }
 
 /* お知らせ：タイトル */
-.home-title {
+.Home-title {
   background-color: #999;
   color: white;
   padding: 10px 20px;
   border-radius: 20px;
   font-size: 20px;
-  width: 300px;
+
+  width: 95%;
+  max-width: 300px;
   margin: 20px auto 10px;
 }
 
 /* お知らせ：リストボックス背景 */
-.home-box3 {
+.Home-box3 {
   background-color: #b3b3b3;
   padding: 20px;
   border-radius: 8px;
+
+  width: 95%;
   max-width: 800px;
   margin: 0 auto;
+
   max-height: 210px;
   overflow-y: auto;
 }
 
 /* お知らせ：リスト項目 */
-.home-notice-item {
+.Home-notice-item {
   background-color: #f4f4f4;
   padding: 13px;
   border-radius: 5px;
   margin-bottom: 10px;
-  position: relative;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 /* お知らせ：ホバー */
-.home-notice-item:hover {
+.Home-notice-item:hover {
   background-color: #e0e0e0;
 }
 

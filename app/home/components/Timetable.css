@@ -1,5 +1,5 @@
 /* タイトル */
-.title.time_table {
+.Home-title.Home-time_table {
   background-color: #999;
   color: white;
   padding: 10px 40px;
@@ -12,24 +12,24 @@
   width: 300px;
 }
 
-/* 1日目 用（コンパクト） */
-.title.time_table.day-title {
-  width: 160px;          /* ← 今より狭い */
-  padding: 6px 20px;     /* 高さも少し小さく */
-  font-size: 18px;       /* 文字サイズも調整 */
+/* 日付タイトル */
+.Home-title.Home-time_table.Home-day-title {
+  width: 160px;
+  padding: 6px 20px;
+  font-size: 18px;
   border-radius: 16px;
   margin: 16px auto 8px;
 }
 
-
 /* セクション全体 */
-.timetable-section {
+.Home-timetable-section {
   text-align: center;
 }
 
-/* テーブル外枠ボックス */
-.box {
-  width: fit-content;
+/* テーブル外枠 */
+.Home-box {
+  width: 95%;
+  max-width: 800px;      /* ← PC時の上限 */
   margin: 0 auto;
   padding: 20px;
   background-color: #b3b3b3;
@@ -37,69 +37,65 @@
   border-radius: 8px;
   max-height: 600px;
   overflow-y: auto;
-  max-width: 800px;
 }
 
-/* テーブル本体 */
-table {
+
+/* テーブル */
+.Home-table {
   margin: 0 auto;
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
-  font-family: sans-serif;
   table-layout: fixed;
 }
 
-/* 各セル */
-td, th {
+/* セル */
+.Home-table td,
+.Home-table th {
   border: 5px solid #b3b3b3;
-  padding: 12px;
+  padding: 7px;
   text-align: center;
 }
 
-/* 最初の列 */
-td:first-child, th:first-child {
+/* 中央列（2列目）の枠線だけ消す */
+.Home-table td:nth-child(2),
+.Home-table th:nth-child(2) {
+  border: none;
+  background: transparent;
+  padding: 0;
+  width: 0;
+}
+
+/* 時間列 */
+.Home-table td:first-child,
+.Home-table th:first-child {
   width: 150px;
-  text-align: center;
   background-color: #fff;
 }
 
-/* ヘッダー行 */
-th {
+/* ヘッダー */
+.Home-table th {
   background-color: #e0e0e0;
   font-weight: bold;
   font-size: 14px;
   border-bottom: 15px solid #b3b3b3;
 }
 
-thead th {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  height: 35px;
-  font-size: 13px;
-  background-color: #e6e6e6;
+/* 中央線 */
+.Home-divider-cell {
+  width: 1px;
+
+  background-color: #8b8b8b;
+
+  /* 中央線として使う線だけを作る */
+  border-left: 1px solid #6c6c6c !important;
 }
 
-thead th:first-child {
-  background-color: #e6e6e6 !important;
-}
 
-/* 中央黒線セル */
-.divider-cell {
-  width: 13px;
-  background-color: rgb(108, 108, 108);
-  border-left: 8px solid #b3b3b3;
-  border-right: 8px solid #b3b3b3;
-  padding: 0;
-}
-
-/* 中央線のヘッダーだけ色を変える */
-.divider-cell.divider-head {
+.Home-divider-cell.Home-divider-head {
   background-color: #b3b3b3;
 }
 
-/* 表示調整用に空にするだけのセル（中身なし） */
-.divider-space {
+.Home-divider-space {
   display: none;
 }
-

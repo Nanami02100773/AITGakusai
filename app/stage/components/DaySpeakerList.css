@@ -1,5 +1,5 @@
-/* 出演者紹介：セクション見出し（.performer-section h2） */
-.performer-section h2 {
+/* 出演者紹介：セクション見出し */
+.Stage-performer-section h2 {
   font-size: 20px;
   background-color: #999;
   color: white;
@@ -10,15 +10,15 @@
   text-align: center;
 }
 
-/* 出演者紹介：プロフィールラッパー（.profile-box） */
-.profile-box {
+/* プロフィールラッパー */
+.Stage-profile-box {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-/* 出演者紹介：プロフィールボックス（.profile） */
-.profile {
+/* プロフィールボックス */
+.Stage-profile {
   background: white;
   padding: 16px;
   border-radius: 8px;
@@ -26,8 +26,8 @@
   width: 700px;
 }
 
-/* 出演者紹介：写真領域（.photo） */
-.photo {
+/* 写真領域 */
+.Stage-photo {
   width: 100%;
   height: 160px;
   background: #ddd;
@@ -38,33 +38,32 @@
   margin-bottom: 12px;
 }
 
-/* 出演者紹介：紹介文見出し（.bio h3） */
-.bio h3 {
+/* 紹介文見出し */
+.Stage-bio h3 {
   font-size: 14px;
   margin-top: 4px;
-  margin-bottom: 8px; /* マイナスをやめる */
+  margin-bottom: 8px;
 }
 
-
-/* 出演者紹介：紹介文本文（.bio p） */
-.bio p {
+/* 紹介文本文 */
+.Stage-bio p {
   font-size: 15px;
   color: #444;
   border-top: 1px dashed #aaa;
   padding-top: 8px;
 }
 
-/* 出演者紹介：物販情報全体（.goods-info） */
-.goods-info {
+/* 物販情報全体 */
+.Stage-goods-info {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 12px;
 }
 
-/* 出演者紹介：物販ステータスと時間（共通） */
-.goods-status,
-.goods-time {
+/* 物販ステータス・時間 */
+.Stage-goods-status,
+.Stage-goods-time {
   background-color: #eee;
   padding: 10px 16px;
   border-radius: 8px;
@@ -72,14 +71,14 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* 出演者紹介：物販ステータス（あり） */
-.goods-status.available {
+/* 物販あり */
+.Stage-goods-status.available {
   color: green;
   font-weight: bold;
 }
 
-/* 出演者紹介：スクロールエリア背景（.scroll-area1） */
-.scroll-area1 {
+/* スクロールエリア */
+.Stage-scroll-area {
   height: auto;
   overflow: visible;
   padding: 20px;
@@ -87,4 +86,3 @@
   background-color: #b5b5b5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-

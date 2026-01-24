@@ -1,7 +1,9 @@
-/* ===== Section ===== */
 .StampRally-section {
   padding: 10px 0 120px;
+  max-width: 95%;
+  margin: 0 auto;
 }
+
 
 /* ===== Title ===== */
 .StampRally-section-title {

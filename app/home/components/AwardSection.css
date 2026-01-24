@@ -1,5 +1,5 @@
 /* タイトル1：h2（グランプリ） */
-.title1 {
+.Home-title1 {
   background-color: #999;
   color: white;
   padding: 10px 40px;
@@ -9,12 +9,15 @@
   font-size: 20px;
   margin: 20px auto 10px;
   text-align: center;
-  width: 300px;
+
+  width: 95%;
+  max-width: 300px;   /* PC時の上限 */
 }
 
 /* 説明文ボックス（h3） */
-.box1 {
-  max-width: 800px;   /* box2 と同じ */
+.Home-box1 {
+  width: 95%;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   background-color: #b3b3b3;
@@ -23,19 +26,18 @@
   margin-bottom: 10px;
 }
 
-/* タイトル2の補足スタイル */
-.title2 {
+/* タイトル2補足 */
+.Home-title2 {
   background-color: #999;
   color: white;
   font-size: 18px;
   margin: 20px auto 10px;
-  /* widthは削除 */
 }
 
-
-/* 賞リストを囲む外枠 */
-.box2 {
-  max-width: 800px;
+/* 賞リスト外枠 */
+.Home-box2 {
+  width: 95%;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   background-color: #b3b3b3;
@@ -44,16 +46,17 @@
   margin-bottom: 60px;
 }
 
-/* 賞の個別カード */
-.award-card {
+/* 賞カード */
+.Home-award-card {
+  width: 100%;   /* 親（Home-box2）に合わせる */
   background-color: #eee;
   padding: 15px 20px;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
-/* 賞の説明 */
-.award-desc {
+/* 賞説明 */
+.Home-award-desc {
   padding: 10px;
   color: #555;
 }

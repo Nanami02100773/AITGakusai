@@ -12,7 +12,7 @@ const Date = ({ onDayChange }) => {
   }, [selectedDay, onDayChange]);
 
   return (
-    <div className="date-toggle">
+    <div className="Stage-date-toggle">
       <button
         className={selectedDay === 1 ? "active" : ""}
         onClick={() => setSelectedDay(1)}

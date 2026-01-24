@@ -5,16 +5,16 @@ import { noticeData } from "./data/noticeData";
 
 const NoticeSection = () => {
   return (
-    <section className="notice-section">
-      <h2 className="title1">お知らせ</h2>
+    <section className="Stage-notice-section">
+      <h2 className="Stage-notice-title">お知らせ</h2>
 
-      <div className="box3">
-        <ul>
+      <div className="Stage-notice-box">
+        <ul className="Stage-notice-list">
           {noticeData.map((notice) => (
-            <li key={notice.id} className="notice-item">
+            <li key={notice.id} className="Stage-notice-item">
               <Link
                 href={`/stage/notice/${notice.id}`}
-                className="notice-link"
+                className="Stage-notice-link"
               >
                 {notice.title}
               </Link>

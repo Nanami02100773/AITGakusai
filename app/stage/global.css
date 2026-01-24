@@ -1,8 +1,11 @@
 .background-box {
   background-color: #e7e7e7;
   padding: 20px;
-  max-width: 1000px;
-  margin: 40px auto;
+
+  width: 95%;
+  max-width: 800px;
+  margin: 20px auto 100px; /* ← 下に余白追加 */
+
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
 }

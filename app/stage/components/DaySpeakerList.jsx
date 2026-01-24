@@ -8,15 +8,15 @@ const DaySpeakerList = ({ speakers }) => {
   }
 
   return (
-    <section className="performer-section">
+    <section className="Stage-performer-section">
       <h2>出演者様紹介</h2>
 
-      <div className="scroll-area1">
+      <div className="Stage-scroll-area">
         {speakers.map((speaker, index) => (
-          <div className="profile-box" key={index}>
-            <div className="profile">
+          <div className="Stage-profile-box" key={index}>
+            <div className="Stage-profile">
               {/* 写真 */}
-              <div className="photo">
+              <div className="Stage-photo">
                 <img
                   src={speaker.image}
                   alt={speaker.name}
@@ -29,15 +29,15 @@ const DaySpeakerList = ({ speakers }) => {
               </div>
 
               {/* 紹介文 */}
-              <div className="bio">
+              <div className="Stage-bio">
                 <h3>{speaker.name}</h3>
                 <p>ここに演者の紹介文が入ります。</p>
               </div>
 
               {/* 物販情報 */}
-              <div className="goods-info">
-                <div className="goods-status available">〇 物販あり</div>
-                <div className="goods-time">物販時間：13:00〜14:00</div>
+              <div className="Stage-goods-info">
+                <div className="Stage-goods-status available">〇 物販あり</div>
+                <div className="Stage-goods-time">物販時間：13:00〜14:00</div>
               </div>
             </div>
           </div>

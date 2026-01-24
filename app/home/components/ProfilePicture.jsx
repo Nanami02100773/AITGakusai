@@ -1,14 +1,15 @@
-import React from 'react';
-import './ProfilePicture.css';
+import React from "react";
+import "./ProfilePicture.css";
 
 const SnsSection = () => {
   return (
-    <section className="sns-section">
-      <h2 className="title sns-box">愛工大祭公式SNS</h2>
-      <div className="container">
-        <div className="sns-list">
+    <section className="Home-sns-section">
+      <h2 className="Home-title Home-sns-box">愛工大祭公式SNS</h2>
+
+      <div className="Home-container">
+        <div className="Home-sns-list">
           <a
-            className="sns-icon"
+            className="Home-sns-icon"
             href="https://www.instagram.com/ait_fes/"
             target="_blank"
             rel="noopener noreferrer"
@@ -16,7 +17,7 @@ const SnsSection = () => {
             インスタ
           </a>
           <a
-            className="sns-icon"
+            className="Home-sns-icon"
             href="https://x.com/aitfes"
             target="_blank"
             rel="noopener noreferrer"
@@ -24,7 +25,7 @@ const SnsSection = () => {
             X
           </a>
           <a
-            className="sns-icon"
+            className="Home-sns-icon"
             href="https://aitech.ac.jp/~festival/top.html"
             target="_blank"
             rel="noopener noreferrer"

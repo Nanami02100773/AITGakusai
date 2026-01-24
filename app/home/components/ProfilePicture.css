@@ -1,5 +1,5 @@
 /* セクション全体の背景と余白 */
-.sns-section {
+.Home-sns-section {
   padding: 70px;
   background-color: #e1e1e1;
   padding-bottom: 150px;
@@ -7,14 +7,14 @@
 }
 
 /* 見出し共通スタイル */
-.title {
+.Home-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 /* SNSセクションタイトル用のボックス装飾 */
-.sns-box {
+.Home-sns-box {
   background-color: #999;
   color: white;
   padding: 10px 40px;
@@ -24,24 +24,24 @@
   font-size: 20px;
   margin: 20px auto 10px;
   text-align: center;
-  width: 300px; /* ← 単位 px を忘れずに追加 */
+  width: 300px;
 }
 
 /* SNSアイコンの中央配置 */
-.container {
+.Home-container {
   display: flex;
   justify-content: center;
 }
 
 /* アイコンの横並びと間隔 */
-.sns-list {
+.Home-sns-list {
   display: flex;
   gap: 20px;
   margin-top: 20px;
 }
 
 /* 各SNSリンクのスタイル */
-.sns-icon {
+.Home-sns-icon {
   background-color: #999;
   color: white;
   width: 60px;
@@ -54,8 +54,9 @@
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-decoration: none;
 }
 
-.sns-icon:hover {
+.Home-sns-icon:hover {
   background-color: #666;
 }
