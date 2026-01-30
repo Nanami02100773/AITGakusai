@@ -4,7 +4,7 @@ import "./ProfilePicture.css";
 const SnsSection = () => {
   return (
     <section className="Home-sns-section">
-      <h2 className="Home-title Home-sns-box">愛工大祭公式SNS</h2>
+      <h2 className="Home-section-title">愛工大祭公式SNS</h2>
 
       <div className="Home-container">
         <div className="Home-sns-list">

@@ -13,7 +13,7 @@ const App = () => {
       }}
     >
       <div style={{ fontSize: "24px", marginBottom: "10px" }}>準備中</div>
-      <div style={{ fontSize: "16px", color: "gray" }}>時間がなくて今年は無理なので、来年までに実装できるように頑張る予定</div>
+      <div style={{ fontSize: "16px", color: "gray" }}>開発中できそうではある多分</div>
     </div>
   );
 };

@@ -13,19 +13,6 @@
   text-decoration: none;
 }
 
-/* お知らせ：タイトル */
-.Home-title {
-  background-color: #999;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 20px;
-
-  width: 95%;
-  max-width: 300px;
-  margin: 20px auto 10px;
-}
-
 /* お知らせ：リストボックス背景 */
 .Home-box3 {
   background-color: #b3b3b3;

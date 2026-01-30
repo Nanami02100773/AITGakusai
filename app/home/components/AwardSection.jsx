@@ -4,7 +4,7 @@ import './AwardSection.css';
 const AwardSection = () => {
   return (
     <section className="Home-award-section">
-      <h2 className="Home-title1" style={{ textAlign: 'center' }}>
+      <h2 className="Home-section-title" style={{ textAlign: 'center' }}>
         グランプリ
       </h2>
 

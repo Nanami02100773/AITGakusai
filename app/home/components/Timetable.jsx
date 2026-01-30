@@ -4,7 +4,7 @@ import "./Timetable.css";
 const ZentaiTimetable = () => {
   return (
     <section className="Home-timetable-section">
-      <h2 className="Home-title Home-time_table">タイムテーブル</h2>
+      <h2 className="Home-section-title">タイムテーブル</h2>
 
       <div className="Home-box">
         {/* ===== 1日目 ===== */}

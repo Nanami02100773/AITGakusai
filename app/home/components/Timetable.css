@@ -30,7 +30,7 @@
 .Home-box {
   width: 95%;
   max-width: 800px;      /* ← PC時の上限 */
-  margin: 0 auto;
+  margin: 0 auto 20;
   padding: 20px;
   background-color: #b3b3b3;
   border: 1px solid #ccc;

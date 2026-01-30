@@ -6,7 +6,7 @@ import { homeNoticeData } from "./data/homeNoticeData";
 const NoticeSection = () => {
   return (
     <section className="Home-notice-section">
-      <h2 className="Home-title">お知らせ</h2>
+      <h2 className="Home-section-title">お知らせ</h2>
 
       <div className="Home-box3">
         <ul>

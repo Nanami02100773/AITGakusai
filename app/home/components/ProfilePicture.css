@@ -6,13 +6,6 @@
   text-align: center;
 }
 
-/* 見出し共通スタイル */
-.Home-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
 /* SNSセクションタイトル用のボックス装飾 */
 .Home-sns-box {
   background-color: #999;

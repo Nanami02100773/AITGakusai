@@ -1,17 +1,15 @@
-/* タイトル1：h2（グランプリ） */
-.Home-title1 {
-  background-color: #999;
-  color: white;
-  padding: 10px 40px;
-  border-radius: 20px;
+.Home-section-title {
   display: block;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 20px auto 10px;
+  width: 250px;
+  max-width: 100%;
+  margin: 4px auto 10px;
   text-align: center;
-
-  width: 95%;
-  max-width: 300px;   /* PC時の上限 */
+  background: #999;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 /* 説明文ボックス（h3） */
@@ -19,7 +17,7 @@
   width: 95%;
   max-width: 500px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   background-color: #b3b3b3;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -31,7 +29,7 @@
   background-color: #999;
   color: white;
   font-size: 18px;
-  margin: 20px auto 10px;
+  margin: 10px auto 10px;
 }
 
 /* 賞リスト外枠 */
