@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 95%;
 }
 
 
@@ -31,12 +30,14 @@
   grid-template-columns: 200px 200px; /* ← 2列・固定幅 */
   gap: 18px;
   justify-content: center;
+  justify-items: center; /* ← これを追加 */
   padding: 0 24px; /* ← 左右に余白 */
 }
 
 /* カード */
 .Project2-card {
-  width: 200px;
+  max-width: 95%;
+  width: 180px;
   background: #cfcfcf;
   border-radius: 20px;
   padding: 12px;
