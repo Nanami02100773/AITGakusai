@@ -1,4 +1,7 @@
-.ProjectKurabuten-section-title {
+/* ==============================
+   セクションタイトル
+================================ */
+.Kurabuten-section-title {
   display: block;
   width: 250px;
   max-width: 100%;
@@ -12,13 +15,15 @@
   box-sizing: border-box;
 }
 
-.ProjectKurabuten-description-box {
-  width: 700px;
-  max-width: 700px;
-  margin: 0 auto 16px auto;
+/* ==============================
+   企画説明ボックス
+================================ */
+.Kurabuten-description-box {
+  width: 95%;           /* 画面幅に応じて変化 */
+  max-width: 700px;     /* PCでは700pxで揃う */
+  margin: 0 auto 16px;
   background: #e0e0e0;
   border-radius: 12px;
-  min-height: 36px;
   padding: 8px 12px;
   color: #333;
   font-size: 1rem;

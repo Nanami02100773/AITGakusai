@@ -1,3 +1,6 @@
+/* ==============================
+   セクションタイトル
+================================ */
 .Kyouyasai-section-title {
   display: block;
   width: 250px;
@@ -12,17 +15,20 @@
   box-sizing: border-box;
 }
 
+/* ==============================
+   企画説明ボックス
+================================ */
 .Kyouyasai-description-box {
-  width: 700px;
+  width: 95%;
   max-width: 700px;
-  margin: 0 auto 16px auto;
+  margin: 0 auto 16px;
   background: #e0e0e0;
   border-radius: 12px;
-  min-height: 36px;
   padding: 8px 12px;
   color: #333;
   font-size: 1rem;
   box-sizing: border-box;
 }
+
 
 

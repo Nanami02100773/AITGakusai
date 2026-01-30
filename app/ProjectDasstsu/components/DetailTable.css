@@ -1,6 +1,7 @@
 .Dasstsu-detail-table {
-  width: 700px;
-  margin: 0 auto 16px auto;
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto 10px;
   background: #e0e0e0;
   border-radius: 12px;
   padding: 12px 0;

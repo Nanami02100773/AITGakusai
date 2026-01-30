@@ -13,6 +13,7 @@
   margin-bottom: 12px;
   overflow: hidden;
   width: 700px;
+  max-width: 95%;
   height: 190px;
   border-radius: 15px;
 }

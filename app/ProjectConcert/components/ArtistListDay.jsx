@@ -9,15 +9,15 @@ const ArtistListDay = ({ artists }) => {
   }
 
   return (
-    <section className="concert-performer-section">
+    <section className="Concert-performer-section">
       <h2 className="Concert-section-title">出演者様紹介</h2>
 
-      <div className="concert-scroll-area">
+      <div className="Concert-scroll-area">
         {artists.map((artist, index) => (
-          <div className="concert-profile-box" key={index}>
-            <div className="concert-profile">
+          <div className="Concert-profile-box" key={index}>
+            <div className="Concert-profile">
               {/* 写真 */}
-              <div className="concert-photo">
+              <div className="Concert-photo">
                 <img
                   src={artist.image}
                   alt={artist.name}
@@ -30,43 +30,59 @@ const ArtistListDay = ({ artists }) => {
               </div>
 
               {/* 紹介文 */}
-              <div className="concert-bio">
+              <div className="Concert-bio">
                 <h3>{artist.name}</h3>
                 <p>ここに演者の紹介文が入ります。</p>
               </div>
             </div>
 
-            {/* ▼ カード外・中央 SNS ▼ */}
-            <div className="concert-sns-wrapper">
-              <p className="concert-sns-title">公式SNS</p>
+            {/* SNS */}
+            <div className="Concert-sns-wrapper">
+              <p className="Concert-sns-title">公式SNS</p>
 
-              <div className="concert-sns">
+              <div className="Concert-sns">
                 {artist.instagram && (
-                  <a href={artist.instagram} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={artist.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src="/icons/instagram.png" alt="Instagram" />
                   </a>
                 )}
 
                 {artist.x && (
-                  <a href={artist.x} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={artist.x}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src="/icons/x.png" alt="X" />
                   </a>
                 )}
 
                 {artist.youtube && (
-                  <a href={artist.youtube} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={artist.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src="/icons/youtube.png" alt="YouTube" />
                   </a>
                 )}
 
                 {artist.website && (
-                  <a href={artist.website} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={artist.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src="/icons/web.png" alt="公式サイト" />
                   </a>
                 )}
               </div>
             </div>
-            {/* ▲ SNSここまで ▲ */}
+            {/* SNSここまで */}
           </div>
         ))}
       </div>

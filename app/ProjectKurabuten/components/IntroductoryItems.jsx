@@ -56,39 +56,33 @@ const Kurabuten = () => {
   return (
     <section>
       {/* セクションタイトル */}
-      <div className="ProjectKurabuten-section-wrapper">
-        <div className="ProjectKurabuten-section-title">出展団体</div>
+      <div className="Kurabuten-section-wrapper">
+        <div className="Kurabuten-section-title">出展団体</div>
       </div>
 
       {/* カード一覧 */}
-      <main className="ProjectKurabuten-card-list">
+      <main className="Kurabuten-card-list">
         {cardData.map((item, index) => (
-          <div className="ProjectKurabuten-card" key={index}>
-            <div className="ProjectKurabuten-card-left">
-              <div className="ProjectKurabuten-thumb-wrapper">
-                <div className="ProjectKurabuten-thumb"></div>
-                <div className="ProjectKurabuten-label">
-                  {item.label}
-                </div>
-                <div className="ProjectKurabuten-overlay-box">
+          <div className="Kurabuten-card" key={index}>
+            <div className="Kurabuten-card-left">
+              <div className="Kurabuten-thumb-wrapper">
+                <div className="Kurabuten-thumb"></div>
+                <div className="Kurabuten-label">{item.label}</div>
+                <div className="Kurabuten-overlay-box">
                   {item.overlayText}
                 </div>
               </div>
             </div>
 
-            <div className="ProjectKurabuten-card-divider"></div>
+            <div className="Kurabuten-card-divider"></div>
 
-            <div className="ProjectKurabuten-card-right">
-              <div className="ProjectKurabuten-sub1-title">
-                {item.title}
-              </div>
-              <div className="ProjectKurabuten-introduction1-subdesc">
+            <div className="Kurabuten-card-right">
+              <div className="Kurabuten-sub1-title">{item.title}</div>
+              <div className="Kurabuten-introduction1-subdesc">
                 {item.subdesc1}
               </div>
-              <div className="ProjectKurabuten-sub2-title">
-                {item.location}
-              </div>
-              <div className="ProjectKurabuten-introduction2-subdesc">
+              <div className="Kurabuten-sub2-title">{item.location}</div>
+              <div className="Kurabuten-introduction2-subdesc">
                 {item.subdesc2}
               </div>
             </div>

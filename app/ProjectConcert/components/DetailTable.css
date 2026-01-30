@@ -1,6 +1,7 @@
 .Concert-detail-table {
-  width: 700px;
-  margin: 0 auto 16px auto;
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto 16px;
   background: #e0e0e0;
   border-radius: 12px;
   padding: 12px 0;
@@ -11,12 +12,12 @@
 
 .Concert-detail-row {
   display: flex;
-  align-items: flex-start; /* ★ここを変更 */
+  align-items: flex-start; /* 複数行対応 */
   gap: 8px;
   padding: 0 12px;
 }
 
-
+/* 左ラベル */
 .Concert-detail-label {
   background: #c4c4c4;
   border-radius: 6px;
@@ -25,9 +26,10 @@
   min-width: 60px;
   font-size: 0.95rem;
   text-align: center;
+  flex-shrink: 0;
 }
 
-/* value 全体 */
+/* 右側全体 */
 .Concert-detail-value {
   flex: 1;
   color: #333;
@@ -37,19 +39,18 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding-bottom: 6px; /* 既存に追加 */
+  padding-bottom: 6px;
 }
 
-/* 開場・受付時などの1行 */
+/* 開場・受付などの1行 */
 .Concert-detail-subrow {
   display: flex;
   align-items: center;
   gap: 8px;
-  min-height: 20px;   /* ← 高さを固定（ここがポイント） */
+  min-height: 20px;
 }
 
-
-/* 囲う側（主張控えめ） */
+/* 囲う小ラベル */
 .Concert-detail-sublabel {
   padding: 2px 13px;
   font-size: 0.75rem;
@@ -58,14 +59,12 @@
   border-radius: 999px;
   background: #f2f2f2;
   white-space: nowrap;
-
   height: 23px;
   display: flex;
   align-items: center;
 }
 
-
-/* 囲わない本文 */
+/* 本文テキスト */
 .Concert-detail-subtext {
   font-size: 0.9rem;
   color: #444;

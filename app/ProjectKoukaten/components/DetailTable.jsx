@@ -11,20 +11,20 @@ function DetailTable() {
   return (
     <section>
       {/* セクションタイトル */}
-      <div className="ProjectKoukaten-section-wrapper">
+      <div className="Koukaten-section-wrapper">
         <div className="Koukaten-section-title">
           詳細情報
         </div>
       </div>
 
       {/* 詳細テーブル */}
-      <div className="ProjectKoukaten-detail-table">
+      <div className="Koukaten-detail-table">
         {details.map((d, i) => (
-          <div className="ProjectKoukaten-detail-row" key={i}>
-            <span className="ProjectKoukaten-detail-label">
+          <div className="Koukaten-detail-row" key={i}>
+            <span className="Koukaten-detail-label">
               {d.label}
             </span>
-            <span className="ProjectKoukaten-detail-value">
+            <span className="Koukaten-detail-value">
               {d.value}
             </span>
           </div>

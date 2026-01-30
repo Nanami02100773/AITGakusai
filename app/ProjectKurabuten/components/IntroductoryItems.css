@@ -1,17 +1,8 @@
-/* ==============================
-   ページ全体設定
-================================ */
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f2f2f2;
-  display: flex;
-}
 
 /* ==============================
    カード一覧全体（<main>）
 ================================ */
-.ProjectKurabuten-card-list {
+.Kurabuten-card-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,10 +12,11 @@ body {
 /* ==============================
    カード本体
 ================================ */
-.ProjectKurabuten-card {
+.Kurabuten-card {
   display: flex;
   background: #ddd;
   margin-bottom: 12px;
+  max-width: 95%;
   width: 700px;
   height: 190px;
   border-radius: 15px;
@@ -34,7 +26,7 @@ body {
 /* ==============================
    左側（画像エリア）
 ================================ */
-.ProjectKurabuten-card-left {
+.Kurabuten-card-left {
   width: 300px;
   padding: 10px;
   display: flex;
@@ -43,7 +35,7 @@ body {
 }
 
 /* 画像＋ラベルのラッパー */
-.ProjectKurabuten-thumb-wrapper {
+.Kurabuten-thumb-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -53,7 +45,7 @@ body {
 }
 
 /* 画像部分 */
-.ProjectKurabuten-thumb {
+.Kurabuten-thumb {
   background: #aaa;
   width: 100%;
   height: 80%;
@@ -61,7 +53,7 @@ body {
 }
 
 /* 下のラベル */
-.ProjectKurabuten-label {
+.Kurabuten-label {
   position: absolute;
   bottom: 8px;
   left: 8px;
@@ -72,7 +64,7 @@ body {
 }
 
 /* 上に重なるオーバーレイ */
-.ProjectKurabuten-overlay-box {
+.Kurabuten-overlay-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -91,7 +83,7 @@ body {
 /* ==============================
    左右の仕切り線
 ================================ */
-.ProjectKurabuten-card-divider {
+.Kurabuten-card-divider {
   width: 3px;
   background: #fff;
   margin: 10px 0;
@@ -101,7 +93,7 @@ body {
 /* ==============================
    右側（テキストエリア）
 ================================ */
-.ProjectKurabuten-card-right {
+.Kurabuten-card-right {
   width: 60%;
   padding: 10px;
   display: flex;
@@ -111,7 +103,7 @@ body {
 }
 
 /* タイトル（上） */
-.ProjectKurabuten-sub1-title {
+.Kurabuten-sub1-title {
   background: #bbb;
   padding: 4px 8px;
   border-radius: 6px;
@@ -119,7 +111,7 @@ body {
 }
 
 /* 補足説明（上） */
-.ProjectKurabuten-introduction1-subdesc {
+.Kurabuten-introduction1-subdesc {
   font-size: 0.85em;
   color: #333;
   padding-left: 6px;
@@ -127,7 +119,7 @@ body {
 }
 
 /* タイトル（下） */
-.ProjectKurabuten-sub2-title {
+.Kurabuten-sub2-title {
   background: #bbb;
   padding: 4px 8px;
   border-radius: 6px;
@@ -135,7 +127,7 @@ body {
 }
 
 /* 補足説明（下） */
-.ProjectKurabuten-introduction2-subdesc {
+.Kurabuten-introduction2-subdesc {
   font-size: 0.85em;
   color: #333;
   padding-left: 6px;

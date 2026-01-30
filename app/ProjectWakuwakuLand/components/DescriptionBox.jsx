@@ -6,19 +6,13 @@ function DescriptionBox() {
     "ここに企画の説明が入ります。企画の内容や目的、参加方法などを詳しく説明します。例えば、スタンプラリーでは、参加者が指定された場所を訪れてスタンプを集めることで、特典を得ることができます。また、工科展では、学生たちの研究やプロジェクトを展示し、来場者に技術やアイデアを紹介します。各企画の詳細は、公式ウェブサイトやSNSで随時更新されますので、ぜひチェックしてください！";
 
   return (
-    <section>
-      {/* セクションタイトル */}
-      <div className="WakuwakuLand-section-wrapper">
-        <div className="WakuwakuLand-section-title">
-          企画説明
-        </div>
-      </div>
+    <div>
+      <div className="WakuwakuLand-section-title">企画説明</div>
 
-      {/* 説明ボックス */}
       <div className="WakuwakuLand-description-box">
         {text}
       </div>
-    </section>
+    </div>
   );
 }
 

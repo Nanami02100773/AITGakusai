@@ -11,7 +11,7 @@ import ArtistListData from "./data/ArtistListData";
 
 const ConcertInfo = () => {
   return (
-    <div className="concert-info">
+    <div className="Concert-info">
       <ArtistListDay artists={ArtistListData} />
     </div>
   );

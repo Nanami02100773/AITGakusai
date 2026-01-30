@@ -1,6 +1,7 @@
-.ProjectKoukaten-detail-table {
-  width: 700px;
-  margin: 0 auto 16px auto;
+.Koukaten-detail-table {
+  width: 95%;           /* 画面に応じて変化 */
+  max-width: 700px;     /* PCでは今まで通り */
+  margin: 0 auto 10px;
   background: #e0e0e0;
   border-radius: 12px;
   padding: 12px 0;
@@ -9,27 +10,27 @@
   gap: 8px;
 }
 
-.ProjectKoukaten-detail-row {
+.Koukaten-detail-row {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 0 12px;
 }
 
-.ProjectKoukaten-detail-label {
+.Koukaten-detail-label {
   background: #c4c4c4;
   border-radius: 6px;
   color: #fff;
   padding: 4px 12px;
   min-width: 60px;
   font-size: 0.95rem;
-  text-align: center;  
+  text-align: center;
 }
 
-.ProjectKoukaten-detail-value {
+.Koukaten-detail-value {
   flex: 1;
   color: #333;
   font-size: 0.95rem;
   padding-left: 8px;
-  border-bottom: 2.5px solid #ccc; 
+  border-bottom: 2.5px solid #ccc;
 }

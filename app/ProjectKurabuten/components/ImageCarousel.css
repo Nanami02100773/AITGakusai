@@ -1,18 +1,21 @@
-.ProjectKurabuten-image-carousel {
+.Kurabuten-image-carousel {
   position: relative;
-  width: 700px;
+  width: 95%;           /* 画面幅に応じて伸縮 */
+  max-width: 700px;     /* PCでは今まで通り */
   height: 220px;
-  margin: 32px auto; /* 中央揃え */
+  margin: 32px auto;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   margin-top: 30px;
 }
 
-.ProjectKurabuten-carousel-image {
+.Kurabuten-carousel-image {
   position: absolute;
-  width: 320px;
+  width: 45vw;          /* 画面幅基準 */
+  max-width: 320px;     /* PCでは固定サイズ */
   height: 180px;
+  aspect-ratio: 16 / 10; /* 高さを自動調整 */
   object-fit: cover;
   border-radius: 16px;
   transition: all 0.5s ease;
@@ -23,7 +26,7 @@
 }
 
 /* 中央画像 */
-.ProjectKurabuten-carousel-image.center {
+.Kurabuten-carousel-image.center {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -32,23 +35,23 @@
 }
 
 /* 左右画像 */
-.ProjectKurabuten-carousel-image.left,
-.ProjectKurabuten-carousel-image.right {
+.Kurabuten-carousel-image.left,
+.Kurabuten-carousel-image.right {
   top: 50%;
   transform: translateY(-50%) scale(0.85);
   opacity: 0.6;
   z-index: 1;
 }
 
-.ProjectKurabuten-carousel-image.left {
-  left: 0%;
+.Kurabuten-carousel-image.left {
+  left: 5%;
 }
 
-.ProjectKurabuten-carousel-image.right {
-  left: 55%;
+.Kurabuten-carousel-image.right {
+  left: 45%;
 }
 
-.ProjectKurabuten-carousel-image.hidden {
+.Kurabuten-carousel-image.hidden {
   opacity: 0;
   pointer-events: none;
   z-index: 0;

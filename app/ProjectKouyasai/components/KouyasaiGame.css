@@ -1,4 +1,10 @@
 /* ===== Game Corner ===== */
+.Kouyasai-info {
+  width: 95%;
+  margin: 0 auto;
+}
+
+
 .Kouyasai-gameCorner-list {
   display: flex;
   justify-content: center;

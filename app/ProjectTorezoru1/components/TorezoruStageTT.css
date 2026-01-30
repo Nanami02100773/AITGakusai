@@ -7,6 +7,7 @@
   padding: 18px;
   margin: 0 auto;
   margin: 0 auto 24px; /* ← 下に空間 */
+  max-width: 95%;
   width: 700px;
 }
 

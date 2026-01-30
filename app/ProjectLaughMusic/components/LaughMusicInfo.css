@@ -37,18 +37,19 @@
   padding-top: 8px;
 }
 
-/* グレー背景 */
+/* グレー背景（スクロールエリア） */
 .LaughMusic-scroll-area {
+  width: 100%;         /* ← 親（95%）に合わせる */
+  max-width: 600px;
   padding: 20px;
   border-radius: 10px;
   background-color: #b5b5b5;
-  max-width: 600px;
   margin: 0 auto 100px;
 }
 
 /* 外側の灰色ボックス用（今まで通り） */
 .LaughMusic-info > .LaughMusic-scroll-area {
-  margin: 0 auto 40px; /* 100px → 40px に調整 */
+  margin: 0 auto 40px;
 }
 
 /* 内側に入れ子になった灰色ボックスの余白を消す */
@@ -105,5 +106,6 @@
 
 /* 全体ラッパー */
 .LaughMusic-info {
-  width: 100%;
+  width: 95%;          /* ← 追加 */
+  margin: 0 auto;      /* ← 中央寄せ */
 }

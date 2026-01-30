@@ -16,8 +16,8 @@ import img3 from "./components/images/スクリーンショット 2024-07-03 114
 
 export default function Page() {
   return (
-    <div className="kyouyasai">
-      <Title text="Kyouyasai" />
+    <div>
+      <Title/>
 
       <ImageCarousel images={[img1, img2, img3]} />
 

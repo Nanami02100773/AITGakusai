@@ -1,18 +1,20 @@
 .Kouyasai-image-carousel {
   position: relative;
-  width: 700px;
+  width: 95%;
+  max-width: 700px;
   height: 220px;
   margin: 32px auto;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  margin-top: 30px;
 }
 
 .Kouyasai-carousel-image {
   position: absolute;
-  width: 320px;
+  width: 45vw;
+  max-width: 320px;
   height: 180px;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: 16px;
   transition: all 0.5s ease;
@@ -26,7 +28,7 @@
 .Kouyasai-carousel-image.center {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   opacity: 1;
   z-index: 2;
 }
@@ -41,16 +43,15 @@
 }
 
 .Kouyasai-carousel-image.left {
-  left: 0%;
+  left: 5%;
 }
 
 .Kouyasai-carousel-image.right {
-  left: 55%;
+  left: 45%;
 }
 
 .Kouyasai-carousel-image.hidden {
   opacity: 0;
   pointer-events: none;
-  z-index: 0;
 }
 

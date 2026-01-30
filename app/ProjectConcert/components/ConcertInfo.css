@@ -1,5 +1,5 @@
 /* プロフィールラッパー */
-.concert-profile-box {
+.Concert-profile-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +7,7 @@
 }
 
 /* プロフィール本体 */
-.concert-profile {
+.Concert-profile {
   background: white;
   padding: 16px;
   border-radius: 8px;
@@ -17,7 +17,7 @@
 }
 
 /* 写真 */
-.concert-photo {
+.Concert-photo {
   width: 100%;
   height: 160px;
   background: #ddd;
@@ -25,12 +25,12 @@
 }
 
 /* 紹介文 */
-.concert-bio h3 {
+.Concert-bio h3 {
   font-size: 14px;
   margin-bottom: 8px;
 }
 
-.concert-bio p {
+.Concert-bio p {
   font-size: 15px;
   color: #444;
   border-top: 1px dashed #aaa;
@@ -38,17 +38,17 @@
 }
 
 /* グレー背景 */
-.concert-scroll-area {
+.Concert-scroll-area {
   padding: 20px;
   border-radius: 10px;
   background-color: #b5b5b5;
-  max-width: 600px;
+  max-width: 95%;
   height: 380px;
   margin: 0 auto 100px;
 }
 
 /* SNS ラッパー */
-.concert-sns-wrapper {
+.Concert-sns-wrapper {
   margin-top: 12px;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@
 }
 
 /* SNS タイトル */
-.concert-sns-title {
+.Concert-sns-title {
   font-size: 15px;
   color: #555;
   margin-bottom: 10px;
@@ -64,13 +64,13 @@
 }
 
 /* SNS アイコン列 */
-.concert-sns {
+.Concert-sns {
   display: flex;
   gap: 12px;
 }
 
 /* 丸アイコン */
-.concert-sns a {
+.Concert-sns a {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -82,12 +82,12 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.concert-sns img {
+.Concert-sns img {
   width: 18px;
   height: 18px;
 }
 
-.concert-sns a:hover {
+.Concert-sns a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }

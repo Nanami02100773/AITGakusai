@@ -1,30 +1,11 @@
 /* ==============================
-   ページ全体設定
-================================ */
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f2f2f2;
-  display: flex;
-}
-
-/* ==============================
-   カード一覧全体（<main>）
-================================ */
-.ProjectKoukaten-card-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 80px;
-}
-
-/* ==============================
    カード本体
 ================================ */
 .ProjectKoukaten-card {
   display: flex;
   background: #ddd;
   margin-bottom: 12px;
+  max-width: 95%;
   width: 700px;
   height: 190px;
   border-radius: 15px;
@@ -45,7 +26,7 @@ body {
 /* 画像＋ラベルのラッパー */
 .ProjectKoukaten-thumb-wrapper {
   position: relative;
-  width: 100%;
+  width: 95%;
   height: 100%;
   display: flex;
   align-items: flex-end;

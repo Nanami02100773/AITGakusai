@@ -3,7 +3,8 @@
   background: #e0e0e0;;          /* ← グレーに変更 */
   border-radius: 12px;
   padding: 20px;
-  max-width: 400px;
+  max-width: 95%;
+  width: 400px;
   margin: 20px auto 80px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 

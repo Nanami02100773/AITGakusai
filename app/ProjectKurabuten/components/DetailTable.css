@@ -1,6 +1,7 @@
-.ProjectKurabuten-detail-table {
-  width: 700px;
-  margin: 0 auto 16px auto;
+.Kurabuten-detail-table {
+  width: 95%;           /* 画面に応じて変化 */
+  max-width: 700px;     /* PCでは今まで通り */
+  margin: 0 auto 10px;
   background: #e0e0e0;
   border-radius: 12px;
   padding: 12px 0;
@@ -9,14 +10,14 @@
   gap: 8px;
 }
 
-.ProjectKurabuten-detail-row {
+.Kurabuten-detail-row {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 0 12px;
 }
 
-.ProjectKurabuten-detail-label {
+.Kurabuten-detail-label {
   background: #c4c4c4;
   border-radius: 6px;
   color: #fff;
@@ -26,7 +27,7 @@
   text-align: center;
 }
 
-.ProjectKurabuten-detail-value {
+.Kurabuten-detail-value {
   flex: 1;
   color: #333;
   font-size: 0.95rem;

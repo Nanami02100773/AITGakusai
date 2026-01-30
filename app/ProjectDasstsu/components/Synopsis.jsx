@@ -9,7 +9,7 @@ function DasstsDescriptionBox() {
     <section>
       {/* Synopsis タイトル */}
       <div className="Dasstsu-synopsis-wrapper">
-        <div className="Dasstsu-synopsis-title">あらすじ</div>
+        <div className="Dasstsu-section-title">あらすじ</div>
       </div>
 
       {/* Synopsis 本文 */}

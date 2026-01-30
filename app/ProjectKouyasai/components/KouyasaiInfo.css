@@ -1,3 +1,9 @@
+/* 全体ラッパー */
+.Kouyasai-info {
+  width: 95%;
+  margin: 0 auto;
+}
+
 /* プロフィールラッパー */
 .Kouyasai-profile-box {
   display: flex;
@@ -42,6 +48,7 @@
   padding: 20px;
   border-radius: 10px;
   background-color: #b5b5b5;
+  width: 95%;
   max-width: 600px;
   height: 380px;
   margin: 0 auto 100px;

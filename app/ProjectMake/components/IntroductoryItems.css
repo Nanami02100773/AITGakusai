@@ -1,27 +1,4 @@
-/* ===== 全体レイアウト ===== */
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-}
 
-/* ===== タイトル ===== */
-.Make-title {
-  background-color: #999;
-  color: white;
-  padding: 10px 40px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  width: 250px;
-  margin: 40px auto 20px;
-  overflow: hidden;
-}
 
 /* ===== カード全体 ===== */
 .Make-card {
@@ -29,6 +6,7 @@ body {
   background: #ddd;
   margin-bottom: 12px;
   overflow: hidden;
+  max-width: 95%;
   width: 700px;
   height: 190px;
   border-radius: 15px;

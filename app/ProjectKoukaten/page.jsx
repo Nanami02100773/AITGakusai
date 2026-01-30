@@ -1,5 +1,4 @@
 "use client";
-import "./page.css"
 import React from "react";
 import Title from "./components/Title";
 import ImageCarousel from "./components/ImageCarousel";
