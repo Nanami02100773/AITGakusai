@@ -1,0 +1,40 @@
+.Company-section-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Company-sns-wrapper {
+  margin: 1px auto 90px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  /* ▼ ここから追加 */
+  width: 95%;
+  max-width: 700px;
+  padding: 20px 10px;
+  background: #e0e0e0;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+
+.Company-sns-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #999;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.Company-sns-icon:hover {
+  background: #333;
+  transform: scale(1.1);
+}

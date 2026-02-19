@@ -1,4 +1,4 @@
-/* 上部バー（トップバー） */
+/* トップバー */
 .top-bar {
   position: fixed;
   top: 0;
@@ -9,12 +9,73 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  padding: 0 15px;
+  padding: 0 10px;
   z-index: 1000;
   font-size: 20px;
 }
 
-/* 下部ナビゲーションバー */
+/* ボタン */
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* 中央ロゴ枠 */
+.top-bar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+/* ロゴ縦トラック */
+.logo-track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 36px;
+}
+
+/* ロゴ1枚 */
+.logo-slide {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ===== アクティブ時の色分け ===== */
+.top-bar-center.active-0 {
+  background: #ffe4e1;   /* ピンク */
+}
+
+.top-bar-center.active-1 {
+  background: #e0f7ff;   /* 水色 */
+}
+
+.top-bar-center.active-2 {
+  background: #e8ffe8;   /* 黄緑 */
+}
+
+/* 下部ナビ */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -28,7 +89,6 @@
   z-index: 999;
 }
 
-/* ナビゲーションアイテム（リンク） */
 .nav-item {
   flex: 1;
   text-align: center;
@@ -36,28 +96,8 @@
   font-size: 24px;
   text-decoration: none;
   padding: 10px 0;
-  transition: background-color 0.2s;
 }
 
-.nav-item:hover {
-  background-color: #555;
-}
-
-/* アイコン部分（span） */
 .nav-icon {
   display: block;
-}
-
-/* 戻る＆メニューボタン */
-.nav-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.nav-button:hover {
-  opacity: 0.8;
 }
