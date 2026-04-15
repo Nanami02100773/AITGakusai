@@ -62,7 +62,6 @@
   object-fit: contain;
 }
 
-/* ===== アクティブ時の色分け ===== */
 .top-bar-center.active-0 {
   background: #ffe4e1;   /* ピンク */
 }
@@ -100,4 +99,52 @@
 
 .nav-icon {
   display: block;
+}
+
+/* 背景 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 998;
+}
+
+/* 右サイドメニュー */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: white;
+  z-index: 999;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.menu-header {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* メニュー項目 */
+.menu-item {
+  padding: 15px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;  /* ← 区切り線 */
+}
+
+/* 最後の線を消す */
+.menu-item:last-child {
+  border-bottom: none;
 }

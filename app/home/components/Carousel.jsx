@@ -9,12 +9,12 @@ export default function Carousel({ items = [] }) {
   const [isStopped, setIsStopped] = useState(false);
 
   const fallbackItems = [
-    { title: "学園祭のお知らせ①", description: "各企画を準備中です", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ②", description: "ステージ企画を準備中", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ③", description: "屋台情報を更新予定", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ④", description: "参加団体を紹介します", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ⑤", description: "タイムテーブル公開予定", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ⑥", description: "最新情報をお楽しみに", image: "https://placehold.jp/600x400.png" },
+    { title: "企業広告①", description: "企業名：紹介文など" },
+    { title: "企業広告②", description: "企業名：紹介文など" },
+    { title: "企業広告③", description: "企業名：紹介文など" },
+    { title: "企業広告④", description: "企業名：紹介文など" },
+    { title: "企業広告⑤", description: "企業名：紹介文など" },
+    { title: "企業広告⑥", description: "企業名：紹介文など" },
   ];
 
   const displayItems = items.length > 0 ? items : fallbackItems;
@@ -26,14 +26,24 @@ export default function Carousel({ items = [] }) {
     let animationId;
     const speed = 1.2;
     const stopTime = 800;
-    const cardWidth = 320 + 24; // ← カード幅に合わせて調整
 
     let isPaused = false;
-    let isUserInteracting = false;
     let lastStoppedIndex = -1;
 
     const scroll = () => {
-      if (!isPaused && !isUserInteracting) {
+      const list = container.querySelector(".Home-carousel-list");
+      const firstCard = list?.children[0];
+
+      if (!firstCard) {
+        animationId = requestAnimationFrame(scroll);
+        return;
+      }
+
+      // 実際のカード幅（ズレ防止）
+      const cardWidth = firstCard.offsetWidth + 24;
+      const totalWidth = displayItems.length * cardWidth;
+
+      if (!isPaused) {
         setIsStopped(false);
         container.scrollLeft += speed;
 
@@ -43,7 +53,11 @@ export default function Carousel({ items = [] }) {
 
         setCurrentPage(index % displayItems.length);
 
-        if (Math.abs(center - cardCenter) < speed && index !== lastStoppedIndex) {
+        // 中央で一瞬停止
+        if (
+          Math.abs(center - cardCenter) < speed &&
+          index !== lastStoppedIndex
+        ) {
           isPaused = true;
           lastStoppedIndex = index;
           setIsStopped(true);
@@ -54,9 +68,14 @@ export default function Carousel({ items = [] }) {
           }, stopTime);
         }
 
-        if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
-          container.scrollLeft = 0;
+        // 🔥 無限ループ（ここが重要）
+        if (container.scrollLeft >= totalWidth) {
+          container.scrollLeft -= totalWidth;
           lastStoppedIndex = -1;
+        }
+
+        if (container.scrollLeft <= 0) {
+          container.scrollLeft += totalWidth;
         }
       }
 
@@ -72,20 +91,25 @@ export default function Carousel({ items = [] }) {
       <div ref={containerRef} className="Home-carousel-container">
         <div className="Home-carousel-list">
           {displayItems.concat(displayItems).map((item, index) => {
-            const pageNumber = (index % displayItems.length) + 1;
-            const isCenter = index % displayItems.length === currentPage;
+            const isCenter =
+              index % displayItems.length === currentPage;
             const shouldScale = isCenter && isStopped;
 
             return (
               <div
                 key={index}
-                className={`Home-carousel-card ${shouldScale ? "is-center" : ""}`}
+                className={`Home-carousel-card ${
+                  shouldScale ? "is-center" : ""
+                }`}
               >
-                <div className="Home-carousel-page">{pageNumber}</div>
+                <div className="Home-carousel-image-placeholder">
+                  画像
+                </div>
 
-                <img src={item.image} alt={item.title} className="Home-carousel-image" />
                 <h2 className="Home-carousel-title">{item.title}</h2>
-                <p className="Home-carousel-description">{item.description}</p>
+                <p className="Home-carousel-description">
+                  {item.description}
+                </p>
               </div>
             );
           })}
@@ -96,7 +120,9 @@ export default function Carousel({ items = [] }) {
         {displayItems.map((_, index) => (
           <span
             key={index}
-            className={`Home-indicator-dot ${index === currentPage ? "active" : ""}`}
+            className={`Home-indicator-dot ${
+              index === currentPage ? "active" : ""
+            }`}
           />
         ))}
       </div>

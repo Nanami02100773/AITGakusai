@@ -47,7 +47,7 @@
 /* 賞カード */
 .Home-award-card {
   width: 100%;   /* 親（Home-box2）に合わせる */
-  background-color: #eee;
+  background-color: #f7f7f7;
   padding: 15px 20px;
   border-radius: 10px;
   margin-bottom: 15px;

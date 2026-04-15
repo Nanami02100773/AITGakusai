@@ -79,10 +79,10 @@ export default function Project2() {
 
       </div>
 
-
-      {/* =========================
+      {/*
+      =========================
           協賛企業
-      ========================= */}
+      =========================
       <div className="Project2-title" style={{ marginTop: "80px" }}>
         協賛企業
       </div>
@@ -110,6 +110,7 @@ export default function Project2() {
         </Link>
 
       </div>
+      */}
 
     </div>
   );

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./FaqSection.css";
 
@@ -16,7 +17,7 @@ const FaqSection = ({
         className="faq-item-header"
         onClick={() => toggleSection(sectionIndex)}
       >
-        {section?.title}
+        <span className="faq-title">{section?.title}</span>
         <span className="arrow">{isOpen ? "▲" : "▼"}</span>
       </button>
 
@@ -34,8 +35,11 @@ const FaqSection = ({
                 >
                   Q {pair.q}
                 </button>
+
                 {isQOpen && (
-                  <div className="faq-answer-content">A {pair.a}</div>
+                  <div className="faq-answer-content">
+                    A {pair.a}
+                  </div>
                 )}
               </div>
             );

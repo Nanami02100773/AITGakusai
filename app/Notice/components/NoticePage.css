@@ -1,0 +1,49 @@
+.notice-container {
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.notice-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.notice-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notice-input,
+.notice-textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.notice-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.notice-button {
+  padding: 12px;
+  background-color: #666;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.notice-button:hover {
+  background-color: #444;
+}
+
+select.notice-input {
+  cursor: pointer;
+}

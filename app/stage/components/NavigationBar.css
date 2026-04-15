@@ -1,4 +1,4 @@
-/* 上部バー（トップバー） */
+/* トップバー */
 .top-bar {
   position: fixed;
   top: 0;
@@ -9,12 +9,72 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  padding: 0 15px;
+  padding: 0 10px;
   z-index: 1000;
   font-size: 20px;
 }
 
-/* 下部ナビゲーションバー */
+/* ボタン */
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* 中央ロゴ枠 */
+.top-bar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+/* ロゴ縦トラック */
+.logo-track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 36px;
+}
+
+/* ロゴ1枚 */
+.logo-slide {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.top-bar-center.active-0 {
+  background: #ffe4e1;   /* ピンク */
+}
+
+.top-bar-center.active-1 {
+  background: #e0f7ff;   /* 水色 */
+}
+
+.top-bar-center.active-2 {
+  background: #e8ffe8;   /* 黄緑 */
+}
+
+/* 下部ナビ */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -35,27 +95,56 @@
   font-size: 24px;
   text-decoration: none;
   padding: 10px 0;
-  transition: background-color 0.2s;
-}
-
-.nav-item:hover {
-  background-color: #555;
 }
 
 .nav-icon {
   display: block;
 }
 
-.nav-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 5px;
+/* 背景 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 998;
 }
 
-.nav-button:hover {
-  opacity: 0.8;
+/* 右サイドメニュー */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: white;
+  z-index: 999;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
+.side-menu.open {
+  right: 0;
+}
+
+.menu-header {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* メニュー項目 */
+.menu-item {
+  padding: 15px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;  /* ← 区切り線 */
+}
+
+/* 最後の線を消す */
+.menu-item:last-child {
+  border-bottom: none;
+}

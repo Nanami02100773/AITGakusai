@@ -6,7 +6,7 @@ function CompanySNS() {
     <section>
       <div className="Company-section-wrapper">
         <div className="Company-section-title">
-          Details
+          公式SNS
         </div>
       </div>
 
