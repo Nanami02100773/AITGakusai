@@ -1,5 +1,4 @@
-
-/* ===============================
+/* ==============================
    カードリスト全体
 ================================ */
 .WakuwakuLand-card-list {
@@ -9,33 +8,22 @@
   padding-bottom: 80px;
 }
 
-/* ===============================
+/* ==============================
    カード本体
 ================================ */
 .WakuwakuLand-card {
   display: flex;
   background: #ddd;
-  margin-bottom: 12px;
+  margin: 0 auto 12px; /* ← 中央＋下余白 */
   max-width: 95%;
   width: 700px;
   border-radius: 15px;
   overflow: hidden;
 }
 
-/* ===============================
-   カード区切り線
+/* ==============================
+   左側（画像エリア）
 ================================ */
-.WakuwakuLand-card-divider {
-  width: 3px;
-  background: #ffffff;
-  margin: 10px 0;
-  flex-shrink: 0;
-}
-
-/* ===============================
-   左側（画像）
-================================ */
-/* ===== 左側 ===== */
 .WakuwakuLand-card-left {
   width: 300px;
   padding: 10px;
@@ -46,31 +34,32 @@
   overflow: hidden;
 }
 
+/* 画像ラッパー */
 .WakuwakuLand-thumb-wrapper {
   position: relative;
   width: 100%;
-  height: 90%;
+  height: 160px; /* ← 好きな高さ（よくあるカード比率） */
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  overflow: visible;
+  overflow: hidden; /* ← はみ出し防止 */
   border-radius: 10px;
 }
 
+/* 画像本体 */
 .WakuwakuLand-thumb {
-  background: #aaa;
-  width: 100%;
-  height: 80%;
-  position: relative;
-  overflow: hidden;
+   width: 260px;   /* ← wrapperと揃える */
+  height: 150px;  /* ← wrapperと揃える */
+  background: #aaa; /* ← これ残す */
   border-radius: 10px;
 }
 
+/* オーバーレイ */
 .WakuwakuLand-overlay-box {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 180px;
   height: 30px;
   background: #a1a1a1;
   z-index: 10;
@@ -83,19 +72,29 @@
   border-radius: 8px;
 }
 
+/* ==============================
+   区切り線
+================================ */
+.WakuwakuLand-card-divider {
+  width: 3px;
+  background: #fff;
+  margin: 10px 0;
+  flex-shrink: 0;
+}
 
-/* ===============================
-   右側（テキスト）
+/* ==============================
+   右側（テキストエリア）
 ================================ */
 .WakuwakuLand-card-right {
   width: 60%;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: center; /* ← 追加（寄せ方を統一） */
+  gap: 8px;               /* ← 少し整理 */
 }
 
-/* タイトル・場所・注意事項タイトル */
+/* タイトル系 */
 .WakuwakuLand-title,
 .WakuwakuLand-desc,
 .WakuwakuLand-notice-title {
@@ -105,13 +104,15 @@
   width: fit-content;
   max-width: 100%;
   word-break: break-word;
+  line-height: 1.2;
 }
 
-/* 補足説明・注意事項本文 */
+/* 説明文 */
 .WakuwakuLand-subdesc,
 .WakuwakuLand-notice-desc {
   font-size: 0.85em;
   color: #333;
   padding-left: 6px;
-  margin: 2px 0 4px;
+  margin-top: -5px;   /* ← 詰める */
+  line-height: 1.2;
 }
