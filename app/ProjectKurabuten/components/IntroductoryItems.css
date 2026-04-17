@@ -4,7 +4,7 @@
 .Kurabuten-card {
   display: flex;
   background: #ddd;
-  margin-bottom: 12px;
+   margin: 0 auto 12px; /* ← これが重要（中央＋下余白） */
   max-width: 95%;
   width: 700px;
   height: 190px;

@@ -1,28 +1,35 @@
 /* ブース一覧 */
 .Make-booth-list {
   display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 100px;
+  flex-direction: column;     /* ← 縦並びにする */
+  align-items: center;        /* ← 中央寄せ */
+  gap: 20px;
+  width: 250px;
+  margin: 20px auto 100px;    /* ← 中央配置 */
 }
 
+/* 各アイテム */
 .Make-booth-item {
-  width: 200px;
+  width: 100%;                /* ← 横いっぱい使う */
 }
 
+/* カード */
 .Make-booth-card {
   background-color: #bebebe;
-  padding: 15px 10px;
+  width: 100%;
+  height: 210px;
+  padding: 10px;
   text-align: center;
-  height: 160px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;   /* ← 縦中央 */
+  align-items: center;       /* ← 横中央 */
+
   border-radius: 5px;
 }
 
+/* 画像 */
 .Make-booth-image {
   width: 100%;
   height: 150px;
@@ -31,6 +38,7 @@
   margin-bottom: 10px;
 }
 
+/* ラベル */
 .Make-booth-label {
   font-size: 15px;
   color: white;
