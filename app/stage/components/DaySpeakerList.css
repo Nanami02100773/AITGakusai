@@ -1,13 +1,16 @@
 /* 出演者紹介：セクション見出し */
 .Stage-performer-section h2 {
-  font-size: 20px;
-  background-color: #999;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  width: 300px;
-  margin: 80px auto 30px;
+  display: block;
+  width: 250px;
+  max-width: 100%;
+  margin: 4px auto 10px;
   text-align: center;
+  background: #999;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 /* プロフィールラッパー */

@@ -1,11 +1,3 @@
-.Project2-container {
-  padding: 24px;
-  padding-bottom: 80px; /* ← 下に余白を追加 */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 
 .Project2-title {
   background-color: #999;
@@ -15,9 +7,8 @@
   font-weight: bold;
   font-size: 20px;
   width: 300px;
-
   /* 中央揃え */
-  margin: 80px auto 20px; /* ← 上に余白をしっかり取る */
+  margin: 70px auto 20px; /* ← 上に余白をしっかり取る */
   text-align: center;
   display: block;
 }
@@ -27,11 +18,10 @@
 /* ===== 2列固定グリッド ===== */
 .Project2-grid {
   display: grid;
-  grid-template-columns: 200px 200px; /* ← 2列・固定幅 */
+  grid-template-columns: 180px 180px; /* ← 2列・固定幅 */
   gap: 18px;
   justify-content: center;
   justify-items: center; /* ← これを追加 */
-  padding: 0 24px; /* ← 左右に余白 */
 }
 
 /* カード */
@@ -40,7 +30,7 @@
   width: 180px;
   background: #cfcfcf;
   border-radius: 20px;
-  padding: 12px;
+  padding: 10px;
   text-decoration: none;
 
   /* アニメーション準備 */

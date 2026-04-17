@@ -1,0 +1,13 @@
+.Stage-Title {
+  background-color: #999;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 300px;
+  /* 中央揃え */
+  margin: 70px auto 20px;
+  text-align: center;
+  display: block;
+}
