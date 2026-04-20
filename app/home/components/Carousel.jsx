@@ -24,7 +24,7 @@ export default function Carousel({ items = [] }) {
     if (!container) return;
 
     let animationId;
-    const speed = 1.2;
+    const speed = 1.4;
     const stopTime = 800;
 
     let isPaused = false;
