@@ -1,13 +1,22 @@
 .notice-container {
-  padding: 60px 20px;
+  padding: 0px 20px;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
 }
 
 .notice-title {
-  font-size: 24px;
-  margin-bottom: 30px;
+  background-color: #999;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 300px;
+  /* 中央揃え */
+  margin: 70px auto 20px;
+  text-align: center;
+  display: block;
 }
 
 .notice-form {
@@ -38,6 +47,10 @@
   border-radius: 8px;
   cursor: pointer;
   transition: 0.2s;
+  width: 150px;
+
+  display: block;
+  margin: 0 auto; /* ← これで中央 */
 }
 
 .notice-button:hover {

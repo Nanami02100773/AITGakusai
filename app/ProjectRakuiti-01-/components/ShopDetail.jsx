@@ -1,10 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ShopDetail.css";
 
 function ShopDetail() {
   const [activeTab, setActiveTab] = useState("intro");
+
+  // ✅ 画面表示時に一番上へ
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="Rakuiti-01-shop-detail">

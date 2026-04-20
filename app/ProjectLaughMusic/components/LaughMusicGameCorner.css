@@ -1,45 +1,72 @@
-/* Game Corner */
+/* ==============================
+   Game Corner（2列グリッド）
+================================ */
 .LaughMusic-gameCorner-list {
-  width: 95%;              /* ← 追加 */
-  margin: 20px auto 100px; /* ← 中央寄せ */
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+
   justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
+  margin: 20px auto 100px;
+  max-width: 360px;
 }
 
-
+/* 各アイテム */
 .LaughMusic-gameCorner-item {
-  width: 200px;
+  width: auto;
+  justify-self: center; /* ← 通常時も中央 */
 }
 
+/* カード */
 .LaughMusic-gameCorner-card {
   background-color: #bebebe;
-  padding: 15px 10px;
-  text-align: center;
-  height: 160px;
+  width: 170px;
+  padding: 10px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border-radius: 5px;
+  align-items: center;
+
+  border-radius: 10px;
 }
 
+/* 画像 */
 .LaughMusic-gameCorner-image {
   width: 100%;
-  height: 150px;
+  height: 110px;
   background-color: #e3e3e3;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
+/* ラベル */
 .LaughMusic-gameCorner-label {
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   margin: 0;
 }
 
-.LaughMusic-gameCorner-title {
+/* タイトル */
+.LaughMusic-section-title {
   text-align: center;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+/* ==============================
+   1個のとき中央
+================================ */
+.LaughMusic-gameCorner-item:only-child {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==============================
+   奇数のとき最後中央
+================================ */
+.LaughMusic-gameCorner-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
 }

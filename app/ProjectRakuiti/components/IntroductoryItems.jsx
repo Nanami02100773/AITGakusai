@@ -16,7 +16,7 @@ const cardData = [
   },
   {
     label: "ラベル2",
-    overlayText: "",
+    overlayText: "a",
     title: "紹介文2",
     subdesc1: "これは紹介2の補足説明です。",
     location: "場所2",
@@ -34,7 +34,7 @@ const cardData = [
   },
   {
     label: "ラベル4",
-    overlayText: "",
+    overlayText: "aa",
     title: "紹介文4",
     subdesc1: "これは紹介4の補足説明です。",
     location: "場所4",
@@ -52,7 +52,7 @@ const cardData = [
   },
   {
     label: "ラベル6",
-    overlayText: "",
+    overlayText: "a",
     title: "紹介文6",
     subdesc1: "これは紹介6の補足説明です。",
     location: "場所6",

@@ -17,9 +17,7 @@ function LaughMusicGameCorner() {
         <div className="LaughMusic-gameCorner-item">
           <div className="LaughMusic-gameCorner-card">
             <div className="LaughMusic-gameCorner-image"></div>
-            <p className="LaughMusic-gameCorner-label">
-              〇✕ゲーム
-            </p>
+            <p className="LaughMusic-gameCorner-label">〇✕ゲーム</p>
           </div>
         </div>
       </div>

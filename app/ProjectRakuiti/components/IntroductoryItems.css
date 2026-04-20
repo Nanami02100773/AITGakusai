@@ -63,7 +63,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 180px;
   height: 30px;
   background: #a1a1a1;
   color: #fff;
@@ -89,28 +89,33 @@
    右側（テキスト）
 ================================ */
 .Rakuiti-card-right {
+  position: relative;
   width: 60%;
-  padding: 10px;
+  padding: 8px;          /* ← 10px → 8px（少し詰める） */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 12px;             /* ← 20px → 12px（かなり重要） */
 }
 
+/* タイトル */
 .Rakuiti-sub1-title,
 .Rakuiti-sub2-title {
   background: #bbb;
-  padding: 4px 8px;
+  padding: 2px 6px;      /* ← 小さく */
   border-radius: 6px;
   width: fit-content;
+  line-height: 1.2;      /* ← 高さ詰める */
 }
 
+/* 説明文 */
 .Rakuiti-introduction1-subdesc,
 .Rakuiti-introduction2-subdesc {
-  font-size: 0.85em;
+  font-size: 0.8em;      /* ← 小さく */
   color: #333;
   padding-left: 6px;
-  margin-top: -4px;
+  margin-top: -6px;      /* ← 上に詰める */
+  line-height: 1.2;      /* ← 行間詰める */
 }
 
 /* ▼ トグルボタン */

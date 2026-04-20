@@ -1,12 +1,22 @@
 .login-container {
-  padding: 80px 20px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .login-title {
-  margin-bottom: 30px;
+  background-color: #999;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 300px;
+  /* 中央揃え */
+  margin: 70px auto 20px;
+  text-align: center;
+  display: block;
 }
 
 .login-form {

@@ -1,19 +1,16 @@
-/* 全体 */
-.guide-container {
-  padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* タイトル */
 .guide-title {
-  background-color: #888;
+  background-color: #999;
   color: white;
-  padding: 10px 40px;
+  padding: 10px 20px;
   border-radius: 20px;
-  font-size: 22px;
-  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 300px;
+  /* 中央揃え */
+  margin: 70px auto 20px;
+  text-align: center;
+  display: block;
 }
 
 /* 説明ボックス */
@@ -22,7 +19,7 @@
   padding: 25px;
   border-radius: 16px;
   max-width: 500px;
-  width: 100%;
+  width: 95%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 

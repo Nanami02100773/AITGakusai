@@ -11,17 +11,18 @@
 
 /* ===== 各アイテム ===== */
 .Make-booth-item {
-  width: 100%;
+  width: auto;
+  justify-self: center; /* 通常時も中央寄せ */
 }
 
 /* ===== カード ===== */
 .Make-booth-card {
   background-color: #bebebe;
-  width: 100%;
+  width: 170px; /* ← 横長防止の固定幅 */
   padding: 10px;
 
   display: flex;
-  flex-direction: column; /* ← 縦にする */
+  flex-direction: column;
   align-items: center;
 
   border-radius: 10px;
@@ -30,7 +31,7 @@
 /* ===== 画像 ===== */
 .Make-booth-image {
   width: 100%;
-  height: 110px; /* ← 小さくする */
+  height: 110px;
   background-color: #e3e3e3;
   border-radius: 8px;
   margin-bottom: 8px;
@@ -41,4 +42,11 @@
   font-size: 13px;
   color: white;
   margin: 0;
+}
+
+/* 奇数のとき最後の1個を中央に */
+.Make-booth-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
 }
