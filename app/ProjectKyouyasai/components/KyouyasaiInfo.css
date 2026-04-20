@@ -43,15 +43,25 @@
   padding-top: 8px;
 }
 
-/* グレー背景 */
+/* 🔥 グレー背景（ここ重要） */
 .Kyouyasai-scroll-area {
+  width: 100%;              /* ← 95%じゃない */
+  max-width: 600px;
   padding: 20px;
   border-radius: 10px;
   background-color: #b5b5b5;
-  width: 95%;
-  max-width: 600px;
-  height: 380px;
-  margin: 0 auto 100px;
+  margin: 0 auto 40px;      /* ← 100pxじゃなく40px */
+}
+
+/* 外側だけ余白調整（ラフミュと同じ） */
+.Kyouyasai-info > .Kyouyasai-scroll-area {
+  margin: 0 auto 40px;
+}
+
+/* 入れ子対策 */
+.Kyouyasai-scroll-area .Kyouyasai-scroll-area {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* SNS */
@@ -94,4 +104,11 @@
 .Kyouyasai-sns a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* 区切り線 */
+.Kyouyasai-profile-box:not(:last-child) {
+  border-bottom: 3px solid #e4e4e4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }

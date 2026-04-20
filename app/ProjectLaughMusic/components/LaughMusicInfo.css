@@ -109,3 +109,10 @@
   width: 95%;          /* ← 追加 */
   margin: 0 auto;      /* ← 中央寄せ */
 }
+
+/* 各プロフィールの区切り線（最後以外） */
+.LaughMusic-profile-box:not(:last-child) {
+  border-bottom: 3px solid #e4e4e4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
