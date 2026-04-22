@@ -7,24 +7,38 @@ body {
 /* 全体 */
 .Home-carousel-wrapper {
   width: 100%;
-  height: 470px;
+  height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c6c6c6;
+
+  /* ↓ ヒーローと自然に繋がる */
+  background: linear-gradient(
+    to bottom,
+    #f2f4f7 0%,   /* ← heroの背景と完全一致 */
+    #eef2ff 60%,  /* ← ほんのり青紫 */
+    #f7f8ff 100%  /* ← また白に戻す */
+  );
+
   position: relative;
-  padding-top: 25px;
+  padding-top: 0px;
 }
 
 /* コンテナ */
 .Home-carousel-container {
   width: 95%;
-  max-width: 1200px;
+  max-width: 1100px;
   height: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding: 40px 20px 64px;
+  padding: 20px 20px 64px;
   cursor: grab;
+
+  scrollbar-width: none;
+}
+
+.Home-carousel-container::-webkit-scrollbar {
+  display: none;
 }
 
 /* リスト */
@@ -37,10 +51,20 @@ body {
 .Home-carousel-card {
   min-width: 320px;
   max-width: 320px;
-  background: #f5f5f5;
+
+  /* ← ほぼ白だけどほんのり紫 */
+  background: #fbfbff;
+
   border-radius: 20px;
+
+  /* ← 薄くした */
+  border: 2px solid #d6dbff;
+
   padding: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  /* ← 軽い影 */
+  box-shadow: 0 6px 16px rgba(80, 90, 200, 0.12);
+
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -52,13 +76,16 @@ body {
 .Home-carousel-image-placeholder {
   width: 100%;
   height: 200px;
-  background: #ddd;
+
+  /* ← かなり薄い */
+  background: #eef1ff;
+
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   font-weight: bold;
-  color: #666;
+  color: #777;
   border-radius: 12px;
 }
 
@@ -66,24 +93,31 @@ body {
 .Home-carousel-title {
   font-size: 20px;
   font-weight: bold;
-  margin-top: 20px;   /* ← ここで余白追加 */
+  margin-top: 20px;
   margin-bottom: 6px;
+
+  /* ← 少しだけ青紫 */
+  color: #3a3f7a;
 }
 
 .Home-carousel-description {
   font-size: 14px;
   line-height: 1.6;
+  color: #555;
 }
 
 /* インジケータ */
 .Home-carousel-indicator {
   position: absolute;
-  bottom: 25px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+
+  /* ← かなり淡く */
   background-color: rgba(255, 255, 255, 0.9);
+
   padding: 10px 16px;
   border-radius: 999px;
 }
@@ -91,23 +125,11 @@ body {
 .Home-indicator-dot {
   width: 10px;
   height: 10px;
-  background: #ccc;
+  background: #cfd4ff;
   border-radius: 50%;
 }
 
 .Home-indicator-dot.active {
-  background: #111;
+  background: #7c82e6;
   transform: scale(1.4);
-}
-
-.Home-carousel-container {
-  overflow-x: scroll;
-  overflow-y: hidden;
-
-  /* スクロールバー非表示 */
-  scrollbar-width: none; /* Firefox */
-}
-
-.Home-carousel-container::-webkit-scrollbar {
-  display: none; /* Chrome / Safari */
 }

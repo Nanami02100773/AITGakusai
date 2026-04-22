@@ -24,7 +24,7 @@ const timetableData = [
     day: "２日目",
     items: [
       ["09:00 〜 10:00", "会場準備"],
-      ["10:00 〜 10:30", "スタッフ集合"], // ← 追加して揃える
+      ["10:00 〜 10:30", "スタッフ集合"],
       ["10:30 〜 11:00", "受付開始"],
       ["11:00 〜 12:00", "オープニング"],
       ["12:00 〜 13:00", "企画展示"],
@@ -47,36 +47,15 @@ const ZentaiTimetable = () => {
       <div className="Home-box">
         {timetableData.map((dayData, index) => (
           <div key={index}>
-            <h3 className="Home-title Home-time_table Home-day-title">
-              {dayData.day}
-            </h3>
+            <h3 className="Home-day-title">{dayData.day}</h3>
 
             <table className="Home-table">
-              <thead>
-                <tr>
-                  <th>時間</th>
-                  <th
-                    className="Home-divider-cell Home-divider-head Home-only-head"
-                    rowSpan="100"
-                  ></th>
-                  <th>内容</th>
-                </tr>
-              </thead>
+              
 
               <tbody>
                 {dayData.items.map((item, i) => (
                   <tr key={i}>
                     <td>{item[0]}</td>
-
-                    {i === 0 ? (
-                      <td
-                        className="Home-divider-cell"
-                        rowSpan="100"
-                      ></td>
-                    ) : (
-                      <td className="Home-divider-space"></td>
-                    )}
-
                     <td>{item[1]}</td>
                   </tr>
                 ))}

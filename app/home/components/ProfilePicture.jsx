@@ -8,30 +8,34 @@ const SnsSection = () => {
 
       <div className="Home-container">
         <div className="Home-sns-list">
+          
           <a
-            className="Home-sns-icon"
+            className="Home-sns-icon instagram"
             href="https://www.instagram.com/ait_fes/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            インスタ
+            IG
           </a>
+
           <a
-            className="Home-sns-icon"
+            className="Home-sns-icon twitter"
             href="https://x.com/aitfes"
             target="_blank"
             rel="noopener noreferrer"
           >
             X
           </a>
+
           <a
-            className="Home-sns-icon"
+            className="Home-sns-icon web"
             href="https://aitech.ac.jp/~festival/top.html"
             target="_blank"
             rel="noopener noreferrer"
           >
-            HP
+            🌐
           </a>
+
         </div>
       </div>
     </section>
