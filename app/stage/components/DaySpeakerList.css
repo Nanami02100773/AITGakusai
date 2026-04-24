@@ -1,91 +1,276 @@
-/* 出演者紹介：セクション見出し */
-.Stage-performer-section h2 {
-  display: block;
-  width: 250px;
-  max-width: 100%;
-  margin: 4px auto 10px;
-  text-align: center;
-  background: #999;
-  color: #fff;
-  border-radius: 20px;
-  padding: 6px 20px;
-  font-size: 1rem;
-  box-sizing: border-box;
+
+/* ===== セクション ===== */
+.Stage-performer-section {
+  background: linear-gradient(180deg, #f4f6ff, #eef1ff);
+  padding: 30px 0;
 }
 
-/* プロフィールラッパー */
+/* ===== カード配置 ===== */
 .Stage-profile-box {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-/* プロフィールボックス */
+/* ===== カード ===== */
 .Stage-profile {
-  background: white;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 15px 30px rgba(120,120,200,0.15);
 }
 
-/* 写真領域 */
+/* カードにドット模様 */
+.Stage-profile {
+  position: relative;
+  z-index: 0; /* 基準を作る */
+}
+
+/* 模様 */
+.Stage-profile {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* ドット模様 */
+.Stage-profile {
+  width: 90%;
+  max-width: 700px;
+
+  background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(245,247,255,0.9));
+  border-radius: 18px;
+  padding: 20px;
+
+  border: 1px solid rgba(200,210,255,0.4);
+
+  box-shadow:
+    0 10px 25px rgba(120,120,200,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ===== 右下：フェードドット ===== */
+.Stage-profile::after {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 120px;
+
+  bottom: -20px;
+  right: -20px;
+
+  background-image:
+    radial-gradient(#cfd6ff 2px, transparent 2px),
+
+  background-size: 12px 12px, 12px 12px;
+
+  opacity: 0.5;
+  z-index: -1;
+
+  -webkit-mask-image: linear-gradient(to top left, black 40%, transparent 100%);
+  mask-image: linear-gradient(to top left, black 40%, transparent 100%);
+}
+
+/* ===== 左上：ぼかし円 ===== */
+.Stage-profile::before {
+  content: "";
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  top: -60px;
+  left: -60px;
+
+  z-index: -1;
+
+  /* ① ぼかし円 */
+  background:
+    radial-gradient(circle at center, #e0e7ff 0%, transparent 70%),
+
+    /* ② 小ドット */
+    radial-gradient(#cfd6ff 1.5px, transparent 1.5px),
+
+    /* ③ リング */
+    radial-gradient(circle, transparent 60%, #d6dbff 61%, transparent 63%);
+
+  background-size:
+    100% 100%,   /* ぼかし */
+    12px 12px,   /* ドット */
+    100% 100%;   /* リング */
+
+  background-repeat: no-repeat, repeat, no-repeat;
+
+  opacity: 0.5;
+
+  /* フェード */
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+/* ===== 右上：うすいライン模様 ===== */
+.Stage-profile .pattern-top {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 100px;
+  height: 100px;
+
+  background: repeating-linear-gradient(
+    45deg,
+    #e0e7ff,
+    #e0e7ff 2px,
+    transparent 2px,
+    transparent 8px
+  );
+
+  opacity: 0.3;
+  border-radius: 12px;
+
+  pointer-events: none;
+}
+
+/* ===== 写真 ===== */
 .Stage-photo {
   width: 100%;
-  height: 160px;
-  background: #ddd;
+  height: 180px;
+  background: #dfe3ff;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+/* ===== 名前 ===== */
+.Stage-bio h3 {
+  font-size: 22px;
+  color: #2f3f66;
+  margin-bottom: 10px;
+}
+
+/* ===== 紹介文 ===== */
+.Stage-bio p {
+  font-size: 14px;
+  color: #5a6f8f;
+  border-top: 2px dashed #d6dbff;
+  padding-top: 10px;
+}
+
+/* ===== 物販エリア ===== */
+.Stage-goods-info {
+  margin-top: 16px;
+}
+
+/* ===== 上段（まとまりBOX） ===== */
+.Stage-goods-top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #666;
-  margin-bottom: 12px;
+  background: #eaf6ee;
+  border-radius: 15px;
+  padding: 16px;
+  gap: 16px;
 }
 
-/* 紹介文見出し */
-.Stage-bio h3 {
-  font-size: 14px;
-  margin-top: 4px;
-  margin-bottom: 8px;
-}
-
-/* 紹介文本文 */
-.Stage-bio p {
-  font-size: 15px;
-  color: #444;
-  border-top: 1px dashed #aaa;
-  padding-top: 8px;
-}
-
-/* 物販情報全体 */
-.Stage-goods-info {
+/* 左 */
+.Stage-goods-top .left {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 12px;
+  align-items: center;
 }
 
-/* 物販ステータス・時間 */
-.Stage-goods-status,
-.Stage-goods-time {
-  background-color: #eee;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+/* 仕切り線 */
+.Stage-goods-top .divider {
+  width: 1px;
+  height: 40px;
+  background: #cbd5e1;
 }
 
-/* 物販あり */
+/* 右 */
+.Stage-goods-top .right {
+  flex: 1;
+}
+
+/* ===== 物販あり ===== */
 .Stage-goods-status.available {
-  color: green;
+  display: flex;
+  align-items: center;
+  color: #2e7d32;
   font-weight: bold;
 }
 
-/* スクロールエリア */
-.Stage-scroll-area {
-  height: auto;
-  overflow: visible;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #b5b5b5;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* ✔ */
+.Stage-goods-status.available::before {
+  content: "✔";
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+/* ===== 場所 ===== */
+.Stage-goods-place {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ラベル */
+.Stage-goods-place .label {
+  font-size: 13px;
+  color: #2e7d32;
+}
+
+/* 内容 */
+.Stage-goods-place .value {
+  font-size: 14px;
+  color: #333;
+}
+
+/* ===== 時間 ===== */
+.Stage-goods-time {
+  margin-top: 10px;
+  background: #eef0ff;
+  padding: 16px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #2f3f66;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🕒 */
+.Stage-goods-time::before {
+  content: "🕒";
+  font-size: 20px;
+}
+
+/* ===== 物販なし ===== */
+.Stage-goods-status.none {
+  background: #f3f4f6;
+  padding: 14px;
+  border-radius: 14px;
+  color: #888;
+  width: 150px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ✕ */
+.Stage-goods-status.none::before {
+  content: "✕";
+  margin-right: 8px;
 }

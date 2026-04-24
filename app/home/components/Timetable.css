@@ -1,78 +1,156 @@
+/* ===== 全体 ===== */
 .Home-timetable-section {
   text-align: center;
-  background: #f7f8ff;
-  padding: 20px 0;
+  padding: 40px 0;
+
+  background: linear-gradient(180deg, #f3f4ff, #faf7ff);
+  position: relative;
 }
 
-/* 外枠カード（スクロール付き） */
+/* ===== 外枠 ===== */
 .Home-box {
   width: 92%;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  padding: 20px 16px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
 
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(80, 90, 200, 0.08);
+  border-radius: 25px;
 
-  max-height: 600px;
+  box-shadow: 0 20px 40px rgba(120,120,200,0.15);
+
+  max-height: 650px;
   overflow-y: auto;
 }
 
-/* スクロールバー */
-.Home-box::-webkit-scrollbar {
-  width: 6px;
+/* ⭐ 追加：2日目以降に余白 */
+.Home-box > div + div {
+  margin-top: 40px;
 }
 
-.Home-box::-webkit-scrollbar-thumb {
-  background: #cfd4ff;
-  border-radius: 10px;
-}
-
-.Home-box::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* 日付タイトル */
+/* ===== 日付 ===== */
 .Home-day-title {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
   color: #3e4f7a;
-  margin: 10px 0 20px;
+  
+  margin-bottom: 20px;
+
+  position: relative;
+  display: inline-block;
+
+  text-align: center;
+  letter-spacing: 2px;
 }
 
-/* テーブル */
-.Home-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 12px;
+/* タイトル本体 */
+.Home-day-title span {
+  position: relative;
+  display: inline-block;
+  padding: 0 40px;
+  font-weight: 700;
 }
 
+/* ===== 左キラキラ ===== */
+.Home-day-title span::before {
+  content: "✦ ✧";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-120%, -50%);
 
-
-/* 行 */
-.Home-table td {
-  background: #ffffff;
-  padding: 14px;
-  font-size: 14px;
-  box-shadow: 0 4px 10px rgba(80, 90, 200, 0.05);
+  font-size: 18px;
+  color: #a88bff;
+  opacity: 0.7;
 }
 
-/* 時間 */
-.Home-table td:first-child {
-  width: 40%;
-  background: #f3f5ff;
-  border-radius: 12px 0 0 12px;
+/* ===== 右キラキラ ===== */
+.Home-day-title span::after {
+  content: "✧ ✦";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(120%, -50%);
+
+  font-size: 18px;
+  color: #ff9ed6;
+  opacity: 0.7;
+}
+
+/* ===== 下のグラデライン ===== */
+.Home-day-title::after {
+  content: "";
+  display: block;
+
+  width: 120px;
+  height: 6px;
+
+  margin: 10px auto 0;
+
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7aa6ff, #ff9ed6);
+}
+
+/* ===== リスト ===== */
+.Home-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ===== 1行カード ===== */
+.Home-row {
+  display: flex;
+  align-items: center;
+
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
+
+  padding: 6px;
+
+  box-shadow: 0 8px 20px rgba(120,120,200,0.12);
+}
+
+/* ===== 時間 ===== */
+.Home-time {
+  width: 38%;
+  background: #eef1ff;
+
+  padding: 16px;
+  border-radius: 14px;
+
+  font-size: 15px;
   color: #3a4f6a;
-  font-weight: 500;
 
-  border-right: 1px solid rgba(200, 210, 255, 0.6);
+  text-align: center;
+
+  box-shadow: inset 0 2px 6px rgba(255,255,255,0.7);
 }
 
-/* 内容 */
-.Home-table td:last-child {
-  border-radius: 0 12px 12px 0;
+/* ===== アイコン丸 ===== */
+.Home-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background:#f7f8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  margin: 0 12px;
+}
+
+/* ===== 内容 ===== */
+.Home-content {
+  flex: 1;
+  padding: 16px 10px;
+
+  text-align: left;
+  font-size: 15px;
   color: #3e5f70;
 }

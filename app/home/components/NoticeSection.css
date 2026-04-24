@@ -1,32 +1,25 @@
 /* ===== セクション背景 ===== */
 .Home-notice-section {
   background: #f7f8ff;
-  padding: 60px 0;
+  padding: 10px 0;
 }
 
 .Home-section-title {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 260px;
   height: 48px;
   margin: 10px auto 20px;
-
   /* ===== 色はHome ===== */
   background: linear-gradient(90deg, #7fa8ff, #d89bff);
-
   color: #fff;
   font-size: 18px;
   font-weight: bold;
-
   border-radius: 999px;
-
   box-sizing: border-box;
-
   /* ===== Stageの枠 ===== */
   border: 3px solid rgba(255, 255, 255, 0.35);
-
   /* ===== 立体感（合体） ===== */
   box-shadow:
     0 8px 20px rgba(120, 120, 200, 0.2),   /* 外影（Home寄り） */

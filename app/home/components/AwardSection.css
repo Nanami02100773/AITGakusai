@@ -1,91 +1,97 @@
+/* ===== 全体 ===== */
 .Home-award-section {
-  /* ← 全体統一グラデ */
-background: #f7f8ff;
-
-  padding: 20px 0 30px;
+  background: linear-gradient(180deg, #f7f8ff, #eef1ff);
+  padding: 30px 0 40px;
 }
 
-/* 説明ボックス */
+/* ===== 説明ボックス ===== */
 .Home-box1 {
   width: 90%;
   max-width: 600px;
-  margin: 0 auto 20px;
-  padding: 18px;
+  margin: 0 auto 24px;
+  padding: 20px;
 
-  /* ← ガラス寄り */
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 
-  border-radius: 16px;
+  border-radius: 20px;
   color: #3e4f7a;
-  line-height: 1.8;
+  line-height: 1.9;
 
-  box-shadow: 0 6px 16px rgba(80, 90, 200, 0.08);
+  box-shadow: 0 10px 24px rgba(120,120,200,0.12);
 }
 
-/* 賞リスト外枠 */
+/* ===== 賞リスト外枠 ===== */
 .Home-box2 {
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* カード */
+/* ===== カード ===== */
 .Home-award-card {
   position: relative;
-  background: #ffffff;
+  background: rgba(255,255,255,0.95);
 
-  padding: 18px 20px 16px 24px;
-  border-radius: 16px;
-  margin-bottom: 16px;
+  padding: 20px 22px 18px 26px;
+  border-radius: 10px;
+  margin-bottom: 18px;
 
-  box-shadow: 0 6px 14px rgba(80, 90, 200, 0.06);
+  box-shadow: 0 10px 22px rgba(120,120,200,0.1);
+  border: 1px solid #e6e9ff;
 
-  border: 1px solid #e3e7ff; /* ← ほんのり青紫 */
+  transition: all 0.25s ease;
 }
 
-/* 左ライン */
+
+/* ===== 左ライン ===== */
 .Home-award-card::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 12px;
-  bottom: 12px;
+  top: 14px;
+  bottom: 14px;
   width: 6px;
   border-radius: 6px;
 
-  /* ← 水色→青紫へ */
-  background: linear-gradient(180deg, #8fb2f0, #6a93e0);
+  background: linear-gradient(180deg, #7aa6ff, #a88bff);
 }
 
-/* タイトル行 */
+/* ===== タイトル ===== */
 .Home-award-card > div:first-child {
   font-weight: bold;
-  color: #3e4f7a;
+  color: #2f3f66;
+  font-size: 16px;
+
   position: relative;
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
-/* ● */
+/* ●（ちょいグラデ風） */
 .Home-award-card > div:first-child::before {
   content: "";
-  width: 8px;
-  height: 8px;
-  background: #7f9fe6;
+  width: 9px;
+  height: 9px;
+
+  background: linear-gradient(135deg, #7aa6ff, #ff9ed6);
   border-radius: 50%;
+
   position: absolute;
   left: 0;
-  top: 8px;
+  top: 7px;
 }
 
-/* 説明 */
+/* ===== 説明 ===== */
 .Home-award-desc {
-  margin-top: 10px;
+  margin-top: 12px;
   color: #5a6f8f;
   font-size: 14px;
 
-  /* ← 点線も青紫寄り */
   border-bottom: 2px dashed #d6dbff;
-
   padding-bottom: 6px;
+}
+
+/* ===== ちょいアクセント（最後の線消す） ===== */
+.Home-award-card:last-child .Home-award-desc {
+  border-bottom: none;
 }

@@ -10,26 +10,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 40px;
-  margin: 5px auto 10px;
-  background: linear-gradient(145deg, #7f9fe6, #5f86d6);
+  width: 260px;
+  height: 48px;
+  margin: 10px auto 20px;
+  /* ===== 色はHome ===== */
+  background: linear-gradient(90deg, #7fa8ff, #d89bff);
   color: #fff;
-  border-radius: 999px;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: bold;
-
+  border-radius: 999px;
   box-sizing: border-box;
-
+  /* ===== Stageの枠 ===== */
   border: 3px solid rgba(255, 255, 255, 0.35);
-
-  /* ⭐ここがポイント（内側白ライン） */
+  /* ===== 立体感（合体） ===== */
   box-shadow:
-    0 4px 10px rgba(80, 90, 200, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),  /* 上の白ライン */
-    inset 0 -1px 0 rgba(255, 255, 255, 0.25); /* 下のうっすら影 */
+    0 8px 20px rgba(120, 120, 200, 0.2),   /* 外影（Home寄り） */
+    inset 0 2px 0 rgba(255,255,255,0.6),   /* 上の白ライン（強め） */
+    inset 0 -1px 0 rgba(255,255,255,0.25); /* 下の影（Stage） */
 }
-
 
 /* ===== 外枠 ===== */
 .Stage-notice-box {
