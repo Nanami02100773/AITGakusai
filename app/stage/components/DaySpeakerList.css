@@ -66,10 +66,10 @@
   bottom: -20px;
   right: -20px;
 
-  background-image:
+ background-image:
     radial-gradient(#cfd6ff 2px, transparent 2px),
-
-  background-size: 12px 12px, 12px 12px;
+    radial-gradient(#ffd6f0 2px, transparent 2px); /* ← ピンク追加 */
+  background-size: 12px 12px;
 
   opacity: 0.5;
   z-index: -1;
