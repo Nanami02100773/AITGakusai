@@ -1,107 +1,249 @@
+/* ===== セクション背景 ===== */
 .Home-notice-section {
-  /* ← hero / carousel とつながる淡い背景 */
-background: #f7f8ff;
+  background: #f7f8ff;
+  padding: 60px 0;
 }
 
-/* 外枠 */
+.Home-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 260px;
+  height: 48px;
+  margin: 10px auto 20px;
+
+  /* ===== 色はHome ===== */
+  background: linear-gradient(90deg, #7fa8ff, #d89bff);
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+  border-radius: 999px;
+
+  box-sizing: border-box;
+
+  /* ===== Stageの枠 ===== */
+  border: 3px solid rgba(255, 255, 255, 0.35);
+
+  /* ===== 立体感（合体） ===== */
+  box-shadow:
+    0 8px 20px rgba(120, 120, 200, 0.2),   /* 外影（Home寄り） */
+    inset 0 2px 0 rgba(255,255,255,0.6),   /* 上の白ライン（強め） */
+    inset 0 -1px 0 rgba(255,255,255,0.25); /* 下の影（Stage） */
+}
+
+/* ===== 外枠 ===== */
 .Home-box3 {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-
-  padding: 16px;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 28px;
   width: 90%;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
-  max-height: 230px;
-  overflow-y: auto;
 
-  box-shadow: 0 6px 16px rgba(80, 90, 200, 0.08);
+  box-shadow: 0 12px 30px rgba(120, 120, 200, 0.1);
+
+  /* ↓ 追加 */
+  max-height: 270px;   /* ← 3つ分くらいに調整 */
+  overflow-y: auto;
 }
+
 .Home-box3::-webkit-scrollbar {
   width: 6px;
 }
 
-.Home-box3::-webkit-scrollbar-track {
-  background: rgba(237, 240, 255, 0.6); /* ← 背景と同系色 */
-  border-radius: 10px;
-}
-
 .Home-box3::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #8fb2f0, #6a93e0); /* ← アイコンと統一 */
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.4); /* ← ちょい光 */
+  background: linear-gradient(180deg, #cfd6ff, #a0a8d8);
+  border-radius: 4px;
 }
-
-.Home-box3::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #7ea3e6, #5f86d6);
-}
-
-
-/* Firefox対応 */
-.Home-box3 {
-  scrollbar-width: thin;
-  scrollbar-color: #7ea3e6 rgba(237, 240, 255, 0.6);
-}
-
-/* アイテム */
+/* ===== カード ===== */
 .Home-notice-item {
   position: relative;
-  background: #ffffff;
-  padding: 16px 18px;
-  border-radius: 14px;
-  margin-bottom: 5px;
   display: flex;
   align-items: center;
-
-  border: 1px solid #e3e7ff; /* ← ほんのり青紫 */
-
-  box-shadow: 0 5px 12px rgba(80, 90, 200, 0.06);
-  cursor: pointer;
-  transition: all 0.25s ease;
+  gap: 10px;
+min-height: 70px;   /* ← 高さを固定気味にする */
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #2d3a66;
+  box-shadow: 0 10px 25px rgba(120, 120, 200, 0.08);
+  overflow: hidden;
+  transition: 0.25s;
 }
 
-/* hover */
 .Home-notice-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(80, 90, 200, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(120, 120, 200, 0.15);
 }
 
-/* 左アイコン */
+/* ===== 左上ドット ===== */
 .Home-notice-item::before {
   content: "";
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  margin-right: 12px;
-  flex-shrink: 0;
-
-  background:
-    linear-gradient(white, white) center 30% / 60% 2px no-repeat,
-    linear-gradient(white, white) center 50% / 60% 2px no-repeat,
-    linear-gradient(white, white) center 70% / 60% 2px no-repeat,
-    linear-gradient(145deg, #8fb2f0, #6a93e0); /* ← カルーセル寄せ */
-
-  box-shadow:
-    inset 0 2px 4px rgba(255,255,255,0.6),
-    inset 0 -2px 4px rgba(0,0,0,0.06);
-}
-
-/* 右矢印 */
-.Home-notice-item::after {
-  content: "›";
   position: absolute;
-  right: 16px;
-  font-size: 20px;
-  color: #8aa3d6; /* ← 青紫グレー */
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+
+  background-image: radial-gradient(#cfd6ff 2px, transparent 2px);
+  background-size: 10px 10px;
+
+  opacity: 0.5;
+
+  /* ← ここがポイント */
+  -webkit-mask-image: radial-gradient(circle at 0% 0%, black 20%, transparent 100%);
+  mask-image: radial-gradient(circle at 0% 0%, black 20%, transparent 100%);
+
+  pointer-events: none;
 }
 
-/* テキスト */
-.Home-notice-link {
+/* 青 */
+.Home-notice-item:nth-child(3n+1)::before {
+  background-image: radial-gradient(#cfd6ff 2px, transparent 2px);
+}
+
+/* 紫 */
+.Home-notice-item:nth-child(3n+2)::before {
+  background-image: radial-gradient(#e0ccff 2px, transparent 2px);
+}
+
+/* ピンク */
+.Home-notice-item:nth-child(3n)::before {
+  background-image: radial-gradient(#ffd1e6 2px, transparent 2px);
+}
+
+/* ===== 右側ドット ===== */
+.Home-notice-item::after {
+  content: "";
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 50px;
+  height: 30px;
+
+  background-image: radial-gradient(#cfd6ff 2px, transparent 2px);
+  background-size: 10px 10px;
+
+  opacity: 0.4;
+
+  /* ← ここがポイント */
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+  mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+
+  pointer-events: none;
+}
+
+/* 青 */
+.Home-notice-item:nth-child(3n+1)::after {
+  background-image: radial-gradient(#cfd6ff 2px, transparent 2px);
+}
+
+/* 紫 */
+.Home-notice-item:nth-child(3n+2)::after {
+  background-image: radial-gradient(#e0ccff 2px, transparent 2px);
+}
+
+/* ピンク */
+.Home-notice-item:nth-child(3n)::after {
+  background-image: radial-gradient(#ffd1e6 2px, transparent 2px);
+}
+
+/* ===== SVG波 ===== */
+.notice-wave {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 140px;
+  height: 70px;
+  pointer-events: none;
+}
+
+/* ===== 波の色（ループ） ===== */
+
+/* 1,4,7...（青） */
+.Home-notice-item:nth-child(3n+1) .wave-back {
+  fill: rgba(140,170,255,0.2);
+}
+.Home-notice-item:nth-child(3n+1) .wave-front {
+  fill: rgba(180,200,255,0.25);
+}
+
+/* 2,5,8...（紫） */
+.Home-notice-item:nth-child(3n+2) .wave-back {
+  fill: rgba(180,140,255,0.2);
+}
+.Home-notice-item:nth-child(3n+2) .wave-front {
+  fill: rgba(210,180,255,0.25);
+}
+
+/* 3,6,9...（ピンク） */
+.Home-notice-item:nth-child(3n) .wave-back {
+  fill: rgba(255,150,200,0.2);
+}
+.Home-notice-item:nth-child(3n) .wave-front {
+  fill: rgba(255,200,220,0.25);
+}
+
+/* ===== 番号バッジ ===== */
+.notice-number {
+   width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
   display: flex;
   align-items: center;
-  width: 100%;
-  color: #3e4f7a; /* ← カルーセルタイトルと統一 */
-  text-decoration: none;
-  font-size: 14px;
+  justify-content: center;
+
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+
+  position: relative;
+  flex-shrink: 0;
+
+  box-shadow: inset 0 4px 10px rgba(255,255,255,0.4),
+              inset 0 -4px 10px rgba(0,0,0,0.08);
+}
+
+/* グラデ */
+/* 青 */
+.Home-notice-item:nth-child(3n+1) .notice-number {
+  background: linear-gradient(135deg, #a9c4ff, #7f9cff);
+}
+
+/* 紫 */
+.Home-notice-item:nth-child(3n+2) .notice-number {
+  background: linear-gradient(135deg, #d5c4ff, #a79cff);
+}
+
+/* ピンク */
+.Home-notice-item:nth-child(3n) .notice-number {
+  background: linear-gradient(135deg, #ffc2dc, #ffa3cc);
+}
+
+
+/* ===== テキスト ===== */
+.notice-text {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ===== 矢印 ===== */
+.notice-arrow {
+  font-size: 35px;
+  color: #a0a8d8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
 }

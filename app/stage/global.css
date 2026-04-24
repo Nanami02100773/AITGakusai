@@ -1,13 +1,16 @@
+
 .background-box {
-  background-color: #e7e7e7;
-  padding: 15px;
+  background: #f4f5ff; /* ← 青紫寄りの白 */
+  padding: 16px;
 
   width: 95%;
   max-width: 800px;
-  margin: 20px auto 100px; /* ← 下に余白追加 */
+  margin: 20px auto 100px;
 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
+  border-radius: 20px;
+
+  /* ふわっと浮く影 */
+  box-shadow: 0 10px 25px rgba(100, 110, 255, 0.08);
 }
 
 .Project2-container {

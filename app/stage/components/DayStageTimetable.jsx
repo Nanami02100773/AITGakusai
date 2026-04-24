@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./DayStageTimetable.css";
 
-const DayStageTimetable = ({ data }) => {
+const DayStageTimetable = ({ data = [] }) => {  // ← これ重要
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleDetail = (index) => {
@@ -11,50 +11,51 @@ const DayStageTimetable = ({ data }) => {
 
   return (
     <section className="timetable-section">
-    
 
-      {/* 👇 出演者様紹介と同じ「独立タイトル」 */}
-      <h2 className="timetable-heading">タイムテーブル</h2>
+      <h2 className="Stage-section-title">
+        タイムテーブル
+      </h2>
 
-      {/* 👇 中身だけグレー背景 */}
       <div className="timetable">
-        <div className="scroll-area wrapper">
+        <div className="timetable-scroll"> {/* ← これも忘れず */}
+
           <ul className="time-slot">
             {data.map((item, index) => (
               <li key={index} className="time-slot-item">
-                <div className="slot-header">
-                  <div className="time-container">
-                    <span className="time">{item.time}</span>
-                  </div>
 
-                  <div className="event-container">
-                    <div
-                      className="event"
-                      onClick={() => toggleDetail(index)}
-                    >
+                <div className="slot-header">
+                  <div className="time">{item.time}</div>
+
+                  <div
+                    className="event"
+                    onClick={() => toggleDetail(index)}
+                  >
+                    <div className="event-left">
+                      <div className="event-icon">{item.icon}</div>
                       <span className="event-title">{item.title}</span>
-                      <span className="toggle-icon">
-                        {openIndex === index ? "▲" : "▼"}
-                      </span>
                     </div>
+
+                    <span className="toggle-icon">
+                      {openIndex === index ? "▲" : "▼"}
+                    </span>
                   </div>
                 </div>
 
                 {openIndex === index && (
                   <div className="event-detail">
-                    <div className="event-image-box">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="event-image"
-                      />
-                    </div>
-                    <p className="event-description">{item.detail}</p>
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="event-image"
+                    />
+                    <p>{item.detail}</p>
                   </div>
                 )}
+
               </li>
             ))}
           </ul>
+
         </div>
       </div>
 

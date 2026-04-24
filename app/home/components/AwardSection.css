@@ -5,31 +5,6 @@ background: #f7f8ff;
   padding: 20px 0 30px;
 }
 
-/* タイトル */
-.Home-section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 250px;
-  height: 40px;
-  margin: 5px auto 10px;
-  background: linear-gradient(145deg, #7f9fe6, #5f86d6);
-  color: #fff;
-  border-radius: 999px;
-  font-size: 1rem;
-  font-weight: bold;
-
-  box-sizing: border-box;
-
-  border: 3px solid rgba(255, 255, 255, 0.35);
-
-  /* ⭐ここがポイント（内側白ライン） */
-  box-shadow:
-    0 4px 10px rgba(80, 90, 200, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),  /* 上の白ライン */
-    inset 0 -1px 0 rgba(255, 255, 255, 0.25); /* 下のうっすら影 */
-}
-
 /* 説明ボックス */
 .Home-box1 {
   width: 90%;

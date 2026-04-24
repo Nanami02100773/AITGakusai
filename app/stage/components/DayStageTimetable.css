@@ -1,65 +1,20 @@
-/* =========================
-   タイムテーブル：全体
-   ========================= */
-.timetable {
-  background: #c6c5c5;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-
+/* ===== セクション ===== */
 .timetable-section {
-  margin: 0 auto 50px;
+  padding: 20px;
+}
+.heading-icon {
+  font-size: 18px;
 }
 
-.timetable-heading {
-  font-size: 20px;
-  background-color: #999;
-  color: white;
-  padding: 10px 20px;
+/* ===== 外枠 ===== */
+.timetable {
+  background: linear-gradient(180deg, #fdfdfd, #f8f7ff);
+  padding: 16px;
   border-radius: 20px;
-  width: 300px;
-  margin: 80px auto 30px; /* ← 独立してる証拠 */
-  text-align: center;
+  box-shadow: 0 8px 20px rgba(120, 100, 255, 0.08);
 }
 
-
-/* タイトル */
-.timetable-heading {
-  display: block;
-  width: 250px;
-  max-width: 100%;
-  margin: 5px auto 10px;
-  text-align: center;
-  background: #999;
-  color: #fff;
-  border-radius: 20px;
-  padding: 6px 20px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-/* スクロールエリア */
-.scroll-area {
-  max-height: 500px;
-  overflow-y: auto;
-  padding-right: 8px;
-  border-radius: 8px;
-}
-
-/* ラッパー */
-.wrapper {
-  background: #f7f7f7;
-  padding: 12px;
-  font-family: "Helvetica Neue", sans-serif;
-}
-
-/* =========================
-   タイムスロット
-   ========================= */
+/* ===== タイムライン ===== */
 .time-slot {
   list-style: none;
   padding: 0;
@@ -67,197 +22,195 @@
   position: relative;
 }
 
-/* 縦棒（スマホ：左端） */
+/* 縦線 */
 .time-slot::before {
   content: "";
   position: absolute;
-  left: 8px;
+  left: 12px;
   top: 0;
   bottom: 0;
-  width: 3px;
-  background: #ccc;
+  width: 2px;
+  background: #dcdcff;
 }
 
-/* 各スロット */
+/* ===== 各アイテム ===== */
 .time-slot-item {
   position: relative;
-  padding: 16px 0 16px 32px; /* ← 棒・丸の余白 */
-  border-bottom: 1px solid #ddd;
+  padding: 20px 0 20px 40px;
 }
 
-.time-slot-item:first-child {
-  border-top: 1px solid #ddd;
-}
-
-/* 丸（スマホ：左端） */
+/* 丸 */
 .time-slot-item::before {
   content: "";
-  width: 18px;
-  height: 18px;
-  background: white;
-  border: 3px solid #888;
-  border-radius: 50%;
   position: absolute;
-  left: 0.5px;
-  top: 22px;
-  z-index: 1;
+  left: 5px;
+  top: 26px;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 3px solid #7a73ff;
+  border-radius: 50%;
 }
 
-/* =========================
-   スロット上部（スマホ縦）
-   ========================= */
+/* ===== 上部 ===== */
 .slot-header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 8px;
 }
 
 /* 時間 */
-.time-container {
-  width: auto;
-  text-align: left;
-}
-
 .time {
-  font-size: 14px;
-  font-weight: bold;
-  color: #444;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b6b8f;
 }
 
-/* イベント */
-.event-container {
-  width: 100%;
-}
-
+/* ===== イベントカード ===== */
 .event {
-  background: #cdcdcd;
-  padding: 10px 14px;
-  border-radius: 12px;
+  background: white;
+  border-radius: 16px;
+  padding: 12px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.2s;
 }
 
 .event:hover {
-  background-color: #ddd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
+/* 左側 */
+.event-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* アイコン */
+.event-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e9e7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* タイトル */
 .event-title {
   font-weight: bold;
-  font-size: 15px;
   color: #333;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
+/* トグル */
 .toggle-icon {
-  font-size: 18px;
-  color: #666;
+  color: #777;
 }
 
-/* =========================
-   詳細（スマホ：全幅）
-   ========================= */
+/* ===== 色分け ===== */
+.time-slot-item:nth-child(1) .event {
+  background: #f0edff;
+}
+
+.time-slot-item:nth-child(2) .event {
+  background: #eef2ff;
+}
+
+.time-slot-item:nth-child(3) .event {
+  background: #e8f7f2;
+}
+
+.time-slot-item:nth-child(4) .event {
+  background: #fff4e5;
+}
+
+.time-slot-item:nth-child(5) .event {
+  background: #f3eaff;
+}
+
+/* ===== 詳細 ===== */
 .event-detail {
   margin-top: 10px;
-  background: #e9e9e9;
-  padding: 12px;
-  border-radius: 8px;
-  animation: fadeIn 0.2s ease-in-out;
-}
-
-.event-image-box {
   background: white;
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  width: 100%;
-  margin-bottom: 10px;
+  border-radius: 12px;
+  padding: 12px;
+  animation: fadeIn 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .event-image {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.event-description {
-  margin: 0;
-  font-size: 14px;
-  color: #444;
-  line-height: 1.6;
+/* 外枠は高さ固定 */
+.timetable {
+  height: 500px; /* ← 超重要 */
+  overflow: hidden;
 }
 
-/* =========================
-   PC表示（拡張）
-   ========================= */
+/* 中だけスクロール */
+.timetable-scroll {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* スクロールバー（任意） */
+.timetable-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.timetable-scroll::-webkit-scrollbar-thumb {
+  background: #cfd3ff;
+  border-radius: 10px;
+}
+
+
+/* ===== アニメーション ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== PC ===== */
 @media (min-width: 768px) {
 
-  .timetable {
-    max-width: 800px;
-    padding: 20px;
-  }
-
   .time-slot::before {
-    left: 138px;
-    width: 4px;
+    left: 150px;
   }
 
   .time-slot-item {
-    padding: 24px 0;
+    padding-left: 180px;
   }
 
   .time-slot-item::before {
-    left: 131px;
-    top: 23px;
-    width: 18px;
-    height: 18px;
+    left: 142px;
   }
 
   .slot-header {
     flex-direction: row;
     align-items: center;
-    gap: 16px;
   }
 
-  .time-container {
+  .time {
     width: 120px;
     text-align: right;
   }
 
-  .event-container {
-    display: flex;
-    justify-content: center;
-  }
-
   .event {
-    width: 300px;
+    width: 320px;
   }
 
   .event-detail {
     margin-left: 120px;
-    display: flex;
-    gap: 16px;
   }
-
-  .event-image-box {
-    width: 160px;
-    height: 150px;
-    margin-bottom: 0;
-    flex-shrink: 0;
-  }
-}
-
-/* =========================
-   アニメーション
-   ========================= */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
 }

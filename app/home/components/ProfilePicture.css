@@ -1,83 +1,94 @@
+/* ===== 全体 ===== */
 .Home-sns-section {
-  padding: 60px 0 120px;
-
-  /* ← 他セクションと統一 */
+  padding: 50px 0 90px;
   background: #e4e7fe;
-
   text-align: center;
-  position: relative;
 }
 
-/* タイトル（青紫統一） */
-.Home-sns-box {
-  display: inline-block;
-  padding: 12px 50px;
-  border-radius: 999px;
-
-  /* ← 他と同じ青紫グラデ */
-  background: linear-gradient(145deg, #7f9fe6, #5f86d6);
-
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-
-  margin-bottom: 30px;
-
-  box-shadow: 0 4px 10px rgba(80, 90, 200, 0.12);
-}
-
-/* コンテナ */
-.Home-container {
-  display: flex;
-  justify-content: center;
-}
-
-/* リスト */
+/* ===== 横並び ===== */
 .Home-sns-list {
   display: flex;
-  gap: 28px;
+  justify-content: center;
+  gap: 40px;  /* ← コンパクト化 */
 }
 
-/* アイコン */
-.Home-sns-icon {
-  width: 70px;
-  height: 70px;
+/* ===== 各アイテム ===== */
+.Home-sns-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* ===== 円 ===== */
+.Home-sns-circle {
+  position: relative;
+  width: 85px;   /* ← 小さく */
+  height: 85px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
 
-  background: #ffffff;
+  background: linear-gradient(145deg, #eef1ff, #ffffff);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 20px;
-
-  /* ← 全体トーンに合わせる */
-  color: #3e4f7a;
-
-  text-decoration: none;
-
-  box-shadow: 0 8px 18px rgba(80, 90, 200, 0.08);
-
-  transition: all 0.25s ease;
-  margin-top: 20px;
+  box-shadow: 0 6px 16px rgba(120,120,200,0.12);
 }
 
-/* hover */
-.Home-sns-icon:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(80, 90, 200, 0.15);
+/* ===== 外リング ===== */
+.Home-sns-circle::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+
+  border-radius: 50%;
+  border: 2px solid transparent;
 }
 
-/* 各SNSカラー（統一感優先で控えめ） */
-.Home-sns-icon.instagram {
-  color: #7f9fe6;
+/* 色 */
+.Home-instagram .Home-sns-circle::before {
+  border-image: linear-gradient(45deg,#ff9a9e,#fad0c4) 1;
+}
+.Home-twitter .Home-sns-circle::before {
+  border-image: linear-gradient(45deg,#a1c4fd,#c2e9fb) 1;
+}
+.Home-web .Home-sns-circle::before {
+  border-image: linear-gradient(45deg,#84fab0,#8fd3f4) 1;
 }
 
-.Home-sns-icon.twitter {
-  color: #3e4f7a;
+/* ===== 内側円 ===== */
+.Home-sns-inner {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.04);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.Home-sns-icon.web {
-  color: #6a93e0;
+/* ===== アイコン ===== */
+.Home-sns-icon {
+  font-size: 20px;  /* ← 小さく */
+  color: #4a5a8a;
+}
+
+/* ===== 下テキスト ===== */
+.Home-sns-label {
+  font-size: 12px;
+  color: #8f95c9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 横線 */
+.Home-sns-label span {
+  width: 14px;
+  height: 2px;
+  background: #cfd6ff;
 }
