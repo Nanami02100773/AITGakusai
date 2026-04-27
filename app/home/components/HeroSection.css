@@ -184,8 +184,10 @@
 .balloon-item::before {
   content: "";
   position: absolute;
-  left: -10px;
-  bottom: 18px;
+
+  left: -8px;   /* ← 完全内側じゃなく少し外に出す */
+  bottom: 12px;
+
   border-right: 10px solid #fff;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;

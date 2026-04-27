@@ -1,7 +1,7 @@
 
 /* ===== セクション ===== */
 .Stage-performer-section {
-  background: linear-gradient(180deg, #f4f6ff, #eef1ff);
+
   padding: 30px 0;
 }
 
@@ -17,7 +17,7 @@
   width: 90%;
   max-width: 700px;
   background: rgba(255,255,255,0.9);
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 20px;
   box-shadow: 0 15px 30px rgba(120,120,200,0.15);
 }
@@ -259,18 +259,32 @@
 
 /* ===== 物販なし ===== */
 .Stage-goods-status.none {
-  background: #f3f4f6;
+  background: #ffeaea;   /* ← やわらかい赤背景 */
   padding: 14px;
   border-radius: 14px;
-  color: #888;
+  color: #d64545;        /* ← 見やすい赤文字 */
   width: 150px;
-
   display: flex;
   align-items: center;
 }
 
-/* ✕ */
+/* ✕（売り切れ） */
 .Stage-goods-status.none::before {
   content: "✕";
+
+  background: #e74c3c; /* 赤 */
+  color: white;
+
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-right: 8px;
+
+  font-size: 14px;
+  font-weight: bold;
 }

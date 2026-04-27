@@ -1,117 +1,44 @@
-import Link from "next/link";
+"use client";
+import Image from "next/image";
 import "./Project2.css";
 
 export default function Project2() {
   return (
-    <div className="Project2-container">
+    <section className="Project2-section">
 
-      {/* =========================
-          企画紹介
-      ========================= */}
-      <div className="Project2-title">企画紹介</div>
+      {/* ===== 画像エリア ===== */}
+      <div className="Project2-hero">
 
-      <div className="Project2-grid">
+        <Image
+          src="/images/kikaku.jpg"
+          alt="企画"
+          fill
+          className="Project2-image"
+        />
 
-        <Link href="/ProjectStampRally" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">スタンプラリー</p>
-        </Link>
+        {/* タイトル */}
+        <div className="Project2-title">
+          企画、情報
+        </div>
 
-        <Link href="/ProjectKoukaten" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">工科展</p>
-        </Link>
+        {/* 👇 説明ボックスをここに移動 */}
+        <div className="Project2-info-box">
 
-        <Link href="/ProjectKurabuten" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">クラブ展</p>
-        </Link>
+  <div className="Project2-info-lines">
+    <p className="Project2-info-text">
+      本ページでは、愛工大祭で実施される各企画の内容をまとめて紹介しています。開催時間や場所なども掲載しているので、ぜひご来場の際の参考にご覧ください。
+    </p>
+  </div>
 
-        <Link href="/ProjectWakuwakuLand" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">WAKUWAKU LAND</p>
-        </Link>
-
-        <Link href="/ProjectMake" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">MAKE</p>
-        </Link>
-
-        <Link href="/ProjectDasstsu" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">脱出ゲーム</p>
-        </Link>
-
-        <Link href="/ProjectKenketsu" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">献血</p>
-        </Link>
-
-        <Link href="/ProjectRakuiti" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">楽市楽座</p>
-        </Link>
-
-        <Link href="/ProjectTorezoru1" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">トレゾール</p>
-        </Link>
-
-        <Link href="/ProjectConcert" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">Concert</p>
-        </Link>
-
-        <Link href="/ProjectLaughMusic" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">LaughMusic</p>
-        </Link>
-
-        <Link href="/ProjectKyouyasai" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">狂夜祭</p>
-        </Link>
-
-        <Link href="/ProjectKouyasai" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">後夜祭</p>
-        </Link>
+</div>
 
       </div>
 
-      {/*
-      =========================
-          協賛企業
-      =========================
-      <div className="Project2-title" style={{ marginTop: "80px" }}>
-        協賛企業
+      {/* ===== 下のカード ===== */}
+      <div className="Project2-card">
+        <div className="Project2-indicator"></div>
       </div>
 
-      <div className="Project2-grid">
-
-        <Link href="/ProjectCompany" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">企業1</p>
-        </Link>
-
-        <Link href="/ProjectCompany2" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">企業2</p>
-        </Link>
-
-        <Link href="/ProjectCompany3" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">企業3</p>
-        </Link>
-
-        <Link href="/ProjectCompany4" className="Project2-card">
-          <div className="Project2-image"></div>
-          <p className="Project2-label">企業4</p>
-        </Link>
-
-      </div>
-      */}
-
-    </div>
+    </section>
   );
 }

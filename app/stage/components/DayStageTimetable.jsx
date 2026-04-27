@@ -35,9 +35,7 @@ const DayStageTimetable = ({ data = [] }) => {  // ← これ重要
                       <span className="event-title">{item.title}</span>
                     </div>
 
-                    <span className="toggle-icon">
-                      {openIndex === index ? "▲" : "▼"}
-                    </span>
+                    <span className={`toggle-icon ${openIndex === index ? "open" : ""}`} />
                   </div>
                 </div>
 

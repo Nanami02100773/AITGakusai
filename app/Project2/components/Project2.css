@@ -1,61 +1,80 @@
+.Project2-hero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
 
+/* ===== 下ぼかしグラデーション ===== */
+.Project2-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 60px; /* ← 少し広げると自然 */
+
+  background: linear-gradient(
+    to bottom,
+    rgba(245,245,245,0) 0%,
+    rgba(245,245,245,0.6) 40%,
+     rgba(245,245,245,0.6) 10%,
+    #f5f5f5 100%
+  );
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===== 画像 ===== */
+.Project2-image {
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* ===== タイトル ===== */
 .Project2-title {
-  background-color: #999;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: linear-gradient(90deg, #b388ff, #6aa9ff);
   color: white;
-  padding: 10px 40px;
-  border-radius: 20px;
+  padding: 12px 30px;
+  border-radius: 999px;
   font-weight: bold;
   font-size: 20px;
-  width: 300px;
-  /* 中央揃え */
-  margin: 70px auto 20px; /* ← 上に余白をしっかり取る */
-  text-align: center;
-  display: block;
+  z-index: 3;
 }
 
+/* ===== 説明ボックス（画像の上） ===== */
+.Project2-info-box {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
 
+  z-index: 3;
 
-/* ===== 2列固定グリッド ===== */
-.Project2-grid {
-  display: grid;
-  grid-template-columns: 180px 180px; /* ← 2列・固定幅 */
-  gap: 18px;
-  justify-content: center;
-  justify-items: center; /* ← これを追加 */
-  margin-bottom: 100px;
-}
+  width: 90%;
+  max-width: 600px;
 
-/* カード */
-.Project2-card {
-  max-width: 95%;
-  width: 180px;
-  background: #cfcfcf;
+  padding: 16px 18px;
   border-radius: 20px;
-  padding: 10px;
-  text-decoration: none;
 
-  /* アニメーション準備 */
-  transition: transform 0.2s ease;
+  /* 半透明黒で白文字が映える */
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(0.5px);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
-/* ホバー時 */
-.Project2-card:hover {
-  transform: translateY(-4px); /* 少し浮くだけ */
-}
-
-
-/* 画像エリア */
-.Project2-image {
-  background: #b5b5b5;
-  height: 120px;
-  border-radius: 14px;
-  margin-bottom: 10px;
-}
-
-/* 企画名 */
-.Project2-label {
+/* ===== テキスト ===== */
+.Project2-info-text {
   color: #ffffff;
-  text-align: center;
   font-size: 14px;
+  line-height: 1.6;
   margin: 0;
+  text-align: left;
 }

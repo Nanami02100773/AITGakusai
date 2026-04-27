@@ -6,7 +6,7 @@
 /* ===== 画像エリア ===== */
 .stage-hero {
   position: relative;
-  height: 320px;
+  height: 300px;
   overflow: hidden;
   z-index: 2;
 }
@@ -14,7 +14,7 @@
 /* ===== 画像 ===== */
 .stage-image {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 50px); /* ← 下に20pxの空間作る*/
   object-fit: cover;
 
   transform: scale(1.2);
@@ -47,11 +47,12 @@
 /* ===== カード ===== */
 .stage-card {
   position: relative;
-  background: white;
-  margin-top: -50px;
+  background: rgb(212, 212, 255);
+  margin-top: -30px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 30px;
+  padding: 15px;
 
   z-index: 2;
 }
+

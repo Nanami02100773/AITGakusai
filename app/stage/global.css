@@ -1,6 +1,5 @@
-
 .background-box {
-  background: #f4f5ff; /* ← 青紫寄りの白 */
+  background: linear-gradient(180deg, #e9edff, #b9c4f1);
   padding: 16px;
 
   width: 95%;
@@ -9,10 +8,12 @@
 
   border-radius: 20px;
 
-  /* ふわっと浮く影 */
   box-shadow: 0 10px 25px rgba(100, 110, 255, 0.08);
 }
-
 .Project2-container {
   margin-bottom: 100px;
+}
+
+body {
+  background: #f7f8ff;
 }
