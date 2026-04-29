@@ -34,24 +34,37 @@
 
 /* ===== タイトル ===== */
 .Project2-title {
-  position: absolute;
+ position: absolute;   /* ← これが最重要 */
   top: 60px;
   left: 50%;
   transform: translateX(-50%);
 
-  background: linear-gradient(90deg, #b388ff, #6aa9ff);
-  color: white;
-  padding: 12px 30px;
-  border-radius: 999px;
-  font-weight: bold;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 280px;
+  height: 48px;
+
+  background: linear-gradient(90deg, #7fa8ff, #d89bff);
+  color: #fff;
   font-size: 20px;
-  z-index: 3;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 8px 20px rgba(120, 120, 200, 0.2),
+    inset 0 2px 0 rgba(255,255,255,0.6),
+    inset 0 -1px 0 rgba(255,255,255,0.25);
 }
 
 /* ===== 説明ボックス（画像の上） ===== */
 .Project2-info-box {
   position: absolute;
-  bottom: 70px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -73,7 +86,7 @@
 /* ===== テキスト ===== */
 .Project2-info-text {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.6;
   margin: 0;
   text-align: left;

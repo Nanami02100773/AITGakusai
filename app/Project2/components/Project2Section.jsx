@@ -6,41 +6,29 @@ export default function Project2Section() {
     <section className="Project2Section-root">
       <div className="Project2Section-container">
 
-        {/* ===== タイトル ===== */}
         <div className="Project2-section-title">
           企画、紹介
         </div>
 
-        {/* ===== 教室企画ボックス ===== */}
+        {/* ===== 教室企画 ===== */}
         <div className="Project2-box">
 
-          {/* 教室企画メイン説明 */}
-          <div className="Project2-feature">
+          {/* メインカード */}
+          <Link href="/ProjectStampRally" className="Project2-feature">
             <div className="Project2-feature-image"></div>
 
-            
             <div className="Project2-feature-text">
               <div className="Project2-feature-title">
-                教室企画
-              </div>
-
-              <div className="Project2-feature-desc">
-                各教室で行われる展示や体験型の企画を楽しもう！
+                スタンプラリー
               </div>
             </div>
-          </div>
+          </Link>
+
           <div className="Project2-box-title">
             教室企画
           </div>
 
-          {/* 教室企画カード */}
           <div className="Project2-grid">
-
-            <Link href="/ProjectStampRally" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">スタンプラリー</p>
-            </Link>
-
             <Link href="/ProjectKoukaten" className="Project2-card">
               <div className="Project2-image"></div>
               <p className="Project2-label">工科展</p>
@@ -80,34 +68,17 @@ export default function Project2Section() {
               <div className="Project2-image"></div>
               <p className="Project2-label">トレゾール</p>
             </Link>
-
           </div>
         </div>
-        
 
-        {/* ===== ステージ企画ボックス ===== */}
+        {/* ===== ステージ ===== */}
         <div className="Project2-box stage">
-                    <div className="Project2-feature">
-            <div className="Project2-feature-image"></div>
-
-            
-            <div className="Project2-feature-text">
-              <div className="Project2-feature-title">
-                教室企画
-              </div>
-
-              <div className="Project2-feature-desc">
-                各教室で行われる展示や体験型の企画を楽しもう！
-              </div>
-            </div>
-          </div>
 
           <div className="Project2-box-title">
             ステージ企画
           </div>
 
           <div className="Project2-grid">
-
             <Link href="/ProjectConcert" className="Project2-card">
               <div className="Project2-image"></div>
               <p className="Project2-label">Concert</p>
@@ -125,9 +96,9 @@ export default function Project2Section() {
 
             <Link href="/ProjectKouyasai" className="Project2-card">
               <div className="Project2-image"></div>
+              <p className="Project2-image"></div>
               <p className="Project2-label">後夜祭</p>
             </Link>
-
           </div>
         </div>
 

@@ -5,54 +5,170 @@
 
 /* ===== 画像エリア ===== */
 .stage-hero {
+  margin-top: 50px;
   position: relative;
-  height: 300px;
+  height: 300px; /* ← 260 → 320くらいに増やす */
   overflow: hidden;
   z-index: 2;
 }
 
-/* ===== 画像 ===== */
+/* ===== メイン画像 ===== */
 .stage-image {
   width: 100%;
-  height: calc(100% - 50px); /* ← 下に20pxの空間作る*/
+  height: 100%;
   object-fit: cover;
-
-  transform: scale(1.2);
-  transform-origin: center top;
-
-  filter: brightness(0.7);
 }
 
-.stage-hero {
-  position: relative; /* ← これが基準になる */
-}
-
+/* ===== タイトル ===== */
 .stage-title {
-  position: absolute;
-  top: 70px; /* ← 上に配置 */
+  position: absolute;   /* ← これが最重要 */
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #999;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  width: 300px;
-  text-align: center;
 
-  z-index: 3;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 280px;
+  height: 48px;
+
+  background: linear-gradient(90deg, #7fa8ff, #d89bff);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 8px 20px rgba(120, 120, 200, 0.2),
+    inset 0 2px 0 rgba(255,255,255,0.6),
+    inset 0 -1px 0 rgba(255,255,255,0.25);
+}
+/* ===== サムネ全体 ===== */
+.stage-thumbs {
+  position: absolute;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 5px;
+  overflow-x: auto;
+  max-width: 80%;
+  background: rgba(255, 255, 255, 0.6);
 }
 
-/* ===== カード ===== */
-.stage-card {
-  position: relative;
-  background: rgb(212, 212, 255);
-  margin-top: -30px;
+/* スクロールバー消す */
+.stage-thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== サムネ1枚 ===== */
+.stage-thumb {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* ホバー */
+.stage-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* 選択中 */
+.stage-thumb.active {
+  border: 2px solid #ffffff;
+}
+
+
+/* ===== 下全体 ===== */
+.stage-bottom {
+  position: relative; /* ← 必須 */
+  background: #f7f8ff;
+  margin-top: -80px;
+}
+
+.stage-bottom::before {
+  content: "";
+  position: absolute;
+
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 20px;
+
+  background: #f7f8ff;
+
+  /* 👇 上だけ丸くする */
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 15px;
 
-  z-index: 2;
+  z-index: 6;
 }
 
+
+/* ===== 下のうねり ===== */
+.stage-white-base::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  top: 55px;
+  width: 45%;
+  height: 50px;
+
+  background:#f7f8ff;
+
+  /* 👇 上辺を短くする */
+  clip-path: polygon(
+    15% 0%,   /* 左上（内側） */
+    85% 0%,   /* 右上（内側） */
+    100% 100%, 
+    0% 100%
+  );
+}
+/* ===== 緑カード（かなり忠実） ===== */
+.stage-green-card {
+display: flex;
+  flex-direction: column;
+  align-items: center;   /* 横中央 */
+  justify-content: center; /* 縦中央（必要なら） */
+  background: #5558be;
+  color: white;
+ z-index: 5;
+  margin: 0 auto;
+  padding: 22px  20px;
+  width: 95%;
+  height: 90px;
+
+  /* 👇 角バラバラ */
+  border-radius: 25px;
+}
+
+.stage-info-text {
+  font-size: 13px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+
+  text-align: right; /* ← これ追加 */
+}
+
+.stage-white-base {
+  position: relative;
+  z-index: 6;  /* ← 念のため前面固定 */
+}
+
+.stage-image {
+  transition: opacity 0.5s ease;
+}
