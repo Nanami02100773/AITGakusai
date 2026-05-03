@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import "./Project2Section.css";
 
@@ -11,127 +12,76 @@ export default function Project2Section() {
           企画、紹介
         </div>
 
-        {/* ===== 教室企画ボックス ===== */}
+        {/* ===== 教室企画 ===== */}
         <div className="Project2-box">
 
-          {/* 教室企画メイン説明 */}
           <div className="Project2-feature">
             <div className="Project2-feature-image"></div>
 
-            
             <div className="Project2-feature-text">
               <div className="Project2-feature-title">
                 教室企画
               </div>
-
               <div className="Project2-feature-desc">
                 各教室で行われる展示や体験型の企画を楽しもう！
               </div>
             </div>
           </div>
-          <div className="Project2-box-title">
-            教室企画
-          </div>
 
-          {/* 教室企画カード */}
           <div className="Project2-grid">
-
-            <Link href="/ProjectStampRally" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">スタンプラリー</p>
-            </Link>
-
-            <Link href="/ProjectKoukaten" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">工科展</p>
-            </Link>
-
-            <Link href="/ProjectKurabuten" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">クラブ展</p>
-            </Link>
-
-            <Link href="/ProjectWakuwakuLand" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">WAKUWAKU LAND</p>
-            </Link>
-
-            <Link href="/ProjectMake" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">MAKE</p>
-            </Link>
-
-            <Link href="/ProjectDasstsu" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">脱出ゲーム</p>
-            </Link>
-
-            <Link href="/ProjectKenketsu" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">献血</p>
-            </Link>
-
-            <Link href="/ProjectRakuiti" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">楽市楽座</p>
-            </Link>
-
-            <Link href="/ProjectTorezoru1" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">トレゾール</p>
-            </Link>
-
+            <Card title="スタンプラリー" link="/ProjectStampRally" />
+            <Card title="工科展" link="/ProjectKoukaten" />
+            <Card title="クラブ展" link="/ProjectKurabuten" />
+<Card title="WAKUWAKU LAND" link="/ProjectWakuwakuLand" className="wakuwaku" />            <Card title="MAKE" link="/ProjectMake" />
+            <Card title="脱出ゲーム" link="/ProjectDasstsu" />
+            <Card title="献血" link="/ProjectKenketsu" />
+            <Card title="楽市楽座" link="/ProjectRakuiti" />
+            <Card title="トレゾール" link="/ProjectTorezoru1" />
+            <Card title="Concert" link="/ProjectConcert" />
           </div>
         </div>
-        
 
-        {/* ===== ステージ企画ボックス ===== */}
+        {/* ===== ステージ企画 ===== */}
         <div className="Project2-box stage">
-                    <div className="Project2-feature">
+
+          <div className="Project2-feature">
             <div className="Project2-feature-image"></div>
 
-            
             <div className="Project2-feature-text">
               <div className="Project2-feature-title">
-                教室企画
+                ステージ企画
               </div>
-
               <div className="Project2-feature-desc">
-                各教室で行われる展示や体験型の企画を楽しもう！
+                ライブやイベントなど、盛り上がる企画が盛りだくさん！
               </div>
             </div>
           </div>
 
-          <div className="Project2-box-title">
-            ステージ企画
-          </div>
-
           <div className="Project2-grid">
-
-            <Link href="/ProjectConcert" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">Concert</p>
-            </Link>
-
-            <Link href="/ProjectLaughMusic" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">LaughMusic</p>
-            </Link>
-
-            <Link href="/ProjectKyouyasai" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">狂夜祭</p>
-            </Link>
-
-            <Link href="/ProjectKouyasai" className="Project2-card">
-              <div className="Project2-image"></div>
-              <p className="Project2-label">後夜祭</p>
-            </Link>
-
+            <Card title="LaughMusic" link="/ProjectLaughMusic" />
+            <Card title="狂夜祭" link="/ProjectKyouyasai" />
+            <Card title="後夜祭" link="/ProjectKouyasai" />
           </div>
         </div>
 
       </div>
     </section>
+  );
+}
+
+/* ===== カード ===== */
+function Card({ title, link, className = "" }) {
+  return (
+    <Link href={link} className={`Project2-card ${className}`}>
+
+      <div className="Project2-image fancy"></div>
+
+      <div className="Project2-bottom">
+        <p className="Project2-label">{title}</p>
+      </div>
+
+      <div className="Project2-arrow">＞</div>
+
+    </Link>
   );
 }

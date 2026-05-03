@@ -1,61 +1,31 @@
-/* ===== セクション全体 ===== */
 .Project2Section-root {
-  margin-top: -20px; /* ← これだけ残す */
-  padding: 0 0 30px;
+  margin-top: 0;
   position: relative;
   z-index: 2;
 }
 
-/* ===== ヒーローとのつなぎ ===== */
-.Project2-hero {
-  margin-bottom: -40px;
-}
-
-/* ===== 下なじみグラデーション ===== */
-.Project2-hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 80px; /* ← なじみ範囲（80〜160pxで調整） */
-
-  background: linear-gradient(
-    to bottom,
-    rgba(245,245,245,0) 0%,
-    rgba(245,245,245,0.4) 50%,
-    rgba(245,245,245,0.8) 80%,
-    #f5f5f5 100%
-  );
-
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* ===== 白カード ===== */
+/* ===== コンテナ ===== */
 .Project2Section-container {
   width: 95%;
   max-width: 800px;
   margin: 0 auto;
+  margin-top: -60px;
 
   background: #ffffff;
   border-radius: 28px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
   padding: 16px;
 
   box-shadow: 0 15px 40px rgba(120,100,255,0.08);
 }
 
+
 /* ===== タイトル ===== */
 .Project2-section-title {
   font-weight: bold;
   margin-bottom: 18px;
+  padding-left: 28px;
   position: relative;
-  padding-left: 26px;
   color: #2f2f55;
-  font-size: 16px;
 }
 
 .Project2-section-title::before {
@@ -70,47 +40,24 @@
   transform: translateY(-50%);
 }
 
-.Project2-section-title::after {
-  content: "";
-  position: absolute;
-  left: 120px;
-  top: 50%;
-  width: 50%;
-  height: 2px;
-  background: linear-gradient(90deg, #cfcfff, transparent);
-}
-
 /* ===== ボックス ===== */
 .Project2-box {
-  width: 100%;
   margin: 20px 0;
-
   background: #f8f9ff;
   border-radius: 20px;
   padding: 16px;
-
-  box-shadow: inset 0 0 0 1px #e5e8ff;
 }
 
 .Project2-box.stage {
   background: linear-gradient(135deg, #f3f0ff, #eef2ff);
 }
 
-
-.Project2-box-title {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #4a4a7a;
-  font-size: 15px;
-}
-
-/* ===== 教室企画 ===== */
+/* ===== 上説明 ===== */
 .Project2-feature {
   display: flex;
   gap: 12px;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .Project2-feature-image {
@@ -120,14 +67,8 @@
   background: linear-gradient(135deg, #e7e9ff, #d6dcff);
 }
 
-.Project2-feature-text {
-  flex: 1;
-}
-
 .Project2-feature-title {
   font-weight: bold;
-  font-size: 15px;
-  margin-bottom: 4px;
 }
 
 .Project2-feature-desc {
@@ -135,42 +76,141 @@
   color: #6b6b9a;
 }
 
-/* ===== グリッド ===== */
+/* ===== グリッド（←ここは変更してない） ===== */
 .Project2-grid {
   display: grid;
-  grid-template-columns: repeat(2, 170px); /* ← 横幅ここで固定 */
-  justify-content: center; /* ← これで中央寄せ */
+  grid-template-columns: repeat(2, 170px);
+  justify-content: center;
   gap: 16px;
 }
 
-/* ===== カード ===== */
+/* ===== カード（見た目だけ進化） ===== */
 .Project2-card {
-  width: 100%; /* ← グリッドに合わせる */
-  background: #ffffff;
-  border-radius: 16px;
+  width: 100%;
+  border-radius: 20px;
   padding: 10px;
   text-decoration: none;
 
-  box-shadow: 0 4px 12px rgba(120,100,255,0.08);
-  transition: transform 0.2s ease;
+  background: linear-gradient(
+    145deg,
+    #dde1ff 0%,   /* ← 少し明るい */
+    #ccd1ff 60%,  /* ← メイン */
+    #c2c8ff 100%  /* ← 少し濃い */
+  );
+
+  box-shadow:
+    0 8px 20px rgba(157, 145, 235, 0.3);
+
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease;
 }
 
 .Project2-card:active {
   transform: scale(0.96);
 }
 
-/* ===== 画像 ===== */
-.Project2-image {
-  height: 90px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #e7e9ff, #d6dcff);
-  margin-bottom: 6px;
+
+
+/* 点線 */
+
+.Project2-card::after {
+  --dot-size: 3px;
+  --dot-gap: 10px;
+  --line-width: 70%;
+
+  content: "";
+  position: absolute;
+
+  left: 20%;
+  transform: translateX(-40%);
+
+  width: var(--line-width);
+  height: 4px;
+  bottom: 9px;
+
+  background: radial-gradient(circle, #ebebff var(--dot-size), transparent var(--dot-size));
+  background-size: var(--dot-gap) 4px;
+
+  opacity: 0.6;
+
+  /* 👇 これ追加 */
+  -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+  mask-image: linear-gradient(to right, black 90%, transparent 100%);
 }
 
-/* ===== テキスト ===== */
+/* ===== 画像 ===== */
+.Project2-image.fancy {
+  position: relative;
+  height: 90px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #e3e6ff, #cfd6ff);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+/* ===== 下 ===== */
+.Project2-bottom {
+  position: relative;
+  margin-top: 8px;
+
+  height: 30px; /* ← 高さ固定（重要） */
+}
+
+/* タイトル */
 .Project2-label {
-  text-align: center;
-  font-size: 13px;
-  color: #4a4a7a;
+  position: absolute;
+  transform: translateY(40%); /* ← 下寄り */
+  left: 5px;   /* ← ★ここで左位置調整できる */
+  right: 60px;  /* ← ボタン分のスペース確保 */
+
+  font-size: 12px;
+  color: #2f2f55;
   margin: 0;
+
+  line-height: 1.2;
+  max-height: 2.4em;
+  overflow: hidden;
+
+  text-align: center;
+}
+
+.Project2-card.wakuwaku .Project2-label {
+  top: auto;
+  transform: none;
+}
+
+/* ===== 丸ボタン（画像に寄せた完成版） ===== */
+.Project2-arrow {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  color: white;
+
+  background: linear-gradient(135deg, #7a73ff 0%, #8f8aff 60%, #a6a2ff 100%);
+
+  box-shadow:
+  0 0 0 6px #ccd1ff,
+  0 0 0 7.5px #ecf7ff,
+
+  0 0 10px 2px rgba(213, 238, 255, 0.8),
+  0 0 20px 6px rgba(230, 245, 255, 0.5),
+
+  0 0 0 12px #ccd1ff,
+  inset 0 2px 6px rgba(245, 243, 243, 0.5);
 }

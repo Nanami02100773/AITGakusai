@@ -2,7 +2,6 @@
 import React from "react";
 import "./FaqSection.css";
 
-/* FAQセクション */
 const FaqSection = ({
   section,
   sectionIndex,
@@ -17,8 +16,15 @@ const FaqSection = ({
         className="faq-item-header"
         onClick={() => toggleSection(sectionIndex)}
       >
-        <span className="faq-title">{section?.title}</span>
-        <span className="arrow">{isOpen ? "▲" : "▼"}</span>
+        <div className="faq-left">
+          <div className="faq-icon">
+            {/* 仮：線アイコン風 */}
+            <div className="icon-line"></div>
+          </div>
+          <span className="faq-title">{section?.title}</span>
+        </div>
+
+        <span className={`arrow ${isOpen ? "open" : ""}`}></span>
       </button>
 
       {isOpen && (
@@ -28,9 +34,9 @@ const FaqSection = ({
             const isQOpen = openQuestions[qKey];
 
             return (
-              <div key={qKey} className={`faq-pair ${isQOpen ? "open" : ""}`}>
+              <div key={qKey} className="faq-pair">
                 <button
-                  className={`faq-question ${isQOpen ? "active" : ""}`}
+                  className="faq-question"
                   onClick={() => toggleQuestion(qKey)}
                 >
                   Q {pair.q}

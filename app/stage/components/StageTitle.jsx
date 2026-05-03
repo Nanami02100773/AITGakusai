@@ -13,7 +13,6 @@ const images = [
 const StageHeader = () => {
   const [mainImage, setMainImage] = useState(images[0]);
 
-  // 👇 ここに入れる！！！
   useEffect(() => {
     const interval = setInterval(() => {
       setMainImage((prev) => {
@@ -21,7 +20,7 @@ const StageHeader = () => {
         const nextIndex = (currentIndex + 1) % images.length;
         return images[nextIndex];
       });
-    }, 3000); // ← 3秒おすすめ
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -29,6 +28,7 @@ const StageHeader = () => {
   return (
     <section className="stage-section">
 
+      {/* ===== ヒーロー ===== */}
       <div className="stage-hero">
         <img src={mainImage} alt="ステージ" className="stage-image" />
 
@@ -49,18 +49,31 @@ const StageHeader = () => {
         </div>
       </div>
 
-      <div className="stage-bottom">
-        <div className="stage-white-base">
-          <div className="stage-green-card">
-            <div className="stage-info-text">
-              <p>人気アイドルやバンドのライブ、楽しいミニゲームなど盛りだくさん！</p>
-              <p>参加して景品をゲットできるチャンスもある</p>
-              <p>見ても参加しても楽しめます。</p>
-            </div>
+      {/* ===== 下 ===== */}
+     <div class="stage-green-card">
+  <div class="corner-br"></div>
+
+  {/* 👇 これ追加 */}
+  <div className="top-line"></div>
+
+  <div className="stage-info-text">
+
+            <p className="stage-sub">
+              人気アイドルやバンドのライブ、楽しいミニゲームなど
+            </p>
+
+            <h2 className="stage-main">
+              盛りだくさん！
+            </h2>
+
+            <p className="stage-desc">
+              参加して景品をゲットできるチャンスもあるので<br />
+              見ても参加しても楽しめます♪
+            </p>
+
           </div>
         </div>
-      </div>
-
+    
     </section>
   );
 };

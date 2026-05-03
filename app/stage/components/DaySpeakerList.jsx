@@ -14,7 +14,9 @@ const DaySpeakerList = ({ speakers }) => {
       <div className="Stage-scroll-area">
         {speakers.map((speaker, index) => (
           <div className="Stage-profile-box" key={index}>
-            <div className="Stage-profile">
+
+            {/* ★ここが超重要（高さ分岐） */}
+            <div className={`Stage-profile ${speaker.hasGoods ? "has" : "none"}`}>
 
               {/* 写真 */}
               <div className="Stage-photo">
@@ -66,6 +68,8 @@ const DaySpeakerList = ({ speakers }) => {
                   </div>
                 )}
               </div>
+
+              {/* 模様 */}
               <div className="pattern-top"></div>
 
             </div>

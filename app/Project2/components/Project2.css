@@ -1,7 +1,7 @@
 .Project2-hero {
   position: relative;
   height: 300px;
-  overflow: hidden;
+  overflow: hidden; /* ← これ超重要（再確認） */
 }
 
 /* ===== 下ぼかしグラデーション ===== */

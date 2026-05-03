@@ -1,7 +1,5 @@
-
 /* ===== セクション ===== */
 .Stage-performer-section {
-
   padding: 30px 0;
 }
 
@@ -16,33 +14,14 @@
 .Stage-profile {
   width: 90%;
   max-width: 700px;
-  background: rgba(255,255,255,0.9);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 15px 30px rgba(120,120,200,0.15);
-}
+  height: 400px; /* ←固定 */
 
-/* カードにドット模様 */
-.Stage-profile {
-  position: relative;
-  z-index: 0; /* 基準を作る */
-}
-
-/* 模様 */
-.Stage-profile {
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-
-/* ドット模様 */
-.Stage-profile {
-  width: 90%;
-  max-width: 700px;
+  display: flex;
+  flex-direction: column;
 
   background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(245,247,255,0.9));
   border-radius: 18px;
-  padding: 20px;
+  padding: 16px;
 
   border: 1px solid rgba(200,210,255,0.4);
 
@@ -55,7 +34,17 @@
   z-index: 0;
 }
 
-/* ===== 右下：フェードドット ===== */
+/* デフォ（物販あり） */
+.Stage-profile.has {
+  height: 400px;
+}
+
+/* 物販なし（高さ低く） */
+.Stage-profile.none {
+  height: 300px; /* ←ここ好きな高さに調整 */
+}
+
+/* ===== 右下ドット ===== */
 .Stage-profile::after {
   content: "";
   position: absolute;
@@ -66,9 +55,10 @@
   bottom: -20px;
   right: -20px;
 
- background-image:
+  background-image:
     radial-gradient(#cfd6ff 2px, transparent 2px),
-    radial-gradient(#ffd6f0 2px, transparent 2px); /* ← ピンク追加 */
+    radial-gradient(#ffd6f0 2px, transparent 2px);
+
   background-size: 12px 12px;
 
   opacity: 0.5;
@@ -78,7 +68,7 @@
   mask-image: linear-gradient(to top left, black 40%, transparent 100%);
 }
 
-/* ===== 左上：ぼかし円 ===== */
+/* ===== 左上ぼかし ===== */
 .Stage-profile::before {
   content: "";
   position: absolute;
@@ -91,31 +81,25 @@
 
   z-index: -1;
 
-  /* ① ぼかし円 */
   background:
     radial-gradient(circle at center, #e0e7ff 0%, transparent 70%),
-
-    /* ② 小ドット */
     radial-gradient(#cfd6ff 1.5px, transparent 1.5px),
-
-    /* ③ リング */
     radial-gradient(circle, transparent 60%, #d6dbff 61%, transparent 63%);
 
   background-size:
-    100% 100%,   /* ぼかし */
-    12px 12px,   /* ドット */
-    100% 100%;   /* リング */
+    100% 100%,
+    12px 12px,
+    100% 100%;
 
   background-repeat: no-repeat, repeat, no-repeat;
 
   opacity: 0.5;
 
-  /* フェード */
   -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
   mask-image: radial-gradient(circle, black 60%, transparent 100%);
 }
 
-/* ===== 右上：うすいライン模様 ===== */
+/* ===== 右上ライン模様 ===== */
 .Stage-profile .pattern-top {
   position: absolute;
   top: 10px;
@@ -141,57 +125,68 @@
 /* ===== 写真 ===== */
 .Stage-photo {
   width: 100%;
-  height: 180px;
+  height: 140px; /* ←調整済み */
+  flex-shrink: 0;
+
   background: #dfe3ff;
-  border-radius: 20px;
-  margin-bottom: 16px;
+  border-radius: 16px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 
 /* ===== 名前 ===== */
 .Stage-bio h3 {
-  font-size: 22px;
+  font-size: 18px;
   color: #2f3f66;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
-/* ===== 紹介文 ===== */
+/* ===== テキスト ===== */
+.Stage-bio {
+  flex: 1;
+  overflow: hidden;
+}
+
 .Stage-bio p {
-  font-size: 14px;
+  font-size: 13px;
   color: #5a6f8f;
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* ←3行制限 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
   border-top: 2px dashed #d6dbff;
-  padding-top: 10px;
+  padding-top: 6px;
 }
 
 /* ===== 物販エリア ===== */
 .Stage-goods-info {
-  margin-top: 16px;
+  margin-top: auto; /* ←下固定 */
 }
 
-/* ===== 上段（まとまりBOX） ===== */
+/* ===== 上段BOX ===== */
 .Stage-goods-top {
   display: flex;
   align-items: center;
   background: #eaf6ee;
   border-radius: 15px;
-  padding: 16px;
-  gap: 16px;
+  padding: 12px;
+  gap: 10px;
 }
 
-/* 左 */
 .Stage-goods-top .left {
   display: flex;
   align-items: center;
 }
 
-/* 仕切り線 */
 .Stage-goods-top .divider {
   width: 1px;
-  height: 40px;
+  height: 30px;
   background: #cbd5e1;
 }
 
-/* 右 */
 .Stage-goods-top .right {
   flex: 1;
 }
@@ -204,18 +199,20 @@
   font-weight: bold;
 }
 
-/* ✔ */
 .Stage-goods-status.available::before {
   content: "✔";
   background: #4caf50;
   color: white;
   border-radius: 50%;
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
+
+  margin-right: 6px;
+  font-size: 12px;
 }
 
 /* ===== 場所 ===== */
@@ -224,67 +221,65 @@
   flex-direction: column;
 }
 
-/* ラベル */
 .Stage-goods-place .label {
-  font-size: 13px;
+  font-size: 12px;
   color: #2e7d32;
 }
 
-/* 内容 */
 .Stage-goods-place .value {
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
 }
 
 /* ===== 時間 ===== */
 .Stage-goods-time {
-  margin-top: 10px;
+  width: 210px;
+  margin-top: 8px;
   background: #eef0ff;
-  padding: 16px;
+  padding: 12px;
   border-radius: 15px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
   color: #2f3f66;
 
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-/* 🕒 */
 .Stage-goods-time::before {
   content: "🕒";
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /* ===== 物販なし ===== */
 .Stage-goods-status.none {
-  background: #ffeaea;   /* ← やわらかい赤背景 */
-  padding: 14px;
+  background: #ffeaea;
+  padding: 12px;
   border-radius: 14px;
-  color: #d64545;        /* ← 見やすい赤文字 */
-  width: 150px;
+  color: #d64545;
+  width: fit-content;
+
   display: flex;
   align-items: center;
 }
 
-/* ✕（売り切れ） */
 .Stage-goods-status.none::before {
   content: "✕";
 
-  background: #e74c3c; /* 赤 */
+  background: #e74c3c;
   color: white;
 
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-right: 8px;
+  margin-right: 6px;
 
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }

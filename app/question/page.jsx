@@ -2,6 +2,7 @@ import React from "react";
 import Faq from "./components/Faq";
 import FaqSection from "./components/FaqSection";
 import NavigationBar from "./components/NavigationBar";
+import MascotDetail from "./components/MascotDetail";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Faq />
       <NavigationBar/>
+      <MascotDetail/>
     </div>
   );
 }
