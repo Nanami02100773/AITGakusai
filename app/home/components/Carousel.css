@@ -1,38 +1,49 @@
+/* =========================
+   全体
+========================= */
 body {
   margin: 0;
-  background-color: #ffffff;
-  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #f6f8ff,
+      #edf2ff 55%,
+      #f8f9ff
+    );
+
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    sans-serif;
 }
 
-/* 全体 */
+/* =========================
+   カルーセル全体
+========================= */
 .Home-carousel-wrapper {
   width: 100%;
-  height: 420px;
+  height: 400px;
+
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* ↓ ヒーローと自然に繋がる */
-  background: linear-gradient(
-    to bottom,
-    #f2f4f7 0%,   /* ← heroの背景と完全一致 */
-    #eef2ff 60%,  /* ← ほんのり青紫 */
-    #f7f8ff 100%  /* ← また白に戻す */
-  );
-
-  position: relative;
-  padding-top: 0px;
+  overflow: hidden;
 }
 
-/* コンテナ */
+/* =========================
+   スクロール
+========================= */
 .Home-carousel-container {
-  width: 95%;
-  max-width: 1100px;
-  height: 100%;
+  width: 100%;
+
   overflow-x: scroll;
   overflow-y: hidden;
-  padding: 20px 20px 64px;
-  cursor: grab;
+
+  padding: 20px 40px 64px;
 
   scrollbar-width: none;
 }
@@ -41,95 +52,325 @@ body {
   display: none;
 }
 
-/* リスト */
+/* =========================
+   横並び
+========================= */
 .Home-carousel-list {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 28px;
 }
 
-/* カード */
+/* =========================
+   カード
+   ← 角をカクカク化
+========================= */
 .Home-carousel-card {
-  min-width: 320px;
-  max-width: 320px;
+  position: relative;
 
-  /* ← ほぼ白だけどほんのり紫 */
-  background: #fbfbff;
+  flex-shrink: 0;
 
-  border-radius: 20px;
+  width: 260px;
+  height: 330px;
 
-  /* ← 薄くした */
-  border: 2px solid #d6dbff;
+  overflow: hidden;
 
-  padding: 20px;
+  background:
+    rgba(255,255,255,0.72);
 
-  /* ← 軽い影 */
-  box-shadow: 0 6px 16px rgba(80, 90, 200, 0.12);
+  backdrop-filter: blur(8px);
 
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.35s ease;
+
+  /* ← カクカク形状 */
+  clip-path: polygon(
+    0% 12%,
+    12% 0%,
+
+    88% 0%,
+    100% 12%,
+
+    100% 88%,
+    88% 100%,
+
+    12% 100%,
+    0% 88%
+  );
 }
 
-.Home-carousel-card.is-center {
-  transform: scale(1.08) translateY(4px);
+/* =========================
+   外枠
+========================= */
+.Home-carousel-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  border:
+    1.5px solid rgba(160,180,255,0.85);
+
+  clip-path: polygon(
+    0% 12%,
+    12% 0%,
+
+    88% 0%,
+    100% 12%,
+
+    100% 88%,
+    88% 100%,
+
+    12% 100%,
+    0% 88%
+  );
+
+  z-index: 1;
 }
 
-/* 画像 */
+/* =========================
+   内側枠
+========================= */
+.Home-carousel-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 8px;
+
+  border:
+    1px solid rgba(190,205,255,0.75);
+
+  clip-path: polygon(
+    0% 12%,
+    12% 0%,
+
+    88% 0%,
+    100% 12%,
+
+    100% 88%,
+    88% 100%,
+
+    12% 100%,
+    0% 88%
+  );
+
+  z-index: 1;
+}
+
+/* =========================
+   上中央
+========================= */
+.futuristic-frame-top {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 96px;
+  height: 14px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #d6e0ff,
+      #aec2ff
+    );
+
+  clip-path: polygon(
+    12% 0,
+    88% 0,
+    78% 100%,
+    22% 100%
+  );
+
+  z-index: 4;
+}
+
+/* =========================
+   下中央
+========================= */
+.futuristic-frame-bottom {
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 96px;
+  height: 14px;
+
+  background:
+    linear-gradient(
+      to top,
+      #d6e0ff,
+      #aec2ff
+    );
+
+  clip-path: polygon(
+    22% 0,
+    78% 0,
+    88% 100%,
+    12% 100%
+  );
+
+  z-index: 4;
+}
+
+
+
+/* =========================
+   中身
+========================= */
+.Home-carousel-content {
+  position: relative;
+  z-index: 5;
+
+  padding: 18px;
+}
+
+/* =========================
+   画像
+========================= */
 .Home-carousel-image-placeholder {
   width: 100%;
   height: 200px;
 
-  /* ← かなり薄い */
-  background: #eef1ff;
+  margin-top: 5px;
+
+  position: relative;
+
+  overflow: hidden;
 
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: #777;
-  border-radius: 12px;
+  align-items: center;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef3ff,
+      #dfe8ff
+    );
+
+  border:
+    1px solid rgba(185,200,255,0.7);
+
+  color: #6d7cb3;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 
-/* タイトル */
+/* 画像 */
+.Home-carousel-image-placeholder img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* =========================
+   タイトル
+========================= */
 .Home-carousel-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 
-  /* ← 少しだけ青紫 */
-  color: #3a3f7a;
+  font-size: 18px;
+  font-weight: 800;
+
+  color: #5f72d7;
 }
 
+/* =========================
+   ドット
+========================= */
+.Home-carousel-dots {
+  width: 90px;
+  height: 8px;
+
+  margin-bottom: 3px;
+
+  background-image:
+    radial-gradient(
+      circle,
+      #bccaff 2px,
+      transparent 2px
+    );
+
+  background-size: 12px 8px;
+}
+
+/* =========================
+   説明
+========================= */
 .Home-carousel-description {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555;
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: #7b88b0;
 }
 
-/* インジケータ */
+/* =========================
+   拡大
+========================= */
+.Home-carousel-card.is-center {
+  transform: scale(1.05);
+}
+
+/* =========================
+   インジケータ
+========================= */
 .Home-carousel-indicator {
   position: absolute;
-  bottom: 20px;
+
+  bottom: 10px;
   left: 50%;
+
   transform: translateX(-50%);
+
   display: flex;
   gap: 10px;
 
-  /* ← かなり淡く */
-  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px 15px;
 
-  padding: 10px 16px;
   border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.8);
+
+  border:
+    1px solid rgba(220,228,255,0.9);
+
+  backdrop-filter: blur(10px);
 }
 
+/* =========================
+   ドット
+========================= */
 .Home-indicator-dot {
-  width: 10px;
-  height: 10px;
-  background: #cfd4ff;
+  width: 8px;
+  height: 8px;
+
   border-radius: 50%;
+
+  background: #ccd5ff;
+
+  transition: 0.3s;
 }
 
+/* =========================
+   アクティブ
+========================= */
 .Home-indicator-dot.active {
-  background: #7c82e6;
-  transform: scale(1.4);
+  background: #91a7ff;
+
+  transform: scale(1.3);
 }

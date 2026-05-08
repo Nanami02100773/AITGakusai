@@ -1,97 +1,597 @@
-/* ===== 全体 ===== */
+/* =================================================
+   全体
+================================================= */
 .Home-award-section {
-  background: linear-gradient(180deg, #f7f8ff, #eef1ff);
-  padding: 30px 0 40px;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7f9ff 100%
+    );
+
+  padding: 10px 0 60px;
+  overflow: hidden;
 }
 
-/* ===== 説明ボックス ===== */
+/* =================================================
+   説明エリア
+================================================= */
 .Home-box1 {
+  position: relative;
+
   width: 90%;
-  max-width: 600px;
-  margin: 0 auto 24px;
-  padding: 20px;
+  max-width: 760px;
 
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  /* ↓ 賞一覧との間隔 */
+  margin: 0 auto 50px;
 
-  border-radius: 20px;
-  color: #3e4f7a;
-  line-height: 1.9;
+  padding: 0;
 
-  box-shadow: 0 10px 24px rgba(120,120,200,0.12);
+  background: transparent;
 }
 
-/* ===== 賞リスト外枠 ===== */
+/* =================================================
+   NEW DONATION風ヘッダー
+================================================= */
+.award-panel-header {
+  position: relative;
+  top: 0px;
+
+  width: 100%;
+  max-width: 620px;
+
+  height: 120px;
+
+  margin: 0 auto 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  filter:
+    drop-shadow(0 8px 18px rgba(0,0,0,0.18));
+}
+
+/* =================================================
+   抽象王冠
+================================================= */
+.award-crown {
+  position: absolute;
+
+  top: -20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 72px;
+  height: 42px;
+
+  z-index: 30;
+}
+
+/* 王冠本体 */
+.award-crown::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffe98f 0%,
+      #ffd54d 45%,
+      #e0a900 100%
+    );
+
+  clip-path: polygon(
+    0 100%,
+
+    12% 58%,
+    28% 100%,
+
+    50% 8%,
+    72% 100%,
+
+    88% 58%,
+    100% 100%
+  );
+
+  box-shadow:
+    0 3px 10px rgba(255,210,80,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+
+
+/* =================================================
+   中央ホワイトプレート
+================================================= */
+.award-header-title {
+  position: relative;
+  z-index: 5;
+
+  top: 30px;
+
+  width: 300px;
+  height: 100px;
+
+  padding: 18px 20px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #43527a;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f6f9ff 100%
+    ) padding-box,
+
+    radial-gradient(
+      circle at center,
+      #ffffff 10%,
+      #8ea7d8 50%,
+      #42567d 80%,
+      #24385f 95%
+    ) border-box;
+
+  border: 3px solid transparent;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 8px 20px rgba(120,140,255,0.10);
+
+  clip-path: polygon(
+    18px 0,
+    calc(100% - 18px) 0,
+
+    100% 24px,
+    calc(100% - 14px) 100%,
+
+    14px 100%,
+    0 24px
+  );
+}
+
+/* =================================================
+   内側ライン
+================================================= */
+.award-header-title::before {
+  content: "";
+
+  position: absolute;
+  inset: 5px;
+
+  border:
+    1px solid rgba(36,56,95,0.35);
+
+  clip-path: inherit;
+
+  pointer-events: none;
+}
+
+/* =================================================
+   発光ライン
+================================================= */
+.award-header-title::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -2px;
+
+  border:
+    1px solid rgba(120,196,255,0.35);
+
+  filter: blur(2px);
+
+  clip-path: inherit;
+
+  pointer-events: none;
+}
+
+/* =================================================
+   左右ウイング
+================================================= */
+.award-panel-header::before,
+.award-panel-header::after {
+  content: "";
+
+  position: absolute;
+  top: 52px;
+
+  width: 180px;
+  height: 58px;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      #31456f 0%,
+      #1c2947 55%,
+      #10192e 100%
+    );
+
+  border-bottom:
+    3px solid #78c4ff;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* 左 */
+.award-panel-header::before {
+  left: -15px;
+
+  clip-path: polygon(
+    0 0,
+    88% 0,
+    100% 100%,
+    12% 100%
+  );
+}
+
+/* 右 */
+.award-panel-header::after {
+  right: -15px;
+
+  clip-path: polygon(
+    12% 0,
+    100% 0,
+    88% 100%,
+    0 100%
+  );
+}
+
+/* =================================================
+   青発光ライン
+================================================= */
+.award-header-light {
+  position: absolute;
+
+  top: 58px;
+
+  width: 8px;
+  height: 48px;
+
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      180deg,
+      #d9f6ff,
+      #6fd3ff
+    );
+
+  box-shadow:
+    0 0 10px rgba(100,200,255,0.55),
+    0 0 20px rgba(100,200,255,0.28);
+}
+
+/* 左 */
+.award-header-light.left {
+  left: 42px;
+
+  transform:
+    skew(18deg);
+}
+
+/* 右 */
+.award-header-light.right {
+  right: 42px;
+
+  transform:
+    skew(-18deg);
+}
+
+/* =================================================
+   外側細発光
+================================================= */
+.award-header-light::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -7px;
+
+  width: 2px;
+  height: 100%;
+
+  background:
+    rgba(120,220,255,0.45);
+
+  filter: blur(0.4px);
+}
+
+.award-header-light.right::before {
+  left: auto;
+  right: -7px;
+}
+
+/* =================================================
+   賞一覧
+================================================= */
 .Home-box2 {
   width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 620px;
+
+  /* ↓ 上に空間 */
+  margin: 24px auto 0;
 }
 
-/* ===== カード ===== */
+/* =================================================
+   カード
+================================================= */
 .Home-award-card {
   position: relative;
-  background: rgba(255,255,255,0.95);
 
-  padding: 20px 22px 18px 26px;
-  border-radius: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 
-  box-shadow: 0 10px 22px rgba(120,120,200,0.1);
-  border: 1px solid #e6e9ff;
+  padding: 22px 26px;
 
-  transition: all 0.25s ease;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fbff 100%
+    );
+
+  z-index: 1;
+
+  clip-path: polygon(
+    0 20px,
+    20px 0,
+
+    calc(100% - 70px) 0,
+    calc(100% - 30px) 18px,
+    100% 18px,
+
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+
+    20px 100%,
+    0 calc(100% - 20px)
+  );
+
+  box-shadow:
+    0 12px 28px rgba(120,140,255,0.10);
 }
 
-
-/* ===== 左ライン ===== */
+/* =================================================
+   外枠
+================================================= */
 .Home-award-card::before {
   content: "";
+
   position: absolute;
+  inset: -3px;
+
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      135deg,
+      #9fc3ff,
+      #5b92ff
+    );
+
+  clip-path: inherit;
+}
+
+.Home-award-card::after {
+  content: "";
+
+  position: absolute;
+  inset: -1px;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #edf4ff
+    );
+
+  clip-path: inherit;
+}
+
+/* =================================================
+   内側ライン
+================================================= */
+.inner-line {
+  position: absolute;
+
+  inset: 6px;
+
+  border:
+    1px solid rgba(140,170,255,0.16);
+
+  clip-path: inherit;
+
+  pointer-events: none;
+}
+
+/* =================================================
+   上ノッチ
+================================================= */
+.top-notch {
+  position: absolute;
+
+  top: -12px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 120px;
+  height: 24px;
+
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      135deg,
+      #9fc3ff,
+      #5f96ff
+    );
+
+  clip-path: polygon(
+    0 100%,
+    15% 0,
+    85% 0,
+    100% 100%
+  );
+}
+
+.top-notch::after {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  left: 15%;
+  right: 15%;
+
+  height: 3px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.95);
+}
+
+/* =================================================
+   右下装飾
+================================================= */
+.corner-br {
+  position: absolute;
+
+  right: -2px;
+  bottom: -2px;
+
+  width: 80px;
+  height: 80px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8db8ff,
+      #5b8dff
+    );
+
+  clip-path:
+    polygon(100% 0, 0% 100%, 100% 100%);
+
+  opacity: 0.9;
+}
+
+/* =================================================
+   ストライプ
+================================================= */
+.stripe {
+  position: absolute;
+
+  right: 24px;
+  bottom: 8px;
+
+  width: 70px;
+  height: 8px;
+
+  opacity: 0.4;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #7fb0ff,
+      #7fb0ff 4px,
+      transparent 4px,
+      transparent 8px
+    );
+}
+
+/* =================================================
+   左バー
+================================================= */
+.left-bar {
+  position: absolute;
+
   left: 0;
-  top: 14px;
-  bottom: 14px;
+  top: 20px;
+  bottom: 20px;
+
   width: 6px;
+
   border-radius: 6px;
 
-  background: linear-gradient(180deg, #7aa6ff, #a88bff);
+  background:
+    linear-gradient(
+      180deg,
+      #8cb6ff,
+      #a9ddff
+    );
 }
 
-/* ===== タイトル ===== */
-.Home-award-card > div:first-child {
-  font-weight: bold;
-  color: #2f3f66;
-  font-size: 16px;
-
+/* =================================================
+   タイトル
+================================================= */
+.Home-award-title {
   position: relative;
-  padding-left: 20px;
+
+  padding-left: 22px;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  color: #31456f;
 }
 
-/* ●（ちょいグラデ風） */
-.Home-award-card > div:first-child::before {
+.Home-award-title::before {
   content: "";
-  width: 9px;
-  height: 9px;
-
-  background: linear-gradient(135deg, #7aa6ff, #ff9ed6);
-  border-radius: 50%;
 
   position: absolute;
+
   left: 0;
-  top: 7px;
+  top: 6px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8ab6ff,
+      #7edfff
+    );
 }
 
-/* ===== 説明 ===== */
+/* =================================================
+   説明
+================================================= */
 .Home-award-desc {
   margin-top: 12px;
-  color: #5a6f8f;
-  font-size: 14px;
 
-  border-bottom: 2px dashed #d6dbff;
   padding-bottom: 6px;
-}
 
-/* ===== ちょいアクセント（最後の線消す） ===== */
-.Home-award-card:last-child .Home-award-desc {
-  border-bottom: none;
+  font-size: 14px;
+  color: #6a7da3;
+
+  border-bottom:
+    2px dashed #d9e4ff;
 }

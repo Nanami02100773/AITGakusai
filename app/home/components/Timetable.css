@@ -1,154 +1,435 @@
-/* ===== 全体 ===== */
+/* =================================================
+   全体
+================================================= */
 .Home-timetable-section {
-  text-align: center;
-  padding: 40px 0;
-
-  background: linear-gradient(180deg, #f3f4ff, #faf7ff);
   position: relative;
+
+  padding: 30px 0 50px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7f8ff,
+      #f3f5ff
+    );
+
+  overflow: visible;
 }
 
-/* ===== 外枠 ===== */
+/* =================================================
+   外枠フレーム
+   ← Home-box に合わせる
+================================================= */
+.Home-timetable-section::after {
+  content: "";
+
+  position: absolute;
+
+  /* ↓ BOXの位置に合わせる */
+  top: 100px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* ↓ Home-box より少しだけ外側 */
+  width: calc(90% + 32px);
+  max-width: 672px;
+
+  /* ↓ BOX高さに合わせる */
+  height: 660px;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  opacity: 0.95;
+
+  background:
+
+  /* =================================================
+     左上
+  ================================================= */
+  linear-gradient(#b8c7ff,#dce5ff)
+  top 0 left 0 / 150px 4px no-repeat,
+
+  linear-gradient(#b8c7ff,#dce5ff)
+  top 0 left 0 / 4px 90px no-repeat,
+
+  linear-gradient(#dce5ff,#eef2ff)
+  top 28px left 28px / 72px 2px no-repeat,
+
+  linear-gradient(#dce5ff,#eef2ff)
+  top 28px left 28px / 2px 62px no-repeat,
+
+  linear-gradient(#bfd0ff,#dce5ff)
+  top 0 left 0 / 54px 14px no-repeat,
+
+  linear-gradient(#bfd0ff,#dce5ff)
+  top 0 left 0 / 14px 54px no-repeat,
+
+  /* =================================================
+     右上
+  ================================================= */
+  linear-gradient(#b8c7ff,#dce5ff)
+  top 0 right 0 / 150px 4px no-repeat,
+
+  linear-gradient(#b8c7ff,#dce5ff)
+  top 0 right 0 / 4px 90px no-repeat,
+
+  linear-gradient(#dce5ff,#eef2ff)
+  top 28px right 28px / 72px 2px no-repeat,
+
+  linear-gradient(#dce5ff,#eef2ff)
+  top 28px right 28px / 2px 62px no-repeat,
+
+  linear-gradient(#bfd0ff,#dce5ff)
+  top 0 right 0 / 54px 14px no-repeat,
+
+  linear-gradient(#bfd0ff,#dce5ff)
+  top 0 right 0 / 14px 54px no-repeat,
+
+  /* =================================================
+     左下
+  ================================================= */
+  linear-gradient(#b8c7ff,#dce5ff)
+  bottom 0 left 0 / 150px 4px no-repeat,
+
+  linear-gradient(#b8c7ff,#dce5ff)
+  bottom 0 left 0 / 4px 90px no-repeat,
+
+  linear-gradient(#dce5ff,#eef2ff)
+  bottom 28px left 28px / 72px 2px no-repeat,
+
+  linear-gradient(#dce5ff,#eef2ff)
+  bottom 28px left 28px / 2px 62px no-repeat,
+
+  linear-gradient(#bfd0ff,#dce5ff)
+  bottom 0 left 0 / 54px 14px no-repeat,
+
+  linear-gradient(#bfd0ff,#dce5ff)
+  bottom 0 left 0 / 14px 54px no-repeat,
+
+  /* =================================================
+     右下
+  ================================================= */
+  linear-gradient(#b8c7ff,#dce5ff)
+  bottom 0 right 0 / 150px 4px no-repeat,
+
+  linear-gradient(#b8c7ff,#dce5ff)
+  bottom 0 right 0 / 4px 90px no-repeat,
+
+  linear-gradient(#dce5ff,#eef2ff)
+  bottom 28px right 28px / 72px 2px no-repeat,
+
+  linear-gradient(#dce5ff,#eef2ff)
+  bottom 28px right 28px / 2px 62px no-repeat,
+
+  linear-gradient(#bfd0ff,#dce5ff)
+  bottom 0 right 0 / 54px 14px no-repeat,
+
+  linear-gradient(#bfd0ff,#dce5ff)
+  bottom 0 right 0 / 14px 54px no-repeat;
+}
+
+/* =================================================
+   メインBOX
+================================================= */
 .Home-box {
-  width: 92%;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 24px;
-
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-
-  border-radius: 25px;
-
-  box-shadow: 0 20px 40px rgba(120,120,200,0.15);
-
-  max-height: 650px;
-  overflow-y: auto;
-}
-
-/* ⭐ 追加：2日目以降に余白 */
-.Home-box > div + div {
-  margin-top: 40px;
-}
-
-/* ===== 日付 ===== */
-.Home-day-title {
-  font-size: 26px;
-  font-weight: bold;
-  color: #3e4f7a;
-  
-  margin-bottom: 20px;
-
   position: relative;
-  display: inline-block;
+  z-index: 2;
 
-  text-align: center;
-  letter-spacing: 2px;
+  /* =========================
+     サイズ
+  ========================= */
+  width: 82%;
+  max-width: 640px;
+
+  /* =========================
+     位置調整
+  ========================= */
+
+  /* 中央 */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* ↓ 上下位置 */
+  margin-top: 50px;
+  margin-bottom: 0;
+
+  /* 微調整 */
+  left: 0;
+  top: 0;
+
+  /* =========================
+     内側余白
+  ========================= */
+  padding: 14px;
+
+  /* =========================
+     高さ
+  ========================= */
+  max-height: 590px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* =========================
+     背景
+  ========================= */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.9),
+      rgba(245,247,255,0.94)
+    );
+
+  border:
+    1px solid rgba(230,236,255,0.92);
+
+  box-shadow:
+    0 14px 30px rgba(120,130,200,0.08);
 }
 
-/* タイトル本体 */
+/* =================================================
+   スクロールバー
+================================================= */
+.Home-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.Home-box::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      #8ea5ff,
+      #6f85ff
+    );
+
+  border-radius: 999px;
+}
+
+/* =================================================
+   日ごとの余白
+================================================= */
+.Home-box > div + div {
+  margin-top: 24px;
+}
+
+/* =================================================
+   タイトル
+================================================= */
+.Home-day-title {
+  text-align: center;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  color: #6678de;
+
+  margin-bottom: 18px;
+
+  letter-spacing: 0.08em;
+}
+
 .Home-day-title span {
   position: relative;
+
   display: inline-block;
-  padding: 0 40px;
-  font-weight: 700;
+
+  padding: 0 38px;
 }
 
-/* ===== 左キラキラ ===== */
-.Home-day-title span::before {
-  content: "✦ ✧";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(-120%, -50%);
-
-  font-size: 18px;
-  color: #a88bff;
-  opacity: 0.7;
-}
-
-/* ===== 右キラキラ ===== */
+.Home-day-title span::before,
 .Home-day-title span::after {
-  content: "✧ ✦";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(120%, -50%);
+  content: "✦";
 
-  font-size: 18px;
-  color: #ff9ed6;
-  opacity: 0.7;
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #aab8ff;
+
+  font-size: 16px;
 }
 
-/* ===== 下のグラデライン ===== */
+.Home-day-title span::before {
+  left: 0;
+}
+
+.Home-day-title span::after {
+  right: 0;
+}
+
 .Home-day-title::after {
   content: "";
+
   display: block;
 
-  width: 120px;
-  height: 6px;
+  width: 130px;
+  height: 5px;
 
   margin: 10px auto 0;
 
-  border-radius: 10px;
-  background: linear-gradient(90deg, #7aa6ff, #ff9ed6);
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7ea1ff,
+      #f0a8d8
+    );
 }
 
-/* ===== リスト ===== */
+/* =================================================
+   リスト
+================================================= */
 .Home-list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+
+  gap: 10px;
 }
 
-/* ===== 1行カード ===== */
+/* =================================================
+   行カード
+================================================= */
 .Home-row {
+  position: relative;
+
   display: flex;
   align-items: center;
 
-  background: rgba(255,255,255,0.9);
-  border-radius: 20px;
-  padding: 3px;
-  box-shadow: 0 8px 20px rgba(120,120,200,0.12);
+  min-height: 62px;
+
+  padding: 0 12px 0 0;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fafbff
+    );
+
+  border:
+    1px solid rgba(232,236,255,0.95);
+
+  box-shadow:
+    0 5px 14px rgba(120,130,200,0.07);
 }
 
-/* ===== 時間 ===== */
+/* 左アクセント */
+.Home-row::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 7px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #7fa1ff,
+      #6283ff
+    );
+}
+
+/* =================================================
+   時間
+================================================= */
 .Home-time {
-  width: 38%;
-  background: #eef1ff;
+  min-width: 118px;
 
-  padding: 14px;
-  border-radius: 14px;
+  margin-left: 14px;
 
-  font-size: 13px;
-  color: #3a4f6a;
+  padding: 10px 10px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f5f7ff,
+      #eef2ff
+    );
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #55639c;
 
   text-align: center;
-
-  box-shadow: inset 0 2px 6px rgba(255,255,255,0.7);
 }
 
-/* ===== アイコン丸 ===== */
+/* =================================================
+   アイコン
+================================================= */
 .Home-icon {
+  position: relative;
+
   width: 40px;
   height: 40px;
+
+  margin-left: 12px;
+
   border-radius: 50%;
 
-  background:#f7f8ff;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 14px;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f5f7ff
+    );
 
-  margin: 0 12px;
+  font-size: 16px;
+
+  box-shadow:
+    0 4px 10px rgba(120,130,200,0.08);
 }
 
-/* ===== 内容 ===== */
+/* 区切り線 */
+.Home-icon::before {
+  content: "";
+
+  position: absolute;
+
+  left: -7px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 2px;
+  height: 26px;
+
+  border-radius: 999px;
+
+  background: #e2e7ff;
+}
+
+/* =================================================
+   内容
+================================================= */
 .Home-content {
   flex: 1;
-  padding: 16px 10px;
+
+  margin-left: 12px;
 
   text-align: left;
-  font-size: 15px;
-  color: #3e5f70;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #3d4679;
 }

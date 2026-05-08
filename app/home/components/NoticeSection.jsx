@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./NoticeSection.css";
 import { useEffect, useState } from "react";
 import { homeNoticeData } from "./data/homeNoticeData";
+import { orbitron } from "../page";
 
 const NoticeSection = () => {
   const [notices, setNotices] = useState([]);
@@ -18,8 +19,11 @@ const NoticeSection = () => {
   return (
     <section className="Home-notice-section">
       {/* ← タイトルはいじらない */}
-      <h2 className="Home-section-title">お知らせ</h2>
-
+      <div className="Home-section-title-wrapper">
+  <div className="Home-section-title">
+    お知らせ
+  </div>
+</div>
       <div className="Home-box3">
         {notices.map((notice, index) => (
           <Link
@@ -30,33 +34,54 @@ const NoticeSection = () => {
 
     <svg
   className="notice-wave"
-  viewBox="0 0 200 100"
+  viewBox="0 0 120 120"
   preserveAspectRatio="none"
 >
-  {/* 奥の波 */}
-  <path
-    className="wave-back"
-    d="M0,120 C30,80 120,20 200,90 L200,200 Z"
-  />
-  {/* 手前の波 */}
-  <path
-    className="wave-front"
-    d="M0,150 C80,50 150,90 200,30 L200,100 Z"
-  />
+{/* 薄い背景 */}
+<path
+  className="wave-back"
+  d="
+    M120 120
+    L130 25
+    L30 125
+    Z
+  "
+/>
+
+{/* メインの角 */}
+<path
+  className="wave-front"
+  d="
+    M120 120
+    L120 60
+    L60 120
+    Z
+  "
+/>
+
 </svg>
 
             {/* ===== 番号 ===== */}
-            <div className={`notice-number n${index + 1}`}>
-              {String(index + 1).padStart(2, "0")}
-            </div>
+  <div
+  className={`
+    notice-number
+    n${index + 1}
+    ${orbitron.className}
+  `}
+>
+  {String(index + 1).padStart(2, "0")}
+</div>
 
-            {/* ===== テキスト ===== */}
-            <div className="notice-text">
-              {notice.title}
-            </div>
+<div className="notice-line" />
+           {/* ===== テキスト ===== */}
+<div className="notice-text">
+  {notice.title}
+</div>
 
-            {/* ===== 矢印 ===== */}
-            <div className="notice-arrow">›</div>
+<div className="notice-dots" />
+
+{/* ===== 矢印 ===== */}
+<div className="notice-arrow">›</div>
 
           </Link>
         ))}

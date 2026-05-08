@@ -5,25 +5,53 @@ import "./Carousel.css";
 
 export default function Carousel({ items = [] }) {
   const containerRef = useRef(null);
+
   const [currentPage, setCurrentPage] = useState(0);
   const [isStopped, setIsStopped] = useState(false);
 
   const fallbackItems = [
-    { title: "企業広告①", description: "企業名：紹介文など" },
-    { title: "企業広告②", description: "企業名：紹介文など" },
-    { title: "企業広告③", description: "企業名：紹介文など" },
-    { title: "企業広告④", description: "企業名：紹介文など" },
-    { title: "企業広告⑤", description: "企業名：紹介文など" },
-    { title: "企業広告⑥", description: "企業名：紹介文など" },
+    {
+      title: "企業広告①",
+      description: "企業名：紹介文など",
+      image: "/sample1.jpg",
+    },
+    {
+      title: "企業広告②",
+      description: "企業名：紹介文など",
+      image: "/sample2.jpg",
+    },
+    {
+      title: "企業広告③",
+      description: "企業名：紹介文など",
+      image: "/sample3.jpg",
+    },
+    {
+      title: "企業広告④",
+      description: "企業名：紹介文など",
+      image: "/sample4.jpg",
+    },
+    {
+      title: "企業広告⑤",
+      description: "企業名：紹介文など",
+      image: "/sample5.jpg",
+    },
+    {
+      title: "企業広告⑥",
+      description: "企業名：紹介文など",
+      image: "/sample6.jpg",
+    },
   ];
 
-  const displayItems = items.length > 0 ? items : fallbackItems;
+  const displayItems =
+    items.length > 0 ? items : fallbackItems;
 
   useEffect(() => {
     const container = containerRef.current;
+
     if (!container) return;
 
     let animationId;
+
     const speed = 1.4;
     const stopTime = 800;
 
@@ -31,35 +59,52 @@ export default function Carousel({ items = [] }) {
     let lastStoppedIndex = -1;
 
     const scroll = () => {
-      const list = container.querySelector(".Home-carousel-list");
+      const list =
+        container.querySelector(".Home-carousel-list");
+
       const firstCard = list?.children[0];
 
       if (!firstCard) {
-        animationId = requestAnimationFrame(scroll);
+        animationId =
+          requestAnimationFrame(scroll);
+
         return;
       }
 
-      // 実際のカード幅（ズレ防止）
-      const cardWidth = firstCard.offsetWidth + 24;
-      const totalWidth = displayItems.length * cardWidth;
+      const cardWidth =
+        firstCard.offsetWidth + 28;
+
+      const totalWidth =
+        displayItems.length * cardWidth;
 
       if (!isPaused) {
         setIsStopped(false);
+
         container.scrollLeft += speed;
 
-        const center = container.scrollLeft + container.clientWidth / 2;
-        const index = Math.floor(center / cardWidth);
-        const cardCenter = index * cardWidth + cardWidth / 2;
+        const center =
+          container.scrollLeft +
+          container.clientWidth / 2;
 
-        setCurrentPage(index % displayItems.length);
+        const index =
+          Math.floor(center / cardWidth);
 
-        // 中央で一瞬停止
+        const cardCenter =
+          index * cardWidth + cardWidth / 2;
+
+        setCurrentPage(
+          index % displayItems.length
+        );
+
         if (
-          Math.abs(center - cardCenter) < speed &&
+          Math.abs(center - cardCenter) <
+            speed &&
           index !== lastStoppedIndex
         ) {
           isPaused = true;
+
           lastStoppedIndex = index;
+
           setIsStopped(true);
 
           setTimeout(() => {
@@ -68,9 +113,9 @@ export default function Carousel({ items = [] }) {
           }, stopTime);
         }
 
-        // 🔥 無限ループ（ここが重要）
         if (container.scrollLeft >= totalWidth) {
           container.scrollLeft -= totalWidth;
+
           lastStoppedIndex = -1;
         }
 
@@ -79,49 +124,108 @@ export default function Carousel({ items = [] }) {
         }
       }
 
-      animationId = requestAnimationFrame(scroll);
+      animationId =
+        requestAnimationFrame(scroll);
     };
 
-    animationId = requestAnimationFrame(scroll);
-    return () => cancelAnimationFrame(animationId);
+    animationId =
+      requestAnimationFrame(scroll);
+
+    return () =>
+      cancelAnimationFrame(animationId);
   }, [displayItems.length]);
 
   return (
     <div className="Home-carousel-wrapper">
-      <div ref={containerRef} className="Home-carousel-container">
+
+      {/* スクロール */}
+      <div
+        ref={containerRef}
+        className="Home-carousel-container"
+      >
         <div className="Home-carousel-list">
-          {displayItems.concat(displayItems).map((item, index) => {
-            const isCenter =
-              index % displayItems.length === currentPage;
-            const shouldScale = isCenter && isStopped;
 
-            return (
-              <div
-                key={index}
-                className={`Home-carousel-card ${
-                  shouldScale ? "is-center" : ""
-                }`}
-              >
-                <div className="Home-carousel-image-placeholder">
-                  画像
+          {displayItems
+            .concat(displayItems)
+            .map((item, index) => {
+
+              const isCenter =
+                index % displayItems.length ===
+                currentPage;
+
+              const shouldScale =
+                isCenter && isStopped;
+
+              return (
+                <div
+                  key={index}
+                  className={`Home-carousel-card ${
+                    shouldScale
+                      ? "is-center"
+                      : ""
+                  }`}
+                >
+
+                  {/* 上ライン */}
+                  <div className="Home-carousel-card-top-line-left" />
+                  <div className="Home-carousel-card-top-line-right" />
+
+                  {/* 下ライン */}
+                  <div className="Home-carousel-card-bottom-line-left" />
+                  <div className="Home-carousel-card-bottom-line-right" />
+
+                  {/* 上中央 */}
+                  <div className="futuristic-frame-top" />
+
+                  {/* 下中央 */}
+                  <div className="futuristic-frame-bottom" />
+
+                  {/* 中身 */}
+                  <div className="Home-carousel-content">
+
+                    {/* 画像 */}
+                    <div className="Home-carousel-image-placeholder">
+
+                      {item.image ? (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                        />
+                      ) : (
+                        "画像"
+                      )}
+
+                    </div>
+
+                    {/* タイトル */}
+                    <h2 className="Home-carousel-title">
+                      {item.title}
+                    </h2>
+
+                    {/* ドット */}
+                    <div className="Home-carousel-dots" />
+
+                    {/* 説明 */}
+                    <p className="Home-carousel-description">
+                      {item.description}
+                    </p>
+
+                  </div>
                 </div>
-
-                <h2 className="Home-carousel-title">{item.title}</h2>
-                <p className="Home-carousel-description">
-                  {item.description}
-                </p>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
 
+      {/* インジケータ */}
       <div className="Home-carousel-indicator">
         {displayItems.map((_, index) => (
           <span
             key={index}
             className={`Home-indicator-dot ${
-              index === currentPage ? "active" : ""
+              index === currentPage
+                ? "active"
+                : ""
             }`}
           />
         ))}

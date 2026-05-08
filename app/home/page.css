@@ -1,0 +1,14 @@
+/* ===== タイトル ===== */
+.Home-section-title {
+  font-family: var(--font-rounded);
+}
+
+/* ===== テキスト ===== */
+.notice-text {
+  font-family: var(--font-rounded);
+}
+
+/* 番号だけデジタル */
+.notice-number {
+  font-family: 'Orbitron', sans-serif;
+}

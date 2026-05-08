@@ -7,7 +7,9 @@
   overflow: hidden;
 }
 
-/* ヒーロー装飾 */
+/* =================================================
+   背景装飾
+================================================= */
 .hero::after {
   content: "";
   position: absolute;
@@ -47,16 +49,26 @@
   opacity: 0.6;
 }
 
-/* 上グラデ */
+/* =================================================
+   上グラデ
+================================================= */
 .hero-bg-gradient {
   position: absolute;
   top: 0;
   width: 100%;
   height: 260px;
-  background: radial-gradient(circle at 50% 0%, #e3efff 0%, #f2f4f7 70%);
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      #e3efff 0%,
+      #f2f4f7 70%
+    );
 }
 
-/* 画像カード */
+/* =================================================
+   メインカード
+================================================= */
 .hero-card {
   position: relative;
   width: 100%;
@@ -64,11 +76,13 @@
   height: 420px;
   margin: 0 auto;
   overflow: hidden;
+  z-index: 2;
 }
 
 .hero-image {
   position: relative;
   height: 260px;
+
   background-size: cover;
   background-position: center;
 }
@@ -77,118 +91,413 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0) 55%,
-    rgba(255,255,255,0.9) 85%,
-    #f2f4f7 100%
-  );
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 55%,
+      rgba(255,255,255,0.9) 85%,
+      #f2f4f7 100%
+    );
 }
 
-/* タイトル */
+/* =================================================
+   タイトル
+================================================= */
 .hero-text {
   position: absolute;
   top: 18%;
   left: 50%;
+
   transform: translate(-50%, -50%);
+
   text-align: center;
   color: #fff;
+
+  z-index: 3;
 }
 
 .hero-text h1 {
+  margin: 0;
+
   font-size: 34px;
   letter-spacing: 8px;
+  font-weight: 800;
+
+  text-shadow:
+    0 4px 12px rgba(0,0,0,0.2);
 }
 
 .hero-text p {
+  margin-top: 6px;
+
   font-size: 14px;
+  letter-spacing: 3px;
+
   opacity: 0.9;
 }
 
-/* =========================
+/* =================================================
    マスコットカード
-========================= */
+================================================= */
 .hero-mascot-card {
   position: relative;
-  z-index: 5;
-  margin: -200px auto 0;
-  width: 88%;
-  max-width: 420px;
-  height: 110px; /* 少し余裕 */
-  background: rgba(216, 215, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 24px;
-  padding: 20px 18px 20px 80px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-  border: 1px solid rgba(255,255,255,0.6);
-  overflow: hidden; /* ← 追加（重要） */
+  z-index: 3;
+
+  width: 100%;
+  max-width: 720px;
+
+  margin: -80px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* マスコット */
+/* =================================================
+   マスコット
+================================================= */
 .mascot {
-  position: absolute;
-  left: 18px;
-  bottom: 20px;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #fff;
+  width: 120px;
+  height: auto;
+
+  position: relative;
+  z-index: 5;
+
+  margin-right: -10px;
+
+  filter:
+    drop-shadow(0 10px 18px rgba(90,140,255,0.18));
 }
 
-/* =========================
-   吹き出しスライダー
-========================= */
+/* =================================================
+   吹き出しエリア
+================================================= */
 .balloon-slider-vertical {
-  overflow: visible;
-  height: 70px; /* 余裕 */
-  width: 100%; /* ← 追加 */
+  position: relative;
+
+  width: 100%;
+  height: 92px;
+
+  overflow: hidden;
 }
 
+/* =================================================
+   スライド本体
+================================================= */
 .balloon-track-vertical {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  height: calc(200% + 12px);
+
+  gap: 14px;
+
+  transition:
+    transform 0.5s ease;
 }
 
-/* スライド */
 .balloon-track-vertical.slide {
-  transform: translateY(calc(-50% - 6px));
-  transition: transform 0.5s ease;
+  transform: translateY(-106px);
 }
 
-/* 吹き出し本体 */
+/* =================================================
+   吹き出し本体
+================================================= */
 .balloon-item {
-  height: 100%;
-  display: flex;
-  align-items: center;
   position: relative;
 
-  background: #fff;
-  border-radius: 18px;
-  padding: 14px;
-  color: #4a5a6a;
-  font-size: 14px;
+  width: 100%;
+  height: 92px;
 
-  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+
+  padding-left: 120px;
+  padding-right: 75px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7faff 100%
+    );
+
+  border: 2px solid #63a7ff;
+
+  color: #5d77c7;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  clip-path: polygon(
+    0 0,
+    90% 0,
+    100% 50%,
+    90% 100%,
+    0 100%
+  );
+
+  box-shadow:
+    0 8px 20px rgba(120,170,255,0.14),
+    inset 0 0 0 2px rgba(255,255,255,0.9);
+
+  overflow: visible;
 }
 
-/* 次のカード */
-.balloon-item.next {
-  opacity: 0.6;
-  transform: scale(0.96);
-}
-
-/* しっぽ（ここに統一） */
+/* =================================================
+   外側フレーム
+================================================= */
 .balloon-item::before {
   content: "";
+
+  position: absolute;
+  inset: -7px;
+
+  clip-path: polygon(
+    0 0,
+    90% 0,
+    100% 50%,
+    90% 100%,
+    0 100%
+  );
+
+  border: 2px solid rgba(99,167,255,0.35);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(180,220,255,0.15),
+      rgba(255,255,255,0)
+    );
+
+  z-index: -1;
+}
+
+/* =================================================
+   上メカライン
+================================================= */
+.balloon-item::after {
+  content: "";
+
   position: absolute;
 
-  left: -8px;   /* ← 完全内側じゃなく少し外に出す */
-  bottom: 12px;
+  top: 8px;
+  left: 120px;
 
-  border-right: 10px solid #fff;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  width: 55px;
+  height: 4px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #63a7ff 0 10px,
+      transparent 10px 14px
+    );
+
+  opacity: 0.7;
+}
+
+/* =================================================
+   左メカ円
+================================================= */
+.balloon-circle {
+  position: absolute;
+
+  left: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 88px;
+  height: 88px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #ffffff 22%,
+      #6aaeff 23%,
+      #6aaeff 28%,
+      #ffffff 29%,
+      #ffffff 44%,
+      #b9d8ff 45%,
+      #b9d8ff 52%,
+      #ffffff 53%
+    );
+
+  border: 3px solid #d6e8ff;
+
+  box-shadow:
+    0 0 0 6px rgba(120,170,255,0.12),
+    inset 0 0 24px rgba(130,180,255,0.16);
+
+  overflow: hidden;
+
+  z-index: 3;
+}
+
+/* 内リング */
+.balloon-circle::before {
+  content: "";
+
+  position: absolute;
+  inset: 9px;
+
+  border-radius: 50%;
+
+  border:
+    2px solid rgba(120,170,255,0.35);
+}
+
+/* メカ装飾 */
+.balloon-circle::after {
+  content: "";
+
+  position: absolute;
+
+  right: 10px;
+  top: 18px;
+
+  width: 16px;
+  height: 4px;
+
+  background: #63a7ff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    -8px 11px 0 rgba(99,167,255,0.55),
+    -4px 22px 0 rgba(99,167,255,0.3);
+}
+
+/* =================================================
+   中の画像
+================================================= */
+.balloon-circle-image {
+  position: absolute;
+
+  inset: 14px;
+
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+/* =================================================
+   右先端
+================================================= */
+.arrow-part {
+  position: absolute;
+
+  right: -11px;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+
+  width: 34px;
+  height: 34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #eef6ff
+    );
+
+  border-top: 2px solid #63a7ff;
+  border-right: 2px solid #63a7ff;
+
+  box-shadow:
+    4px -4px 10px rgba(99,167,255,0.15);
+
+  z-index: 4;
+}
+
+/* =================================================
+   テキスト
+================================================= */
+.balloon-text {
+  position: relative;
+  z-index: 5;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  color: #5d77c7;
+}
+
+/* =================================================
+   次カード
+================================================= */
+.balloon-item.next {
+  opacity: 0.45;
+  transform: scale(0.985);
+}
+
+/* =================================================
+   SP
+================================================= */
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 30px;
+  }
+
+  .hero-card {
+    height: 340px;
+  }
+
+  .hero-image {
+    height: 220px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    letter-spacing: 5px;
+  }
+
+  .hero-mascot-card {
+    margin-top: -60px;
+    padding: 0 10px;
+  }
+
+  .mascot {
+    width: 90px;
+  }
+
+  .balloon-item {
+    height: 82px;
+
+    padding-left: 105px;
+    padding-right: 60px;
+
+    font-size: 13px;
+  }
+
+  .balloon-circle {
+    width: 76px;
+    height: 76px;
+  }
+
+  .balloon-slider-vertical {
+    height: 82px;
+  }
+
+  .balloon-track-vertical.slide {
+    transform: translateY(-96px);
+  }
+
+  .arrow-part {
+    width: 28px;
+    height: 28px;
+  }
 }
