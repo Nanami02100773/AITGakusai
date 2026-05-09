@@ -16,7 +16,6 @@
 
 /* =================================================
    メカフレーム
-   ← 消えないように background 全体維持
 ================================================= */
 .Home-notice-section::after {
   content: "";
@@ -35,199 +34,253 @@
   pointer-events: none;
   z-index: 5;
 
-  opacity: 0.94;
+  opacity: 0.92;
+
+  filter:
+    drop-shadow(0 8px 18px rgba(160,175,255,0.12));
 
   background:
 
-  /* =================================================
-     左上
-  ================================================= */
+/* =================================================
+   左上
+================================================= */
+/* =================================================
+   左上 赤アクセント
+================================================= */
 
-  linear-gradient(
-    90deg,
-    #9fb4ff,
-    #d8e2ff
-  )
-  top 0 left 0 / 130px 3px no-repeat,
+linear-gradient(
+  135deg,
+  #ff9fb5 0 50%,
+  transparent 50% 100%
+)
+top 3px left 3px / 23px 23px no-repeat,
+/* =================================================
+   左上 赤アクセント
+================================================= */
+linear-gradient(
+  135deg,
+  #ff9fb5 0 50%,
+  transparent 50% 100%
+)
+top 3px left 3px / 23px 23px no-repeat,
 
-  linear-gradient(
-    180deg,
-    #9fb4ff,
-    #d8e2ff
-  )
-  top -10px left 0 / 3px 100px no-repeat,
+/* =================================================
+   右上 赤アクセント
+================================================= */
+linear-gradient(
+  -135deg,
+  #ff9fb5 0 50%,
+  transparent 50% 100%
+)
+top 3px right 3px / 23px 23px no-repeat,
 
-  linear-gradient(
-    90deg,
-    rgba(191,205,255,0.95),
-    rgba(225,233,255,0.92)
-  )
-  top 24px left 24px / 55px 2px no-repeat,
+/* =================================================
+   左下 赤アクセント
+================================================= */
+linear-gradient(
+  45deg,
+  #ffafc2 0 50%,
+  transparent 50% 100%
+)
+bottom 8px left 3px / 23px 23px no-repeat,
 
-  linear-gradient(
-    180deg,
-    rgba(191,205,255,0.95),
-    rgba(225,233,255,0.92)
-  )
-  top 24px left 24px / 2px 58px no-repeat,
+/* =================================================
+   右下 赤アクセント
+================================================= */
+linear-gradient(
+  -45deg,
+  #ff9fb5 0 50%,
+  transparent 50% 100%
+)
+bottom 8px right 3px / 23px 23px no-repeat,
 
-  linear-gradient(
-    90deg,
-    #aec0ff,
-    #d5deff
-  )
-  top 0 left 0 / 70px 10px no-repeat,
+linear-gradient(
+  90deg,
+  #b8c6ff,
+  #b8c6ff
+)
+top 0 left 0 / 130px 3px no-repeat,
 
-  linear-gradient(
-    180deg,
-    #aec0ff,
-    #d5deff
-  )
-  top -6px left 0 / 10px 70px no-repeat,
+linear-gradient(
+  180deg,
+  #b8c6ff,
+  #b8c6ff
+)
+top -10px left 0 / 3px 100px no-repeat,
 
+linear-gradient(
+  90deg,
+  rgba(220,228,255,0.95),
+  rgba(220,228,255,0.95)
+)
+top 15px left 15px / 55px 2px no-repeat,
 
+linear-gradient(
+  180deg,
+  rgba(220,228,255,0.95),
+  rgba(220,228,255,0.95)
+)
+top 15px left 15px / 2px 58px no-repeat,
 
-  /* =================================================
-     右上
-  ================================================= */
+linear-gradient(
+  90deg,
+  #d6deff,
+  #d6deff
+)
+top 0 left 0 / 70px 10px no-repeat,
 
-  linear-gradient(
-    90deg,
-    #9fb4ff,
-    #d8e2ff
-  )
-  top 0 right 0 / 130px 3px no-repeat,
-
-  linear-gradient(
-    180deg,
-    #9fb4ff,
-    #d8e2ff
-  )
-  top -10px right 0 / 3px 100px no-repeat,
-
-  linear-gradient(
-    90deg,
-    rgba(191,205,255,0.95),
-    rgba(225,233,255,0.92)
-  )
-  top 24px right 24px / 55px 2px no-repeat,
-
-  linear-gradient(
-    180deg,
-    rgba(191,205,255,0.95),
-    rgba(225,233,255,0.92)
-  )
-  top 24px right 24px / 2px 58px no-repeat,
-
-  linear-gradient(
-    90deg,
-    #aec0ff,
-    #d5deff
-  )
-  top 0 right 0 / 70px 10px no-repeat,
-
-  linear-gradient(
-    180deg,
-    #aec0ff,
-    #d5deff
-  )
-  top -6px right 0 / 10px 70px no-repeat,
-
-
-
-  /* =================================================
-     左下
-  ================================================= */
-
-  linear-gradient(
-    90deg,
-    #9fb4ff,
-    #d8e2ff
-  )
-  bottom 0 left 0 / 130px 3px no-repeat,
-
-  linear-gradient(
-    180deg,
-    #9fb4ff,
-    #d8e2ff
-  )
-  bottom -10px left 0 / 3px 100px no-repeat,
-
-  linear-gradient(
-    90deg,
-    rgba(191,205,255,0.95),
-    rgba(225,233,255,0.92)
-  )
-  bottom 24px left 24px / 55px 2px no-repeat,
-
-  linear-gradient(
-    180deg,
-    rgba(191,205,255,0.95),
-    rgba(225,233,255,0.92)
-  )
-  bottom 24px left 24px / 2px 58px no-repeat,
-
-  linear-gradient(
-    90deg,
-    #aec0ff,
-    #d5deff
-  )
-  bottom 0 left 0 / 70px 10px no-repeat,
-
-  linear-gradient(
-    180deg,
-    #aec0ff,
-    #d5deff
-  )
-  bottom -6px left 0 / 10px 70px no-repeat,
+linear-gradient(
+  180deg,
+  #d6deff,
+  #d6deff
+)
+top -6px left 0 / 10px 70px no-repeat,
 
 
 
-  /* =================================================
-     右下
-  ================================================= */
+/* =================================================
+   右上
+================================================= */
 
-  linear-gradient(
-    90deg,
-    #9fb4ff,
-    #d8e2ff
-  )
-  bottom 0 right 0 / 130px 3px no-repeat,
+linear-gradient(
+  90deg,
+  #b8c6ff,
+  #b8c6ff
+)
+top 0 right 0 / 130px 3px no-repeat,
 
-  linear-gradient(
-    180deg,
-    #9fb4ff,
-    #d8e2ff
-  )
-  bottom -10px right 0 / 3px 100px no-repeat,
+linear-gradient(
+  180deg,
+  #b8c6ff,
+  #b8c6ff
+)
+top -10px right 0 / 3px 100px no-repeat,
 
-  linear-gradient(
-    90deg,
-    rgba(191,205,255,0.95),
-    rgba(225,233,255,0.92)
-  )
-  bottom 24px right 24px / 55px 2px no-repeat,
+linear-gradient(
+  90deg,
+  rgba(220,228,255,0.95),
+  rgba(220,228,255,0.95)
+)
+top 15px right 15px / 55px 2px no-repeat,
 
-  linear-gradient(
-    180deg,
-    rgba(191,205,255,0.95),
-    rgba(225,233,255,0.92)
-  )
-  bottom 24px right 24px / 2px 58px no-repeat,
+linear-gradient(
+  180deg,
+  rgba(220,228,255,0.95),
+  rgba(220,228,255,0.95)
+)
+top 15px right 15px / 2px 58px no-repeat,
 
-  linear-gradient(
-    90deg,
-    #aec0ff,
-    #d5deff
-  )
-  bottom 0 right 0 / 70px 10px no-repeat,
+linear-gradient(
+  90deg,
+  #d6deff,
+  #d6deff
+)
+top 0 right 0 / 70px 10px no-repeat,
 
-  linear-gradient(
-    180deg,
-    #aec0ff,
-    #d5deff
-  )
-  bottom -6px right 0 / 10px 70px no-repeat;
+linear-gradient(
+  180deg,
+  #d6deff,
+  #d6deff
+)
+top -6px right 0 / 10px 70px no-repeat,
+
+
+
+/* =================================================
+   左下
+================================================= */
+
+linear-gradient(
+  90deg,
+  #b8c6ff,
+  #b8c6ff
+)
+bottom 5px left 0 / 130px 3px no-repeat,
+
+linear-gradient(
+  180deg,
+  #b8c6ff,
+  #b8c6ff
+)
+bottom 5px left 0 / 3px 100px no-repeat,
+
+linear-gradient(
+  90deg,
+  rgba(220,228,255,0.95),
+  rgba(220,228,255,0.95)
+)
+bottom 20px left 15px / 55px 2px no-repeat,
+
+linear-gradient(
+  180deg,
+  rgba(220,228,255,0.95),
+  rgba(220,228,255,0.95)
+)
+bottom 20px left 15px / 2px 58px no-repeat,
+
+linear-gradient(
+  90deg,
+  #d6deff,
+  #d6deff
+)
+bottom 5px left 0 / 70px 10px no-repeat,
+
+linear-gradient(
+  180deg,
+  #d6deff,
+  #d6deff
+)
+bottom 5px left 0 / 10px 70px no-repeat,
+
+
+
+/* =================================================
+   右下
+================================================= */
+
+linear-gradient(
+  90deg,
+  #b8c6ff 0%,
+  #b8c6ff 72%,
+  rgba(184,198,255,0.45) 88%,
+  rgba(184,198,255,0) 100%
+)
+bottom 5px right 0 / 130px 3px no-repeat,
+
+linear-gradient(
+  180deg,
+  #b8c6ff,
+  #b8c6ff
+)
+bottom 5px right 0 / 3px 100px no-repeat,
+
+linear-gradient(
+  90deg,
+  rgba(220,228,255,0.95),
+  rgba(220,228,255,0.95)
+)
+bottom 20px right 15px / 55px 2px no-repeat,
+
+linear-gradient(
+  180deg,
+  rgba(220,228,255,0.95),
+  rgba(220,228,255,0.95)
+)
+bottom 20px right 15px / 2px 58px no-repeat,
+
+linear-gradient(
+  90deg,
+  #d6deff,
+  #d6deff
+)
+bottom 5px right 0 / 70px 10px no-repeat,
+
+linear-gradient(
+  180deg,
+  #d6deff,
+  #d6deff
+)
+bottom 5px right 0 / 10px 70px no-repeat;
 }
 
 /* =================================================
@@ -246,12 +299,7 @@
 
   margin: 10px auto 30px;
 
-  background: linear-gradient(
-    90deg,
-    #90a9ff,
-    #6f88ff 45%,
-    #7f95ff
-  );
+  background: #b8c6ff;
 
   color: #ffffff;
   font-size: 17px;
@@ -266,12 +314,11 @@
     0 50%
   );
 
-  border: 2px solid rgba(255,255,255,0.7);
+  border: 2px solid rgba(235,240,255,0.9);
 
   box-shadow:
-    0 10px 24px rgba(116,136,255,0.2),
-    inset 0 1px 0 rgba(255,255,255,0.9),
-    inset 0 -2px 0 rgba(255,255,255,0.45);
+    0 8px 18px rgba(170,180,255,0.14),
+    inset 0 1px 0 rgba(255,255,255,0.8);
 
   overflow: hidden;
 }
@@ -362,7 +409,7 @@
   width: fit-content;
 
   /* 下余白だけ増やす */
-  margin: 10px auto 50px;
+  margin: 10px auto 40px;
 }
 
 /* =================================================
@@ -373,7 +420,7 @@
   z-index: 2;
 
   /* フレーム内に収まるよう少し小さく */
-  width: calc(90% - 24px);
+  width: calc(95% - 24px);
   max-width: 720px;
 
   margin: 0 auto;
@@ -395,7 +442,7 @@
   overflow-x: hidden;
 
   /* フレーム高さと合わせる */
-  height: 210px;
+  height: 230px;
 
   /* 少し下げる */
   margin-top: 12px;
