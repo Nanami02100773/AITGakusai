@@ -14,13 +14,13 @@ export default function HeroSection({
   ];
 
   const [index, setIndex] = useState(0);
-  const [slide, setSlide] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
 
     const interval = setInterval(() => {
 
-      setSlide(true);
+      setAnimate(true);
 
       setTimeout(() => {
 
@@ -28,18 +28,15 @@ export default function HeroSection({
           (prev + 1) % messages.length
         );
 
-        setSlide(false);
+        setAnimate(false);
 
-      }, 500);
+      }, 400);
 
     }, 3000);
 
     return () => clearInterval(interval);
 
   }, [messages.length]);
-
-  const nextIndex =
-    (index + 1) % messages.length;
 
   return (
     <section className="hero">
@@ -64,80 +61,51 @@ export default function HeroSection({
 
       </div>
 
-      {/* マスコットカード */}
+      {/* キャラ + 吹き出し */}
       <div className="hero-mascot-card">
 
-        {/* キャラ */}
-        <img
-          src="/images/mascot.png"
-          className="mascot"
-          alt=""
-        />
 
         {/* 吹き出し */}
         <div className="balloon-slider-vertical">
 
+          {/* 固定フレーム */}
+          <div className="balloon-frame" />
+
+          {/* 本体 */}
           <div
-            className={`balloon-track-vertical ${
-              slide ? "slide" : ""
+            className={`balloon-item ${
+              animate ? "animate" : ""
             }`}
           >
 
-            {/* 現在 */}
-            <div className="balloon-item">
+            <div className="balloon-inner">
 
-              {/* 左メカ円 */}
+              {/* 左リング */}
               <div className="balloon-circle">
 
-                {/* 中の画像 */}
                 <img
-                  src="/images/mascot.png"
+                  src="/images/mascot.jpg"
                   alt=""
                   className="balloon-circle-image"
                 />
 
-                {/* リング */}
-                <div className="balloon-circle-ring" />
-
               </div>
+
+              {/* 上ライン */}
+              <div className="balloon-top-line" />
 
               {/* テキスト */}
               <span className="balloon-text">
                 {messages[index]}
               </span>
 
-              {/* 右先端 */}
-              <div className="arrow-part" />
+              {/* 下ライン */}
+              <div className="balloon-tech-line" />
 
             </div>
 
-            {/* 次 */}
-            <div className="balloon-item next">
-
-              {/* 左メカ円 */}
-              <div className="balloon-circle">
-
-                {/* 中の画像 */}
-                <img
-                  src="/images/mascot.png"
-                  alt=""
-                  className="balloon-circle-image"
-                />
-
-                {/* リング */}
-                <div className="balloon-circle-ring" />
-
-              </div>
-
-              {/* テキスト */}
-              <span className="balloon-text">
-                {messages[nextIndex]}
-              </span>
-
-              {/* 右先端 */}
-              <div className="arrow-part" />
-
-            </div>
+            {/* 右先端 */}
+            <div className="arrow-part" />
 
           </div>
 
