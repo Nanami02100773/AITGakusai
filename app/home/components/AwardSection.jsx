@@ -24,23 +24,26 @@ export default function AwardSection() {
         <div className="box1-notch"></div>
 
         {/* =================================================
-            NEW DONATION風ヘッダー
+            王冠ヘッダー
         ================================================= */}
-      <div className="award-panel-header">
+        <div className="award-panel-header">
 
-  <div className="award-crown"></div>
+          {/* 王冠 */}
+          <div className="award-crown">
+            <span className="dot left"></span>
+            <span className="dot center"></span>
+            <span className="dot right"></span>
+          </div>
 
-  <div className="award-header-light left"></div>
+          {/* プレート */}
+          <div className="award-header-title">
+            模擬店・工科展などの出展を対象に
+            <br />
+            投票で「グランプリ」を決定します。
+          </div>
 
-  <div className="award-header-title">
-    本校学園祭では、模擬店・工科展などの出展に対し、
-    来場者や審査員による投票をもとに
-    「グランプリ」を決定します。
- </div>
+        </div>
 
-  <div className="award-header-light right"></div>
-
-</div>
       </div>
 
       {/* =================================================
@@ -77,6 +80,7 @@ export default function AwardSection() {
         ))}
 
       </div>
+
     </section>
   );
 }

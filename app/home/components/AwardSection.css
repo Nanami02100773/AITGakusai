@@ -2,121 +2,368 @@
    全体
 ================================================= */
 .Home-award-section {
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f7f9ff 100%
-    );
+
 
   padding: 10px 0 60px;
   overflow: hidden;
 }
-
 /* =================================================
-   説明エリア
+   賞一覧 全体フレーム
 ================================================= */
-.Home-box1 {
+.Home-box2 {
   position: relative;
 
-  width: 90%;
-  max-width: 760px;
+  width: 95%;
+  max-width: 700px;
 
-  /* ↓ 賞一覧との間隔 */
-  margin: 0 auto 50px;
+  margin: 20px auto 0;
 
-  padding: 0;
+  transform: translateY(-55px);
 
-  background: transparent;
-}
-
-/* =================================================
-   NEW DONATION風ヘッダー
-================================================= */
-.award-panel-header {
-  position: relative;
-  top: 0px;
-
-  width: 100%;
-  max-width: 620px;
-
-  height: 120px;
-
-  margin: 0 auto 30px;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-
-  filter:
-    drop-shadow(0 8px 18px rgba(0,0,0,0.18));
-}
-
-/* =================================================
-   抽象王冠
-================================================= */
-.award-crown {
-  position: absolute;
-
-  top: -20px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 72px;
-  height: 42px;
-
-  z-index: 30;
-}
-
-/* 王冠本体 */
-.award-crown::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
+  padding: 80px 20px 50px;
 
   background:
     linear-gradient(
       180deg,
-      #ffe98f 0%,
-      #ffd54d 45%,
-      #e0a900 100%
+      rgba(255,255,255,0.98),
+      rgba(246,249,255,0.97)
     );
 
-  clip-path: polygon(
-    0 100%,
-
-    12% 58%,
-    28% 100%,
-
-    50% 8%,
-    72% 100%,
-
-    88% 58%,
-    100% 100%
-  );
-
-  box-shadow:
-    0 3px 10px rgba(255,210,80,0.45),
-    inset 0 1px 0 rgba(255,255,255,0.7);
+  overflow: visible;
 }
 
+.Home-box2::before {
+  content: "";
 
+  position: absolute;
+
+  inset: -22px;
+
+  z-index: 0;
+  pointer-events: none;
+
+  border-radius: 10px;
+
+  background:
 
 /* =================================================
-   中央ホワイトプレート
+   TOP - 上部ライン
+================================================= */
+
+linear-gradient(
+  90deg,
+  #b8c6ff 0%,
+  #b8c6ff 100%
+)
+left 46px top 8px / calc(100% - 89px) 5px no-repeat,
+
+linear-gradient(
+  90deg,
+  rgba(196,208,255,0.98) 0%,
+  rgba(196,208,255,0.98) 100%
+)
+left 52px top 22px / calc(100% - 105px) 2px no-repeat,
+
+linear-gradient(
+  90deg,
+  rgba(196,208,255,0.98),
+  rgba(196,208,255,0.98)
+)
+center top 22px / 75px 2px no-repeat,
+
+/* =================================================
+   LEFT SIDE
+================================================= */
+
+linear-gradient(
+  180deg,
+  #b8c6ff 0%,
+  #b8c6ff 100%
+)
+left 8px top 45px / 4px calc(100% - 90px) no-repeat,
+
+linear-gradient(
+  90deg,
+  #b8c6ff,
+  #b8c6ff
+)
+left 8px top 8px / 34px 5px no-repeat,
+
+linear-gradient(
+  180deg,
+  #b8c6ff
+)
+left 8px top 8px / 4px 72px no-repeat,
+
+linear-gradient(
+  180deg,
+  rgba(196,208,255,0.98) 0%,
+  rgba(196,208,255,0.98) 100%
+)
+left 20px top 22px / 2px calc(100% - 78px) no-repeat,
+
+linear-gradient(
+  90deg,
+  rgba(196,208,255,0.98),
+  rgba(196,208,255,0.98)
+)
+left 20px top 22px / 30px 2px no-repeat,
+
+linear-gradient(
+  45deg,
+  transparent 0 42%,
+  #b8c6ff 42% 54%,
+  transparent 54%
+)
+left 8px bottom 8px / 42px 42px no-repeat,
+
+linear-gradient(
+  -135deg,
+  transparent 49%,
+  #ff9fb5 50%
+)
+left 5px bottom 5px / 30px 30px no-repeat,
+
+linear-gradient(
+  45deg,
+  transparent 0 46%,
+  #b8c6ff 46% 50%,
+  transparent 50%
+)
+left 20px bottom 24px / 35px 35px no-repeat,
+
+/* =================================================
+   RIGHT SIDE
+================================================= */
+
+linear-gradient(
+  180deg,
+  #b8c6ff 0%,
+  #b8c6ff 100%
+)
+right 8px top 45px / 4px calc(100% - 90px) no-repeat,
+
+linear-gradient(
+  -90deg,
+  #b8c6ff,
+  #b8c6ff
+)
+right 8px top 8px / 34px 5px no-repeat,
+
+linear-gradient(
+  180deg,
+  #b8c6ff
+)
+right 8px top 8px / 4px 72px no-repeat,
+
+linear-gradient(
+  180deg,
+  rgba(196,208,255,0.98) 0%,
+  rgba(196,208,255,0.98) 100%
+)
+right 20px top 22px / 2px calc(100% - 78px) no-repeat,
+
+linear-gradient(
+  -90deg,
+  rgba(196,208,255,0.98),
+  rgba(196,208,255,0.98)
+)
+right 20px top 22px / 30px 2px no-repeat,
+
+linear-gradient(
+  -45deg,
+  transparent 0 42%,
+  #b8c6ff 42% 54%,
+  transparent 54%
+)
+right 8px bottom 8px / 42px 42px no-repeat,
+
+linear-gradient(
+  135deg,
+  transparent 49%,
+  #ff9fb5 50%
+)
+right 5px bottom 5px / 30px 30px no-repeat,
+
+linear-gradient(
+  -45deg,
+  transparent 0 46%,
+  #b8c6ff 46% 50%,
+  transparent 50%
+)
+right 20px bottom 24px / 35px 35px no-repeat,
+
+/* =================================================
+   BOTTOM
+================================================= */
+
+linear-gradient(
+  90deg,
+  #b8c6ff 0%,
+  #b8c6ff 100%
+)
+left 46px bottom 8px / calc(100% - 89px) 5px no-repeat,
+
+linear-gradient(
+  90deg,
+  rgba(196,208,255,0.98) 0%,
+  rgba(196,208,255,0.98) 100%
+)
+left 52px bottom 24px / calc(100% - 105px) 2px no-repeat,
+
+linear-gradient(
+  90deg,
+  rgba(196,208,255,0.98),
+  rgba(196,208,255,0.98)
+)
+center bottom 24px / 75px 2px no-repeat;
+}
+
+/* =================================================
+   ヘッダー全体
+================================================= */
+.award-panel-header {
+  position: relative;
+
+  width: 100%;
+  height: 190px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* =================================================
+   王冠
+================================================= */
+.award-crown {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 260px;
+  height: 95px;
+}
+
+/* 左縦 */
+.award-crown::before {
+  content: "";
+
+  position: absolute;
+
+  left: 18px;
+  top: 18px;
+
+  width: 4px;
+  height: 72px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #4f7cff,
+      #7fb8ff
+    );
+
+  box-shadow:
+    238px 0 0 #5f8fff;
+}
+
+/* 山ライン */
+.award-crown::after {
+  content: "";
+
+  position: absolute;
+
+  left: 40px;
+  top: 14px;
+
+  width: 180px;
+  height: 70px;
+
+  border-top:
+    4px solid #5f8fff;
+
+  border-left:
+    4px solid transparent;
+
+  border-right:
+    4px solid transparent;
+
+  clip-path: polygon(
+    0 55%,
+    28% 100%,
+    50% 0,
+    72% 100%,
+    100% 55%,
+    100% 65%,
+    72% 100%,
+    50% 10%,
+    28% 100%,
+    0 65%
+  );
+}
+
+/* =================================================
+   王冠の丸
+================================================= */
+.award-crown .dot {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #dce9ff
+    );
+
+  border: 4px solid #5f8fff;
+
+  box-shadow:
+    0 0 12px rgba(120,150,255,0.2);
+}
+
+.award-crown .left {
+  left: 8px;
+  top: 0;
+}
+
+.award-crown .center {
+  left: 50%;
+  top: -6px;
+
+  transform: translateX(-50%);
+}
+
+.award-crown .right {
+  right: 8px;
+  top: 0;
+}
+
+/* =================================================
+   プレート
 ================================================= */
 .award-header-title {
-  position: relative;
-  z-index: 5;
+  position: absolute;
 
-  top: 30px;
+  top: 74px;
+  left: 50%;
 
-  width: 300px;
-  height: 100px;
+  transform: translateX(-50%);
 
-  padding: 18px 20px 20px;
+  width: 250px;
+  min-height: 74px;
+
+  padding: 18px 16px;
 
   display: flex;
   align-items: center;
@@ -124,204 +371,74 @@
 
   text-align: center;
 
-  color: #43527a;
+  color: #42567d;
 
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
 
-  line-height: 2;
+  line-height: 1.9;
   letter-spacing: 0.04em;
 
   background:
     linear-gradient(
       180deg,
       #ffffff 0%,
-      #f6f9ff 100%
-    ) padding-box,
+      #eef5ff 100%
+    );
 
-    radial-gradient(
-      circle at center,
-      #ffffff 10%,
-      #8ea7d8 50%,
-      #42567d 80%,
-      #24385f 95%
-    ) border-box;
+  border: 4px solid #5f8fff;
 
-  border: 3px solid transparent;
+  border-radius: 10px;
 
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    0 8px 20px rgba(120,140,255,0.10);
+    0 10px 24px rgba(120,150,255,0.14);
 
-  clip-path: polygon(
-    18px 0,
-    calc(100% - 18px) 0,
-
-    100% 24px,
-    calc(100% - 14px) 100%,
-
-    14px 100%,
-    0 24px
-  );
+  overflow: hidden;
 }
 
-/* =================================================
-   内側ライン
-================================================= */
+/* 内側ライン */
 .award-header-title::before {
   content: "";
 
   position: absolute;
-  inset: 5px;
+
+  inset: 8px;
 
   border:
-    1px solid rgba(36,56,95,0.35);
+    1px solid rgba(120,150,255,0.18);
 
-  clip-path: inherit;
-
-  pointer-events: none;
+  border-radius: 4px;
 }
 
-/* =================================================
-   発光ライン
-================================================= */
+/* 下パーツ */
 .award-header-title::after {
   content: "";
 
   position: absolute;
 
-  inset: -2px;
+  left: 50%;
+  bottom: -14px;
 
-  border:
-    1px solid rgba(120,196,255,0.35);
+  transform: translateX(-50%);
 
-  filter: blur(2px);
-
-  clip-path: inherit;
-
-  pointer-events: none;
-}
-
-/* =================================================
-   左右ウイング
-================================================= */
-.award-panel-header::before,
-.award-panel-header::after {
-  content: "";
-
-  position: absolute;
-  top: 52px;
-
-  width: 180px;
-  height: 58px;
-
-  z-index: 1;
+  width: 120px;
+  height: 16px;
 
   background:
     linear-gradient(
-      180deg,
-      #31456f 0%,
-      #1c2947 55%,
-      #10192e 100%
+      135deg,
+      #8db7ff,
+      #5f8fff
     );
-
-  border-bottom:
-    3px solid #78c4ff;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.08),
-    0 4px 12px rgba(0,0,0,0.18);
-}
-
-/* 左 */
-.award-panel-header::before {
-  left: -15px;
-
-  clip-path: polygon(
-    0 0,
-    88% 0,
-    100% 100%,
-    12% 100%
-  );
-}
-
-/* 右 */
-.award-panel-header::after {
-  right: -15px;
 
   clip-path: polygon(
     12% 0,
-    100% 0,
-    88% 100%,
+    88% 0,
+    100% 100%,
     0 100%
   );
 }
 
-/* =================================================
-   青発光ライン
-================================================= */
-.award-header-light {
-  position: absolute;
-
-  top: 58px;
-
-  width: 8px;
-  height: 48px;
-
-  z-index: 3;
-
-  background:
-    linear-gradient(
-      180deg,
-      #d9f6ff,
-      #6fd3ff
-    );
-
-  box-shadow:
-    0 0 10px rgba(100,200,255,0.55),
-    0 0 20px rgba(100,200,255,0.28);
-}
-
-/* 左 */
-.award-header-light.left {
-  left: 42px;
-
-  transform:
-    skew(18deg);
-}
-
-/* 右 */
-.award-header-light.right {
-  right: 42px;
-
-  transform:
-    skew(-18deg);
-}
-
-/* =================================================
-   外側細発光
-================================================= */
-.award-header-light::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: -7px;
-
-  width: 2px;
-  height: 100%;
-
-  background:
-    rgba(120,220,255,0.45);
-
-  filter: blur(0.4px);
-}
-
-.award-header-light.right::before {
-  left: auto;
-  right: -7px;
-}
 
 /* =================================================
    賞一覧

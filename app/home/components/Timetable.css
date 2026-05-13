@@ -308,7 +308,7 @@ bottom 5px right 0 / 10px 90px no-repeat;
   /* さらに細かく動かす */
   transform: translateY(5px);
 
-  padding: 18px;
+  padding: 20px 10px;
 
   height: 615px;
 
