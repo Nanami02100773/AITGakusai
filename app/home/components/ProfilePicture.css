@@ -1,19 +1,223 @@
-.Home-container {
-  margin-top: 30px;
-}
+
 
 /* ===== 全体 ===== */
 .Home-sns-section {
-  padding: 50px 0 90px;
+  padding: 20px 0 50px;
   background: #e4e7fe;
   text-align: center;
 }
 
-/* ===== 横並び ===== */
+/* =================================================
+   横並び
+================================================= */
 .Home-sns-list {
+  position: relative;
+
   display: flex;
   justify-content: center;
-  gap: 40px;  /* ← コンパクト化 */
+  align-items: center;
+
+  gap: 40px;
+
+  padding: 20px 110px;
+}
+
+/* =================================================
+   左フレーム（改良版）
+================================================= */
+.Home-sns-list::before {
+  content: "";
+
+  position: absolute;
+
+  left: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 92px;
+  height: 220px;
+
+  z-index: 20;
+
+  background:
+
+  /* =================================================
+     メイン縦ライン
+  ================================================= */
+  linear-gradient(
+    180deg,
+    rgba(150,175,255,0.98),
+    rgba(120,145,255,0.90)
+  )
+  left 20px center / 4px 100px no-repeat,
+
+  /* =================================================
+     左上
+  ================================================= */
+
+  /* 上横 */
+  linear-gradient(
+    90deg,
+    rgba(150,175,255,0.98),
+    rgba(120,145,255,0.90)
+  )
+  50px 30px / 30px 6px no-repeat,
+
+  /* 上斜め */
+  linear-gradient(
+    135deg,
+    transparent 44%,
+    rgba(150,175,255,0.98) 46% 54%,
+    transparent 56%
+  )
+  20px 30px / 30px 35px no-repeat,
+
+  /* 上内側細線 */
+  linear-gradient(
+    90deg,
+    rgba(196,208,255,0.98),
+    rgba(150,175,255,0.90)
+  )
+  40px 40px / 35px 2px no-repeat,
+
+  /* =================================================
+     左下
+  ================================================= */
+
+  /* 下横 */
+  linear-gradient(
+    90deg,
+    rgba(150,175,255,0.98),
+    rgba(120,145,255,0.90)
+  )
+  50px 184px / 30px 6px no-repeat,
+
+  /* 下斜め */
+  linear-gradient(
+    -135deg,
+    transparent 44%,
+    rgba(150,175,255,0.98) 46% 54%,
+    transparent 56%
+  )
+  20px 154px / 30px 35px no-repeat,
+
+  /* 下内側細線 */
+  linear-gradient(
+    90deg,
+    rgba(196,208,255,0.98),
+    rgba(150,175,255,0.90)
+  )
+  40px 178px / 35px 2px no-repeat,
+
+  /* =================================================
+     内側縦ライン
+  ================================================= */
+  linear-gradient(
+    180deg,
+    rgba(196,208,255,0.98),
+    rgba(150,175,255,0.90)
+  )
+  left 30px center / 2px 120px no-repeat;
+}
+
+/* =================================================
+   右フレーム（改良版）
+================================================= */
+.Home-sns-list::after {
+  content: "";
+
+  position: absolute;
+
+  right: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 92px;
+  height: 220px;
+
+  z-index: 20;
+
+  background:
+
+  /* =================================================
+     メイン縦ライン
+  ================================================= */
+  linear-gradient(
+    180deg,
+    rgba(150,175,255,0.98),
+    rgba(120,145,255,0.90)
+  )
+  right 20px center / 4px 100px no-repeat,
+
+  /* =================================================
+     右上
+  ================================================= */
+
+  /* 上横 */
+  linear-gradient(
+    -90deg,
+    rgba(150,175,255,0.98),
+    rgba(120,145,255,0.90)
+  )
+  12px 30px / 30px 6px no-repeat,
+
+  /* 上斜め */
+  linear-gradient(
+    -135deg,
+    transparent 44%,
+    rgba(150,175,255,0.98) 46% 54%,
+    transparent 56%
+  )
+  42px 30px / 30px 35px no-repeat,
+
+  /* 上内側細線 */
+  linear-gradient(
+    -90deg,
+    rgba(196,208,255,0.98),
+    rgba(150,175,255,0.90)
+  )
+  16px 40px / 35px 2px no-repeat,
+
+  /* =================================================
+     右下
+  ================================================= */
+
+  /* 下横 */
+  linear-gradient(
+    -90deg,
+    rgba(150,175,255,0.98),
+    rgba(120,145,255,0.90)
+  )
+  12px 184px / 30px 6px no-repeat,
+
+  /* 下斜め */
+  linear-gradient(
+    135deg,
+    transparent 44%,
+    rgba(150,175,255,0.98) 46% 54%,
+    transparent 56%
+  )
+  42px 154px / 30px 35px no-repeat,
+
+  /* 下内側細線 */
+  linear-gradient(
+    -90deg,
+    rgba(196,208,255,0.98),
+    rgba(150,175,255,0.90)
+  )
+  16px 178px / 35px 2px no-repeat,
+
+  /* =================================================
+     内側縦ライン
+  ================================================= */
+  linear-gradient(
+    180deg,
+    rgba(196,208,255,0.98),
+    rgba(150,175,255,0.90)
+  )
+  right 30px center / 2px 120px no-repeat;
 }
 
 /* ===== 各アイテム ===== */
@@ -42,6 +246,7 @@
     box-shadow 0.25s ease,
     background 0.3s ease;
 }
+
 
 /* ===== 外リング（修正版） ===== */
 .Home-sns-circle::before {
@@ -98,8 +303,8 @@
 
 /* ===== 内側円 ===== */
 .Home-sns-inner {
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
   border-radius: 50%;
   background: rgba(0,0,0,0.04);
 

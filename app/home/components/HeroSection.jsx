@@ -41,12 +41,10 @@ export default function HeroSection({
   return (
     <section className="hero">
 
-      {/* 背景 */}
-      <div className="hero-bg-gradient" />
-
-      {/* メイン画像 */}
+      {/* メインカード */}
       <div className="hero-card">
 
+        {/* 背景画像 */}
         <div
           className="hero-image"
           style={{
@@ -54,9 +52,51 @@ export default function HeroSection({
           }}
         />
 
+        {/* 左上装飾 */}
+        <div className="hero-frame hero-frame-left" />
+
+        {/* 右上装飾 */}
+<div className="hero-frame-top-right">
+
+{/* 右上角 */}
+  <span className="hero-frame-top-right-corner"></span>
+
+  {/* ドット */}
+  <span className="hero-frame-top-right-dot"></span>
+
+  {/* クロスライン */}
+  <span className="hero-frame-top-right-cross"></span>
+
+  {/* 斜めライン */}
+  <span className="hero-frame-top-right-line"></span>
+
+</div>
+
+        {/* 左下装飾 */}
+        <div className="hero-frame-bottom-left">
+
+          <span className="hero-frame-bottom-left-line1"></span>
+          <span className="hero-frame-bottom-left-line2"></span>
+          <span className="hero-frame-bottom-left-line3"></span>
+
+          {/* 斜めライン */}
+          <span className="hero-frame-bottom-left-straight"></span>
+
+          {/* 横ライン */}
+          <span className="hero-frame-bottom-left-straight-line"></span>
+
+        </div>
+
+        {/* 右下装飾 */}
+        <div className="hero-frame hero-frame-right" />
+
+        {/* タイトル */}
         <div className="hero-text">
+
           <h1>愛工大祭</h1>
+
           <p>HIYAKU</p>
+
         </div>
 
       </div>
@@ -64,14 +104,8 @@ export default function HeroSection({
       {/* キャラ + 吹き出し */}
       <div className="hero-mascot-card">
 
-
-        {/* 吹き出し */}
         <div className="balloon-slider-vertical">
 
-          {/* 固定フレーム */}
-          <div className="balloon-frame" />
-
-          {/* 本体 */}
           <div
             className={`balloon-item ${
               animate ? "animate" : ""
@@ -103,9 +137,6 @@ export default function HeroSection({
               <div className="balloon-tech-line" />
 
             </div>
-
-            {/* 右先端 */}
-            <div className="arrow-part" />
 
           </div>
 

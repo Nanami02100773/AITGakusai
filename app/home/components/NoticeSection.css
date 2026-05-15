@@ -2,7 +2,7 @@
    セクション背景
 ================================================= */
 .Home-notice-section {
-  background: linear-gradient(180deg, #f8f7ff, #f4f5ff);
+  background: linear-gradient(180deg, #f8f7ff, #ffffff);
 
   /* ↓ 下に余白追加 */
   padding: 15px 0 0px;
@@ -439,7 +439,7 @@ bottom 5px right 0 / 10px 90px no-repeat,
 
   background: linear-gradient(
     180deg,
-    #eef3ff 0%,
+    #ffffff 0%,
     #dfe7ff 100%
   );
 

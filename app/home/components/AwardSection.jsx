@@ -17,29 +17,30 @@ export default function AwardSection() {
       </h2>
 
       {/* =================================================
-          説明エリア
+          王冠エリア
       ================================================= */}
       <div className="Home-box1">
 
-        <div className="box1-notch"></div>
+        <div className="award-crown">
 
-        {/* =================================================
-            王冠ヘッダー
-        ================================================= */}
-        <div className="award-panel-header">
+          {/* 王冠上 */}
+          <div className="award-crown-top"></div>
 
-          {/* 王冠 */}
-          <div className="award-crown">
-            <span className="dot left"></span>
-            <span className="dot center"></span>
-            <span className="dot right"></span>
-          </div>
+          {/* 丸 */}
+          <span className="award-crown-dot left"></span>
+          <span className="award-crown-dot center"></span>
+          <span className="award-crown-dot right"></span>
 
-          {/* プレート */}
-          <div className="award-header-title">
-            模擬店・工科展などの出展を対象に
-            <br />
-            投票で「グランプリ」を決定します。
+          {/* 土台 */}
+          <div className="award-crown-base">
+
+            {/* 説明文 */}
+            <div className="award-crown-text">
+              模擬店・工科展などの出展を対象に
+              <br />
+              投票でグランプリを決定します。
+            </div>
+
           </div>
 
         </div>
@@ -57,21 +58,16 @@ export default function AwardSection() {
             className="Home-award-card"
           >
 
-            {/* 装飾 */}
             <div className="top-notch"></div>
             <div className="corner-br"></div>
             <div className="stripe"></div>
             <div className="inner-line"></div>
-
-            {/* 左バー */}
             <div className="left-bar"></div>
 
-            {/* タイトル */}
             <div className="Home-award-title">
               {title}
             </div>
 
-            {/* 説明 */}
             <div className="Home-award-desc">
               説明：——————————————
             </div>
