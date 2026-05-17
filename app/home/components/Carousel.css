@@ -23,7 +23,8 @@ body {
 ========================= */
 .Home-carousel-wrapper {
   width: 100%;
-  height: 400px;
+  height: 440px;
+  top: 0px;
 
   position: relative;
 
@@ -51,6 +52,8 @@ body {
 .Home-carousel-container::-webkit-scrollbar {
   display: none;
 }
+
+
 
 /* =========================
    横並び
@@ -108,8 +111,14 @@ body {
   position: absolute;
   inset: 0;
 
-  border:
-    1.5px solid rgba(160,180,255,0.85);
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8fa8ff,
+      #6f8dff
+    );
 
   clip-path: polygon(
     0% 12%,
@@ -124,18 +133,22 @@ body {
     12% 100%,
     0% 88%
   );
-
-  z-index: 1;
 }
 
 /* =========================
-   内側枠
+   内側
 ========================= */
 .Home-carousel-card::after {
   content: "";
 
   position: absolute;
-  inset: 8px;
+
+  inset: 2px; /* ← ここ重要 */
+
+  z-index: 2;
+
+  background:
+    rgba(255,255,255,0.92);
 
   border:
     1px solid rgba(190,205,255,0.75);
@@ -153,8 +166,6 @@ body {
     12% 100%,
     0% 88%
   );
-
-  z-index: 1;
 }
 
 /* =========================
@@ -331,7 +342,7 @@ body {
 .Home-carousel-indicator {
   position: absolute;
 
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
 
   transform: translateX(-50%);
