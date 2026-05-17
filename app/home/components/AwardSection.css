@@ -2,18 +2,19 @@
    全体
 ================================================= */
 .Home-award-section {
-
-
   padding: 10px 0 60px;
-  overflow: hidden;
+
+  /* hidden を削除 */
+  overflow: visible;
 }
+
 /* =================================================
    賞一覧 全体フレーム
 ================================================= */
 .Home-box2 {
   position: relative;
 
-  width: 95%;
+  width: 90%;
   max-width: 700px;
 
   margin: 20px auto 0;
@@ -220,323 +221,361 @@ center bottom 24px / 75px 2px no-repeat;
 }
 
 /* =================================================
-   ヘッダー全体
+   タイトル装飾 全体
 ================================================= */
-.award-panel-header {
+.Home-box1 {
   position: relative;
 
   width: 100%;
-  height: 190px;
 
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  z-index: 30;
 }
 
 /* =================================================
-   ヘッダー全体
-================================================= */
-.award-panel-header {
-  position: relative;
-
-  width: 100%;
-  height: 170px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  z-index: 10;
-}
-
-/* =================================================
-   王冠全体
+   王冠 全体
 ================================================= */
 .award-crown {
   position: relative;
 
-  width: 260px;
-  height: 140px;
+  width: 710px;
+  max-width: 95%;
 
-  z-index: 20;
-
-  margin: 0 auto;
-  margin-bottom: -8px;
+  height: 150px;
 }
 
 /* =================================================
-   王冠上部
+   王冠画像
 ================================================= */
-.award-crown-top {
+.award-crown-logo {
   position: absolute;
 
-  top: 8px;
   left: 50%;
+  top: -30px;
 
   transform: translateX(-50%);
 
-  width: 210px;
-  height: 82px;
+  width: 90px;
+  height: auto;
 
-  z-index: 2;
-}
+  z-index: 30;
 
-/* =================================================
-   外ライン
-================================================= */
-.award-crown-top::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background: #4b82f0;
-
-  clip-path: polygon(
-    0% 100%,
-    0% 30%,
-
-    24% 58%,
-    50% 0%,
-    76% 58%,
-
-    100% 30%,
-    100% 100%
-  );
+  object-fit: contain;
 
   filter:
-    drop-shadow(0 0 8px rgba(75,130,240,.45));
+    drop-shadow(0 3px 6px rgba(0,0,0,.18));
 }
+
 
 /* =================================================
-   白本体
-================================================= */
-.award-crown-top::after {
-  content: "";
-
-  position: absolute;
-
-  top: 4px;
-  left: 4px;
-  right: 4px;
-  bottom: 4px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff,
-      #f3f6ff
-    );
-
-  clip-path: polygon(
-    0% 100%,
-    0% 36%,
-
-    23% 66%,
-    50% 2%,
-    77% 66%,
-
-    100% 36%,
-    100% 100%
-  );
-}
-
-/* =================================================
-   丸
-================================================= */
-.award-crown-dot {
-  position: absolute;
-
-  width: 28px;
-  height: 28px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      #ffffff,
-      #dbe6ff 70%
-    );
-
-  border: 4px solid #4b82f0;
-
-  z-index: 10;
-
-  box-shadow:
-    0 0 10px rgba(75,130,240,.45);
-}
-
-/* 左 */
-.award-crown-dot.left {
-  left: 18px;
-  top: 24px;
-}
-
-/* 中央 */
-.award-crown-dot.center {
-  left: 50%;
-  top: 0;
-
-  transform: translateX(-50%);
-}
-
-/* 右 */
-.award-crown-dot.right {
-  right: 18px;
-  top: 24px;
-}
-
-/* =================================================
-   土台
+   中央白ボックス
 ================================================= */
 .award-crown-base {
   position: absolute;
 
   left: 50%;
-  bottom: 6px;
+  top: 23px;
 
   transform: translateX(-50%);
 
-  width: 300px;
-  height: 60px;
+  width: 310px;
+  height: 70px;
 
   background:
     linear-gradient(
       180deg,
-      #f7f9ff,
-      #dfe8ff
+      #ffffff 0%,
+      #eef1fb 100%
     );
 
-  border: 4px solid #4b82f0;
-
-  border-radius: 8px;
-
-  z-index: 3;
+  border:
+    2px solid #d9deea;
 
   box-shadow:
-    0 0 14px rgba(75,130,240,.35),
-    inset 0 0 10px rgba(255,255,255,.95);
+    0 6px 14px rgba(60,80,140,.08);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  overflow: hidden;
-}
-/* =================================================
-   外ライン（青 → 金）
-================================================= */
-.award-crown-top::before {
-  content: "";
+  z-index: 5;
 
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      #ffe88a 0%,
-      #ffc93a 45%,
-      #f2a900 100%
-    );
-
-  clip-path: polygon(
-    0% 100%,
-    0% 30%,
-
-    24% 58%,
-    50% 0%,
-    76% 58%,
-
-    100% 30%,
-    100% 100%
-  );
-
-  filter:
-    drop-shadow(0 0 10px rgba(255,200,60,.55));
+  overflow: visible;
 }
 
-/* =================================================
-   白本体（金系）
-================================================= */
-.award-crown-top::after {
-  content: "";
 
+/* =================================================
+   共通
+================================================= */
+.blue-part {
   position: absolute;
 
-  top: 4px;
-  left: 4px;
-  right: 4px;
-  bottom: 4px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #fffdf4 0%,
-      #ffeeb0 55%,
-      #ffd45c 100%
-    );
+  top: 50%;
+  transform: translateY(-50%);
 
   clip-path: polygon(
-    0% 100%,
-    0% 36%,
-
-    23% 66%,
-    50% 2%,
-    77% 66%,
-
-    100% 36%,
-    100% 100%
+    0 50%,
+    40% 0,
+    100% 0,
+    50% 50%,
+    100% 100%,
+    40% 100%
   );
 }
 
 /* =================================================
-   丸
+   左 1枚目
 ================================================= */
-.award-crown-dot {
-  position: absolute;
+.blue-part1 {
+  left: -30px;
 
-  width: 28px;
-  height: 28px;
-
-  border-radius: 50%;
+  width: 50px;
+  height: 100px;
 
   background:
-    radial-gradient(
-      circle at 35% 30%,
-      #ffffff,
-      #ffe9a6 75%
+    linear-gradient(
+      135deg,
+      #9cb6ff 0%,
+      #6d92ff 45%,
+      #4d73e6 100%
     );
-
-  border: 4px solid #f0b400;
-
-  z-index: 10;
 
   box-shadow:
-    0 0 12px rgba(255,200,60,.55);
+    0 4px 10px rgba(120,150,255,.22);
 }
 
 /* =================================================
-   説明文
+   左 2枚目
+================================================= */
+.blue-part2 {
+  left: 5px;
+
+  width: 50px;
+  height: 84px;
+
+  opacity: .95;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b8c6ff 0%,
+      #88a7ff 45%,
+      #5d84f0 100%
+    );
+
+  box-shadow:
+    0 3px 8px rgba(120,150,255,.18);
+}
+
+
+
+/* =================================================
+   左 ピンクライン
+================================================= */
+.white-line {
+  position: absolute;
+
+  left: -10px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 90px;
+
+  z-index: -5;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffd6e2 0%,
+      #ff9fb5 55%,
+      #ff7f9f 100%
+    );
+
+  box-shadow:
+    0 0 10px rgba(255,159,181,.28);
+
+  clip-path: polygon(
+    0 50%,
+    40% 0,
+    100% 0,
+    50% 50%,
+    100% 100%,
+    40% 100%
+  );
+}
+
+/* =================================================
+   右 1枚目
+================================================= */
+.blue-part-right1 {
+  position: absolute;
+
+  right: -30px;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    scaleX(-1);
+
+  width: 50px;
+  height: 100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #9cb6ff 0%,
+      #6d92ff 45%,
+      #4d73e6 100%
+    );
+
+  box-shadow:
+    0 4px 10px rgba(120,150,255,.22);
+
+  clip-path: polygon(
+    0 50%,
+    40% 0,
+    100% 0,
+    50% 50%,
+    100% 100%,
+    40% 100%
+  );
+}
+
+/* =================================================
+   右 2枚目
+================================================= */
+.blue-part-right2 {
+  position: absolute;
+
+  right: 5px;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    scaleX(-1);
+
+  width: 50px;
+  height: 84px;
+
+  opacity: .95;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b8c6ff 0%,
+      #88a7ff 45%,
+      #5d84f0 100%
+    );
+
+  box-shadow:
+    0 3px 8px rgba(120,150,255,.18);
+
+  clip-path: polygon(
+    0 50%,
+    40% 0,
+    100% 0,
+    50% 50%,
+    100% 100%,
+    40% 100%
+  );
+}
+
+/* =================================================
+   右 ピンクライン
+================================================= */
+.white-line-right {
+  position: absolute;
+
+  right: -10px;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    scaleX(-1);
+
+  width: 40px;
+  height: 90px;
+
+  z-index: -5;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffd6e2 0%,
+      #ff9fb5 55%,
+      #ff7f9f 100%
+    );
+
+  box-shadow:
+    0 0 10px rgba(255,159,181,.28);
+
+  clip-path: polygon(
+    0 50%,
+    40% 0,
+    100% 0,
+    50% 50%,
+    100% 100%,
+    40% 100%
+  );
+}
+
+
+/* =================================================
+   文字
 ================================================= */
 .award-crown-text {
   position: relative;
 
-  z-index: 5;
-
   font-size: 11px;
-  font-weight: 700;
-  line-height: 1.35;
+  font-weight: 900;
 
-  color: #3d5484;
+  color: #173f92;
+
+  letter-spacing: .08em;
+
+  z-index: 30;
+}
+
+/* =================================================
+   説明ボックス
+================================================= */
+.award-info-box {
+  position: relative;
+
+  width: 88%;
+  max-width: 520px;
+
+  margin: 0 auto 35px;
+
+  padding: 18px 24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7f9ff 100%
+    );
+
+  border:
+    2px solid #d8e1ff;
+
+  box-shadow:
+    0 8px 18px rgba(80,100,180,.08);
 
   text-align: center;
 
-  letter-spacing: .03em;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.8;
 
-  padding: 0 10px;
+  color: #55658d;
 }
 
 
@@ -553,7 +592,7 @@ center bottom 24px / 75px 2px no-repeat;
   max-width: 620px;
 
   /* ↓ 上に空間 */
-  margin: 35px auto 0;
+  margin: -35px auto 0;
 
   padding: 60px 20px 50px;
 
@@ -653,10 +692,10 @@ center bottom 24px / 75px 2px no-repeat;
 
   position: absolute;
 
-  left: 14px;
-  right: 14px;
-  top: 10px;
-  bottom: 10px;
+  left: 50px;
+  right: 50px;
+  top: 5px;
+  bottom: 5px;
 
   z-index: 1;
 
