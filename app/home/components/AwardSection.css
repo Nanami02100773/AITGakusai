@@ -14,8 +14,8 @@
 .Home-box2 {
   position: relative;
 
-  width: 90%;
-  max-width: 700px;
+  width: 80%;
+  max-width: 400px;
 
   margin: 20px auto 0;
 
@@ -38,12 +38,23 @@
 
   position: absolute;
 
-  inset: -22px;
+  top: -16px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: calc(100% + 24px);
+  height: calc(100% + 32px);
 
   z-index: 0;
   pointer-events: none;
 
   border-radius: 10px;
+
+  opacity: 0.96;
+
+  filter:
+    drop-shadow(0 8px 18px rgba(160,175,255,0.10));
 
   background:
 
@@ -53,24 +64,24 @@
 
 linear-gradient(
   90deg,
-  #b8c6ff 0%,
-  #b8c6ff 100%
+  #b8c6ff,
+  #b8c6ff
 )
-left 40px top 8px / calc(100% - 60px) 5px no-repeat,
+left 34px top 8px / calc(100% - 68px) 4px no-repeat,
 
 linear-gradient(
   90deg,
-  rgba(196,208,255,0.98) 0%,
-  rgba(196,208,255,0.98) 100%
+  rgba(196,208,255,0.92),
+  rgba(196,208,255,0.92)
 )
-left 50px top 22px / calc(100% - 100px) 2px no-repeat,
+left 46px top 20px / calc(100% - 92px) 2px no-repeat,
 
 linear-gradient(
   90deg,
-  rgba(196,208,255,0.98),
-  rgba(196,208,255,0.98)
+  rgba(196,208,255,0.92),
+  rgba(196,208,255,0.92)
 )
-center top 22px / 75px 2px no-repeat,
+center top 20px / 64px 2px no-repeat,
 
 /* =================================================
    LEFT SIDE
@@ -78,60 +89,61 @@ center top 22px / 75px 2px no-repeat,
 
 linear-gradient(
   180deg,
-  #b8c6ff 0%,
-  #b8c6ff 100%
+  #b8c6ff,
+  #b8c6ff
 )
-left 8px top 45px / 4px calc(100% - 90px) no-repeat,
+left 8px top 40px / 3px calc(100% - 80px) no-repeat,
 
 linear-gradient(
   90deg,
   #b8c6ff,
   #b8c6ff
 )
-left 8px top 8px / 34px 5px no-repeat,
+left 8px top 8px / 28px 4px no-repeat,
 
 linear-gradient(
   180deg,
+  #b8c6ff,
   #b8c6ff
 )
-left 8px top 8px / 4px 72px no-repeat,
+left 8px top 8px / 3px 60px no-repeat,
 
 linear-gradient(
   180deg,
-  rgba(196,208,255,0.98) 0%,
-  rgba(196,208,255,0.98) 100%
+  rgba(196,208,255,0.92),
+  rgba(196,208,255,0.92)
 )
-left 20px top 22px / 2px calc(100% - 78px) no-repeat,
+left 18px top 20px / 2px calc(100% - 70px) no-repeat,
 
 linear-gradient(
   90deg,
-  rgba(196,208,255,0.98),
-  rgba(196,208,255,0.98)
+  rgba(196,208,255,0.92),
+  rgba(196,208,255,0.92)
 )
-left 20px top 22px / 30px 2px no-repeat,
+left 18px top 20px / 24px 2px no-repeat,
 
 linear-gradient(
   45deg,
-  transparent 0 42%,
-  #b8c6ff 42% 54%,
+  transparent 0 44%,
+  #b8c6ff 44% 54%,
   transparent 54%
 )
-left 8px bottom 8px / 42px 42px no-repeat,
+left 8px bottom 8px / 34px 34px no-repeat,
 
 linear-gradient(
   -135deg,
   transparent 49%,
   #ff9fb5 50%
 )
-left 5px bottom 5px / 30px 30px no-repeat,
+left 4px bottom 4px / 24px 24px no-repeat,
 
 linear-gradient(
   45deg,
-  transparent 0 46%,
-  #b8c6ff 46% 50%,
+  transparent 0 47%,
+  #b8c6ff 47% 50%,
   transparent 50%
 )
-left 20px bottom 24px / 35px 35px no-repeat,
+left 16px bottom 20px / 28px 28px no-repeat,
 
 /* =================================================
    RIGHT SIDE
@@ -139,60 +151,61 @@ left 20px bottom 24px / 35px 35px no-repeat,
 
 linear-gradient(
   180deg,
-  #b8c6ff 0%,
-  #b8c6ff 100%
+  #b8c6ff,
+  #b8c6ff
 )
-right 8px top 45px / 4px calc(100% - 90px) no-repeat,
+right 8px top 40px / 3px calc(100% - 80px) no-repeat,
 
 linear-gradient(
   -90deg,
   #b8c6ff,
   #b8c6ff
 )
-right 8px top 8px / 34px 5px no-repeat,
+right 8px top 8px / 28px 4px no-repeat,
 
 linear-gradient(
   180deg,
+  #b8c6ff,
   #b8c6ff
 )
-right 8px top 8px / 4px 72px no-repeat,
+right 8px top 8px / 3px 60px no-repeat,
 
 linear-gradient(
   180deg,
-  rgba(196,208,255,0.98) 0%,
-  rgba(196,208,255,0.98) 100%
+  rgba(196,208,255,0.92),
+  rgba(196,208,255,0.92)
 )
-right 20px top 22px / 2px calc(100% - 78px) no-repeat,
+right 18px top 20px / 2px calc(100% - 70px) no-repeat,
 
 linear-gradient(
   -90deg,
-  rgba(196,208,255,0.98),
-  rgba(196,208,255,0.98)
+  rgba(196,208,255,0.92),
+  rgba(196,208,255,0.92)
 )
-right 20px top 22px / 30px 2px no-repeat,
+right 18px top 20px / 24px 2px no-repeat,
 
 linear-gradient(
   -45deg,
-  transparent 0 42%,
-  #b8c6ff 42% 54%,
+  transparent 0 44%,
+  #b8c6ff 44% 54%,
   transparent 54%
 )
-right 8px bottom 8px / 42px 42px no-repeat,
+right 8px bottom 8px / 34px 34px no-repeat,
 
 linear-gradient(
   135deg,
   transparent 49%,
   #ff9fb5 50%
 )
-right 5px bottom 5px / 30px 30px no-repeat,
+right 4px bottom 4px / 24px 24px no-repeat,
 
 linear-gradient(
   -45deg,
-  transparent 0 46%,
-  #b8c6ff 46% 50%,
+  transparent 0 47%,
+  #b8c6ff 47% 50%,
   transparent 50%
 )
-right 20px bottom 24px / 35px 35px no-repeat,
+right 16px bottom 20px / 28px 28px no-repeat,
 
 /* =================================================
    BOTTOM
@@ -200,24 +213,24 @@ right 20px bottom 24px / 35px 35px no-repeat,
 
 linear-gradient(
   90deg,
-  #b8c6ff 0%,
-  #b8c6ff 100%
+  #b8c6ff,
+  #b8c6ff
 )
-left 46px bottom 8px / calc(100% - 89px) 5px no-repeat,
+left 40px bottom 8px / calc(100% - 80px) 4px no-repeat,
 
 linear-gradient(
   90deg,
-  rgba(196,208,255,0.98) 0%,
-  rgba(196,208,255,0.98) 100%
+  rgba(196,208,255,0.92),
+  rgba(196,208,255,0.92)
 )
-left 52px bottom 24px / calc(100% - 105px) 2px no-repeat,
+left 48px bottom 20px / calc(100% - 96px) 2px no-repeat,
 
 linear-gradient(
   90deg,
-  rgba(196,208,255,0.98),
-  rgba(196,208,255,0.98)
+  rgba(196,208,255,0.92),
+  rgba(196,208,255,0.92)
 )
-center bottom 24px / 75px 2px no-repeat;
+center bottom 20px / 64px 2px no-repeat;
 }
 
 /* =================================================
@@ -694,73 +707,80 @@ center bottom 24px / 75px 2px no-repeat;
 
   left: 50px;
   right: 50px;
-  top: 5px;
-  bottom: 5px;
+  top: 6px;
+  bottom: 6px;
 
   z-index: 1;
 
   background:
 
-  /* 左上 */
+  /* =================================================
+     左上
+  ================================================= */
   linear-gradient(
     180deg,
-    #78dfff,
-    #78dfff
+    #8fb4ff,
+    #8fb4ff
   )
-  left top / 3px 16px no-repeat,
+  left top / 2px 14px no-repeat,
 
   linear-gradient(
     90deg,
-    #78dfff,
-    #78dfff
+    #8fb4ff,
+    #8fb4ff
   )
-  left top / 18px 3px no-repeat,
+  left top / 14px 2px no-repeat,
 
-  /* 左下 */
+  /* =================================================
+     左下
+  ================================================= */
   linear-gradient(
     180deg,
-    #78dfff,
-    #78dfff
+    #8fb4ff,
+    #8fb4ff
   )
-  left bottom / 3px 16px no-repeat,
+  left bottom / 2px 14px no-repeat,
 
   linear-gradient(
     90deg,
-    #78dfff,
-    #78dfff
+    #8fb4ff,
+    #8fb4ff
   )
-  left bottom / 18px 3px no-repeat,
+  left bottom / 14px 2px no-repeat,
 
-  /* 右上 */
+  /* =================================================
+     右上
+  ================================================= */
   linear-gradient(
     180deg,
-    #78dfff,
-    #78dfff
+    #8fb4ff,
+    #8fb4ff
   )
-  right top / 3px 16px no-repeat,
+  right top / 2px 14px no-repeat,
 
   linear-gradient(
     90deg,
-    #78dfff,
-    #78dfff
+    #8fb4ff,
+    #8fb4ff
   )
-  right top / 18px 3px no-repeat,
+  right top / 14px 2px no-repeat,
 
-  /* 右下 */
+  /* =================================================
+     右下
+  ================================================= */
   linear-gradient(
     180deg,
-    #78dfff,
-    #78dfff
+    #8fb4ff,
+    #8fb4ff
   )
-  right bottom / 3px 16px no-repeat,
+  right bottom / 2px 14px no-repeat,
 
   linear-gradient(
     90deg,
-    #78dfff,
-    #78dfff
+    #8fb4ff,
+    #8fb4ff
   )
-  right bottom / 18px 3px no-repeat,
-
+  right bottom / 14px 2px no-repeat;
 }
 
 /* =================================================
