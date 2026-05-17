@@ -335,7 +335,7 @@ bottom 0 right 0 / 8px 70px no-repeat;
 
   transform: translateX(-50%);
 
-  width: 380px;
+  width: 350px;
   height: 80px;
 
   background:
@@ -585,7 +585,7 @@ bottom 0 right 0 / 8px 70px no-repeat;
 .award-crown-text {
   position: relative;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 900;
 
   color: #173f92;
@@ -604,7 +604,7 @@ bottom 0 right 0 / 8px 70px no-repeat;
   width: 88%;
   max-width: 520px;
 
-  margin: -10 auto 0px;
+  margin: -10 auto 10px;
 
   padding: 18px 24px;
 
@@ -644,7 +644,7 @@ bottom 0 right 0 / 8px 70px no-repeat;
   max-width: 620px;
 
   /* ↓ 上に空間 */
-  margin: -40px auto 0;
+  margin: -30px auto 0;
 
   padding: 40px 20px 20px;
 
