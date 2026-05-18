@@ -30,14 +30,7 @@ export default function AwardSection() {
           <div className="award-side-line-left"></div>
           <div className="award-side-line-right"></div>
 
-          {/* =================================================
-              王冠画像
-          ================================================= */}
-          {/* <img
-            src="/images/crown-logo.png"
-            alt="crown"
-            className="award-crown-logo"
-          /> */}
+  
 
           {/* =================================================
               中央ボックス
@@ -56,10 +49,12 @@ export default function AwardSection() {
 
             {/* テキスト */}
             <div className="award-crown-text">
-              模擬店・工科展などの出展を対象に
-              <br />
-              投票でグランプリを決定します。
-            </div>
+  模擬店・工科展などの各出展企画を対象に
+  <br />
+  来場者や審査員による投票を実施し
+  <br />
+  学園祭を代表するグランプリを決定します
+</div>
 
           </div>
 
@@ -67,43 +62,46 @@ export default function AwardSection() {
 
       </div>
 
-      {/* =================================================
-          賞カード一覧
-      ================================================= */}
-      <div className="Home-box2">
+{/* =================================================
+    賞カード一覧
+================================================= */}
+<div className="Home-box2">
 
-        {awards.map((title, i) => (
-          <div
-            key={i}
-            className="Home-award-card"
-          >
+  {/* 外側コーナーフレーム */}
+  <div className="Home-box2-frame"></div>
 
-            {/* 上ノッチ */}
-            <div className="top-notch"></div>
+  {awards.map((title, i) => (
+    <div
+      key={i}
+      className="Home-award-card"
+    >
 
-            {/* 右下装飾 */}
-            <div className="corner-br"></div>
+      {/* 上ノッチ */}
+      <div className="top-notch"></div>
 
-            {/* ストライプ */}
-            <div className="stripe"></div>
+      {/* 右下装飾 */}
+      <div className="corner-br"></div>
 
-            {/* 左バー */}
-            <div className="left-bar"></div>
+      {/* ストライプ */}
+      <div className="stripe"></div>
 
-            {/* タイトル */}
-            <div className="Home-award-title">
-              {title}
-            </div>
+      {/* 左バー */}
+      <div className="left-bar"></div>
 
-            {/* 説明 */}
-            <div className="Home-award-desc">
-              説明：——————————————
-            </div>
-
-          </div>
-        ))}
-
+      {/* タイトル */}
+      <div className="Home-award-title">
+        {title}
       </div>
+
+      {/* 説明 */}
+      <div className="Home-award-desc">
+        説明：——————————————
+      </div>
+
+    </div>
+  ))}
+
+</div>
 
     </section>
   );
