@@ -5,19 +5,38 @@
   position: relative;
   z-index: 0;
 
-  padding-top: 45px;
-  padding-bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
 
   background:
     linear-gradient(
       180deg,
       #eef3ff 0%,
-      #f7f9ff 100%
+      #f7f9ff 70%,
+      #ffffff 100%
     );
 
   overflow: hidden;
 }
 
+/* =================================================
+   下ライン
+================================================= */
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 30px;
+
+  background: #ffffff;
+
+  z-index: 5;
+}
 
 /* =================================================
    メインカード
@@ -36,33 +55,6 @@
 }
 
 /* =================================================
-   カード左上 グリッド
-================================================= */
-.hero-card::before {
-  content: "";
-
-  position: absolute;
-
-  left: 20px;
-  top: 18px;
-
-  width: 110px;
-  height: 110px;
-
-  z-index: 6;
-
-  opacity: .18;
-
-  background-image:
-    linear-gradient(rgba(255,255,255,.9) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.9) 1px, transparent 1px);
-
-  background-size: 16px 16px;
-
-  pointer-events: none;
-}
-
-/* =================================================
    背景画像
 ================================================= */
 .hero-image {
@@ -77,25 +69,6 @@
   overflow: hidden;
 }
 
-/* =================================================
-   上暗めグラデ
-================================================= */
-.hero-image::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,20,60,.40) 0%,
-      rgba(0,20,60,.14) 30%,
-      rgba(255,255,255,0) 54%
-    );
-
-  z-index: 1;
-}
 
 /* =================================================
    下白フェード
@@ -119,622 +92,33 @@
 }
 
 /* =================================================
-   左上フレーム
-================================================= */
-.hero-frame {
-  position: absolute;
-
-  width: 200px;
-  height: 150px;
-
-  z-index: 20;
-
-  pointer-events: none;
-}
-
-.hero-frame-left {
-  position: absolute;
-
-  left: -160px;
-  top: 0;
-
-  width: 500px;   /* ← 全体を広げる */
-  height: 240px;
-
-  overflow: hidden;
-
-  --frame-angle: -45deg;
-
-  transform: skew(var(--frame-angle));
-
-  opacity: .95;
-}
-
-/* 青ライン */
-.hero-frame-left::before {
-  content: "";
-
-  position: absolute;
-
-  left: 30;
-  top: 0;
-
-  width: 90px;   /* ← 青を太く */
-  height: 100%;
-
-  background: #2e74ff;
-}
-
-/* 白カット部分 */
-.hero-frame-left::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0px;
-
-  top: 0;
-
-  width: 100px;   /* ← 白部分を広げる */
-  height: 100%;
-
-  background: #ffffff;
-}
-
-/* =================================================
-   右上フレーム
-================================================= */
-.hero-frame-top-right {
-  position: absolute;
-
-  right: -120px;
-  top: 0;
-
-  width: 420px;
-  height: 240px;
-
-  overflow: hidden;
-
-  --frame-angle: 45deg;
-
-  transform: skew(var(--frame-angle));
-
-  opacity: .95;
-
-  z-index: 20;
-
-  pointer-events: none;
-}
-
-/* =================================================
-   一番右上の色付きエリア
-================================================= */
-.hero-frame-top-right-corner {
-  position: absolute;
-
-  top: 0;
-  right: 0;
-
-  width: 60px;
-  height: 60px;
-
-  z-index: 15;
-
-  background:
-    linear-gradient(
-      45deg,
-      #0e3070 100%
-    );
-}
-
-/* =================================================
-   メインブルーライン（2色）
-================================================= */
-.hero-frame-top-right::before {
-  content: "";
-
-  position: absolute;
-
-  right: 55px;
-  top: -20px;
-
-  width: 40px;
-  height: 130%;
-
-  background:
-    linear-gradient(
-      180deg,
-      #005eff 0%,
-      #005eff 45%,
-      #4ea2ff 45%,
-      #4ea2ff 100%
-    );
-
-  box-shadow:
-    0 0 18px rgba(0,94,255,.22);
-
-  z-index: 20;
-}
-
-/* =================================================
-   白カット
-================================================= */
-.hero-frame-top-right::after {
-  content: "";
-
-  position: absolute;
-
-  right: 85px;
-  top: -30px;
-
-  width: 20px;
-  height: 80px;
-
-  background: #ffffff;
-
-  z-index: 22;
-
-  transform: rotate(180deg);
-}
-
-/* =================================================
-   ドット装飾
-================================================= */
-.hero-frame-top-right-dot {
-  position: absolute;
-
-  right: 70px;
-  top: 0px;
-
-  width: 110px;
-  height: 110px;
-
-  z-index: 10;
-
-  opacity: .9;
-
-  /* ← 親の skew(45deg) を打ち消す */
-  transform: skewX(-45deg);
-
-  pointer-events: none;
-
-  background-image:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,.98) 2px,
-      transparent 2.5px
-    );
-
-  background-size: 20px 20px;
-}
-
-/* =================================================
-   クロスライン装飾
-================================================= */
-.hero-frame-top-right-cross {
-  position: absolute;
-
-  right: 100px;
-  bottom: 10px;
-
-  width: 100px;
-  height: 140px;
-
-  z-index: 10;
-}
-
-.hero-frame-top-right-cross::before,
-.hero-frame-top-right-cross::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(255,255,255,.95),
-      rgba(255,255,255,.95) 2px,
-      transparent 2px,
-      transparent 22px
-    );
-}
-
-.hero-frame-top-right-cross::after {
-  transform: rotate(90deg);
-
-  opacity: .7;
-}
-
-
-
-/* =================================================
-   右下フレーム（左上と同じ極太デザイン）
-================================================= */
-.hero-frame-right {
-  position: absolute;
-
-  right: -120px;
-  bottom: 0;
-
-  width: 420px;
-  height: 240px;
-
-  overflow: hidden;
-
-  --frame-angle: -45deg;
-
-  transform: skew(var(--frame-angle));
-
-  opacity: .95;
-
-  z-index: 20;
-}
-
-/* =================================================
-   青ライン
-================================================= */
-.hero-frame-right::before {
-  content: "";
-
-  position: absolute;
-
-  right: 30px;
-  bottom: 0;
-
-  width: 70px;
-  height: 100%;
-
-  background: #2e74ff;
-}
-
-/* =================================================
-   白カット部分
-================================================= */
-.hero-frame-right::after {
-  content: "";
-
-  position: absolute;
-
-  right: 0;
-  bottom: 0;
-
-  width: 70px;
-  height: 100%;
-
-  background: #ffffff;
-}
-
-/* =================================================
-   左下フレーム
-================================================= */
-.hero-frame-bottom-left {
-  position: absolute;
-
-  left: -120px;
-  bottom: 0;
-  width: 420px;
-  height: 240px;
-
-  overflow: hidden;
-
-  --frame-angle: 45deg;
-
-  transform: skew(var(--frame-angle));
-
-  opacity: .95;
-
-  z-index: 20;
-
-  pointer-events: none;
-}
-
-/* =================================================
-   左下フレーム
-================================================= */
-.hero-frame-bottom-left {
-  position: absolute;
-
-  left: -140px;
-  bottom: 0;
-
-  width: 420px;
-  height: 240px;
-
-  overflow: visible;
-
-  --frame-angle: 45deg;
-
-  transform: skew(var(--frame-angle));
-
-  z-index: 20;
-
-  pointer-events: none;
-}
-
-/* =================================================
-   斜めブルーライン
+   縦ブルーライン（独立版）
 ================================================= */
 .hero-frame-bottom-left-straight {
   position: absolute;
 
-  left: 110px;
-  bottom: -50px;
-
-  width: 35px;
-  height: 330px;
-
-  z-index: 10;
-
-  background: #00b7ff;
-
-  box-shadow:
-    0 0 18px rgba(0,183,255,.25);
-
-  --straight-angle: 45deg;
-
-  transform: rotate(var(--straight-angle));
-}
-
-/* =================================================
-   横ライン
-================================================= */
-.hero-frame-bottom-left-straight-line {
-  position: absolute;
-
-  left: 0px;
-  bottom: 0px;
-
-  width: 260px;
-  height: 20px;
-
-  z-index: 24;
-
-  background: #004cff;
-
-  box-shadow:
-    0 0 10px rgba(0,76,255,.25);
-
-  transform: skewX(-45deg);
-}
-
-/* =================================================
-   メインライン
-================================================= */
-.hero-frame-bottom-left::before {
-  content: "";
-
-  position: absolute;
-
-  left: 90px;
+  /* hero-card 基準で直接配置 */
+  left: 60px;
   bottom: 0;
 
-  width: 90px;
-  height: 100%;
+  width: px;
+  height: 200px;
 
-  background: #005eff;
-}
-
-
-
-/* =================================================
-   追加ライン①
-================================================= */
-.hero-frame-bottom-left-line1 {
-  position: absolute;
-
-  left: 150px;
-  bottom: 0;
-
-  width: 40px;
-  height: 100%;
-
-  background: #3aa0ff;
-
-  z-index: 21;
-}
-
-/* =================================================
-   追加ライン②
-================================================= */
-.hero-frame-bottom-left-line2 {
-  position: absolute;
-
-  left: 180px;
-  bottom: 0;
-
-  width: 28px;
-  height: 100%;
-
-  background: #bfe9ff;
-
-  z-index: 21;
-}
-
-/* =================================================
-   追加ライン③
-================================================= */
-.hero-frame-bottom-left-line3 {
-  position: absolute;
-
-  left: 200px;
-  bottom: 0;
-
-  width: 16px;
-  height: 100%;
-
-  background: #ffffff;
-
-  z-index: 21;
-}
-
-/* =================================================
-   左上追加装飾
-================================================= */
-.hero-frame-left-extra {
-  position: absolute;
-
-  left: 82px;
-  top: 64px;
-
-  width: 54px;
-  height: 10px;
-
-  z-index: 21;
-
-  transform: skew(-35deg);
-
-  border-radius: 2px;
+  z-index: -10;
 
   background:
     linear-gradient(
-      90deg,
-      #69b3ff 0%,
-      #69b3ff 65%,
-      #ff7da7 65%,
-      #ff7da7 100%
-    );
-}
-
-/* =================================================
-   右下追加装飾
-================================================= */
-.hero-frame-right-extra {
-  position: absolute;
-
-  right: 82px;
-  bottom: 64px;
-
-  width: 54px;
-  height: 10px;
-
-  z-index: 21;
-
-  transform: skew(-35deg);
-
-  border-radius: 2px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #69b3ff 0%,
-      #69b3ff 65%,
-      #ff7da7 65%,
-      #ff7da7 100%
-    );
-}
-
-/* =================================================
-   左上ドット
-================================================= */
-.hero-dot-left {
-  position: absolute;
-
-  left: 150px;
-  top: 26px;
-
-  width: 56px;
-  height: 56px;
-
-  z-index: 9;
-
-  opacity: .42;
-
-  background-image:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,.95) 1.5px,
-      transparent 2px
+      180deg,
+      #8fe4ff 0%,
+      #42c8ff 28%,
+      #139cff 58%,
+      #0057d8 100%
     );
 
-  background-size: 14px 14px;
-}
+  box-shadow:
+    0 0 18px rgba(0,183,255,.28);
 
-/* =================================================
-   右下ドット
-================================================= */
-.hero-dot-right {
-  position: absolute;
-
-  right: 150px;
-  bottom: 26px;
-
-  width: 56px;
-  height: 56px;
-
-  z-index: 9;
-
-  opacity: .42;
-
-  background-image:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,.95) 1.5px,
-      transparent 2px
-    );
-
-  background-size: 14px 14px;
-}
-
-/* =================================================
-   左中央ライン
-================================================= */
-.hero-tech-line-left {
-  position: absolute;
-
-  left: 24px;
-  top: 50%;
-
-  transform:
-    translateY(-50%)
-    rotate(-90deg);
-
-  width: 62px;
-  height: 6px;
-
-  z-index: 9;
-
-  border-radius: 999px;
-
-  background:
-    repeating-linear-gradient(
-      -60deg,
-      #5da6ff,
-      #5da6ff 8px,
-      #ff7da7 8px,
-      #ff7da7 14px
-    );
-}
-
-/* =================================================
-   右中央ライン
-================================================= */
-.hero-tech-line-right {
-  position: absolute;
-
-  right: 24px;
-  top: 50%;
-
-  transform:
-    translateY(-50%)
-    rotate(-90deg);
-
-  width: 62px;
-  height: 6px;
-
-  z-index: 9;
-
-  border-radius: 999px;
-
-  background:
-    repeating-linear-gradient(
-      -60deg,
-      #5da6ff,
-      #5da6ff 8px,
-      #ff7da7 8px,
-      #ff7da7 14px
-    );
+  overflow: visible;
 }
 
 /* =================================================
@@ -795,7 +179,7 @@
 
   transform:
     translateY(-60%)
-    skew(-35deg);
+    skew(-40deg);
 
   background:
     linear-gradient(
@@ -808,11 +192,11 @@
 }
 
 .hero-text h1::before {
-  left: 20%;
+  left: 15%;
 }
 
 .hero-text h1::after {
-  right: 20%;
+  right: 15%;
 }
 
 /* =================================================
@@ -909,64 +293,7 @@
   display: flex;
   align-items: center;
 
-  gap: 16px;
-}
-
-/* =================================================
-   吹き出し背景ライン
-================================================= */
-.balloon-inner::before {
-  content: "";
-
-  position: absolute;
-
-  left: 120px;
-  right: 60px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  height: 1px;
-
-  z-index: -1;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(120,170,255,0),
-      rgba(120,170,255,.26),
-      rgba(120,170,255,0)
-    );
-}
-
-/* =================================================
-   吹き出し右装飾
-================================================= */
-.balloon-inner::after {
-  content: "";
-
-  position: absolute;
-
-  right: 0;
-  top: 50%;
-
-  transform:
-    translateY(-50%)
-    skew(-35deg);
-
-  width: 18px;
-  height: 42px;
-
-  border-radius: 3px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #69b3ff 0%,
-      #69b3ff 62%,
-      #ff7da7 62%,
-      #ff7da7 100%
-    );
+  gap: 30px;
 }
 
 /* =================================================
@@ -975,8 +302,12 @@
 .balloon-circle {
   position: relative;
 
-  width: 88px;
-  height: 88px;
+  /* ← ここで位置調整 */
+  top: -10px;     /* 上へ */
+  left: 5px;     /* 右へはプラス、左へはマイナス */
+
+  width: 100px;
+  height: 100px;
 
   flex-shrink: 0;
 
@@ -989,7 +320,7 @@
       rgba(244,248,255,.98)
     );
 
-  border: 6px solid rgba(255,255,255,.95);
+  border: 0px solid rgba(255,255,255,.95);
 
   box-shadow:
     0 0 0 3px #7da9ff,
@@ -1032,22 +363,23 @@
 
   flex: 1;
 
-  min-height: 54px;
+  min-height: 70px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 0 22px;
-
+  /* ↓ 中央揃え */
   text-align: center;
+
+  padding: 0 22px;
 
   font-size: 20px;
   font-weight: 900;
 
   line-height: 1.3;
 
-  color: #356fe3;
+  color: #002c85;
 
   letter-spacing: .02em;
 
@@ -1091,55 +423,6 @@
 
   border-left:
     3px solid #3b79f8;
-
   border-bottom:
     3px solid #3b79f8;
-}
-
-/* =================================================
-   吹き出し上ライン
-================================================= */
-.balloon-top-line {
-  position: absolute;
-
-  left: 140px;
-  top: 2px;
-
-  width: 42px;
-  height: 3px;
-
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #7cb4ff,
-      #9ecbff
-    );
-}
-
-/* =================================================
-   吹き出し下ライン
-================================================= */
-.balloon-tech-line {
-  position: absolute;
-
-  left: 50%;
-  bottom: -1px;
-
-  transform: translateX(-50%);
-
-  width: 42px;
-  height: 7px;
-
-  border-radius: 999px;
-
-  background:
-    repeating-linear-gradient(
-      -60deg,
-      #4e88ff,
-      #4e88ff 8px,
-      #ff7da7 8px,
-      #ff7da7 14px
-    );
 }

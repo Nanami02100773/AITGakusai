@@ -41,7 +41,9 @@ export default function HeroSection({
   return (
     <section className="hero">
 
-      {/* メインカード */}
+      {/* =================================================
+          メインカード
+      ================================================= */}
       <div className="hero-card">
 
         {/* 背景画像 */}
@@ -52,45 +54,24 @@ export default function HeroSection({
           }}
         />
 
-        {/* 左上装飾 */}
-        <div className="hero-frame hero-frame-left" />
+        {/* =================================================
+            左上追加装飾
+        ================================================= */}
+        <div className="hero-frame-left-extra" />
 
-        {/* 右上装飾 */}
-<div className="hero-frame-top-right">
+        {/* =================================================
+            右下追加装飾
+        ================================================= */}
+        <div className="hero-frame-right-extra" />
 
-{/* 右上角 */}
-  <span className="hero-frame-top-right-corner"></span>
+        {/* =================================================
+            縦ブルーライン
+        ================================================= */}
+        <span className="hero-frame-bottom-left-straight"></span>
 
-  {/* ドット */}
-  <span className="hero-frame-top-right-dot"></span>
-
-  {/* クロスライン */}
-  <span className="hero-frame-top-right-cross"></span>
-
-  {/* 斜めライン */}
-  <span className="hero-frame-top-right-line"></span>
-
-</div>
-
-        {/* 左下装飾 */}
-        <div className="hero-frame-bottom-left">
-
-          <span className="hero-frame-bottom-left-line1"></span>
-          <span className="hero-frame-bottom-left-line2"></span>
-          <span className="hero-frame-bottom-left-line3"></span>
-
-          {/* 斜めライン */}
-          <span className="hero-frame-bottom-left-straight"></span>
-
-          {/* 横ライン */}
-          <span className="hero-frame-bottom-left-straight-line"></span>
-
-        </div>
-
-        {/* 右下装飾 */}
-        <div className="hero-frame hero-frame-right" />
-
-        {/* タイトル */}
+        {/* =================================================
+            タイトル
+        ================================================= */}
         <div className="hero-text">
 
           <h1>愛工大祭</h1>
@@ -101,7 +82,9 @@ export default function HeroSection({
 
       </div>
 
-      {/* キャラ + 吹き出し */}
+      {/* =================================================
+          キャラ + 吹き出し
+      ================================================= */}
       <div className="hero-mascot-card">
 
         <div className="balloon-slider-vertical">
@@ -114,7 +97,9 @@ export default function HeroSection({
 
             <div className="balloon-inner">
 
-              {/* 左リング */}
+              {/* =================================================
+                  左キャラ円
+              ================================================= */}
               <div className="balloon-circle">
 
                 <img
@@ -125,16 +110,12 @@ export default function HeroSection({
 
               </div>
 
-              {/* 上ライン */}
-              <div className="balloon-top-line" />
-
-              {/* テキスト */}
+              {/* =================================================
+                  吹き出しテキスト
+              ================================================= */}
               <span className="balloon-text">
                 {messages[index]}
               </span>
-
-              {/* 下ライン */}
-              <div className="balloon-tech-line" />
 
             </div>
 

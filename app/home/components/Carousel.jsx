@@ -59,12 +59,16 @@ export default function Carousel({ items = [] }) {
     let lastStoppedIndex = -1;
 
     const scroll = () => {
+
       const list =
-        container.querySelector(".Home-carousel-list");
+        container.querySelector(
+          ".Home-carousel-list"
+        );
 
       const firstCard = list?.children[0];
 
       if (!firstCard) {
+
         animationId =
           requestAnimationFrame(scroll);
 
@@ -78,29 +82,55 @@ export default function Carousel({ items = [] }) {
         displayItems.length * cardWidth;
 
       if (!isPaused) {
+
         setIsStopped(false);
 
         container.scrollLeft += speed;
 
+        /* =========================
+           画面中央位置
+        ========================= */
         const center =
           container.scrollLeft +
           container.clientWidth / 2;
 
+        /* =========================
+           中央カード判定
+        ========================= */
         const index =
-          Math.floor(center / cardWidth);
+          Math.round(
+            (center - cardWidth / 2) /
+              cardWidth
+          );
 
+        /* =========================
+           カード中央位置
+        ========================= */
         const cardCenter =
-          index * cardWidth + cardWidth / 2;
+          index * cardWidth +
+          cardWidth / 2;
 
+        /* =========================
+           ページ更新
+        ========================= */
         setCurrentPage(
-          index % displayItems.length
+          (
+            (index %
+              displayItems.length) +
+            displayItems.length
+          ) % displayItems.length
         );
 
+        /* =========================
+           中央で停止
+        ========================= */
         if (
-          Math.abs(center - cardCenter) <
-            speed &&
+          Math.abs(
+            center - cardCenter
+          ) <= speed &&
           index !== lastStoppedIndex
         ) {
+
           isPaused = true;
 
           lastStoppedIndex = index;
@@ -108,19 +138,34 @@ export default function Carousel({ items = [] }) {
           setIsStopped(true);
 
           setTimeout(() => {
+
             isPaused = false;
+
             setIsStopped(false);
+
           }, stopTime);
         }
 
-        if (container.scrollLeft >= totalWidth) {
-          container.scrollLeft -= totalWidth;
+        /* =========================
+           無限ループ
+        ========================= */
+        if (
+          container.scrollLeft >=
+          totalWidth
+        ) {
+
+          container.scrollLeft -=
+            totalWidth;
 
           lastStoppedIndex = -1;
         }
 
-        if (container.scrollLeft <= 0) {
-          container.scrollLeft += totalWidth;
+        if (
+          container.scrollLeft <= 0
+        ) {
+
+          container.scrollLeft +=
+            totalWidth;
         }
       }
 
@@ -133,16 +178,20 @@ export default function Carousel({ items = [] }) {
 
     return () =>
       cancelAnimationFrame(animationId);
+
   }, [displayItems.length]);
 
   return (
     <div className="Home-carousel-wrapper">
 
-      {/* スクロール */}
+      {/* =========================
+          スクロール
+      ========================= */}
       <div
         ref={containerRef}
         className="Home-carousel-container"
       >
+
         <div className="Home-carousel-list">
 
           {displayItems
@@ -150,7 +199,8 @@ export default function Carousel({ items = [] }) {
             .map((item, index) => {
 
               const isCenter =
-                index % displayItems.length ===
+                index %
+                  displayItems.length ===
                 currentPage;
 
               const shouldScale =
@@ -217,9 +267,13 @@ export default function Carousel({ items = [] }) {
         </div>
       </div>
 
-      {/* インジケータ */}
+      {/* =========================
+          インジケータ
+      ========================= */}
       <div className="Home-carousel-indicator">
+
         {displayItems.map((_, index) => (
+
           <span
             key={index}
             className={`Home-indicator-dot ${
@@ -228,7 +282,9 @@ export default function Carousel({ items = [] }) {
                 : ""
             }`}
           />
+
         ))}
+
       </div>
     </div>
   );

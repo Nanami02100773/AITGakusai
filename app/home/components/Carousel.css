@@ -4,13 +4,7 @@
 body {
   margin: 0;
 
-  background:
-    linear-gradient(
-      to bottom,
-      #f6f8ff,
-      #edf2ff 55%,
-      #f8f9ff
-    );
+  background: #f9faff;
 
   font-family:
     "Hiragino Kaku Gothic ProN",
@@ -44,7 +38,7 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
 
-  padding: 20px 40px 64px;
+  padding: 20px 15px 64px;
 
   scrollbar-width: none;
 }

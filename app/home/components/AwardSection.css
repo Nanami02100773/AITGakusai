@@ -577,33 +577,6 @@ bottom 0 right 0 / 8px 70px no-repeat;
 }
 
 /* =================================================
-   外側の青ラインフレーム
-================================================= */
-/* .Home-box2::after {
-  content: "";
-
-  position: absolute;
-
-  top: 15px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-
-  pointer-events: none;
-
-  border:
-    3px solid #b8c3ff;
-
-  z-index: 0;
-
-  opacity: 0.95;
-
-  box-shadow:
-    0 0 18px rgba(120,140,255,0.12);
-} */
-
-
-/* =================================================
    カード
 ================================================= */
 .Home-award-card {
