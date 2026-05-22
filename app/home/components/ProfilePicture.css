@@ -15,11 +15,12 @@
   justify-content: center;
   align-items: center;
 
-  gap: 20px;
+  gap: 10px;
 
   background: #f4f7ff;
 
-  border-radius: 999px;
+  /* ↓ 修正 */
+  border-radius: 60px;
 
   box-shadow:
     0 10px 30px rgba(120,130,210,0.12),
@@ -27,9 +28,10 @@
 
   margin: 0 auto;
 
-  /* ↓ 追加 */
-  width: 400px;   /* 横幅 */
-  height: 120px; /* 高さ */
+  width: 400px;
+  height: 120px;
+
+  overflow: hidden; /* ← 追加 */
 }
 
 /* ===== 外側うっすら枠 ===== */
@@ -39,7 +41,8 @@
   position: absolute;
   inset: 0;
 
-  border-radius: 999px;
+  /* ↓ 同じ値に統一 */
+  border-radius: 60px;
 
   padding: 2px;
 
@@ -143,8 +146,8 @@
 
 /* ===== 内側円 ===== */
 .Home-sns-inner {
-  width: 60%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
   background: rgba(0,0,0,0.04);
 
@@ -159,13 +162,22 @@
   color: #4a5a8a;
 }
 
+.Home-sns-icon-image {
+  width: 100px;
+  height: 100px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
 /* ===== 下テキスト ===== */
 .Home-sns-label {
   font-size: 10px;
   color: #8f95c9;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
 }
 
 /* 横線 */

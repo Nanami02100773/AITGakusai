@@ -22,8 +22,15 @@ const SnsSection = () => {
           >
             <div className="Home-sns-circle">
               <div className="Home-sns-inner">
-                <div className="Home-sns-icon">IG</div>
+
+                <img
+                  src="/snsicons/Instagram.png"
+                  alt="Instagram"
+                  className="Home-sns-icon-image"
+                />
+
               </div>
+
               <div className="Home-sns-dot"></div>
             </div>
 
@@ -41,8 +48,15 @@ const SnsSection = () => {
           >
             <div className="Home-sns-circle">
               <div className="Home-sns-inner">
-                <div className="Home-sns-icon">X</div>
+
+                <img
+                  src="/snsicons/X.png"
+                  alt="X"
+                  className="Home-sns-icon-image"
+                />
+
               </div>
+
               <div className="Home-sns-dot"></div>
             </div>
 
@@ -60,8 +74,15 @@ const SnsSection = () => {
           >
             <div className="Home-sns-circle">
               <div className="Home-sns-inner">
-                <div className="Home-sns-icon">🌐</div>
+
+                <img
+                  src="/snsicons/HP.png"
+                  alt="Website"
+                  className="Home-sns-icon-image"
+                />
+
               </div>
+
               <div className="Home-sns-dot"></div>
             </div>
 
@@ -79,8 +100,15 @@ const SnsSection = () => {
           >
             <div className="Home-sns-circle">
               <div className="Home-sns-inner">
-                <div className="Home-sns-icon">LINE</div>
+
+                <img
+                  src="/snsicons/LINE.png"
+                  alt="LINE"
+                  className="Home-sns-icon-image"
+                />
+
               </div>
+
               <div className="Home-sns-dot"></div>
             </div>
 
