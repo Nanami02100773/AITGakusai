@@ -15,11 +15,9 @@
   justify-content: center;
   align-items: center;
 
-  gap: 18px;
+  gap: 20px;
 
-  padding: 20px 40px;
-
-   background: #f4f7ff;
+  background: #f4f7ff;
 
   border-radius: 999px;
 
@@ -27,8 +25,11 @@
     0 10px 30px rgba(120,130,210,0.12),
     inset 0 1px 0 rgba(255,255,255,0.8);
 
-  width: fit-content;
   margin: 0 auto;
+
+  /* ↓ 追加 */
+  width: 400px;   /* 横幅 */
+  height: 120px; /* 高さ */
 }
 
 /* ===== 外側うっすら枠 ===== */
@@ -160,7 +161,7 @@
 
 /* ===== 下テキスト ===== */
 .Home-sns-label {
-  font-size: 12px;
+  font-size: 10px;
   color: #8f95c9;
   display: flex;
   align-items: center;
@@ -169,7 +170,7 @@
 
 /* 横線 */
 .Home-sns-label span {
-  width: 14px;
+  width: 10px;
   height: 2px;
   background: #cfd6ff;
 }
