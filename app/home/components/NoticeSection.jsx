@@ -37,27 +37,8 @@ const NoticeSection = () => {
   viewBox="0 0 120 120"
   preserveAspectRatio="none"
 >
-{/* 薄い背景 */}
-<path
-  className="wave-back"
-  d="
-    M120 120
-    L130 25
-    L30 125
-    Z
-  "
-/>
 
-{/* メインの角 */}
-<path
-  className="wave-front"
-  d="
-    M120 120
-    L120 60
-    L60 120
-    Z
-  "
-/>
+
 
 </svg>
 

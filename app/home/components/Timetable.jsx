@@ -69,9 +69,21 @@ const ZentaiTimetable = () => {
         {timetableData.map((dayData, index) => (
           <div key={index}>
             {/* 日付 */}
-            <h3 className="Home-day-title">
-              <span>{dayData.day}</span>
-            </h3>
+<h3
+  className={`Home-day-title ${
+    index === 1 ? "Home-day-title-second" : ""
+  }`}
+>
+  <span>
+    <small>
+      {index === 0 ? "1日目" : "2日目"}
+    </small>
+
+    <b>
+      {index === 0 ? "10.10(土)" : "10.11(日)"}
+    </b>
+  </span>
+</h3>
 
             {/* リスト */}
             <div className="Home-list">

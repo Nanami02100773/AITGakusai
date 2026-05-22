@@ -51,7 +51,7 @@ const SnsSection = () => {
             </div>
           </a>
 
-          {/* Web */}
+          {/* Website */}
           <a
             className="Home-sns-item Home-web"
             href="https://aitech.ac.jp/~festival/top.html"
@@ -67,6 +67,25 @@ const SnsSection = () => {
 
             <div className="Home-sns-label">
               <span></span>Website<span></span>
+            </div>
+          </a>
+
+          {/* LINE */}
+          <a
+            className="Home-sns-item Home-line"
+            href="https://t.co/Sa3GEvffep"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="Home-sns-circle">
+              <div className="Home-sns-inner">
+                <div className="Home-sns-icon">LINE</div>
+              </div>
+              <div className="Home-sns-dot"></div>
+            </div>
+
+            <div className="Home-sns-label">
+              <span></span>LINE<span></span>
             </div>
           </a>
 

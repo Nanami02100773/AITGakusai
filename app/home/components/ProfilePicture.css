@@ -15,208 +15,49 @@
   justify-content: center;
   align-items: center;
 
-  gap: 18px; /* ← 40px → 18px */
+  gap: 18px;
 
-  padding: 20px 110px;
+  padding: 20px 40px;
+
+   background: #f4f7ff;
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 10px 30px rgba(120,130,210,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+
+  width: fit-content;
+  margin: 0 auto;
 }
 
-/* =================================================
-   左フレーム（改良版）
-================================================= */
+/* ===== 外側うっすら枠 ===== */
 .Home-sns-list::before {
   content: "";
 
   position: absolute;
+  inset: 0;
 
-  left: 0px;
-  top: 50%;
+  border-radius: 999px;
 
-  transform: translateY(-50%);
+  padding: 2px;
 
-  width: 92px;
-  height: 220px;
-
-  z-index: 20;
-
-  background:
-
-  /* =================================================
-     メイン縦ライン
-  ================================================= */
-  linear-gradient(
-    180deg,
-    rgba(150,175,255,0.98),
-    rgba(120,145,255,0.90)
-  )
-  left 20px center / 4px 100px no-repeat,
-
-  /* =================================================
-     左上
-  ================================================= */
-
-  /* 上横 */
-  linear-gradient(
-    90deg,
-    rgba(150,175,255,0.98),
-    rgba(120,145,255,0.90)
-  )
-  50px 30px / 30px 6px no-repeat,
-
-  /* 上斜め */
-  linear-gradient(
+  background: linear-gradient(
     135deg,
-    transparent 44%,
-    rgba(150,175,255,0.98) 46% 54%,
-    transparent 56%
-  )
-  20px 30px / 30px 35px no-repeat,
+    rgba(255,255,255,0.9),
+    rgba(190,210,255,0.5)
+  );
 
-  /* 上内側細線 */
-  linear-gradient(
-    90deg,
-    rgba(196,208,255,0.98),
-    rgba(150,175,255,0.90)
-  )
-  40px 40px / 35px 2px no-repeat,
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
 
-  /* =================================================
-     左下
-  ================================================= */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 
-  /* 下横 */
-  linear-gradient(
-    90deg,
-    rgba(150,175,255,0.98),
-    rgba(120,145,255,0.90)
-  )
-  50px 184px / 30px 6px no-repeat,
-
-  /* 下斜め */
-  linear-gradient(
-    -135deg,
-    transparent 44%,
-    rgba(150,175,255,0.98) 46% 54%,
-    transparent 56%
-  )
-  20px 154px / 30px 35px no-repeat,
-
-  /* 下内側細線 */
-  linear-gradient(
-    90deg,
-    rgba(196,208,255,0.98),
-    rgba(150,175,255,0.90)
-  )
-  40px 178px / 35px 2px no-repeat,
-
-  /* =================================================
-     内側縦ライン
-  ================================================= */
-  linear-gradient(
-    180deg,
-    rgba(196,208,255,0.98),
-    rgba(150,175,255,0.90)
-  )
-  left 30px center / 2px 120px no-repeat;
+  pointer-events: none;
 }
 
-/* =================================================
-   右フレーム（改良版）
-================================================= */
-.Home-sns-list::after {
-  content: "";
-
-  position: absolute;
-
-  right: 0px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  width: 92px;
-  height: 220px;
-
-  z-index: 20;
-
-  background:
-
-  /* =================================================
-     メイン縦ライン
-  ================================================= */
-  linear-gradient(
-    180deg,
-    rgba(150,175,255,0.98),
-    rgba(120,145,255,0.90)
-  )
-  right 20px center / 4px 100px no-repeat,
-
-  /* =================================================
-     右上
-  ================================================= */
-
-  /* 上横 */
-  linear-gradient(
-    -90deg,
-    rgba(150,175,255,0.98),
-    rgba(120,145,255,0.90)
-  )
-  12px 30px / 30px 6px no-repeat,
-
-  /* 上斜め */
-  linear-gradient(
-    -135deg,
-    transparent 44%,
-    rgba(150,175,255,0.98) 46% 54%,
-    transparent 56%
-  )
-  42px 30px / 30px 35px no-repeat,
-
-  /* 上内側細線 */
-  linear-gradient(
-    -90deg,
-    rgba(196,208,255,0.98),
-    rgba(150,175,255,0.90)
-  )
-  16px 40px / 35px 2px no-repeat,
-
-  /* =================================================
-     右下
-  ================================================= */
-
-  /* 下横 */
-  linear-gradient(
-    -90deg,
-    rgba(150,175,255,0.98),
-    rgba(120,145,255,0.90)
-  )
-  12px 184px / 30px 6px no-repeat,
-
-  /* 下斜め */
-  linear-gradient(
-    135deg,
-    transparent 44%,
-    rgba(150,175,255,0.98) 46% 54%,
-    transparent 56%
-  )
-  42px 154px / 30px 35px no-repeat,
-
-  /* 下内側細線 */
-  linear-gradient(
-    -90deg,
-    rgba(196,208,255,0.98),
-    rgba(150,175,255,0.90)
-  )
-  16px 178px / 35px 2px no-repeat,
-
-  /* =================================================
-     内側縦ライン
-  ================================================= */
-  linear-gradient(
-    180deg,
-    rgba(196,208,255,0.98),
-    rgba(150,175,255,0.90)
-  )
-  right 30px center / 2px 120px no-repeat;
-}
 
 /* ===== 各アイテム ===== */
 .Home-sns-item {
@@ -230,8 +71,8 @@
 /* ===== 円 ===== */
 .Home-sns-circle {
   position: relative;
-  width: 85px;   /* ← 小さく */
-  height: 85px;
+  width: 60px;   /* ← 小さく */
+  height: 60px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: linear-gradient(145deg, #eef1ff, #ffffff);

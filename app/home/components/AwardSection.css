@@ -3,8 +3,8 @@
 ================================================= */
 .Home-award-section {
   padding: 10px 0 60px;
+  background: #ffffff;
 
-  /* hidden を削除 */
   overflow: visible;
 }
 
@@ -34,241 +34,168 @@
   background:
 
 /* =================================================
-   左上 赤アクセント
+   左上 青アクセント
 ================================================= */
 linear-gradient(
   135deg,
-  #ff9fb5 0 50%,
+  #6f8dff 0 50%,
   transparent 50% 100%
 )
-top 3px left 3px / 20px 20px no-repeat,
+top 3px left 3px / 23px 23px no-repeat,
 
 /* =================================================
-   右上 赤アクセント
+   右上 青アクセント
 ================================================= */
 linear-gradient(
   -135deg,
-  #ff9fb5 0 50%,
+  #6f8dff 0 50%,
   transparent 50% 100%
 )
-top 3px right 3px / 20px 20px no-repeat,
+top 3px right 3px / 23px 23px no-repeat,
 
 /* =================================================
-   左下 赤アクセント
+   左下 青アクセント
 ================================================= */
 linear-gradient(
   45deg,
-  #ff9fb5 0 50%,
+  #6f8dff 0 50%,
   transparent 50% 100%
 )
-bottom 3px left 3px / 20px 20px no-repeat,
+bottom 3px left 3px / 23px 23px no-repeat,
 
 /* =================================================
-   右下 赤アクセント
+   右下 青アクセント
 ================================================= */
 linear-gradient(
   -45deg,
-  #ff9fb5 0 50%,
+  #6f8dff 0 50%,
   transparent 50% 100%
 )
-bottom 3px right 3px / 20px 20px no-repeat,
-
-
+bottom 3px right 3px / 23px 23px no-repeat,
 
 /* =================================================
    左上
 ================================================= */
-
-/* 上ライン */
 linear-gradient(
   135deg,
   #b8c6ff 0 92%,
   transparent 92% 100%
 )
-top 0 left 0 / 90px 3px no-repeat,
+top 0 left 0 / 120px 3px no-repeat,
 
-/* 左ライン */
 linear-gradient(
   135deg,
   #b8c6ff 0 92%,
   transparent 92% 100%
 )
-top 0 left 0 / 3px 90px no-repeat,
-
-/* 内側 上 */
-linear-gradient(
-  135deg,
-  rgba(196,208,255,0.95) 0 88%,
-  transparent 88% 100%
-)
-top 14px left 14px / 26px 2px no-repeat,
-
-/* 内側 左 */
-linear-gradient(
-  135deg,
-  rgba(196,208,255,0.95) 0 88%,
-  transparent 88% 100%
-)
-top 14px left 14px / 2px 26px no-repeat,
-
-/* 太いフレーム */
-linear-gradient(
-  135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top 0 left 0 / 70px 8px no-repeat,
+top -10px left 0 / 3px 120px no-repeat,
 
 linear-gradient(
   135deg,
   #d6deff 0 78%,
   transparent 78% 100%
 )
-top 0 left 0 / 8px 70px no-repeat,
+top 0 left 0 / 90px 10px no-repeat,
 
-
+linear-gradient(
+  135deg,
+  #d6deff 0 78%,
+  transparent 78% 100%
+)
+top -6px left 0 / 10px 90px no-repeat,
 
 /* =================================================
    右上
 ================================================= */
+linear-gradient(
+  -135deg,
+  #b8c6ff 0 92%,
+  transparent 92% 100%
+)
+top 0 right 0 / 120px 3px no-repeat,
 
 linear-gradient(
   -135deg,
   #b8c6ff 0 92%,
   transparent 92% 100%
 )
-top 0 right 0 / 90px 3px no-repeat,
-
-linear-gradient(
-  -135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top 0 right 0 / 3px 90px no-repeat,
-
-linear-gradient(
-  -135deg,
-  rgba(196,208,255,0.95) 0 88%,
-  transparent 88% 100%
-)
-top 14px right 14px / 26px 2px no-repeat,
-
-linear-gradient(
-  -135deg,
-  rgba(196,208,255,0.95) 0 88%,
-  transparent 88% 100%
-)
-top 14px right 14px / 2px 26px no-repeat,
+top -10px right 0 / 3px 120px no-repeat,
 
 linear-gradient(
   -135deg,
   #d6deff 0 78%,
   transparent 78% 100%
 )
-top 0 right 0 / 70px 8px no-repeat,
+top 0 right 0 / 90px 10px no-repeat,
 
 linear-gradient(
   -135deg,
   #d6deff 0 78%,
   transparent 78% 100%
 )
-top 0 right 0 / 8px 70px no-repeat,
-
-
+top -6px right 0 / 10px 90px no-repeat,
 
 /* =================================================
    左下
 ================================================= */
+linear-gradient(
+  45deg,
+  #b8c6ff 0 92%,
+  transparent 92% 100%
+)
+bottom 0 left 0 / 120px 3px no-repeat,
 
 linear-gradient(
   45deg,
   #b8c6ff 0 92%,
   transparent 92% 100%
 )
-bottom 0 left 0 / 90px 3px no-repeat,
-
-linear-gradient(
-  45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 0 left 0 / 3px 90px no-repeat,
-
-linear-gradient(
-  45deg,
-  rgba(196,208,255,0.95) 0 88%,
-  transparent 88% 100%
-)
-bottom 14px left 14px / 26px 2px no-repeat,
-
-linear-gradient(
-  45deg,
-  rgba(196,208,255,0.95) 0 88%,
-  transparent 88% 100%
-)
-bottom 14px left 14px / 2px 26px no-repeat,
+bottom 0 left 0 / 3px 120px no-repeat,
 
 linear-gradient(
   45deg,
   #d6deff 0 78%,
   transparent 78% 100%
 )
-bottom 0 left 0 / 70px 8px no-repeat,
+bottom 0 left 0 / 90px 10px no-repeat,
 
 linear-gradient(
   45deg,
   #d6deff 0 78%,
   transparent 78% 100%
 )
-bottom 0 left 0 / 8px 70px no-repeat,
-
-
+bottom 0 left 0 / 10px 90px no-repeat,
 
 /* =================================================
    右下
 ================================================= */
+linear-gradient(
+  -45deg,
+  #b8c6ff 0 92%,
+  transparent 92% 100%
+)
+bottom 0 right 0 / 120px 3px no-repeat,
 
 linear-gradient(
   -45deg,
   #b8c6ff 0 92%,
   transparent 92% 100%
 )
-bottom 0 right 0 / 90px 3px no-repeat,
-
-linear-gradient(
-  -45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 0 right 0 / 3px 90px no-repeat,
-
-linear-gradient(
-  -45deg,
-  rgba(196,208,255,0.95) 0 88%,
-  transparent 88% 100%
-)
-bottom 14px right 14px / 26px 2px no-repeat,
-
-linear-gradient(
-  -45deg,
-  rgba(196,208,255,0.95) 0 88%,
-  transparent 88% 100%
-)
-bottom 14px right 14px / 2px 26px no-repeat,
+bottom 0 right 0 / 3px 120px no-repeat,
 
 linear-gradient(
   -45deg,
   #d6deff 0 78%,
   transparent 78% 100%
 )
-bottom 0 right 0 / 70px 8px no-repeat,
+bottom 0 right 0 / 90px 10px no-repeat,
 
 linear-gradient(
   -45deg,
   #d6deff 0 78%,
   transparent 78% 100%
 )
-bottom 0 right 0 / 8px 70px no-repeat;
+bottom 0 right 0 / 10px 90px no-repeat;
 }
 
 /* =================================================
@@ -288,8 +215,6 @@ bottom 0 right 0 / 8px 70px no-repeat;
   z-index: 30;
 }
 
-
-
 /* =================================================
    中央白ボックス
 ================================================= */
@@ -304,15 +229,13 @@ bottom 0 right 0 / 8px 70px no-repeat;
   width: 360px;
   height: 90px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #eef1fb 100%
-    );
+  background: #ffffff;
 
   border:
     2px solid #d9deea;
+
+  /* これ追加 */
+  border-radius: 15px;
 
   box-shadow:
     0 6px 14px rgba(60,80,140,.08);
@@ -323,9 +246,8 @@ bottom 0 right 0 / 8px 70px no-repeat;
 
   z-index: 5;
 
-  overflow: visible;
+    overflow: visible;
 }
-
 /* =================================================
    外側フレーム追加
 ================================================= */
@@ -351,9 +273,6 @@ bottom 0 right 0 / 8px 70px no-repeat;
 
   background:
 
-  /* =================================================
-     左上
-  ================================================= */
   linear-gradient(
     135deg,
     #b8c6ff 0 92%,
@@ -382,9 +301,6 @@ bottom 0 right 0 / 8px 70px no-repeat;
   )
   top 0 left 0 / 7px 140px no-repeat,
 
-    /* =================================================
-     左下
-  ================================================= */
   linear-gradient(
     45deg,
     #b8c6ff 0 92%,
@@ -413,10 +329,6 @@ bottom 0 right 0 / 8px 70px no-repeat;
   )
   bottom 0 left 0 / 7px 42px no-repeat,
 
-
-  /* =================================================
-     右上
-  ================================================= */
   linear-gradient(
     -135deg,
     #b8c6ff 0 92%,
@@ -445,9 +357,6 @@ bottom 0 right 0 / 8px 70px no-repeat;
   )
   top 0 right 0 / 7px 42px no-repeat,
 
-  /* =================================================
-     右下
-  ================================================= */
   linear-gradient(
     -45deg,
     #b8c6ff 0 92%,
@@ -477,27 +386,6 @@ bottom 0 right 0 / 8px 70px no-repeat;
   bottom 0 right 0 / 7px 120px no-repeat;
 }
 
-
-/* =================================================
-   共通
-================================================= */
-.blue-part {
-  position: absolute;
-
-  top: 50%;
-  transform: translateY(-50%);
-
-  clip-path: polygon(
-    0 50%,
-    40% 0,
-    100% 0,
-    50% 50%,
-    100% 100%,
-    40% 100%
-  );
-}
-
-
 /* =================================================
    文字
 ================================================= */
@@ -513,44 +401,6 @@ bottom 0 right 0 / 8px 70px no-repeat;
 
   z-index: 30;
 }
-
-/* =================================================
-   説明ボックス
-================================================= */
-.award-info-box {
-  position: relative;
-
-  width: 88%;
-  max-width: 500px;
-
-  margin: -10 auto 10px;
-
-  padding: 18px 24px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f7f9ff 100%
-    );
-
-  border:
-    2px solid #d8e1ff;
-
-  box-shadow:
-    0 8px 18px rgba(80,100,180,.08);
-
-  text-align: center;
-
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.8;
-
-  color: #55658d;
-}
-
-
-
 /* =================================================
    賞一覧 全体
 ================================================= */
@@ -560,18 +410,13 @@ bottom 0 right 0 / 8px 70px no-repeat;
   z-index: 1;
 
   width: 90%;
-  max-width: 620px;
+  max-width: 640px;
 
   margin: 140px auto 0;
 
-  padding: 20px 20px 10px;
+  padding: 20px 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.98),
-      rgba(246,249,255,0.97)
-    );
+  background: #e6eeff;
 
   overflow: visible;
 }
@@ -582,174 +427,37 @@ bottom 0 right 0 / 8px 70px no-repeat;
 .Home-award-card {
   position: relative;
 
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 
-  padding: 22px 26px;
+  width: 92%;
+  max-width: 620px;
+
+  /* 高さを狭く */
+  min-height: 100px;
+
+  /* 上 右 下 左 */
+  padding:
+    14px
+    14px
+    10px
+    54px;
 
   background:
     linear-gradient(
       180deg,
       #ffffff 0%,
-      #f8fbff 100%
+      #fcfdff 100%
     );
 
-  z-index: 1;
+  border:
+    1px solid #edf2fd;
 
-  clip-path: polygon(
-    0 20px,
-    20px 0,
-
-    calc(100% - 70px) 0,
-    calc(100% - 30px) 18px,
-    100% 18px,
-
-    100% calc(100% - 20px),
-    calc(100% - 20px) 100%,
-
-    20px 100%,
-    0 calc(100% - 20px)
-  );
+  border-radius: 22px;
 
   box-shadow:
-    0 12px 28px rgba(120,140,255,0.10);
-}
+    0 4px 12px rgba(120,140,200,.05);
 
-/* =================================================
-   外枠
-================================================= */
-.Home-award-card::before {
-  content: "";
-
-  position: absolute;
-  inset: -3px;
-
-  z-index: -2;
-
-  background:
-    linear-gradient(
-      135deg,
-      #9fc3ff,
-      #5b92ff
-    );
-
-  clip-path: inherit;
-}
-
-.Home-award-card::after {
-  content: "";
-
-  position: absolute;
-  inset: -1px;
-
-  z-index: -1;
-
-  background:
-    linear-gradient(
-      135deg,
-      #ffffff,
-      #edf4ff
-    );
-
-  clip-path: inherit;
-}
-
-
-
-/* =================================================
-   上ノッチ
-================================================= */
-.top-notch {
-  position: absolute;
-
-  top: -12px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 120px;
-  height: 24px;
-
-  z-index: 3;
-
-  background:
-    linear-gradient(
-      135deg,
-      #9fc3ff,
-      #5f96ff
-    );
-
-  clip-path: polygon(
-    0 100%,
-    15% 0,
-    85% 0,
-    100% 100%
-  );
-}
-
-.top-notch::after {
-  content: "";
-
-  position: absolute;
-
-  top: 5px;
-  left: 15%;
-  right: 15%;
-
-  height: 3px;
-
-  border-radius: 999px;
-
-  background:
-    rgba(255,255,255,0.95);
-}
-
-/* =================================================
-   右下装飾
-================================================= */
-.corner-br {
-  position: absolute;
-
-  right: -2px;
-  bottom: -2px;
-
-  width: 60px;
-  height: 60px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #8db8ff,
-      #5b8dff
-    );
-
-  clip-path:
-    polygon(100% 0, 0% 100%, 100% 100%);
-
-  opacity: 0.9;
-}
-
-/* =================================================
-   ストライプ
-================================================= */
-.stripe {
-  position: absolute;
-
-  right: 24px;
-  bottom: 8px;
-
-  width: 70px;
-  height: 8px;
-
-  opacity: 0.4;
-
-  background:
-    repeating-linear-gradient(
-      45deg,
-      #7fb0ff,
-      #7fb0ff 4px,
-      transparent 4px,
-      transparent 8px
-    );
+  overflow: hidden;
 }
 
 /* =================================================
@@ -758,20 +466,17 @@ bottom 0 right 0 / 8px 70px no-repeat;
 .left-bar {
   position: absolute;
 
-  left: 0;
-  top: 20px;
-  bottom: 20px;
+  left: 18px;
+  top: 18px;
 
   width: 6px;
 
-  border-radius: 6px;
+  /* バーも短く */
+  height: calc(100% - 36px);
 
-  background:
-    linear-gradient(
-      180deg,
-      #8cb6ff,
-      #a9ddff
-    );
+  border-radius: 999px;
+
+  background: #6fa7ff;
 }
 
 /* =================================================
@@ -780,12 +485,14 @@ bottom 0 right 0 / 8px 70px no-repeat;
 .Home-award-title {
   position: relative;
 
-  padding-left: 22px;
+  padding-left: 24px;
 
-  font-size: 16px;
-  font-weight: 800;
+  font-size: 17px;
+  font-weight: 900;
 
-  color: #31456f;
+  line-height: 1.4;
+
+  color: #1e2e67;
 }
 
 .Home-award-title::before {
@@ -796,17 +503,12 @@ bottom 0 right 0 / 8px 70px no-repeat;
   left: 0;
   top: 6px;
 
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
 
   border-radius: 50%;
 
-  background:
-    linear-gradient(
-      135deg,
-      #8ab6ff,
-      #7edfff
-    );
+  background: #5f97ff;
 }
 
 /* =================================================
@@ -815,11 +517,13 @@ bottom 0 right 0 / 8px 70px no-repeat;
 .Home-award-desc {
   margin-top: 12px;
 
-  padding-bottom: 6px;
+  padding-bottom: 10px;
 
   font-size: 14px;
-  color: #6a7da3;
+  line-height: 1.6;
+
+  color: #5b6787;
 
   border-bottom:
-    2px dashed #d9e4ff;
+    2px dashed #e2eaff;
 }
