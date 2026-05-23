@@ -67,7 +67,7 @@
   align-items: center;
   justify-content: center;
 
-  overflow: hidden;
+  overflow: visible;
 
   box-shadow:
     0 6px 16px rgba(120,120,200,0.12);
@@ -79,7 +79,7 @@
 }
 
 /* =================================================
-   外リング
+   共通ネオン発光
 ================================================= */
 .Home-sns-circle::before {
   content: "";
@@ -92,57 +92,19 @@
 
   padding: 3px;
 
-  background:
-    linear-gradient(
-      45deg,
-      #ff9a9e,
-      #fad0c4
-    );
-
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
 
   -webkit-mask-composite: xor;
-
   mask-composite: exclude;
+
+  animation:
+    snsNeon 2.8s ease-in-out infinite alternate;
 }
 
-/* =================================================
-   ホバー
-================================================= */
-.Home-sns-item:hover .Home-sns-circle {
-  transform:
-    translateY(-1px)
-    scale(1.06);
-
-  box-shadow:
-    0 14px 28px rgba(120,120,200,0.25);
-
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff,
-      #eef1ff
-    );
-}
-
-.Home-sns-item:hover .Home-sns-circle::before {
-  filter: brightness(1.2);
-}
-
-.Home-sns-item:active .Home-sns-circle {
-  transform:
-    translateY(-2px)
-    scale(0.96);
-}
-
-/* =================================================
-   リング色
-================================================= */
 /* =================================================
    Instagram
-   淡めネオン
 ================================================= */
 .Home-instagram .Home-sns-circle::before {
   background:
@@ -150,67 +112,113 @@
       135deg,
       #ffb8d2 0%,
       #ffc8a8 30%,
-      #d7b8ff 65%,
+      #c497ff 65%,
       #b9d4ff 100%
     );
 
   filter:
-    drop-shadow(0 0 6px rgba(255,170,220,.55))
-    drop-shadow(0 0 12px rgba(180,140,255,.35));
+    drop-shadow(0 0 5px rgba(255,190,230,.95))
+    drop-shadow(0 0 12px rgba(255,120,210,.85))
+    drop-shadow(0 0 22px rgba(180,120,255,.75))
+    drop-shadow(0 0 36px rgba(120,180,255,.55));
 }
 
 /* =================================================
    X
-   淡ブラックネオン
 ================================================= */
 .Home-twitter .Home-sns-circle::before {
   background:
     linear-gradient(
       135deg,
-      #d8dbe2 0%,
-      #bfc7d6 45%,
-      #eef2ff 100%
+      #f0f2f5 0%,
+      #a7a7a7 50%,
+      #555555 100%
     );
 
   filter:
-    drop-shadow(0 0 6px rgba(180,190,255,.45))
-    drop-shadow(0 0 12px rgba(210,220,255,.35));
+    drop-shadow(0 0 5px rgba(255,255,255,.9))
+    drop-shadow(0 0 12px rgba(180,180,180,.75))
+    drop-shadow(0 0 22px rgba(120,120,120,.65))
+    drop-shadow(0 0 34px rgba(230,230,230,.45));
 }
 
 /* =================================================
    Website
-   青ネオン
 ================================================= */
 .Home-web .Home-sns-circle::before {
   background:
     linear-gradient(
       135deg,
       #aee6ff 0%,
-      #8fd7ff 45%,
-      #bdd8ff 100%
+      #73c7ff 45%,
+      #4b86da 100%
     );
 
   filter:
-    drop-shadow(0 0 6px rgba(120,210,255,.55))
-    drop-shadow(0 0 12px rgba(120,180,255,.35));
+    drop-shadow(0 0 5px rgba(140,220,255,.95))
+    drop-shadow(0 0 12px rgba(90,190,255,.85))
+    drop-shadow(0 0 22px rgba(70,140,255,.75))
+    drop-shadow(0 0 36px rgba(120,180,255,.55));
 }
 
 /* =================================================
    LINE
-   グリーンネオン
 ================================================= */
 .Home-line .Home-sns-circle::before {
   background:
     linear-gradient(
       135deg,
-      #b8ffd4 0%,
-      #97ffbe 50%,
-      #d2ffe6 100%
+      #c0ffd9 0%,
+      #7dffaf 50%,
+      #39c878 100%
     );
 
   filter:
-    drop-shadow(0 0 6px rgba(120,255,180,.55))
-    drop-shadow(0 0 12px rgba(120,255,200,.35));
+    drop-shadow(0 0 5px rgba(160,255,210,.95))
+    drop-shadow(0 0 12px rgba(100,255,170,.85))
+    drop-shadow(0 0 22px rgba(60,220,130,.75))
+    drop-shadow(0 0 36px rgba(100,255,180,.55));
+}
+
+/* =================================================
+   ネオンアニメーション
+================================================= */
+@keyframes snsNeon {
+  0% {
+    opacity: .82;
+
+    transform:
+      scale(1)
+      rotate(0deg);
+
+    filter:
+      brightness(1)
+      blur(0px);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.06)
+      rotate(.6deg);
+
+    filter:
+      brightness(1.28)
+      blur(.35px);
+  }
+
+  100% {
+    opacity: .9;
+
+    transform:
+      scale(1.02)
+      rotate(-.4deg);
+
+    filter:
+      brightness(1.12)
+      blur(.15px);
+  }
 }
 
 /* =================================================
