@@ -42,45 +42,6 @@
 
   background:
 
-/* =================================================
-   左上 青アクセント
-================================================= */
-linear-gradient(
-  135deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-top 3px left 3px / 23px 23px no-repeat,
-
-/* =================================================
-   右上 青アクセント
-================================================= */
-linear-gradient(
-  -135deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-top 3px right 3px / 23px 23px no-repeat,
-
-/* =================================================
-   左下 青アクセント
-================================================= */
-linear-gradient(
-  45deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-bottom 8px left 3px / 23px 23px no-repeat,
-
-/* =================================================
-   右下 青アクセント
-================================================= */
-linear-gradient(
-  -45deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-bottom 8px right 3px / 23px 23px no-repeat,
 
 
 
@@ -267,8 +228,8 @@ bottom 5px right 0 / 10px 90px no-repeat;
   position: relative;
   z-index: 2;
 
-  width: calc(93% - 24px);
-  max-width: 620px;
+  width: 95%; 
+  max-width: 640px;
 
   margin-left: auto;
   margin-right: auto;
@@ -278,11 +239,11 @@ bottom 5px right 0 / 10px 90px no-repeat;
      数値を変えるだけ
   ========================= */
   /* さらに細かく動かす */
-  transform: translateY(5px);
+  transform: translateY(-15px);
 
   padding: 20px 10px;
 
-  height: 615px;
+  height: 655px;
 
   overflow-y: auto;
   overflow-x: hidden;

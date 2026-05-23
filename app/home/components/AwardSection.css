@@ -2,423 +2,308 @@
    全体
 ================================================= */
 .Home-award-section {
-  padding: 10px 0 60px;
+  padding: 10px 0 50px;
+
   background: #ffffff;
 
   overflow: visible;
 }
 
-/* =================================================
-   賞一覧 フレーム
-================================================= */
-.Home-box2::before {
-  content: "";
-
-  position: absolute;
-  top: -18px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: calc(100% + 36px);
-  height: calc(100% + 36px);
-
-  pointer-events: none;
-  z-index: 0;
-
-  opacity: 0.92;
-
-  filter:
-    drop-shadow(0 8px 18px rgba(160,175,255,0.12));
-
-  background:
-
-/* =================================================
-   左上 青アクセント
-================================================= */
-linear-gradient(
-  135deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-top 3px left 3px / 23px 23px no-repeat,
-
-/* =================================================
-   右上 青アクセント
-================================================= */
-linear-gradient(
-  -135deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-top 3px right 3px / 23px 23px no-repeat,
-
-/* =================================================
-   左下 青アクセント
-================================================= */
-linear-gradient(
-  45deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-bottom 3px left 3px / 23px 23px no-repeat,
-
-/* =================================================
-   右下 青アクセント
-================================================= */
-linear-gradient(
-  -45deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-bottom 3px right 3px / 23px 23px no-repeat,
-
-/* =================================================
-   左上
-================================================= */
-linear-gradient(
-  135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top 0 left 0 / 120px 3px no-repeat,
-
-linear-gradient(
-  135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top -10px left 0 / 3px 120px no-repeat,
-
-linear-gradient(
-  135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top 0 left 0 / 90px 10px no-repeat,
-
-linear-gradient(
-  135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top -6px left 0 / 10px 90px no-repeat,
-
-/* =================================================
-   右上
-================================================= */
-linear-gradient(
-  -135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top 0 right 0 / 120px 3px no-repeat,
-
-linear-gradient(
-  -135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top -10px right 0 / 3px 120px no-repeat,
-
-linear-gradient(
-  -135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top 0 right 0 / 90px 10px no-repeat,
-
-linear-gradient(
-  -135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top -6px right 0 / 10px 90px no-repeat,
-
-/* =================================================
-   左下
-================================================= */
-linear-gradient(
-  45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 0 left 0 / 120px 3px no-repeat,
-
-linear-gradient(
-  45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 0 left 0 / 3px 120px no-repeat,
-
-linear-gradient(
-  45deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-bottom 0 left 0 / 90px 10px no-repeat,
-
-linear-gradient(
-  45deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-bottom 0 left 0 / 10px 90px no-repeat,
-
-/* =================================================
-   右下
-================================================= */
-linear-gradient(
-  -45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 0 right 0 / 120px 3px no-repeat,
-
-linear-gradient(
-  -45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 0 right 0 / 3px 120px no-repeat,
-
-linear-gradient(
-  -45deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-bottom 0 right 0 / 90px 10px no-repeat,
-
-linear-gradient(
-  -45deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-bottom 0 right 0 / 10px 90px no-repeat;
-}
-
-/* =================================================
-   タイトル装飾 全体
-================================================= */
-.Home-box1 {
-  position: relative;
-
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  z-index: 30;
-}
-
-/* =================================================
-   中央白ボックス
-================================================= */
-.award-crown-base {
-  position: absolute;
-
-  left: 50%;
-  top: -5px;
-
-  transform: translateX(-50%);
-
-  width: 360px;
-  height: 90px;
-
-  background: #ffffff;
-
-  border:
-    2px solid #d9deea;
-
-  /* これ追加 */
-  border-radius: 15px;
-
-  box-shadow:
-    0 6px 14px rgba(60,80,140,.08);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  z-index: 5;
-
-    overflow: visible;
-}
-/* =================================================
-   外側フレーム追加
-================================================= */
-.award-crown-base::before {
-  content: "";
-
-  position: absolute;
-
-  top: -14px;
-  left: -14px;
-
-  width: calc(100% + 28px);
-  height: calc(100% + 28px);
-
-  pointer-events: none;
-
-  z-index: -1;
-
-  opacity: 0.92;
-
-  filter:
-    drop-shadow(0 6px 14px rgba(160,175,255,0.10));
-
-  background:
-
-  linear-gradient(
-    135deg,
-    #b8c6ff 0 92%,
-    transparent 92% 100%
-  )
-  top 0 left 0 / 50px 3px no-repeat,
-
-  linear-gradient(
-    135deg,
-    #b8c6ff 0 92%,
-    transparent 92% 100%
-  )
-  top 0 left 0 / 3px 130px no-repeat,
-
-  linear-gradient(
-    135deg,
-    #d6deff 0 78%,
-    transparent 78% 100%
-  )
-  top 0 left 0 / 50px 7px no-repeat,
-
-  linear-gradient(
-    135deg,
-    #d6deff 0 78%,
-    transparent 78% 100%
-  )
-  top 0 left 0 / 7px 140px no-repeat,
-
-  linear-gradient(
-    45deg,
-    #b8c6ff 0 92%,
-    transparent 92% 100%
-  )
-  bottom 0 left 0 / 50px 3px no-repeat,
-
-  linear-gradient(
-    45deg,
-    #b8c6ff 0 92%,
-    transparent 92% 100%
-  )
-  bottom 0 left 0 / 3px 100px no-repeat,
-
-  linear-gradient(
-    45deg,
-    #d6deff 0 78%,
-    transparent 78% 100%
-  )
-  bottom 0 left 0 / 50px 7px no-repeat,
-
-  linear-gradient(
-    45deg,
-    #d6deff 0 78%,
-    transparent 78% 100%
-  )
-  bottom 0 left 0 / 7px 42px no-repeat,
-
-  linear-gradient(
-    -135deg,
-    #b8c6ff 0 92%,
-    transparent 92% 100%
-  )
-  top 0 right 0 / 50px 3px no-repeat,
-
-  linear-gradient(
-    -135deg,
-    #b8c6ff 0 92%,
-    transparent 92% 100%
-  )
-  top 0 right 0 / 3px 120px no-repeat,
-
-  linear-gradient(
-    -135deg,
-    #d6deff 0 78%,
-    transparent 78% 100%
-  )
-  top 0 right 0 / 50px 7px no-repeat,
-
-  linear-gradient(
-    -135deg,
-    #d6deff 0 78%,
-    transparent 78% 100%
-  )
-  top 0 right 0 / 7px 42px no-repeat,
-
-  linear-gradient(
-    -45deg,
-    #b8c6ff 0 92%,
-    transparent 92% 100%
-  )
-  bottom 0 right 0 / 50px 3px no-repeat,
-
-  linear-gradient(
-    -45deg,
-    #b8c6ff 0 92%,
-    transparent 92% 100%
-  )
-  bottom 0 right 0 / 3px 60px no-repeat,
-
-  linear-gradient(
-    -45deg,
-    #d6deff 0 78%,
-    transparent 78% 100%
-  )
-  bottom 0 right 0 / 50px 7px no-repeat,
-
-  linear-gradient(
-    -45deg,
-    #d6deff 0 78%,
-    transparent 78% 100%
-  )
-  bottom 0 right 0 / 7px 120px no-repeat;
-}
-
-/* =================================================
-   文字
-================================================= */
-.award-crown-text {
-  position: relative;
-
-  font-size: 13px;
-  font-weight: 900;
-
-  color: #173f92;
-
-  letter-spacing: .08em;
-
-  z-index: 30;
-}
 /* =================================================
    賞一覧 全体
 ================================================= */
 .Home-box2 {
   position: relative;
 
-  z-index: 1;
+  width: 97%;
+  max-width: 520px;
 
-  width: 90%;
-  max-width: 640px;
+  margin: 0 auto;
 
-  margin: 140px auto 0;
+  padding: 180px 0 20px;
 
-  padding: 20px 0;
+  background:
+    linear-gradient(
+      180deg,
+      #edf2ff 0%,
+      #e7eeff 100%
+    );
 
-  background: #e6eeff;
+  border: 4px solid #9ab5ff;
+
+  box-shadow:
+    0 10px 20px rgba(120,140,255,.10);
 
   overflow: visible;
+}
+/* =================================================
+   下側三角
+================================================= */
+.Home-box2 {
+  position: relative;
+}
+
+.Home-box2 .corner-left-bottom,
+.Home-box2 .corner-right-bottom {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  z-index: 30;
+}
+
+/* 左下 */
+.Home-box2 .corner-left-bottom {
+  bottom: -4px;
+  left: -4px;
+
+  border-bottom: 28px solid #ff9ed2;
+  border-right: 28px solid transparent;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255,150,210,.45));
+}
+
+/* 右下 */
+.Home-box2 .corner-right-bottom {
+  bottom: -4px;
+  right: -4px;
+
+  border-bottom: 28px solid #ff9ed2;
+  border-left: 28px solid transparent;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255,150,210,.45));
+}
+
+/* =================================================
+   四隅ピンク三角
+================================================= */
+.Home-box2::before,
+.Home-box2::after {
+  content: "";
+
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  z-index: 30;
+}
+
+/* 左上 */
+.Home-box2::before {
+  top: -4px;
+  left: -4px;
+
+  border-top: 28px solid #ff9ed2;
+  border-right: 28px solid transparent;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255,150,210,.45));
+}
+
+/* 右上 */
+.Home-box2::after {
+  top: -4px;
+  right: -4px;
+
+  border-top: 28px solid #ff9ed2;
+  border-left: 28px solid transparent;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255,150,210,.45));
+}
+
+/* =================================================
+   グランプリとは？
+================================================= */
+.award-crown-subtitle {
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  font-weight: 900;
+
+  letter-spacing: .06em;
+
+  color: #0f2f7a;
+
+  line-height: 1;
+}
+
+/* =================================================
+   王冠エリア
+================================================= */
+.award-crown-area {
+  position: absolute;
+
+  top: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: calc(100% - 40px);
+  max-width: 450px;
+
+  padding: 10px 15px 15px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f6f8ff 100%
+    );
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 18px rgba(120,140,255,.10);
+
+  box-sizing: border-box;
+
+  z-index: 10;
+
+  /* =================================================
+     ↓ 全体高さ調節
+  ================================================= */
+  min-height: 30px;
+}
+
+/* =================================================
+   テキスト＋王冠
+================================================= */
+.award-crown-text-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+/* =================================================
+   王冠画像の白背景ボックス
+================================================= */
+.award-crown-icon-wrap {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* =================================================
+     ↓ 白ボックスサイズ調節
+  ================================================= */
+  width: 130px;
+  height: 130px;
+
+  background: #ffffff;
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 6px 16px rgba(120,140,255,.10);
+
+  flex-shrink: 0;
+}
+
+/* =================================================
+   王冠画像
+================================================= */
+.award-crown-icon {
+  position: relative;
+
+  z-index: 2;
+
+  /* =================================================
+     ↓ 王冠画像サイズ調節
+  ================================================= */
+  width: 160px;
+
+  height: auto;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+/* =================================================
+   テキスト
+================================================= */
+.award-crown-text {
+  position: relative;
+
+  flex: 1;
+  margin-top: 18px;
+  padding-bottom: 15px;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  line-height: 1.9;
+
+  letter-spacing: .05em;
+
+  text-align: left;
+
+  color: #163b8f;
+
+  white-space: normal;
+
+  word-break: keep-all;
+}
+
+/* =================================================
+   テキスト下ライン
+================================================= */
+.award-crown-text::after {
+  content: "";
+
+  position: absolute;
+
+  left: -5;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5d8fff 0%,
+      #8eb8ff 50%,
+      #5d8fff 100%
+    );
+}
+
+/* =================================================
+   青ライン
+================================================= */
+.award-crown-line {
+  position: absolute;
+
+  top: 190px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 95%;
+  height: 4px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5d8fff 0%,
+      #8eb8ff 50%,
+      #5d8fff 100%
+    );
+
+  z-index: 20;
 }
 
 /* =================================================
@@ -427,37 +312,24 @@ bottom 0 right 0 / 10px 90px no-repeat;
 .Home-award-card {
   position: relative;
 
-  margin: 0 auto 20px;
+  width: 90%;
 
-  width: 92%;
-  max-width: 620px;
+  margin: 30px auto 10px;
 
-  /* 高さを狭く */
-  min-height: 100px;
-
-  /* 上 右 下 左 */
   padding:
-    14px
-    14px
-    10px
-    54px;
+    24px
+    22px
+    18px
+    70px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #fcfdff 100%
-    );
+  background: #ffffff;
 
-  border:
-    1px solid #edf2fd;
-
-  border-radius: 22px;
+  border-radius: 15px;
 
   box-shadow:
-    0 4px 12px rgba(120,140,200,.05);
+    0 8px 18px rgba(120,140,255,.06);
 
-  overflow: hidden;
+  min-height: 80px;
 }
 
 /* =================================================
@@ -466,17 +338,20 @@ bottom 0 right 0 / 10px 90px no-repeat;
 .left-bar {
   position: absolute;
 
-  left: 18px;
-  top: 18px;
+  left: 35px;
+  top: 24px;
 
-  width: 6px;
-
-  /* バーも短く */
-  height: calc(100% - 36px);
+  width: 7px;
+  height: calc(100% - 40px);
 
   border-radius: 999px;
 
-  background: #6fa7ff;
+  background:
+    linear-gradient(
+      180deg,
+      #5d8fff 0%,
+      #7cb2ff 100%
+    );
 }
 
 /* =================================================
@@ -485,14 +360,14 @@ bottom 0 right 0 / 10px 90px no-repeat;
 .Home-award-title {
   position: relative;
 
-  padding-left: 24px;
+  padding-left: 30px;
 
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 900;
 
   line-height: 1.4;
 
-  color: #1e2e67;
+  color: #132c73;
 }
 
 .Home-award-title::before {
@@ -501,29 +376,29 @@ bottom 0 right 0 / 10px 90px no-repeat;
   position: absolute;
 
   left: 0;
-  top: 6px;
+  top: 8px;
 
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
 
   border-radius: 50%;
 
-  background: #5f97ff;
+  background: #5e97ff;
 }
 
 /* =================================================
    説明
 ================================================= */
 .Home-award-desc {
-  margin-top: 12px;
+  margin-top: 14px;
 
-  padding-bottom: 10px;
-
-  font-size: 14px;
-  line-height: 1.6;
-
-  color: #5b6787;
+  padding-bottom: 8px;
 
   border-bottom:
-    2px dashed #e2eaff;
+    3px dashed #dfe7ff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #66759e;
 }

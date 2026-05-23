@@ -11,6 +11,7 @@ const SnsSection = () => {
       </h2>
 
       <div className="Home-container">
+
         <div className="Home-sns-list">
 
           {/* Instagram */}
@@ -21,17 +22,13 @@ const SnsSection = () => {
             rel="noopener noreferrer"
           >
             <div className="Home-sns-circle">
-              <div className="Home-sns-inner">
 
-                <img
-                  src="/snsicons/Instagram.png"
-                  alt="Instagram"
-                  className="Home-sns-icon-image"
-                />
+              <img
+                src="/snsicons/Instagram.png"
+                alt="Instagram"
+                className="Home-sns-icon-image"
+              />
 
-              </div>
-
-              <div className="Home-sns-dot"></div>
             </div>
 
             <div className="Home-sns-label">
@@ -47,17 +44,13 @@ const SnsSection = () => {
             rel="noopener noreferrer"
           >
             <div className="Home-sns-circle">
-              <div className="Home-sns-inner">
 
-                <img
-                  src="/snsicons/X.png"
-                  alt="X"
-                  className="Home-sns-icon-image"
-                />
+              <img
+                src="/snsicons/X.png"
+                alt="X"
+                className="Home-sns-icon-image"
+              />
 
-              </div>
-
-              <div className="Home-sns-dot"></div>
             </div>
 
             <div className="Home-sns-label">
@@ -73,17 +66,13 @@ const SnsSection = () => {
             rel="noopener noreferrer"
           >
             <div className="Home-sns-circle">
-              <div className="Home-sns-inner">
 
-                <img
-                  src="/snsicons/HP.png"
-                  alt="Website"
-                  className="Home-sns-icon-image"
-                />
+              <img
+                src="/snsicons/HP.png"
+                alt="Website"
+                className="Home-sns-icon-image"
+              />
 
-              </div>
-
-              <div className="Home-sns-dot"></div>
             </div>
 
             <div className="Home-sns-label">
@@ -99,17 +88,13 @@ const SnsSection = () => {
             rel="noopener noreferrer"
           >
             <div className="Home-sns-circle">
-              <div className="Home-sns-inner">
 
-                <img
-                  src="/snsicons/LINE.png"
-                  alt="LINE"
-                  className="Home-sns-icon-image"
-                />
+              <img
+                src="/snsicons/LINE.png"
+                alt="LINE"
+                className="Home-sns-icon-image"
+              />
 
-              </div>
-
-              <div className="Home-sns-dot"></div>
             </div>
 
             <div className="Home-sns-label">
@@ -118,7 +103,9 @@ const SnsSection = () => {
           </a>
 
         </div>
+
       </div>
+
     </section>
   );
 };
