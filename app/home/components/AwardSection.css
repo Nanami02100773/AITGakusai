@@ -29,92 +29,14 @@
       #e7eeff 100%
     );
 
-  border: 4px solid #9ab5ff;
+  border: 0px solid #9ab5ff;
 
   box-shadow:
     0 10px 20px rgba(120,140,255,.10);
 
   overflow: visible;
 }
-/* =================================================
-   下側三角
-================================================= */
-.Home-box2 {
-  position: relative;
-}
 
-.Home-box2 .corner-left-bottom,
-.Home-box2 .corner-right-bottom {
-  position: absolute;
-
-  width: 0;
-  height: 0;
-
-  z-index: 30;
-}
-
-/* 左下 */
-.Home-box2 .corner-left-bottom {
-  bottom: -4px;
-  left: -4px;
-
-  border-bottom: 28px solid #ff9ed2;
-  border-right: 28px solid transparent;
-
-  filter:
-    drop-shadow(0 0 8px rgba(255,150,210,.45));
-}
-
-/* 右下 */
-.Home-box2 .corner-right-bottom {
-  bottom: -4px;
-  right: -4px;
-
-  border-bottom: 28px solid #ff9ed2;
-  border-left: 28px solid transparent;
-
-  filter:
-    drop-shadow(0 0 8px rgba(255,150,210,.45));
-}
-
-/* =================================================
-   四隅ピンク三角
-================================================= */
-.Home-box2::before,
-.Home-box2::after {
-  content: "";
-
-  position: absolute;
-
-  width: 0;
-  height: 0;
-
-  z-index: 30;
-}
-
-/* 左上 */
-.Home-box2::before {
-  top: -4px;
-  left: -4px;
-
-  border-top: 28px solid #ff9ed2;
-  border-right: 28px solid transparent;
-
-  filter:
-    drop-shadow(0 0 8px rgba(255,150,210,.45));
-}
-
-/* 右上 */
-.Home-box2::after {
-  top: -4px;
-  right: -4px;
-
-  border-top: 28px solid #ff9ed2;
-  border-left: 28px solid transparent;
-
-  filter:
-    drop-shadow(0 0 8px rgba(255,150,210,.45));
-}
 
 /* =================================================
    グランプリとは？
