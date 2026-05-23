@@ -4,7 +4,7 @@
 body {
   margin: 0;
 
-  background: #f9faff;
+  background: #eaeeff;
 
   font-family:
     "Hiragino Kaku Gothic ProN",
@@ -28,6 +28,7 @@ body {
 
   overflow: hidden;
 }
+
 
 /* =========================
    スクロール
@@ -60,7 +61,6 @@ body {
 
 /* =========================
    カード
-   ← 角丸デザインに変更
 ========================= */
 .Home-carousel-card {
   position: relative;
@@ -72,17 +72,20 @@ body {
 
   overflow: hidden;
 
+  /* ← 白寄りに変更 */
   background:
-    rgba(255,255,255,0.72);
+    rgba(255,255,255,1);
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 
   transition:
     transform 0.35s ease;
 
-  /* ← 追加 */
   border-radius: 28px;
+
+ 
 }
+
 
 /* =========================
    外枠
@@ -264,7 +267,7 @@ body {
    ドット
 ========================= */
 .Home-carousel-dots {
-  width: 90px;
+  width: 95px;
   height: 8px;
 
   margin-bottom: 3px;
@@ -272,11 +275,11 @@ body {
   background-image:
     radial-gradient(
       circle,
-      #bccaff 2px,
+      #ffbcc4 2px,
       transparent 2px
     );
 
-  background-size: 12px 8px;
+  background-size: 12px 10px;
 }
 
 /* =========================

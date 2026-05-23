@@ -11,12 +11,46 @@
   background:
     linear-gradient(
       180deg,
-      #eef3ff 0%,
-      #f7f9ff 70%,
-      #ffffff 100%
+      #eaeeff 0%,
+      #eaeeff 28%,
+      #edf0ff 48%,
+      #f3f5ff 68%,
+      #f6f6f6 86%,
+      #ececec 100%
     );
 
   overflow: hidden;
+}
+
+/* =================================================
+   下フェード
+================================================= */
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 34px;
+
+  height: 180px;
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(234,238,255,0) 0%,
+      rgba(234,238,255,.10) 18%,
+      rgba(236,240,255,.24) 36%,
+      rgba(240,243,255,.42) 52%,
+      rgba(243,245,255,.62) 68%,
+      rgba(238,240,248,.82) 84%,
+      rgba(234,238,255,.96) 100%
+    );
 }
 
 /* =================================================
@@ -31,9 +65,15 @@
   bottom: 0;
 
   width: 100%;
-  height: 30px;
+  height: 60px;
 
-  background: #ffffff;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(236,236,236,.92) 0%,
+      rgba(242,242,250,.96) 35%,
+      rgba(234,238,255,1) 100%
+    );
 
   z-index: 5;
 }
@@ -43,13 +83,20 @@
 ================================================= */
 .hero-card {
   position: relative;
+
   width: 100%;
   height: 320px;
+
   margin: 0 auto;
+
   overflow: hidden;
-  background: #ffffff;
-  box-shadow:
-    0 14px 32px rgba(60,90,180,.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.78),
+      rgba(248,250,255,.92)
+    );
 
   z-index: 2;
 }
@@ -69,9 +116,9 @@
   overflow: hidden;
 }
 
-
 /* =================================================
-   下白フェード
+   写真フェード
+   ← 境目を自然化
 ================================================= */
 .hero-image::after {
   content: "";
@@ -82,43 +129,17 @@
   background:
     linear-gradient(
       180deg,
-      rgba(255,255,255,0) 34%,
-      rgba(255,255,255,.10) 52%,
-      rgba(255,255,255,.84) 80%,
-      rgba(255,255,255,.96) 100%
+
+      rgba(234,238,255,0.02) 0%,
+      rgba(234,238,255,0.04) 22%,
+      rgba(236,240,255,0.10) 40%,
+      rgba(240,243,255,0.22) 56%,
+      rgba(243,245,255,0.46) 70%,
+      rgba(245,246,250,0.72) 84%,
+      rgba(234,238,255,0.96) 100%
     );
 
   z-index: 2;
-}
-
-/* =================================================
-   縦ブルーライン（独立版）
-================================================= */
-.hero-frame-bottom-left-straight {
-  position: absolute;
-
-  /* hero-card 基準で直接配置 */
-  left: 60px;
-  bottom: 0;
-
-  width: px;
-  height: 200px;
-
-  z-index: -10;
-
-  background:
-    linear-gradient(
-      180deg,
-      #8fe4ff 0%,
-      #42c8ff 28%,
-      #139cff 58%,
-      #0057d8 100%
-    );
-
-  box-shadow:
-    0 0 18px rgba(0,183,255,.28);
-
-  overflow: visible;
 }
 
 /* =================================================
@@ -128,7 +149,6 @@
   position: absolute;
 
   top: 40px;
-
   left: 50%;
 
   transform: translateX(-50%);
@@ -185,9 +205,9 @@
     linear-gradient(
       90deg,
       #68b3ff 0%,
-      #68b3ff 58%,
+      #4a56ff 58%,
       #ff7da7 58%,
-      #ff7da7 100%
+      #ff6394 100%
     );
 }
 
@@ -248,14 +268,49 @@
   position: absolute;
 
   left: 50%;
-  bottom: 6px;
+  bottom: 20px;
 
   transform: translateX(-50%);
 
-  width: calc(100% - 34px);
-  max-width: 760px;
+  width: calc(100% - 60px);
+  max-width: 650px;
+
+  height: 100px;
 
   z-index: 30;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =================================================
+   黒ガラス背景ボックス
+================================================= */
+.hero-mascot-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      280deg,
+      rgba(55,55,55,.34) 0%,
+      rgba(70,70,70,.26) 45%,
+      rgba(120,120,120,.18) 100%
+    );
+
+  backdrop-filter: blur(1px);
+
+  box-shadow:
+    0 5px 10px rgba(0,0,0,.16),
+    inset 0 1px 0 rgba(255,255,255,.10);
+
+  z-index: 0;
 }
 
 /* =================================================
@@ -265,8 +320,12 @@
   position: relative;
 
   width: 100%;
+  height: 100%;
 
-  height: 88px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
 }
 
 /* =================================================
@@ -293,7 +352,9 @@
   display: flex;
   align-items: center;
 
-  gap: 30px;
+  gap: 20px;
+
+  padding: 0 20px;
 }
 
 /* =================================================
@@ -302,57 +363,25 @@
 .balloon-circle {
   position: relative;
 
-  /* ← ここで位置調整 */
-  top: -10px;     /* 上へ */
-  left: 5px;     /* 右へはプラス、左へはマイナス */
-
-  width: 100px;
-  height: 100px;
+  width: 95px;
+  height: 80px;
 
   flex-shrink: 0;
 
-  border-radius: 50%;
+  border-radius: 20px;
 
   background:
     linear-gradient(
       180deg,
-      rgba(255,255,255,.98),
-      rgba(244,248,255,.98)
+      rgba(174,174,174,.98),
+      rgba(206,206,206,.98)
     );
-
-  border: 0px solid rgba(255,255,255,.95);
 
   box-shadow:
     0 0 0 3px #7da9ff,
     0 0 0 8px rgba(125,169,255,.14);
 
   overflow: hidden;
-}
-
-.balloon-circle::before {
-  content: "";
-
-  position: absolute;
-
-  inset: -10px;
-
-  border-radius: 50%;
-
-  border:
-    2px dashed rgba(90,140,255,.34);
-}
-
-.balloon-circle-image {
-  position: absolute;
-
-  inset: 7px;
-
-  width: calc(100% - 14px);
-  height: calc(100% - 14px);
-
-  object-fit: cover;
-
-  border-radius: 50%;
 }
 
 /* =================================================
@@ -363,18 +392,17 @@
 
   flex: 1;
 
-  min-height: 70px;
+  min-height: 60px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* ↓ 中央揃え */
   text-align: center;
 
-  padding: 0 22px;
+  padding: 0 20px;
 
-  font-size: 20px;
+  font-size: 13px;
   font-weight: 900;
 
   line-height: 1.3;
@@ -391,7 +419,7 @@
     );
 
   border:
-    3px solid #3b79f8;
+    2px solid #b8b8b8;
 
   border-radius: 18px;
 
@@ -399,20 +427,23 @@
     0 8px 18px rgba(80,120,220,.10);
 }
 
+/* =================================================
+   吹き出しのしっぽ
+================================================= */
 .balloon-text::before {
   content: "";
 
   position: absolute;
 
-  left: -11px;
+  left: -9px;
   top: 50%;
 
   transform:
     translateY(-50%)
     rotate(45deg);
 
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 
   background:
     linear-gradient(
@@ -422,7 +453,8 @@
     );
 
   border-left:
-    3px solid #3b79f8;
+    2px solid #b8b8b8;
+
   border-bottom:
-    3px solid #3b79f8;
+    2px solid #b8b8b8;
 }
