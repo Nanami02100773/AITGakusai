@@ -1,61 +1,98 @@
+/* =================================================
+   セクション全体
+================================================= */
 .stage-section {
   position: relative;
-  background: linear-gradient(150deg, #5f6dff 0%, #9fb3ff 40%, #b8bdff 100%);
+
+  background: linear-gradient(
+    150deg,
+    #5f6dff 0%,
+    #9fb3ff 40%,
+    #b8bdff 100%
+  );
+
   overflow: hidden;
 
   clip-path: polygon(
     0 0,
     100% 0,
-    100% 85%,   /* ← ここで斜めになる */
-    85% 100%,   /* ← ここがポイント */
+    100% 85%,
+    85% 100%,
     0 100%
   );
 }
-/* 斜め装飾 */
+
+/* =================================================
+   背景装飾
+================================================= */
 .stage-section::before {
   content: "";
+
   position: absolute;
-  top: 0px;
+
+  top: 0;
   right: -100px;
+
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, #7fa8ff, #d89bff);
+
+  background: linear-gradient(
+    135deg,
+    #7fa8ff,
+    #d89bff
+  );
+
   transform: rotate(45deg);
+
   opacity: 0.25;
+
   border-radius: 40px;
 }
 
-
-/* ===== 画像エリア ===== */
+/* =================================================
+   HERO
+================================================= */
 .stage-hero {
   margin-top: 50px;
+
   position: relative;
+
   height: 300px;
-  overflow: hidden;
+
+  overflow: visible; /* ← サムネ表示用 */
+
   z-index: 2;
 
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
-    25% 100%,  /* ← ここを右に寄せて坂を強く */
-    0 70%      /* ← 85% → 70%でより急な斜め */
+    25% 100%,
+    0 70%
   );
 }
 
-
-/* ===== メイン画像 ===== */
+/* =================================================
+   メイン画像
+================================================= */
 .stage-image {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
+  display: block;
 }
 
-/* ===== タイトル ===== */
+/* =================================================
+   タイトル
+================================================= */
 .stage-title {
-  position: absolute;   /* ← これが最重要 */
-  top: 10px;
+  position: absolute;
+
+  top: 15px;
   left: 50%;
+
   transform: translateX(-50%);
 
   z-index: 5;
@@ -64,80 +101,137 @@
   align-items: center;
   justify-content: center;
 
-  width: 280px;
-  height: 48px;
+  width: 260px;
+  height: 47px;
 
-  background: linear-gradient(90deg, #7fa8ff, #d89bff);
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
   color: #fff;
+
   font-size: 20px;
   font-weight: bold;
+
   border-radius: 10px;
-  border: 3px solid rgba(255, 255, 255, 0.35);
+
+  border: 2px solid rgba(255,255,255,0.55);
 
   box-shadow:
-    0 8px 20px rgba(120, 120, 200, 0.2),
-    inset 0 2px 0 rgba(255,255,255,0.6),
-    inset 0 -1px 0 rgba(255,255,255,0.25);
+    0 8px 20px rgba(160,170,255,0.14),
+    inset 0 2px 0 rgba(255,255,255,0.7),
+    inset 0 -2px 0 rgba(255,255,255,0.55);
+
+  overflow: hidden;
 }
+
+/* =================================================
+   サムネ一覧
+================================================= */
 .stage-thumbs {
-  z-index: 3;
+  position: absolute;
+
+  left: 50%;
+  bottom: 70px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px; /* ← 少し縮小 */
+
+  padding: 4px 10px; /* ← 小さく */
+
+  z-index: 20;
+
+  background: rgba(255,255,255,0.15);
+
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 8px 12px;
+
+  border: 1px solid rgba(255,255,255,0.35);
+
+  border-radius: 10px; /* ← 少し小さく */
 
   box-shadow:
     0 8px 20px rgba(0,0,0,0.15),
     inset 0 1px 0 rgba(255,255,255,0.6);
+
+  overflow-x: auto;
+
+  max-width: 90%;
 }
 
-/* スクロールバー消す */
-.stage-thumbs::-webkit-scrollbar {
-  display: none;
-}
-
-/* ===== サムネ1枚 ===== */
+/* =================================================
+   サムネ1枚
+================================================= */
 .stage-thumb {
-  width: 30px;
-  height: 30px;
+  width: 38px;   /* ← 52 → 38 */
+  height: 38px;
+
   object-fit: cover;
+
   border-radius: 5px;
+
   flex-shrink: 0;
+
   cursor: pointer;
-  transition: 0.2s;
+
+  border: 1px solid transparent;
+
+  transition: 0.2s ease;
 }
 
 /* ホバー */
 .stage-thumb:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 /* 選択中 */
 .stage-thumb.active {
   border: 2px solid #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(120,140,255,0.45);
 }
 
-
-/* ===== 下エリア ===== */
+/* =================================================
+   下エリア
+================================================= */
 .stage-bottom {
   margin-top: -20px;
-  padding-top:0px;
+
+  padding-top: 0px;
   padding-bottom: 50px;
+
   position: relative;
 }
 
-/* ===== 白カード ===== */
+/* =================================================
+   白カード
+================================================= */
 .stage-green-card {
   position: relative;
-  top: -60px; /* ← ここで上に上げる */
-  z-index: 3; /* ← heroより上に出す */
+
+  top: -60px;
+
+  z-index: 3;
 
   width: 95%;
   max-width: 620px;
+
   margin: 0 auto;
 
   padding: 20px 10px 15px;
 
-  background: linear-gradient(180deg, #ffffff 0%, #f9faff 100%);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f9faff 100%
+  );
+
   border-radius: 20px;
 
   text-align: center;
@@ -148,84 +242,133 @@
 
   overflow: hidden;
 
-  /* ← これ追加 */
   clip-path: polygon(
-    0 20px,      /* 左上削り */
+    0 20px,
     20px 0,
     calc(100% - 20px) 0,
     100% 20px,
     100% calc(100% - 20px),
-    calc(100% - 20px) 100%,  /* 右下削り */
+    calc(100% - 20px) 100%,
     20px 100%,
     0 calc(100% - 20px)
   );
 }
 
-
-/* 外側の色フチ（← NEW） */
+/* =================================================
+   左上外側
+================================================= */
 .stage-green-card::before {
   content: "";
+
   position: absolute;
+
   left: 0;
   top: 0;
-  width: 80px;   /* ← 74 → 80 */
+
+  width: 80px;
   height: 80px;
+
   background: #8c9dff;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    0 100%
+  );
+
   z-index: 1;
 }
 
-/* 本体（三角） */
+/* 左上メイン */
 .corner-tl {
   position: absolute;
+
   left: 0;
   top: 0;
+
   width: 70px;
   height: 70px;
 
-  background: linear-gradient(135deg, #6193ff, #d89bff);
+  background: linear-gradient(
+    135deg,
+    #6193ff,
+    #d89bff
+  );
 
-  clip-path: polygon(0 0, 100% 0, 0 100%);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    0 100%
+  );
+
   z-index: 2;
 }
 
 /* 白ライン */
 .stage-green-card::after {
   content: "";
+
   position: absolute;
+
   left: 0;
   top: 0;
- width: 5px;   /* ← 66 → 68でもOK */
+
+  width: 5px;
   height: 5px;
-  transform: translate(6px, 6px); /* ← 少し奥へ */
-  clip-path: polygon(0 0, 100% 0, 0 100%);
+
   transform: translate(4px, 4px);
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    0 100%
+  );
 
   z-index: 3;
 }
 
-/* 右下（三角）← こっちに移動 */
+/* =================================================
+   右下
+================================================= */
 .corner-br {
   position: absolute;
+
   right: 0;
   bottom: 0;
+
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #6193ff, #d89bff);
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+  background: linear-gradient(
+    135deg,
+    #6193ff,
+    #d89bff
+  );
+
+  clip-path: polygon(
+    100% 0,
+    0% 100%,
+    100% 100%
+  );
+
   z-index: 2;
 }
 
-/* ===== テキスト ===== */
+/* =================================================
+   テキスト
+================================================= */
 .stage-info-text {
   position: relative;
   z-index: 3;
+
   color: #333;
 }
 
 .stage-sub {
   font-size: 13px;
+
   color: #6a6a8a;
+
   margin-bottom: 6px;
 }
 
@@ -233,7 +376,12 @@
   font-size: 30px;
   font-weight: 900;
 
-  background: linear-gradient(90deg, #6a8cff, #ff7ac6);
+  background: linear-gradient(
+    90deg,
+    #6a8cff,
+    #ff7ac6
+  );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -243,10 +391,12 @@
 /* 点線 */
 .stage-main::after {
   content: "";
+
   display: block;
 
   width: 70%;
   height: 2px;
+
   margin: 12px auto 14px;
 
   background: repeating-linear-gradient(
@@ -260,15 +410,24 @@
   opacity: 0.7;
 }
 
+/* =================================================
+   上ライン
+================================================= */
 .top-line {
   position: absolute;
+
   top: 0;
   left: 0;
   right: 0;
 
   height: 4px;
 
-  background: linear-gradient(to right, #8c9dff, #fed6e3);
+  background: linear-gradient(
+    to right,
+    #8c9dff,
+    #fed6e3
+  );
+
   border-radius: 999px;
 
   z-index: 10;

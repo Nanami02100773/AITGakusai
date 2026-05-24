@@ -34,7 +34,7 @@
   right: 0;
   bottom: 34px;
 
-  height: 180px;
+  height: 150px;
 
   z-index: 4;
 
@@ -275,15 +275,47 @@
   width: calc(100% - 60px);
   max-width: 650px;
 
-  height: 100px;
+  height: 100px; /* ← 少し高さ追加 */
 
   z-index: 30;
 
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
+/* =================================================
+   名前ラベル
+================================================= */
+.hero-mascot-name {
+  position: absolute;
+
+  top: 15px;
+  left: 150px;
+
+  padding: 4px 20px;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5aa8ff 0%,
+      #6a72ff 100%
+    );
+
+  box-shadow:
+    0 4px 10px rgba(70,100,220,.25);
+
+  z-index: 50;
+}
 /* =================================================
    黒ガラス背景ボックス
 ================================================= */
@@ -389,10 +421,11 @@
 ================================================= */
 .balloon-text {
   position: relative;
+  top: 10px;
 
   flex: 1;
 
-  min-height: 60px;
+  min-height: 50px;
 
   display: flex;
   align-items: center;
@@ -400,7 +433,7 @@
 
   text-align: center;
 
-  padding: 0 20px;
+  padding: 10px 15px;
 
   font-size: 13px;
   font-weight: 900;

@@ -6,7 +6,7 @@
   max-width: 800px;
   margin: 20px auto 100px;
 
-  border-radius: 20px;
+  border-radius: 5px;
 
  
 }
@@ -15,5 +15,5 @@
 }
 
 body {
-  background: #f7f8ff;
+  background: #ffffff;
 }

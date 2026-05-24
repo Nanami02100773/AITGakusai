@@ -1,214 +1,306 @@
 /* ===== セクション ===== */
-.timetable-section {
-  padding: 24px 16px;
+.timetable-section{
+  padding: 10px 0px;
 }
 
 /* ===== 外枠 ===== */
-.timetable {
-  background: linear-gradient(180deg, #ffffff, #f8f9ff);
-  padding: 20px;
-  border-radius: 24px;
+.timetable{
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfbff 100%
+    );
+
+  border-radius: 10px;
+  /* ← 左余白を増やす */
+  padding: 20px 14px 10px 20px;
 
   box-shadow:
-    0 16px 32px rgba(120, 100, 255, 0.08),
-    inset 0 1px 0 rgba(255,255,255,0.6);
+    0 8px 24px rgba(110,120,255,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
 
-  height: 500px;
+  height: 600px;
+
   overflow: hidden;
+
+  border: 1px solid #eef0ff;
 }
 
 /* ===== スクロール ===== */
-.timetable-scroll {
+.timetable-scroll{
   height: 100%;
+
   overflow-y: auto;
-  padding-right: 6px;
+
+  padding-right: 4px;
+}
+
+/* スクロールバー */
+.timetable-scroll::-webkit-scrollbar{
+  width: 8px;
+}
+
+.timetable-scroll::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.timetable-scroll::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.22);
+  border-radius: 999px;
 }
 
 /* ===== タイムライン ===== */
-.time-slot {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.time-slot{
   position: relative;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 /* 縦線 */
-.time-slot::before {
+.time-slot::before{
   content: "";
+
   position: absolute;
-  left: 14px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(#dcdcff, #cfcfff);
+
+  /* ← 少し右へ */
+  left: 20px;
+
+  top: 10px;
+  bottom: 10px;
+
+  width: 4px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #86a7ff 0%,
+      #6f8dff 100%
+    );
 }
 
 /* ===== 各アイテム ===== */
-.time-slot-item {
+.time-slot-item{
   position: relative;
-  padding: 16px 0 16px 44px; /* ← コンパクト化 */
+
+  padding-left: 70px;
+
+  padding-bottom: 38px;
+
+  margin-bottom: 22px;
+}
+
+/* ===== 横線 ===== */
+.time-slot-item::after{
+  content: "";
+
+  position: absolute;
+
+  /* ↓ 開始位置を調整 */
+  left: 70px;
+
+  /* ↓ 終了位置 */
+  right: 0;
+
+  bottom: 0;
+
+  height: 1.5px;
+
+  background: #e5e9f7;
+}
+
+/* 最後だけ線なし */
+.time-slot-item:last-child::after{
+  display: none;
 }
 
 /* 丸 */
-.time-slot-item::before {
+.time-slot-item::before{
   content: "";
+
   position: absolute;
-  left: 8px;
-  top: 18px;
-  width: 15px;
-  height: 15px;
-  background: #fff;
-  border: 2px solid #7f8cff;
+
+  /* ← 線と合わせる */
+  left: 13px;
+
+  top: 2px;
+
+  width: 18px;
+  height: 18px;
+
   border-radius: 50%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #86a7ff,
+      #6f8dff
+    );
+
+  border: 1.5px solid #ffffff;
+
+  box-shadow:
+    0 0 0 2px #7c99ff;
+
+  z-index: 3;
 }
 
 /* ===== 時間 ===== */
-.time {
-  font-size: 12px;
-  font-weight: 600;
-  color: #7a7aa0;
-  margin-bottom: 4px;
+.time{
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #5d7fff;
+
+  margin-bottom: 14px;
+
+  letter-spacing: 0.3px;
 }
 
 /* ===== イベントカード ===== */
-.event {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 10px 14px;
+.event{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(134,167,255,0.14),
+      rgba(111,141,255,0.12)
+    );
+
+  border: 2px solid #d6e2ff;
+
+  border-radius: 14px;
+
+  min-height: 58px;
+
+  padding: 0 24px;
 
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
 
-  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.9);
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s ease;
 }
 
-/* PCだけ軽く浮く（拡大なし） */
-@media (hover: hover) {
-  .event:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-  }
-}
-
-/* タップ時 */
-.event:active {
-  transform: scale(0.97);
-}
-
-/* 左 */
-.event-left {
+/* 左側 */
+.event-left{
   display: flex;
   align-items: center;
-  gap: 10px;
+
+  gap: 22px;
 }
 
 /* アイコン */
-.event-icon {
-  width: 34px;
-  height: 34px;
+.event-icon{
+  width: 35px;
+  height: 35px;
+
   border-radius: 50%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background:
+    linear-gradient(
+      90deg,
+      #86a7ff,
+      #6f8dff
+    );
 
-  font-size: 15px;
-
-  background: linear-gradient(135deg, #e9e7ff, #f5f6ff);
-  box-shadow: 0 3px 8px rgba(120,120,255,0.12);
+  flex-shrink: 0;
 }
 
 /* タイトル */
-.event-title {
-  font-weight: 600;
-  font-size: 14px;
-  color: #2f2f55;
+.event-title{
+  font-size: 15px;
+  font-weight: 800;
+
+  color: #2347c7;
+
+  line-height: 1.4;
 }
 
-/* ===== トグル矢印 ===== */
-.toggle-icon {
-  width: 10px;
-  height: 10px;
+/* ===== 矢印 ===== */
+.toggle-icon{
+  width: 15px;
+  height: 15px;
 
-  border-right: 2px solid #8a8ab0;
-  border-bottom: 2px solid #8a8ab0;
+  border-right: 5px solid #6f8dff;
+  border-bottom: 5px solid #6f8dff;
 
   transform: rotate(45deg);
-  transition: transform 0.3s ease;
-  margin-left: 8px;
+
+  margin-right: 10px;
+
+  transition: transform 0.25s ease;
 }
 
-.toggle-icon.open {
+.toggle-icon.open{
   transform: rotate(-135deg);
 }
 
-/* ===== 色バリエーション ===== */
-.time-slot-item:nth-child(1) .event-icon {
-  background: linear-gradient(135deg, #e9e7ff, #f3f2ff);
-}
-
-.time-slot-item:nth-child(2) .event-icon {
-  background: linear-gradient(135deg, #e6f0ff, #eef4ff);
-}
-
-.time-slot-item:nth-child(3) .event-icon {
-  background: linear-gradient(135deg, #e6fff5, #f0fff9);
-}
-
-.time-slot-item:nth-child(4) .event-icon {
-  background: linear-gradient(135deg, #fff3e6, #fff8f0);
-}
-
 /* ===== 詳細 ===== */
-.event-detail {
-  margin-top: 10px;
+.event-detail{
+  margin-top: 14px;
+
   background: #ffffff;
-  border-radius: 12px;
-  padding: 12px;
 
-  animation: fadeIn 0.2s ease;
+  border-radius: 18px;
 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 18px;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.05);
+
+  animation: fadeIn 0.25s ease;
 }
 
 /* ===== アニメーション ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== PC ===== */
-@media (min-width: 768px) {
+@media (min-width: 768px){
 
-  .time-slot::before {
-    left: 150px;
+  .timetable{
+    padding: 28px 24px 20px 30px;
   }
 
-  .time-slot-item {
-    padding-left: 180px;
+  .time-slot::before{
+    left: 52px;
   }
 
-  .time-slot-item::before {
-    left: 144px;
+  .time-slot-item{
+    padding-left: 130px;
   }
 
-  .time {
-    position: absolute;
-    left: 0;
-    width: 120px;
-    text-align: right;
-    margin: 0;
+  .time-slot-item::before{
+    left: 43px;
   }
 
-  .event {
-    width: 340px;
+  .event{
+    max-width: 860px;
   }
 
-  .event-detail {
-    margin-left: 130px;
+  .event-title{
+    font-size: 22px;
+  }
+
+  .event-icon{
+    width: 70px;
+    height: 70px;
   }
 }

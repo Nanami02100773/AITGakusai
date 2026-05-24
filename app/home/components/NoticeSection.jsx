@@ -32,15 +32,6 @@ const NoticeSection = () => {
             className={`Home-notice-item n${index + 1}`}
           >
 
-    <svg
-  className="notice-wave"
-  viewBox="0 0 120 120"
-  preserveAspectRatio="none"
->
-
-
-
-</svg>
 
             {/* ===== 番号 ===== */}
   <div

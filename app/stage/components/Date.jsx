@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Date.css";
 
 const Date = ({ onDayChange }) => {
+
   const [selectedDay, setSelectedDay] = useState(1);
 
   useEffect(() => {
@@ -12,20 +13,38 @@ const Date = ({ onDayChange }) => {
   }, [selectedDay, onDayChange]);
 
   return (
+
     <div className="Stage-date-toggle">
-      <button
-        className={selectedDay === 1 ? "active" : ""}
-        onClick={() => setSelectedDay(1)}
+
+      <div
+        className={`Stage-date-toggle-inner ${
+          selectedDay === 2 ? "day2" : ""
+        }`}
       >
-        1日目
-      </button>
-      <button
-        className={selectedDay === 2 ? "active" : ""}
-        onClick={() => setSelectedDay(2)}
-      >
-        2日目
-      </button>
+
+        {/* スライド背景 */}
+        <div className="Stage-date-toggle-slider"></div>
+
+        {/* 1日目 */}
+        <button
+          className={selectedDay === 1 ? "active" : ""}
+          onClick={() => setSelectedDay(1)}
+        >
+          1日目
+        </button>
+
+        {/* 2日目 */}
+        <button
+          className={selectedDay === 2 ? "active" : ""}
+          onClick={() => setSelectedDay(2)}
+        >
+          2日目
+        </button>
+
+      </div>
+
     </div>
+
   );
 };
 

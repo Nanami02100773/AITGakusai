@@ -94,6 +94,10 @@ export default function HeroSection({
               animate ? "animate" : ""
             }`}
           >
+              {/* 名前 */}
+  <div className="hero-mascot-name">
+    リード君
+  </div>
 
             <div className="balloon-inner">
 
