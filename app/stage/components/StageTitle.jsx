@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import "./StageTitle.css";
 
@@ -18,6 +19,7 @@ const StageHeader = () => {
       setMainImage((prev) => {
         const currentIndex = images.indexOf(prev);
         const nextIndex = (currentIndex + 1) % images.length;
+
         return images[nextIndex];
       });
     }, 3000);
@@ -28,35 +30,71 @@ const StageHeader = () => {
   return (
     <section className="stage-section">
 
-      {/* ===== ヒーロー ===== */}
+      {/* =================================================
+          HERO
+      ================================================= */}
       <div className="stage-hero">
-        <img src={mainImage} alt="ステージ" className="stage-image" />
 
+        <img
+          src={mainImage}
+          alt="ステージ"
+          className="stage-image"
+        />
+
+        {/* タイトル */}
         <div className="stage-title">
           ステージ情報
         </div>
 
+        {/* サムネ */}
         <div className="stage-thumbs">
           {images.map((img, i) => (
             <img
               key={i}
               src={img}
-              className={`stage-thumb ${mainImage === img ? "active" : ""}`}
-              onClick={() => setMainImage(img)}
               alt=""
+              className={`stage-thumb ${
+                mainImage === img ? "active" : ""
+              }`}
+              onClick={() => setMainImage(img)}
             />
           ))}
         </div>
+
       </div>
 
-      {/* ===== 下 ===== */}
-     <div class="stage-green-card">
-  <div class="corner-br"></div>
+      {/* =================================================
+          下エリア
+      ================================================= */}
+      <div className="stage-bottom">
 
-  {/* 👇 これ追加 */}
-  <div className="top-line"></div>
+        {/* =================================================
+            白カード
+        ================================================= */}
+        <div className="stage-green-card">
 
-  <div className="stage-info-text">
+
+  <div className="line-tl"></div>
+  <div className="line-tr"></div>
+  <div className="line-bl"></div>
+  <div className="line-br"></div>
+
+          {/* 外側フレーム */}
+          <div className="stage-frame"></div>
+
+          {/* 上バー */}
+          <div className="top-line"></div>
+
+          {/* 左上装飾 */}
+          <div className="stage-corner-tl"></div>
+
+          {/* 右下装飾 */}
+          <div className="corner-br"></div>
+
+          {/* =================================================
+              テキスト
+          ================================================= */}
+          <div className="stage-info-text">
 
             <p className="stage-sub">
               人気アイドルやバンドのライブ、楽しいミニゲームなど
@@ -67,13 +105,17 @@ const StageHeader = () => {
             </h2>
 
             <p className="stage-desc">
-              参加して景品をゲットできるチャンスもあるので<br />
+              参加して景品をゲットできるチャンスもあるので
+              <br />
               見ても参加しても楽しめます♪
             </p>
 
           </div>
+
         </div>
-    
+
+      </div>
+
     </section>
   );
 };
