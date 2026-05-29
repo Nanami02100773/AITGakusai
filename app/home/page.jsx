@@ -72,7 +72,7 @@ export default function Page() {
     return () => clearInterval(timer);
   }, [images.length]);
 
-  if (loading) return <Loading />;
+  // if (loading) return <Loading />;
   if (isMaintenance) return <Maintenance />;
 
   return (

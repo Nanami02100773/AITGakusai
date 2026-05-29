@@ -8,7 +8,7 @@
 .Project2Section-container {
   width: 95%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   margin-top: -60px;
 
   background: #ffffff;
@@ -17,6 +17,7 @@
 
   box-shadow: 0 15px 40px rgba(120,100,255,0.08);
 }
+
 
 
 /* ===== タイトル ===== */
@@ -89,7 +90,6 @@
   width: 100%;
   border-radius: 20px;
   padding: 10px;
-  text-decoration: none;
 
   background: linear-gradient(
     145deg,
@@ -114,6 +114,7 @@
 
 /* 点線 */
 
+
 .Project2-card::after {
   --dot-size: 3px;
   --dot-gap: 10px;
@@ -134,23 +135,21 @@
 
   opacity: 0.6;
 
-  /* 👇 これ追加 */
   -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
   mask-image: linear-gradient(to right, black 90%, transparent 100%);
 }
 
+
 /* ===== 画像 ===== */
 .Project2-image.fancy {
   position: relative;
-  height: 90px;
+  height: 100px;
   border-radius: 16px;
   background: linear-gradient(135deg, #e3e6ff, #cfd6ff);
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
 
