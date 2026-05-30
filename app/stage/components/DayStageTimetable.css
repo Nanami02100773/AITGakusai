@@ -94,7 +94,7 @@
 
   padding-bottom: 20px;
 
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 }
 
 /* ===== 横線 ===== */
@@ -137,8 +137,8 @@
   background:
     linear-gradient(
       135deg,
-      #ffb3c4 0%,
-      #ff5980 100%
+      #b3c7ff 0%,
+      #6159ff 100%
     );
 
   border: 2px solid #ffffff;
@@ -167,9 +167,9 @@
 
   background: #ffffff;
 
-  border-radius: 20px;
+  border-radius: 10px;
 
-  min-height: 60px;
+  min-height: 50px;
 
   padding: 0 22px 0 0;
 
@@ -225,8 +225,8 @@
 
 /* ===== アイコンボックス ===== */
 .event-icon{
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
 
   border-radius: 50px;
 
