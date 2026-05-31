@@ -1,16 +1,15 @@
 /* ===== セクション ===== */
 .timetable-section{
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 
 /* ===== 外枠 ===== */
 .timetable{
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f5f7ff 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5f7ff 100%
+  );
 
   border-radius: 10px;
 
@@ -30,11 +29,9 @@
 /* ===== スクロール ===== */
 .timetable-scroll{
   height: 100%;
-
   overflow-y: auto;
 
   padding-right: 20px;
-
   margin-right: -10px;
 }
 
@@ -49,21 +46,17 @@
 
 .timetable-scroll::-webkit-scrollbar-thumb{
   background: rgba(120,130,255,0.35);
-
   border-radius: 999px;
 }
 
 /* ===== タイムライン ===== */
 .time-slot{
   position: relative;
-
   list-style: none;
-
   margin: 0;
   padding: 0;
 }
 
-/* ===== 縦線 ===== */
 .time-slot::before{
   content: "";
 
@@ -78,12 +71,11 @@
 
   border-radius: 999px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #86a7ff 0%,
-      #6f8dff 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #86a7ff 0%,
+    #6f8dff 100%
+  );
 }
 
 /* ===== 各アイテム ===== */
@@ -97,7 +89,6 @@
   margin-bottom: 10px;
 }
 
-/* ===== 横線 ===== */
 .time-slot-item::after{
   content: "";
 
@@ -113,7 +104,6 @@
   background: #dbe2ff;
 }
 
-/* ===== 最後だけ線なし ===== */
 .time-slot-item:last-child::after{
   display: none;
 }
@@ -125,7 +115,6 @@
   position: absolute;
 
   left: 13px;
-
   top: 2px;
 
   width: 18px;
@@ -133,18 +122,16 @@
 
   border-radius: 50%;
 
-  
-  background:
-    linear-gradient(
-      135deg,
-      #b3c7ff 0%,
-      #6159ff 100%
-    );
+  background: linear-gradient(
+    135deg,
+    #b3c7ff 0%,
+    #6159ff 100%
+  );
 
   border: 2px solid #ffffff;
 
   box-shadow:
-    0 0 0 1px rgba(104, 115, 155, 0.35);
+    0 0 0 1px rgba(104,115,155,0.35);
 
   z-index: 3;
 }
@@ -157,8 +144,6 @@
   color: #6e7697;
 
   margin-bottom: 10px;
-
-  letter-spacing: 0.3px;
 }
 
 /* ===== イベントカード ===== */
@@ -188,7 +173,6 @@
   transition: 0.2s ease;
 }
 
-/* ===== 左青ライン ===== */
 .event::before{
   content: "";
 
@@ -200,15 +184,13 @@
   width: 10px;
   height: 100%;
 
-  background:
-    linear-gradient(
-      180deg,
-      #86a7ff,
-      #6f8dff
-    );
+  background: linear-gradient(
+    180deg,
+    #86a7ff,
+    #6f8dff
+  );
 }
 
-/* ===== ホバー ===== */
 .event:hover{
   transform: translateY(-2px);
 }
@@ -218,52 +200,41 @@
   display: flex;
   align-items: center;
 
-  gap: 18px;
+  gap: 12px;
 
-  padding-left: 24px;
+  padding-left: 18px;
 }
 
-/* ===== アイコンボックス ===== */
+/* ===== アイコン ===== */
 .event-icon{
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
 
-  border-radius: 50px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f8fbff,
-      #eef2ff
-    );
-
-  border: 1px solid #dfe5ff;
-
-  box-shadow:
-    0 4px 12px rgba(120,140,255,0.12),
-    inset 0 1px 0 rgba(255,255,255,0.95);
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  overflow: hidden;
+  background: #ffffff;
 
-  flex-shrink: 0;
+  border: 1.5px solid #d9e2ff;
+
+  border-radius: 50px;
+
+  padding: 4px;
 }
-
-/* ===== アイコン画像 ===== */
 .event-icon img{
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* ===== タイトル ===== */
 .event-title{
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
 
   color: #4f67d8;
 
@@ -291,12 +262,11 @@
 .event-detail{
   margin-top: 14px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f5f7ff 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5f7ff 100%
+  );
 
   border-radius: 18px;
 
@@ -310,7 +280,6 @@
   animation: fadeIn 0.25s ease;
 }
 
-/* ===== 詳細画像ボックス ===== */
 .event-image{
   width: 100%;
   height: 200px;
@@ -325,8 +294,6 @@
 
   box-shadow:
     0 8px 20px rgba(120,140,255,0.10);
-
-  background: #ffffff;
 }
 
 /* ===== アニメーション ===== */
@@ -365,12 +332,17 @@
     max-width: 860px;
   }
 
-  .event-title{
-    font-size: 22px;
+  .event-left{
+    gap: 18px;
+    padding-left: 24px;
   }
 
   .event-icon{
-    width: 70px;
-    height: 70px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .event-title{
+    font-size: 22px;
   }
 }

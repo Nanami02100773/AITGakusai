@@ -14,11 +14,18 @@ export default function SurveySection() {
   return (
     <section className="SurveySection">
 
+      {/* 上ライン */}
+  <div className="Survey-top-line"></div>
+
       {/* 左白パーツ */}
       <div className="Survey-white-left" />
+      
 
       {/* 中央白パーツ */}
       <div className="Survey-white-center" />
+      <div className="Survey-diagonal-line"></div>
+<div className="Survey-diagonal-line-2"></div>
+
 
       {/* 青い斜め背景 */}
       <div className="Survey-blue-bg" />

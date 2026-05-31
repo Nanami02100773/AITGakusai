@@ -11,7 +11,7 @@ export default function Carousel({ items = [] }) {
 
   const fallbackItems = [
     {
-      title: "企業広告①",
+      title: "マスコット総選挙",
       description: "企業名：紹介文など",
       image: "/sample1.jpg",
     },

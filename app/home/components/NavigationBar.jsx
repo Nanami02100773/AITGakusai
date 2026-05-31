@@ -6,15 +6,18 @@ import { useRouter } from "next/navigation";
 import "./NavigationBar.css";
 
 const logos = [
-  "/images/logo1.png",
-  "/images/logo2.png",
-  "/images/logo3.png",
+  "/homecenterlogo/ait.gif",
+  "/homecenterlogo/aitfes.png",
+  "/homecenterlogo/poster.png",
 ];
+
+// 無限ループ用に複製
+const loopLogos = [...logos, ...logos, ...logos];
 
 const NavigationBar = () => {
   const router = useRouter();
 
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(logos.length);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -27,26 +30,26 @@ const NavigationBar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // 無限ループ処理
+  // 無限ループ
   useEffect(() => {
-    if (index === logos.length) {
+    if (index >= logos.length * 2) {
       setTimeout(() => {
         setIsTransitioning(false);
-        setIndex(0);
+        setIndex(logos.length);
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setIsTransitioning(true);
+          });
+        });
       }, 500);
-    } else {
-      setIsTransitioning(true);
     }
   }, [index]);
 
   return (
     <>
-      {/* =========================
-          トップバー
-      ========================= */}
       <header className="top-bar">
 
-        {/* 戻る */}
         <button
           className="nav-button"
           onClick={() => router.back()}
@@ -67,13 +70,13 @@ const NavigationBar = () => {
           <div
             className="logo-track"
             style={{
-              transform: `translateY(-${index * 100}%)`,
+              transform: `translateY(-${index * 36}px)`,
               transition: isTransitioning
-                ? "transform 0.5s ease-in-out"
+                ? "transform .5s ease-in-out"
                 : "none",
             }}
           >
-            {[...logos, logos[0]].map((src, i) => (
+            {loopLogos.map((src, i) => (
               <div className="logo-slide" key={i}>
                 <img src={src} alt="" />
               </div>
@@ -81,7 +84,6 @@ const NavigationBar = () => {
           </div>
         </div>
 
-        {/* メニュー開閉 */}
         <button
           className="nav-button"
           onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -90,9 +92,6 @@ const NavigationBar = () => {
         </button>
       </header>
 
-      {/* =========================
-          オーバーレイ
-      ========================= */}
       {isMenuOpen && (
         <div
           className="overlay"
@@ -100,12 +99,7 @@ const NavigationBar = () => {
         />
       )}
 
-      {/* =========================
-          サイドメニュー
-      ========================= */}
       <div className={`side-menu ${isMenuOpen ? "open" : ""}`}>
-
-        {/* ヘッダー */}
         <div className="menu-header">
           <button
             className="menu-back"
@@ -134,9 +128,6 @@ const NavigationBar = () => {
         </Link>
       </div>
 
-      {/* =========================
-          下部ナビ（画像版）
-      ========================= */}
       <nav className="bottom-nav">
 
         <Link href="/home" className="nav-item">

@@ -1,26 +1,29 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import "./NavigationBar.css";
 
 const logos = [
-  "/homecenterlogo/ait.gif",
+ "/homecenterlogo/ait.gif",
   "/homecenterlogo/aitfes.png",
   "/homecenterlogo/poster.png",
 ];
 
 const NavigationBar = () => {
   const router = useRouter();
+
   const [index, setIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // ロゴ自動ローテーション
+  // ロゴローテーション
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => prev + 1);
     }, 2500);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -38,8 +41,16 @@ const NavigationBar = () => {
 
   return (
     <>
+      {/* =========================
+          トップバー
+      ========================= */}
       <header className="top-bar">
-        <button className="nav-button" onClick={() => router.back()}>
+
+        {/* 戻る */}
+        <button
+          className="nav-button"
+          onClick={() => router.back()}
+        >
           ←
         </button>
 
@@ -70,7 +81,7 @@ const NavigationBar = () => {
           </div>
         </div>
 
-        {/* ≡ ボタン（トグル） */}
+        {/* メニュー開閉 */}
         <button
           className="nav-button"
           onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -79,7 +90,9 @@ const NavigationBar = () => {
         </button>
       </header>
 
-      {/* 背景オーバーレイ */}
+      {/* =========================
+          オーバーレイ
+      ========================= */}
       {isMenuOpen && (
         <div
           className="overlay"
@@ -87,9 +100,22 @@ const NavigationBar = () => {
         />
       )}
 
-      {/* 右側サイドメニュー */}
+      {/* =========================
+          サイドメニュー
+      ========================= */}
       <div className={`side-menu ${isMenuOpen ? "open" : ""}`}>
-        <div className="menu-header">Menu</div>
+
+        {/* ヘッダー */}
+        <div className="menu-header">
+          <button
+            className="menu-back"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            ＜ 戻る
+          </button>
+
+          <span>Menu</span>
+        </div>
 
         <Link
           href="/Guide"
@@ -108,13 +134,51 @@ const NavigationBar = () => {
         </Link>
       </div>
 
-      {/* 下部ナビ */}
+      {/* =========================
+          下部ナビ（画像版）
+      ========================= */}
       <nav className="bottom-nav">
-        <Link href="/home" className="nav-item">🏠</Link>
-        <Link href="/stage" className="nav-item">🏢</Link>
-        <Link href="/map" className="nav-item">📍</Link>
-        <Link href="/Project2" className="nav-item">📅</Link>
-        <Link href="/question" className="nav-item">💬</Link>
+
+        <Link href="/home" className="nav-item">
+          <img
+            src="/NavigationIcons/home.png"
+            alt="home"
+            className="nav-icon-img"
+          />
+        </Link>
+
+        <Link href="/stage" className="nav-item">
+          <img
+            src="/NavigationIcons/stage.png"
+            alt="stage"
+            className="nav-icon-img"
+          />
+        </Link>
+
+        <Link href="/map" className="nav-item">
+          <img
+            src="/NavigationIcons/map.png"
+            alt="map"
+            className="nav-icon-img"
+          />
+        </Link>
+
+        <Link href="/Project2" className="nav-item">
+          <img
+            src="/NavigationIcons/calendar.png"
+            alt="calendar"
+            className="nav-icon-img"
+          />
+        </Link>
+
+        <Link href="/question" className="nav-item">
+          <img
+            src="/NavigationIcons/chat.png"
+            alt="chat"
+            className="nav-icon-img"
+          />
+        </Link>
+
       </nav>
     </>
   );

@@ -11,9 +11,20 @@
   overflow: hidden;
 }
 
-/* =================================================
-   左白パーツ
-================================================= */
+.Survey-top-line{
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: #dbe4ff;
+
+  z-index: 1;
+}
+
 .Survey-white-left {
   position: absolute;
 
@@ -32,8 +43,26 @@
     30% 100%
   );
 
-  z-index: 3;
+  z-index: 2;
 }
+
+.Survey-white-left::after{
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: #dbe4ff;
+
+  z-index: -0px;
+}
+
+
 
 /* =================================================
    中央白パーツ
@@ -50,6 +79,54 @@
   background: #ffffff;
 
   z-index: 3;
+}
+
+.Survey-white-center::after{
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: #dbe4ff;
+}
+
+.Survey-diagonal-line{
+  position: absolute;
+
+  top: 0px;
+  right: 300px;
+
+  width: 100px;
+  height: 2px;
+
+  background: #dbe4ff;
+
+  transform: rotate(28deg);
+
+  transform-origin: left center;
+
+  z-index: 4;
+}
+
+.Survey-diagonal-line-2{
+  position: absolute;
+
+  top: 105px;      /* ← 完全に別の位置 */
+  right: -124px;
+
+  width: 260px;
+  height: 2px;
+
+  background: #dbe4ff;
+
+  transform: rotate(28deg);
+
+  z-index: 2;
 }
 
 /* =================================================
@@ -102,7 +179,7 @@
     60% 100%
   );
 
-  z-index: 0;
+  z-index: 4;
 }
 
 /* =================================================

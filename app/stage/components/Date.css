@@ -1,85 +1,103 @@
-/* =================================================
+/* ========================================
    ラッパー
-================================================= */
-.Stage-date-toggle{
+======================================== */
+.Stage-date-toggle {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-top: 34px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
-/* =================================================
-   全体カプセル
-================================================= */
-.Stage-date-toggle-inner{
+/* ========================================
+   カプセル本体
+======================================== */
+
+.Stage-date-toggle-inner {
   position: relative;
+
+  width: 200px;
+  height: 50px;
 
   display: flex;
   align-items: center;
 
-  width: 240px;     /* ← 小さく */
-  height: 58px;     /* ← 縦幅を狭く */
-
-  padding: 5px;
+  padding: 6px;
 
   border-radius: 999px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #f8f9ff,
-      #ffffff
-    );
-
-  border: 1px solid #eceeff;
+  background: #ffffff;
 
   box-shadow:
-    0 6px 18px rgba(120,130,255,0.10),
-    inset 0 1px 0 rgba(255,255,255,0.95);
+    0 10px 20px rgba(100, 120, 255, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.95);
 
   overflow: hidden;
 }
 
-/* =================================================
-   スライド背景
-================================================= */
-.Stage-date-toggle-slider{
+/* 内側の白枠 */
+
+.Stage-date-toggle-inner::before {
+  content: "";
+
   position: absolute;
 
-  top: 5px;
-  left: 5px;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
 
-  width: calc(50% - 5px);
-  height: calc(100% - 10px);
+  border-radius: 999px;
+
+  border: 2px solid #edf0ff;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* ========================================
+   スライダー
+======================================== */
+
+.Stage-date-toggle-slider {
+  position: absolute;
+
+  top: 6px;
+  left: 6px;
+
+  width: calc(50% - 6px);
+  height: calc(100% - 12px);
 
   border-radius: 999px;
 
   background:
     linear-gradient(
-      90deg,
-      #86a7ff,
-      #6f8dff
+      135deg,
+      #a8bcff 0%,
+      #7b98ff 50%,
+      #5f80ff 100%
     );
 
-  box-shadow:
-    0 6px 18px rgba(126,140,255,0.22);
+ 
 
-  transition: 0.4s cubic-bezier(.22,1,.36,1);
+  transition: transform 0.45s cubic-bezier(.22,1,.36,1);
 
   z-index: 1;
 }
 
-/* 2日目 */
-.Stage-date-toggle-inner.day2
-.Stage-date-toggle-slider{
+/* 2日目選択 */
+
+.Stage-date-toggle-inner.day2 .Stage-date-toggle-slider {
   transform: translateX(100%);
 }
 
-/* =================================================
+/* ========================================
    ボタン
-================================================= */
-.Stage-date-toggle button{
+======================================== */
+
+.Stage-date-toggle button {
   position: relative;
   z-index: 2;
 
@@ -88,16 +106,17 @@
   height: 100%;
 
   border: none;
+  outline: none;
   background: transparent;
 
   border-radius: 999px;
 
-  font-size: 20px;   /* ← 少し小さく */
+  font-size: 18px;
   font-weight: 700;
 
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 
-  color: #6e7697;
+  color: #6f7692;
 
   cursor: pointer;
 
@@ -107,21 +126,25 @@
 }
 
 /* 選択中 */
-.Stage-date-toggle button.active{
+
+.Stage-date-toggle button.active {
   color: #ffffff;
 }
 
 /* 非選択 */
-.Stage-date-toggle button:not(.active){
-  color: #727b99;
+
+.Stage-date-toggle button:not(.active) {
+  color: #6f7692;
 }
 
-/* ホバー */
-.Stage-date-toggle button:hover{
+/* hover */
+
+.Stage-date-toggle button:hover {
   transform: scale(1.02);
 }
 
-/* 押した時 */
-.Stage-date-toggle button:active{
-  transform: scale(0.96);
+/* click */
+
+.Stage-date-toggle button:active {
+  transform: scale(0.98);
 }
