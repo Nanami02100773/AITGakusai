@@ -21,10 +21,10 @@ export default function SurveySection() {
       <div className="Survey-white-center" />
 
       {/* 青い斜め背景 */}
-<div className="Survey-blue-bg" />
+      <div className="Survey-blue-bg" />
 
-{/* 複製 */}
-<div className="Survey-blue-bg2" />
+      {/* 複製 */}
+      <div className="Survey-blue-bg2" />
 
       {/* タイトル */}
       <div className="Home-section-title">
@@ -35,28 +35,45 @@ export default function SurveySection() {
       <div className="Survey-container">
 
         {surveys.map((item, index) => (
-          <div className="Survey-item" key={index}>
+          <div
+            className="Survey-item"
+            key={index}
+          >
 
-            {/* 左丸 */}
+            {/* 左青バー */}
+            <div className="Survey-left-bar" />
+
+            {/* アイコン */}
             <div className="Survey-circle-area">
 
-              <div className="Survey-stick" />
-
               <div className="Survey-circle-outer">
-                <div className="Survey-circle-inner" />
+
+                <div className="Survey-circle-inner">
+                  ★
+                </div>
+
               </div>
 
             </div>
+
+            {/* 点線 */}
+            <div className="Survey-divider" />
 
             {/* テキスト */}
             <div className="Survey-label">
               {item}
             </div>
 
+            {/* 矢印 */}
+            <div className="Survey-arrow">
+              ›
+            </div>
+
           </div>
         ))}
 
       </div>
+
     </section>
   );
 }

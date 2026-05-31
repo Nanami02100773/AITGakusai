@@ -1,10 +1,15 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import "./HeroSection.css";
 
-export default function HeroSection({
-  image = "/images/hero.jpg",
-}) {
+export default function HeroSection() {
+
+  const heroImages = [
+    "/homehero/1.jpg",
+    "/homehero/2.jpg",
+    "/homehero/3.jpg",
+  ];
 
   const messages = [
     "本日はご来場ありがとうございます！",
@@ -14,8 +19,12 @@ export default function HeroSection({
   ];
 
   const [index, setIndex] = useState(0);
+  const [heroIndex, setHeroIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
 
+  /* =========================
+     吹き出し切り替え
+  ========================= */
   useEffect(() => {
 
     const interval = setInterval(() => {
@@ -38,6 +47,23 @@ export default function HeroSection({
 
   }, [messages.length]);
 
+  /* =========================
+     ヒーロー画像切り替え
+  ========================= */
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setHeroIndex((prev) =>
+        (prev + 1) % heroImages.length
+      );
+
+    }, 5000);
+
+    return () => clearInterval(interval);
+
+  }, []);
+
   return (
     <section className="hero">
 
@@ -47,12 +73,23 @@ export default function HeroSection({
       <div className="hero-card">
 
         {/* 背景画像 */}
-        <div
-          className="hero-image"
-          style={{
-            backgroundImage: `url(${image})`,
-          }}
-        />
+       <div className="hero-image-wrapper">
+
+  {heroImages.map((image, i) => (
+   <div
+  key={i}
+  className={`hero-image ${
+    i === heroIndex ? "active" : ""
+  } ${
+    i % 2 === 0 ? "left-motion" : "right-motion"
+  }`}
+  style={{
+    backgroundImage: `url(${image})`,
+  }}
+/>
+  ))}
+
+</div>
 
         {/* =================================================
             左上追加装飾
@@ -94,10 +131,11 @@ export default function HeroSection({
               animate ? "animate" : ""
             }`}
           >
-              {/* 名前 */}
-  <div className="hero-mascot-name">
-    リード君
-  </div>
+
+            {/* 名前 */}
+            <div className="hero-mascot-name">
+              リード君
+            </div>
 
             <div className="balloon-inner">
 
@@ -107,8 +145,8 @@ export default function HeroSection({
               <div className="balloon-circle">
 
                 <img
-                  src="/images/mascot.jpg"
-                  alt=""
+                  src="/homehero/mascot.jpg"
+                  alt="リード君"
                   className="balloon-circle-image"
                 />
 

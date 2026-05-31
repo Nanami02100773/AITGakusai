@@ -1,17 +1,45 @@
-/* ========================================
-   FAQ全体
-======================================== */
-
 .faq-wrapper {
+  position: relative;
+
   width: 100%;
-  padding: 16px;
+
+  padding: 40px 16px;
+
   box-sizing: border-box;
 
-  background: #ffffff;
+  display: flex;
+  justify-content: center;
+
+  overflow: visible;
+
+  isolation: isolate;
 }
 
+.faq-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 51px;
+
+  background: #ffffff;
+
+  border-bottom: 2px solid #bac4ff;
+
+  z-index: -1;
+}
+/* ========================================
+   FAQコンテナ
+======================================== */
+
 .faq-container {
-  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  width: 450px;
   max-width: 100%;
 
   display: flex;
@@ -28,6 +56,8 @@
 
   box-shadow:
     0 8px 20px rgba(120,140,255,.12);
+
+  isolation: isolate; /* ←追加 */
 }
 
 /* ========================================
@@ -304,26 +334,3 @@
   background: #86a7ff;
 }
 
-/* ========================================
-   タブレット以上
-======================================== */
-
-@media (min-width: 768px) {
-
-  .faq-container {
-    max-width: 850px;
-    margin: 130px auto 0;
-  }
-
-  .faq-title {
-    font-size: 1.2rem;
-  }
-
-  .question-text {
-    font-size: 1.1rem;
-  }
-
-  .faq-answer-card {
-    font-size: 1rem;
-  }
-}

@@ -7,7 +7,11 @@ const MascotDetail = () => {
   return (
     <div className="page">
 
-      <div className="card">
+   <div className="card">
+
+  <div className="card-white-left"></div>
+<div className="card-white-center"></div>
+<div className="card-white-right"></div>
 
   <div className="top-line"></div>
 

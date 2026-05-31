@@ -333,50 +333,38 @@
   width: 40px;
   height: 40px;
 
-  margin-left: 12px;
-
-  border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff,
-      #f5f7ff
-    );
+  flex-shrink: 0;
 
-  font-size: 16px;
+  margin-left: 25px;
+
+  background: #ffffff;
+
+  border: 2px solid #dbe4ff;
+
+  border-radius: 50%;
 
   box-shadow:
-    0 4px 10px rgba(120,130,200,0.08);
+    0 2px 8px rgba(102, 110, 176, 0.08);
 }
 
-/* 区切り線 */
-.Home-icon::before {
-  content: "";
+.Home-icon-img {
+  width: 35px;
+  height: 35px;
 
-  position: absolute;
-
-  left: -7px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  width: 2px;
-  height: 26px;
-
-  border-radius: 999px;
-
-  background: #e2e7ff;
+  object-fit: contain;
+  display: block;
 }
 
 /* =================================================
    内容
 ================================================= */
 .Home-content {
+  position: relative;
+
   flex: 1;
 
   margin-left: 12px;
@@ -387,4 +375,22 @@
   font-weight: 700;
 
   color: #3d4679;
+}
+
+.Home-content::before {
+  content: "";
+
+  position: absolute;
+
+  left: -65px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 2px;
+  height: 28px;
+
+  border-radius: 999px;
+
+  background: #d7dfff;
 }

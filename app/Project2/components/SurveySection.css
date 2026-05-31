@@ -49,11 +49,11 @@
 
   background: #ffffff;
 
-
   z-index: 3;
 }
+
 /* =================================================
-   青い斜め背景 ①
+   青背景①
 ================================================= */
 .Survey-blue-bg {
   position: absolute;
@@ -66,9 +66,9 @@
 
   background: linear-gradient(
     90deg,
-    #005eff 0%,
-    #0048d8 55%,
-    #0041c7 100%
+    #005eff,
+    #0048d8,
+    #0041c7
   );
 
   clip-path: polygon(
@@ -79,15 +79,10 @@
   );
 
   z-index: 1;
-
-  filter:
-    drop-shadow(
-      0 10px 20px rgba(0,70,255,0.18)
-    );
 }
 
 /* =================================================
-   青い斜め背景 ②
+   青背景②
 ================================================= */
 .Survey-blue-bg2 {
   position: absolute;
@@ -108,13 +103,6 @@
   );
 
   z-index: 0;
-
-  opacity: 0.92;
-
-  filter:
-    drop-shadow(
-      0 8px 18px rgba(0,70,255,0.12)
-    );
 }
 
 /* =================================================
@@ -128,10 +116,10 @@
   align-items: center;
   justify-content: center;
 
-  width: 190px;
-  height: 40px;
+  width: 220px;
+  height: 46px;
 
-  margin: 80px auto 26px;
+  margin: 80px auto 30px;
 
   background: linear-gradient(
     90deg,
@@ -141,165 +129,189 @@
 
   color: #fff;
 
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 800;
 
   border-radius: 999px;
 
-  border: 2px solid rgba(255,255,255,0.55);
+  border: 2px solid rgba(255,255,255,.6);
 
   box-shadow:
-    0 8px 20px rgba(160,170,255,0.14),
-    inset 0 2px 0 rgba(255,255,255,0.7),
-    inset 0 -2px 0 rgba(255,255,255,0.55);
-
-  overflow: hidden;
+    0 8px 20px rgba(134,167,255,.18),
+    inset 0 2px 0 rgba(255,255,255,.7);
 }
 
 /* =================================================
-   白枠
+   外枠
 ================================================= */
 .Survey-container {
-  position: relative;
-  z-index: 2;
-
-  width: 450px;
+  width: 400px;
 
   margin: 0 auto;
 
-  padding: 30px 30px;
+  padding: 30px;
 
-  border-radius: 14px;
+  border-radius: 20px;
 
-  background: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,.75);
+
+  border: 3px solid #d7e1ff;
+
+  box-sizing: border-box;
 }
 
 /* =================================================
-   行
+   カード
 ================================================= */
 .Survey-item {
+  position: relative;
+
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  margin-bottom: 16px;
+  min-height: 65px;
 
-  position: relative;
-}
+  margin-bottom: 12px;
 
-.Survey-item:last-child {
-  margin-bottom: 0;
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 12px rgba(120,140,255,.08);
 }
 
 /* =================================================
-   左エリア
+   左青バー
+================================================= */
+.Survey-left-bar {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 14px;
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    #7da0ff,
+    #5276ff
+  );
+}
+
+/* =================================================
+   アイコン
 ================================================= */
 .Survey-circle-area {
   position: relative;
 
-  width: 82px;
-  height: 68px;
+  width: 80px;
 
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  z-index: 3;
+  align-items: center;
 
   flex-shrink: 0;
 
-  left: 60px;
-  top: 0px;
+  left: 10px; /* 左右調整 */
+  top: 0px;  /* 上下調整 */
 }
 
-/* =================================================
-   棒
-================================================= */
-.Survey-stick {
-  position: absolute;
-
-  left: -30px;
-
-  width: 10px;
-  height: 60px;
-
-  background: linear-gradient(
-    180deg,
-    #8aacff,
-    #5f7fff
-  );
-
-  box-shadow:
-    0 0 10px rgba(111,141,255,0.3);
-}
-
-/* =================================================
-   外円
-================================================= */
 .Survey-circle-outer {
-  width: 62px;
-  height: 62px;
+  width: 40px;
+  height: 40px;
 
-  border-radius: 999px;
+  border-radius: 50%;
 
-  background: linear-gradient(
-    180deg,
-    #88a7ff,
-    #6483ff
+  background:
+  conic-gradient(
+    from 0deg,
+    #dfe8ff,
+    #9db7ff,
+    #5f7fff,
+    #9db7ff,
+    #dfe8ff
   );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  position: relative;
+}
+
+.Survey-circle-inner {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  box-shadow:
-    inset 0 0 0 3px rgba(255,255,255,0.55);
+  font-size: 16px;
 
-  position: relative;
-  z-index: 4;
+  color: #5e7cff;
+
+  font-weight: 700;
 }
 
 /* =================================================
-   内円
+   点線
 ================================================= */
-.Survey-circle-inner {
-  width: 46px;
-  height: 46px;
+.Survey-divider {
+  position: relative;
 
-  border-radius: 999px;
+  width: 1px;
+  height: 36px;
 
-  background: #edf1ff;
+  border-left: 3px dotted #d8ddff;
 
-  border: 3px solid #6d88ff;
+  flex-shrink: 0;
+
+  left: 10px; /* 左右調整 */
+  top: 0px;  /* 上下調整 */
 }
 
 /* =================================================
-   ラベル
+   テキスト
 ================================================= */
 .Survey-label {
-  width: 400px;
-  height: 60px;
+  flex: 1;
 
-  margin-left: -40px;
+  padding-left: 40px;
 
-  border-radius: 0 999px 999px 0;
+  color: #16237a;
 
-  background: rgba(255,255,255,0.95);
+  font-size: 16px;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+/* =================================================
+   矢印
+================================================= */
+.Survey-arrow {
+  width: 40px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  text-align: center;
+  color: #9eb3ff;
 
-  color: #1f2c92;
+  font-size: 28px;
 
-  font-size: 20px;
-  font-weight: 700;
+  font-weight: 300;
 
-  box-shadow:
-    0 3px 10px rgba(0,0,0,0.03);
-
-  position: relative;
-  z-index: 1;
+  flex-shrink: 0;
 }
