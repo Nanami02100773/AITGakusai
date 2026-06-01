@@ -19,7 +19,7 @@ export default function Project2Section() {
           <div className="Project2-feature">
 
             <img
-              src="/projectsection/kokaten.jpg"
+              src="/projectsection/stage.png"
               alt="教室企画"
               className="Project2-feature-image"
             />
@@ -41,62 +41,62 @@ export default function Project2Section() {
             <Card
               title="スタンプラリー"
               link="/ProjectStampRally"
-              image="/projectsection/stamprally.jpg"
+              image="/projectsection/stamprally.png"
             />
 
             <Card
               title="工科展"
               link="/ProjectKoukaten"
-              image="/projectsection/kokaten.jpg"
+              image="/projectsection/kokaten.png"
             />
 
             <Card
               title="クラブ展"
               link="/ProjectKurabuten"
-              image="/projectsection/vlubten.jpg"
+              image="/projectsection/clubten.png"
             />
 
             <Card
-              title="WAKUWAKU LAND"
+              title="きらきら PAKE"
               link="/ProjectWakuwakuLand"
-              image="/projectsection/kirakirapark.jpg"
+              image="/projectsection/kirakirapark.png"
               className="wakuwaku"
             />
 
             <Card
               title="MAKE"
               link="/ProjectMake"
-              image="/projectsection/make.jpg"
+              image="/projectsection/make.png"
             />
 
             <Card
               title="脱出ゲーム"
               link="/ProjectDasstsu"
-              image="/projectsection/dassyutsu.jpg"
+              image="/projectsection/dassyutsu.png"
             />
 
             <Card
               title="献血"
               link="/ProjectKenketsu"
-              image="/projectsection/kenketsu.jpg"
+              image="/projectsection/kenketsu.png"
             />
 
             <Card
               title="楽市楽座"
               link="/ProjectRakuiti"
-              image="/projectsection/rakuichi.jpg"
+              image="/projectsection/rakuichi.png"
             />
 
             <Card
-              title="トレゾール"
+              title="ルミノス"
               link="/ProjectTorezoru1"
-              image="/projectsection/luminos.jpg"
+              image="/projectsection/luminos.png"
             />
 
             <Card
               title="Concert"
               link="/ProjectConcert"
-              image="/projectsection/concert.jpg"
+              image="/projectsection/concert.png"
             />
 
           </div>
@@ -109,7 +109,7 @@ export default function Project2Section() {
           <div className="Project2-feature">
 
             <img
-              src="/projectsection/koyasai.jpg"
+              src="/projectsection/stage.png"
               alt="ステージ企画"
               className="Project2-feature-image"
             />
@@ -131,19 +131,19 @@ export default function Project2Section() {
             <Card
               title="LaughMusic"
               link="/ProjectLaughMusic"
-              image="/projectsection/laughmusic.jpg"
+              image="/projectsection/laughmusic.png"
             />
 
             <Card
               title="狂夜祭"
               link="/ProjectKyouyasai"
-              image="/projectsection/kyoyasai.jpg"
+              image="/projectsection/kyoyasai.png"
             />
 
             <Card
               title="後夜祭"
               link="/ProjectKouyasai"
-              image="/projectsection/koyasai.jpg"
+              image="/projectsection/koyasai.png"
             />
 
           </div>

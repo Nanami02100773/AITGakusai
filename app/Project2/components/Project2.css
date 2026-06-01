@@ -29,7 +29,6 @@
 /* ===== 画像 ===== */
 .Project2-image {
   object-fit: cover;
-  filter: brightness(0.7);
 }
 
 /* ===== タイトル ===== */
