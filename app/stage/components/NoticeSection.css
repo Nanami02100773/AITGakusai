@@ -279,3 +279,19 @@
 
   color: #4f6dff;
 }
+
+.Stage-notice-empty {
+  width: 100%;
+  padding: 28px 20px;
+
+  text-align: center;
+
+  color: #7b8794;
+  font-size: 14px;
+  font-weight: 600;
+
+  background: #ffffff;
+
+  border: 2px dashed #dbe4ff;
+  border-radius: 18px;
+}

@@ -1,18 +1,17 @@
-.notice-container {
+.Stage-notice-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 96px;     /* ← 上ナビ分の余白 */
-  padding-bottom: 96px;  /* ← 下ナビ分の余白 */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
-
 /* ===== 上部バー ===== */
-.notice-top-bar {
+.Stage-notice-top-bar {
   width: 85%;
   max-width: 640px;
   height: 44px;
-  background: #848484;           /* 黒 */
+  background: #848484;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -20,8 +19,8 @@
   margin-bottom: 28px;
 }
 
-.notice-top-text {
-  color: #fff;                /* 白 */
+.Stage-notice-top-text {
+  color: #fff;
   font-size: 14px;
   white-space: nowrap;
   overflow: hidden;
@@ -29,24 +28,24 @@
 }
 
 /* ===== 外枠カード ===== */
-.notice-card {
+.Stage-notice-card {
   width: 90%;
   max-width: 680px;
-  background: #d9d9d9;        /* グレー */
+  background: #d9d9d9;
   border-radius: 28px;
   padding: 18px;
 }
 
 /* ===== 内側 ===== */
-.notice-card-inner {
-  background: #f2f2f2;        /* 明るいグレー */
+.Stage-notice-card-inner {
+  background: #f2f2f2;
   border-radius: 22px;
   padding: 24px;
   min-height: 220px;
 }
 
 /* 区切り線の上の文言 */
-.notice-inner-title {
+.Stage-notice-inner-title {
   font-size: 13px;
   color: #848484;
   margin-bottom: 6px;
@@ -55,9 +54,8 @@
   text-overflow: ellipsis;
 }
 
-
 /* 細い区切り線 */
-.notice-divider {
+.Stage-notice-divider {
   height: 2px;
   width: 100%;
   background: #929292;
@@ -65,26 +63,136 @@
 }
 
 /* テキスト */
-.notice-text {
+.Stage-notice-text {
   font-size: 14px;
   color: #979797;
 }
 
-/* ===== 外枠カード内のバー ===== */
-.notice-card-bar {
-  background: #848484;
-  border-radius: 12px;
-  height: 40px;
+/* =========================================
+   カード上部タイトル
+========================================= */
+.Stage-notice-card-bar {
+  position: relative;
+
+  height: 60px;
+
   display: flex;
   align-items: center;
-  padding: 0 16px;
-  margin-bottom: 14px;
+
+  padding-left: 90px;
+  padding-right: 20px;
+
+  margin-bottom: 16px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f7f7ff
+  );
+
+  border: 1px solid #ececff;
+
+  box-shadow:
+    0 4px 12px rgba(120,120,180,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
 }
 
-.notice-card-bar-text {
+/* 左の斜め背景 */
+.Stage-notice-card-bar::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 85px;
+  height: 100%;
+
+  background: #c8d0ff;
+
+  clip-path: polygon(
+    0 0,
+    88% 0,
+    72% 100%,
+    0 100%
+  );
+}
+
+/* 左の丸アイコン */
+.Stage-notice-card-bar::after {
+  content: "!";
+
+  position: absolute;
+
+  left: 18px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #fff;
-  font-size: 14px;
+
+  font-size: 18px;
+  font-weight: 900;
+
+  background: linear-gradient(
+    135deg,
+    #5675ff,
+    #3757ef
+  );
+
+  border: 2px solid rgba(255,255,255,.95);
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,.08);
+}
+
+/* タイトル文字 */
+.Stage-notice-card-bar-text {
+  position: relative;
+  z-index: 2;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  color: #353567;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.Stage-notice-card-bar .notice-style-dots {
+  position: absolute;
+
+  right: 20px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  opacity: .4;
+
+  background-size: 10px 10px;
+
+  background-image:
+    radial-gradient(
+      #9eaaff 1.5px,
+      transparent 1.5px
+    );
 }

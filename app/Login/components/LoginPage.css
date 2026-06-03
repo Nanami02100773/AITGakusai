@@ -1,47 +1,190 @@
-.login-container {
-  padding: 0px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+  background: #e6eeff;
 }
+
+.login-page {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 120px;
+}
+
+/* =====================================
+   カード
+===================================== */
+
+.login-card {
+  width: 90%;
+  max-width: 500px;
+
+  padding: 35px 30px;
+
+  background: #fff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.08);
+
+  position: relative;
+}
+
+/* =====================================
+   アイコン
+===================================== */
+
+.login-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 10px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+
+  background: #f4f6fc;
+}
+
+/* =====================================
+   タイトル
+===================================== */
 
 .login-title {
-  background-color: #999;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  width: 300px;
-  /* 中央揃え */
-  margin: 70px auto 20px;
   text-align: center;
-  display: block;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  color: #11245f;
+
+  margin: 0;
 }
 
+/* =====================================
+   区切り
+===================================== */
+
+.login-divider {
+  position: relative;
+
+  width: 90%;
+  height: 24px;
+
+  margin: 10px auto 10px;
+}
+
+.login-divider::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 50%;
+
+  height: 2px;
+
+  background: #ff9fb5;
+}
+
+
+
+/* =====================================
+   フォーム
+===================================== */
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 300px;
+  align-items: center; /* 追加 */
+}
+
+.login-form label {
+  width: 250px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #333;
+
+  margin-bottom: 8px;
 }
 
 .login-input {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  height: 50px;
+  width: 250px;
+
+  border-radius: 14px;
+
+  border: 2px solid #d7dbe6;
+
+  padding: 0 18px;
+
+  font-size: 16px;
+
+  background: #fff;
+
+  margin-bottom: 20px;
+
+  outline: none;
+
+  transition: .25s;
 }
 
+.login-input.active {
+  border-color: #4d7dff;
+}
+
+.login-input:focus {
+  border-color: #4d7dff;
+
+  box-shadow:
+    0 0 0 4px rgba(77,125,255,.12);
+}
+
+.login-input::placeholder {
+  color: #a0a7b8;
+}
+
+/* =====================================
+   ボタン
+===================================== */
+
 .login-button {
-  padding: 10px;
-  background: #666;
-  color: white;
+  height: 50px;
+  width: 200px;
+
   border: none;
-  border-radius: 8px;
+
+  border-radius: 50px;
+
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 800;
+
   cursor: pointer;
-  transition: 0.3s;
+
+  background: linear-gradient(
+    90deg,
+    #5c8dff,
+    #3e73ff
+  );
+
+  box-shadow:
+    0 6px 18px rgba(62,115,255,.25);
+
+  transition: .25s;
 }
 
 .login-button:hover {
-  background: #444;
+  transform: translateY(-2px);
+}
+
+.login-button:active {
+  transform: translateY(0);
 }

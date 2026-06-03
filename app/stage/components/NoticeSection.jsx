@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import "./NoticeSection.css";
 import { useEffect, useState } from "react";
@@ -7,14 +8,19 @@ const NoticeSection = () => {
   const [notices, setNotices] = useState([]);
 
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("notices") || "[]");
-    const filtered = saved.filter((n) => n.category === "stage");
+    const saved = JSON.parse(
+      localStorage.getItem("notices") || "[]"
+    );
+
+    const filtered = saved.filter(
+      (n) => n.category === "stage"
+    );
+
     setNotices(filtered);
   }, []);
 
   return (
     <section className="Stage-notice-section">
-
       {/* タイトル */}
       <div className="Stage-section-title-wrapper">
         <div className="Stage-section-title">
@@ -23,36 +29,38 @@ const NoticeSection = () => {
       </div>
 
       <div className="Stage-notice-box">
+        {notices.length === 0 ? (
+          <div className="Stage-notice-empty">
+            現在ステージに関するお知らせはありません
+          </div>
+        ) : (
+          notices.map((notice, index) => (
+            <Link
+              key={notice.id}
+              href={`/stage/notice/${notice.id}`}
+              className="Stage-notice-item"
+            >
+              {/* 左背景 */}
+              <div className="Stage-notice-bg" />
 
-        {notices.map((notice, index) => (
-          <Link
-            key={notice.id}
-            href={`/stage/notice/${notice.id}`}
-            className="Stage-notice-item"
-          >
+              {/* 番号 */}
+              <div className="Stage-notice-number">
+                {String(index + 1).padStart(2, "0")}
+              </div>
 
-            {/* 左背景 */}
-            <div className="Stage-notice-bg" />
+              {/* テキスト */}
+              <div className="Stage-notice-text">
+                {notice.title}
+              </div>
 
-            {/* 番号 */}
-            <div className="Stage-notice-number">
-              {String(index + 1).padStart(2, "0")}
-            </div>
+              {/* ドット */}
+              <div className="Stage-notice-dots" />
 
-            {/* テキスト */}
-            <div className="Stage-notice-text">
-              {notice.title}
-            </div>
-
-            {/* ドット */}
-            <div className="Stage-notice-dots" />
-
-            {/* 矢印 */}
-            <div className="Stage-notice-arrow">›</div>
-
-          </Link>
-        ))}
-
+              {/* 矢印 */}
+              <div className="Stage-notice-arrow">›</div>
+            </Link>
+          ))
+        )}
       </div>
     </section>
   );

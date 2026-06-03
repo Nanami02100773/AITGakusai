@@ -3,18 +3,26 @@ import "./Detail.css";
 
 export default function Detail({ title, body }) {
   return (
-    <div className="notice-container">
-      <div className="notice-card">
-        <div className="notice-card-bar">
-          <span className="notice-card-bar-text">{title}</span>
+    <div className="Stage-notice-container">
+      <div className="Stage-notice-card">
+        {/* 上部バー */}
+        <div className="Stage-notice-card-bar">
+          <span className="Stage-notice-card-bar-text">
+            {title}
+          </span>
+
+          <div className="notice-style-dots" />
         </div>
 
-        <div className="notice-card-inner">
-          <div className="notice-inner-title">{title}</div>
+        <div className="Stage-notice-card-inner">
+          {/* 区切り線の上の文言 */}
+          <div className="Stage-notice-inner-title">
+            {title}
+          </div>
 
-          <div className="notice-divider" />
+          <div className="Stage-notice-divider" />
 
-          <p className="notice-text">
+          <p className="Stage-notice-text">
             {body}
           </p>
         </div>
@@ -22,4 +30,3 @@ export default function Detail({ title, body }) {
     </div>
   );
 }
-

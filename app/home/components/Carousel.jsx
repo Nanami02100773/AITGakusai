@@ -9,38 +9,50 @@ export default function Carousel({ items = [] }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [isStopped, setIsStopped] = useState(false);
 
-  const fallbackItems = [
-    {
-      title: "マスコット総選挙",
-      description: "企業名：紹介文など",
-      image: "/sample1.jpg",
-    },
-    {
-      title: "企業広告②",
-      description: "企業名：紹介文など",
-      image: "/sample2.jpg",
-    },
-    {
-      title: "企業広告③",
-      description: "企業名：紹介文など",
-      image: "/sample3.jpg",
-    },
-    {
-      title: "企業広告④",
-      description: "企業名：紹介文など",
-      image: "/sample4.jpg",
-    },
-    {
-      title: "企業広告⑤",
-      description: "企業名：紹介文など",
-      image: "/sample5.jpg",
-    },
-    {
-      title: "企業広告⑥",
-      description: "企業名：紹介文など",
-      image: "/sample6.jpg",
-    },
-  ];
+const fallbackItems = [
+  {
+    category: "マスコット総選挙",
+    title: "うちのリード君を応援しませんか？",
+    description:
+      "全国の学祭のマスコットキャラクターの総選挙を開催中。ぜひ投票をお願いします！",
+    image: "/homecarousel/generalelection.jpg",
+  },
+  {
+    category: "休憩所のご案内",
+    title: "ちょっとひと休みしませんか？",
+    description:
+      "楽しんだあとは休憩所でリフレッシュ！飲食や待ち合わせにもご利用いただけます。",
+    image: "/homecarousel/restarea.jpg",
+  },
+  {
+    category: "景品をゲットしよう！",
+    title: "回答して豪華景品を当てよう！！",
+    description:
+      "全体アンケートに答えると総合案内所で抽選で素敵な景品をプレゼント！",
+    image: "/homecarousel/present.jpg",
+  },
+  {
+    category: "献血にご協力を！！",
+    title: "あなたの献血が誰かの命を救う",
+    description:
+      "学祭会場内の献血バスで受付中です。",
+    image: "/homecarousel/kenketsu.jpg",
+  },
+  {
+    category: "歌王",
+    title: "出演者たちが十八番の１曲で真剣勝負！",
+    description:
+      "出演者が選んだ渾身の１曲で勝負！歌声に心を動かされたらぜひ投票にご参加ください。",
+    image: "/homecarousel/utao.jpg",
+  },
+  {
+    category: "〇✕ゲーム",
+    title: "〇か✕か、最後まで生き残れ！",
+    description:
+      "知識も運も試されるドキドキの〇✕ゲーム！最後まで勝ち残り豪華景品をゲットしよう！",
+    image: "/homecarousel/game.jpg",
+  },
+];
 
   const displayItems =
     items.length > 0 ? items : fallbackItems;
@@ -59,7 +71,6 @@ export default function Carousel({ items = [] }) {
     let lastStoppedIndex = -1;
 
     const scroll = () => {
-
       const list =
         container.querySelector(
           ".Home-carousel-list"
@@ -68,10 +79,8 @@ export default function Carousel({ items = [] }) {
       const firstCard = list?.children[0];
 
       if (!firstCard) {
-
         animationId =
           requestAnimationFrame(scroll);
-
         return;
       }
 
@@ -82,55 +91,34 @@ export default function Carousel({ items = [] }) {
         displayItems.length * cardWidth;
 
       if (!isPaused) {
-
         setIsStopped(false);
 
         container.scrollLeft += speed;
 
-        /* =========================
-           画面中央位置
-        ========================= */
         const center =
           container.scrollLeft +
           container.clientWidth / 2;
 
-        /* =========================
-           中央カード判定
-        ========================= */
-        const index =
-          Math.round(
-            (center - cardWidth / 2) /
-              cardWidth
-          );
+        const index = Math.round(
+          (center - cardWidth / 2) /
+            cardWidth
+        );
 
-        /* =========================
-           カード中央位置
-        ========================= */
         const cardCenter =
           index * cardWidth +
           cardWidth / 2;
 
-        /* =========================
-           ページ更新
-        ========================= */
         setCurrentPage(
-          (
-            (index %
-              displayItems.length) +
+          ((index % displayItems.length) +
+            displayItems.length) %
             displayItems.length
-          ) % displayItems.length
         );
 
-        /* =========================
-           中央で停止
-        ========================= */
         if (
-          Math.abs(
-            center - cardCenter
-          ) <= speed &&
+          Math.abs(center - cardCenter) <=
+            speed &&
           index !== lastStoppedIndex
         ) {
-
           isPaused = true;
 
           lastStoppedIndex = index;
@@ -138,22 +126,15 @@ export default function Carousel({ items = [] }) {
           setIsStopped(true);
 
           setTimeout(() => {
-
             isPaused = false;
-
             setIsStopped(false);
-
           }, stopTime);
         }
 
-        /* =========================
-           無限ループ
-        ========================= */
         if (
           container.scrollLeft >=
           totalWidth
         ) {
-
           container.scrollLeft -=
             totalWidth;
 
@@ -163,7 +144,6 @@ export default function Carousel({ items = [] }) {
         if (
           container.scrollLeft <= 0
         ) {
-
           container.scrollLeft +=
             totalWidth;
         }
@@ -178,20 +158,15 @@ export default function Carousel({ items = [] }) {
 
     return () =>
       cancelAnimationFrame(animationId);
-
   }, [displayItems.length]);
 
   return (
     <div className="Home-carousel-wrapper">
 
-      {/* =========================
-          スクロール
-      ========================= */}
       <div
         ref={containerRef}
         className="Home-carousel-container"
       >
-
         <div className="Home-carousel-list">
 
           {displayItems
@@ -230,7 +205,6 @@ export default function Carousel({ items = [] }) {
                   {/* 下中央 */}
                   <div className="futuristic-frame-bottom" />
 
-                  {/* 中身 */}
                   <div className="Home-carousel-content">
 
                     {/* 画像 */}
@@ -239,7 +213,6 @@ export default function Carousel({ items = [] }) {
                       {item.image ? (
                         <img
                           src={item.image}
-                          alt={item.title}
                         />
                       ) : (
                         "画像"
@@ -247,45 +220,53 @@ export default function Carousel({ items = [] }) {
 
                     </div>
 
-                    {/* タイトル */}
-                    <h2 className="Home-carousel-title">
-                      {item.title}
-                    </h2>
+                    {/* テキスト */}
+                    <div className="Home-carousel-text-area">
 
-                    {/* ドット */}
-                    <div className="Home-carousel-dots" />
+                      <p className="Home-carousel-category">
+                        {item.category}
+                      </p>
 
-                    {/* 説明 */}
-                    <p className="Home-carousel-description">
-                      {item.description}
-                    </p>
+                      <div className="Home-carousel-dots" />
+
+                      <h2 className="Home-carousel-title">
+                        {item.title}
+                      </h2>
+
+                
+
+                      <p className="Home-carousel-description">
+                        {item.description}
+                      </p>
+
+                    </div>
 
                   </div>
+
                 </div>
               );
             })}
+
         </div>
       </div>
 
-      {/* =========================
-          インジケータ
-      ========================= */}
       <div className="Home-carousel-indicator">
 
-        {displayItems.map((_, index) => (
-
-          <span
-            key={index}
-            className={`Home-indicator-dot ${
-              index === currentPage
-                ? "active"
-                : ""
-            }`}
-          />
-
-        ))}
+        {displayItems.map(
+          (_, index) => (
+            <span
+              key={index}
+              className={`Home-indicator-dot ${
+                index === currentPage
+                  ? "active"
+                  : ""
+              }`}
+            />
+          )
+        )}
 
       </div>
+
     </div>
   );
 }

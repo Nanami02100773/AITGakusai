@@ -463,9 +463,6 @@
   overflow: hidden;
 }
 
-/* =================================================
-   吹き出し
-================================================= */
 .balloon-text {
   position: relative;
   top: 10px;
@@ -476,11 +473,11 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
-  text-align: center;
+  text-align: left;
 
-  padding: 10px 15px;
+  padding: 10px 20px;
 
   font-size: 13px;
   font-weight: 900;
@@ -498,8 +495,7 @@
       rgba(246,249,255,.98)
     );
 
-  border:
-    2px solid #b8b8b8;
+  border: 2px solid #b8b8b8;
 
   border-radius: 18px;
 

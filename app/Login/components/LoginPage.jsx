@@ -10,36 +10,65 @@ export default function LoginPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-    // ★ チェック削除してそのまま遷移
     router.push("/Notice");
   };
 
   return (
-    <div className="login-container">
-      <h1 className="login-title">学祭用ログイン</h1>
+    <div className="login-page">
 
-      <form onSubmit={handleLogin} className="login-form">
-        <input
-          type="text"
-          placeholder="ID"
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-          className="login-input"
-        />
+      <div className="login-card">
 
-        <input
-          type="password"
-          placeholder="パスワード"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="login-input"
-        />
+        <div className="login-icon">
+          🎓
+        </div>
 
-        <button type="submit" className="login-button">
-          ログイン
-        </button>
-      </form>
+        <h1 className="login-title">
+          学祭用ログイン
+        </h1>
+
+        <div className="login-divider">
+          <span />
+        </div>
+
+        <form
+          onSubmit={handleLogin}
+          className="login-form"
+        >
+          <label>ID</label>
+
+          <input
+            type="text"
+            placeholder="IDを入力してください"
+            value={id}
+            onChange={(e) =>
+              setId(e.target.value)
+            }
+            className="login-input active"
+          />
+
+          <label>パスワード</label>
+
+          <input
+            type="password"
+            placeholder="パスワードを入力してください"
+            value={password}
+            onChange={(e) =>
+              setPassword(e.target.value)
+            }
+            className="login-input"
+          />
+
+          <button
+            type="submit"
+            className="login-button"
+          >
+            ログイン
+          </button>
+
+        </form>
+
+      </div>
+
     </div>
   );
 }

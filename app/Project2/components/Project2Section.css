@@ -20,17 +20,17 @@
   position: relative;
 }
 
+.Project2-card-image {
+  width: 300%;
+  height: 300%;
+  object-fit: contain;
+  padding: 6px;
+  box-sizing: border-box;
 
-
-.Project2-feature-image{
-  width: 70px;
-  height: 60px;
-
-  border-radius: 14px;
-
-  object-fit: cover;
-
-  display: block;
+  filter:
+    brightness(1.15)
+    contrast(0.9)
+    saturate(0.75);
 }
 
 .Project2-card-image {

@@ -10,29 +10,31 @@ export default function NoticePage() {
   const [notice, setNotice] = useState(null);
 
   useEffect(() => {
-    const saved =
-      JSON.parse(localStorage.getItem("notices") || "[]");
+    const saved = JSON.parse(
+      localStorage.getItem("notices") || "[]"
+    );
 
-    // ★ ステージだけに絞る
     const stageOnly = saved.filter(
       (n) => n.category === "stage"
     );
 
     const found = stageOnly.find(
-      (n) => n.id === params.id
+      (n) =>
+        String(n.id) === String(params?.id)
     );
 
-    setNotice(found);
-  }, [params.id]);
+    setNotice(found || null);
+  }, [params]);
 
   return (
     <main>
       <NavigationBar />
 
       <Detail
-        title={notice?.title ?? "ステージお知らせ"}
+        title={notice?.title || "ステージお知らせ"}
         body={
-          notice?.body ?? "該当するお知らせがありません。"
+          notice?.body ||
+          "該当するお知らせがありません。"
         }
       />
     </main>
