@@ -1,0 +1,160 @@
+body {
+  background: #f5f7ff;
+}
+
+/* =========================
+   全体
+========================= */
+
+.notice-list-container {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 20px 20px 100px;
+}
+
+/* =========================
+   タイトル
+========================= */
+
+.notice-list-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 260px;
+  height: 47px;
+
+  margin: 60px auto 20px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  border-radius: 10px;
+
+  border: 2px solid rgba(255,255,255,.55);
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,.14),
+    inset 0 2px 0 rgba(255,255,255,.7),
+    inset 0 -2px 0 rgba(255,255,255,.55);
+}
+
+/* =========================
+   カード
+========================= */
+
+.notice-card {
+  background: #fff;
+
+  border: 2px solid rgba(169,186,255,.55);
+
+  border-radius: 15px;
+
+  padding: 18px;
+
+  margin-bottom: 15px;
+
+  box-shadow:
+    0 8px 20px rgba(111,141,255,.1);
+
+  transition: .25s;
+}
+
+.notice-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(111,141,255,.15);
+}
+
+/* =========================
+   カテゴリ
+========================= */
+
+.notice-category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 70px;
+
+  height: 28px;
+
+  padding: 0 12px;
+
+  margin-bottom: 12px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #6f8dff,
+    #8fa4ff
+  );
+
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 10px rgba(111,141,255,.2);
+}
+
+/* =========================
+   タイトル
+========================= */
+
+.notice-card-title {
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #3559d4;
+
+  margin-bottom: 10px;
+}
+
+/* =========================
+   本文
+========================= */
+
+.notice-card-body {
+  color: #555;
+
+  line-height: 1.8;
+
+  white-space: pre-wrap;
+}
+
+/* =========================
+   空状態
+========================= */
+
+.notice-empty {
+  background: #fff;
+
+  border: 2px dashed #d8e2ff;
+
+  border-radius: 15px;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  color: #9aa7cf;
+
+  font-size: 15px;
+
+  box-shadow:
+    0 8px 20px rgba(111,141,255,.08);
+}

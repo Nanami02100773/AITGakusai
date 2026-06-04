@@ -232,7 +232,7 @@
 
   background: rgba(255,255,255,.75);
 
-  border: 3px solid #d7e1ff;
+  border: 2px solid #d7e1ff;
 
   box-sizing: border-box;
 }
@@ -269,7 +269,7 @@
   left: 0;
   top: 0;
 
-  width: 14px;
+  width: 15px;
   height: 100%;
 
   background: linear-gradient(
@@ -293,37 +293,40 @@
 
   flex-shrink: 0;
 
-  left: 10px; /* 左右調整 */
+  left: 15px; /* 左右調整 */
   top: 0px;  /* 上下調整 */
 }
 
 .Survey-circle-outer {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 
   border-radius: 50%;
 
   background:
-  conic-gradient(
-    from 0deg,
-    #dfe8ff,
-    #9db7ff,
-    #5f7fff,
-    #9db7ff,
-    #dfe8ff
-  );
+    conic-gradient(
+      from 0deg,
+      color-mix(in srgb, var(--ring-color) 20%, white),
+      color-mix(in srgb, var(--ring-color) 60%, white),
+      var(--ring-color),
+      color-mix(in srgb, var(--ring-color) 60%, white),
+      color-mix(in srgb, var(--ring-color) 20%, white)
+    );
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-
   position: relative;
+
+  box-shadow:
+    0 3px 8px rgba(0,0,0,.08);
 }
 
+
 .Survey-circle-inner {
-  width: 34px;
-  height: 34px;
+  width: 45px;
+  height: 45px;
 
   border-radius: 50%;
 
@@ -333,11 +336,17 @@
   align-items: center;
   justify-content: center;
 
-  font-size: 16px;
+  overflow: hidden;
+}
 
-  color: #5e7cff;
 
-  font-weight: 700;
+.Survey-icon {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
 }
 
 /* =================================================
@@ -353,7 +362,7 @@
 
   flex-shrink: 0;
 
-  left: 10px; /* 左右調整 */
+  left: 15px; /* 左右調整 */
   top: 0px;  /* 上下調整 */
 }
 

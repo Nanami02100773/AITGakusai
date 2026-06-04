@@ -41,37 +41,70 @@ export default function NoticePage() {
     <div className="notice-container">
       <h1 className="notice-title">お知らせ投稿</h1>
 
-      <form onSubmit={handleSubmit} className="notice-form">
-        
-        {/* カテゴリ選択 */}
-        <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          className="notice-input"
-        >
-          <option value="all">全体</option>
-          <option value="stage">ステージ</option>
-        </select>
+<form onSubmit={handleSubmit} className="notice-form">
 
-        <input
-          type="text"
-          placeholder="タイトル"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          className="notice-input"
-        />
+<div>
+  <div className="notice-label">
+  <span className="required-dot"></span>
+  カテゴリ
+</div>
 
-        <textarea
-          placeholder="本文"
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-          className="notice-textarea"
-        />
+  <div className="notice-category-group">
+    <button
+      type="button"
+      className={`notice-category-btn ${
+        category === "all" ? "active" : ""
+      }`}
+      onClick={() => setCategory("all")}
+    >
+      全体
+    </button>
 
-        <button type="submit" className="notice-button">
-          投稿
-        </button>
-      </form>
+    <button
+      type="button"
+      className={`notice-category-btn ${
+        category === "stage" ? "active" : ""
+      }`}
+      onClick={() => setCategory("stage")}
+    >
+      ステージ
+    </button>
+  </div>
+</div>
+  <div>
+ <div className="notice-label">
+  <span className="required-dot"></span>
+  タイトル
+</div>
+
+    <input
+      type="text"
+      placeholder="例）落とし物のお知らせ"
+      value={title}
+      onChange={(e) => setTitle(e.target.value)}
+      className="notice-input"
+    />
+  </div>
+
+  <div>
+    <div className="notice-label">
+  <span className="required-dot"></span>
+  本文
+</div>
+    <textarea
+      placeholder="お知らせの内容を入力してください"
+      value={body}
+      onChange={(e) => setBody(e.target.value)}
+      className="notice-textarea"
+    />
+  </div>
+
+  <button type="submit" className="notice-button">
+    投稿する
+  </button>
+
+</form>
     </div>
+    
   );
 }

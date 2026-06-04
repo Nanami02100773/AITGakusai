@@ -1,5 +1,5 @@
 body {
-  background: #e6eeff;
+  background: #f5f7ff;
 }
 
 .login-page {
@@ -17,14 +17,16 @@ body {
   width: 90%;
   max-width: 500px;
 
-  padding: 35px 30px;
+  padding: 30px;
 
-  background: #fff;
+  background: #ffffff;
 
-  border-radius: 10px;
+  border-radius: 15px;
+
+  border: 2px solid rgba(169,186,255,.55);
 
   box-shadow:
-    0 12px 35px rgba(0,0,0,.08);
+    0 8px 30px rgba(111,141,255,.18);
 
   position: relative;
 }
@@ -34,10 +36,10 @@ body {
 ===================================== */
 
 .login-icon {
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
 
-  margin: 0 auto 10px;
+  margin: 0 auto 14px;
 
   border-radius: 50%;
 
@@ -47,7 +49,14 @@ body {
 
   font-size: 34px;
 
-  background: #f4f6fc;
+  background: linear-gradient(
+    135deg,
+    #eef3ff,
+    #dfe8ff
+  );
+
+  box-shadow:
+    0 4px 12px rgba(111,141,255,.12);
 }
 
 /* =====================================
@@ -57,10 +66,10 @@ body {
 .login-title {
   text-align: center;
 
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 800;
 
-  color: #11245f;
+  color: #4b7cff;
 
   margin: 0;
 }
@@ -73,9 +82,9 @@ body {
   position: relative;
 
   width: 90%;
-  height: 24px;
+  height: 26px;
 
-  margin: 10px auto 10px;
+  margin: 10px auto;
 }
 
 .login-divider::before {
@@ -89,44 +98,51 @@ body {
 
   height: 2px;
 
-  background: #ff9fb5;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff9fb5,
+    transparent
+  );
 }
-
-
 
 /* =====================================
    フォーム
 ===================================== */
+
 .login-form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 追加 */
+  align-items: center;
 }
 
 .login-form label {
   width: 250px;
 
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 
-  color: #333;
+  color: #4b7cff;
 
   margin-bottom: 8px;
 }
 
-.login-input {
-  height: 50px;
-  width: 250px;
+/* =====================================
+   入力欄
+===================================== */
 
+.login-input {
+  width: 250px;
+  height: 50px;
+
+  border: 2px solid #dbe4ff;
   border-radius: 14px;
 
-  border: 2px solid #d7dbe6;
+  background: #ffffff;
 
-  padding: 0 18px;
+  padding: 0 16px;
 
-  font-size: 16px;
-
-  background: #fff;
+  font-size: 15px;
 
   margin-bottom: 20px;
 
@@ -136,18 +152,18 @@ body {
 }
 
 .login-input.active {
-  border-color: #4d7dff;
+  border-color: #5b7cff;
 }
 
 .login-input:focus {
-  border-color: #4d7dff;
+  border-color: #5b7cff;
 
   box-shadow:
-    0 0 0 4px rgba(77,125,255,.12);
+    0 0 0 4px rgba(91,124,255,.12);
 }
 
 .login-input::placeholder {
-  color: #a0a7b8;
+  color: #b8bfcc;
 }
 
 /* =====================================
@@ -155,36 +171,78 @@ body {
 ===================================== */
 
 .login-button {
-  height: 50px;
+  position: relative;
+
   width: 200px;
+  height: 54px;
+
+  margin-top: 15px;
 
   border: none;
 
   border-radius: 50px;
 
-  color: #fff;
+  color: #ffffff;
 
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
 
   cursor: pointer;
 
   background: linear-gradient(
-    90deg,
-    #5c8dff,
-    #3e73ff
+    180deg,
+    #7f9fff 0%,
+    #6d8eff 100%
   );
 
   box-shadow:
-    0 6px 18px rgba(62,115,255,.25);
+    0 10px 22px rgba(109,142,255,.25),
+    inset 0 1px 0 rgba(255,255,255,.35);
 
-  transition: .25s;
+  overflow: hidden;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+.login-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 50%;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.25),
+    transparent
+  );
+
+  pointer-events: none;
 }
 
 .login-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+
+  background: linear-gradient(
+    180deg,
+    #8aabff 0%,
+    #7898ff 100%
+  );
+
+  box-shadow:
+    0 14px 28px rgba(109,142,255,.32);
 }
 
 .login-button:active {
   transform: translateY(0);
+
+  box-shadow:
+    0 6px 14px rgba(109,142,255,.18);
 }

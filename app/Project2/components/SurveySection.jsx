@@ -4,41 +4,51 @@ import "./SurveySection.css";
 export default function SurveySection() {
 
   const surveys = [
-    "アプリ満足度",
-    "全体",
-    "脱出ゲーム",
-    "メイク",
-    "クラブ・工科",
+    {
+      title: "アプリ満足度",
+      image: "/stagequestionnaire/app.png",
+      color: "#163f9f",
+    },
+    {
+      title: "全体",
+      image: "/stagequestionnaire/whole.png",
+      color: "#7f97b5",
+    },
+    {
+      title: "脱出ゲーム",
+      image: "/stagequestionnaire/dassyutsu.png",
+      color: "#d7a548",
+    },
+    {
+      title: "メイク",
+      image: "/stagequestionnaire/lip.png",
+      color: "#d83b52",
+    },
+    {
+      title: "クラブ・工科",
+      image: "/stagequestionnaire/kurakou.png",
+      color: "#2f7bff",
+    },
   ];
 
   return (
     <section className="SurveySection">
 
-      {/* 上ライン */}
-  <div className="Survey-top-line"></div>
+      <div className="Survey-top-line"></div>
 
-      {/* 左白パーツ */}
       <div className="Survey-white-left" />
-      
-
-      {/* 中央白パーツ */}
       <div className="Survey-white-center" />
+
       <div className="Survey-diagonal-line"></div>
-<div className="Survey-diagonal-line-2"></div>
+      <div className="Survey-diagonal-line-2"></div>
 
-
-      {/* 青い斜め背景 */}
       <div className="Survey-blue-bg" />
-
-      {/* 複製 */}
       <div className="Survey-blue-bg2" />
 
-      {/* タイトル */}
       <div className="Home-section-title">
-        お知らせ
+        アンケート
       </div>
 
-      {/* 本体 */}
       <div className="Survey-container">
 
         {surveys.map((item, index) => (
@@ -47,31 +57,35 @@ export default function SurveySection() {
             key={index}
           >
 
-            {/* 左青バー */}
             <div className="Survey-left-bar" />
 
-            {/* アイコン */}
             <div className="Survey-circle-area">
 
-              <div className="Survey-circle-outer">
+              <div
+                className="Survey-circle-outer"
+                style={{
+                  "--ring-color": item.color,
+                }}
+              >
 
                 <div className="Survey-circle-inner">
-                  ★
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="Survey-icon"
+                  />
                 </div>
 
               </div>
 
             </div>
 
-            {/* 点線 */}
             <div className="Survey-divider" />
 
-            {/* テキスト */}
             <div className="Survey-label">
-              {item}
+              {item.title}
             </div>
 
-            {/* 矢印 */}
             <div className="Survey-arrow">
               ›
             </div>

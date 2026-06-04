@@ -19,7 +19,7 @@ export default function Project2Section() {
           <div className="Project2-feature">
 
             <img
-              src="/projectsection/stage.png"
+              src="/projectsection/school.png"
               alt="教室企画"
               className="Project2-feature-image"
             />

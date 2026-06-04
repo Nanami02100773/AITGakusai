@@ -13,67 +13,90 @@
 
   background: #ffffff;
   border-radius: 28px;
-  padding: 16px;
+  padding: 10px;
 
   box-shadow: 0 15px 40px rgba(120,100,255,0.08);
 
   position: relative;
 }
 
-.Project2-card-image {
-  width: 300%;
-  height: 300%;
-  object-fit: contain;
-  padding: 6px;
-  box-sizing: border-box;
-
-  filter:
-    brightness(1.15)
-    contrast(0.9)
-    saturate(0.75);
-}
-
-.Project2-card-image {
-  width: 100%;
-  height: 100%;
-
-  object-fit: contain;
-
-  transform: scale(1.1);
-}
-
 
 /* ===== タイトル ===== */
 .Project2-section-title {
   font-weight: bold;
-  margin-bottom: 18px;
-  padding-left: 28px;
+
+  margin-bottom: 0;
+
+  padding-left: 30px; /* ← 大きくする */
+
   position: relative;
+
+  left: 15px;
+  top: 5px;
+
   color: #2f2f55;
 }
 
 .Project2-section-title::before {
   content: "";
+
   position: absolute;
-  left: 0;
+
+  left: 0px; /* ← 基準位置 */
   top: 50%;
+
   width: 12px;
   height: 12px;
-border: 2px solid #4da3ff;  border-radius: 50%;
+
+  border: 2px solid #5b75dd;
+  border-radius: 50%;
+
   transform: translateY(-50%);
 }
 
-/* ===== ボックス ===== */
-.Project2-box {
-  margin: 20px 0;
-  background: #f8f9ff;
-  border-radius: 20px;
-  padding: 16px;
+.Project2-section-title::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px; /* ← ラインの高さ調整 */
+
+  width: 180px; /* ← ラインの長さ */
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #8aa8ff,
+    rgba(138,168,255,0)
+  );
+
+  border-radius: 999px;
 }
 
-.Project2-box.stage {
-  background: linear-gradient(135deg, #f3f0ff, #eef2ff);
+/* ===== 教室企画 ===== */
+.Project2-box {
+  margin: 20px 0;
+
+  background: #e6eeff;
+
+  border-radius: 20px;
+  padding: 15px;
+
+  border: 1px solid #c9d8ff;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.7);
 }
+
+/* ===== ステージ企画 ===== */
+.Project2-box.stage {
+  background: #e6eeff;
+
+  border: 1px solid #c9d8ff;
+}
+
 
 /* ===== 上説明 ===== */
 .Project2-feature {
@@ -86,8 +109,9 @@ border: 2px solid #4da3ff;  border-radius: 50%;
 .Project2-feature-image {
   width: 90px;
   height: 70px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #e7e9ff, #d6dcff);
+  border-radius: 10px;
+  border: 1px solid #c9d8ff;
+  background: #ffffff;
 }
 
 .Project2-feature-title {
@@ -95,8 +119,34 @@ border: 2px solid #4da3ff;  border-radius: 50%;
 }
 
 .Project2-feature-desc {
+  position: relative;
+
   font-size: 12px;
   color: #6b6b9a;
+
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.Project2-feature-desc::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #8fa8ff 0%,
+    #a9bcff 75%,
+    rgba(169,188,255,.2) 100%
+  );
+
+  border-radius: 999px;
 }
 
 /* ===== グリッド（←ここは変更してない） ===== */
@@ -114,20 +164,24 @@ border: 2px solid #4da3ff;  border-radius: 50%;
   padding: 10px;
 
   background: linear-gradient(
-  135deg,
-  #a7bcff 0%,
-  #93a9ff 55%,
-  #7c95ff 85%,
-  #6880f3 100%
-);
+    135deg,
+    #a9c0ff 0%,
+    #97b2ff 55%,
+    #86a2ff 85%,
+    #7290ff 100%
+  );
+
+  border: 1.5px solid rgba(228, 235, 255, 0.45);
 
   box-shadow:
-    0 10px 25px rgba(95, 121, 240, 0.18);
+    0 10px 24px rgba(95,125,255,.18),
+    inset 0 1px 0 rgba(255,255,255,.35);
 
   position: relative;
   overflow: hidden;
-  transition: transform 0.15s ease;
+  transition: transform .15s ease;
 }
+
 .Project2-card:active {
   transform: scale(0.96);
 }
@@ -181,13 +235,22 @@ border: 2px solid #4da3ff;  border-radius: 50%;
   height: 100px;
   border-radius: 16px;
 
-  background: #ffffff !important;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fbfcff 60%,
+    #f4f8ff 100%
+  ) !important;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   overflow: hidden;
+
+  box-shadow:
+    inset 0 2px 8px rgba(255,255,255,.9),
+    inset 0 -2px 8px rgba(210,225,255,.35);
 }
 
 
@@ -202,7 +265,12 @@ border: 2px solid #4da3ff;  border-radius: 50%;
 
   box-sizing: border-box;
 
-  filter: none;
+  transform: scale(1.1);
+
+  filter:
+    brightness(1.2)
+    contrast(0.88)
+    saturate(0.65);
 }
 
 /* ===== 下 ===== */
@@ -220,7 +288,7 @@ border: 2px solid #4da3ff;  border-radius: 50%;
   left: 5px;   /* ← ★ここで左位置調整できる */
   right: 60px;  /* ← ボタン分のスペース確保 */
 
-  font-size: 12px;
+  font-size: 11px;
   color: #2f2f55;
   margin: 0;
 
@@ -260,12 +328,12 @@ border: 2px solid #4da3ff;  border-radius: 50%;
 );
 
 box-shadow:
-  0 0 0 6px #7a90ff,
+  0 0 0 6px #759cff,
   0 0 0 7.5px #f3f7ff,
 
   0 0 12px 2px rgba(0, 60, 212, 0.9),
   0 0 24px 6px rgba(121, 164, 255, 0.6),
 
-  0 0 0 12px #869aff,
+  0 0 0 12px #8dadff,
   inset 0 2px 6px rgba(255,255,255,0.6);
 }
