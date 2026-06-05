@@ -1,160 +1,254 @@
 body {
-  background: #f5f7ff;
+  background: #f6f7fd;
 }
 
-/* =========================
+/* =====================
    全体
-========================= */
+===================== */
 
 .notice-list-container {
   max-width: 700px;
-
   margin: 0 auto;
-
-  padding: 20px 20px 100px;
+  padding: 20px;
 }
 
-/* =========================
-   タイトル
-========================= */
+/* =====================
+   タブ
+===================== */
 
-.notice-list-title {
+.top-tabs {
   display: flex;
-  align-items: center;
-  justify-content: center;
 
-  width: 260px;
-  height: 47px;
-
-  margin: 60px auto 20px;
-
-  background: linear-gradient(
-    90deg,
-    #86a7ff,
-    #6f8dff
-  );
-
-  color: #fff;
-
-  font-size: 20px;
-  font-weight: bold;
-
-  border-radius: 10px;
-
-  border: 2px solid rgba(255,255,255,.55);
-
-  box-shadow:
-    0 8px 20px rgba(160,170,255,.14),
-    inset 0 2px 0 rgba(255,255,255,.7),
-    inset 0 -2px 0 rgba(255,255,255,.55);
-}
-
-/* =========================
-   カード
-========================= */
-
-.notice-card {
   background: #fff;
-
-  border: 2px solid rgba(169,186,255,.55);
 
   border-radius: 15px;
 
-  padding: 18px;
+  overflow: hidden;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,.05);
+}
+
+.top-tabs button {
+  flex: 1;
+
+  height: 55px;
+
+  border: none;
+
+  background: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #777;
+}
+
+.top-tabs .active {
+  color: #4b6fff;
+
+  border-bottom: 3px solid #4b6fff;
+}
+
+/* =====================
+   集計カード
+===================== */
+
+.summary-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,.05);
+}
+
+.summary-card span {
+  color: #7f87a4;
+
+  font-weight: 700;
+}
+
+.summary-card h2 {
+  margin: 10px 0 0;
+
+  font-size: 52px;
+
+  color: #4b6fff;
+}
+
+.status {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-around;
+}
+
+.status h3 {
+  font-size: 38px;
+
+  margin: 10px 0 0;
+}
+
+.divider {
+  width: 1px;
+
+  height: 80px;
+
+  background: #e6e9f3;
+}
+
+.green-dot {
+  color: #42ba84;
+}
+
+/* =====================
+   ツールバー
+===================== */
+
+.toolbar {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.toolbar-btn {
+  height: 50px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  padding: 0 18px;
+
+  background: white;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,.05);
+}
+
+.search-input {
+  flex: 1;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  padding: 0 16px;
+
+  background: white;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,.05);
+}
+
+/* =====================
+   お知らせカード
+===================== */
+
+.notice-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
 
   margin-bottom: 15px;
 
   box-shadow:
-    0 8px 20px rgba(111,141,255,.1);
-
-  transition: .25s;
+    0 5px 15px rgba(0,0,0,.05);
 }
 
-.notice-card:hover {
-  transform: translateY(-2px);
+.notice-card-top {
+  display: flex;
 
-  box-shadow:
-    0 12px 24px rgba(111,141,255,.15);
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 15px;
 }
-
-/* =========================
-   カテゴリ
-========================= */
 
 .notice-category {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 70px;
-
-  height: 28px;
-
-  padding: 0 12px;
-
-  margin-bottom: 12px;
+  padding: 7px 14px;
 
   border-radius: 999px;
 
-  background: linear-gradient(
-    135deg,
-    #6f8dff,
-    #8fa4ff
-  );
-
-  color: #fff;
+  color: white;
 
   font-size: 12px;
-  font-weight: 700;
 
-  box-shadow:
-    0 4px 10px rgba(111,141,255,.2);
+  font-weight: 700;
 }
 
-/* =========================
-   タイトル
-========================= */
+.notice-category.stage {
+  background: linear-gradient(
+    135deg,
+    #597cff,
+    #7ea1ff
+  );
+}
+
+.notice-category.class {
+  background: linear-gradient(
+    135deg,
+    #39c6c0,
+    #5ed7d2
+  );
+}
+
+.notice-category.food {
+  background: linear-gradient(
+    135deg,
+    #b069ff,
+    #d18fff
+  );
+}
+
+.notice-status {
+  color: #42ba84;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
 
 .notice-card-title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 34px;
+
+  font-weight: 800;
 
   color: #3559d4;
 
   margin-bottom: 10px;
 }
 
-/* =========================
-   本文
-========================= */
-
 .notice-card-body {
-  color: #555;
+  color: #7d8396;
 
   line-height: 1.8;
 
-  white-space: pre-wrap;
-}
-
-/* =========================
-   空状態
-========================= */
-
-.notice-empty {
-  background: #fff;
-
-  border: 2px dashed #d8e2ff;
-
-  border-radius: 15px;
-
-  padding: 40px 20px;
-
-  text-align: center;
-
-  color: #9aa7cf;
-
-  font-size: 15px;
-
-  box-shadow:
-    0 8px 20px rgba(111,141,255,.08);
+  margin-bottom: 10px;
 }
