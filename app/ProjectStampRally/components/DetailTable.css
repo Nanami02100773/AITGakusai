@@ -1,37 +1,107 @@
 .ProjectStampRally-detail-table {
-  width: 95%;           /* 画面に応じて変化 */
-  max-width: 700px;     /* PCでは今まで通り */
-  margin: 0 auto 10px;
-  background: #e0e0e0;
-  border-radius: 12px;
-  padding: 12px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  width: 95%;
+  max-width: 760px;
+
+  margin: 0 auto 0px;
+
+  padding: 15px;
+
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  box-shadow:
+    0 6px 18px rgba(134,167,255,.12);
 }
 
+/* =====================================
+   行
+===================================== */
 
 .ProjectStampRally-detail-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 12px;
+
+  gap: 20px;
+
+  padding: 6px 0;
 }
 
+/* =====================================
+   左ラベル
+===================================== */
+
 .ProjectStampRally-detail-label {
-  background: #c4c4c4;
-  border-radius: 6px;
+  width: 100px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
   color: #fff;
-  padding: 4px 12px;
-  min-width: 60px;
-  font-size: 0.95rem;
-  text-align: center;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  box-shadow:
+    0 3px 8px rgba(111,141,255,.18);
+}
+
+.ProjectStampRally-detail-icon {
+  font-size: 16px;
+}
+
+/* =====================================
+   右側
+===================================== */
+
+.ProjectStampRally-detail-content {
+  flex: 1;
 }
 
 .ProjectStampRally-detail-value {
-  flex: 1;
-  color: #333;
-  font-size: 0.95rem;
-  padding-left: 8px;
-  border-bottom: 2.5px solid #ccc;
+  width: 295px;
+
+  position: relative;
+
+  padding-bottom: 3px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #3f4d6d;
+
+  border-bottom: 2px solid rgba(134,167,255,.35);
+}
+
+.ProjectStampRally-detail-value::after {
+  content: "//";
+
+  position: absolute;
+
+  right: -15px;
+  bottom: -9px;
+
+  color: rgba(134,167,255,.8);
+
+  font-size: 16px;
+  font-weight: 700;
 }

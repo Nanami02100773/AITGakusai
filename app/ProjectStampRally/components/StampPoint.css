@@ -1,77 +1,118 @@
+/* =====================================
+   セクション
+===================================== */
+
 .StampRally-section {
-  padding: 10px 0 120px;
+  padding: 10px 0 100px;
   max-width: 95%;
   margin: 0 auto;
 }
 
+/* =====================================
+   リスト
+===================================== */
 
-/* ===== Title ===== */
-.StampRally-section-title {
-  display: block;
-  width: 250px;
-  max-width: 100%;
-  margin: 4px auto 10px;
-  text-align: center;
-  background: #999;
-  color: #fff;
-  border-radius: 20px;
-  padding: 6px 20px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-/* ===== List ===== */
 .StampRally-list {
   display: flex;
   justify-content: center;
 }
 
-/* ===== Item ===== */
+/* =====================================
+   アイテム
+===================================== */
+
 .StampRally-item {
-  width: 450px;
+  width: 100%;
+  max-width: 760px;
 }
 
-/* ===== Card ===== */
+/* =====================================
+   カード
+===================================== */
+
 .StampRally-card {
-  background-color: #bebebe;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border-radius: 5px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 6px 18px rgba(134,167,255,.12);
 }
 
-/* ===== Image Placeholder (白いボックス) ===== */
+/* =====================================
+   画像ボックス
+===================================== */
+
 .StampRally-image-box {
   width: 100%;
   height: 280px;
-  background-color: #ffffff; /* ← 白 */
-  border-radius: 16px;
-  margin-bottom: 18px;
 
-  /* 中央に文字やアイコンを置けるように */
+  background: #ffffff;
+
+  border-radius: 5px;
+
+  border: 2px solid rgba(134,167,255,.25);
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #999;
+  color: #86a7ff;
+
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
+
+  box-sizing: border-box;
 }
 
-/* 実画像を入れる場合 */
+/* =====================================
+   実画像
+===================================== */
+
 .StampRally-image {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
-  border-radius: 16px;
+
+  border-radius: 3px;
 }
 
-/* ===== Label ===== */
+/* =====================================
+   ラベル
+===================================== */
+
 .StampRally-label {
-  font-size: 18px;
+  margin-top: 12px;
+
+  width: 120px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
   color: #fff;
-  margin: 0;
-  font-weight: bold;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 3px 8px rgba(111,141,255,.18);
 }

@@ -8,7 +8,7 @@ function DescriptionBox() {
   return (
     <div>
       <div>
-        <div className="ProjectStampRally-section-title">企画説明</div>
+        <div className="StampRally-section-title">企画説明</div>
       </div>
 
       <div className="ProjectStampRally-description-box">

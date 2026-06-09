@@ -1,5 +1,6 @@
 body {
-  background: #f6f7fd;
+  background: #f6f7fc;
+  font-family: sans-serif;
 }
 
 /* =====================
@@ -7,9 +8,9 @@ body {
 ===================== */
 
 .notice-list-container {
-  max-width: 700px;
+  max-width: 420px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 16px;
 }
 
 /* =====================
@@ -21,36 +22,38 @@ body {
 
   background: #fff;
 
-  border-radius: 15px;
+  border-radius: 14px;
 
   overflow: hidden;
 
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   box-shadow:
-    0 4px 15px rgba(0,0,0,.05);
+    0 2px 8px rgba(0,0,0,.04);
 }
 
 .top-tabs button {
   flex: 1;
 
-  height: 55px;
+  height: 48px;
 
   border: none;
 
   background: white;
 
-  font-size: 16px;
+  font-size: 15px;
 
-  font-weight: 700;
+  font-weight: 600;
 
-  color: #777;
+  color: #8d93a8;
+
+  cursor: pointer;
 }
 
 .top-tabs .active {
   color: #4b6fff;
 
-  border-bottom: 3px solid #4b6fff;
+  border-bottom: 2px solid #4b6fff;
 }
 
 /* =====================
@@ -60,34 +63,38 @@ body {
 .summary-grid {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.4fr;
 
-  gap: 15px;
+  gap: 12px;
 
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .summary-card {
   background: white;
 
-  border-radius: 20px;
+  border-radius: 16px;
 
-  padding: 20px;
+  padding: 16px;
 
   box-shadow:
-    0 5px 15px rgba(0,0,0,.05);
+    0 2px 10px rgba(0,0,0,.04);
 }
 
 .summary-card span {
-  color: #7f87a4;
+  color: #8c93ab;
 
-  font-weight: 700;
+  font-size: 13px;
+
+  font-weight: 600;
 }
 
 .summary-card h2 {
-  margin: 10px 0 0;
+  margin-top: 8px;
 
-  font-size: 52px;
+  font-size: 44px;
+
+  line-height: 1;
 
   color: #4b6fff;
 }
@@ -97,21 +104,35 @@ body {
 
   align-items: center;
 
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.status p {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #6f778f;
+
+  margin: 0;
 }
 
 .status h3 {
-  font-size: 38px;
+  font-size: 30px;
 
-  margin: 10px 0 0;
+  margin-top: 6px;
+
+  margin-bottom: 0;
+
+  color: #23314f;
 }
 
 .divider {
   width: 1px;
 
-  height: 80px;
+  height: 55px;
 
-  background: #e6e9f3;
+  background: #eceef6;
 }
 
 .green-dot {
@@ -127,41 +148,51 @@ body {
 
   gap: 10px;
 
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .toolbar-btn {
-  height: 50px;
+  height: 46px;
 
   border: none;
 
-  border-radius: 15px;
-
-  padding: 0 18px;
+  border-radius: 14px;
 
   background: white;
 
-  font-weight: 700;
+  padding: 0 16px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #6f778f;
 
   box-shadow:
-    0 4px 15px rgba(0,0,0,.05);
+    0 2px 8px rgba(0,0,0,.04);
+
+  cursor: pointer;
 }
 
 .search-input {
   flex: 1;
 
-  height: 50px;
+  height: 46px;
 
   border: none;
 
-  border-radius: 15px;
-
-  padding: 0 16px;
+  border-radius: 14px;
 
   background: white;
 
+  padding: 0 14px;
+
+  font-size: 14px;
+
   box-shadow:
-    0 4px 15px rgba(0,0,0,.05);
+    0 2px 8px rgba(0,0,0,.04);
+
+  outline: none;
 }
 
 /* =====================
@@ -171,14 +202,14 @@ body {
 .notice-card {
   background: white;
 
-  border-radius: 20px;
+  border-radius: 16px;
 
-  padding: 20px;
+  padding: 18px;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   box-shadow:
-    0 5px 15px rgba(0,0,0,.05);
+    0 2px 10px rgba(0,0,0,.04);
 }
 
 .notice-card-top {
@@ -188,67 +219,99 @@ body {
 
   align-items: center;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
+/* =====================
+   カテゴリ
+===================== */
+
 .notice-category {
-  padding: 7px 14px;
+  padding: 5px 12px;
 
   border-radius: 999px;
 
   color: white;
 
-  font-size: 12px;
+  font-size: 11px;
 
   font-weight: 700;
+
+  line-height: 1;
 }
 
 .notice-category.stage {
   background: linear-gradient(
     135deg,
-    #597cff,
-    #7ea1ff
+    #5a78ff,
+    #8ba6ff
   );
 }
 
 .notice-category.class {
   background: linear-gradient(
     135deg,
-    #39c6c0,
-    #5ed7d2
+    #36c7c0,
+    #65ddd7
   );
 }
 
 .notice-category.food {
   background: linear-gradient(
     135deg,
-    #b069ff,
-    #d18fff
+    #a962ff,
+    #d48fff
   );
 }
+
+/* =====================
+   ステータス
+===================== */
 
 .notice-status {
   color: #42ba84;
 
-  font-size: 14px;
+  font-size: 13px;
 
-  font-weight: 700;
+  font-weight: 600;
 }
 
+/* =====================
+   タイトル
+===================== */
+
 .notice-card-title {
-  font-size: 34px;
+  font-size: 18px;
 
   font-weight: 800;
 
   color: #3559d4;
 
+  margin-bottom: 6px;
+}
+
+/* =====================
+   本文
+===================== */
+
+.notice-card-body {
+  color: #8d93a8;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
   margin-bottom: 10px;
 }
 
-.notice-card-body {
-  color: #7d8396;
+/* =====================
+   日付
+===================== */
 
-  line-height: 1.8;
+.notice-date {
+  color: #a0a7bb;
 
-  margin-bottom: 10px;
+  font-size: 13px;
+
+  font-weight: 500;
 }

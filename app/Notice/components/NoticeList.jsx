@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import "./NoticeList.css";
 
 export default function NoticeList() {
   const [notices, setNotices] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     const data =
@@ -48,10 +50,7 @@ export default function NoticeList() {
           <div className="divider" />
 
           <div>
-            <p>
-              ● 非公開
-            </p>
-
+            <p>● 非公開</p>
             <h3>{draft}</h3>
           </div>
         </div>
@@ -79,14 +78,17 @@ export default function NoticeList() {
         <div
           key={notice.id}
           className="notice-card"
+          onClick={() =>
+            router.push(
+              `/admin/notice/edit/${notice.id}`
+            )
+          }
         >
 
           <div className="notice-card-top">
 
             <div
-              className={`notice-category ${
-                notice.category
-              }`}
+              className={`notice-category ${notice.category}`}
             >
               {notice.category === "stage"
                 ? "ステージ"
@@ -109,8 +111,15 @@ export default function NoticeList() {
             {notice.body}
           </div>
 
+          {notice.date && (
+            <div className="notice-date">
+              {notice.date}
+            </div>
+          )}
+
         </div>
       ))}
+
     </div>
   );
 }
