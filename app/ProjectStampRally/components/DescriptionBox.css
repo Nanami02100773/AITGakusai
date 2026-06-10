@@ -52,7 +52,7 @@
 
   margin: 0 auto 20px;
 
-  padding: 10px;
+  padding: 16px 18px;
 
   background: linear-gradient(
     180deg,
@@ -60,12 +60,14 @@
     #e8f1ff
   );
 
- 
   border-radius: 10px;
 
-  color: #444;
-  line-height: 1.5;
-  font-size: 15px;
+  color: #3f4d6d;      /* 注意事項と同じ色 */
+  font-size: 14px;     /* 注意事項と同じサイズ */
+  font-weight: 500;    /* 注意事項と同じ太さ */
+  line-height: 1.8;    /* 行間広め */
+
+  letter-spacing: 0.03em;
 
   box-sizing: border-box;
 

@@ -35,7 +35,9 @@ function ImageCarousel({ images = [] }) {
       <div className="frame-bottom-center" />
 
       {/* 上下装飾 */}
-      <div className="frame-top" />
+      <div className="frame-top">
+  開催風景
+</div>
       
       {/* 四隅 */}
       <div className="frame-corner-tl" />

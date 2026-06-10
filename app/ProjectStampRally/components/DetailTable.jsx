@@ -6,18 +6,23 @@ function DetailTable() {
     {
       icon: "📍",
       label: "場所",
-      value: "〇〇教室",
+      value: "工科展／楽市楽座／脱出ゲーム／MAKE",
     },
     {
       icon: "🕒",
       label: "時間",
-      value: "10:00～16:00",
+      value: "10:00～17:00",
     },
     {
-      icon: "⚠",
-      label: "注意事項",
-      value: "特になし",
-    },
+  icon: "⚠",
+  label: "注意事項",
+  value: [
+    "スタンプは1人1回までです",
+    "景品は数に限りがあります",
+    "総合案内所で交換してください",
+    "学祭と執行のスタンプラリーがあります",
+  ],
+}
   ];
 
   return (
@@ -36,20 +41,28 @@ function DetailTable() {
             className="ProjectStampRally-detail-row"
             key={index}
           >
-            <div className="ProjectStampRally-detail-label">
-              <span className="ProjectStampRally-detail-icon">
-                {item.icon}
-              </span>
+           <div className="ProjectStampRally-detail-label">
+  <span className="ProjectStampRally-detail-icon">
+    {item.icon}
+  </span>
 
-              <span>
-                {item.label}
-              </span>
-            </div>
+  <span className="ProjectStampRally-detail-text">
+    {item.label}
+  </span>
+</div>
 
             <div className="ProjectStampRally-detail-content">
-              <div className="ProjectStampRally-detail-value">
-                {item.value}
-              </div>
+            <div className="ProjectStampRally-detail-value">
+  {Array.isArray(item.value) ? (
+    <ul className="ProjectStampRally-note-list">
+      {item.value.map((note, i) => (
+        <li key={i}>{note}</li>
+      ))}
+    </ul>
+  ) : (
+    item.value
+  )}
+</div>
             </div>
           </div>
         ))}
