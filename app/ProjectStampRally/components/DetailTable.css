@@ -92,39 +92,88 @@
 .ProjectStampRally-detail-text {
   position: relative;
 
-  left: 15px;   /* 左右調整 */
-  top: 0px;    /* 上下調整 */
-
-  /* または */
-  /* transform: translateX(8px); */
+  left: 10px;
+  top: 0;
 }
+
+/* =====================================
+   アイコン
+===================================== */
+/* =====================================
+   アイコン共通
+===================================== */
 
 .ProjectStampRally-detail-icon {
   position: absolute;
 
-  left: 8px;
+  left: 0px;
   top: 50%;
+
   transform: translateY(-50%);
 
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #fff;
-  border-radius: 50%;
-
-  color: #6f8dff;
-
-  font-size: 14px;
-  font-weight: bold;
+  background: transparent;
 
   flex-shrink: 0;
 }
 
+.ProjectStampRally-detail-icon-image {
+  object-fit: contain;
+  display: block;
 
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(100%);
+}
+
+/* =====================================
+   場所アイコン
+===================================== */
+
+.place-icon {
+  width: 55px;
+  height: 55px;
+
+  position: relative;
+
+  left: 0px;   /* 左右調整 */
+  top: 0px;    /* 上下調整 */
+}
+
+/* =====================================
+   時間アイコン
+===================================== */
+
+.clock-icon {
+  width: 65px;
+  height: 65px;
+
+  position: relative;
+
+  left: 0px;   /* 左右調整 */
+  top: 1px;    /* 上下調整 */
+}
+
+/* =====================================
+   注意事項アイコン
+===================================== */
+
+.precautions-icon {
+  width: 30px;
+  height: 30px;
+
+  position: relative;
+
+  left: -1px;   /* 左右調整 */
+  top: -1px;    /* 上下調整 */
+}
 
 /* =====================================
    右側
@@ -132,14 +181,16 @@
 
 .ProjectStampRally-detail-content {
   flex: 1;
+
+  display: flex;
+  justify-content: center;
 }
 
 .ProjectStampRally-detail-value {
-  width: 295px;
+  width: 100%;
+  max-width: 500px;
 
   position: relative;
-
-  top: 8px;
 
   padding-bottom: 5px;
 
@@ -171,7 +222,7 @@
   right: -15px;
   bottom: -8px;
 
-  color:#ff9fb5;
+  color: #ff9fb5;
 
   font-size: 16px;
   font-weight: 700;
