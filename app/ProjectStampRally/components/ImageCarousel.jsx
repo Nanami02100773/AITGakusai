@@ -28,27 +28,27 @@ function ImageCarousel({ images = [] }) {
   }
 
   return (
-    <div className="ProjectStampRally-image-carousel">
+    <div className="StampRally-image-carousel">
 
       {/* 中央フレーム */}
-      <div className="frame-top-center" />
-      <div className="frame-bottom-center" />
+      <div className="StampRally-frame-top-center" />
+      <div className="StampRally-frame-bottom-center" />
 
       {/* 上下装飾 */}
-      <div className="frame-top">
-  開催風景
-</div>
-      
+      <div className="StampRally-frame-top">
+        開催風景
+      </div>
+
       {/* 四隅 */}
-      <div className="frame-corner-tl" />
-      <div className="frame-corner-tr" />
-      <div className="frame-corner-bl" />
-      <div className="frame-corner-br" />
+      <div className="StampRally-frame-corner-tl" />
+      <div className="StampRally-frame-corner-tr" />
+      <div className="StampRally-frame-corner-bl" />
+      <div className="StampRally-frame-corner-br" />
 
       {images.map((src, idx) => {
 
         let className =
-          "ProjectStampRally-carousel-image";
+          "StampRally-carousel-image";
 
         if (idx === current) {
           className += " center";

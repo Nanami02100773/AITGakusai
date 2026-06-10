@@ -1,35 +1,88 @@
-import React, { useState, useEffect } from 'react';
-import './ImageCarousel.css';
+"use client";
+
+import React, {
+  useState,
+  useEffect
+} from "react";
+
+import "./ImageCarousel.css";
 
 function ImageCarousel({ images = [] }) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    if (images.length === 0) return;
+    if (images.length <= 1) return;
 
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
+      setCurrent(
+        (prev) =>
+          (prev + 1) % images.length
+      );
     }, 7000);
 
     return () => clearInterval(timer);
   }, [images.length]);
 
+  if (!images.length) {
+    return null;
+  }
+
   return (
     <div className="Koukaten-image-carousel">
-      {images.map((src, idx) => {
-        let className = "Koukaten-carousel-image";
 
-        if (idx === current) className += " center";
-        else if (idx === (current + 1) % images.length) className += " right";
-        else if (idx === (current - 1 + images.length) % images.length) className += " left";
-        else className += " hidden";
+      {/* 中央フレーム */}
+      <div className="Koukaten-frame-top-center" />
+      <div className="Koukaten-frame-bottom-center" />
+
+      {/* 上下装飾 */}
+      <div className="Koukaten-frame-top">
+        開催風景
+      </div>
+
+      {/* 四隅 */}
+      <div className="Koukaten-frame-corner-tl" />
+      <div className="Koukaten-frame-corner-tr" />
+      <div className="Koukaten-frame-corner-bl" />
+      <div className="Koukaten-frame-corner-br" />
+
+      {images.map((src, idx) => {
+
+        let className =
+          "Koukaten-carousel-image";
+
+        if (idx === current) {
+          className += " center";
+        }
+
+        else if (
+          idx ===
+          (current + 1) % images.length
+        ) {
+          className += " right";
+        }
+
+        else if (
+          idx ===
+          (
+            current -
+            1 +
+            images.length
+          ) %
+            images.length
+        ) {
+          className += " left";
+        }
+
+        else {
+          className += " hidden";
+        }
 
         return (
           <img
             key={idx}
-            className={className}
             src={src}
             alt={`carousel-${idx}`}
+            className={className}
           />
         );
       })}

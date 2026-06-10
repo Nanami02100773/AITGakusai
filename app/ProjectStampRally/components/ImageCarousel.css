@@ -1,4 +1,4 @@
-.ProjectStampRally-image-carousel {
+.StampRally-image-carousel {
   position: relative;
 
   width: 95%;
@@ -36,7 +36,8 @@
 /* ========================================
    上中央フレーム
 ======================================== */
-.frame-top-center {
+
+.StampRally-frame-top-center {
   position: absolute;
 
   top: 0;
@@ -62,7 +63,8 @@
 /* ========================================
    下中央フレーム
 ======================================== */
-.frame-bottom-center {
+
+.StampRally-frame-bottom-center {
   position: absolute;
 
   bottom: 0;
@@ -88,8 +90,9 @@
 /* ========================================
    上下装飾
 ======================================== */
-.frame-top,
-.frame-bottom {
+
+.StampRally-frame-top,
+.StampRally-frame-bottom {
   position: absolute;
 
   left: 50%;
@@ -104,7 +107,7 @@
   z-index: 21;
 }
 
-.frame-top {
+.StampRally-frame-top {
   position: absolute;
 
   top: 0;
@@ -136,12 +139,11 @@
   letter-spacing: 0.05em;
 }
 
-
 /* ========================================
    左上
 ======================================== */
 
-.frame-corner-tl {
+.StampRally-frame-corner-tl {
   position: absolute;
 
   top: 0;
@@ -165,7 +167,7 @@
    右上
 ======================================== */
 
-.frame-corner-tr {
+.StampRally-frame-corner-tr {
   position: absolute;
 
   top: 0;
@@ -189,7 +191,7 @@
    左下
 ======================================== */
 
-.frame-corner-bl {
+.StampRally-frame-corner-bl {
   position: absolute;
 
   bottom: 0;
@@ -213,7 +215,7 @@
    右下
 ======================================== */
 
-.frame-corner-br {
+.StampRally-frame-corner-br {
   position: absolute;
 
   bottom: 0;
@@ -237,7 +239,7 @@
    内側パネル
 ======================================== */
 
-.ProjectStampRally-image-carousel::before {
+.StampRally-image-carousel::before {
   content: "";
 
   position: absolute;
@@ -254,13 +256,13 @@
   z-index: 1;
 }
 
-
 /* ========================================
    共通カード
 ======================================== */
 
-.ProjectStampRally-carousel-image {
+.StampRally-carousel-image {
   position: absolute;
+
   width: 75%;
   height: 200px;
 
@@ -290,7 +292,7 @@
    中央
 ======================================== */
 
-.ProjectStampRally-carousel-image.center {
+.StampRally-carousel-image.center {
   left: 50%;
   top: 53%;
 
@@ -307,7 +309,7 @@
    左
 ======================================== */
 
-.ProjectStampRally-carousel-image.left {
+.StampRally-carousel-image.left {
   left: -18%;
 
   top: 54%;
@@ -326,7 +328,7 @@
    右
 ======================================== */
 
-.ProjectStampRally-carousel-image.right {
+.StampRally-carousel-image.right {
   right: -18%;
 
   left: auto;
@@ -347,7 +349,7 @@
    非表示
 ======================================== */
 
-.ProjectStampRally-carousel-image.hidden {
+.StampRally-carousel-image.hidden {
   opacity: 0;
 
   pointer-events: none;
