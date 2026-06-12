@@ -1,36 +1,271 @@
-.Dasstsu-detail-table {
+.dasstsu-detail-table {
   width: 95%;
-  max-width: 700px;
-  margin: 0 auto 10px;
-  background: #e0e0e0;
-  border-radius: 12px;
-  padding: 12px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  max-width: 760px;
+
+  margin: 0 auto 0px;
+
+  padding: 15px;
+
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  box-shadow:
+    0 6px 18px rgba(134,167,255,.12);
 }
 
-.Dasstsu-detail-row {
+.dasstsu-note-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dasstsu-note-list li {
+  position: relative;
+
+  padding-left: 18px;
+  margin-bottom: 4px;
+
+  color: #3f4d6d;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dasstsu-note-list li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 7px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #6f8dff;
+}
+
+/* =====================================
+   行
+===================================== */
+.dasstsu-detail-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 20px;
+  padding: 10px 0;
+}
+
+/* =====================================
+   左ラベル
+===================================== */
+.dasstsu-detail-label {
+  width: 90px;
+  height: 30px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 9px;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+}
+
+.dasstsu-detail-text {
+  position: relative;
+
+  left: 10px;
+  top: -3px;
+}
+
+/* =====================================
+   アイコン
+===================================== */
+.dasstsu-detail-icon {
+  position: absolute;
+
+  left: 0px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 12px;
+  justify-content: center;
+
+  background: transparent;
+
+  flex-shrink: 0;
 }
 
-.Dasstsu-detail-label {
-  background: #c4c4c4;
-  border-radius: 6px;
-  color: #fff;
-  padding: 4px 12px;
-  min-width: 60px;
-  font-size: 0.95rem;
-  text-align: center;
+.dasstsu-detail-icon-image {
+  object-fit: contain;
+  display: block;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(100%);
 }
 
-.Dasstsu-detail-value {
+/* =====================================
+   場所アイコン
+===================================== */
+.place-icon {
+  width: 54px;
+  height: 54px;
+
+  position: relative;
+
+  left: 0px;
+  top: 0px;
+}
+
+/* =====================================
+   時間アイコン
+===================================== */
+.clock-icon {
+  width: 65px;
+  height: 65px;
+
+  position: relative;
+
+  left: 0px;
+  top: 1px;
+}
+
+/* =====================================
+   注意事項アイコン
+===================================== */
+.precautions-icon {
+  width: 29px;
+  height: 29px;
+
+  position: relative;
+
+  left: -1px;
+  top: -1px;
+}
+
+/* =====================================
+   右側
+===================================== */
+.dasstsu-detail-content {
   flex: 1;
-  color: #333;
-  font-size: 0.95rem;
-  padding-left: 8px;
-  border-bottom: 2.5px solid #ccc;
+
+  display: flex;
+  justify-content: center;
+
+  align-items: flex-start;
+}
+
+.dasstsu-detail-value {
+  width: 95%;
+  max-width: 500px;
+
+  position: relative;
+
+  top: 0;
+
+  padding-bottom: 5px;
+
+  color: #3f4d6d;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.dasstsu-detail-value::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: rgba(134,167,255,.35);
+}
+
+.dasstsu-detail-value::after {
+  content: "//";
+
+  position: absolute;
+
+  right: -15px;
+  bottom: -8px;
+
+  color: #ff9fb5;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* =====================================
+   セクションタイトル
+===================================== */
+.dasstsu-section-wrapper {
+  width: 100%;
+}
+
+.dasstsu-section-title {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+  height: 44px;
+
+  margin: 20px auto 10px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+
+  border-radius: 999px;
+
+  border: 2px solid rgba(255,255,255,0.55);
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,0.14),
+    inset 0 2px 0 rgba(255,255,255,0.7),
+    inset 0 -2px 0 rgba(255,255,255,0.55);
+
+  overflow: hidden;
 }

@@ -1,31 +1,71 @@
 /* ==============================
    セクションタイトル
 ================================ */
-.Kenketsu-section-title {
-  display: block;
-  width: 250px;
-  max-width: 100%;
-  margin: 4px auto 10px;
-  text-align: center;
-  background: #999;
+.kenketsu-section-title {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+  height: 44px;
+
+  margin: 20px auto 10px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
   color: #fff;
-  border-radius: 20px;
-  padding: 6px 20px;
-  font-size: 1rem;
-  box-sizing: border-box;
+  font-size: 17px;
+  font-weight: bold;
+
+  border-radius: 999px;
+
+  border: 2px solid rgba(255,255,255,0.55);
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,0.14),
+    inset 0 2px 0 rgba(255,255,255,0.7),
+    inset 0 -2px 0 rgba(255,255,255,0.55);
+
+  overflow: hidden;
 }
 
 /* ==============================
    企画説明ボックス
 ================================ */
-.Kenketsu-description-box {
+.kenketsu-description-box {
   width: 95%;
   max-width: 700px;
-  margin: 0 auto 16px;
-  background: #e0e0e0;
-  border-radius: 12px;
-  padding: 8px 12px;
-  color: #333;
-  font-size: 1rem;
+
+  min-height: 100px;
+
+  margin: 0 auto 20px;
+
+  padding: 16px 18px;
+
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border-radius: 10px;
+
+  color: #3f4d6d;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+
+  letter-spacing: 0.03em;
+
   box-sizing: border-box;
+
+  box-shadow:
+    0 10px 25px rgba(134,167,255,.15);
 }

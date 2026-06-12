@@ -2,22 +2,22 @@
    セクション
 ========================================== */
 
-.ProjectKoukaten-card-list {
+.Koukaten-card-list {
   width: 100%;
-  padding: 10px 0 30px;
+  padding: 10px 0 100px;
 }
 
 /* ==========================================
    カード
 ========================================== */
 
-.ProjectKoukaten-card {
+.Koukaten-card {
   display: flex;
 
   width: 95%;
   max-width: 760px;
 
-  margin: 0 auto 16px;
+  margin: 0 auto 10px;
 
   padding: 14px;
 
@@ -36,23 +36,23 @@
 /* ==========================================
    左側
 ========================================== */
-.ProjectKoukaten-card {
+.Koukaten-card {
   display: flex;
   align-items: flex-start;
 }
 
-.ProjectKoukaten-card-left {
+.Koukaten-card-left {
   width: 43%;
   flex-shrink: 0;
 }
 
-.ProjectKoukaten-thumb-wrapper {
+.Koukaten-thumb-wrapper {
   position: relative;
 }
 
 /* 団体名バー */
 
-.ProjectKoukaten-overlay-box {
+.Koukaten-overlay-box {
   width: 100%;
   height: 40px;
 
@@ -80,7 +80,7 @@
    画像エリア
 ========================================== */
 
-.ProjectKoukaten-thumb {
+.Koukaten-thumb {
   width: 100%;
   height: 150px;
 
@@ -99,7 +99,7 @@
    ラベル
 ========================================== */
 
-.ProjectKoukaten-label {
+.Koukaten-label {
   position: absolute;
 
   left: 10px;
@@ -123,7 +123,7 @@
 /* ==========================================
    区切り線
 ========================================== */
-.ProjectKoukaten-card-divider {
+.Koukaten-card-divider {
   width: 2px;
 
   background: #d9e7ff;
@@ -136,7 +136,7 @@
    右側
 ========================================== */
 
-.ProjectKoukaten-card-right {
+.Koukaten-card-right {
   flex: 1;
 
   display: flex;
@@ -149,8 +149,8 @@
    タイトル
 ========================================== */
 
-.ProjectKoukaten-sub1-title,
-.ProjectKoukaten-sub2-title {
+.Koukaten-sub1-title,
+.Koukaten-sub2-title {
   width: fit-content;
 
   padding: 5px 10px;
@@ -171,8 +171,8 @@
    説明文
 ========================================== */
 
-.ProjectKoukaten-introduction1-subdesc,
-.ProjectKoukaten-introduction2-subdesc {
+.Koukaten-introduction1-subdesc,
+.Koukaten-introduction2-subdesc {
   margin-top: 8px;
 
   font-size: 13px;
@@ -186,7 +186,7 @@
    点線
 ========================================== */
 
-.ProjectKoukaten-dotted-line {
+.Koukaten-dotted-line {
   width: 100%;
 
   border-top: 2px dotted #d8e6ff;

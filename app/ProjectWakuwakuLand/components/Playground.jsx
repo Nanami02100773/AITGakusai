@@ -48,76 +48,97 @@ const cardData = [
     label: "ラベル5",
     overlayText: "特別企画",
     title: "紹介文5",
-    subdesc1: "これは紹介4の補足説明です。",
+    subdesc1: "これは紹介5の補足説明です。",
     location: "場所5",
-    subdesc2: "これは場所4の補足説明です。",
+    subdesc2: "これは場所5の補足説明です。",
     noticeTitle: "注意事項5",
-    noticeDesc: "これは注意事項4です。",
+    noticeDesc: "これは注意事項5です。",
   },
 ];
 
-/* コンポーネント */
-const WakuwakuLand = () => {
+const kirakiraparc = () => {
   return (
     <section>
+
       {/* タイトル */}
-      <div className="WakuwakuLand-section-wrapper">
-        <div className="WakuwakuLand-section-title">
+      <div className="kirakiraparc-section-wrapper">
+        <div className="kirakiraparc-section-title">
           ゲーム紹介
         </div>
       </div>
 
       {/* カード一覧 */}
-      <main className="WakuwakuLand-card-list">
+      <main className="kirakiraparc-card-list">
         {cardData.map((item, index) => (
-          <div className="WakuwakuLand-card" key={index}>
-            
-            {/* 左 */}
-            <div className="WakuwakuLand-card-left">
-              <div className="WakuwakuLand-thumb-wrapper">
-                <div className="WakuwakuLand-thumb"></div>
-                <div className="WakuwakuLand-overlay-box">
+          <div
+            className="kirakiraparc-card"
+            key={index}
+          >
+
+            {/* 左側 */}
+            <div className="kirakiraparc-card-left">
+
+              <div className="kirakiraparc-thumb-wrapper">
+
+                {/* 上部バー */}
+                <div className="kirakiraparc-overlay-box">
                   {item.overlayText}
                 </div>
+
+                {/* 画像 */}
+                <div className="kirakiraparc-thumb"></div>
+
+                {/* ラベル */}
+                <div className="kirakiraparc-label">
+                  {item.label}
+                </div>
+
               </div>
+
             </div>
 
-            {/* 区切り */}
-            <div className="WakuwakuLand-card-divider"></div>
+            {/* 区切り線 */}
+            <div className="kirakiraparc-card-divider"></div>
 
-            {/* 右 */}
-            <div className="WakuwakuLand-card-right">
-              <div className="WakuwakuLand-title">
-                {item.title}
+            {/* 右側 */}
+            <div className="kirakiraparc-card-right">
+
+              <div className="kirakiraparc-sub1-title">
+                📄 {item.title}
               </div>
 
-              <div className="WakuwakuLand-subdesc">
+              <div className="kirakiraparc-introduction1-subdesc">
                 {item.subdesc1}
               </div>
 
-              <div className="WakuwakuLand-desc">
-                {item.location}
+              <div className="kirakiraparc-dotted-line"></div>
+
+              <div className="kirakiraparc-sub2-title">
+                📍 {item.location}
               </div>
 
-              <div className="WakuwakuLand-subdesc">
+              <div className="kirakiraparc-introduction2-subdesc">
                 {item.subdesc2}
               </div>
 
-              {/* 注意 */}
-              <div className="WakuwakuLand-notice-title">
-                {item.noticeTitle}
+              <div className="kirakiraparc-dotted-line"></div>
+
+              <div className="kirakiraparc-sub3-title">
+                ⚠️ {item.noticeTitle}
               </div>
 
-              <div className="WakuwakuLand-notice-desc">
+              <div className="kirakiraparc-introduction3-subdesc">
                 {item.noticeDesc}
               </div>
+
             </div>
 
           </div>
         ))}
       </main>
+
     </section>
   );
 };
 
-export default WakuwakuLand;
+export default kirakiraparc;

@@ -1,114 +1,195 @@
-/* ==============================
-   カード本体
-================================ */
-.Kurabuten-card {
-  display: flex;
-  background: #ddd;
-   margin: 0 auto 12px; /* ← これが重要（中央＋下余白） */
-  max-width: 95%;
-  width: 700px;
-  height: 190px;
-  border-radius: 15px;
-  overflow: hidden;
-}
+/* ==========================================
+   セクション
+========================================== */
 
-/* ==============================
-   左側（画像エリア）
-================================ */
-.Kurabuten-card-left {
-  width: 300px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 画像＋ラベルのラッパー */
-.Kurabuten-thumb-wrapper {
-  position: relative;
-  width: 95%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-/* 画像部分 */
-.Kurabuten-thumb {
-  background: #aaa;
+.kurabuten-card-list {
   width: 100%;
-  height: 80%;
-  border-radius: 10px;
+  padding: 10px 0 100px;
 }
 
-/* 下のラベル */
-.Kurabuten-label {
-  position: absolute;
-  bottom: 8px;
-  left: 10px;
-  background: #ccc;
-  height: 25px;
-  width: 60%;
-  border-radius: 6px;
+/* ==========================================
+   カード
+========================================== */
 
-  padding-left: 8px;
+.kurabuten-card {
   display: flex;
-  align-items: center;
-}
 
-/* 上に重なるオーバーレイ */
-.Kurabuten-overlay-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 170px;
-  height: 30px;
-  background: #a1a1a1;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-}
+  width: 95%;
+  max-width: 760px;
 
-/* ==============================
-   左右の仕切り線
-================================ */
-.Kurabuten-card-divider {
-  width: 3px;
+  margin: 0 auto 10px;
+
+  padding: 14px;
+
   background: #fff;
-  margin: 10px 0;
+
+  border-radius: 15px;
+
+  border: 1px solid #edf3ff;
+
+  box-shadow:
+    0 3px 12px rgba(100, 130, 200, 0.06);
+
+  gap: 14px;
+}
+
+/* ==========================================
+   左側
+========================================== */
+.kurabuten-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.kurabuten-card-left {
+  width: 43%;
   flex-shrink: 0;
 }
 
-/* ==============================
-   右側（テキストエリア）
-================================ */
-.Kurabuten-card-right {
-  width: 60%;
-  padding: 10px;
+.kurabuten-thumb-wrapper {
+  position: relative;
+}
+
+/* 団体名バー */
+
+.kurabuten-overlay-box {
+  width: 100%;
+  height: 40px;
+
+  margin-bottom: 5px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #66a4ff,
+    #2d73f5
+  );
+
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================
+   画像エリア
+========================================== */
+
+.kurabuten-thumb {
+  width: 100%;
+  height: 150px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #eef4ff,
+    #dde7fb
+  );
+
+  border: 1px solid #e5edff;
+}
+
+/* ==========================================
+   ラベル
+========================================== */
+
+.kurabuten-label {
+  position: absolute;
+
+  left: 10px;
+  bottom: 10px;
+
+  padding: 7px 14px;
+
+  background: #fff;
+
+  border-radius: 5px;
+
+  color: #2d73f5;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================
+   区切り線
+========================================== */
+.kurabuten-card-divider {
+  width: 2px;
+
+  background: #d9e7ff;
+
+  border-radius: 999px;
+
+  align-self: stretch;
+}
+/* ==========================================
+   右側
+========================================== */
+
+.kurabuten-card-right {
+  flex: 1;
+
   display: flex;
   flex-direction: column;
+
   justify-content: center;
-  gap: 20px;
 }
 
-.Kurabuten-sub1-title,
-.Kurabuten-sub2-title {
-  background: #bbb;
-  padding: 2px 6px;
-  border-radius: 6px;
+/* ==========================================
+   タイトル
+========================================== */
+
+.kurabuten-sub1-title,
+.kurabuten-sub2-title {
   width: fit-content;
-  line-height: 1.2;
+
+  padding: 5px 10px;
+
+  border-radius: 5px;
+
+  background: #f4f8ff;
+
+  border: 1.5px solid #dce8ff;
+
+  color: #2d73f5;
+
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.Kurabuten-introduction1-subdesc,
-.Kurabuten-introduction2-subdesc {
-  font-size: 0.8em;
-  color: #333;
-  padding-left: 6px;
-  margin-top: -6px;
-  line-height: 1.2;
+/* ==========================================
+   説明文
+========================================== */
+
+.kurabuten-introduction1-subdesc,
+.kurabuten-introduction2-subdesc {
+  margin-top: 8px;
+
+  font-size: 13px;
+
+  color: #4b5563;
+
+  line-height: 1.6;
+}
+
+/* ==========================================
+   点線
+========================================== */
+
+.kurabuten-dotted-line {
+  width: 100%;
+
+  border-top: 2px dotted #d8e6ff;
+
+  margin: 12px 0;
 }

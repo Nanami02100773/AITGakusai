@@ -1,56 +1,358 @@
-.Dasstsu-image-carousel {
+.dasstsu-image-carousel {
   position: relative;
+
   width: 95%;
-  max-width: 700px;
-  height: 220px;
-  margin: 32px auto;
+  max-width: 720px;
+
+  height: 260px;
+
+  margin: 140px auto 0;
+
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border: 4px solid #86a7ff;
+
+  clip-path: polygon(
+    15px 0,
+    calc(100% - 15px) 0,
+    100% 15px,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 calc(100% - 15px),
+    0 15px
+  );
+
+  box-shadow:
+    0 10px 25px rgba(134,167,255,.15);
 }
 
-.Dasstsu-carousel-image {
+/* ========================================
+   上中央フレーム
+======================================== */
+
+.dasstsu-frame-top-center {
   position: absolute;
-  width: 45vw;
-  max-width: 320px;
-  height: 180px;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  border-radius: 16px;
-  transition: all 0.5s ease;
-  opacity: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border: 1px solid #ccc;
-  background-color: white;
-}
 
-/* 中央画像 */
-.Dasstsu-carousel-image.center {
+  top: 0;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  z-index: 2;
+
+  transform: translateX(-50%);
+
+  width: 280px;
+  height: 17px;
+
+  background: #86a7ff;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    92% 100%,
+    8% 100%
+  );
+
+  z-index: 20;
 }
 
-/* 左右画像 */
-.Dasstsu-carousel-image.left,
-.Dasstsu-carousel-image.right {
-  top: 50%;
-  transform: translateY(-50%) scale(0.85);
-  opacity: 0.6;
+/* ========================================
+   下中央フレーム
+======================================== */
+
+.dasstsu-frame-bottom-center {
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 280px;
+  height: 8px;
+
+  background: #86a7ff;
+
+  clip-path: polygon(
+    8% 0,
+    92% 0,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: 20;
+}
+
+/* ========================================
+   上下装飾
+======================================== */
+
+.dasstsu-frame-top,
+.dasstsu-frame-bottom {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 150px;
+  height: 20px;
+
+  background: #a8bfff;
+
+  z-index: 21;
+}
+
+.dasstsu-frame-top {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 150px;
+  height: 23px;
+
+  background: #a8bfff;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    85% 100%,
+    15% 100%
+  );
+
+  z-index: 21;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   左上
+======================================== */
+
+.dasstsu-frame-corner-tl {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background: #86a7ff;
+
+  clip-path: polygon(
+    0 0,
+    90% 0,
+    0 90%
+  );
+
+  z-index: 20;
+}
+
+/* ========================================
+   右上
+======================================== */
+
+.dasstsu-frame-corner-tr {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background: #86a7ff;
+
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 0
+  );
+
+  z-index: 20;
+}
+
+/* ========================================
+   左下
+======================================== */
+
+.dasstsu-frame-corner-bl {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background: #86a7ff;
+
+  clip-path: polygon(
+    0 0,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: 20;
+}
+
+/* ========================================
+   右下
+======================================== */
+
+.dasstsu-frame-corner-br {
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background: #86a7ff;
+
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: 20;
+}
+
+/* ========================================
+   内側パネル
+======================================== */
+
+.dasstsu-image-carousel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 15px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
   z-index: 1;
 }
 
-.Dasstsu-carousel-image.left {
-  left: 5%;
-}
+/* ========================================
+   共通カード
+======================================== */
 
-.Dasstsu-carousel-image.right {
-  left: 45%;
-}
+.dasstsu-carousel-image {
+  position: absolute;
 
-.Dasstsu-carousel-image.hidden {
+  width: 75%;
+  height: 200px;
+
+  object-fit: cover;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  border: 2px solid #e3e3e3;
+
+  box-shadow:
+    0 12px 15px rgba(0,0,0,.18);
+
+  transition:
+    transform .6s ease,
+    opacity .6s ease,
+    left .6s ease,
+    right .6s ease;
+
   opacity: 0;
+
+  z-index: 10;
+}
+
+/* ========================================
+   中央
+======================================== */
+
+.dasstsu-carousel-image.center {
+  left: 50%;
+  top: 53%;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.95);
+
+  opacity: 1;
+
+  z-index: 15;
+}
+
+/* ========================================
+   左
+======================================== */
+
+.dasstsu-carousel-image.left {
+  left: -18%;
+
+  top: 54%;
+
+  transform:
+    translateY(-50%)
+    scale(.75)
+    rotateY(12deg);
+
+  opacity: .75;
+
+  z-index: 10;
+}
+
+/* ========================================
+   右
+======================================== */
+
+.dasstsu-carousel-image.right {
+  right: -18%;
+
+  left: auto;
+
+  top: 54%;
+
+  transform:
+    translateY(-50%)
+    scale(.75)
+    rotateY(-12deg);
+
+  opacity: .75;
+
+  z-index: 10;
+}
+
+/* ========================================
+   非表示
+======================================== */
+
+.dasstsu-carousel-image.hidden {
+  opacity: 0;
+
   pointer-events: none;
+
+  z-index: 0;
 }

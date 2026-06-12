@@ -8,12 +8,12 @@ function DasstsDescriptionBox() {
   return (
     <section>
       {/* Synopsis タイトル */}
-      <div className="Dasstsu-synopsis-wrapper">
-        <div className="Dasstsu-section-title">あらすじ</div>
+      <div className="dasstsu-synopsis-wrapper">
+        <div className="dasstsu-section-title">あらすじ</div>
       </div>
 
       {/* Synopsis 本文 */}
-      <div className="Dasstsu-synopsis-box">
+      <div className="dasstsu-synopsis-box">
         {text}
       </div>
     </section>

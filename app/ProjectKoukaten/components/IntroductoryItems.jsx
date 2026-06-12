@@ -54,37 +54,37 @@ const cardData = [
 
 const Koukaten = () => {
   return (
-    <section className="ProjectKoukaten-section">
+    <section className="Koukaten-section">
 
       {/* タイトル */}
-      <div className="ProjectKoukaten-section-wrapper">
+      <div className="Koukaten-section-wrapper">
         <div className="Koukaten-section-title">
           出展団体
         </div>
       </div>
 
       {/* カード一覧 */}
-      <main className="ProjectKoukaten-card-list">
+      <main className="Koukaten-card-list">
         {cardData.map((item, index) => (
           <div
-            className="ProjectKoukaten-card"
+            className="Koukaten-card"
             key={index}
           >
             {/* 左側 */}
-            <div className="ProjectKoukaten-card-left">
+            <div className="Koukaten-card-left">
 
-              <div className="ProjectKoukaten-thumb-wrapper">
+              <div className="Koukaten-thumb-wrapper">
 
                 {/* 団体名バー */}
-                <div className="ProjectKoukaten-overlay-box">
-                  👥 {item.group}
+                <div className="Koukaten-overlay-box">
+                  {item.group}
                 </div>
 
                 {/* 画像 */}
-                <div className="ProjectKoukaten-thumb"></div>
+                <div className="Koukaten-thumb"></div>
 
                 {/* ラベル */}
-                <div className="ProjectKoukaten-label">
+                <div className="Koukaten-label">
                   {item.label}
                 </div>
 
@@ -92,26 +92,26 @@ const Koukaten = () => {
             </div>
 
             {/* 区切り線 */}
-            <div className="ProjectKoukaten-card-divider"></div>
+            <div className="Koukaten-card-divider"></div>
 
             {/* 右側 */}
-            <div className="ProjectKoukaten-card-right">
+            <div className="Koukaten-card-right">
 
-              <div className="ProjectKoukaten-sub1-title">
+              <div className="Koukaten-sub1-title">
                 📄 {item.title}
               </div>
 
-              <div className="ProjectKoukaten-introduction1-subdesc">
+              <div className="Koukaten-introduction1-subdesc">
                 {item.subdesc1}
               </div>
 
-              <div className="ProjectKoukaten-dotted-line"></div>
+              <div className="Koukaten-dotted-line"></div>
 
-              <div className="ProjectKoukaten-sub2-title">
+              <div className="Koukaten-sub2-title">
                 📍 {item.location}
               </div>
 
-              <div className="ProjectKoukaten-introduction2-subdesc">
+              <div className="Koukaten-introduction2-subdesc">
                 {item.subdesc2}
               </div>
 
