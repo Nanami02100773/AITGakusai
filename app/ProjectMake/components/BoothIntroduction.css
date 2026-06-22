@@ -1,52 +1,149 @@
-/* ===== ブース一覧（2列） ===== */
+/* ===== セクション ===== */
+.Make-booth-section {
+  width: 100%;
+}
+
+/* ===== ブース一覧 ===== */
 .Make-booth-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   gap: 18px;
 
   justify-content: center;
+
+  max-width: 380px;
+
   margin: 20px auto 100px;
-  max-width: 360px;
 }
 
 /* ===== 各アイテム ===== */
 .Make-booth-item {
-  width: auto;
-  justify-self: center; /* 通常時も中央寄せ */
+  justify-self: center;
 }
 
 /* ===== カード ===== */
 .Make-booth-card {
-  background-color: #bebebe;
-  width: 170px; /* ← 横長防止の固定幅 */
+  position: relative;
+
+  width: 200px;
+  height: 200px;
+
   padding: 10px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border: 2px solid #86a7ff;
+
   border-radius: 10px;
+
+  overflow: hidden;
+
 }
 
-/* ===== 画像 ===== */
+/* ===== 上の青いパーツ ===== */
+.Make-booth-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 130px;
+  height: 20px;
+
+    background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+ clip-path: polygon(
+  0 0,
+  100% 0,
+  92% 100%,
+  8% 100%
+);
+
+  border-radius: 0 0 10px 10px;
+}
+
+/* ===== 下の青いパーツ ===== */
+.Make-booth-card::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -1px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 6px;
+
+   background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  clip-path: polygon(
+    8% 0,
+    92% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* ===== 画像枠 ===== */
 .Make-booth-image {
   width: 100%;
-  height: 110px;
-  background-color: #e3e3e3;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  height: 145px;
+
+  margin-top: 15px;
+  margin-bottom: 5px;
+
+  border-radius: 10px;
+
+    background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f6f9ff
+  );
+
 }
 
 /* ===== ラベル ===== */
 .Make-booth-label {
-  font-size: 13px;
-  color: white;
-  margin: 0;
+  margin-top: auto;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  color: #4a5f96;
+
+  text-align: center;
 }
 
-/* 奇数のとき最後の1個を中央に */
+/* ===== 奇数なら最後を中央 ===== */
 .Make-booth-item:last-child:nth-child(odd) {
   grid-column: 1 / -1;
+
   display: flex;
   justify-content: center;
 }
+

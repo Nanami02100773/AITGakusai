@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import "./TorezoruStageTT.css";
 import TorezoruDate from "./TorezoruDate";
@@ -11,70 +12,120 @@ const TorezoruStageTT = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [selectedDay, setSelectedDay] = useState(1);
 
-  // 日付で切り替え
-  const data = selectedDay === 1 ? Day1Data : Day2Data;
+  const data =
+    selectedDay === 1
+      ? Day1Data
+      : Day2Data;
 
   return (
-    <section className="TorezoruStageTT-section">
+    <section className="ruminosu-ruminosuTT-section">
 
-      {/* ===== タイトル（灰色ボックスの外） ===== */}
-      <div className="Torezoru-section-wrapper">
-        <h2 className="Torezoru-section-title">
+      {/* タイトル */}
+      <div className="ruminosu-section-wrapper">
+        <h2 className="ruminosu-section-title">
           タイムテーブル
         </h2>
       </div>
 
-      {/* ===== 灰色ボックス ===== */}
-      <div className="TorezoruStageTT">
+      {/* 本体 */}
+      <div className="ruminosu-ruminosuTT">
 
-        {/* 👇 日付切り替えは灰色ボックスの中 */}
-        <TorezoruDate onDayChange={setSelectedDay} />
+        {/* 日付切替そのまま */}
+        <TorezoruDate
+          onDayChange={setSelectedDay}
+        />
 
-        {/* 中身 */}
-        <div className="TorezoruStageTT-scroll-area">
-          <div className="TorezoruStageTT-wrapper">
-            <ul className="TorezoruStageTT-time-slot">
+        <div className="ruminosu-ruminosuTT-scroll-area">
+
+          <div className="ruminosu-ruminosuTT-wrapper">
+
+            <ul className="ruminosu-ruminosuTT-time-slot">
+
               {data.map((item, index) => (
                 <li
                   key={index}
-                  className="TorezoruStageTT-time-slot-item"
+                  className="ruminosu-ruminosuTT-time-slot-item"
                 >
-                  <div
-                    className="TorezoruStageTT-slot-header"
-                    onClick={() =>
-                      setOpenIndex(openIndex === index ? null : index)
-                    }
-                  >
-                    <span className="TorezoruStageTT-time">
-                      {item.time}
-                    </span>
 
-                    <div className="TorezoruStageTT-event">
-                      <span>{item.title}</span>
-                      <span>{openIndex === index ? "▲" : "▼"}</span>
+                  <div className="ruminosu-ruminosuTT-slot-header">
+
+                    <div className="ruminosu-ruminosuTT-time">
+                      {item.time}
                     </div>
+
+                    <div
+                      className="ruminosu-ruminosuTT-event"
+                      onClick={() =>
+                        setOpenIndex(
+                          openIndex === index
+                            ? null
+                            : index
+                        )
+                      }
+                    >
+
+                      <div className="ruminosu-ruminosuTT-event-left">
+
+                        <div className="ruminosu-ruminosuTT-event-icon">
+
+                          {item.icon && (
+                            <img
+                              src={item.icon}
+                              alt={item.title}
+                            />
+                          )}
+
+                        </div>
+
+                        <span className="ruminosu-ruminosuTT-event-title">
+                          {item.title}
+                        </span>
+
+                      </div>
+
+                      <span
+                        className={`ruminosu-ruminosuTT-toggle-icon ${
+                          openIndex === index
+                            ? "open"
+                            : ""
+                        }`}
+                      />
+
+                    </div>
+
                   </div>
 
                   {openIndex === index && (
-                    <div className="TorezoruStageTT-event-detail">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        style={{
-                          width: "100%",
-                          borderRadius: "6px",
-                        }}
-                      />
-                      <p>{item.detail}</p>
+                    <div className="ruminosu-ruminosuTT-event-detail">
+
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="ruminosu-ruminosuTT-event-image"
+                        />
+                      )}
+
+                      {item.detail && (
+                        <p>
+                          {item.detail}
+                        </p>
+                      )}
+
                     </div>
                   )}
+
                 </li>
               ))}
+
             </ul>
+
           </div>
+
         </div>
 
       </div>
+
     </section>
   );
 };

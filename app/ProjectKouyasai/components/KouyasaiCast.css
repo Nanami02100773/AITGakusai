@@ -2,54 +2,21 @@
    セクション
 ========================================== */
 
-.Concert-performer-section {
-  padding: 0 0 100px;
+.koyasai-performer-section {
+  padding: 0 0 0px;
 }
 
-/* ==========================================
-   タイトル
-========================================== */
-
-.Concert-section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 240px;
-  height: 44px;
-
-  margin: 20px auto 10px;
-
-  background: linear-gradient(
-    90deg,
-    #86a7ff,
-    #6f8dff
-  );
-
-  color: #fff;
-  font-size: 17px;
-  font-weight: bold;
-
-  border-radius: 999px;
-
-  border: 2px solid rgba(255,255,255,.55);
-
-  box-shadow:
-    0 8px 20px rgba(160,170,255,.14),
-    inset 0 2px 0 rgba(255,255,255,.7),
-    inset 0 -2px 0 rgba(255,255,255,.55);
-}
 
 /* ==========================================
    全体エリア
 ========================================== */
-.Concert-scroll-area {
-  width: 97%;
+.koyasai-scroll-area {
+  width: 98%;
   max-width: 500px;
 
   margin: 0 auto;
 
-  padding: 30px 15px 1px;
+  padding: 25px 10px 1px;
 
   border-radius: 10px;
 
@@ -59,15 +26,14 @@
     #e8f1ff
   );
 
-  box-shadow:
-    0 10px 25px rgba(134,167,255,.15);
+ 
 }
 
 /* ==========================================
    出演者ブロック
 ========================================== */
 
-.Concert-profile-box {
+.koyasai-profile-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,44 +45,37 @@
    名前
 ========================================== */
 
-.Concert-name {
-  position: relative;
-
+.koyasai-name {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   min-width: 150px;
 
-  padding: 5px 10px;
+  padding: 5px 12px;
 
   margin-bottom: 15px;
 
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
 
-  color: #ffffff;
+  color: #5f6dbe;
 
-  background: linear-gradient(
-    90deg,
-    #86a7ff,
-    #6f8dff
-  );
+  background: #ffffff;
 
-  border: 2px solid rgba(255,255,255,.45);
+  border: 1px solid #cfdcff;
 
   border-radius: 5px;
 
   box-shadow:
-    0 6px 16px rgba(111,141,255,.25),
-    inset 0 1px 0 rgba(255,255,255,.45);
+    0 2px 8px rgba(111,141,255,.08);
 }
 
 /* ==========================================
    カード
 ========================================== */
-.Concert-card {
-  width: 100%;
+.koyasai-card {
+  width: 98%;
 
   padding: 20px;
 
@@ -137,7 +96,7 @@
 /* ==========================================
    画像
 ========================================== */
-.Concert-image {
+.koyasai-image {
   width: 100%;
   height: 280px;
 
@@ -159,7 +118,7 @@
 
 /* 左上アクセント */
 
-.Concert-image::before {
+.koyasai-image::before {
   content: "";
 
   position: absolute;
@@ -187,7 +146,7 @@
 
 /* 右下アクセント */
 
-.Concert-image::after {
+.koyasai-image::after {
   content: "";
 
   position: absolute;
@@ -213,7 +172,7 @@
   z-index: 2;
 }
 
-.Concert-image img {
+.koyasai-image img {
   width: 100%;
   height: 100%;
 
@@ -225,7 +184,7 @@
 /* ==========================================
    紹介文
 ========================================== */
-.Concert-description-inner {
+.koyasai-description-inner {
   font-size: 13px;
 
   color: #4b5f8f;
@@ -240,32 +199,29 @@
 /* ==========================================
    SNSボックス
 ========================================== */
-.Concert-sns-wrapper {
-  width: 400px;
+.koyasai-sns-wrapper {
+   width: 100%;
+  max-width: 400px;
 
-  margin-top: 20px;
+  margin: 20px auto 0;
 
   padding: 15px;
 
   border-radius: 10px;
 
-  background:  #f1f6ff;
+  background: #f1f6ff;
 
   border: 1px solid rgba(134,167,255,.25);
 
   box-shadow:
     0 10px 25px rgba(134,167,255,.12);
-
-  position: relative;
-
-  overflow: hidden;
 }
 
 /* ==========================================
    SNSタイトル
 ========================================== */
 
-.Concert-sns-title {
+.koyasai-sns-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,8 +243,8 @@
 
 /* 左右の線 */
 
-.Concert-sns-title::before,
-.Concert-sns-title::after {
+.koyasai-sns-title::before,
+.koyasai-sns-title::after {
   content: "";
 
   width: 60px;      /* 線の長さ調整 */
@@ -304,7 +260,7 @@
   );
 }
 
-.Concert-sns-title::after {
+.koyasai-sns-title::after {
   background: linear-gradient(
     90deg,
     rgba(111,141,255,1),
@@ -317,7 +273,7 @@
    SNS並び
 ========================================== */
 
-.Concert-sns {
+.koyasai-sns {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,7 +287,7 @@
 /* ==========================================
    SNSアイコン
 ========================================== */
-.Concert-sns a {
+.koyasai-sns a {
   position: relative;
 
   width: 50px;
@@ -353,7 +309,7 @@
     box-shadow .3s ease;
 }
 
-.Concert-sns a::before {
+.koyasai-sns a::before {
   content: "";
 
   position: absolute;
@@ -377,11 +333,11 @@
   mask-composite: exclude;
 }
 
-.Concert-sns a:hover {
+.koyasai-sns a:hover {
   transform: translateY(-4px) scale(1.06);
 }
 
-.Concert-sns img {
+.koyasai-sns img {
   width: 28px;
   height: 28px;
 

@@ -1,122 +1,248 @@
-/* =========================
-   全体
-========================= */
-.TorezoruStageTT {
-  background: #c6c5c5;
-  border-radius: 12px;
-  padding: 18px;
-  margin: 0 auto;
-  margin: 0 auto 24px; /* ← 下に空間 */
+/* ===== 外枠 ===== */
+.LaughMusicStageTT {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5f7ff 100%
+  );
+
+  border-radius: 10px;
+
+  padding: 20px 14px 10px 20px;
+
+  box-shadow:
+    0 8px 24px rgba(110,120,255,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+
+  border: 1px solid #e3e8ff;
+
   max-width: 95%;
   width: 700px;
+
+  margin: 0 auto 24px;
 }
 
-
-/* スクロール */
-.TorezoruStageTT-scroll-area {
-  max-height: 500px;
+.ruminosu-ruminosuTT-scroll-area{
+  max-height: 650px;
   overflow-y: auto;
-  padding-right: 8px;
+
+  padding-right: 20px;
 }
 
-.TorezoruStageTT-wrapper {
-  background: #f7f7f7;
-  padding: 12px;
-  border-radius: 12px;
-}
-
-
-/* =========================
-   タイムスロット
-========================= */
-.TorezoruStageTT-time-slot {
+.ruminosu-ruminosuTT-time-slot{
+  position: relative;
   list-style: none;
-  padding: 0;
   margin: 0;
-  position: relative;
+  padding: 0;
 }
 
-.TorezoruStageTT-time-slot::before {
+.ruminosu-ruminosuTT-time-slot::before{
   content: "";
+
   position: absolute;
-  left: 8px;
-  top: 32px;     /* ← 上の〇に当たらない位置 */
-  bottom: 70px;  /* ← 下の〇に当たらない位置 */
-  width: 3px;
-  background: #ccc;
+
+  left: 20px;
+
+  top: 10px;
+  bottom: 10px;
+
+  width: 4px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    180deg,
+    #86a7ff,
+    #6f8dff
+  );
 }
 
-.TorezoruStageTT-time-slot-item {
-  position: relative;
-  padding: 16px 0 16px 32px;
-  border-bottom: 1px solid #ddd;
-}
-
-.TorezoruStageTT-time-slot-item::before {
+.ruminosu-ruminosuTT-time-slot-item::after{
   content: "";
+
+  position: absolute;
+
+  left: 70px;
+  right: 0;
+
+  bottom: 0;
+
+  height: 1px;
+
+  background: #dbe2ff;
+}
+
+.ruminosu-ruminosuTT-time-slot-item:last-child::after{
+  display: none;
+}
+
+.ruminosu-ruminosuTT-time-slot-item{
+  position: relative;
+
+  padding-left: 70px;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 10px;
+}
+
+.ruminosu-ruminosuTT-time-slot-item::before{
+  content: "";
+
+  position: absolute;
+
+  left: 13px;
+  top: 2px;
+
   width: 18px;
   height: 18px;
-  background: white;
-  border: 3px solid #888;
+
   border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #b3c7ff,
+    #6159ff
+  );
+
+  border: 2px solid #fff;
+
+  box-shadow:
+    0 0 0 1px rgba(104,115,155,.35);
 }
 
-/* =========================
-   ヘッダー
-========================= */
-.TorezoruStageTT-slot-header {
+.ruminosu-ruminosuTT-time{
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #6e7697;
+
+  margin-bottom: 10px;
+}
+
+.ruminosu-ruminosuTT-event{
+  position: relative;
+
+  background: #fff;
+
+  border-radius: 10px;
+
+  min-height: 50px;
+
+  padding: 0 22px 0 0;
+
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.TorezoruStageTT-time {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* イベント */
-.TorezoruStageTT-event {
-  background: #cdcdcd;
-  padding: 10px 14px;
-  border-radius: 12px;
-  display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  overflow: hidden;
+
   cursor: pointer;
+
+  border: 2px solid rgba(210,220,255,.65);
+
+  box-shadow:
+    0 8px 20px rgba(120,140,255,.10),
+    inset 0 1px 0 rgba(255,255,255,.95);
 }
 
-/* =========================
-   詳細
-========================= */
-.TorezoruStageTT-event-detail {
-  margin-top: 10px;
-  background: #e9e9e9;
-  padding: 12px;
-  border-radius: 8px;
+.ruminosu-ruminosuTT-event::before{
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 10px;
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    #86a7ff,
+    #6f8dff
+  );
 }
 
-
-.TorezoruStageTT-day-switch {
+.ruminosu-ruminosuTT-event-left{
   display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding-left: 18px;
+}
+
+.ruminosu-ruminosuTT-event-icon{
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50px;
+
+  background: #fff;
+
+  border: 1.5px solid #d9e2ff;
+
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin: 12px 0 20px;
+
+  padding: 4px;
 }
 
-.TorezoruStageTT-day-switch button {
-  width: 140px;
-  padding: 10px 0;
-  border-radius: 20px;
-  border: 2px solid #999;
-  background: white;
-  font-weight: bold;
+.ruminosu-ruminosuTT-event-icon img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
 }
 
-.TorezoruStageTT-day-switch button.active {
-  background: #333;
-  color: #fff;
-  border-color: #333;
+.ruminosu-ruminosuTT-event-title{
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #4f67d8;
+}
+
+.ruminosu-ruminosuTT-toggle-icon{
+  width: 13px;
+  height: 13px;
+
+  border-right: 4px solid #8aa0ff;
+  border-bottom: 4px solid #8aa0ff;
+
+  transform: rotate(45deg);
+
+  transition: .25s;
+}
+
+.ruminosu-ruminosuTT-toggle-icon.open{
+  transform: rotate(-135deg);
+}
+
+.ruminosu-ruminosuTT-event-detail{
+  margin-top: 14px;
+
+  background: linear-gradient(
+    180deg,
+    #dae4ff 0%,
+    #e5eaff 100%
+  );
+
+  border-radius: 18px;
+
+  border: 1px solid #d9e2ff;
+
+  padding: 18px;
+}
+
+.ruminosu-ruminosuTT-event-image{
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  margin-bottom: 14px;
 }

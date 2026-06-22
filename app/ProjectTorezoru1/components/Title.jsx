@@ -1,8 +1,8 @@
 import './Title.css';
 
-function Title({ text = "トレゾール"}) {
+function Title({ text = "ルミノス"}) {
   return (
-    <div className="Torezoru-project-title">{text}</div>
+    <div className="ruminosu-title">{text}</div>
   );
 }
 

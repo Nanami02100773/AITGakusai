@@ -1,10 +1,8 @@
-import "./Title.css";
+import './Title.css';
 
-function Title({ text = "Laugh＆Music" }) {
+function Title({ text = "工科展"}) {
   return (
-    <div className="LaughMusic-title">
-      {text}
-    </div>
+    <div className="Koukaten-title">{text}</div>
   );
 }
 

@@ -4,7 +4,7 @@ import "./BoothIntroduction.css";
 function MakeBooth() {
   return (
     <section className="Make-booth-section">
-      <div className="Make-section-title">ブース紹介</div>
+      <div className="make-section-title">ブース紹介</div>
 
       <div className="Make-booth-list">
         <div className="Make-booth-item">

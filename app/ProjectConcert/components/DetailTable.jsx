@@ -3,54 +3,72 @@ import "./DetailTable.css";
 
 function DetailTable() {
   const details = [
-{
-  label: "時間",
-  value: (
-    <>
-      <div className="Concert-detail-subrow">
-        <span className="Concert-detail-sublabel">開場</span>
-        <span className="Concert-detail-subtext">10:00</span>
-      </div>
-      <div className="Concert-detail-subrow">
-        <span className="Concert-detail-sublabel">開演</span>
-        <span className="Concert-detail-subtext">10:30</span>
-      </div>
-    </>
-  ),
-},
-{
-  label: "注意事項",
-  value: (
-    <>
-      <div className="Concert-detail-subrow">
-        <span className="Concert-detail-sublabel">受付時</span>
-        <span className="Concert-detail-subtext">
-          学生証をご提示ください
-        </span>
-      </div>
-      <div className="Concert-detail-subrow">
-        <span className="Concert-detail-sublabel">館内</span>
-        <span className="Concert-detail-subtext">飲食禁止</span>
-      </div>
-    </>
-  ),
-},
-
-  ]
+    {
+      icon: "/project/place.png",
+      iconClass: "place-icon",
+      label: "場所",
+      value: "AITプラザ",
+    },
+    {
+      icon: "/project/clock.png",
+      iconClass: "clock-icon",
+      label: "時間",
+      value: "10:00～17:00",
+    },
+    {
+      icon: "/project/Precautions.png",
+      iconClass: "precautions-icon",
+      label: "注意事項",
+      value: [
+        "スタンプは1人1回までです",
+        "景品は数に限りがあります",
+        "総合案内所で交換してください",
+        "学祭と執行のスタンプラリーがあります",
+      ],
+    },
+  ];
 
   return (
-    <section className="Concert-section">
-      {/* セクションタイトル */}
-      <div className="Concert-section-wrapper">
-        <div className="Concert-section-title">詳細情報</div>
+    <section>
+      <div className="concert-section-wrapper">
+        <div className="concert-section-title">
+          詳細情報
+        </div>
       </div>
 
-      {/* 詳細テーブル */}
-      <div className="Concert-detail-table">
-        {details.map((d, i) => (
-          <div className="Concert-detail-row" key={i}>
-            <span className="Concert-detail-label">{d.label}</span>
-            <span className="Concert-detail-value">{d.value}</span>
+      <div className="concert-detail-table">
+        {details.map((item, index) => (
+          <div
+            className="concert-detail-row"
+            key={index}
+          >
+            <div className="concert-detail-label">
+              <span className="concert-detail-icon">
+                <img
+                  src={item.icon}
+                  alt={item.label}
+                  className={`concert-detail-icon-image ${item.iconClass}`}
+                />
+              </span>
+
+              <span className="concert-detail-text">
+                {item.label}
+              </span>
+            </div>
+
+            <div className="concert-detail-content">
+              <div className="concert-detail-value">
+                {Array.isArray(item.value) ? (
+                  <ul className="concert-note-list">
+                    {item.value.map((note, i) => (
+                      <li key={i}>{note}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  item.value
+                )}
+              </div>
+            </div>
           </div>
         ))}
       </div>

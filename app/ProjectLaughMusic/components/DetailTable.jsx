@@ -3,30 +3,72 @@ import "./DetailTable.css";
 
 function DetailTable() {
   const details = [
-    { label: "場所", value: "〇〇教室" },
-    { label: "時間", value: "10:00～16:00" },
-    { label: "注意事項", value: "特になし" }
+    {
+      icon: "/project/place.png",
+      iconClass: "place-icon",
+      label: "場所",
+      value: "AITプラザ",
+    },
+    {
+      icon: "/project/clock.png",
+      iconClass: "clock-icon",
+      label: "時間",
+      value: "10:00～17:00",
+    },
+    {
+      icon: "/project/Precautions.png",
+      iconClass: "precautions-icon",
+      label: "注意事項",
+      value: [
+        "スタンプは1人1回までです",
+        "景品は数に限りがあります",
+        "総合案内所で交換してください",
+        "学祭と執行のスタンプラリーがあります",
+      ],
+    },
   ];
 
   return (
     <section>
-      {/* セクションタイトル */}
-      <div className="LaughMusic-section-wrapper">
-        <div className="LaughMusic-section-title">
+      <div className="laughmusic-section-wrapper">
+        <div className="laughmusic-section-title">
           詳細情報
         </div>
       </div>
 
-      {/* 詳細テーブル */}
-      <div className="LaughMusic-detail-table">
-        {details.map((d, i) => (
-          <div className="LaughMusic-detail-row" key={i}>
-            <span className="LaughMusic-detail-label">
-              {d.label}
-            </span>
-            <span className="LaughMusic-detail-value">
-              {d.value}
-            </span>
+      <div className="laughmusic-detail-table">
+        {details.map((item, index) => (
+          <div
+            className="laughmusic-detail-row"
+            key={index}
+          >
+            <div className="laughmusic-detail-label">
+              <span className="laughmusic-detail-icon">
+                <img
+                  src={item.icon}
+                  alt={item.label}
+                  className={`laughmusic-detail-icon-image ${item.iconClass}`}
+                />
+              </span>
+
+              <span className="laughmusic-detail-text">
+                {item.label}
+              </span>
+            </div>
+
+            <div className="laughmusic-detail-content">
+              <div className="laughmusic-detail-value">
+                {Array.isArray(item.value) ? (
+                  <ul className="laughmusic-note-list">
+                    {item.value.map((note, i) => (
+                      <li key={i}>{note}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  item.value
+                )}
+              </div>
+            </div>
           </div>
         ))}
       </div>
