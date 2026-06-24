@@ -325,12 +325,12 @@
 
   transform: translateY(-15px);
 
-  opacity: 1;
+   opacity: 0.75;
 
   filter:
-  grayscale(100%)
-  brightness(0.3)
-  contrast(1.9);
+    grayscale(100%)
+    brightness(0.9)
+    contrast(1);
 
   transition:
     filter 0.25s ease,
@@ -341,8 +341,8 @@
 ========================= */
 
 .nav-home-icon {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 
 .nav-stage-icon {
@@ -406,19 +406,6 @@
 /* =========================
    ホバー
 ========================= */
-.nav-icon-img {
-  object-fit: contain;
-
-  display: block;
-  margin: 0 auto;
-
-  filter: grayscale(100%) brightness(1.2);
-  opacity: 0.6;
-
-  transition:
-    filter 0.25s ease,
-    opacity 0.25s ease;
-}
 
 .nav-item:hover {
   background: #eef2ff;
@@ -439,7 +426,23 @@
   brightness(102%)
   contrast(101%);
 }
+.nav-menu-button:hover {
+  background: #eef2ff;
+}
 
+.nav-menu-button:hover .nav-menu-icon {
+  opacity: 1;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(59%)
+    sepia(86%)
+    saturate(1625%)
+    hue-rotate(200deg)
+    brightness(102%)
+    contrast(101%);
+}
 /* =========================
    アイコン仕切り
 ========================= */
