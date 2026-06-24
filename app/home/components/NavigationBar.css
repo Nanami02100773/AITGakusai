@@ -323,7 +323,7 @@
   display: block;
   margin: 0 auto;
 
-  transform: translateY(-15px);
+  transform: translateY(-10px);
 
    opacity: 0.75;
 
@@ -465,7 +465,7 @@
   right: 0;
   top: 50%;
 
-  transform: translateY(-70%);
+  transform: translateY(-60%);
 
   width: 1px;
   height: 60px;
