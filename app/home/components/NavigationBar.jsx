@@ -50,12 +50,12 @@ const NavigationBar = () => {
     <>
       <header className="top-bar">
 
-        <button
-          className="nav-button"
-          onClick={() => router.back()}
-        >
-          ←
-        </button>
+       <button
+  className="nav-button nav-back-button"
+  onClick={() => router.back()}
+>
+  ⮜
+</button>
 
         {/* ロゴ */}
         <div
