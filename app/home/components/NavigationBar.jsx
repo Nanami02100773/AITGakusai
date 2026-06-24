@@ -50,11 +50,15 @@ const NavigationBar = () => {
     <>
       <header className="top-bar">
 
-       <button
+   <button
   className="nav-button nav-back-button"
   onClick={() => router.back()}
 >
-  ⮜
+  <img
+    src="/NavigationIcons/back.png"
+    alt="back"
+    className="nav-back-icon"
+  />
 </button>
 
         {/* ロゴ */}
@@ -84,12 +88,16 @@ const NavigationBar = () => {
           </div>
         </div>
 
-        <button
-          className="nav-button"
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-        >
-          ≡
-        </button>
+       <button
+  className="nav-button nav-menu-button"
+  onClick={() => setIsMenuOpen((prev) => !prev)}
+>
+  <img
+    src="/NavigationIcons/menu.png"
+    alt="menu"
+    className="nav-menu-icon"
+  />
+</button>
       </header>
 
       {isMenuOpen && (

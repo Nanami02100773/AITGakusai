@@ -35,39 +35,56 @@
   cursor: pointer;
   padding: 5px;
 }
+
 /* =========================
    戻るボタン
 ========================= */
-
 .nav-back-button {
-  width: 35px;
-  height: 35px;
+  width: 150px;
+  height: 150px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   border-radius: 50%;
-
   background: #f1f1f1;
 
-  color: #a5a5a5;
+  border: none;
+  cursor: pointer;
 
-  font-size: 22px;
-  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.nav-back-icon {
+  width: 250px;
+  height: 250px;
+
+  object-fit: contain;
+
+  filter: grayscale(100%);
+  opacity: 0.7;
 
   transition: all 0.25s ease;
 }
 
 .nav-back-button:hover {
   background: #eef2ff;
-  color: #6f8dff;
 }
 
-.nav-back-button:active {
-  transform: scale(0.95);
-}
+.nav-back-button:hover .nav-back-icon {
+  opacity: 1;
 
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(67%)
+    sepia(31%)
+    saturate(1588%)
+    hue-rotate(198deg)
+    brightness(101%)
+    contrast(101%);
+}
 /* =========================
    メニューボタン
 ========================= */
@@ -293,23 +310,32 @@
   text-decoration: none;
 
   position: relative;
+
+  height: 100%;
 }
 
 /* =========================
    アイコン共通
 ========================= */
 .nav-icon-img {
-  width: 60px;
-  height: 60px;
-
   object-fit: contain;
 
-  display: flex;
+  display: block;
+  margin: 0 auto;
 
-  justify-content: center;
-  align-items: center;
+  transform: translateY(-15px);
+
+  opacity: 1;
+
+  filter:
+  grayscale(100%)
+  brightness(0.3)
+  contrast(1.9);
+
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease;
 }
-
 /* =========================
    個別サイズ
 ========================= */
@@ -394,19 +420,24 @@
     opacity 0.25s ease;
 }
 
-/* ホバー時に紺色 */
-.nav-item:hover .nav-icon-img {
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(67%)
-    sepia(39%)
-    saturate(1515%)
-    hue-rotate(202deg)
-    brightness(102%)
-    contrast(101%);
+.nav-item:hover {
+  background: #eef2ff;
+}
 
+.nav-item:hover .nav-icon-img,
+.nav-item.active .nav-icon-img,
+.nav-back-button:hover .nav-back-icon {
   opacity: 1;
+
+  filter:
+  brightness(0)
+  saturate(100%)
+  invert(59%)
+  sepia(86%)
+  saturate(1625%)
+  hue-rotate(200deg)
+  brightness(102%)
+  contrast(101%);
 }
 
 /* =========================
@@ -431,7 +462,7 @@
   right: 0;
   top: 50%;
 
-  transform: translateY(-50%);
+  transform: translateY(-70%);
 
   width: 1px;
   height: 60px;
