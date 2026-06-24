@@ -457,6 +457,29 @@
   height: 100%;
 }
 
+.nav-item::before {
+  content: "";
+  position: absolute;
+
+  inset: 0px;
+
+  border-radius: 0px;
+
+  background: #eef2ff;
+
+  opacity: 0;
+
+  transition: opacity 0.25s;
+}
+
+.nav-item:hover::before {
+  opacity: 1;
+}
+
+.nav-icon-img {
+  position: relative;
+  z-index: 1;
+}
 .nav-item:not(:last-child)::after {
   content: "";
 
