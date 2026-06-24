@@ -2,41 +2,57 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+
 import NavigationBar from "./components/NavigationBar";
 import Detail from "./components/Detail";
 
-export default function NoticePage() {
-  const params = useParams();
-  const [notice, setNotice] = useState(null);
+export default function StageNoticePage() {
+const params = useParams();
+const [notice, setNotice] = useState(null);
 
-  useEffect(() => {
-    const saved = JSON.parse(
-      localStorage.getItem("notices") || "[]"
-    );
+useEffect(() => {
+const saved = JSON.parse(
+localStorage.getItem("notices") || "[]"
+);
 
-    const stageOnly = saved.filter(
-      (n) => n.category === "stage"
-    );
+const stageNotices = saved.filter(
+  (item) => item.category === "stage"
+);
 
-    const found = stageOnly.find(
-      (n) =>
-        String(n.id) === String(params?.id)
-    );
+const foundIndex = stageNotices.findIndex(
+  (item) =>
+    String(item.id) === String(params?.id)
+);
 
-    setNotice(found || null);
-  }, [params]);
+const found = stageNotices[foundIndex];
 
-  return (
-    <main>
-      <NavigationBar />
+if (found) {
+  setNotice({
+    ...found,
+    number: foundIndex + 1,
+  });
+} else {
+  setNotice(null);
+}
 
-      <Detail
-        title={notice?.title || "ステージお知らせ"}
-        body={
-          notice?.body ||
-          "該当するお知らせがありません。"
-        }
-      />
-    </main>
-  );
+
+}, [params?.id]);
+
+return ( <main> <NavigationBar />
+
+  <Detail
+    title={
+      notice?.title ||
+      "ステージお知らせ"
+    }
+    body={
+      notice?.body ||
+      "該当するステージお知らせがありません。"
+    }
+    number={notice?.number}
+  />
+</main>
+
+
+);
 }

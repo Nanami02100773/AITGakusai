@@ -1,64 +1,125 @@
-import React from "react";
+"use client";
 
-const KyouyasaiCast = ({ artists }) => {
-  if (!artists || artists.length === 0) {
+import React from "react";
+import "./KyouyasaiCast.css";
+import KyouyasaiData from "./data/KyouyasaiData";
+
+const KyouyasaiCast = () => {
+  if (!KyouyasaiData || KyouyasaiData.length === 0) {
     return <p>出演者情報がありません</p>;
   }
 
   return (
-    <>
-      {artists.map((artist, index) => (
-        <div key={index} className="Kyouyasai-profile-box">
-          <div className="Kyouyasai-profile">
+    <section className="kyoyasai-performer-section">
 
-            {/* 画像 */}
-            <img
-              src={artist.image}
-              alt={artist.name}
-              className="Kyouyasai-photo"
-            />
+      <div className="kyoyasai-section-title">
+        出演者紹介
+      </div>
 
-            {/* 紹介 */}
-            <div className="Kyouyasai-bio">
-              <h3>{artist.name}</h3>
-              <p>{artist.bio}</p>
+      <div className="kyoyasai-scroll-area">
+
+        {KyouyasaiData.map((artist, index) => (
+          <div
+            className="kyoyasai-profile-box"
+            key={index}
+          >
+            {/* 名前 */}
+            <div className="kyoyasai-name">
+              {artist.name}
             </div>
 
-            {/* SNS */}
-            <div className="Kyouyasai-sns-wrapper">
-              <div className="Kyouyasai-sns-title">SNS</div>
+            {/* カード */}
+            <div className="kyoyasai-card">
 
-              <div className="Kyouyasai-sns">
-                {artist.sns?.instagram && (
-                  <a href={artist.sns.instagram} target="_blank">
-                    <img src="/icons/instagram.png" />
-                  </a>
-                )}
-
-                {artist.sns?.x && (
-                  <a href={artist.sns.x} target="_blank">
-                    <img src="/icons/x.png" />
-                  </a>
-                )}
-
-                {artist.sns?.youtube && (
-                  <a href={artist.sns.youtube} target="_blank">
-                    <img src="/icons/youtube.png" />
-                  </a>
-                )}
-
-                {artist.sns?.website && (
-                  <a href={artist.sns.website} target="_blank">
-                    <img src="/icons/web.png" />
-                  </a>
-                )}
+              {/* 画像 */}
+              <div className="kyoyasai-image">
+                <img
+                  src={artist.image}
+                  alt={artist.name}
+                />
               </div>
-            </div>
 
+              {/* 紹介文 */}
+              <div className="kyoyasai-description">
+                <div className="kyoyasai-description-inner">
+                  {artist.bio}
+                </div>
+              </div>
+
+              {/* SNS */}
+              {artist.sns && (
+                <div className="kyoyasai-sns-wrapper">
+
+                  <div className="kyoyasai-sns-title">
+                    公式SNS
+                  </div>
+
+                  <div className="kyoyasai-sns">
+
+                    {artist.sns.x && (
+                      <a
+                        href={artist.sns.x}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src="/icons/x.png"
+                          alt="X"
+                        />
+                      </a>
+                    )}
+
+                    {artist.sns.instagram && (
+                      <a
+                        href={artist.sns.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src="/icons/instagram.png"
+                          alt="Instagram"
+                        />
+                      </a>
+                    )}
+
+                    {artist.sns.youtube && (
+                      <a
+                        href={artist.sns.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src="/icons/youtube.png"
+                          alt="YouTube"
+                        />
+                      </a>
+                    )}
+
+                    {artist.sns.website && (
+                      <a
+                        href={artist.sns.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src="/icons/web.png"
+                          alt="Website"
+                        />
+                      </a>
+                    )}
+
+                  </div>
+
+                </div>
+              )}
+
+            </div>
           </div>
-        </div>
-      ))}
-    </>
+        ))}
+
+      </div>
+
+    </section>
   );
 };
 

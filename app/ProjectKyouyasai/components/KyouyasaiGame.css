@@ -1,79 +1,178 @@
-/* ==============================
-   Game Corner（2列グリッド）
-================================ */
-.Kyouyasai-gameCorner-list {
+/* ===== セクション ===== */
+.kyoyasai-gameCorner-section {
+  width: 100%;
+}
+
+/* ===== 一覧 ===== */
+.kyoyasai-gameCorner-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   gap: 18px;
 
   justify-content: center;
+
+  max-width: 380px;
+
   margin: 20px auto 100px;
-  max-width: 360px;
 }
 
-/* 各アイテム */
-.Kyouyasai-gameCorner-item {
-  width: auto;
-  justify-self: center; /* ← 追加（安定する） */
+/* ===== アイテム ===== */
+.kyoyasai-gameCorner-item {
+  justify-self: center;
 }
 
-/* カード */
-.Kyouyasai-gameCorner-card {
-  background-color: #bebebe;
-  width: 170px;
+/* ===== カード ===== */
+.kyoyasai-gameCorner-card {
+  position: relative;
+
+  width: 180px;
+  height: 170px;
+
   padding: 10px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border: 2px solid #86a7ff;
+
   border-radius: 10px;
+
+  overflow: hidden;
 }
 
-/* 画像 */
-.Kyouyasai-gameCorner-image {
+/* ===== 上装飾 ===== */
+.kyoyasai-gameCorner-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 130px;
+  height: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    92% 100%,
+    8% 100%
+  );
+
+  border-radius: 0 0 10px 10px;
+}
+
+/* ===== 下装飾 ===== */
+.kyoyasai-gameCorner-card::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -1px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  clip-path: polygon(
+    8% 0,
+    92% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* ===== 画像 ===== */
+.kyoyasai-gameCorner-image {
   width: 100%;
-  height: 110px;
-  background-color: #e3e3e3;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  height: 145px;
+
+  margin-top: 15px;
+  margin-bottom: 5px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f6f9ff
+  );
 }
 
-/* ラベル */
-.Kyouyasai-gameCorner-label {
-  font-size: 13px;
-  color: white;
-  margin: 0;
-  font-weight: bold;
-}
+/* ===== ラベル ===== */
+.kyoyasai-gameCorner-label {
+  margin-top: auto;
 
-/* タイトル */
-.Kyouyasai-section-title {
-  display: block;
-  width: 220px;
-  margin: 0 auto 12px;
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  color: #4a5f96;
+
   text-align: center;
-  background: #999;
-  color: #fff;
-  border-radius: 20px;
-  padding: 6px 20px;
-  font-size: 1rem;
 }
 
-/* ==============================
-   1個のとき中央
-================================ */
-.Kyouyasai-gameCorner-item:only-child {
-  grid-column: 1 / -1;
+/* ===== タイトル ===== */
+.kyoyasai-section-title {
   display: flex;
+  align-items: center;
   justify-content: center;
+
+  width: 240px;
+  height: 44px;
+
+  margin: 20px auto 10px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  color: #fff;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  border-radius: 999px;
+
+  border: 2px solid rgba(255,255,255,.55);
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,.14),
+    inset 0 2px 0 rgba(255,255,255,.7),
+    inset 0 -2px 0 rgba(255,255,255,.55);
 }
 
-/* ==============================
-   奇数のとき最後中央
-================================ */
-.Kyouyasai-gameCorner-item:last-child:nth-child(odd) {
+/* ===== 最後1個中央 ===== */
+.kyoyasai-gameCorner-item:last-child:nth-child(odd) {
   grid-column: 1 / -1;
+
   display: flex;
   justify-content: center;
 }

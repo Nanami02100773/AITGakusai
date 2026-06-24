@@ -118,17 +118,29 @@
   object-fit: contain;
 }
 
+.top-bar-center {
+  overflow: hidden;
+}
+
+.logo-track {
+  will-change: transform;
+}
+
+.logo-slide {
+  flex-shrink: 0;
+}
+
 /* ロゴ背景色 */
 .top-bar-center.active-0 {
-  background: #ffe4e1;
+  background: #e1e1e1;
 }
 
 .top-bar-center.active-1 {
-  background: #e0f7ff;
+  background: #e1e1e1;
 }
 
 .top-bar-center.active-2 {
-  background: #e8ffe8;
+  background: #e1e1e1;
 }
 
 /* =========================
@@ -214,6 +226,8 @@
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
 
   z-index: 999;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /* =========================
@@ -221,41 +235,67 @@
 ========================= */
 .nav-item {
   flex: 1;
-  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   text-decoration: none;
 
-  color: #aaa;
-
-  font-size: 12px;
-
-  transition: all 0.2s ease;
+  position: relative;
 }
 
-/* アイコン */
-.nav-icon {
-  display: block;
-  font-size: 22px;
-  margin-bottom: 4px;
-}
-
+/* =========================
+   アイコン共通
+========================= */
 .nav-icon-img {
   width: 60px;
   height: 60px;
 
   object-fit: contain;
 
-  display: block;
-  margin: 0 auto;
+  display: flex;
 
-  /* 👇 グレー化 */
-  filter: grayscale(100%) brightness(1.2);
-  opacity: 0.6;
+  justify-content: center;
+  align-items: center;
 }
 
-/* アクティブ */
+/* =========================
+   個別サイズ
+========================= */
+
+.nav-home-icon {
+  width: 90px;
+  height: 90px;
+}
+
+.nav-stage-icon {
+  width: 65px;
+  height: 65px;
+}
+
+.nav-map-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.nav-calendar-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.nav-chat-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* =========================
+   アクティブ
+========================= */
+
 .nav-item.active {
   color: #5bbad5;
+
   position: relative;
 }
 
@@ -263,11 +303,15 @@
   content: "";
 
   position: absolute;
+
   bottom: -6px;
+
   left: 50%;
+
   transform: translateX(-50%);
 
   width: 24px;
+
   height: 4px;
 
   background: #5bbad5;
@@ -275,7 +319,78 @@
   border-radius: 10px;
 }
 
-/* ホバー */
+/* =========================
+   タップ時
+========================= */
+
 .nav-item:active {
   transform: translateY(-2px);
+}
+
+/* =========================
+   ホバー
+========================= */
+.nav-icon-img {
+  object-fit: contain;
+
+  display: block;
+  margin: 0 auto;
+
+  filter: grayscale(100%) brightness(1.2);
+  opacity: 0.6;
+
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* ホバー時に紺色 */
+
+.nav-item:hover .nav-icon-img {
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(19%)
+    sepia(73%)
+    saturate(1614%)
+    hue-rotate(215deg)
+    brightness(92%)
+    contrast(96%);
+
+  opacity: 1;
+}
+
+/* =========================
+   アイコン仕切り
+========================= */
+
+.nav-item {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.nav-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 1px;
+  height: 60px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(191, 191, 191, 0.5),
+    transparent
+  );
 }

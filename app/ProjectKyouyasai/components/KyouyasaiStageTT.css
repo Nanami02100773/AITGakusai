@@ -1,96 +1,369 @@
-/* =========================
-   全体
-========================= */
-.KyouyasaiStageTT {
-  background: #c6c5c5;
-  border-radius: 12px;
-  padding: 18px;
-  margin: 0 auto 24px;
-  max-width: 95%;
-  width: 700px;
+/* ==========================================
+   セクション
+========================================== */
+
+.kyoyasaiStageTT-section {
+  padding-bottom: 0px;
 }
 
-/* スクロール */
-.KyouyasaiStageTT-scroll-area {
+
+/* ==========================================
+   本体
+========================================== */
+
+.kyoyasaiStageTT {
+  width: 98%;
+  max-width: 900px;
+  height: 380px;
+
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+  padding: 20px;
+}
+
+.kyoyasaiStageTT-bg {
+  width: 97%;
+  max-width: 940px;
+
+  margin: 0 auto 40px;
+
+  padding: 15px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+}
+
+.kyoyasaiStageTT {
   max-height: 500px;
   overflow-y: auto;
-  padding-right: 8px;
 }
 
-.KyouyasaiStageTT-wrapper {
-  background: #f7f7f7;
-  padding: 12px;
-  border-radius: 12px;
+.kyoyasaiStageTT-scroll-area {
+  max-height: 500px;
+  overflow-y: auto;
+
+  padding-right: 20px;
+  margin-right: -10px;
 }
 
-/* =========================
-   タイムスロット
-========================= */
-.KyouyasaiStageTT-time-slot {
-  list-style: none;
+.kyoyasaiStageTT-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.kyoyasaiStageTT-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(120,130,255,0.35);
+  border-radius: 999px;
+}
+
+.kyoyasaiStageTT-wrapper {
+  background: transparent;
+  border: none;
+  box-shadow: none;
   padding: 0;
+}
+
+/* ==========================================
+   タイムライン
+========================================== */
+
+.kyoyasaiStageTT-time-slot {
+  position: relative;
+  list-style: none;
   margin: 0;
-  position: relative;
+  padding: 0;
 }
 
-.KyouyasaiStageTT-time-slot::before {
+.kyoyasaiStageTT-time-slot::before {
   content: "";
+
   position: absolute;
-  left: 8px;
-  top: 32px;
-  bottom: 70px;
-  width: 3px;
-  background: #ccc;
+
+  left: 20px;
+  top: 10px;
+  bottom: 10px;
+
+  width: 4px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    180deg,
+    #86a7ff 0%,
+    #6f8dff 100%
+  );
 }
 
-.KyouyasaiStageTT-time-slot-item {
+/* ==========================================
+   アイテム
+========================================== */
+
+.kyoyasaiStageTT-time-slot-item {
   position: relative;
-  padding: 16px 0 16px 32px;
-  border-bottom: 1px solid #ddd;
+
+  padding-left: 70px;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 10px;
 }
 
-.KyouyasaiStageTT-time-slot-item::before {
+.kyoyasaiStageTT-time-slot-item::after {
   content: "";
+
+  position: absolute;
+
+  left: 70px;
+  right: 0;
+
+  bottom: 0;
+
+  height: 1px;
+
+  background: #dbe2ff;
+}
+
+.kyoyasaiStageTT-time-slot-item:last-child::after {
+  display: none;
+}
+
+.kyoyasaiStageTT-time-slot-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 13px;
+  top: 2px;
+
   width: 18px;
   height: 18px;
-  background: white;
-  border: 3px solid #888;
+
   border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #b3c7ff 0%,
+    #6159ff 100%
+  );
+
+  border: 2px solid #ffffff;
+
+  box-shadow:
+    0 0 0 1px rgba(104,115,155,0.35);
+
+  z-index: 3;
 }
 
-/* =========================
+/* ==========================================
    ヘッダー
-========================= */
-.KyouyasaiStageTT-slot-header {
+========================================== */
+
+.kyoyasaiStageTT-slot-header {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.KyouyasaiStageTT-time {
-  font-size: 14px;
-  font-weight: bold;
+/* ==========================================
+   時間
+========================================== */
+
+.kyoyasaiStageTT-time {
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #6e7697;
+
+  margin-bottom: 10px;
 }
 
-/* イベント */
-.KyouyasaiStageTT-event {
-  background: #cdcdcd;
-  padding: 10px 14px;
-  border-radius: 12px;
+/* ==========================================
+   イベント
+========================================== */
+
+.kyoyasaiStageTT-event {
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  min-height: 50px;
+
+  padding: 12px 18px;
+
   display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  overflow: hidden;
+
+  border: 2px solid rgba(210,220,255,0.65);
+
+  box-shadow:
+    0 8px 20px rgba(120,140,255,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.95);
+
+  transition: .2s ease;
+
   cursor: pointer;
 }
 
-/* =========================
+.kyoyasaiStageTT-event::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 10px;
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    #86a7ff,
+    #6f8dff
+  );
+}
+
+.kyoyasaiStageTT-event:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   アイコン
+========================================== */
+
+.kyoyasaiStageTT-event-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-left: 18px;
+}
+
+.kyoyasaiStageTT-event-icon {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50px;
+
+  background: #fff;
+
+  border: 1.5px solid #d9e2ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px;
+}
+
+.kyoyasaiStageTT-event-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kyoyasaiStageTT-event-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4f67d8;
+}
+
+/* ==========================================
+   開閉矢印
+========================================== */
+
+.kyoyasaiStageTT-toggle-icon {
+  width: 13px;
+  height: 13px;
+
+  border-right: 4px solid #8aa0ff;
+  border-bottom: 4px solid #8aa0ff;
+
+  transform: rotate(45deg);
+
+  transition: .25s;
+}
+
+.kyoyasaiStageTT-toggle-icon.open {
+  transform: rotate(-135deg);
+}
+
+/* ==========================================
    詳細
-========================= */
-.KyouyasaiStageTT-event-detail {
-  margin-top: 10px;
-  background: #e9e9e9;
-  padding: 12px;
-  border-radius: 8px;
+========================================== */
+
+.kyoyasaiStageTT-event-detail {
+  margin-top: 14px;
+
+  background: linear-gradient(
+    180deg,
+    #dae4ff 0%,
+    #e5eaff 100%
+  );
+
+  border-radius: 18px;
+
+  border: 1px solid #d9e2ff;
+
+  padding: 18px;
+
+  box-shadow:
+    0 6px 18px rgba(90,110,255,0.08);
+
+  animation: fadeIn .25s ease;
+}
+
+.kyoyasaiStageTT-event-image {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  margin-bottom: 14px;
+
+  border: 1px solid #dfe5ff;
+
+  box-shadow:
+    0 8px 20px rgba(120,140,255,0.10);
+}
+
+.kyoyasaiStageTT-event-detail p {
+  margin: 0;
+
+  color: #4d5f86;
+
+  line-height: 1.8;
+
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

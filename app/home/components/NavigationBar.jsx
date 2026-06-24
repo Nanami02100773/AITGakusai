@@ -70,11 +70,11 @@ const NavigationBar = () => {
           <div
             className="logo-track"
             style={{
-              transform: `translateY(-${index * 36}px)`,
-              transition: isTransitioning
-                ? "transform .5s ease-in-out"
-                : "none",
-            }}
+  transform: `translate3d(0,-${index * 36}px,0)`,
+  transition: isTransitioning
+    ? "transform .5s ease-in-out"
+    : "none",
+}}
           >
             {loopLogos.map((src, i) => (
               <div className="logo-slide" key={i}>
@@ -130,45 +130,45 @@ const NavigationBar = () => {
 
       <nav className="bottom-nav">
 
-        <Link href="/home" className="nav-item">
-          <img
-            src="/NavigationIcons/home.png"
-            alt="home"
-            className="nav-icon-img"
-          />
-        </Link>
+       <Link href="/home" className="nav-item">
+  <img
+    src="/NavigationIcons/home.png"
+    alt="home"
+    className="nav-icon-img nav-home-icon"
+  />
+</Link>
 
-        <Link href="/stage" className="nav-item">
-          <img
-            src="/NavigationIcons/stage.png"
-            alt="stage"
-            className="nav-icon-img"
-          />
-        </Link>
+<Link href="/stage" className="nav-item">
+  <img
+    src="/NavigationIcons/stage.png"
+    alt="stage"
+    className="nav-icon-img nav-stage-icon"
+  />
+</Link>
 
-        <Link href="/map" className="nav-item">
-          <img
-            src="/NavigationIcons/map.png"
-            alt="map"
-            className="nav-icon-img"
-          />
-        </Link>
+<Link href="/map" className="nav-item">
+  <img
+    src="/NavigationIcons/map.png"
+    alt="map"
+    className="nav-icon-img nav-map-icon"
+  />
+</Link>
 
-        <Link href="/Project2" className="nav-item">
-          <img
-            src="/NavigationIcons/calendar.png"
-            alt="calendar"
-            className="nav-icon-img"
-          />
-        </Link>
+<Link href="/Project2" className="nav-item">
+  <img
+    src="/NavigationIcons/calendar.png"
+    alt="calendar"
+    className="nav-icon-img nav-calendar-icon"
+  />
+</Link>
 
-        <Link href="/question" className="nav-item">
-          <img
-            src="/NavigationIcons/chat.png"
-            alt="chat"
-            className="nav-icon-img"
-          />
-        </Link>
+<Link href="/question" className="nav-item">
+  <img
+    src="/NavigationIcons/chat.png"
+    alt="chat"
+    className="nav-icon-img nav-chat-icon"
+  />
+</Link>
 
       </nav>
     </>

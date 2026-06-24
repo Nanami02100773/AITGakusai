@@ -1,62 +1,111 @@
 "use client";
+
 import React, { useState } from "react";
 import "./KyouyasaiStageTT.css";
 
-// ✅ 正しい data import
 import DayData from "./data/KyouyasaiStageTTDay";
 
 const KyouyasaiStageTT = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] =
+    useState(null);
 
   return (
-    <section className="KyouyasaiStageTT-section">
-      {/* タイトル（灰色ボックスの外） */}
-      <div className="Kyouyasai-section-wrapper">
-        <h2 className="Kyouyasai-section-title">タイムテーブル</h2>
-      </div>
+    <section className="kyoyasaiStageTT-section">
 
-      {/* 灰色ボックス */}
-      <div className="KyouyasaiStageTT">
-        <div className="KyouyasaiStageTT-scroll-area">
-          <div className="KyouyasaiStageTT-wrapper">
-            <ul className="KyouyasaiStageTT-time-slot">
+      <div className="kyoyasai-section-wrapper">
+        <h2 className="kyoyasai-section-title">
+          タイムテーブル
+        </h2>
+      </div>
+      <div className="kyoyasaiStageTT-bg">
+
+      <div className="kyoyasaiStageTT">
+
+        <div className="kyoyasaiStageTT-scroll-area">
+
+          <div className="kyoyasaiStageTT-wrapper">
+
+            <ul className="kyoyasaiStageTT-time-slot">
+
               {DayData.map((item, index) => (
                 <li
                   key={index}
-                  className="KyouyasaiStageTT-time-slot-item"
+                  className="kyoyasaiStageTT-time-slot-item"
                 >
                   <div
-                    className="KyouyasaiStageTT-slot-header"
+                    className="kyoyasaiStageTT-slot-header"
                     onClick={() =>
-                      setOpenIndex(openIndex === index ? null : index)
+                      setOpenIndex(
+                        openIndex === index
+                          ? null
+                          : index
+                      )
                     }
                   >
-                    <span className="KyouyasaiStageTT-time">
+                    <span className="kyoyasaiStageTT-time">
                       {item.time}
                     </span>
 
-                    <div className="KyouyasaiStageTT-event">
-                      <span>{item.title}</span>
-                      <span>{openIndex === index ? "▲" : "▼"}</span>
+                    <div className="kyoyasaiStageTT-event">
+
+                      <div className="kyoyasaiStageTT-event-left">
+
+                        {item.icon && (
+                          <div className="kyoyasaiStageTT-event-icon">
+                            <img
+                              src={item.icon}
+                              alt={item.title}
+                            />
+                          </div>
+                        )}
+
+                        <span className="kyoyasaiStageTT-event-title">
+                          {item.title}
+                        </span>
+
+                      </div>
+
+                      <span
+                        className={`kyoyasaiStageTT-toggle-icon ${
+                          openIndex === index
+                            ? "open"
+                            : ""
+                        }`}
+                      />
+
                     </div>
                   </div>
 
                   {openIndex === index && (
-                    <div className="KyouyasaiStageTT-event-detail">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        style={{ width: "100%", borderRadius: "6px" }}
-                      />
-                      <p>{item.detail}</p>
+                    <div className="kyoyasaiStageTT-event-detail">
+
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="kyoyasaiStageTT-event-image"
+                        />
+                      )}
+
+                      {item.detail && (
+                        <p>{item.detail}</p>
+                      )}
+
                     </div>
                   )}
+
                 </li>
               ))}
+
             </ul>
+
           </div>
+
         </div>
+
       </div>
+      </div>
+
     </section>
   );
 };

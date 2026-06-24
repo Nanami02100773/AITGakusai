@@ -1,92 +1,139 @@
-.Stage-notice-container {
+.stage-notice-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 96px;
+  padding-top: 110px;
   padding-bottom: 96px;
+  
 }
 
-/* ===== 上部バー ===== */
-.Stage-notice-top-bar {
-  width: 85%;
-  max-width: 640px;
-  height: 44px;
-  background: #848484;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  margin-bottom: 28px;
-}
+.stage-notice-card {
+  position: relative;
 
-.Stage-notice-top-text {
-  color: #fff;
-  font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* ===== 外枠カード ===== */
-.Stage-notice-card {
   width: 90%;
-  max-width: 680px;
-  background: #d9d9d9;
-  border-radius: 28px;
+  max-width: 720px;
+
+  background: #f9fbff;
+
+  border-radius: 24px;
+
   padding: 18px;
 }
 
-/* ===== 内側 ===== */
-.Stage-notice-card-inner {
-  background: #f2f2f2;
-  border-radius: 22px;
-  padding: 24px;
-  min-height: 220px;
-}
+/* =========================================
+   サイバーフレーム
+========================================= */
+.stage-notice-card::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  pointer-events: none;
 
-/* 区切り線の上の文言 */
-.Stage-notice-inner-title {
-  font-size: 13px;
-  color: #848484;
-  margin-bottom: 6px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  background:
 
-/* 細い区切り線 */
-.Stage-notice-divider {
-  height: 2px;
-  width: 100%;
-  background: #929292;
-  margin-bottom: 20px;
-}
+  linear-gradient(#b8c6ff,#b8c6ff)
+    top center / 100% 3px no-repeat,
 
-/* テキスト */
-.Stage-notice-text {
-  font-size: 14px;
-  color: #979797;
+  linear-gradient(#b8c6ff,#b8c6ff)
+    bottom center / 100% 3px no-repeat,
+
+  linear-gradient(#b8c6ff,#b8c6ff)
+    left center / 3px 100% no-repeat,
+
+  linear-gradient(#b8c6ff,#b8c6ff)
+    right center / 3px 100% no-repeat,
+
+  linear-gradient(
+    135deg,
+    #6f8dff 0 40%,
+    transparent 40%
+  )
+    top left / 38px 38px no-repeat,
+
+  linear-gradient(
+    -135deg,
+    #6f8dff 0 40%,
+    transparent 40%
+  )
+    top right / 38px 38px no-repeat,
+
+  linear-gradient(
+    45deg,
+    #6f8dff 0 40%,
+    transparent 40%
+  )
+    bottom left / 38px 38px no-repeat,
+
+  linear-gradient(
+    -45deg,
+    #6f8dff 0 40%,
+    transparent 40%
+  )
+    bottom right / 38px 38px no-repeat;
+
+  opacity: .95;
 }
 
 /* =========================================
-   カード上部タイトル
+   上中央フレーム
 ========================================= */
-.Stage-notice-card-bar {
-  position: relative;
+.stage-notice-frame-top {
+  position: absolute;
 
-  height: 60px;
+  top: -20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 140px;
+  height: 14px;
+
+  background: #b8c6ff;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    85% 100%,
+    15% 100%
+  );
+}
+
+/* =========================================
+   下中央フレーム
+========================================= */
+.stage-notice-frame-bottom {
+  position: absolute;
+
+  bottom: -20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 140px;
+  height: 14px;
+
+  background: #b8c6ff;
+
+  clip-path: polygon(
+    15% 0,
+    85% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.stage-notice-card-bar {
+  position: relative;
 
   display: flex;
   align-items: center;
 
-  padding-left: 90px;
-  padding-right: 20px;
+  min-height: 64px;
 
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  padding: 0 18px 0 0;
 
   border-radius: 18px;
-
-  overflow: hidden;
 
   background: linear-gradient(
     180deg,
@@ -96,24 +143,26 @@
 
   border: 1px solid #ececff;
 
-  box-shadow:
-    0 4px 12px rgba(120,120,180,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.9);
+  overflow: hidden;
+
+box-shadow:
+  0 4px 10px rgba(120,120,180,0.1),
+  0 1px 4px rgba(120,120,180,0.10),
+  inset 0 1px 0 rgba(255,255,255,0.9);
 }
 
-/* 左の斜め背景 */
-.Stage-notice-card-bar::before {
+/* =========================================
+   左の青背景
+========================================= */
+.stage-notice-card-bar::before {
   content: "";
 
   position: absolute;
-
   left: 0;
   top: 0;
 
   width: 85px;
-  height: 100%;
-
-  background: #c8d0ff;
+  height: 90%;
 
   clip-path: polygon(
     0 0,
@@ -121,21 +170,23 @@
     72% 100%,
     0 100%
   );
+
+  opacity: 0.95;
+
+  background: #c8d0ff;
 }
 
-/* 左の丸アイコン */
-.Stage-notice-card-bar::after {
-  content: "!";
+/* =========================================
+   番号
+========================================= */
+.stage-notice-number {
+  position: relative;
+  z-index: 3;
 
-  position: absolute;
+  width: 35px;
+  height: 35px;
 
-  left: 18px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  width: 32px;
-  height: 32px;
+  margin-left: 14px;
 
   border-radius: 50%;
 
@@ -143,56 +194,151 @@
   align-items: center;
   justify-content: center;
 
-  color: #fff;
+  flex-shrink: 0;
 
-  font-size: 18px;
-  font-weight: 900;
+  font-size: 15px;
+  font-weight: 800;
+
+  color: white;
+
+  border: 2px solid rgba(255,255,255,0.95);
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.08),
+    inset 0 4px 8px rgba(255,255,255,0.3);
 
   background: linear-gradient(
     135deg,
     #5675ff,
     #3757ef
   );
-
-  border: 2px solid rgba(255,255,255,.95);
-
-  box-shadow:
-    0 6px 14px rgba(0,0,0,.08);
 }
 
-/* タイトル文字 */
-.Stage-notice-card-bar-text {
-  position: relative;
-  z-index: 2;
+/* =========================================
+   番号後ろの斜めライン
+========================================= */
+.stage-notice-number::before {
+  content: "";
 
-  font-size: 16px;
-  font-weight: 800;
+  position: absolute;
+
+  width: 90px;
+  height: 54px;
+
+  left: -32px;
+  top: 50%;
+
+  transform:
+    translateY(-46%)
+    skewX(-13deg);
+
+  opacity: 0.6;
+
+  border: 1.5px solid #c8d0ff;
+
+  z-index: -1;
+}
+
+/* =========================================
+   タイトル
+========================================= */
+.stage-notice-card-bar-text {
+  position: relative;
+  z-index: 3;
+
+  flex: 1;
+
+  margin-left: 45px;
+
+  font-size: 14px;
+  font-weight: 700;
 
   color: #353567;
+
+  letter-spacing: 0.01em;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.Stage-notice-card-bar .notice-style-dots {
-  position: absolute;
 
-  right: 20px;
-  top: 50%;
+/* =========================================
+   矢印
+========================================= */
+.notice-style-arrow {
+  position: relative;
+  z-index: 3;
 
-  transform: translateY(-50%);
+  font-size: 42px;
+  font-weight: 200;
 
-  width: 40px;
-  height: 40px;
+  margin-left: 10px;
 
-  opacity: .4;
+  line-height: 1;
 
-  background-size: 10px 10px;
+  color: #4f6dff;
+}
 
-  background-image:
-    radial-gradient(
-      #9eaaff 1.5px,
-      transparent 1.5px
-    );
+/* =========================================
+   本文カード
+========================================= */
+.stage-notice-card-inner {
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f7f7ff
+  );
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  min-height: 280px;
+
+  border: 1.5px solid #ececff;
+
+  box-shadow:
+    0 4px 12px rgba(120,120,180,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+/* =========================================
+   サブタイトル
+========================================= */
+.stage-notice-inner-title {
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #3f59b6;
+
+  margin-bottom: 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================
+   区切り線
+========================================= */
+.stage-notice-divider {
+  width: 100%;
+  height: 2px;
+
+  background: #ff9fb5;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   本文
+========================================= */
+.stage-notice-text {
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #4f5f90;
+
+  line-height: 2;
 }

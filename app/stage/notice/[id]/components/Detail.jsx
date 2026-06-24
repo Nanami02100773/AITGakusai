@@ -1,31 +1,47 @@
 "use client";
 import "./Detail.css";
 
-export default function Detail({ title, body }) {
+export default function Detail({
+  title,
+  body,
+  number,
+}) {
   return (
-    <div className="Stage-notice-container">
-      <div className="Stage-notice-card">
-        {/* 上部バー */}
-        <div className="Stage-notice-card-bar">
-          <span className="Stage-notice-card-bar-text">
+    <div className="stage-notice-container">
+      <div className="stage-notice-card">
+
+        <div className="stage-notice-frame-top" />
+        <div className="stage-notice-frame-bottom" />
+
+        <div className="stage-notice-card-bar">
+
+          <div
+            className={`
+              stage-notice-number
+            `}
+          >
+            {String(number || 0).padStart(2, "0")}
+          </div>
+
+          <span className="stage-notice-card-bar-text">
             {title}
           </span>
 
-          <div className="notice-style-dots" />
+
         </div>
 
-        <div className="Stage-notice-card-inner">
-          {/* 区切り線の上の文言 */}
-          <div className="Stage-notice-inner-title">
+        <div className="stage-notice-card-inner">
+          <div className="stage-notice-inner-title">
             {title}
           </div>
 
-          <div className="Stage-notice-divider" />
+          <div className="stage-notice-divider" />
 
-          <p className="Stage-notice-text">
+          <p className="stage-notice-text">
             {body}
           </p>
         </div>
+
       </div>
     </div>
   );

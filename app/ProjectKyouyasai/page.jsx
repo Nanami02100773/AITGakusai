@@ -1,14 +1,16 @@
 "use client";
+
 import React from "react";
 
 import Title from "./components/Title";
 import ImageCarousel from "./components/ImageCarousel";
 import DescriptionBox from "./components/DescriptionBox";
 import DetailTable from "./components/DetailTable";
-import KyouyasaiStageTT from "./components/KyouyasaiStageTT";
-import KyouyasaiInfo from "./components/KyouyasaiInfo";
-import KyouyasaiGame from "./components/KyouyasaiGame";
 import NavigationBar from "./components/NavigationBar";
+
+import KyouyasaiCast from "./components/KyouyasaiCast";
+import KyouyasaiGame from "./components/KyouyasaiGame";
+import KyouyasaiStageTT from "./components/KyouyasaiStageTT";
 
 import img1 from "./components/images/スクリーンショット (1).png";
 import img2 from "./components/images/スクリーンショット 2024-06-12 110056.png";
@@ -16,10 +18,16 @@ import img3 from "./components/images/スクリーンショット 2024-07-03 114
 
 export default function Page() {
   return (
-    <div>
-      <Title/>
+    <div className="kyouyasai-page">
+      <Title />
 
-      <ImageCarousel images={[img1, img2, img3]} />
+      <ImageCarousel
+        images={[
+          img1,
+          img2,
+          img3,
+        ]}
+      />
 
       <DescriptionBox />
 
@@ -27,11 +35,9 @@ export default function Page() {
 
       <KyouyasaiStageTT />
 
-      {/* ★ 追加 */}
-      <KyouyasaiInfo />
+      <KyouyasaiCast />
 
-      <KyouyasaiGame/>
-
+      <KyouyasaiGame />
 
       <NavigationBar />
     </div>
