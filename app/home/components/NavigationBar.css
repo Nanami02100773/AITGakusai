@@ -22,43 +22,12 @@
 }
 
 /* =========================
-   ボタン
-========================= */
-.nav-button {
-  background: none;
-  border: none;
-
-  color: rgb(167, 167, 167);
-
-  font-size: 20px;
-
-  cursor: pointer;
-  padding: 5px;
-}
-
-/* =========================
    戻るボタン
 ========================= */
-.nav-back-button {
-  width: 150px;
-  height: 150px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 50%;
-  background: #f1f1f1;
-
-  border: none;
-  cursor: pointer;
-
-  transition: all 0.25s ease;
-}
 
 .nav-back-icon {
-  width: 250px;
-  height: 250px;
+  width: 35px;
+  height: 35px;
 
   object-fit: contain;
 
@@ -89,8 +58,8 @@
    メニューボタン
 ========================= */
 .nav-button {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 
   display: flex;
   justify-content: center;
@@ -98,8 +67,6 @@
 
   background: none;
   border: none;
-
-  color: #a5a5a5;
 
   font-size: 20px;
 
@@ -210,17 +177,6 @@
   background: #e1e1e1;
 }
 
-/* =========================
-   オーバーレイ
-========================= */
-.overlay {
-  position: fixed;
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.4);
-
-  z-index: 1500;
-}
 
 /* =========================
    サイドメニュー
@@ -256,7 +212,7 @@
    メニューアイテム
 ========================= */
 .menu-item {
-  padding: 12px 10px;
+  padding: 15px 10px;
 
   text-decoration: none;
 
@@ -269,6 +225,73 @@
 
 .menu-item:hover {
   background: #f3f6ff;
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+}
+
+.menu-header span {
+  margin-top: 30px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #333;
+
+  padding-bottom: 10px;
+
+  position: relative;
+}
+
+.menu-header span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 80%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 120px;
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #5bbad5 20%,
+    #86a7ff 50%,
+    #5bbad5 80%,
+    transparent
+  );
+}
+
+.menu-back {
+  background: none;
+  border: none;
+
+  padding: 0;
+
+  font-size: 16px;
+  color: #5bbad5;
+
+  cursor: pointer;
+}
+
+.menu-header span {
+  margin-top: 20px;
+  margin-left: 12px;
+
+  font-size: 22px;
+  font-weight: 700;
 }
 
 /* =========================

@@ -39,9 +39,13 @@ export default function NoticePage() {
 
   return (
     <div className="notice-container">
-      <h1 className="notice-title">お知らせ投稿</h1>
+  <h1 className="notice-title">お知らせ投稿</h1>
 
-<form onSubmit={handleSubmit} className="notice-form">
+  <div className="notice-section-title">
+    投稿文作成
+  </div>
+
+  <form onSubmit={handleSubmit} className="notice-form">
 
 <div>
   <div className="notice-label">

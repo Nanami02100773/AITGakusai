@@ -11,7 +11,6 @@ const logos = [
   "/homecenterlogo/poster.png",
 ];
 
-// 無限ループ用に複製
 const loopLogos = [...logos, ...logos, ...logos];
 
 const NavigationBar = () => {
@@ -20,7 +19,6 @@ const NavigationBar = () => {
   const [index, setIndex] = useState(logos.length);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
-  // ロゴローテーション
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => prev + 1);
@@ -29,7 +27,6 @@ const NavigationBar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // 無限ループ
   useEffect(() => {
     if (index >= logos.length * 2) {
       setTimeout(() => {
@@ -59,7 +56,6 @@ const NavigationBar = () => {
           />
         </button>
 
-        {/* 中央ロゴ */}
         <div
           className={`top-bar-center ${
             index % logos.length === 0
@@ -79,8 +75,14 @@ const NavigationBar = () => {
             }}
           >
             {loopLogos.map((src, i) => (
-              <div className="logo-slide" key={i}>
-                <img src={src} alt="" />
+              <div
+                className="logo-slide"
+                key={i}
+              >
+                <img
+                  src={src}
+                  alt=""
+                />
               </div>
             ))}
           </div>
@@ -88,7 +90,10 @@ const NavigationBar = () => {
       </header>
 
       <nav className="bottom-nav">
-        <Link href="/home" className="nav-item">
+        <Link
+          href="/home"
+          className="nav-item"
+        >
           <img
             src="/NavigationIcons/home.png"
             alt="home"
@@ -96,7 +101,10 @@ const NavigationBar = () => {
           />
         </Link>
 
-        <Link href="/stage" className="nav-item">
+        <Link
+          href="/stage"
+          className="nav-item"
+        >
           <img
             src="/NavigationIcons/stage.png"
             alt="stage"
@@ -104,7 +112,10 @@ const NavigationBar = () => {
           />
         </Link>
 
-        <Link href="/map" className="nav-item">
+        <Link
+          href="/map"
+          className="nav-item"
+        >
           <img
             src="/NavigationIcons/map.png"
             alt="map"
@@ -112,7 +123,10 @@ const NavigationBar = () => {
           />
         </Link>
 
-        <Link href="/Project2" className="nav-item">
+        <Link
+          href="/Project2"
+          className="nav-item"
+        >
           <img
             src="/NavigationIcons/calendar.png"
             alt="calendar"
@@ -120,7 +134,10 @@ const NavigationBar = () => {
           />
         </Link>
 
-        <Link href="/question" className="nav-item">
+        <Link
+          href="/question"
+          className="nav-item"
+        >
           <img
             src="/NavigationIcons/chat.png"
             alt="chat"

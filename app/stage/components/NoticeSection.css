@@ -598,11 +598,24 @@ bottom 5px right 0 / 10px 90px no-repeat,
   justify-content: center;
   align-items: center;
 
-  height: 180px;
+  width: calc(100% - 20px);
+  min-height: 140px;
+
+  margin: 30px auto;
+
+  background: #ffffff;
 
   color: #6d79c7;
   font-size: 14px;
   font-weight: 700;
-
   text-align: center;
+
+  border: 3px dashed #b8c6ff;
+  border-radius: 16px;
+
+  box-shadow:
+    inset 0 0 0 6px #eef3ff,
+    0 4px 12px rgba(120, 120, 180, 0.08);
+
+  position: relative;
 }

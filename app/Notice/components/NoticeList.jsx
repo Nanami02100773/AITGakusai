@@ -21,6 +21,10 @@ export default function NoticeList() {
   return (
     <div className="notice-list-container">
 
+      <div className="notice-section-title">
+  投稿履歴
+</div>
+
       <div className="top-tabs">
         <button className="active">
           一覧
