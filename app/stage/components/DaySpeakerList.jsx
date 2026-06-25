@@ -9,7 +9,7 @@ const DaySpeakerList = ({ speakers }) => {
 
   return (
     <section className="Stage-performer-section">
-      <h2 className="Stage-section-title">出演者様紹介</h2>
+      <h2 className="stage-section-title">出演者様紹介</h2>
 
       <div className="Stage-scroll-area">
         {speakers.map((speaker, index) => (

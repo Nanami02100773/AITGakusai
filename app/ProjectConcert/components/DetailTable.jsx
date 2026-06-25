@@ -13,17 +13,24 @@ function DetailTable() {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value: "10:00～17:00",
+      open: "10:00",
+      start: "10:30",
     },
     {
       icon: "/project/Precautions.png",
       iconClass: "precautions-icon",
       label: "注意事項",
-      value: [
-        "スタンプは1人1回までです",
-        "景品は数に限りがあります",
-        "総合案内所で交換してください",
-        "学祭と執行のスタンプラリーがあります",
+
+      reception: [
+        "総合案内所にて受付",
+        "スタンプカードを受け取る",
+        "参加説明を確認する",
+      ],
+
+      inside: [
+        "館内自由見学可能",
+        "順路に従って移動",
+        "他の来場者へ配慮する",
       ],
     },
   ];
@@ -58,15 +65,72 @@ function DetailTable() {
 
             <div className="concert-detail-content">
               <div className="concert-detail-value">
-                {Array.isArray(item.value) ? (
-                  <ul className="concert-note-list">
-                    {item.value.map((note, i) => (
-                      <li key={i}>{note}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  item.value
+
+                {/* 場所 */}
+                {item.label === "場所" && (
+                  <span>{item.value}</span>
                 )}
+
+                {/* 時間 */}
+                {item.label === "時間" && (
+                  <div className="concert-time-box">
+                    <div className="concert-time-item">
+                      <span className="concert-info-tag">
+                        開場
+                      </span>
+
+                      <span>{item.open}</span>
+                    </div>
+
+                    <div className="concert-time-item">
+                      <span className="concert-info-tag">
+                        開演
+                      </span>
+
+                      <span>{item.start}</span>
+                    </div>
+                  </div>
+                )}
+
+                {/* 注意事項 */}
+                {item.label === "注意事項" && (
+                  <>
+                    <div className="concert-info-row">
+                      <span className="concert-info-tag">
+                        受付時
+                      </span>
+
+                      <div className="concert-info-list">
+                        {item.reception.map((text, i) => (
+                          <div
+                            key={i}
+                            className="concert-info-description"
+                          >
+                            {text}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="concert-info-row">
+                      <span className="concert-info-tag">
+                        館内
+                      </span>
+
+                      <div className="concert-info-list">
+                        {item.inside.map((text, i) => (
+                          <div
+                            key={i}
+                            className="concert-info-description"
+                          >
+                           {text}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
+
               </div>
             </div>
           </div>

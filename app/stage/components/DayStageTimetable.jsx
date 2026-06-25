@@ -13,7 +13,7 @@ const DayStageTimetable = ({ data = [] }) => {
   return (
     <section className="timetable-section">
 
-      <h2 className="Stage-section-title">
+      <h2 className="stage-section-title">
         タイムテーブル
       </h2>
 

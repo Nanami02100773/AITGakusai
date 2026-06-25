@@ -3,6 +3,7 @@
 import Link from "next/link";
 import "./NoticeSection.css";
 import { useEffect, useState } from "react";
+import { orbitron } from "../page";
 
 const NoticeSection = () => {
   const [notices, setNotices] = useState([]);
@@ -20,17 +21,16 @@ const NoticeSection = () => {
   }, []);
 
   return (
-    <section className="Stage-notice-section">
-      {/* タイトル */}
-      <div className="Stage-section-title-wrapper">
-        <div className="Stage-section-title">
+    <section className="stage-notice-section">
+      <div className="stage-section-title-wrapper">
+        <div className="stage-section-title">
           お知らせ
         </div>
       </div>
 
-      <div className="Stage-notice-box">
+      <div className="stage-box3">
         {notices.length === 0 ? (
-          <div className="Stage-notice-empty">
+          <div className="stage-notice-empty">
             現在ステージに関するお知らせはありません
           </div>
         ) : (
@@ -38,26 +38,23 @@ const NoticeSection = () => {
             <Link
               key={notice.id}
               href={`/stage/notice/${notice.id}`}
-              className="Stage-notice-item"
+              className={`stage-notice-item n${index + 1}`}
             >
-              {/* 左背景 */}
-              <div className="Stage-notice-bg" />
-
-              {/* 番号 */}
-              <div className="Stage-notice-number">
+              <div
+                className={`notice-number ${orbitron.className}`}
+              >
                 {String(index + 1).padStart(2, "0")}
               </div>
 
-              {/* テキスト */}
-              <div className="Stage-notice-text">
+              <div className="notice-text">
                 {notice.title}
               </div>
 
-              {/* ドット */}
-              <div className="Stage-notice-dots" />
+              <div className="notice-dots" />
 
-              {/* 矢印 */}
-              <div className="Stage-notice-arrow">›</div>
+              <div className="notice-arrow">
+                ›
+              </div>
             </Link>
           ))
         )}

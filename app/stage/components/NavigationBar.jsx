@@ -1,49 +1,65 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import "./NavigationBar.css";
 
 const logos = [
-  "/images/logo1.png",
-  "/images/logo2.png",
-  "/images/logo3.png",
+  "/homecenterlogo/ait.gif",
+  "/homecenterlogo/aitfes.png",
+  "/homecenterlogo/poster.png",
 ];
+
+// 無限ループ用に複製
+const loopLogos = [...logos, ...logos, ...logos];
 
 const NavigationBar = () => {
   const router = useRouter();
-  const [index, setIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(true);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // ロゴ自動ローテーション
+  const [index, setIndex] = useState(logos.length);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+
+  // ロゴローテーション
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => prev + 1);
     }, 2500);
+
     return () => clearInterval(interval);
   }, []);
 
-  // 無限ループ処理
+  // 無限ループ
   useEffect(() => {
-    if (index === logos.length) {
+    if (index >= logos.length * 2) {
       setTimeout(() => {
         setIsTransitioning(false);
-        setIndex(0);
+        setIndex(logos.length);
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setIsTransitioning(true);
+          });
+        });
       }, 500);
-    } else {
-      setIsTransitioning(true);
     }
   }, [index]);
 
   return (
     <>
       <header className="top-bar">
-        <button className="nav-button" onClick={() => router.back()}>
-          ←
+        <button
+          className="nav-back-button"
+          onClick={() => router.back()}
+        >
+          <img
+            src="/NavigationIcons/back.png"
+            alt="back"
+            className="nav-back-icon"
+          />
         </button>
 
-        {/* ロゴ */}
+        {/* 中央ロゴ */}
         <div
           className={`top-bar-center ${
             index % logos.length === 0
@@ -56,65 +72,61 @@ const NavigationBar = () => {
           <div
             className="logo-track"
             style={{
-              transform: `translateY(-${index * 100}%)`,
+              transform: `translate3d(0,-${index * 36}px,0)`,
               transition: isTransitioning
-                ? "transform 0.5s ease-in-out"
+                ? "transform .5s ease-in-out"
                 : "none",
             }}
           >
-            {[...logos, logos[0]].map((src, i) => (
+            {loopLogos.map((src, i) => (
               <div className="logo-slide" key={i}>
                 <img src={src} alt="" />
               </div>
             ))}
           </div>
         </div>
-
-        {/* ≡ ボタン（トグル） */}
-        <button
-          className="nav-button"
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-        >
-          ≡
-        </button>
       </header>
 
-      {/* 背景オーバーレイ */}
-      {isMenuOpen && (
-        <div
-          className="overlay"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
-
-      {/* 右側サイドメニュー */}
-      <div className={`side-menu ${isMenuOpen ? "open" : ""}`}>
-        <div className="menu-header">Menu</div>
-
-        <Link
-          href="/Guide"
-          className="menu-item"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          操作説明
-        </Link>
-
-        <Link
-          href="/Login"
-          className="menu-item"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          学祭用ログイン
-        </Link>
-      </div>
-
-      {/* 下部ナビ */}
       <nav className="bottom-nav">
-        <Link href="/home" className="nav-item">🏠</Link>
-        <Link href="/stage" className="nav-item">🏢</Link>
-        <Link href="/map" className="nav-item">📍</Link>
-        <Link href="/Project2" className="nav-item">📅</Link>
-        <Link href="/question" className="nav-item">💬</Link>
+        <Link href="/home" className="nav-item">
+          <img
+            src="/NavigationIcons/home.png"
+            alt="home"
+            className="nav-icon-img nav-home-icon"
+          />
+        </Link>
+
+        <Link href="/stage" className="nav-item">
+          <img
+            src="/NavigationIcons/stage.png"
+            alt="stage"
+            className="nav-icon-img nav-stage-icon"
+          />
+        </Link>
+
+        <Link href="/map" className="nav-item">
+          <img
+            src="/NavigationIcons/map.png"
+            alt="map"
+            className="nav-icon-img nav-map-icon"
+          />
+        </Link>
+
+        <Link href="/Project2" className="nav-item">
+          <img
+            src="/NavigationIcons/calendar.png"
+            alt="calendar"
+            className="nav-icon-img nav-calendar-icon"
+          />
+        </Link>
+
+        <Link href="/question" className="nav-item">
+          <img
+            src="/NavigationIcons/chat.png"
+            alt="chat"
+            className="nav-icon-img nav-chat-icon"
+          />
+        </Link>
       </nav>
     </>
   );
