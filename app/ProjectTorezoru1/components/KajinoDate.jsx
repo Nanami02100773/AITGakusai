@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "./TorezoruDate.css";
+import "./KajinoDate.css";
 
-const TorezoruDate = ({ onDayChange }) => {
+const KajinoDate = ({ onDayChange }) => {
   const [selectedDay, setSelectedDay] = useState(1);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const TorezoruDate = ({ onDayChange }) => {
   }, [selectedDay, onDayChange]);
 
   return (
-    <div className="TorezoruDate-toggle">
+    <div className="kajinoDate-toggle">
       <button
         className={selectedDay === 1 ? "active" : ""}
         onClick={() => setSelectedDay(1)}
@@ -29,4 +29,4 @@ const TorezoruDate = ({ onDayChange }) => {
   );
 };
 
-export default TorezoruDate;
+export default KajinoDate;

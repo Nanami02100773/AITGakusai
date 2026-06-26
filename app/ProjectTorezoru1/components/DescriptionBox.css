@@ -1,7 +1,7 @@
 /* ==============================
    セクションタイトル
 ================================ */
-.ruminosu-section-title {
+.kajino-section-title {
   position: relative;
   z-index: 2;
 
@@ -39,7 +39,7 @@
 /* ==============================
    企画説明ボックス
 ================================ */
-.ruminosu-description-box {
+.kajino-description-box {
   width: 95%;
   max-width: 700px;
 

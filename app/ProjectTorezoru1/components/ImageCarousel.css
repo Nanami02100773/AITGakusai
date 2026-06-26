@@ -1,4 +1,4 @@
-.ruminosu-image-carousel {
+.kajino-image-carousel {
   position: relative;
 
   width: 95%;
@@ -37,7 +37,7 @@
    上中央フレーム
 ======================================== */
 
-.ruminosu-frame-top-center {
+.kajino-frame-top-center {
   position: absolute;
 
   top: 0;
@@ -64,7 +64,7 @@
    下中央フレーム
 ======================================== */
 
-.ruminosu-frame-bottom-center {
+.kajino-frame-bottom-center {
   position: absolute;
 
   bottom: 0;
@@ -91,8 +91,8 @@
    上下装飾
 ======================================== */
 
-.ruminosu-frame-top,
-.ruminosu-frame-bottom {
+.kajino-frame-top,
+.kajino-frame-bottom {
   position: absolute;
 
   left: 50%;
@@ -107,7 +107,7 @@
   z-index: 21;
 }
 
-.ruminosu-frame-top {
+.kajino-frame-top {
   position: absolute;
 
   top: 0;
@@ -143,7 +143,7 @@
    左上
 ======================================== */
 
-.ruminosu-frame-corner-tl {
+.kajino-frame-corner-tl {
   position: absolute;
 
   top: 0;
@@ -167,7 +167,7 @@
    右上
 ======================================== */
 
-.ruminosu-frame-corner-tr {
+.kajino-frame-corner-tr {
   position: absolute;
 
   top: 0;
@@ -191,7 +191,7 @@
    左下
 ======================================== */
 
-.ruminosu-frame-corner-bl {
+.kajino-frame-corner-bl {
   position: absolute;
 
   bottom: 0;
@@ -215,7 +215,7 @@
    右下
 ======================================== */
 
-.ruminosu-frame-corner-br {
+.kajino-frame-corner-br {
   position: absolute;
 
   bottom: 0;
@@ -239,7 +239,7 @@
    内側パネル
 ======================================== */
 
-.ruminosu-image-carousel::before {
+.kajino-image-carousel::before {
   content: "";
 
   position: absolute;
@@ -260,7 +260,7 @@
    共通カード
 ======================================== */
 
-.ruminosu-carousel-image {
+.kajino-carousel-image {
   position: absolute;
 
   width: 75%;
@@ -292,7 +292,7 @@
    中央
 ======================================== */
 
-.ruminosu-carousel-image.center {
+.kajino-carousel-image.center {
   left: 50%;
   top: 53%;
 
@@ -309,7 +309,7 @@
    左
 ======================================== */
 
-.ruminosu-carousel-image.left {
+.kajino-carousel-image.left {
   left: -18%;
 
   top: 54%;
@@ -328,7 +328,7 @@
    右
 ======================================== */
 
-.ruminosu-carousel-image.right {
+.kajino-carousel-image.right {
   right: -18%;
 
   left: auto;
@@ -349,7 +349,7 @@
    非表示
 ======================================== */
 
-.ruminosu-carousel-image.hidden {
+.kajino-carousel-image.hidden {
   opacity: 0;
 
   pointer-events: none;

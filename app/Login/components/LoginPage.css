@@ -1,12 +1,14 @@
 body {
-  background: #f5f7ff;
+ background: #f6f7fc;
+
 }
 
 .login-page {
   display: flex;
   justify-content: center;
-
-  padding-top: 120px;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  padding: 40px 20px;
 }
 
 /* =====================================
@@ -15,48 +17,44 @@ body {
 
 .login-card {
   width: 90%;
-  max-width: 500px;
+  max-width: 480px;
 
-  padding: 30px;
-
-  background: #ffffff;
-
-  border-radius: 15px;
-
-  border: 2px solid rgba(169,186,255,.55);
-
-  box-shadow:
-    0 8px 30px rgba(111,141,255,.18);
+  padding: 42px 34px 36px;
 
   position: relative;
-}
-
-/* =====================================
-   アイコン
-===================================== */
-
-.login-icon {
-  width: 75px;
-  height: 75px;
-
-  margin: 0 auto 14px;
-
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 34px;
 
   background: linear-gradient(
-    135deg,
-    #eef3ff,
-    #dfe8ff
+    180deg,
+    rgba(255,255,255,.98),
+    rgba(248,251,255,.98)
   );
 
+  border: 1px solid rgba(134,167,255,.25);
+  border-radius: 24px;
+
   box-shadow:
-    0 4px 12px rgba(111,141,255,.12);
+    0 15px 40px rgba(111,141,255,.15),
+    inset 0 1px 0 rgba(255,255,255,.85);
+
+  overflow: hidden;
+}
+
+.login-card::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff,
+    #ff9fb5
+  );
 }
 
 /* =====================================
@@ -64,14 +62,16 @@ body {
 ===================================== */
 
 .login-title {
+  margin: 0;
+
   text-align: center;
 
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 800;
 
   color: #4b7cff;
 
-  margin: 0;
+  letter-spacing: 1px;
 }
 
 /* =====================================
@@ -81,10 +81,10 @@ body {
 .login-divider {
   position: relative;
 
-  width: 90%;
-  height: 26px;
+  width: 100%;
+  height: 30px;
 
-  margin: 10px auto;
+  margin: 14px 0 26px;
 }
 
 .login-divider::before {
@@ -92,8 +92,8 @@ body {
 
   position: absolute;
 
-  left: 0;
-  right: 0;
+  left: 15%;
+  right: 15%;
   top: 50%;
 
   height: 2px;
@@ -117,14 +117,14 @@ body {
 }
 
 .login-form label {
-  width: 250px;
-
-  font-size: 15px;
-  font-weight: 700;
-
-  color: #4b7cff;
+  width: 100%;
+  max-width: 320px;
 
   margin-bottom: 8px;
+
+  color: #4b7cff;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 /* =====================================
@@ -132,38 +132,37 @@ body {
 ===================================== */
 
 .login-input {
-  width: 250px;
-  height: 50px;
+  width: 100%;
+  max-width: 320px;
+  height: 54px;
 
-  border: 2px solid #dbe4ff;
-  border-radius: 14px;
+  padding: 0 18px;
 
-  background: #ffffff;
+  border: 2px solid #dce7ff;
+  border-radius: 15px;
 
-  padding: 0 16px;
+  background: #fbfdff;
 
   font-size: 15px;
 
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   outline: none;
 
   transition: .25s;
 }
 
-.login-input.active {
-  border-color: #5b7cff;
-}
-
 .login-input:focus {
-  border-color: #5b7cff;
+  background: #fff;
+
+  border-color: #86a7ff;
 
   box-shadow:
-    0 0 0 4px rgba(91,124,255,.12);
+    0 0 0 5px rgba(134,167,255,.15);
 }
 
 .login-input::placeholder {
-  color: #b8bfcc;
+  color: #bcc5d8;
 }
 
 /* =====================================
@@ -171,78 +170,60 @@ body {
 ===================================== */
 
 .login-button {
-  position: relative;
+  width: 220px;
+  height: 56px;
 
-  width: 200px;
-  height: 54px;
-
-  margin-top: 15px;
+  margin-top: 10px;
 
   border: none;
-
-  border-radius: 50px;
-
-  color: #ffffff;
-
-  font-size: 18px;
-  font-weight: 700;
+  border-radius: 999px;
 
   cursor: pointer;
 
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+
   background: linear-gradient(
     180deg,
-    #7f9fff 0%,
-    #6d8eff 100%
+    #86a7ff,
+    #6f8dff
   );
 
   box-shadow:
-    0 10px 22px rgba(109,142,255,.25),
-    inset 0 1px 0 rgba(255,255,255,.35);
+    0 12px 26px rgba(111,141,255,.25);
 
+  position: relative;
   overflow: hidden;
 
   transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    background .25s ease;
+    transform .25s,
+    box-shadow .25s;
 }
 
 .login-button::before {
   content: "";
 
   position: absolute;
-
-  top: 0;
-  left: 0;
-  right: 0;
-
-  height: 50%;
+  inset: 0;
 
   background: linear-gradient(
     180deg,
-    rgba(255,255,255,.25),
+    rgba(255,255,255,.3),
     transparent
   );
-
-  pointer-events: none;
 }
 
 .login-button:hover {
   transform: translateY(-3px);
 
-  background: linear-gradient(
-    180deg,
-    #8aabff 0%,
-    #7898ff 100%
-  );
-
   box-shadow:
-    0 14px 28px rgba(109,142,255,.32);
+    0 16px 32px rgba(111,141,255,.32);
 }
 
 .login-button:active {
   transform: translateY(0);
 
   box-shadow:
-    0 6px 14px rgba(109,142,255,.18);
+    0 8px 18px rgba(111,141,255,.18);
 }

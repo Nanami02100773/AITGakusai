@@ -1,99 +1,174 @@
-/* 全体カード（外枠） */
-.Kenketsu-gauge-card {
-  background: #e0e0e0;;          /* ← グレーに変更 */
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 95%;
+/* =====================================
+   カード
+===================================== */
+
+.kenketsu-gauge-card {
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border-radius: 10px;
+  padding: 18px;
   width: 400px;
-  margin: 20px auto 80px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 95%;
+  margin: 10px auto 100px;
+  box-sizing: border-box;
+
+  box-shadow:
+    0 6px 18px rgba(134, 167, 255, .12);
 
   text-align: center;
 }
 
-/* タイトル下の中身（白に反転） */
-.Kenketsu-content-box {
-  background: #fff;             /* ← 白に変更 */
+.kenketsu-content-box {
+  background: #fff;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+
+  border: 1px solid rgba(134, 167, 255, .18);
 }
 
-/* ===== ゲージ ===== */
+/* =====================================
+   ゲージ
+===================================== */
 
-.Kenketsu-gauge-container {
+.kenketsu-gauge-container {
   position: relative;
+
   width: 200px;
   height: 120px;
-  margin: auto;
-}
 
-.Kenketsu-gauge-base {
-  stroke: #ddd;
-  stroke-width: 10;
-  fill: none;
-}
+  margin: 0 auto;
 
-.Kenketsu-gauge-progress {
-  stroke: #e74c3c;
-  stroke-width: 10;
-  fill: none;
-  transition: stroke-dashoffset 0.6s ease;
-}
-
-.Kenketsu-gauge-dot {
-  fill: #fff;
-  stroke: #e74c3c;
-  stroke-width: 3;
-  transition: cx 0.6s ease, cy 0.6s ease;
-}
-
-.Kenketsu-center-box {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 50px;
-  background: #eee;
-  border-radius: 8px;
-  font-size: 20px;
-  line-height: 50px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* ===== テキスト ===== */
-
-.Kenketsu-goal-text {
-  margin-top: 16px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.Kenketsu-gauge-text {
-  margin-top: 6px;
-  font-size: 14px;
-  color: #555;
-}
-
-.Kenketsu-update-time {
-  font-size: 12px;
-  color: #777;
-  margin-top: 4px;
-  text-align: right;
-}
-
-/* ===== 入力 ===== */
-
-.Kenketsu-input-section {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
 }
 
-.Kenketsu-input-section input[type="number"] {
-  width: 80px;
-  padding: 6px;
+.kenketsu-gauge-container svg {
+  display: block;
+}
+
+.kenketsu-gauge-base {
+  stroke: #d9e6ff;
+  stroke-width: 10;
+  fill: none;
+}
+
+.kenketsu-gauge-progress {
+  stroke: #ff9fb5;
+  stroke-width: 10;
+  stroke-linecap: round;
+  fill: none;
+
+  transition: stroke-dashoffset .6s ease;
+}
+
+.kenketsu-gauge-dot {
+  fill: #fff;
+  stroke: #ff9fb5;
+  stroke-width: 3;
+
+  transition:
+    cx .6s ease,
+    cy .6s ease;
+}
+
+/* =====================================
+   中央人数
+===================================== */
+
+.kenketsu-center-box {
+  position: absolute;
+
+  left: 50%;
+  top: 62%;
+
+  transform: translate(-50%, -50%);
+
+  width: 88px;
+  height: 52px;
+
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border: 2px solid #a2bbff;
+  border-radius: 10px;
+
+  color: #6f8dff;
+  font-size: 24px;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 4px 10px rgba(134, 167, 255, .12);
+}
+
+/* =====================================
+   テキスト
+===================================== */
+
+.kenketsu-goal-text {
+  margin-top: 18px;
+
+  color: #3f4d6d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.kenketsu-gauge-text {
+  margin-top: 8px;
+
+  color: #6b7692;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.kenketsu-update-time {
+  margin-top: 10px;
+
+  color: #8b97b3;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* =====================================
+   入力欄（使う場合）
+===================================== */
+
+.kenketsu-input-section {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.kenketsu-input-section input[type="number"] {
+  width: 90px;
+
+  padding: 8px;
+
+  border: 2px solid #86a7ff;
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.kenketsu-input-section input[type="number"]:focus {
+  border-color: #6f8dff;
+
+  box-shadow:
+    0 0 0 3px rgba(134, 167, 255, .2);
 }

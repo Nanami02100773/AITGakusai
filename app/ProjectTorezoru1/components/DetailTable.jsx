@@ -30,36 +30,36 @@ function DetailTable() {
 
   return (
     <section>
-      <div className="ruminosu-section-wrapper">
-        <div className="ruminosu-section-title">
+      <div className="kajino-section-wrapper">
+        <div className="kajino-section-title">
           詳細情報
         </div>
       </div>
 
-      <div className="ruminosu-detail-table">
+      <div className="kajino-detail-table">
         {details.map((item, index) => (
           <div
-            className="ruminosu-detail-row"
+            className="kajino-detail-row"
             key={index}
           >
-            <div className="ruminosu-detail-label">
-              <span className="ruminosu-detail-icon">
+            <div className="kajino-detail-label">
+              <span className="kajino-detail-icon">
                 <img
                   src={item.icon}
                   alt={item.label}
-                  className={`ruminosu-detail-icon-image ${item.iconClass}`}
+                  className={`kajino-detail-icon-image ${item.iconClass}`}
                 />
               </span>
 
-              <span className="ruminosu-detail-text">
+              <span className="kajino-detail-text">
                 {item.label}
               </span>
             </div>
 
-            <div className="ruminosu-detail-content">
-              <div className="ruminosu-detail-value">
+            <div className="kajino-detail-content">
+              <div className="kajino-detail-value">
                 {Array.isArray(item.value) ? (
-                  <ul className="ruminosu-note-list">
+                  <ul className="kajino-note-list">
                     {item.value.map((note, i) => (
                       <li key={i}>{note}</li>
                     ))}

@@ -2,7 +2,7 @@
    セクション
 ========================================== */
 
-.ruminosu-card-list {
+.kajino-card-list {
   width: 100%;
   padding: 10px 0 100px;
 }
@@ -11,7 +11,7 @@
    背景ボックス
 ========================================== */
 
-.ruminosu-card-wrapper {
+.kajino-card-wrapper {
   width: 95%;
   max-width: 780px;
 
@@ -37,7 +37,7 @@
    カード
 ========================================== */
 
-.ruminosu-card {
+.kajino-card {
   display: flex;
 
   width: 98%;
@@ -62,23 +62,23 @@
 /* ==========================================
    左側
 ========================================== */
-.ruminosu-card {
+.kajino-card {
   display: flex;
   align-items: flex-start;
 }
 
-.ruminosu-card-left {
+.kajino-card-left {
   width: 43%;
   flex-shrink: 0;
 }
 
-.ruminosu-thumb-wrapper {
+.kajino-thumb-wrapper {
   position: relative;
 }
 
 /* 団体名バー */
 
-.ruminosu-overlay-box {
+.kajino-overlay-box {
   width: 100%;
   height: 40px;
 
@@ -106,7 +106,7 @@
    画像エリア
 ========================================== */
 
-.ruminosu-thumb {
+.kajino-thumb {
   width: 100%;
   height: 150px;
 
@@ -125,7 +125,7 @@
    ラベル
 ========================================== */
 
-.ruminosu-label {
+.kajino-label {
   position: absolute;
 
   left: 10px;
@@ -149,7 +149,7 @@
 /* ==========================================
    区切り線
 ========================================== */
-.ruminosu-card-divider {
+.kajino-card-divider {
   width: 2px;
 
   background: #d9e7ff;
@@ -162,7 +162,7 @@
    右側
 ========================================== */
 
-.ruminosu-card-right {
+.kajino-card-right {
   flex: 1;
 
   display: flex;
@@ -175,7 +175,7 @@
    タイトル
 ========================================== */
 
-.ruminosu-sub1-title {
+.kajino-sub1-title {
   width: fit-content;
   margin-top: 5px;
 
@@ -197,8 +197,8 @@
    説明文
 ========================================== */
 
-.ruminosu-introduction1-subdesc,
-.ruminosu-introduction2-subdesc {
+.kajino-introduction1-subdesc,
+.kajino-introduction2-subdesc {
   margin-top: 8px;
 
   font-size: 13px;

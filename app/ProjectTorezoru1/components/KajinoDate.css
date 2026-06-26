@@ -2,7 +2,7 @@
    日付切替
 ========================= */
 
-.TorezoruDate-toggle {
+.kajinoDate-toggle {
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -14,7 +14,7 @@
    ボタン
 ========================= */
 
-.TorezoruDate-toggle button {
+.kajinoDate-toggle button {
   min-width: 140px;
 
   padding: 12px 22px;
@@ -43,7 +43,7 @@
    ホバー
 ========================= */
 
-.TorezoruDate-toggle button:hover {
+.kajinoDate-toggle button:hover {
 
   border-color: #aac0ff;
 
@@ -55,7 +55,7 @@
    選択中
 ========================= */
 
-.TorezoruDate-toggle button.active {
+.kajinoDate-toggle button.active {
   background: linear-gradient(
     135deg,
     #86a7ff 0%,
@@ -75,11 +75,11 @@
 
 @media (max-width: 768px) {
 
-  .TorezoruDate-toggle {
+  .kajinoDate-toggle {
     gap: 10px;
   }
 
-  .TorezoruDate-toggle button {
+  .kajinoDate-toggle button {
     min-width: 120px;
 
     padding: 10px 16px;

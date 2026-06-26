@@ -47,23 +47,11 @@ const KyouyasaiStageTT = () => {
                     </span>
 
                     <div className="kyoyasaiStageTT-event">
-
-                      <div className="kyoyasaiStageTT-event-left">
-
-                        {item.icon && (
-                          <div className="kyoyasaiStageTT-event-icon">
-                            <img
-                              src={item.icon}
-                              alt={item.title}
-                            />
-                          </div>
-                        )}
-
-                        <span className="kyoyasaiStageTT-event-title">
-                          {item.title}
-                        </span>
-
-                      </div>
+<div className="kyoyasaiStageTT-event-left">
+  <span className="kyoyasaiStageTT-event-title">
+    {item.title}
+  </span>
+</div>
 
                       <span
                         className={`kyoyasaiStageTT-toggle-icon ${

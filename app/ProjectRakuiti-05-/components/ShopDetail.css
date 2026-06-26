@@ -1,104 +1,323 @@
-.Rakuiti-05-shop-detail {
-  width: 100%;
-  max-width: 430px;
-  margin: 0 auto;
-  background: #fff;
-  font-family: sans-serif;
+
+body {
   padding-bottom: 100px;
+  background: #f5f7ff;
 }
 
+/* =================================
+   ヘッダー画像
+================================= */
 .Rakuiti-05-shop-icon-area {
-  background: #f0f0f0;
-  height: 250px;
-  margin: 60px 20px 0;
-  border-radius: 20px;
+  width: 380px;
+  height: 230px;
+
+  margin: 70px auto 0;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    135deg,
+    #eaf3ff,
+    #d7e8ff
+  );
+}
+
+/* =================================
+   店名
+================================= */
+.Rakuiti-05-shop-name {
   position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+  height: 44px;
+
+  margin: 20px auto 10px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+
+  /* ↓ 丸くする */
+  border-radius: 999px;
+
+  /* ↓ clip-path削除 */
+  clip-path: none;
+
+  border: 2px solid rgba(255,255,255,0.55);
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,0.14),
+    inset 0 2px 0 rgba(255,255,255,0.7),
+    inset 0 -2px 0 rgba(255,255,255,0.55);
+
   overflow: hidden;
 }
 
-.Rakuiti-05-shop-name {
-  margin: 20px auto 4px;
-  width: 250px;
-  text-align: center;
-  background: #bdbdbd;
-  border-radius: 20px;
-  padding: 8px;
-  font-weight: bold;
-}
-
+/* =================================
+   出展団体
+================================= */
 .Rakuiti-05-shop-org {
   text-align: center;
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #2d6df4;
+
+  margin-bottom: 20px;
 }
 
+.Rakuiti-05-shop-org::before {
+  content: "👥 ";
+}
+
+/* =================================
+   タブ全体
+================================= */
 .Rakuiti-05-shop-tabs {
+  width: 470px;
+
+  margin: 0 auto;
+
   display: flex;
-  justify-content: space-around;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+
+  background: white;
+
+  border-radius: 10px 10px 0 0;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 6px 20px rgba(100,150,255,.15);
 }
 
 .Rakuiti-05-tab {
-  padding: 10px 0;
-  font-size: 14px;
-  color: #777;
+  flex: 1;
+
+  text-align: center;
+
+  padding: 15px 0;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #4a5a82;
+
   cursor: pointer;
+
+  position: relative;
 }
 
 .Rakuiti-05-tab-active {
-  color: #000;
-  border-bottom: 2px solid #999;
+  color: #1456d8;
 }
 
+.Rakuiti-05-tab-active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100px;
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: #2c75ff;
+}
+
+/* =================================
+   紹介文カード
+================================= */
 .Rakuiti-05-shop-description {
-  padding: 16px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #444;
+  width: 470px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border-radius: 0 0 20px 20px;
+
+  box-shadow:
+    0 6px 20px rgba(100,150,255,.15);
+
+  padding: 20px;
 }
 
+.Rakuiti-05-shop-description p {
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #43506f;
+}
+
+/* =================================
+   お店紹介
+================================= */
 .Rakuiti-05-shop-focus {
-  margin-top: 32px;
+  margin-top: 15px;
 }
 
 .Rakuiti-05-shop-focus-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 12px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  color: #1253d4;
+
+  margin-bottom: 15px;
 }
 
+.Rakuiti-05-shop-focus-title::before {
+  content: "";
+
+  width: 8px;
+  height: 30px;
+
+  border-radius: 999px;
+
+  margin-right: 14px;
+
+  background: linear-gradient(
+    180deg,
+    #4d8fff,
+    #1456d8
+  );
+}
+
+/* =================================
+   画像一覧（横スクロール）
+================================= */
 .Rakuiti-05-shop-focus-images {
   display: flex;
-  gap: 12px;
+
+  gap: 10px;
+
   overflow-x: auto;
+  overflow-y: hidden;
+
+  padding-bottom: 20px;
+
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
 }
 
+/* スクロールバー */
+.Rakuiti-05-shop-focus-images::-webkit-scrollbar {
+  height: 5px;
+}
+
+.Rakuiti-05-shop-focus-images::-webkit-scrollbar-thumb {
+  background: #86a7ff;
+  border-radius: 999px;
+}
+
+.Rakuiti-05-shop-focus-images::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* =================================
+   画像
+================================= */
 .Rakuiti-05-image-box {
-  width: 200px;
-  height: 140px;
-  background: #d9d9d9;
-  border-radius: 8px;
   flex-shrink: 0;
-  margin-bottom: 16px;
+
+  width: 180px;
+  height: 150px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #edf5ff,
+    #d9e8ff
+  );
+  border: none;      /* ←追加 */
+
+  box-shadow: none;  /* ←追加 */
+
+  scroll-snap-align: start;
+
+  position: relative;
 }
 
+/* =================================
+   メニュー
+================================= */
 .Rakuiti-05-shop-menu {
-  padding: 32px 20px;
+  width: 470px;
+  margin: 0 auto;
 }
 
 .Rakuiti-05-menu-sheet {
+  background: #fff;
+
+  border-radius: 0 0 24px 24px;
+
+  padding: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(72, 118, 255, .12);
+
+  overflow: hidden;
+}
+
+/* 内側カード */
+/* =================================
+   メニュー
+================================= */
+.Rakuiti-05-shop-menu {
+  width: 470px;
+  margin: 0 auto;
+}
+
+.Rakuiti-05-menu-sheet {
+  background: white;
+
+  border-radius: 0 0 20px 20px;
+
+  padding: 24px;
+
   display: flex;
   align-items: stretch;
+
+  box-shadow:
+    0 6px 20px rgba(100,150,255,.15);
 }
 
 .Rakuiti-05-menu-col {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  font-size: 16px;
-  color: #444;
+
+  gap: 20px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #43506f;
 }
 
 .Rakuiti-05-menu-col-left {
@@ -111,14 +330,21 @@
 }
 
 .Rakuiti-05-menu-line {
-  width: 1px;
-  background: #bbb;
+  width: 2px;
+
   margin: 0 16px;
+
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #bfd4ff,
+    transparent
+  );
 }
 
 .Rakuiti-05-menu-row {
-  height: 20px;
+  min-height: 24px;
+
   display: flex;
   align-items: center;
 }
-

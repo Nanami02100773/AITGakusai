@@ -1,11 +1,11 @@
-import LoginPage from "./components/LoginPage";
+import Business from "./components/Business";
 import NavigationBar from "./components/NavigationBar";
 
 export default function Page() {
   return (
-    <div>
-      <LoginPage />
+    <>
       <NavigationBar />
-    </div>
+      <Business />
+    </>
   );
 }

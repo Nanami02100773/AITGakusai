@@ -8,12 +8,12 @@ function DescriptionBox() {
   return (
     <div>
       <div>
-        <div className="ruminosu-section-title">
+        <div className="kajino-section-title">
           企画説明
         </div>
       </div>
 
-      <div className="ruminosu-description-box">
+      <div className="kajino-description-box">
         {text}
       </div>
     </div>

@@ -1,11 +1,11 @@
-import LoginPage from "./components/LoginPage";
+import BloodDonation from "./components/BloodDonation";
 import NavigationBar from "./components/NavigationBar";
 
 export default function Page() {
-  return (
-    <div>
-      <LoginPage />
+    return (
+    <>
+    <BloodDonation />
       <NavigationBar />
-    </div>
+    </>
   );
 }

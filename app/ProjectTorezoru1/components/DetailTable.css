@@ -1,4 +1,4 @@
-.ruminosu-detail-table {
+.kajino-detail-table {
   width: 95%;
   max-width: 760px;
 
@@ -19,13 +19,13 @@
     0 6px 18px rgba(134,167,255,.12);
 }
 
-.ruminosu-note-list {
+.kajino-note-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.ruminosu-note-list li {
+.kajino-note-list li {
   position: relative;
 
   padding-left: 18px;
@@ -36,7 +36,7 @@
   font-weight: 500;
 }
 
-.ruminosu-note-list li::before {
+.kajino-note-list li::before {
   content: "";
 
   position: absolute;
@@ -55,7 +55,7 @@
 /* =====================================
    行
 ===================================== */
-.ruminosu-detail-row {
+.kajino-detail-row {
   display: flex;
 
   align-items: flex-start;
@@ -67,7 +67,7 @@
 /* =====================================
    左ラベル
 ===================================== */
-.ruminosu-detail-label {
+.kajino-detail-label {
   width: 90px;
   height: 30px;
 
@@ -93,7 +93,7 @@
   );
 }
 
-.ruminosu-detail-text {
+.kajino-detail-text {
   position: relative;
 
   left: 10px;
@@ -103,7 +103,7 @@
 /* =====================================
    アイコン
 ===================================== */
-.ruminosu-detail-icon {
+.kajino-detail-icon {
   position: absolute;
 
   left: 0px;
@@ -123,7 +123,7 @@
   flex-shrink: 0;
 }
 
-.ruminosu-detail-icon-image {
+.kajino-detail-icon-image {
   object-fit: contain;
   display: block;
 
@@ -175,7 +175,7 @@
 /* =====================================
    右側
 ===================================== */
-.ruminosu-detail-content {
+.kajino-detail-content {
   flex: 1;
 
   display: flex;
@@ -184,7 +184,7 @@
   align-items: flex-start;
 }
 
-.ruminosu-detail-value {
+.kajino-detail-value {
   width: 95%;
   max-width: 500px;
 
@@ -200,7 +200,7 @@
   line-height: 1.8;
 }
 
-.ruminosu-detail-value::before {
+.kajino-detail-value::before {
   content: "";
 
   position: absolute;
@@ -214,7 +214,7 @@
   background: rgba(134,167,255,.35);
 }
 
-.ruminosu-detail-value::after {
+.kajino-detail-value::after {
   content: "//";
 
   position: absolute;
@@ -231,11 +231,11 @@
 /* =====================================
    セクションタイトル
 ===================================== */
-.ruminosu-section-wrapper {
+.kajino-section-wrapper {
   width: 100%;
 }
 
-.ruminosu-section-title {
+.kajino-section-title {
   position: relative;
   z-index: 2;
 

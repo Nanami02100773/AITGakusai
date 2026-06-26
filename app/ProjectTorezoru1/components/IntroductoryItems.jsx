@@ -40,39 +40,39 @@ subdesc1: "これは紹介6の補足説明です。",
 },
 ];
 
-const Ruminosu = () => {
-return ( <section className="ruminosu-section">
+const Kajino = () => {
+return ( <section className="kajino-section">
 
   {/* タイトル */}
-  <div className="ruminosu-section-wrapper">
-    <div className="ruminosu-section-title">
-      ルミノス
+  <div className="kajino-section-wrapper">
+    <div className="kajino-section-title">
+      ゲーム一覧
     </div>
   </div>
 
   {/* カード一覧 */}
-  <main className="ruminosu-card-list">
-    <div className="ruminosu-card-wrapper">
+  <main className="kajino-card-list">
+    <div className="kajino-card-wrapper">
 
       {cardData.map((item, index) => (
         <div
-          className="ruminosu-card"
+          className="kajino-card"
           key={index}
         >
           {/* 左側 */}
-          <div className="ruminosu-card-left">
-            <div className="ruminosu-thumb-wrapper">
+          <div className="kajino-card-left">
+            <div className="kajino-thumb-wrapper">
 
               {/* ゲーム名バー */}
-              <div className="ruminosu-overlay-box">
+              <div className="kajino-overlay-box">
                 {item.group}
               </div>
 
               {/* 画像 */}
-              <div className="ruminosu-thumb"></div>
+              <div className="kajino-thumb"></div>
 
               {/* ラベル */}
-              <div className="ruminosu-label">
+              <div className="kajino-label">
                 {item.label}
               </div>
 
@@ -80,16 +80,16 @@ return ( <section className="ruminosu-section">
           </div>
 
           {/* 区切り線 */}
-          <div className="ruminosu-card-divider"></div>
+          <div className="kajino-card-divider"></div>
 
           {/* 右側 */}
-          <div className="ruminosu-card-right">
+          <div className="kajino-card-right">
 
-            <div className="ruminosu-sub1-title">
+            <div className="kajino-sub1-title">
               📄 {item.title}
             </div>
 
-            <div className="ruminosu-introduction1-subdesc">
+            <div className="kajino-introduction1-subdesc">
               {item.subdesc1}
             </div>
 
@@ -105,4 +105,4 @@ return ( <section className="ruminosu-section">
 );
 };
 
-export default Ruminosu;
+export default Kajino;

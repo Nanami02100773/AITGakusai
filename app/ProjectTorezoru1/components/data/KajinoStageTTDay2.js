@@ -1,4 +1,4 @@
-const TorezoruStageTTDay2 = [
+const KajinoStageTTDay2 = [
   {
     time: "10:00",
     title: "デイ2 オープニング",
@@ -19,4 +19,4 @@ const TorezoruStageTTDay2 = [
   },
 ];
 
-export default TorezoruStageTTDay2;
+export default KajinoStageTTDay2;

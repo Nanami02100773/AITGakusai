@@ -7,7 +7,7 @@ import ImageCarousel from "./components/ImageCarousel";
 import DescriptionBox from "./components/DescriptionBox";
 import NavigationBar from "./components/NavigationBar";
 import DetailTable from "./components/DetailTable";
-import TorezoruStageTTWrapper from "./components/TorezoruStageTTWrapper";
+import KajinoStageTTWrapper from "./components/KajinoStageTTWrapper";
 import IntroductoryItems from "./components/IntroductoryItems";
 
 import img1 from "./components/images/スクリーンショット (1).png";
@@ -16,7 +16,7 @@ import img3 from "./components/images/スクリーンショット 2024-07-03 114
 
 export default function Page() {
   return (
-    <main className="Torezoru-page">
+    <main className="kajino-page">
       <Title />
 
       <ImageCarousel images={[img1, img2, img3]} />
@@ -28,7 +28,7 @@ export default function Page() {
       <DetailTable />
 
       {/* ▼ Day切り替え＋ステージTT */}
-      <TorezoruStageTTWrapper />
+      <KajinoStageTTWrapper />
 
       <IntroductoryItems />
     </main>

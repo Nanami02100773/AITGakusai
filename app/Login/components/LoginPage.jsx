@@ -10,25 +10,17 @@ export default function LoginPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    router.push("/Notice");
+    router.push("/Business");
   };
 
   return (
     <div className="login-page">
-
       <div className="login-card">
-
-        <div className="login-icon">
-          🎓
-        </div>
-
         <h1 className="login-title">
           学祭用ログイン
         </h1>
 
-        <div className="login-divider">
-          <span />
-        </div>
+        <div className="login-divider" />
 
         <form
           onSubmit={handleLogin}
@@ -40,9 +32,7 @@ export default function LoginPage() {
             type="text"
             placeholder="IDを入力してください"
             value={id}
-            onChange={(e) =>
-              setId(e.target.value)
-            }
+            onChange={(e) => setId(e.target.value)}
             className="login-input active"
           />
 
@@ -52,9 +42,7 @@ export default function LoginPage() {
             type="password"
             placeholder="パスワードを入力してください"
             value={password}
-            onChange={(e) =>
-              setPassword(e.target.value)
-            }
+            onChange={(e) => setPassword(e.target.value)}
             className="login-input"
           />
 
@@ -64,11 +52,8 @@ export default function LoginPage() {
           >
             ログイン
           </button>
-
         </form>
-
       </div>
-
     </div>
   );
 }

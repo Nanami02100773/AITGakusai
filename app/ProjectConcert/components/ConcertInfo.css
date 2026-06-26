@@ -80,38 +80,30 @@
 ========================================== */
 
 .Concert-name {
-  position: relative;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   min-width: 150px;
 
-  padding: 5px 10px;
+  padding: 5px 12px;
 
   margin-bottom: 15px;
 
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
 
-  color: #ffffff;
+  color: #5f6dbe;
 
-  background: linear-gradient(
-    90deg,
-    #86a7ff,
-    #6f8dff
-  );
+  background: #ffffff;
 
-  border: 2px solid rgba(255,255,255,.45);
+  border: 1px solid #cfdcff;
 
   border-radius: 5px;
 
   box-shadow:
-    0 6px 16px rgba(111,141,255,.25),
-    inset 0 1px 0 rgba(255,255,255,.45);
+    0 2px 8px rgba(111,141,255,.08);
 }
-
 /* ==========================================
    カード
 ========================================== */
@@ -240,32 +232,30 @@
 /* ==========================================
    SNSボックス
 ========================================== */
-.Concert-sns-wrapper {
-  width: 400px;
 
-  margin-top: 20px;
+.Concert-sns-wrapper{
+  width: 100%;
+  max-width: 400px;
+
+  margin: 20px auto 0;
 
   padding: 15px;
 
   border-radius: 10px;
 
-  background:  #f1f6ff;
+  background: #f1f6ff;
 
   border: 1px solid rgba(134,167,255,.25);
 
   box-shadow:
     0 10px 25px rgba(134,167,255,.12);
-
-  position: relative;
-
-  overflow: hidden;
 }
 
 /* ==========================================
    SNSタイトル
 ========================================== */
 
-.Concert-sns-title {
+.Concert-sns-title{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,13 +275,11 @@
   z-index: 2;
 }
 
-/* 左右の線 */
-
 .Concert-sns-title::before,
-.Concert-sns-title::after {
+.Concert-sns-title::after{
   content: "";
 
-  width: 60px;      /* 線の長さ調整 */
+  width: 60px;
   height: 2px;
 
   border-radius: 999px;
@@ -304,7 +292,7 @@
   );
 }
 
-.Concert-sns-title::after {
+.Concert-sns-title::after{
   background: linear-gradient(
     90deg,
     rgba(111,141,255,1),
@@ -317,7 +305,7 @@
    SNS並び
 ========================================== */
 
-.Concert-sns {
+.Concert-sns{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,7 +319,8 @@
 /* ==========================================
    SNSアイコン
 ========================================== */
-.Concert-sns a {
+
+.Concert-sns a{
   position: relative;
 
   width: 50px;
@@ -339,7 +328,7 @@
 
   border-radius: 50%;
 
-  background:  #ffffff;
+  background: #ffffff;
 
   display: flex;
   align-items: center;
@@ -353,7 +342,7 @@
     box-shadow .3s ease;
 }
 
-.Concert-sns a::before {
+.Concert-sns a::before{
   content: "";
 
   position: absolute;
@@ -377,11 +366,11 @@
   mask-composite: exclude;
 }
 
-.Concert-sns a:hover {
+.Concert-sns a:hover{
   transform: translateY(-4px) scale(1.06);
 }
 
-.Concert-sns img {
+.Concert-sns img{
   width: 28px;
   height: 28px;
 

@@ -28,27 +28,27 @@ function ImageCarousel({ images = [] }) {
   }
 
   return (
-    <div className="ruminosu-image-carousel">
+    <div className="kajino-image-carousel">
 
       {/* 中央フレーム */}
-      <div className="ruminosu-frame-top-center" />
-      <div className="ruminosu-frame-bottom-center" />
+      <div className="kajino-frame-top-center" />
+      <div className="kajino-frame-bottom-center" />
 
       {/* 上下装飾 */}
-      <div className="ruminosu-frame-top">
+      <div className="kajino-frame-top">
         開催風景
       </div>
 
       {/* 四隅 */}
-      <div className="ruminosu-frame-corner-tl" />
-      <div className="ruminosu-frame-corner-tr" />
-      <div className="ruminosu-frame-corner-bl" />
-      <div className="ruminosu-frame-corner-br" />
+      <div className="kajino-frame-corner-tl" />
+      <div className="kajino-frame-corner-tr" />
+      <div className="kajino-frame-corner-bl" />
+      <div className="kajino-frame-corner-br" />
 
       {images.map((src, idx) => {
 
         let className =
-          "ruminosu-carousel-image";
+          "kajino-carousel-image";
 
         if (idx === current) {
           className += " center";
