@@ -3,7 +3,7 @@ import Faq from "./components/Faq";
 import FaqSection from "./components/FaqSection";
 import NavigationBar from "./components/NavigationBar";
 import MascotDetail from "./components/MascotDetail";
-// import MascotCard from "./components/MascotCard";
+import MascotCard from "./components/MascotCard";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Faq />
       <NavigationBar/>
       <MascotDetail/>
-      {/* <MascotCard/> */}
+      <MascotCard/>
     </div>
   );
 }

@@ -20,7 +20,7 @@ const FaqSection = ({
       >
         <div className="faq-left">
           <div className="faq-icon">
-            <div className="icon-line"></div>
+            Q
           </div>
 
           <span className="faq-title">

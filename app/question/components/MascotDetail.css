@@ -70,10 +70,10 @@ body::before {
   position: absolute;
 
   top: -155px;
-  right: 42px;
+  right: 38px;
 
-  width: 220px;
-  height: 21px;
+  width: 230px;
+  height: 23px;
 
   background: #1f73d8;
 
@@ -90,9 +90,9 @@ body::before {
   position: absolute;
 
   top: -155px;
-  right: 175px;
+  right: 160px;
 
-  width: 65px;
+  width: 90px;
   height: 25px;
 
   background:
@@ -109,25 +109,6 @@ body::before {
   z-index: -1;
 }
 
-/* =========================
-   斜めライン
-========================= */
-
-.question-top-line {
-  position: absolute;
-
-  top: -270px;
-  right: 18px;
-
-  width: 30px;
-  height: 140px;
-
-  background: #1f73d8;
-
-  transform: rotate(35deg);
-
-  z-index: -10;
-}
 
 /* =========================
    左側の白い装飾
@@ -137,9 +118,9 @@ body::before {
   position: absolute;
 
   top: -250px;
-  right: 52px;
+  right: 100px;
 
-  width: 225px;
+  width: 220px;
   height: 95px;
 
   background: #ffffff;
@@ -179,4 +160,29 @@ body::before {
     0 10px 20px rgba(0, 0, 0, 0.06);
 
   z-index: 2;
+}
+
+/* =========================
+   青い斜めパーツ
+========================= */
+
+.question-card-blue-center {
+  position: absolute;
+
+  top: -248px;
+  right: -50px;
+
+  width: 125px;
+  height: 116px;
+
+  background: #1f73d8;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    55% 100%,
+    0% 100%
+  );
+
+  z-index: 1;
 }

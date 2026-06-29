@@ -34,13 +34,11 @@
 /* ========================================
    FAQコンテナ
 ======================================== */
-
 .faq-container {
   position: relative;
   z-index: 1;
 
   width: 400px;
- 
 
   display: flex;
   flex-direction: column;
@@ -52,14 +50,15 @@
 
   padding: 14px;
 
-  border-radius: 20px;
+  border-radius: 10px;
+
+  border: 3px solid #cad8ff; /* ← 枠線追加 */
 
   box-shadow:
     0 8px 20px rgba(120,140,255,.12);
 
-  isolation: isolate; /* ←追加 */
+  isolation: isolate;
 }
-
 /* ========================================
    セクションカード
 ======================================== */
@@ -115,20 +114,20 @@
 ======================================== */
 
 .faq-icon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 
   border-radius: 50%;
 
-  background: linear-gradient(
-    135deg,
-    #a8bcff,
-    #86a7ff
-  );
+  background: #86a7ff;
+  color: #fff;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-weight: 700;
+  font-size: 18px;
 
   flex-shrink: 0;
 }
@@ -158,18 +157,21 @@
   content: "";
 
   position: absolute;
-
   left: 0;
-  bottom: -10px;
+  bottom: -4px;
 
-  width: 70px;
-  height: 4px;
+  width: 170px;
+  height: 3px;
+
+  background: linear-gradient(
+    to right,
+    #ff9fb5 0%,
+    #ff9fb5 60%,
+    rgba(255, 159, 181, 0) 100%
+  );
 
   border-radius: 999px;
-
-  background: #86a7ff;
 }
-
 /* ========================================
    開閉ボタン
 ======================================== */
