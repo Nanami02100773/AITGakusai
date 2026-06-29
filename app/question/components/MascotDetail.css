@@ -45,7 +45,7 @@ body::before {
 .question-card-wrapper {
   position: relative;
 
-  width: 390px;      /* 450px → 390px */
+  width: 320px;
 
   margin: 0 auto;
 
@@ -58,9 +58,7 @@ body::before {
 
 .question-decoration {
   position: absolute;
-
   inset: 0;
-
   pointer-events: none;
 }
 
@@ -71,10 +69,10 @@ body::before {
 .question-top-base {
   position: absolute;
 
-  right: 58px;
   top: -155px;
+  right: 42px;
 
-  width: 285px;      /* 330px → 285px */
+  width: 220px;
   height: 21px;
 
   background: #1f73d8;
@@ -92,9 +90,9 @@ body::before {
   position: absolute;
 
   top: -155px;
-  right: 240px;
+  right: 175px;
 
-  width: 90px;       /* 110px → 90px */
+  width: 65px;
   height: 25px;
 
   background:
@@ -119,7 +117,7 @@ body::before {
   position: absolute;
 
   top: -270px;
-  right: 25px;
+  right: 18px;
 
   width: 30px;
   height: 140px;
@@ -139,9 +137,9 @@ body::before {
   position: absolute;
 
   top: -250px;
-  right: 70px;
+  right: 52px;
 
-  width: 295px;      /* 345px → 295px */
+  width: 225px;
   height: 95px;
 
   background: #ffffff;
@@ -160,9 +158,9 @@ body::before {
   position: absolute;
 
   top: -250px;
-  right: 8px;
+  right: 0;
 
-  width: 170px;      /* 200px → 170px */
+  width: 125px;
   height: 95px;
 
   background: #ffffff;
