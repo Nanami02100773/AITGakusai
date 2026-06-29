@@ -4,6 +4,10 @@ body {
   background: #ffffff;
 }
 
+/* =========================
+   背景グラデーション
+========================= */
+
 body::before {
   content: "";
 
@@ -12,7 +16,7 @@ body::before {
   left: 0;
 
   width: 100%;
-  height: 2000px;
+  height: 1900px;
 
   background: linear-gradient(
     180deg,
@@ -25,9 +29,12 @@ body::before {
   z-index: -10;
 }
 
-.question-page {
+/* =========================
+   ページ全体
+========================= */
 
-  margin: -53px auto 0px;
+.question-page {
+  margin: -23px auto 0;
   padding: 20px;
 }
 
@@ -42,7 +49,7 @@ body::before {
 
   margin: 0 auto;
 
-  top: 150px;   /* 全体を動かす */
+  top: 200px;
 }
 
 /* =========================
@@ -64,11 +71,11 @@ body::before {
 .question-top-base {
   position: absolute;
 
-  right: 35px;
-  top: -78px;
+  right: 69px;
+  top: -155px;
 
-  width: 380px;
-  height: 25px;
+  width: 330px;
+  height: 21px;
 
   background: #1f73d8;
 
@@ -84,17 +91,17 @@ body::before {
 .question-top-dots {
   position: absolute;
 
-  top: -75px;
-  right: 280px;
+  top: -155px;
+  right: 275px;
 
   width: 110px;
-  height: 22px;
+  height: 25px;
 
   background:
     repeating-linear-gradient(
       90deg,
       #6cb8ff 0px,
-      #6cb8ff 12px,
+      #42a4ff 12px,
       transparent 12px,
       transparent 24px
     );
@@ -111,614 +118,68 @@ body::before {
 .question-top-line {
   position: absolute;
 
-  top: -200px;
-  right: -10px;
+  top: -270px;
+  right: 30px;
 
-  width: 100px;
-  height: 147.5px;
+  width: 30px;
+  height: 140px;
 
   background: #1f73d8;
 
-
+  transform: rotate(35deg);
 
   z-index: -10;
 }
 
-/* ========================================
-   左白パーツ
-======================================== */
+/* =========================
+   左側の白い装飾
+========================= */
 
 .question-card-white-left {
   position: absolute;
 
-  top: -170px;
-  right: 35px;
+  top: -250px;
+  right: 85px;
 
-  width: 400px;
+  width: 345px;
   height: 95px;
 
   background: #ffffff;
 
   border-bottom: 2px solid #bac4ff;
   border-left: 2px solid #bac4ff;
-  border-right: 2px solid #bac4ff;
 
   z-index: 3;
 }
 
- .question-mascot-section-title{
-  position: relative;
-  z-index: 2;
+/* =========================
+   中央の斜め白パーツ
+========================= */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.question-card-white-center {
+  position: absolute;
 
-  width: 240px;
-  height: 44px;
+  top: -250px;
+  right: 10px;
 
-  margin: 0px auto 30px;
+  width: 200px;
+  height: 95px;
 
-  background: linear-gradient(
-    90deg,
-    #86a7ff,
-    #6f8dff
-  );
-
-  color: #fff;
-  font-size: 17px;
-  font-weight: bold;
-
-  /* ↓ 丸くする */
-  border-radius: 999px;
-
-  /* ↓ clip-path削除 */
-  clip-path: none;
-
-  border: 2px solid rgba(255,255,255,0.55);
-
-  box-shadow:
-    0 8px 20px rgba(160,170,255,0.14),
-    inset 0 2px 0 rgba(255,255,255,0.7),
-    inset 0 -2px 0 rgba(255,255,255,0.55);
-
-  overflow: hidden;
-}
-
-/* ========================================
-   メインカード
-======================================== */
-
-.question-card {
   background: #ffffff;
 
-  border-radius: 10px;
-  padding: 10px;
+  border-bottom: 2px solid #bac4ff;
 
-  width: 450px;
-
-  position: relative;
-  overflow: visible;
-
-  top: 0px;
-}
-
-
-/* ========================================
-   キャラクター
-======================================== */
-
-.question-mascot-area {
-  width: 45%;
-
-  position: relative;
-}
-
-.question-image {
-  width: 190px;
-  height: 240px;
-
-  border-radius: 28px;
-
-  border: 2px solid #dce6ff;
-
-  background: linear-gradient(
-    180deg,
-    #fafdff,
-    #eef7ff
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    65% 100%,
+    0% 100%
   );
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  overflow: hidden;
-
   box-shadow:
-    0 4px 12px rgba(100,140,255,0.08);
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 10px 20px rgba(0, 0, 0, 0.06);
+
+  z-index: 2;
 }
 
-.question-image img {
-  width: 95%;
-  height: 95%;
-  object-fit: contain;
-}
-
-/* ========================================
-   テキスト
-======================================== */
-
-.question-hero {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  gap: 15px;
-}
-
-.question-text {
-  flex: 1;
-  min-width: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* 名前ロゴ */
-.question-name-logo {
-  width: 330px;
-  max-width: none;
-
-  margin-top: -60px;
-  margin-left: -40px;
-  margin-bottom: -50px;
-
-  display: block;
-
-  object-fit: contain;
-}
-
-/* ロゴ下のドットライン */
-.question-name-dots {
-  width: 190px;
-  height: 8px;
-
-  margin-left: 10px;
-  margin-bottom: 15px;
-
-  background:
-    radial-gradient(
-      circle,
-      #67a4ff 2px,
-      transparent 3px
-    );
-
-  background-size: 16px 8px;
-}
-
-/* 説明文 */
-.question-text p {
-  margin-top: 0px;
-
-  color: #20386f;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  line-height: 1.8;
-
-  letter-spacing: .03em;
-}
-
-/* ========================================
-   特徴タイトル
-======================================== */
-
-.question-feature-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 18px;
-
-  margin: 15px 0;
-}
-
-.question-line {
-  flex: 1;
-
-  height: 2px;
-
-  background: #c7dbff;
-
-  position: relative;
-}
-
-.question-line::before {
-  content: "";
-
-  position: absolute;
-
-  left: -4px;
-  top: 50%;
-
-  width: 8px;
-  height: 8px;
-
-  background: #c7dbff;
-
-  border-radius: 50%;
-
-  transform: translateY(-50%);
-}
-
-.question-line::after {
-  content: "";
-
-  position: absolute;
-
-  right: -4px;
-  top: 50%;
-
-  width: 8px;
-  height: 8px;
-
-  background: #c7dbff;
-
-  border-radius: 50%;
-
-  transform: translateY(-50%);
-}
-
-.question-feature-label {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-width: 90px;
-  height: 30px;
-
-  padding: 0 28px;
-
-  background: linear-gradient(
-    180deg,
-    #5ea3ff 0%,
-    #4e8cff 100%
-  );
-
-  border: 2px solid #7fb4ff;
-
-  border-radius: 10px;
-
-  color: #fff;
-
-  font-size: 15px;
-  font-weight: 900;
-
-  box-shadow:
-    0 4px 12px rgba(100,140,255,.18),
-    inset 0 2px 0 rgba(255,255,255,.25);
-}
-
-/* ========================================
-   グリッド
-======================================== */
-
-.question-grid {
-  display: flex;
-  flex-direction: row;
-
-  gap: 10px;
-
-  align-items: stretch;
-}
-
-.question-left {
-  flex: .95;
-}
-
-.question-right {
-  flex: 1.05;
-
-  height: 240px;
-
-  background: #faf7ff;
-
-  border: 2px solid #e6d9ff;
-
-  border-radius: 10px;
-
-  padding: 10px;
-}
-
-.question-right ul {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-/* ========================================
-   左カード
-======================================== */
-
-.question-item {
-  padding: 10px;
-
-  border-radius: 15px;
-
-  border: 2px solid #eef3ff;
-
-  margin-bottom: 5px;
-
-  height: 77px;
-}
-
-.question-item span {
-  display: block;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  position: relative;
-
-  left: 5px;
-  top: -10px;
-}
-
-.question-item b {
-  font-size: 12px;
-
-  color: #24346e;
-
-  margin-left: 65px;
-  margin-top: -30px;
-
-  display: block;
-}
-
-.question-blue {
-  background: #eef5ff;
-}
-
-.question-blue span {
-  color: #4f84ff;
-}
-
-.question-green {
-  background: #edf9f1;
-}
-
-.question-green span {
-  color: #49c06f;
-}
-
-.question-orange {
-  background: #fff3e9;
-}
-
-.question-orange span {
-  color: #ff9449;
-}
-
-/* ========================================
-   その他
-======================================== */
-
-.question-right ul {
-  margin: 0;
-
-  padding-left: 0;
-
-  line-height: 1.9;
-
-  font-size: 0px;
-  font-weight: 700;
-
-  letter-spacing: .03em;
-
-  color: #24346e;
-}
-
-.question-right li {
-  position: relative;
-
-  top: 7px;
-
-  padding-left: 25px;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  color: #24346e;
-
-  line-height: 1.9;
-}
-
-.question-right li::before {
-  content: "";
-
-  position: absolute;
-
-  left: 5px;
-  top: 10px;
-
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #a27cff;
-}
-
-/* ========================================
-   投票
-======================================== */
-
-.question-vote {
-  margin-top: 10px;
-
-  background: linear-gradient(
-    180deg,
-    #f8f9ff,
-    #eef3ff
-  );
-
-  border: 2px solid #dde6ff;
-
-  border-radius: 10px;
-
-  padding: 10px;
-
-  text-align: center;
-}
-
-.question-vote p {
-  color: #4d86ff;
-
-  font-size: 18px;
-
-  font-weight: 800;
-
-  margin: 0 0 10px;
-}
-
-.question-vote button {
-  width: 250px;
-  height: 50px;
-
-  border: none;
-  border-radius: 999px;
-
-  background: linear-gradient(
-    90deg,
-    #4a83ff,
-    #2d6eff
-  );
-
-  color: #fff;
-
-  font-size: 25px;
-  font-weight: 900;
-
-  cursor: pointer;
-
-  box-shadow:
-    inset 0 2px 0 rgba(255,255,255,.4),
-    0 10px 20px rgba(70,120,255,.25);
-
-  animation: voteGlow 3s ease-in-out infinite;
-}
-
-@keyframes voteGlow {
-  0% {
-    filter: brightness(1);
-    transform: scale(1);
-  }
-
-  50% {
-    filter: brightness(1.3);
-    transform: scale(1.04);
-  }
-
-  100% {
-    filter: brightness(1);
-    transform: scale(1);
-  }
-}
-
-.question-vote small {
-  display: block;
-
-  margin-top: 10px;
-
-  color: #4d86ff;
-}
-
-/* =========================
-   項目タイトル
-========================= */
-
-.question-item-title {
-  display: flex;
-  align-items: center;
-
-  gap: 10px;
-
-  margin-bottom: 8px;
-}
-
-.question-item-title img {
-  width: 50px;
-  height: 50px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  background: #fff;
-
-  border: 2px solid #dce6ff;
-
-  padding: 4px;
-}
-
-.question-blue .question-item-title img {
-  border: 2px solid #8cb7ff;
-
-  box-shadow:
-    0 0 8px rgba(79,132,255,.15);
-}
-
-.question-green .question-item-title img {
-  border: 2px solid #7fda9a;
-
-  box-shadow:
-    0 0 8px rgba(73,192,111,.15);
-}
-
-.question-orange .question-item-title img {
-  border: 2px solid #ffbf8b;
-
-  box-shadow:
-    0 0 8px rgba(255,148,73,.15);
-}
-
-.question-item-title span {
-  margin: 0;
-}
-
-/* =========================
-   その他タイトル
-========================= */
-
-.question-other-title {
-  display: flex;
-  align-items: center;
-
-  gap: 10px;
-
-  margin-top: 0;
-
-  color: #a27cff;
-
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.question-other-title-icon {
-  width: 50px;
-  height: 50px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  background: #fff;
-
-  border: 2px solid #c9a7ff;
-
-  padding: 4px;
-}
