@@ -7,11 +7,6 @@ const MascotDetail = () => {
   return (
     <div className="question-page">
 
-      {/* タイトル */}
-      <div className="question-mascot-section-title">
-        マスコット紹介
-      </div>
-
       <div className="question-card-wrapper">
 
         {/* =========================
@@ -30,6 +25,12 @@ const MascotDetail = () => {
           <div className="question-top-dots"></div>
 
         </div>
+
+            {/* タイトル */}
+      <div className="question-mascot-section-title">
+        マスコット紹介
+      </div>
+
 
         {/* =========================
             メインカード
