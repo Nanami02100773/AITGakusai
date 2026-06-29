@@ -16,10 +16,10 @@ body {
 ===================================== */
 
 .login-card {
-  width: 90%;
-  max-width: 480px;
+  width: 400px;
+  height: 460px;
 
-  padding: 42px 34px 36px;
+  padding: 30px 34px 40px;
 
   position: relative;
 
@@ -47,13 +47,12 @@ body {
   top: 0;
 
   width: 100%;
-  height: 6px;
+  height: 20px;
 
   background: linear-gradient(
     90deg,
     #86a7ff,
-    #6f8dff,
-    #ff9fb5
+    #6f8dff
   );
 }
 
@@ -62,7 +61,7 @@ body {
 ===================================== */
 
 .login-title {
-  margin: 0;
+  margin-top: 20px;
 
   text-align: center;
 
@@ -84,7 +83,7 @@ body {
   width: 100%;
   height: 30px;
 
-  margin: 14px 0 26px;
+  margin: -5px 0 26px;
 }
 
 .login-divider::before {
@@ -120,7 +119,7 @@ body {
   width: 100%;
   max-width: 320px;
 
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 
   color: #4b7cff;
   font-size: 15px;
@@ -136,7 +135,7 @@ body {
   max-width: 320px;
   height: 54px;
 
-  padding: 0 18px;
+  padding: 0 20px;
 
   border: 2px solid #dce7ff;
   border-radius: 15px;
@@ -189,10 +188,6 @@ body {
     #86a7ff,
     #6f8dff
   );
-
-  box-shadow:
-    0 12px 26px rgba(111,141,255,.25);
-
   position: relative;
   overflow: hidden;
 
