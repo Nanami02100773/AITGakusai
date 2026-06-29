@@ -10,7 +10,7 @@ export default function Project2() {
       <div className="Project2-hero">
 
         <Image
-          src="/images/kikaku.jpg"
+          src="/img/3.jpg"
           alt="企画"
           fill
           className="Project2-image"
