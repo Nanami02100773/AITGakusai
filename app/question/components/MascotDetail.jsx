@@ -12,129 +12,163 @@ const MascotDetail = () => {
         マスコット紹介
       </div>
 
-      {/* 紹介カード */}
-      <div className="question-card">
-
-        {/* 上部装飾 */}
-        <div className="question-card-white-left"></div>
-        <div className="question-card-white-center"></div>
-        <div className="question-top-line"></div>
+      <div className="question-card-wrapper">
 
         {/* =========================
-            上部プロフィール
+            上部装飾
         ========================= */}
-        <div className="question-hero">
+        <div className="question-decoration">
 
-          <div className="question-mascot-area">
+          <div className="question-card-white-left"></div>
 
-            <div className="question-image">
+          <div className="question-card-white-center"></div>
+
+          <div className="question-top-line"></div>
+
+          <div className="question-top-base"></div>
+
+          <div className="question-top-dots"></div>
+
+        </div>
+
+        {/* =========================
+            メインカード
+        ========================= */}
+        <div className="question-card">
+
+          {/* =========================
+              上部プロフィール
+          ========================= */}
+          <div className="question-hero">
+
+            <div className="question-mascot-area">
+
+              <div className="question-image">
+                <img
+                  src="/mascot/mascot.jpg"
+                  alt="リード君"
+                />
+              </div>
+
+              <div className="question-dot-line"></div>
+
+            </div>
+
+            <div className="question-text">
+
               <img
-                src="/mascot/mascot.jpg"
+                src="/mascot/name.png"
                 alt="リード君"
+                className="question-name-logo"
               />
+
+              <div className="question-name-dots"></div>
+
+              <p>
+                みんなをリードしてくれる元気いっぱいのペンギン！
+                好奇心旺盛でいつも新しいことにチャレンジしているよ！
+              </p>
+
             </div>
 
-            <div className="question-dot-line"></div>
-
           </div>
 
-          <div className="question-text">
+          {/* =========================
+              特徴
+          ========================= */}
+          <h2 className="question-feature-title">
 
-            <img
-              src="/mascot/name.png"
-              alt="リード君"
-              className="question-name-logo"
-            />
+            <span className="question-line"></span>
 
-            <div className="question-name-dots"></div>
+            <span className="question-feature-label">
+              特徴
+            </span>
 
-            <p>
-              みんなをリードしてくれる元気いっぱいのペンギン！
-              好奇心旺盛でいつも新しいことにチャレンジしているよ！
-            </p>
+            <span className="question-line"></span>
 
-          </div>
+          </h2>
 
-        </div>
+          <div className="question-grid">
 
-        {/* =========================
-            特徴
-        ========================= */}
-        <h2 className="question-feature-title">
-          <span className="question-line"></span>
+            <div className="question-left">
 
-          <span className="question-feature-label">
-            特徴
-          </span>
+              <div className="question-item question-blue">
 
-          <span className="question-line"></span>
-        </h2>
+                <div className="question-item-title">
+                  <img src="/mascot/male.png" alt="" />
+                  <span>性別</span>
+                </div>
 
-        <div className="question-grid">
+                <b>オス</b>
 
-          <div className="question-left">
-
-            <div className="question-item question-blue">
-              <div className="question-item-title">
-                <img src="/mascot/male.png" alt="" />
-                <span>性別</span>
               </div>
-              <b>オス</b>
+
+              <div className="question-item question-green">
+
+                <div className="question-item-title">
+                  <img src="/mascot/heart.png" alt="" />
+                  <span>性格</span>
+                </div>
+
+                <b>情熱的・仲間思い</b>
+
+              </div>
+
+              <div className="question-item question-orange">
+
+                <div className="question-item-title">
+                  <img src="/mascot/food.png" alt="" />
+                  <span>好きなもの</span>
+                </div>
+
+                <b>魚</b>
+
+              </div>
+
             </div>
 
-            <div className="question-item question-green">
-              <div className="question-item-title">
-                <img src="/mascot/heart.png" alt="" />
-                <span>性格</span>
-              </div>
-              <b>情熱的・仲間思い</b>
-            </div>
+            <div className="question-right">
 
-            <div className="question-item question-orange">
-              <div className="question-item-title">
-                <img src="/mascot/food.png" alt="" />
-                <span>好きなもの</span>
-              </div>
-              <b>魚</b>
+              <h3 className="question-other-title">
+
+                <img
+                  src="/mascot/star.png"
+                  alt=""
+                  className="question-other-title-icon"
+                />
+
+                その他
+
+              </h3>
+
+              <ul>
+                <li>ゼン君の先輩</li>
+                <li>猫舌</li>
+                <li>おっちょこちょい</li>
+                <li>モテモテ</li>
+                <li>
+                  シャチに追いかけまわされたせいで海洋恐怖症になった。
+                </li>
+              </ul>
+
             </div>
 
           </div>
 
-          <div className="question-right">
+          {/* =========================
+              投票
+          ========================= */}
+          <div className="question-vote">
 
-            <h3 className="question-other-title">
-              <img
-                src="/mascot/star.png"
-                alt=""
-                className="question-other-title-icon"
-              />
-              その他
-            </h3>
+            <p>＼ このマスコットを応援しよう！ ／</p>
 
-            <ul>
-              <li>ゼン君の先輩</li>
-              <li>猫舌</li>
-              <li>おっちょこちょい</li>
-              <li>モテモテ</li>
-              <li>シャチに追いかけまわされたせいで海洋恐怖症になった。</li>
-            </ul>
+            <button>投票する</button>
+
+            <small>
+              あなたの応援が力になります！
+            </small>
 
           </div>
-
-        </div>
-
-        {/* =========================
-            投票
-        ========================= */}
-        <div className="question-vote">
-
-          <p>\\　このマスコットを応援しよう！　//</p>
-
-          <button>投票する</button>
-
-          <small>
-            あなたの応援が力になります！
-          </small>
 
         </div>
 
