@@ -64,11 +64,11 @@ body::before {
 .question-top-base {
   position: absolute;
 
-  right: 65px;
+  right: 35px;
   top: -78px;
 
-  width: 360px;
-  height: 24px;
+  width: 380px;
+  height: 25px;
 
   background: #1f73d8;
 
@@ -111,15 +111,15 @@ body::before {
 .question-top-line {
   position: absolute;
 
-  top: -195px;
-  right: 20px;
+  top: -200px;
+  right: -10px;
 
-  width: 34px;
-  height: 145px;
+  width: 100px;
+  height: 147.5px;
 
   background: #1f73d8;
 
-  transform: rotate(37deg);
+
 
   z-index: -10;
 }
@@ -132,50 +132,19 @@ body::before {
   position: absolute;
 
   top: -170px;
-  right: 85px;
+  right: 35px;
 
-  width: 345px;
+  width: 400px;
   height: 95px;
 
   background: #ffffff;
 
   border-bottom: 2px solid #bac4ff;
   border-left: 2px solid #bac4ff;
+  border-right: 2px solid #bac4ff;
 
   z-index: 3;
 }
-
-/* ========================================
-   中央白パーツ
-======================================== */
-
-.question-card-white-center {
-  position: absolute;
-
-  top: -170px;
-  right: 10px;
-
-  width: 200px;
-  height: 95px;
-
-  background: #ffffff;
-
-  border-bottom: 2px solid #bac4ff;
-
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    65% 100%,
-    0% 100%
-  );
-
-  box-shadow:
-    0 4px 8px rgba(0,0,0,0.08),
-    0 10px 20px rgba(0,0,0,0.06);
-
-  z-index: 2;
-}
-
 
  .question-mascot-section-title{
   position: relative;
