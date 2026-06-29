@@ -9,7 +9,7 @@ const FaqSection = ({
   isOpen,
   toggleSection,
   openQuestions = {},
-  toggleQuestion
+  toggleQuestion,
 }) => {
   return (
     <div className="faq-item-wrapper">
@@ -19,6 +19,7 @@ const FaqSection = ({
         onClick={() => toggleSection(sectionIndex)}
       >
         <div className="faq-left">
+          {/* セクションだけQ表示 */}
           <div className="faq-icon">
             Q
           </div>
@@ -33,7 +34,7 @@ const FaqSection = ({
             className={`arrow ${
               isOpen ? "open" : ""
             }`}
-          ></span>
+          />
         </div>
       </button>
 
@@ -42,7 +43,8 @@ const FaqSection = ({
         <div className="faq-box-wrapper">
           {section?.items?.map((pair, qIndex) => {
             const qKey = `${sectionIndex}-${qIndex}`;
-            const isQOpen = openQuestions[qKey];
+            const isQOpen =
+              openQuestions[qKey];
 
             return (
               <div
@@ -56,9 +58,8 @@ const FaqSection = ({
                     toggleQuestion(qKey)
                   }
                 >
-                  <span className="q-circle">
-                    Q
-                  </span>
+                  {/* Qなしの丸 */}
+                  <span className="q-circle" />
 
                   <span className="question-text">
                     {pair.q}

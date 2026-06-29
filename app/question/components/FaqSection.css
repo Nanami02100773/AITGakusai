@@ -31,9 +31,11 @@
 
   z-index: -1;
 }
+
 /* ========================================
    FAQコンテナ
 ======================================== */
+
 .faq-container {
   position: relative;
   z-index: 1;
@@ -52,13 +54,14 @@
 
   border-radius: 10px;
 
-  border: 3px solid #cad8ff; /* ← 枠線追加 */
+  border: 3px solid #cad8ff;
 
   box-shadow:
     0 8px 20px rgba(120,140,255,.12);
 
   isolation: isolate;
 }
+
 /* ========================================
    セクションカード
 ======================================== */
@@ -132,14 +135,6 @@
   flex-shrink: 0;
 }
 
-.icon-line {
-  width: 20px;
-  height: 20px;
-
-  border: 2px solid #ffffff;
-  border-radius: 6px;
-}
-
 /* ========================================
    タイトル
 ======================================== */
@@ -172,6 +167,7 @@
 
   border-radius: 999px;
 }
+
 /* ========================================
    開閉ボタン
 ======================================== */
@@ -251,12 +247,12 @@
 }
 
 /* ========================================
-   Qマーク
+   丸アイコン（Qなし）
 ======================================== */
 
 .q-circle {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
 
   border-radius: 50%;
 
@@ -265,15 +261,6 @@
     #a8bcff,
     #86a7ff
   );
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: white;
-
-  font-weight: 800;
-  font-size: .9rem;
 
   flex-shrink: 0;
 }
@@ -329,10 +316,3 @@
     #86a7ff
   );
 }
-
-.faq-theme-0 .faq-title::after,
-.faq-theme-1 .faq-title::after,
-.faq-theme-2 .faq-title::after {
-  background: #86a7ff;
-}
-

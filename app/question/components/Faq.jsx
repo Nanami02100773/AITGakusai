@@ -4,6 +4,7 @@ import "./Faq.css";
 import faqData from "./data/faqData";
 import FaqSection from "./FaqSection";
 
+
 const Faq = () => {
   const [openSections, setOpenSections] = useState({});
   const [openQuestions, setOpenQuestions] = useState({});

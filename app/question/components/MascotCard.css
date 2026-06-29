@@ -38,30 +38,34 @@
 
   overflow: hidden;
 }
+
+
 /* ========================================
    メインカード
 ======================================== */
 
 .question-card {
   background: #ffffff;
-
   border-radius: 10px;
-  padding: 10px;
-
   width: 450px;
 
   position: relative;
-  overflow: visible;
-  margin: 20px auto 0; /* ←中央揃え */
+  overflow: hidden;
 
-  /* 上に余白を作る */
-  margin-top: 20px;
+  margin: 20px auto 0;
+  padding: 0;                 /* ←ここを変更 */
 }
 
+/* 中身だけ一括拡大・縮小 */
 .question-card-inner{
-    margin-top: 25px;
-  transform: scale(0.95);   /* 95% */
+  width: 100%;
+
+  padding: 10px;              /* ←paddingはこちらへ移動 */
+
+  transform: scale(.95);      /* ←ここで一括変更 */
   transform-origin: top center;
+
+  margin-bottom: -45px;       /* ←縮小で余る高さを詰める */
 }
 
 
