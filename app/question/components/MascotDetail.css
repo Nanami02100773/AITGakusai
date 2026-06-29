@@ -514,7 +514,7 @@ body::before {
 
   line-height: 1.9;
 
-  font-size: 12px;
+  font-size: 0px;
   font-weight: 700;
 
   letter-spacing: .03em;

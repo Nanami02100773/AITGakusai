@@ -39,8 +39,8 @@
   position: relative;
   z-index: 1;
 
-  width: 450px;
-  max-width: 100%;
+  width: 400px;
+ 
 
   display: flex;
   flex-direction: column;
