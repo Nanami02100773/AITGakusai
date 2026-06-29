@@ -2,8 +2,8 @@ import React from "react";
 import Faq from "./components/Faq";
 import FaqSection from "./components/FaqSection";
 import NavigationBar from "./components/NavigationBar";
-// import MascotDetail from "./components/MascotDetail";
-import MascotCard from "./components/MascotCard";
+import MascotDetail from "./components/MascotDetail";
+// import MascotCard from "./components/MascotCard";
 
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Faq />
       <NavigationBar/>
-      {/* <MascotDetail/> */}
-      <MascotCard/>
+      <MascotDetail/>
+      {/* <MascotCard/> */}
     </div>
   );
 }
