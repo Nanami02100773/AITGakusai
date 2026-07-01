@@ -9,39 +9,59 @@ const DaySpeakerList = ({ speakers }) => {
 
   return (
     <section className="Stage-performer-section">
-      <h2 className="stage-section-title">出演者様紹介</h2>
+      <h2 className="stage-section-title">
+        出演者様紹介
+      </h2>
 
       <div className="Stage-scroll-area">
         {speakers.map((speaker, index) => (
-          <div className="Stage-profile-box" key={index}>
-
-            {/* ★ここが超重要（高さ分岐） */}
-            <div className={`Stage-profile ${speaker.hasGoods ? "has" : "none"}`}>
-
+          <div
+            className="Stage-profile-box"
+            key={index}
+          >
+            <div
+              className={`Stage-profile ${
+                speaker.hasGoods
+                  ? "has"
+                  : "none"
+              }`}
+            >
               {/* 写真 */}
               <div className="Stage-photo">
                 <img
                   src={speaker.image}
                   alt={speaker.name}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
                 />
               </div>
 
               {/* 名前・紹介 */}
               <div className="Stage-bio">
                 <h3>{speaker.name}</h3>
-                <p>{speaker.bio || "ここに演者の紹介文が入ります。"}</p>
+
+                <p>
+                  {speaker.bio ||
+                    "ここに演者の紹介文が入ります。"}
+                </p>
               </div>
 
               {/* 物販情報 */}
               <div className="Stage-goods-info">
                 {speaker.hasGoods ? (
                   <>
-                    {/* 上段（あり＋場所） */}
+                    {/* 上段 */}
                     <div className="Stage-goods-top">
-
                       <div className="left">
                         <div className="Stage-goods-status available">
+                          <img
+                            src="/stagecast/correct.png"
+                            alt="物販あり"
+                            className="Stage-status-icon"
+                          />
                           物販あり
                         </div>
                       </div>
@@ -50,20 +70,36 @@ const DaySpeakerList = ({ speakers }) => {
 
                       <div className="right">
                         <div className="Stage-goods-place">
-                          <span className="label">物販の場所</span>
-                          <span className="value">{speaker.goodsPlace}</span>
+                          <span className="label">
+                            物販の場所
+                          </span>
+
+                          <span className="value">
+                            {speaker.goodsPlace}
+                          </span>
                         </div>
                       </div>
-
                     </div>
 
-                    {/* 下段（時間） */}
+                    {/* 下段 */}
                     <div className="Stage-goods-time">
-                      物販時間：{speaker.goodsTime}
+                      <img
+                        src="/stagecast/clock.png"
+                        alt="時計"
+                        className="Stage-time-icon"
+                      />
+
+                      物販時間：
+                      {speaker.goodsTime}
                     </div>
                   </>
                 ) : (
                   <div className="Stage-goods-status none">
+                    <img
+                      src="/stagecast/incorrect.png"
+                      alt="物販なし"
+                      className="Stage-status-icon"
+                    />
                     物販なし
                   </div>
                 )}
@@ -71,7 +107,6 @@ const DaySpeakerList = ({ speakers }) => {
 
               {/* 模様 */}
               <div className="pattern-top"></div>
-
             </div>
           </div>
         ))}

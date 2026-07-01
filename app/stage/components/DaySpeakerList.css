@@ -248,6 +248,28 @@
   margin-top: auto;
 }
 
+.Stage-status-icon {
+  width: 50;
+  height: 50;
+
+  margin-right: 0px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.Stage-time-icon {
+  width: 50px;
+  height: 50px;
+
+  margin-right: 6px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
 /* ===== 上段BOX ===== */
 .Stage-goods-top {
   display: flex;
@@ -290,26 +312,6 @@
   font-size: 12px;
 }
 
-.Stage-goods-status.available::before {
-  content: "✔";
-
-  background: #4caf50;
-
-  color: white;
-
-  border-radius: 50%;
-
-  width: 18px;
-  height: 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-right: 5px;
-
-  font-size: 10px;
-}
 
 /* ===== 場所 ===== */
 .Stage-goods-place {
@@ -365,12 +367,6 @@
   gap: 6px;
 }
 
-.Stage-goods-time::before {
-  content: "🕒";
-
-  font-size: 13px;
-}
-
 /* ===== 物販なし ===== */
 .Stage-goods-status.none {
   background: #ffeaea;
@@ -387,26 +383,4 @@
   align-items: center;
 
   font-size: 11px;
-}
-
-.Stage-goods-status.none::before {
-  content: "✕";
-
-  background: #e74c3c;
-
-  color: white;
-
-  border-radius: 50%;
-
-  width: 18px;
-  height: 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-right: 5px;
-
-  font-size: 10px;
-  font-weight: bold;
 }

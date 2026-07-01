@@ -19,7 +19,7 @@
   background: linear-gradient(
     90deg,
     #86a7ff,
-    #6f8dff
+    #1e2541
   );
 
   color: #fff;
@@ -47,7 +47,7 @@
 .question-card {
   background: #ffffff;
   border-radius: 10px;
-  width: 450px;
+  width: 400px;
 
   position: relative;
   overflow: hidden;
