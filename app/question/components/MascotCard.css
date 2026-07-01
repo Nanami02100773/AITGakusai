@@ -4,27 +4,26 @@
 
 .question-mascot-section-title {
   position: relative;
-
   z-index: 4;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 240px;
-  height: 44px;
+  width: 220px;
+  height: 40px;
 
-  margin: 150px auto 0px;
+  margin: 130px auto 0;
 
   background: linear-gradient(
     90deg,
     #86a7ff,
-    #1e2541
+    #6f8dff
   );
 
   color: #fff;
 
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
 
   border-radius: 999px;
@@ -39,218 +38,193 @@
   overflow: hidden;
 }
 
-
 /* ========================================
    メインカード
 ======================================== */
 
 .question-card {
-  background: #ffffff;
-  border-radius: 10px;
-  width: 400px;
+  width: 380px;
 
-  position: relative;
-  overflow: hidden;
+  background: #fff;
+
+  border-radius: 10px;
 
   margin: 20px auto 0;
-  padding: 0;                 /* ←ここを変更 */
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  box-sizing: border-box;
 }
 
-/* 中身だけ一括拡大・縮小 */
-.question-card-inner{
+.question-card-inner {
   width: 100%;
 
-  padding: 10px;              /* ←paddingはこちらへ移動 */
+  box-sizing: border-box;
 
-  transform: scale(.95);      /* ←ここで一括変更 */
-  transform-origin: top center;
+  padding: 10px;
 
-  margin-bottom: -45px;       /* ←縮小で余る高さを詰める */
+  transform: none;
+
+  margin-bottom: 0;
 }
-
-
 
 /* ========================================
    キャラクター
 ======================================== */
 
+.question-hero{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
 
-.question-image {
-  width: 190px;
-  height: 240px;
+.question-image{
+  width:155px;
+  height:200px;
 
-  border-radius: 28px;
+  border-radius:22px;
 
-  border: 2px solid #dce6ff;
+  border:2px solid #dce6ff;
 
-  background: linear-gradient(
+  background:linear-gradient(
     180deg,
     #fafdff,
     #eef7ff
   );
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
-  overflow: hidden;
+  overflow:hidden;
 
   box-shadow:
-    0 4px 12px rgba(100,140,255,0.08);
+    0 4px 12px rgba(100,140,255,.08);
 }
 
-.question-image img {
-  width: 95%;
-  height: 95%;
-  object-fit: contain;
+.question-image img{
+  width:95%;
+  height:95%;
+  object-fit:contain;
 }
 
 /* ========================================
    テキスト
 ======================================== */
 
-.question-hero{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
 .question-text{
-    flex: 1;
-    min-width: 0;
+  flex:1;
+  min-width:0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 
-    /* 全体の位置調整 */
-    position: relative;
-    top: 0px;     /* ↓に動かすならプラス */
-    left: 0px;    /* →に動かすならプラス */
+  position:relative;
 }
-
-/* =========================
-   名前ロゴ
-========================= */
 
 .question-name-logo{
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+  width:100%;
+  max-width:170px;
 
-    display: block;
+  height:auto;
 
-    /* ロゴだけ位置調整 */
-    position: relative;
-    top: 0px;
-    left: -5px;
+  display:block;
 
-    margin: 0 auto 15px;
+  margin:0 auto 12px;
 }
 
-/* =========================
-   説明文
-========================= */
-
 .question-text p{
-    text-align: center;
+  margin:0;
 
-    font-size: 13px;
-    line-height: 1.9;
+  text-align:center;
 
-    /* 説明文だけ位置調整 */
-    position: relative;
-    top: 12px;
-    left: -5px;
+  font-size:11px;
 
-    margin: 0;
+  line-height:1.7;
+
+  color:#24346e;
 }
 
 /* ========================================
    特徴タイトル
 ======================================== */
 
-.question-feature-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.question-feature-title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-  gap: 18px;
+  gap:12px;
 
-  margin: 15px 0;
+  margin:15px 0;
 }
 
-.question-line {
-  flex: 1;
+.question-line{
+  flex:1;
 
-  height: 2px;
+  height:2px;
 
-  background: #c7dbff;
+  background:#c7dbff;
 
-  position: relative;
+  position:relative;
 }
 
-.question-line::before {
-  content: "";
+.question-line::before,
+.question-line::after{
+  content:"";
 
-  position: absolute;
+  position:absolute;
 
-  left: -4px;
-  top: 50%;
+  top:50%;
 
-  width: 8px;
-  height: 8px;
+  width:8px;
+  height:8px;
 
-  background: #c7dbff;
+  border-radius:50%;
 
-  border-radius: 50%;
+  background:#c7dbff;
 
-  transform: translateY(-50%);
+  transform:translateY(-50%);
 }
 
-.question-line::after {
-  content: "";
-
-  position: absolute;
-
-  right: -4px;
-  top: 50%;
-
-  width: 8px;
-  height: 8px;
-
-  background: #c7dbff;
-
-  border-radius: 50%;
-
-  transform: translateY(-50%);
+.question-line::before{
+  left:-4px;
 }
 
-.question-feature-label {
-  display: inline-flex;
+.question-line::after{
+  right:-4px;
+}
 
-  align-items: center;
-  justify-content: center;
+.question-feature-label{
+  display:inline-flex;
 
-  min-width: 90px;
-  height: 30px;
+  align-items:center;
+  justify-content:center;
 
-  padding: 0 28px;
+  min-width:70px;
+  height:28px;
 
-  background: linear-gradient(
+  padding:0 18px;
+
+  background:linear-gradient(
     180deg,
-    #5ea3ff 0%,
-    #4e8cff 100%
+    #5ea3ff,
+    #4e8cff
   );
 
-  border: 2px solid #7fb4ff;
+  border:2px solid #7fb4ff;
 
-  border-radius: 10px;
+  border-radius:10px;
 
-  color: #fff;
+  color:#fff;
 
-  font-size: 15px;
-  font-weight: 900;
+  font-size:14px;
+  font-weight:900;
 
   box-shadow:
     0 4px 12px rgba(100,140,255,.18),
@@ -261,337 +235,330 @@
    グリッド
 ======================================== */
 
-.question-grid {
-  display: flex;
-  flex-direction: row;
+.question-grid{
+  display:flex;
 
-  gap: 10px;
+  gap:8px;
 
-  align-items: stretch;
+  align-items:stretch;
 }
 
-.question-left {
-  flex: .95;
+.question-left{
+  flex:.95;
 }
 
-.question-right {
-  flex: 1.05;
+.question-right{
+  flex:1.05;
 
-  height: 240px;
+  height:215px;
 
-  background: #faf7ff;
+  padding:8px;
 
-  border: 2px solid #e6d9ff;
+  background:#faf7ff;
 
-  border-radius: 10px;
+  border:2px solid #e6d9ff;
 
-  padding: 10px;
+  border-radius:10px;
+
+  box-sizing:border-box;
 }
 
-.question-right ul {
-  margin: 0;
-  padding: 0;
+.question-right ul{
+  margin:0;
+  padding:0;
 
-  list-style: none;
+  list-style:none;
 }
 
 /* ========================================
    左カード
 ======================================== */
 
-.question-item {
-  padding: 10px;
+.question-item{
+  height:68px;
 
-  border-radius: 15px;
+  padding:8px;
 
-  border: 2px solid #eef3ff;
+  margin-bottom:5px;
 
-  margin-bottom: 5px;
+  border-radius:12px;
 
-  height: 77px;
+  border:2px solid #eef3ff;
+
+  box-sizing:border-box;
 }
 
-.question-item span {
-  display: block;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  position: relative;
-
-  left: 5px;
-  top: -10px;
+.question-blue{
+  background:#eef5ff;
+  border-color:#c9dcff;
 }
 
-.question-item b {
-  font-size: 12px;
-
-  color: #24346e;
-
-  margin-left: 65px;
-  margin-top: -30px;
-
-  display: block;
+.question-green{
+  background:#edf9f1;
+  border-color:#c9edd5;
 }
 
-/* =========================
-   性別（青）
-========================= */
-
-.question-blue {
-  background: #eef5ff;
-  border: 2px solid #c9dcff;
-}
-
-/* =========================
-   性格（緑）
-========================= */
-
-.question-green {
-  background: #edf9f1;
-  border: 2px solid #c9edd5;
-}
-
-/* =========================
-   好きなもの（オレンジ）
-========================= */
-
-.question-orange {
-  background: #fff3e9;
-  border: 2px solid #ffd9bb;
-}
-
-/* ========================================
-   その他
-======================================== */
-
-.question-right ul {
-  margin: 0;
-
-  padding-left: 0;
-
-  line-height: 1.9;
-
-  font-size: 0px;
-  font-weight: 700;
-
-  letter-spacing: .03em;
-
-  color: #24346e;
-}
-
-.question-right li {
-  position: relative;
-
-  top: 7px;
-
-  padding-left: 25px;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  color: #24346e;
-
-  line-height: 1.9;
-}
-
-.question-right li::before {
-  content: "";
-
-  position: absolute;
-
-  left: 5px;
-  top: 10px;
-
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #a27cff;
+.question-orange{
+  background:#fff3e9;
+  border-color:#ffd9bb;
 }
 
 /* =========================
    項目タイトル
 ========================= */
 
-.question-item-title {
-  display: flex;
-  align-items: center;
+.question-item-title{
+  display:flex;
+  align-items:center;
 
-  gap: 10px;
+  gap:15px;
 
-  margin-bottom: 8px;
+  margin-bottom:5px;
 }
 
-.question-item-title img {
-  width: 50px;
-  height: 50px;
+.question-item-title img{
+  width:40px;
+  height:40px;
 
-  object-fit: cover;
+  object-fit:cover;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  background: #fff;
+  background:#fff;
 
-  border: 2px solid #dce6ff;
+  border:2px solid #dce6ff;
 
-  padding: 4px;
+  padding:3px;
+
+  box-sizing:border-box;
 }
 
-.question-blue .question-item-title img {
-  border: 2px solid #8cb7ff;
-
-  box-shadow:
-    0 0 8px rgba(79,132,255,.15);
+.question-blue .question-item-title img{
+  border-color:#8cb7ff;
+  box-shadow:0 0 8px rgba(79,132,255,.15);
 }
 
-.question-green .question-item-title img {
-  border: 2px solid #7fda9a;
-
-  box-shadow:
-    0 0 8px rgba(73,192,111,.15);
+.question-green .question-item-title img{
+  border-color:#7fda9a;
+  box-shadow:0 0 8px rgba(73,192,111,.15);
 }
 
-.question-orange .question-item-title img {
-  border: 2px solid #ffbf8b;
-
-  box-shadow:
-    0 0 8px rgba(255,148,73,.15);
+.question-orange .question-item-title img{
+  border-color:#ffbf8b;
+  box-shadow:0 0 8px rgba(255,148,73,.15);
 }
 
-.question-item-title span {
-  margin: 0;
+.question-item span{
+  display:block;
+
+  font-size:13px;
+  font-weight:700;
+
+  position:relative;
+  left:0px;
+  top:-5px;
+}
+
+/* 性別（青） */
+.question-blue span{
+  color:#4a83ff;
+}
+
+/* 性格（緑） */
+.question-green span{
+  color:#2bb673;
+}
+
+/* 好きなもの（オレンジ） */
+.question-orange span{
+  color:#ff8a3d;
+}
+.question-item b{
+  display:block;
+
+  position:relative;
+
+  left:55px;   /* 左右調整 */
+  top:-16px;   /* 上下調整 */
+
+  font-size:10px;
+
+  color:#24346e;
 }
 
 /* =========================
    その他タイトル
 ========================= */
 
-.question-other-title {
-  display: flex;
-  align-items: center;
+.question-other-title{
+  display:flex;
+  align-items:center;
 
-  gap: 10px;
+  gap:8px;
 
-  margin-top: 0;
+  margin:0 0 8px;
 
-  color: #a27cff;
+  color:#a27cff;
 
-  font-size: 18px;
-  font-weight: 800;
+  font-size:16px;
+  font-weight:800;
 }
 
-.question-other-title-icon {
-  width: 50px;
-  height: 50px;
+.question-other-title-icon{
+  width:40px;
+  height:40px;
 
-  object-fit: cover;
+  object-fit:cover;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  background: #fff;
+  background:#fff;
 
-  border: 2px solid #c9a7ff;
+  border:2px solid #c9a7ff;
 
-  padding: 4px;
+  padding:3px;
+
+  box-sizing:border-box;
+}
+
+/* =========================
+   その他
+========================= */
+
+.question-right ul{
+  margin:0;
+  padding:0;
+
+  list-style:none;
+}
+
+.question-right li{
+  position:relative;
+
+  padding-left:20px;
+
+  font-size:12px;
+  font-weight:700;
+
+  line-height:1.7;
+
+  color:#24346e;
+}
+
+.question-right li::before{
+  content:"";
+
+  position:absolute;
+
+  left:4px;
+  top:7px;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#a27cff;
 }
 
 /* ========================================
    投票
 ======================================== */
 
-.question-vote {
-  margin-top: 10px;
+.question-vote{
+  margin-top:10px;
 
-  background: linear-gradient(
+  padding:10px;
+
+  background:linear-gradient(
     180deg,
     #f8f9ff,
     #eef3ff
   );
 
-  border: 2px solid #dde6ff;
+  border:2px solid #dde6ff;
 
-  border-radius: 10px;
+  border-radius:10px;
 
-  padding: 10px;
+  text-align:center;
 
-  text-align: center;
+  box-sizing:border-box;
 }
 
-.question-vote p {
-  margin: 0 0 10px;
+.question-vote p{
+  margin:0 0 10px;
 
-  color: #4d86ff;
+  color:#4d86ff;
 
-  font-size: 18px;
-  font-weight: 800;
+  font-size:16px;
+  font-weight:800;
 }
 
-.question-vote button {
-  width: 250px;
-  height: 50px;
+.question-vote button{
+  width:210px;
+  height:45px;
 
-  border: none;
-  border-radius: 999px;
+  border:none;
 
-  background: linear-gradient(
+  border-radius:999px;
+
+  background:linear-gradient(
     90deg,
     #4a83ff,
     #2d6eff
   );
 
-  color: #fff;
+  color:#fff;
 
-  font-size: 25px;
-  font-weight: 900;
+  font-size:20px;
+  font-weight:900;
 
-  cursor: pointer;
+  cursor:pointer;
 
   box-shadow:
     inset 0 2px 0 rgba(255,255,255,.4),
-    0 10px 20px rgba(70,120,255,.25);
+    0 8px 18px rgba(70,120,255,.25);
 
-  animation: voteGlow 3s ease-in-out infinite;
+  transition:.2s;
 
-  transition: .2s;
+  animation:voteGlow 3s ease-in-out infinite;
 }
 
-.question-vote button:hover {
-  transform: translateY(-2px);
+.question-vote button:hover{
+  transform:translateY(-2px);
 }
 
-.question-vote button:active {
-  transform: scale(.97);
+.question-vote button:active{
+  transform:scale(.97);
 }
 
-.question-vote small {
-  display: block;
+.question-vote small{
+  display:block;
 
-  margin-top: 10px;
+  margin-top:8px;
 
-  color: #4d86ff;
+  color:#4d86ff;
 
-  font-size: 13px;
+  font-size:12px;
 }
 
 /* ========================================
    ボタンアニメーション
 ======================================== */
 
-@keyframes voteGlow {
-  0% {
-    filter: brightness(1);
-    transform: scale(1);
+@keyframes voteGlow{
+  0%{
+    filter:brightness(1);
+    transform:scale(1);
   }
 
-  50% {
-    filter: brightness(1.3);
-    transform: scale(1.04);
+  50%{
+    filter:brightness(1.2);
+    transform:scale(1.03);
   }
 
-  100% {
-    filter: brightness(1);
-    transform: scale(1);
+  100%{
+    filter:brightness(1);
+    transform:scale(1);
   }
 }
