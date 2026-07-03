@@ -1,3 +1,27 @@
+.faq-icon {
+  font-weight: 900;
+  font-size: 18px;
+  color: #fff;
+
+  text-shadow:
+    1px 0 #4d6fe6,
+    -1px 0 #4d6fe6,
+    0 1px #4d6fe6,
+    0 -1px #4d6fe6;
+}
+
+.faq-icon span {
+  display: inline-block;
+
+  transform: scaleX(1.08);
+
+  letter-spacing: 0px;
+
+  text-shadow:
+    0.4px 0 currentColor,
+    -0.4px 0 currentColor;
+}
+
 .faq-wrapper {
   position: relative;
 
@@ -23,7 +47,7 @@
   top: 20px;
   left: 0;
   right: 0;
-  bottom: 51px;
+  bottom: 50px;
 
   background: #ffffff;
 
@@ -115,14 +139,18 @@
 /* ========================================
    アイコン
 ======================================== */
-
 .faq-icon {
   width: 36px;
   height: 36px;
 
   border-radius: 50%;
 
-  background: #86a7ff;
+  background: linear-gradient(
+    135deg,
+    #86a7ff,
+    #6f8dff
+  );
+
   color: #fff;
 
   display: flex;
@@ -133,6 +161,9 @@
   font-size: 18px;
 
   flex-shrink: 0;
+
+  box-shadow:
+    0 0 0 3px rgba(134,167,255,.15);
 }
 
 /* ========================================
@@ -208,7 +239,7 @@
 ======================================== */
 
 .faq-box-wrapper {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 /* ========================================
@@ -224,95 +255,262 @@
 }
 
 /* ========================================
-   質問
+   回答カード
 ======================================== */
 
-.faq-question {
-  width: 100%;
+.faq-answer-card {
+  margin: 10px 0 6px 28px;
 
-  background: transparent;
-  border: none;
+  padding: 16px 18px;
 
+  background: linear-gradient(
+    180deg,
+    #fffafd 0%,
+    #fff4f8 100%
+  );
+
+  border-radius: 14px;
+
+  
+  animation: fadeIn .2s ease;
+}
+
+.faq-answer-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
-
-  padding: 18px 0;
-
-  text-align: left;
-
-  cursor: pointer;
-
-  border-bottom: 2px dashed #cfd9ff;
 }
 
 /* ========================================
-   丸アイコン（Qなし）
+   Aアイコン
 ======================================== */
 
-.q-circle {
-  width: 15px;
-  height: 15px;
+.faq-answer-icon {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
 
   border-radius: 50%;
 
   background: linear-gradient(
     135deg,
-    #a8bcff,
-    #86a7ff
+    #ff9fb5,
+    #ff7fa0
+  );
+
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 15px;
+  font-weight: 700;
+   box-shadow:
+    0 0 0 3px rgba(255, 134, 134, 0.15);
+}
+.faq-answer-icon span {
+  display: inline-block;
+
+  transform: scale(1.05);
+
+  letter-spacing: 0px;
+
+  text-shadow:
+    0.5px 0 currentColor,
+    -0.5px 0 currentColor,
+    0 0.5px currentColor,
+    0 -0.5px currentColor;
+}
+
+/* ========================================
+   回答文
+======================================== */
+
+.faq-answer-text {
+  flex: 1;
+
+  margin-top: 3px;
+
+  color: #555;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* ========================================
+   表示アニメーション
+======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   開いた質問一覧
+======================================== */
+
+.faq-question-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 15px;
+}
+
+/* ========================================
+   1つの質問ブロック
+======================================== */
+
+.faq-pair {
+  width: 100%;
+}
+
+/* ========================================
+   質問カード
+======================================== */
+
+.faq-question {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 15px;
+
+  padding: 16px 18px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fbfcff 100%
+  );
+
+  border: 1.5px solid #d7e2ff;
+  border-radius: 14px;
+
+  box-shadow: 0 3px 10px rgba(111, 141, 255, 0.08);
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition: all .25s ease;
+}
+
+.faq-question:hover {
+  transform: translateY(-2px);
+
+  border-color: #86a7ff;
+
+  box-shadow: 0 8px 18px rgba(111, 141, 255, .18);
+}
+
+.faq-question.open {
+  background: #eef4ff;
+
+  border-color: #86a7ff;
+
+  box-shadow: 0 6px 16px rgba(111, 141, 255, .15);
+}
+
+/* ========================================
+   丸アイコン
+======================================== */
+
+.q-circle {
+  width: 12px;
+  height: 12px;
+
+  margin-top: 7px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #86a7ff,
+    #6f8dff
   );
 
   flex-shrink: 0;
 }
 
+/* ========================================
+   質問文
+======================================== */
+
 .question-text {
   flex: 1;
 
-  font-size: 1rem;
-  font-weight: 700;
+  margin: 0;
 
-  color: #33406e;
+  display: block;
 
-  line-height: 1.5;
+  text-align: left;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.7;
+
+  color: #2f3b63;
+
+  word-break: break-word;
 }
 
 /* ========================================
-   回答カード
+   回答
 ======================================== */
 
 .faq-answer-card {
-  margin: 10px 0;
+  margin: 10px 0 0 28px;
 
-  padding: 20px;
+  padding: 18px;
 
-  border-radius: 18px;
+  background: #fff8fb;
 
-  background: #f7f9ff;
-
-  border: 1px solid #d7e1ff;
-
-  box-shadow:
-    0 3px 10px rgba(134,167,255,.08);
-
-  color: #44506f;
-
-  font-size: .95rem;
-  line-height: 1.8;
+  border: 1.5px solid #ffdfe9;
+  border-radius: 10px;
 }
 
 /* ========================================
-   テーマカラー
+   左揃え専用
 ======================================== */
 
-.faq-theme-0 .faq-icon,
-.faq-theme-0 .faq-toggle,
-.faq-theme-1 .faq-icon,
-.faq-theme-1 .faq-toggle,
-.faq-theme-2 .faq-icon,
-.faq-theme-2 .faq-toggle {
-  background: linear-gradient(
-    135deg,
-    #a8bcff,
-    #86a7ff
-  );
+.faq-question-content {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 14px;
+
+  text-align: left;
+}
+
+.faq-question-label {
+  flex: 1;
+
+  text-align: left;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.7;
+
+  color: #2f3b63;
+
+  word-break: break-word;
 }

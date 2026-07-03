@@ -1,0 +1,106 @@
+.login-guide {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.login-guide-card {
+  position: relative;
+  width: 290px;
+  padding: 20px;
+  border-radius: 24px;
+  background: #fff;
+  border: 2px solid #ececf8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.login-guide-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background: #6b6cff;
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-guide-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0 25px;
+}
+
+.login-guide-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.login-preview {
+  width: 210px;
+  padding: 18px;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.login-preview h3 {
+  text-align: center;
+  color: #3854d8;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.login-preview input {
+  width: 100%;
+  height: 38px;
+  margin-bottom: 12px;
+  padding: 0 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  background: #fafafa;
+  font-size: 14px;
+
+  box-sizing: border-box;
+}
+
+.login-preview input:focus {
+  outline: none;
+}
+
+.login-preview button {
+  width: 100%;
+  height: 42px;
+
+  border: none;
+  border-radius: 20px;
+
+  background: linear-gradient(90deg, #5d8cff, #5b4eff);
+
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.login-guide-text {
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+}

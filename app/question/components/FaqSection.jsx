@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
+import { Michroma } from "next/font/google";
 import "./FaqSection.css";
+
+const michroma = Michroma({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const FaqSection = ({
   section,
@@ -19,32 +25,28 @@ const FaqSection = ({
         onClick={() => toggleSection(sectionIndex)}
       >
         <div className="faq-left">
-          {/* セクションだけQ表示 */}
           <div className="faq-icon">
-            Q
+            <span className={michroma.className}>Q</span>
           </div>
 
           <span className="faq-title">
-            {section?.title}
+            {section.title}
           </span>
         </div>
 
         <div className="faq-toggle">
           <span
-            className={`arrow ${
-              isOpen ? "open" : ""
-            }`}
+            className={`arrow ${isOpen ? "open" : ""}`}
           />
         </div>
       </button>
 
       {/* 開いた時 */}
       {isOpen && (
-        <div className="faq-box-wrapper">
-          {section?.items?.map((pair, qIndex) => {
+        <div className="faq-question-list">
+          {section.items.map((pair, qIndex) => {
             const qKey = `${sectionIndex}-${qIndex}`;
-            const isQOpen =
-              openQuestions[qKey];
+            const isQOpen = openQuestions[qKey];
 
             return (
               <div
@@ -53,23 +55,30 @@ const FaqSection = ({
               >
                 {/* 質問 */}
                 <button
-                  className="faq-question"
-                  onClick={() =>
-                    toggleQuestion(qKey)
-                  }
+                  className={`faq-question ${isQOpen ? "open" : ""}`}
+                  onClick={() => toggleQuestion(qKey)}
                 >
-                  {/* Qなしの丸 */}
-                  <span className="q-circle" />
+                  <div className="faq-question-content">
+                    <span className="q-circle" />
 
-                  <span className="question-text">
-                    {pair.q}
-                  </span>
+                    <div className="faq-question-label">
+                      {pair.q}
+                    </div>
+                  </div>
                 </button>
 
                 {/* 回答 */}
                 {isQOpen && (
                   <div className="faq-answer-card">
-                    {pair.a}
+              <div className="faq-answer-header">
+  <div className="faq-answer-icon">
+    <span className={michroma.className}>A</span>
+  </div>
+
+  <div className="faq-answer-text">
+    {pair.a}
+  </div>
+</div>
                   </div>
                 )}
               </div>

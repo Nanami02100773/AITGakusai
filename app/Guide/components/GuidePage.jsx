@@ -11,5 +11,5 @@ export default function GuidePage() {
         <p>・ロゴは自動で切り替わります。</p>
       </div>
     </div>
-  );
+  )
 }
