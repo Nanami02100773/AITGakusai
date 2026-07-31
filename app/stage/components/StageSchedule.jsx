@@ -6,8 +6,8 @@ import Date from "./Date";
 import StageTT from "./StageTT";
 import Performer from "./Performer";
 
-import StageTTDataDay1 from "./data/StageTTData1";
-import StageTTDataDay2 from "./data/StageTTData2";
+import StageTTData1 from "./data/StageTTData1";
+import StageTTData2 from "./data/StageTTData2";
 
 import SpeakerDataDay1 from "./data/SpeakerDataDay1";
 import SpeakerDataDay2 from "./data/SpeakerDataDay2";
@@ -21,8 +21,8 @@ const StageSchedule = () => {
 
   const timetableData =
     selectedDay === 1
-      ? StageTTDataDay1
-      : StageTTDataDay2;
+      ? StageTTData1
+      : StageTTData2;
 
   const speakerData =
     selectedDay === 1
