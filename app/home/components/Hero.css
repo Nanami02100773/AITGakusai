@@ -1,7 +1,7 @@
 /* =================================================
    全体セクション
 ================================================= */
-.hero {
+.Home-Hero-section {
   position: relative;
   z-index: 0;
 
@@ -22,12 +22,12 @@
   overflow: hidden;
 }
 
-.hero-image-wrapper {
+.Home-Hero-image-wrapper {
   position: absolute;
   inset: 0;
 }
 
-.hero-image {
+.Home-Hero-image {
   position: absolute;
   inset: 0;
 
@@ -47,12 +47,12 @@
     transform;
 }
 
-.hero-image.active {
+.Home-Hero-image.Home-Hero-image-active {
   opacity: 1;
   transform: scale(1);
 }
 
-.hero-image::before {
+.Home-Hero-image::before {
   content: "";
 
   position: absolute;
@@ -72,7 +72,7 @@
 /* =================================================
    下フェード
 ================================================= */
-.hero::before {
+.Home-Hero-section::before {
   content: "";
 
   position: absolute;
@@ -103,7 +103,7 @@
 /* =================================================
    下ライン
 ================================================= */
-.hero::after {
+.Home-Hero-section::after {
   content: "";
 
   position: absolute;
@@ -128,7 +128,7 @@
 /* =================================================
    メインカード
 ================================================= */
-.hero-card {
+.Home-Hero-card {
   position: relative;
 
   width: 100%;
@@ -151,7 +151,7 @@
 /* =================================================
    背景画像
 ================================================= */
-.hero-image {
+.Home-Hero-image {
   position: absolute;
   inset: 0;
 
@@ -163,11 +163,7 @@
   overflow: hidden;
 }
 
-/* =================================================
-   写真フェード
-   ← 境目を自然化
-================================================= */
-.hero-image::after {
+.Home-Hero-image::after {
   content: "";
 
   position: absolute;
@@ -176,7 +172,6 @@
   background:
     linear-gradient(
       180deg,
-
       rgba(234,238,255,0.02) 0%,
       rgba(234,238,255,0.04) 22%,
       rgba(236,240,255,0.10) 40%,
@@ -190,9 +185,9 @@
 }
 
 /* =================================================
-   タイトル全体
+   タイトル
 ================================================= */
-.hero-text {
+.Home-Hero-text {
   position: absolute;
 
   top: 40px;
@@ -207,10 +202,7 @@
   z-index: 20;
 }
 
-/* =================================================
-   メインタイトル
-================================================= */
-.hero-text h1 {
+.Home-Hero-text h1 {
   position: relative;
 
   margin: 0;
@@ -228,11 +220,8 @@
     0 6px 16px rgba(0,0,0,.22);
 }
 
-/* =================================================
-   タイトル横装飾
-================================================= */
-.hero-text h1::before,
-.hero-text h1::after {
+.Home-Hero-text h1::before,
+.Home-Hero-text h1::after {
   content: "";
 
   position: absolute;
@@ -258,18 +247,15 @@
     );
 }
 
-.hero-text h1::before {
+.Home-Hero-text h1::before {
   left: 15%;
 }
 
-.hero-text h1::after {
+.Home-Hero-text h1::after {
   right: 15%;
 }
 
-/* =================================================
-   HIYAKU
-================================================= */
-.hero-text p {
+.Home-Hero-text p {
   position: relative;
 
   margin-top: 6px;
@@ -287,11 +273,8 @@
   color: #67b0ff;
 }
 
-/* =================================================
-   HIYAKU横線
-================================================= */
-.hero-text p::before,
-.hero-text p::after {
+.Home-Hero-text p::before,
+.Home-Hero-text p::after {
   content: "";
 
   width: 60px;
@@ -311,7 +294,7 @@
 /* =================================================
    吹き出し全体
 ================================================= */
-.hero-mascot-card {
+.Home-Hero-mascot-card {
   position: absolute;
 
   left: 50%;
@@ -322,7 +305,7 @@
   width: calc(100% - 60px);
   max-width: 650px;
 
-  height: 100px; /* ← 少し高さ追加 */
+  height: 100px;
 
   z-index: 30;
 
@@ -334,7 +317,7 @@
 /* =================================================
    名前ラベル
 ================================================= */
-.hero-mascot-name {
+.Home-Hero-mascot-name {
   position: absolute;
 
   top: 15px;
@@ -363,10 +346,11 @@
 
   z-index: 50;
 }
+
 /* =================================================
-   黒ガラス背景ボックス
+   黒ガラス背景
 ================================================= */
-.hero-mascot-card::before {
+.Home-Hero-mascot-card::before {
   content: "";
 
   position: absolute;
@@ -395,7 +379,7 @@
 /* =================================================
    吹き出しエリア
 ================================================= */
-.balloon-slider-vertical {
+.Home-Hero-balloon-slider {
   position: relative;
 
   width: 100%;
@@ -410,7 +394,7 @@
 /* =================================================
    吹き出し本体
 ================================================= */
-.balloon-item {
+.Home-Hero-balloon-item {
   position: relative;
 
   width: 100%;
@@ -420,10 +404,14 @@
   align-items: center;
 }
 
+/* animate用 */
+.Home-Hero-balloon-item.Home-Hero-balloon-item-animate {
+}
+
 /* =================================================
    横並び
 ================================================= */
-.balloon-inner {
+.Home-Hero-balloon-inner {
   position: relative;
 
   width: 100%;
@@ -439,7 +427,7 @@
 /* =================================================
    左キャラ円
 ================================================= */
-.balloon-circle {
+.Home-Hero-mascot-circle {
   position: relative;
 
   width: 95px;
@@ -463,8 +451,24 @@
   overflow: hidden;
 }
 
-.balloon-text {
+/* =================================================
+   キャラクター画像
+================================================= */
+.Home-Hero-mascot-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* =================================================
+   吹き出しテキスト
+================================================= */
+.Home-Hero-balloon-text {
   position: relative;
+
   top: 10px;
 
   flex: 1;
@@ -475,18 +479,17 @@
   align-items: center;
   justify-content: flex-start;
 
-  text-align: left;
-
   padding: 10px 20px;
+
+  text-align: left;
 
   font-size: 13px;
   font-weight: 900;
 
   line-height: 1.3;
+  letter-spacing: .02em;
 
   color: #002c85;
-
-  letter-spacing: .02em;
 
   background:
     linear-gradient(
@@ -503,10 +506,7 @@
     0 8px 18px rgba(80,120,220,.10);
 }
 
-/* =================================================
-   吹き出しのしっぽ
-================================================= */
-.balloon-text::before {
+.Home-Hero-balloon-text::before {
   content: "";
 
   position: absolute;
@@ -528,9 +528,6 @@
       rgba(246,249,255,.98)
     );
 
-  border-left:
-    2px solid #b8b8b8;
-
-  border-bottom:
-    2px solid #b8b8b8;
+  border-left: 2px solid #b8b8b8;
+  border-bottom: 2px solid #b8b8b8;
 }

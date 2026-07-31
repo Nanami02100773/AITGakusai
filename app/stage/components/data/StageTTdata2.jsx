@@ -1,4 +1,4 @@
-const StageTTdata2 = [
+const StageTTData2 = [
   {
     time: "10:30〜10:45",
     title: "オープニング",
@@ -155,4 +155,4 @@ const StageTTdata2 = [
   },
 ];
 
-export default StageTTdata2;
+export default StageTTData2;

@@ -9,50 +9,50 @@ export default function Carousel({ items = [] }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [isStopped, setIsStopped] = useState(false);
 
-const fallbackItems = [
-  {
-    category: "マスコット総選挙",
-    title: "うちのリード君を応援しませんか？",
-    description:
-      "全国の学祭のマスコットキャラクターの総選挙を開催中。ぜひ投票をお願いします！",
-    image: "/homecarousel/generalelection.jpg",
-  },
-  {
-    category: "休憩所のご案内",
-    title: "ちょっとひと休みしませんか？",
-    description:
-      "楽しんだあとは休憩所でリフレッシュ！飲食や待ち合わせにもご利用いただけます。",
-    image: "/homecarousel/restarea.jpg",
-  },
-  {
-    category: "景品をゲットしよう！",
-    title: "回答して豪華景品を当てよう！！",
-    description:
-      "全体アンケートに答えると総合案内所で抽選で素敵な景品をプレゼント！",
-    image: "/homecarousel/present.jpg",
-  },
-  {
-    category: "献血にご協力を！！",
-    title: "あなたの献血が誰かの命を救う",
-    description:
-      "学祭会場内の献血バスで受付中です。",
-    image: "/homecarousel/kenketsu.jpg",
-  },
-  {
-    category: "歌王",
-    title: "出演者たちが十八番の１曲で真剣勝負！",
-    description:
-      "出演者が選んだ渾身の１曲で勝負！歌声に心を動かされたらぜひ投票にご参加ください。",
-    image: "/homecarousel/utao.jpg",
-  },
-  {
-    category: "〇✕ゲーム",
-    title: "〇か✕か、最後まで生き残れ！",
-    description:
-      "知識も運も試されるドキドキの〇✕ゲーム！最後まで勝ち残り豪華景品をゲットしよう！",
-    image: "/homecarousel/game.jpg",
-  },
-];
+  const fallbackItems = [
+    {
+      category: "マスコット総選挙",
+      title: "うちのリード君を応援しませんか？",
+      description:
+        "全国の学祭のマスコットキャラクターの総選挙を開催中。ぜひ投票をお願いします！",
+      image: "/homecarousel/generalelection.jpg",
+    },
+    {
+      category: "休憩所のご案内",
+      title: "ちょっとひと休みしませんか？",
+      description:
+        "楽しんだあとは休憩所でリフレッシュ！飲食や待ち合わせにもご利用いただけます。",
+      image: "/homecarousel/restarea.jpg",
+    },
+    {
+      category: "景品をゲットしよう！",
+      title: "回答して豪華景品を当てよう！！",
+      description:
+        "全体アンケートに答えると総合案内所で抽選で素敵な景品をプレゼント！",
+      image: "/homecarousel/present.jpg",
+    },
+    {
+      category: "献血にご協力を！！",
+      title: "あなたの献血が誰かの命を救う",
+      description:
+        "学祭会場内の献血バスで受付中です。",
+      image: "/homecarousel/kenketsu.jpg",
+    },
+    {
+      category: "歌王",
+      title: "出演者たちが十八番の１曲で真剣勝負！",
+      description:
+        "出演者が選んだ渾身の１曲で勝負！歌声に心を動かされたらぜひ投票にご参加ください。",
+      image: "/homecarousel/utao.jpg",
+    },
+    {
+      category: "〇✕ゲーム",
+      title: "〇か✕か、最後まで生き残れ！",
+      description:
+        "知識も運も試されるドキドキの〇✕ゲーム！最後まで勝ち残り豪華景品をゲットしよう！",
+      image: "/homecarousel/game.jpg",
+    },
+  ];
 
   const displayItems =
     items.length > 0 ? items : fallbackItems;
@@ -73,7 +73,7 @@ const fallbackItems = [
     const scroll = () => {
       const list =
         container.querySelector(
-          ".Home-carousel-list"
+          ".Home-Carousel-list"
         );
 
       const firstCard = list?.children[0];
@@ -161,13 +161,13 @@ const fallbackItems = [
   }, [displayItems.length]);
 
   return (
-    <div className="Home-carousel-wrapper">
+    <div className="Home-Carousel-wrapper">
 
       <div
         ref={containerRef}
-        className="Home-carousel-container"
+        className="Home-Carousel-container"
       >
-        <div className="Home-carousel-list">
+        <div className="Home-Carousel-list">
 
           {displayItems
             .concat(displayItems)
@@ -184,35 +184,31 @@ const fallbackItems = [
               return (
                 <div
                   key={index}
-                  className={`Home-carousel-card ${
+                  className={`Home-Carousel-card ${
                     shouldScale
                       ? "is-center"
                       : ""
                   }`}
                 >
 
-                  {/* 上ライン */}
-                  <div className="Home-carousel-card-top-line-left" />
-                  <div className="Home-carousel-card-top-line-right" />
+                  <div className="Home-Carousel-cardTopLineLeft" />
+                  <div className="Home-Carousel-cardTopLineRight" />
 
-                  {/* 下ライン */}
-                  <div className="Home-carousel-card-bottom-line-left" />
-                  <div className="Home-carousel-card-bottom-line-right" />
+                  <div className="Home-Carousel-cardBottomLineLeft" />
+                  <div className="Home-Carousel-cardBottomLineRight" />
 
-                  {/* 上中央 */}
-                  <div className="futuristic-frame-top" />
+                  <div className="Home-Carousel-frameTop" />
 
-                  {/* 下中央 */}
-                  <div className="futuristic-frame-bottom" />
+                  <div className="Home-Carousel-frameBottom" />
 
-                  <div className="Home-carousel-content">
+                  <div className="Home-Carousel-content">
 
-                    {/* 画像 */}
-                    <div className="Home-carousel-image-placeholder">
+                    <div className="Home-Carousel-imagePlaceholder">
 
                       {item.image ? (
                         <img
                           src={item.image}
+                          alt={item.title}
                         />
                       ) : (
                         "画像"
@@ -220,22 +216,19 @@ const fallbackItems = [
 
                     </div>
 
-                    {/* テキスト */}
-                    <div className="Home-carousel-text-area">
+                    <div className="Home-Carousel-textArea">
 
-                      <p className="Home-carousel-category">
+                      <p className="Home-Carousel-category">
                         {item.category}
                       </p>
 
-                      <div className="Home-carousel-dots" />
+                      <div className="Home-Carousel-dots" />
 
-                      <h2 className="Home-carousel-title">
+                      <h2 className="Home-Carousel-title">
                         {item.title}
                       </h2>
 
-                
-
-                      <p className="Home-carousel-description">
+                      <p className="Home-Carousel-description">
                         {item.description}
                       </p>
 
@@ -250,20 +243,18 @@ const fallbackItems = [
         </div>
       </div>
 
-      <div className="Home-carousel-indicator">
+      <div className="Home-Carousel-indicator">
 
-        {displayItems.map(
-          (_, index) => (
-            <span
-              key={index}
-              className={`Home-indicator-dot ${
-                index === currentPage
-                  ? "active"
-                  : ""
-              }`}
-            />
-          )
-        )}
+        {displayItems.map((_, index) => (
+          <span
+            key={index}
+            className={`Home-Carousel-indicatorDot ${
+              index === currentPage
+                ? "active"
+                : ""
+            }`}
+          />
+        ))}
 
       </div>
 

@@ -1,12 +1,7 @@
 /* ===== FAQベース ===== */
 
-/* 外枠 */
-.faq-wrapper {
-  padding: 0 16px;
-}
-
 /* タイトル */
-.faq-box-title {
+.Question-Faq-title {
   position: absolute;
 
   top: 70px;
@@ -46,15 +41,65 @@
   overflow: hidden;
 }
 
-/* コンテナ */
-.faq-container {
+/* FAQ一覧 */
+.Question-Faq-list {
+  position: relative;
+
+  z-index: 1;
+
+  width: 400px;
   max-width: 600px;
-  margin: 0 auto 90px auto;
-  padding: 1.25rem;
-  background-color: #fafbff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  margin: 110px auto 90px;
+  padding: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background: #eaeeff;
+
+  border: 3px solid #cad8ff;
+  border-radius: 10px;
+  box-shadow:
+    0 8px 20px rgba(120, 140, 255, 0.12);
 
   font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+
+  isolation: isolate;
 }
 
+
+.Question-Faq-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  padding: 40px 16px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+
+  overflow: visible;
+
+  isolation: isolate;
+}
+
+.Question-Faq-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+
+  background: #ffffff;
+
+  border-bottom: 2px solid #bac4ff;
+
+  z-index: -1;
+}

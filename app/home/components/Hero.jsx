@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import "./HeroSection.css";
+import "./Hero.css";
 
-export default function HeroSection() {
+export default function Hero() {
 
   const heroImages = [
     "/homehero/1.jpg",
@@ -64,52 +64,48 @@ export default function HeroSection() {
 
   }, []);
 
-  return (
-    <section className="hero">
+    return (
+    <section className="Home-Hero-section">
 
       {/* =================================================
           メインカード
       ================================================= */}
-      <div className="hero-card">
+      <div className="Home-Hero-card">
 
         {/* 背景画像 */}
-       <div className="hero-image-wrapper">
+        <div className="Home-Hero-image-wrapper">
 
-  {heroImages.map((image, i) => (
-   <div
-  key={i}
-  className={`hero-image ${
-    i === heroIndex ? "active" : ""
-  } ${
-    i % 2 === 0 ? "left-motion" : "right-motion"
-  }`}
-  style={{
-    backgroundImage: `url(${image})`,
-  }}
-/>
-  ))}
+          {heroImages.map((image, i) => (
+            <div
+              key={i}
+              className={`Home-Hero-image ${
+                i === heroIndex
+                  ? "Home-Hero-image-active"
+                  : ""
+              } ${
+                i % 2 === 0
+                  ? "Home-Hero-image-left-motion"
+                  : "Home-Hero-image-right-motion"
+              }`}
+              style={{
+                backgroundImage: `url(${image})`,
+              }}
+            />
+          ))}
 
-</div>
+        </div>
 
-        {/* =================================================
-            左上追加装飾
-        ================================================= */}
-        <div className="hero-frame-left-extra" />
+        {/* 左上装飾 */}
+        <div className="Home-Hero-frame-left-extra" />
 
-        {/* =================================================
-            右下追加装飾
-        ================================================= */}
-        <div className="hero-frame-right-extra" />
+        {/* 右下装飾 */}
+        <div className="Home-Hero-frame-right-extra" />
 
-        {/* =================================================
-            縦ブルーライン
-        ================================================= */}
-        <span className="hero-frame-bottom-left-straight"></span>
+        {/* 縦ライン */}
+        <span className="Home-Hero-frame-bottom-left-straight" />
 
-        {/* =================================================
-            タイトル
-        ================================================= */}
-        <div className="hero-text">
+        {/* タイトル */}
+        <div className="Home-Hero-text">
 
           <h1>愛工大祭</h1>
 
@@ -120,42 +116,39 @@ export default function HeroSection() {
       </div>
 
       {/* =================================================
-          キャラ + 吹き出し
+          キャラクター
       ================================================= */}
-      <div className="hero-mascot-card">
+      <div className="Home-Hero-mascot-card">
 
-        <div className="balloon-slider-vertical">
+        <div className="Home-Hero-balloon-slider">
 
           <div
-            className={`balloon-item ${
-              animate ? "animate" : ""
+            className={`Home-Hero-balloon-item ${
+              animate
+                ? "Home-Hero-balloon-item-animate"
+                : ""
             }`}
           >
 
             {/* 名前 */}
-            <div className="hero-mascot-name">
+            <div className="Home-Hero-mascot-name">
               リード君
             </div>
 
-            <div className="balloon-inner">
+            <div className="Home-Hero-balloon-inner">
 
-              {/* =================================================
-                  左キャラ円
-              ================================================= */}
-              <div className="balloon-circle">
+              {/* キャラクター画像 */}
+              <div className="Home-Hero-mascot-circle">
 
                 <img
                   src="/homehero/mascot.jpg"
                   alt="リード君"
-                  className="balloon-circle-image"
+                  className="Home-Hero-mascot-image"
                 />
 
               </div>
-
-              {/* =================================================
-                  吹き出しテキスト
-              ================================================= */}
-              <span className="balloon-text">
+                            {/* 吹き出し */}
+              <span className="Home-Hero-balloon-text">
                 {messages[index]}
               </span>
 

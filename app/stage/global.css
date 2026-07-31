@@ -1,16 +1,21 @@
-.background-box {
-  background: linear-gradient(180deg, #e9edff, #b9c4f1);
+.Stage-Schedule-content {
+  background: linear-gradient(
+    180deg,
+    #e9edff,
+    #b9c4f1
+  );
+
   padding: 16px;
 
   width: 95%;
   max-width: 800px;
+
   margin: 20px auto 100px;
 
   border-radius: 5px;
-
- 
 }
-.Project2-container {
+
+.StageSchedule-container {
   margin-bottom: 100px;
 }
 

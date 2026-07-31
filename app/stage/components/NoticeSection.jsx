@@ -21,16 +21,19 @@ const NoticeSection = () => {
   }, []);
 
   return (
-    <section className="stage-notice-section">
-      <div className="stage-section-title-wrapper">
-        <div className="stage-section-title">
+    <section className="Stage-Notice-section">
+
+      {/* タイトル */}
+      <div className="Stage-Notice-title-wrapper">
+        <div className="Stage-section-title">
           お知らせ
         </div>
       </div>
 
-      <div className="stage-box3">
+      {/* お知らせ一覧 */}
+      <div className="Stage-Notice-list">
         {notices.length === 0 ? (
-          <div className="stage-notice-empty">
+          <div className="Stage-Notice-empty">
             現在ステージに関するお知らせはありません
           </div>
         ) : (
@@ -38,27 +41,32 @@ const NoticeSection = () => {
             <Link
               key={notice.id}
               href={`/stage/notice/${notice.id}`}
-              className={`stage-notice-item n${index + 1}`}
+              className={`Stage-Notice-item n${index + 1}`}
             >
               <div
-                className={`notice-number ${orbitron.className}`}
+                className={`
+                  Stage-Notice-number
+                  n${index + 1}
+                  ${orbitron.className}
+                `}
               >
                 {String(index + 1).padStart(2, "0")}
               </div>
 
-              <div className="notice-text">
+              <div className="Stage-Notice-text">
                 {notice.title}
               </div>
 
-              <div className="notice-dots" />
+              <div className="Stage-Notice-dots" />
 
-              <div className="notice-arrow">
+              <div className="Stage-Notice-arrow">
                 ›
               </div>
             </Link>
           ))
         )}
       </div>
+
     </section>
   );
 };

@@ -13,13 +13,13 @@ const Date = ({ onDayChange }) => {
   }, [selectedDay, onDayChange]);
 
   return (
-    <div className="Stage-date-toggle">
+    <div className="Stage-Date-toggle">
       <div
-        className={`Stage-date-toggle-inner ${
+        className={`Stage-Date-toggle-inner ${
           selectedDay === 2 ? "day2" : ""
         }`}
       >
-        <div className="Stage-date-toggle-slider"></div>
+        <div className="Stage-Date-toggle-slider" />
 
         <button
           className={selectedDay === 1 ? "active" : ""}

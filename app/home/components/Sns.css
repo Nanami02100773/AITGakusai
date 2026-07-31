@@ -1,7 +1,7 @@
 /* =================================================
-   全体
+   セクション
 ================================================= */
-.Home-sns-section {
+.Home-Sns-section {
   padding: 20px 0 100px;
 
   background: #e4e7fe;
@@ -12,14 +12,14 @@
 /* =================================================
    コンテナ
 ================================================= */
-.Home-container {
+.Home-Sns-container {
   width: 100%;
 }
 
 /* =================================================
-   横並び
+   SNS一覧
 ================================================= */
-.Home-sns-list {
+.Home-Sns-list {
   position: relative;
 
   display: flex;
@@ -32,9 +32,9 @@
 }
 
 /* =================================================
-   各アイテム
+   SNSアイテム
 ================================================= */
-.Home-sns-item {
+.Home-Sns-item {
   display: inline-flex;
 
   flex-direction: column;
@@ -46,9 +46,9 @@
 }
 
 /* =================================================
-   円
+   アイコン円
 ================================================= */
-.Home-sns-circle {
+.Home-Sns-circle {
   position: relative;
 
   width: 71px;
@@ -79,9 +79,9 @@
 }
 
 /* =================================================
-   共通ネオン発光
+   共通ネオン
 ================================================= */
-.Home-sns-circle::before {
+.Home-Sns-circle::before {
   content: "";
 
   position: absolute;
@@ -106,7 +106,7 @@
 /* =================================================
    Instagram
 ================================================= */
-.Home-instagram .Home-sns-circle::before {
+.Home-Sns-instagram .Home-Sns-circle::before {
   background:
     linear-gradient(
       135deg,
@@ -126,7 +126,7 @@
 /* =================================================
    X
 ================================================= */
-.Home-twitter .Home-sns-circle::before {
+.Home-Sns-twitter .Home-Sns-circle::before {
   background:
     linear-gradient(
       135deg,
@@ -145,7 +145,7 @@
 /* =================================================
    Website
 ================================================= */
-.Home-web .Home-sns-circle::before {
+.Home-Sns-web .Home-Sns-circle::before {
   background:
     linear-gradient(
       135deg,
@@ -164,7 +164,7 @@
 /* =================================================
    LINE
 ================================================= */
-.Home-line .Home-sns-circle::before {
+.Home-Sns-line .Home-Sns-circle::before {
   background:
     linear-gradient(
       135deg,
@@ -222,9 +222,9 @@
 }
 
 /* =================================================
-   アイコン画像 共通
+   アイコン画像
 ================================================= */
-.Home-sns-icon-image {
+.Home-Sns-iconImage {
   position: absolute;
 
   top: 50%;
@@ -243,7 +243,7 @@
 /* =================================================
    Instagram
 ================================================= */
-.Home-instagram .Home-sns-icon-image {
+.Home-Sns-instagram .Home-Sns-iconImage {
   width: 50px;
   height: 50px;
 
@@ -255,7 +255,7 @@
 /* =================================================
    X
 ================================================= */
-.Home-twitter .Home-sns-icon-image {
+.Home-Sns-twitter .Home-Sns-iconImage {
   width: 54px;
   height: 54px;
 
@@ -267,7 +267,7 @@
 /* =================================================
    Website
 ================================================= */
-.Home-web .Home-sns-icon-image {
+.Home-Sns-web .Home-Sns-iconImage {
   width: 51px;
   height: 51px;
 
@@ -279,7 +279,7 @@
 /* =================================================
    LINE
 ================================================= */
-.Home-line .Home-sns-icon-image {
+.Home-Sns-line .Home-Sns-iconImage {
   width: 51px;
   height: 51px;
 
@@ -289,9 +289,9 @@
 }
 
 /* =================================================
-   下テキスト
+   ラベル
 ================================================= */
-.Home-sns-label {
+.Home-Sns-label {
   font-size: 10px;
 
   font-weight: 700;
@@ -305,9 +305,9 @@
 }
 
 /* =================================================
-   横線
+   ラベルライン
 ================================================= */
-.Home-sns-label span {
+.Home-Sns-label span {
   width: 12px;
   height: 2px;
 

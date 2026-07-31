@@ -1,7 +1,7 @@
 /* =========================
    トップバー
 ========================= */
-.top-bar {
+.Home-top-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@
    戻るボタン
 ========================= */
 
-.nav-back-icon {
+.Home-nav-back-icon {
   width: 35px;
   height: 35px;
 
@@ -37,11 +37,11 @@
   transition: all 0.25s ease;
 }
 
-.nav-back-button:hover {
+.Home-nav-back-button:hover {
   background: #eef2ff;
 }
 
-.nav-back-button:hover .nav-back-icon {
+.Home-nav-back-button:hover .Home-nav-back-icon {
   opacity: 1;
 
   filter:
@@ -54,10 +54,11 @@
     brightness(101%)
     contrast(101%);
 }
+
 /* =========================
    メニューボタン
 ========================= */
-.nav-button {
+.Home-nav-button {
   width: 30px;
   height: 30px;
 
@@ -77,17 +78,17 @@
   transition: all 0.25s ease;
 }
 
-.nav-button:hover {
+.Home-nav-button:hover {
   color: #6f8dff;
   background: #eef2ff;
 }
 
-.nav-button:active {
+.Home-nav-button:active {
   transform: scale(0.95);
 }
 
 /* 戻るボタン */
-.menu-back {
+.Home-menu-back {
   font-size: 14px;
   color: #5bbad5;
 
@@ -95,19 +96,19 @@
 
   padding: 10px 0px;
 
-  align-self: flex-start; /* ←これが効く */
+  align-self: flex-start;
 
   transition: 0.2s;
 }
 
-.menu-back:active {
+.Home-menu-back:active {
   transform: translateX(-2px);
 }
 
 /* =========================
    中央ロゴ
 ========================= */
-.top-bar-center {
+.Home-top-bar-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -129,7 +130,7 @@
 }
 
 /* ロゴ縦アニメ */
-.logo-track {
+.Home-logo-track {
   display: flex;
   flex-direction: column;
 
@@ -137,7 +138,7 @@
   height: 36px;
 }
 
-.logo-slide {
+.Home-logo-slide {
   width: 100%;
   height: 36px;
 
@@ -146,42 +147,42 @@
   justify-content: center;
 }
 
-.logo-slide img {
+.Home-logo-slide img {
   max-width: 100%;
   max-height: 100%;
+
   object-fit: contain;
 }
 
-.top-bar-center {
+.Home-top-bar-center {
   overflow: hidden;
 }
 
-.logo-track {
+.Home-logo-track {
   will-change: transform;
 }
 
-.logo-slide {
+.Home-logo-slide {
   flex-shrink: 0;
 }
 
 /* ロゴ背景色 */
-.top-bar-center.active-0 {
+.Home-top-bar-center.Home-active-0 {
   background: #e1e1e1;
 }
 
-.top-bar-center.active-1 {
+.Home-top-bar-center.Home-active-1 {
   background: #e1e1e1;
 }
 
-.top-bar-center.active-2 {
+.Home-top-bar-center.Home-active-2 {
   background: #e1e1e1;
 }
-
 
 /* =========================
    サイドメニュー
 ========================= */
-.side-menu {
+.Home-side-menu {
   position: fixed;
   top: 0;
   right: -260px;
@@ -203,15 +204,14 @@
   padding: 20px;
 }
 
-.side-menu.open {
+.Home-side-menu.Home-open {
   right: 0;
 }
-
 
 /* =========================
    メニューアイテム
 ========================= */
-.menu-item {
+.Home-menu-item {
   padding: 15px 10px;
 
   text-decoration: none;
@@ -223,11 +223,11 @@
   transition: 0.2s;
 }
 
-.menu-item:hover {
+.Home-menu-item:hover {
   background: #f3f6ff;
 }
 
-.menu-header {
+.Home-menu-header {
   display: flex;
   flex-direction: column;
 
@@ -236,7 +236,7 @@
   margin-bottom: 20px;
 }
 
-.menu-header span {
+.Home-menu-header span {
   margin-top: 30px;
 
   font-size: 22px;
@@ -249,7 +249,7 @@
   position: relative;
 }
 
-.menu-header span::after {
+.Home-menu-header span::after {
   content: "";
 
   position: absolute;
@@ -274,7 +274,7 @@
   );
 }
 
-.menu-back {
+.Home-menu-back {
   background: none;
   border: none;
 
@@ -286,7 +286,7 @@
   cursor: pointer;
 }
 
-.menu-header span {
+.Home-menu-header span {
   margin-top: 20px;
   margin-left: 12px;
 
@@ -297,7 +297,7 @@
 /* =========================
    下部ナビ
 ========================= */
-.bottom-nav {
+.Home-bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -323,7 +323,7 @@
 /* =========================
    ナビアイコン
 ========================= */
-.nav-item {
+.Home-nav-item {
   flex: 1;
 
   display: flex;
@@ -340,7 +340,7 @@
 /* =========================
    アイコン共通
 ========================= */
-.nav-icon-img {
+.Home-nav-icon-img {
   object-fit: contain;
 
   display: block;
@@ -348,7 +348,7 @@
 
   transform: translateY(-10px);
 
-   opacity: 0.75;
+  opacity: 0.75;
 
   filter:
     grayscale(100%)
@@ -359,31 +359,32 @@
     filter 0.25s ease,
     opacity 0.25s ease;
 }
+
 /* =========================
    個別サイズ
 ========================= */
 
-.nav-home-icon {
+.Home-nav-home-icon {
   width: 70px;
   height: 70px;
 }
 
-.nav-stage-icon {
+.Home-nav-stage-icon {
   width: 65px;
   height: 65px;
 }
 
-.nav-map-icon {
+.Home-nav-map-icon {
   width: 80px;
   height: 80px;
 }
 
-.nav-calendar-icon {
+.Home-nav-calendar-icon {
   width: 70px;
   height: 70px;
 }
 
-.nav-chat-icon {
+.Home-nav-chat-icon {
   width: 80px;
   height: 80px;
 }
@@ -392,13 +393,13 @@
    アクティブ
 ========================= */
 
-.nav-item.active {
+.Home-nav-item.Home-active {
   color: #5bbad5;
 
   position: relative;
 }
 
-.nav-item.active::after {
+.Home-nav-item.Home-active::after {
   content: "";
 
   position: absolute;
@@ -418,11 +419,7 @@
   border-radius: 10px;
 }
 
-/* =========================
-   タップ時
-========================= */
-
-.nav-item:active {
+.Home-nav-item:active {
   transform: translateY(-2px);
 }
 
@@ -430,30 +427,13 @@
    ホバー
 ========================= */
 
-.nav-item:hover {
+.Home-nav-item:hover {
   background: #eef2ff;
 }
 
-.nav-item:hover .nav-icon-img,
-.nav-item.active .nav-icon-img,
-.nav-back-button:hover .nav-back-icon {
-  opacity: 1;
-
-  filter:
-  brightness(0)
-  saturate(100%)
-  invert(59%)
-  sepia(86%)
-  saturate(1625%)
-  hue-rotate(200deg)
-  brightness(102%)
-  contrast(101%);
-}
-.nav-menu-button:hover {
-  background: #eef2ff;
-}
-
-.nav-menu-button:hover .nav-menu-icon {
+.Home-nav-item:hover .Home-nav-icon-img,
+.Home-nav-item.Home-active .Home-nav-icon-img,
+.Home-nav-back-button:hover .Home-nav-back-icon {
   opacity: 1;
 
   filter:
@@ -466,11 +446,30 @@
     brightness(102%)
     contrast(101%);
 }
+
+.Home-nav-menu-button:hover {
+  background: #eef2ff;
+}
+
+.Home-nav-menu-button:hover .Home-nav-menu-icon {
+  opacity: 1;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(59%)
+    sepia(86%)
+    saturate(1625%)
+    hue-rotate(200deg)
+    brightness(102%)
+    contrast(101%);
+}
+
 /* =========================
    アイコン仕切り
 ========================= */
 
-.nav-item {
+.Home-nav-item {
   position: relative;
 
   display: flex;
@@ -480,7 +479,7 @@
   height: 100%;
 }
 
-.nav-item::before {
+.Home-nav-item::before {
   content: "";
   position: absolute;
 
@@ -495,15 +494,16 @@
   transition: opacity 0.25s;
 }
 
-.nav-item:hover::before {
+.Home-nav-item:hover::before {
   opacity: 1;
 }
 
-.nav-icon-img {
+.Home-nav-icon-img {
   position: relative;
   z-index: 1;
 }
-.nav-item:not(:last-child)::after {
+
+.Home-nav-item:not(:last-child)::after {
   content: "";
 
   position: absolute;

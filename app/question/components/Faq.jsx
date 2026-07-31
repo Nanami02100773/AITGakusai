@@ -18,9 +18,9 @@ const Faq = () => {
   };
 
   return (
-    <div className="faq-wrapper">
-      <h1 className="faq-box-title">よくある質問</h1>
-      <div className="faq-container">
+    <div className="Question-Faq-wrapper">
+      <h1 className="Question-Faq-title">よくある質問</h1>
+      <div className="Question-Faq-list">
         {faqData.map((section, index) => (
           <FaqSection
             key={index}

@@ -1,7 +1,7 @@
 /* =================================================
-   全体
+   セクション
 ================================================= */
-.Home-timetable-section {
+.Home-Timetable-section {
   position: relative;
 
   padding: 30px 0 10px;
@@ -12,19 +12,14 @@
   overflow: visible;
 }
 
-
-
-
-
 /* =================================================
-   メインBOX
-   ← この値で開始位置を調整
+   コンテナ
 ================================================= */
-.Home-box {
+.Home-Timetable-container {
   position: relative;
   z-index: 2;
 
-  width: 95%; 
+  width: 95%;
   max-width: 640px;
 
   margin-left: auto;
@@ -49,46 +44,40 @@
 
   border:
     1px solid rgba(230,236,255,0.9);
-
- 
 }
 
 /* =================================================
    中身を前面へ
 ================================================= */
-.Home-box > * {
+.Home-Timetable-container > * {
   position: relative;
   z-index: 2;
 }
-
 
 /* =================================================
    スクロールバー
 ================================================= */
 
-/* Chrome / Edge / Safari */
-.Home-box::-webkit-scrollbar {
+.Home-Timetable-container::-webkit-scrollbar {
   width: 6px;
 }
 
-.Home-box::-webkit-scrollbar-track {
+.Home-Timetable-container::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.Home-box::-webkit-scrollbar-thumb {
+.Home-Timetable-container::-webkit-scrollbar-thumb {
   background: #ff9fb5;
   border-radius: 999px;
 }
 
-/* 上下ボタン（三角）削除 */
-.Home-box::-webkit-scrollbar-button {
+.Home-Timetable-container::-webkit-scrollbar-button {
   display: none;
   width: 0;
   height: 0;
 }
 
-/* Firefox */
-.Home-box {
+.Home-Timetable-container {
   scrollbar-color: #ff9fb5 transparent;
   scrollbar-width: thin;
 }
@@ -96,21 +85,20 @@
 /* =================================================
    日ごとの余白
 ================================================= */
-.Home-box > div + div {
+.Home-Timetable-container > div + div {
   margin-top: 24px;
 }
 
 /* =================================================
    日付タイトル
 ================================================= */
-.Home-day-title {
+.Home-Timetable-dayTitle {
   position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* ↓ これを変更 */
   width: 100%;
 
   margin: 10px auto 20px;
@@ -123,8 +111,8 @@
 /* =================================================
    タイトル左右ライン
 ================================================= */
-.Home-day-title::before,
-.Home-day-title::after {
+.Home-Timetable-dayTitle::before,
+.Home-Timetable-dayTitle::after {
   content: "";
 
   width: 80px;
@@ -134,7 +122,7 @@
 
   border-radius: 999px;
 
-  background:#7f95ff;
+  background: #7f95ff;
 
   opacity: 0.9;
 }
@@ -142,21 +130,21 @@
 /* =================================================
    左ライン
 ================================================= */
-.Home-day-title::before {
+.Home-Timetable-dayTitle::before {
   transform: translateX(-5px);
 }
 
 /* =================================================
    右ライン
 ================================================= */
-.Home-day-title::after {
+.Home-Timetable-dayTitle::after {
   transform: translateX(5px);
 }
 
 /* =================================================
    下の白プレート
 ================================================= */
-.Home-day-title span {
+.Home-Timetable-dayTitle span {
   position: relative;
   z-index: 2;
 
@@ -181,10 +169,9 @@
 /* =================================================
    日付文字
 ================================================= */
-.Home-day-title span b {
+.Home-Timetable-dayTitle span b {
   position: relative;
 
-  /* ↓ 文字位置調整 */
   top: 6px;
 
   color: #3d4679;
@@ -198,14 +185,14 @@
 /* =================================================
    2日目だけ上余白
 ================================================= */
-.Home-day-title-second {
+.Home-Timetable-dayTitleSecond {
   margin-top: 50px;
 }
 
 /* =================================================
    上ラベル
 ================================================= */
-.Home-day-title span small {
+.Home-Timetable-dayTitle span small {
   position: absolute;
   top: -10px;
   left: 50%;
@@ -239,7 +226,7 @@
 /* =================================================
    リスト
 ================================================= */
-.Home-list {
+.Home-Timetable-list {
   display: flex;
   flex-direction: column;
 
@@ -249,7 +236,7 @@
 /* =================================================
    行カード
 ================================================= */
-.Home-row {
+.Home-Timetable-item {
   position: relative;
 
   display: flex;
@@ -278,7 +265,7 @@
 }
 
 /* 左アクセント */
-.Home-row::before {
+.Home-Timetable-item::before {
   content: "";
 
   position: absolute;
@@ -300,7 +287,7 @@
 /* =================================================
    時間
 ================================================= */
-.Home-time {
+.Home-Timetable-time {
   min-width: 118px;
 
   margin-left: 14px;
@@ -327,7 +314,7 @@
 /* =================================================
    アイコン
 ================================================= */
-.Home-icon {
+.Home-Timetable-icon {
   position: relative;
 
   width: 40px;
@@ -351,7 +338,7 @@
     0 2px 8px rgba(102, 110, 176, 0.08);
 }
 
-.Home-icon-img {
+.Home-Timetable-iconImage {
   width: 35px;
   height: 35px;
 
@@ -362,7 +349,7 @@
 /* =================================================
    内容
 ================================================= */
-.Home-content {
+.Home-Timetable-content {
   position: relative;
 
   flex: 1;
@@ -377,7 +364,7 @@
   color: #3d4679;
 }
 
-.Home-content::before {
+.Home-Timetable-content::before {
   content: "";
 
   position: absolute;

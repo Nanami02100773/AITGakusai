@@ -1,20 +1,21 @@
 /* =========================
    タイトル
 ========================= */
-.Home-Title-section {
+.Stage-Detail-title,
+.Stage-Detail-subtitle {
   font-family: var(--font-rounded);
 }
 
 /* =========================
    お知らせ本文
 ========================= */
-.Home-Notice-text {
+.Stage-Detail-text {
   font-family: var(--font-rounded);
 }
 
 /* =========================
    お知らせ番号
 ========================= */
-.Home-Notice-number {
+.Stage-Detail-number {
   font-family: "Orbitron", sans-serif;
 }

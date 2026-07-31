@@ -33,7 +33,7 @@ body::before {
    ページ全体
 ========================= */
 
-.question-page {
+.Question-MascotDetail-page {
   margin: -23px auto 0;
   padding: 20px;
 }
@@ -42,7 +42,7 @@ body::before {
    ラッパー
 ========================= */
 
-.question-card-wrapper {
+.Question-MascotDetail-card-wrapper {
   position: relative;
 
   width: 320px;
@@ -56,7 +56,7 @@ body::before {
    装飾コンテナ
 ========================= */
 
-.question-decoration {
+.Question-MascotDetail-decoration {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -66,11 +66,11 @@ body::before {
    青い台座
 ========================= */
 
-.question-top-base {
+.Question-MascotDetail-top-base {
   position: absolute;
 
   top: -155px;
-  right:50px;
+  right: 50px;
 
   width: 250px;
   height: 23px;
@@ -86,7 +86,7 @@ body::before {
    水色ストライプ
 ========================= */
 
-.question-top-dots {
+.Question-MascotDetail-top-dots {
   position: absolute;
 
   top: -155px;
@@ -109,12 +109,11 @@ body::before {
   z-index: -1;
 }
 
-
 /* =========================
    左側の白い装飾
 ========================= */
 
-.question-card-white-left {
+.Question-MascotDetail-card-white-left {
   position: absolute;
 
   top: -250px;
@@ -135,7 +134,7 @@ body::before {
    中央の斜め白パーツ
 ========================= */
 
-.question-card-white-center {
+.Question-MascotDetail-card-white-center {
   position: absolute;
 
   top: -250px;
@@ -166,7 +165,7 @@ body::before {
    青い斜めパーツ
 ========================= */
 
-.question-card-blue-center {
+.Question-MascotDetail-card-blue-center {
   position: absolute;
 
   top: -248px;

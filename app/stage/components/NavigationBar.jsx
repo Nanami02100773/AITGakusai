@@ -44,29 +44,29 @@ const NavigationBar = () => {
 
   return (
     <>
-      <header className="top-bar">
+      <header className="NavigationBar-Header-bar">
         <button
-          className="nav-back-button"
+          className="NavigationBar-Button-back"
           onClick={() => router.back()}
         >
           <img
             src="/NavigationIcons/back.png"
             alt="back"
-            className="nav-back-icon"
+            className="NavigationBar-Image-backIcon"
           />
         </button>
 
         <div
-          className={`top-bar-center ${
+          className={`NavigationBar-Header-center ${
             index % logos.length === 0
-              ? "active-0"
+              ? "NavigationBar-State-active0"
               : index % logos.length === 1
-              ? "active-1"
-              : "active-2"
+              ? "NavigationBar-State-active1"
+              : "NavigationBar-State-active2"
           }`}
         >
           <div
-            className="logo-track"
+            className="NavigationBar-Logo-track"
             style={{
               transform: `translate3d(0,-${index * 36}px,0)`,
               transition: isTransitioning
@@ -76,12 +76,13 @@ const NavigationBar = () => {
           >
             {loopLogos.map((src, i) => (
               <div
-                className="logo-slide"
+                className="NavigationBar-Logo-slide"
                 key={i}
               >
                 <img
                   src={src}
                   alt=""
+                  className="NavigationBar-Image-logo"
                 />
               </div>
             ))}
@@ -89,59 +90,59 @@ const NavigationBar = () => {
         </div>
       </header>
 
-      <nav className="bottom-nav">
+      <nav className="NavigationBar-Nav-bottom">
         <Link
           href="/home"
-          className="nav-item"
+          className="NavigationBar-Nav-item"
         >
           <img
             src="/NavigationIcons/home.png"
             alt="home"
-            className="nav-icon-img nav-home-icon"
+            className="NavigationBar-Image-navIcon NavigationBar-Image-homeIcon"
           />
         </Link>
 
         <Link
           href="/stage"
-          className="nav-item"
+          className="NavigationBar-Nav-item"
         >
           <img
             src="/NavigationIcons/stage.png"
             alt="stage"
-            className="nav-icon-img nav-stage-icon"
+            className="NavigationBar-Image-navIcon NavigationBar-Image-stageIcon"
           />
         </Link>
 
         <Link
           href="/map"
-          className="nav-item"
+          className="NavigationBar-Nav-item"
         >
           <img
             src="/NavigationIcons/map.png"
             alt="map"
-            className="nav-icon-img nav-map-icon"
+            className="NavigationBar-Image-navIcon NavigationBar-Image-mapIcon"
           />
         </Link>
 
         <Link
           href="/Project2"
-          className="nav-item"
+          className="NavigationBar-Nav-item"
         >
           <img
             src="/NavigationIcons/calendar.png"
             alt="calendar"
-            className="nav-icon-img nav-calendar-icon"
+            className="NavigationBar-Image-navIcon NavigationBar-Image-calendarIcon"
           />
         </Link>
 
         <Link
           href="/question"
-          className="nav-item"
+          className="NavigationBar-Nav-item"
         >
           <img
             src="/NavigationIcons/chat.png"
             alt="chat"
-            className="nav-icon-img nav-chat-icon"
+            className="NavigationBar-Image-navIcon NavigationBar-Image-chatIcon"
           />
         </Link>
       </nav>

@@ -18,32 +18,34 @@ const FaqSection = ({
   toggleQuestion,
 }) => {
   return (
-    <div className="faq-item-wrapper">
+    <div className="Question-FaqSection-item">
       {/* セクションヘッダー */}
       <button
-        className="faq-item-header"
+        className="Question-FaqSection-header"
         onClick={() => toggleSection(sectionIndex)}
       >
-        <div className="faq-left">
-          <div className="faq-icon">
+        <div className="Question-FaqSection-left">
+          <div className="Question-FaqSection-icon">
             <span className={michroma.className}>Q</span>
           </div>
 
-          <span className="faq-title">
+          <span className="Question-FaqSection-title">
             {section.title}
           </span>
         </div>
 
-        <div className="faq-toggle">
+        <div className="Question-FaqSection-toggle">
           <span
-            className={`arrow ${isOpen ? "open" : ""}`}
+            className={`Question-FaqSection-arrow ${
+              isOpen ? "open" : ""
+            }`}
           />
         </div>
       </button>
 
       {/* 開いた時 */}
       {isOpen && (
-        <div className="faq-question-list">
+        <div className="Question-FaqSection-question-list">
           {section.items.map((pair, qIndex) => {
             const qKey = `${sectionIndex}-${qIndex}`;
             const isQOpen = openQuestions[qKey];
@@ -51,17 +53,19 @@ const FaqSection = ({
             return (
               <div
                 key={qKey}
-                className="faq-pair"
+                className="Question-FaqSection-pair"
               >
                 {/* 質問 */}
                 <button
-                  className={`faq-question ${isQOpen ? "open" : ""}`}
+                  className={`Question-FaqSection-question ${
+                    isQOpen ? "open" : ""
+                  }`}
                   onClick={() => toggleQuestion(qKey)}
                 >
-                  <div className="faq-question-content">
-                    <span className="q-circle" />
+                  <div className="Question-FaqSection-question-content">
+                    <span className="Question-FaqSection-question-circle" />
 
-                    <div className="faq-question-label">
+                    <div className="Question-FaqSection-question-label">
                       {pair.q}
                     </div>
                   </div>
@@ -69,16 +73,16 @@ const FaqSection = ({
 
                 {/* 回答 */}
                 {isQOpen && (
-                  <div className="faq-answer-card">
-              <div className="faq-answer-header">
-  <div className="faq-answer-icon">
-    <span className={michroma.className}>A</span>
-  </div>
+                  <div className="Question-FaqSection-answer-card">
+                    <div className="Question-FaqSection-answer-header">
+                      <div className="Question-FaqSection-answer-icon">
+                        <span className={michroma.className}>A</span>
+                      </div>
 
-  <div className="faq-answer-text">
-    {pair.a}
-  </div>
-</div>
+                      <div className="Question-FaqSection-answer-text">
+                        {pair.a}
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

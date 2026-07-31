@@ -14,6 +14,22 @@ const NoticeSection = () => {
     );
 
     if (saved.length === 0) {
+
+      // =================================================
+      // お知らせ編集欄
+      //
+      // ▼変更してよい
+      // title → お知らせ一覧に表示されるタイトル
+      // body  → お知らせ詳細ページに表示される文章
+      //
+      // ▼お知らせを追加する方法
+      // 下の {} を1セットコピーして追加する
+      //
+      // ▼変更しない
+      // id
+      // category
+      // =================================================
+
       const initialNotices = [
         {
           id: "welcome-1",
@@ -41,6 +57,7 @@ const NoticeSection = () => {
       );
 
       setNotices(initialNotices);
+
     } else {
       const filtered = saved.filter(
         (n) => n.category === "all"
@@ -51,23 +68,26 @@ const NoticeSection = () => {
   }, []);
 
   return (
-    <section className="Home-notice-section">
-      <div className="Home-section-title-wrapper">
+    <section className="Home-Notice-section">
+
+      {/* タイトル */}
+      <div className="Home-Notice-title-wrapper">
         <div className="Home-section-title">
           お知らせ
         </div>
       </div>
 
-      <div className="Home-box3">
+      {/* お知らせ一覧 */}
+      <div className="Home-Notice-list">
         {notices.map((notice, index) => (
           <Link
             key={notice.id}
             href={`/home/notice/${notice.id}`}
-            className={`Home-notice-item n${index + 1}`}
+            className={`Home-Notice-item n${index + 1}`}
           >
             <div
               className={`
-                notice-number
+                Home-Notice-number
                 n${index + 1}
                 ${orbitron.className}
               `}
@@ -75,18 +95,19 @@ const NoticeSection = () => {
               {String(index + 1).padStart(2, "0")}
             </div>
 
-            <div className="notice-line" />
-
-            <div className="notice-text">
+            <div className="Home-Notice-text">
               {notice.title}
             </div>
 
-            <div className="notice-dots" />
+            <div className="Home-Notice-dots" />
 
-            <div className="notice-arrow">›</div>
+            <div className="Home-Notice-arrow">
+              ›
+            </div>
           </Link>
         ))}
       </div>
+
     </section>
   );
 };

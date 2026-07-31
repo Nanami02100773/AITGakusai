@@ -1,7 +1,7 @@
 /* =========================
    トップバー
 ========================= */
-.top-bar {
+.NavigationBar-Header-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@
 /* =========================
    戻るボタン
 ========================= */
-.nav-back-button {
+.NavigationBar-Button-back {
   width: 30px;
   height: 35px;
 
@@ -40,7 +40,7 @@
   transition: all 0.25s ease;
 }
 
-.nav-back-icon {
+.NavigationBar-Image-backIcon {
   width: 35px;
   height: 35px;
 
@@ -48,17 +48,16 @@
 
   opacity: 0.7;
 
-  filter:
-    grayscale(100%);
+  filter: grayscale(100%);
 
   transition: all 0.25s ease;
 }
 
-.nav-back-button:hover {
+.NavigationBar-Button-back:hover {
   background: #eef2ff;
 }
 
-.nav-back-button:hover .nav-back-icon {
+.NavigationBar-Button-back:hover .NavigationBar-Image-backIcon {
   opacity: 1;
 
   filter:
@@ -75,7 +74,7 @@
 /* =========================
    中央ロゴ
 ========================= */
-.top-bar-center {
+.NavigationBar-Header-center {
   position: absolute;
 
   left: 50%;
@@ -85,13 +84,13 @@
   width: 120px;
   height: 36px;
 
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   overflow: hidden;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 8px;
 
   pointer-events: none;
 
@@ -101,7 +100,7 @@
 /* =========================
    ロゴアニメーション
 ========================= */
-.logo-track {
+.NavigationBar-Logo-track {
   display: flex;
   flex-direction: column;
 
@@ -111,18 +110,18 @@
   will-change: transform;
 }
 
-.logo-slide {
+.NavigationBar-Logo-slide {
   width: 100%;
   height: 36px;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   flex-shrink: 0;
 }
 
-.logo-slide img {
+.NavigationBar-Image-logo {
   max-width: 100%;
   max-height: 100%;
 
@@ -132,16 +131,16 @@
 /* =========================
    ロゴ背景色
 ========================= */
-.top-bar-center.active-0,
-.top-bar-center.active-1,
-.top-bar-center.active-2 {
+.NavigationBar-Header-center.NavigationBar-State-active0,
+.NavigationBar-Header-center.NavigationBar-State-active1,
+.NavigationBar-Header-center.NavigationBar-State-active2 {
   background: #e1e1e1;
 }
 
 /* =========================
    下部ナビ
 ========================= */
-.bottom-nav {
+.NavigationBar-Nav-bottom {
   position: fixed;
 
   bottom: 0;
@@ -150,12 +149,11 @@
   width: 100%;
   height: 70px;
 
-  background: #ffffff;
-
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-
   align-items: center;
+
+  background: #ffffff;
 
   border-radius: 20px 20px 0 0;
 
@@ -167,7 +165,7 @@
 /* =========================
    ナビアイテム
 ========================= */
-.nav-item {
+.NavigationBar-Nav-item {
   position: relative;
 
   display: flex;
@@ -182,7 +180,7 @@
 /* =========================
    ホバー背景
 ========================= */
-.nav-item::before {
+.NavigationBar-Nav-item::before {
   content: "";
 
   position: absolute;
@@ -195,15 +193,16 @@
   transition: opacity 0.25s ease;
 }
 
-.nav-item:hover::before {
+.NavigationBar-Nav-item:hover::before {
   opacity: 1;
 }
 
 /* =========================
    アイコン共通
 ========================= */
-.nav-icon-img {
+.NavigationBar-Image-navIcon {
   position: relative;
+
   z-index: 1;
 
   display: block;
@@ -229,27 +228,27 @@
 /* =========================
    アイコンサイズ
 ========================= */
-.nav-home-icon {
+.NavigationBar-Image-homeIcon {
   width: 70px;
   height: 70px;
 }
 
-.nav-stage-icon {
+.NavigationBar-Image-stageIcon {
   width: 65px;
   height: 65px;
 }
 
-.nav-map-icon {
+.NavigationBar-Image-mapIcon {
   width: 80px;
   height: 80px;
 }
 
-.nav-calendar-icon {
+.NavigationBar-Image-calendarIcon {
   width: 70px;
   height: 70px;
 }
 
-.nav-chat-icon {
+.NavigationBar-Image-chatIcon {
   width: 80px;
   height: 80px;
 }
@@ -257,11 +256,11 @@
 /* =========================
    アクティブ状態
 ========================= */
-.nav-item.active {
+.NavigationBar-Nav-item.active {
   position: relative;
 }
 
-.nav-item.active::after {
+.NavigationBar-Nav-item.active::after {
   content: "";
 
   position: absolute;
@@ -282,9 +281,9 @@
 /* =========================
    アイコン色変更
 ========================= */
-.nav-item:hover .nav-icon-img,
-.nav-item.active .nav-icon-img,
-.nav-back-button:hover .nav-back-icon {
+.NavigationBar-Nav-item:hover .NavigationBar-Image-navIcon,
+.NavigationBar-Nav-item.active .NavigationBar-Image-navIcon,
+.NavigationBar-Button-back:hover .NavigationBar-Image-backIcon {
   opacity: 1;
 
   filter:
@@ -301,20 +300,20 @@
 /* =========================
    タップ時
 ========================= */
-.nav-item:active {
+.NavigationBar-Nav-item:active {
   transform: translateY(-2px);
 }
 
 /* =========================
    アイコン区切り線
 ========================= */
-.nav-item:not(:last-child)::after {
+.NavigationBar-Nav-item:not(:last-child)::after {
   content: "";
 
   position: absolute;
 
-  right: 0;
   top: 50%;
+  right: 0;
 
   transform: translateY(-60%);
 

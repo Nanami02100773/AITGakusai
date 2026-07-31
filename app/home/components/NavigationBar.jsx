@@ -21,7 +21,6 @@ const NavigationBar = () => {
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // ロゴローテーション
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => prev + 1);
@@ -30,7 +29,6 @@ const NavigationBar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // 無限ループ
   useEffect(() => {
     if (index >= logos.length * 2) {
       setTimeout(() => {
@@ -48,69 +46,73 @@ const NavigationBar = () => {
 
   return (
     <>
-      <header className="top-bar">
+      <header className="Home-top-bar">
 
-   <button
-  className="nav-button nav-back-button"
-  onClick={() => router.back()}
->
-  <img
-    src="/NavigationIcons/back.png"
-    alt="back"
-    className="nav-back-icon"
-  />
-</button>
+        <button
+          className="Home-nav-button Home-nav-back-button"
+          onClick={() => router.back()}
+        >
+          <img
+            src="/NavigationIcons/back.png"
+            alt="back"
+            className="Home-nav-back-icon"
+          />
+        </button>
 
-        {/* ロゴ */}
         <div
-          className={`top-bar-center ${
+          className={`Home-top-bar-center ${
             index % logos.length === 0
-              ? "active-0"
+              ? "Home-active-0"
               : index % logos.length === 1
-              ? "active-1"
-              : "active-2"
+              ? "Home-active-1"
+              : "Home-active-2"
           }`}
         >
           <div
-            className="logo-track"
+            className="Home-logo-track"
             style={{
-  transform: `translate3d(0,-${index * 36}px,0)`,
-  transition: isTransitioning
-    ? "transform .5s ease-in-out"
-    : "none",
-}}
+              transform: `translate3d(0,-${index * 36}px,0)`,
+              transition: isTransitioning
+                ? "transform .5s ease-in-out"
+                : "none",
+            }}
           >
             {loopLogos.map((src, i) => (
-              <div className="logo-slide" key={i}>
+              <div className="Home-logo-slide" key={i}>
                 <img src={src} alt="" />
               </div>
             ))}
           </div>
         </div>
 
-       <button
-  className="nav-button nav-menu-button"
-  onClick={() => setIsMenuOpen((prev) => !prev)}
->
-  <img
-    src="/NavigationIcons/menu.png"
-    alt="menu"
-    className="nav-menu-icon"
-  />
-</button>
+        <button
+          className="Home-nav-button Home-nav-menu-button"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        >
+          <img
+            src="/NavigationIcons/menu.png"
+            alt="menu"
+            className="Home-nav-menu-icon"
+          />
+        </button>
+
       </header>
 
       {isMenuOpen && (
         <div
-          className="overlay"
+          className="Home-overlay"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
 
-      <div className={`side-menu ${isMenuOpen ? "open" : ""}`}>
-        <div className="menu-header">
+      <div
+        className={`Home-side-menu ${
+          isMenuOpen ? "Home-open" : ""
+        }`}
+      >
+        <div className="Home-menu-header">
           <button
-            className="menu-back"
+            className="Home-menu-back"
             onClick={() => setIsMenuOpen(false)}
           >
             ＜ 戻る
@@ -121,7 +123,7 @@ const NavigationBar = () => {
 
         <Link
           href="/Guide"
-          className="menu-item"
+          className="Home-menu-item"
           onClick={() => setIsMenuOpen(false)}
         >
           操作説明
@@ -129,54 +131,54 @@ const NavigationBar = () => {
 
         <Link
           href="/Login"
-          className="menu-item"
+          className="Home-menu-item"
           onClick={() => setIsMenuOpen(false)}
         >
           学祭用ログイン
         </Link>
       </div>
 
-      <nav className="bottom-nav">
+      <nav className="Home-bottom-nav">
 
-       <Link href="/home" className="nav-item">
-  <img
-    src="/NavigationIcons/home.png"
-    alt="home"
-    className="nav-icon-img nav-home-icon"
-  />
-</Link>
+        <Link href="/home" className="Home-nav-item">
+          <img
+            src="/NavigationIcons/home.png"
+            alt="home"
+            className="Home-nav-icon-img Home-nav-home-icon"
+          />
+        </Link>
 
-<Link href="/stage" className="nav-item">
-  <img
-    src="/NavigationIcons/stage.png"
-    alt="stage"
-    className="nav-icon-img nav-stage-icon"
-  />
-</Link>
+        <Link href="/stage" className="Home-nav-item">
+          <img
+            src="/NavigationIcons/stage.png"
+            alt="stage"
+            className="Home-nav-icon-img Home-nav-stage-icon"
+          />
+        </Link>
 
-<Link href="/map" className="nav-item">
-  <img
-    src="/NavigationIcons/map.png"
-    alt="map"
-    className="nav-icon-img nav-map-icon"
-  />
-</Link>
+        <Link href="/map" className="Home-nav-item">
+          <img
+            src="/NavigationIcons/map.png"
+            alt="map"
+            className="Home-nav-icon-img Home-nav-map-icon"
+          />
+        </Link>
 
-<Link href="/Project2" className="nav-item">
-  <img
-    src="/NavigationIcons/calendar.png"
-    alt="calendar"
-    className="nav-icon-img nav-calendar-icon"
-  />
-</Link>
+        <Link href="/Project2" className="Home-nav-item">
+          <img
+            src="/NavigationIcons/calendar.png"
+            alt="calendar"
+            className="Home-nav-icon-img Home-nav-calendar-icon"
+          />
+        </Link>
 
-<Link href="/question" className="nav-item">
-  <img
-    src="/NavigationIcons/chat.png"
-    alt="chat"
-    className="nav-icon-img nav-chat-icon"
-  />
-</Link>
+        <Link href="/question" className="Home-nav-item">
+          <img
+            src="/NavigationIcons/chat.png"
+            alt="chat"
+            className="Home-nav-icon-img Home-nav-chat-icon"
+          />
+        </Link>
 
       </nav>
     </>

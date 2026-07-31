@@ -1,0 +1,141 @@
+# ページ一覧
+
+## 共通ページ
+
+| フォルダ名 | 機能 |
+|-----------|------|
+| home | ホーム画面（トップページ） |
+| Guide | 来場案内 |
+| map | 会場マップ |
+| Notice | お知らせ一覧・詳細 |
+| Login | 管理者ログイン |
+| question | アンケート |
+
+---
+
+## 管理ページ
+
+| フォルダ名 | 機能 |
+|-----------|------|
+| admin | お知らせ管理・データ管理 |
+
+---
+
+## ステージ関連
+
+| フォルダ名 | 機能 |
+|-----------|------|
+| stage | ステージ企画・出演者紹介・タイムテーブル |
+
+---
+
+## 企画ページ
+
+| フォルダ名 | 機能 |
+|-----------|------|
+| Project2 | 企画紹介ページ |
+| ProjectConcert | コンサート企画 |
+| ProjectDasstsu | 脱出ゲーム |
+| ProjectKenketsu | 献血企画 |
+| ProjectKoukaten | 工科展 |
+| ProjectKouyasai | 工夜祭 |
+| ProjectKurabuten | クラブ展 |
+| ProjectKyouyasai | 共催祭 |
+| ProjectLaughMusic | Laugh & Music |
+| ProjectMake | メイク企画 |
+| ProjectRakuiti | 楽市 |
+| ProjectStampRally | スタンプラリー |
+| ProjectTorezoru1 | トレジャー企画 |
+| ProjectWakuwakuLand | わくわくランド |
+
+---
+
+## 企業関連
+
+| フォルダ名 | 機能 |
+|-----------|------|
+| Business | 企業一覧 |
+| ProjectCompany | 企業ブース① |
+| ProjectCompany2 | 企業ブース② |
+| ProjectCompany3 | 企業ブース③ |
+| ProjectCompany4 | 企業ブース④ |
+
+---
+
+## その他
+
+| フォルダ名 | 機能 |
+|-----------|------|
+| BloodDonation | 献血特設ページ |
+
+---
+
+# フォルダ構成ルール
+
+app
+├─ home
+├─ Notice
+├─ stage
+├─ Project○○
+├─ admin
+└─ ...
+
+各ページ
+
+○○
+├─ components
+├─ page.jsx
+└─ page.css
+
+---
+
+# よく触る場所
+
+| 内容 | 場所 |
+|--------|--------|
+| ホーム画面 | home |
+| お知らせ | Notice、admin |
+| ステージ | stage |
+| 企画ページ | Project○○ |
+| マップ | map |
+| アンケート | question |
+
+---
+
+# 画像
+
+保存場所
+
+public/
+
+主なフォルダ
+
+Award
+homecarousel
+homecenterlogo
+homehero
+hometime
+NavigationIcons
+project
+projectsection
+stagecast
+stagetime
+
+---
+
+# 注意
+
+・home がアプリの中心
+
+・admin は管理者専用
+
+・Project○○ は企画ページ
+
+・新しいページを作るときは app 内にフォルダを追加
+
+・CSS と JSX は同じ名前にする
+
+例
+
+NoticeSection.jsx
+NoticeSection.css

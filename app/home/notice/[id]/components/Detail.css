@@ -1,83 +1,87 @@
-.home-notice-container {
+/* =========================================
+   コンテナ・カード
+========================================= */
+
+.Home-Detail-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   padding-top: 110px;
   padding-bottom: 96px;
-  
 }
 
-.home-notice-card {
+.Home-Detail-card {
   position: relative;
 
   width: 90%;
   max-width: 720px;
 
+  padding: 18px;
+
   background: #f9fbff;
 
   border-radius: 24px;
-
-  padding: 18px;
 }
 
-/* =========================================
-   サイバーフレーム
-========================================= */
-.home-notice-card::before {
+/* サイバーフレーム */
+.Home-Detail-card::before {
   content: "";
+
   position: absolute;
   inset: -20px;
+
   pointer-events: none;
 
   background:
+    linear-gradient(#b8c6ff,#b8c6ff)
+      top center / 100% 3px no-repeat,
 
-  linear-gradient(#b8c6ff,#b8c6ff)
-    top center / 100% 3px no-repeat,
+    linear-gradient(#b8c6ff,#b8c6ff)
+      bottom center / 100% 3px no-repeat,
 
-  linear-gradient(#b8c6ff,#b8c6ff)
-    bottom center / 100% 3px no-repeat,
+    linear-gradient(#b8c6ff,#b8c6ff)
+      left center / 3px 100% no-repeat,
 
-  linear-gradient(#b8c6ff,#b8c6ff)
-    left center / 3px 100% no-repeat,
+    linear-gradient(#b8c6ff,#b8c6ff)
+      right center / 3px 100% no-repeat,
 
-  linear-gradient(#b8c6ff,#b8c6ff)
-    right center / 3px 100% no-repeat,
+    linear-gradient(
+      135deg,
+      #6f8dff 0 40%,
+      transparent 40%
+    )
+      top left / 38px 38px no-repeat,
 
-  linear-gradient(
-    135deg,
-    #6f8dff 0 40%,
-    transparent 40%
-  )
-    top left / 38px 38px no-repeat,
+    linear-gradient(
+      -135deg,
+      #6f8dff 0 40%,
+      transparent 40%
+    )
+      top right / 38px 38px no-repeat,
 
-  linear-gradient(
-    -135deg,
-    #6f8dff 0 40%,
-    transparent 40%
-  )
-    top right / 38px 38px no-repeat,
+    linear-gradient(
+      45deg,
+      #6f8dff 0 40%,
+      transparent 40%
+    )
+      bottom left / 38px 38px no-repeat,
 
-  linear-gradient(
-    45deg,
-    #6f8dff 0 40%,
-    transparent 40%
-  )
-    bottom left / 38px 38px no-repeat,
-
-  linear-gradient(
-    -45deg,
-    #6f8dff 0 40%,
-    transparent 40%
-  )
-    bottom right / 38px 38px no-repeat;
+    linear-gradient(
+      -45deg,
+      #6f8dff 0 40%,
+      transparent 40%
+    )
+      bottom right / 38px 38px no-repeat;
 
   opacity: .95;
 }
-
 /* =========================================
-   上中央フレーム
+   フレーム・ヘッダー
 ========================================= */
-.home-notice-frame-top {
+
+/* 上フレーム */
+.Home-Detail-frame-top {
   position: absolute;
 
   top: -20px;
@@ -98,10 +102,8 @@
   );
 }
 
-/* =========================================
-   下中央フレーム
-========================================= */
-.home-notice-frame-bottom {
+/* 下フレーム */
+.Home-Detail-frame-bottom {
   position: absolute;
 
   bottom: -20px;
@@ -122,7 +124,8 @@
   );
 }
 
-.home-notice-card-bar {
+/* ヘッダー */
+.Home-Detail-header {
   position: relative;
 
   display: flex;
@@ -133,7 +136,7 @@
   margin-bottom: 18px;
   padding: 0 18px 0 0;
 
-  border-radius: 18px;
+  overflow: hidden;
 
   background: linear-gradient(
     180deg,
@@ -142,27 +145,28 @@
   );
 
   border: 1px solid #ececff;
+  border-radius: 18px;
 
-  overflow: hidden;
-
-box-shadow:
-  0 4px 10px rgba(120,120,180,0.1),
-  0 1px 4px rgba(120,120,180,0.10),
-  inset 0 1px 0 rgba(255,255,255,0.9);
+  box-shadow:
+    0 4px 10px rgba(120,120,180,.1),
+    0 1px 4px rgba(120,120,180,.1),
+    inset 0 1px 0 rgba(255,255,255,.9);
 }
 
-/* =========================================
-   左の青背景
-========================================= */
-.home-notice-card-bar::before {
+/* 左背景 */
+.Home-Detail-header::before {
   content: "";
 
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
 
   width: 85px;
   height: 90%;
+
+  background: #c8d0ff;
+
+  opacity: .95;
 
   clip-path: polygon(
     0 0,
@@ -170,79 +174,71 @@ box-shadow:
     72% 100%,
     0 100%
   );
-
-  opacity: 0.95;
-
-  background: #c8d0ff;
 }
 
 /* =========================================
-   番号
+   番号・タイトル
 ========================================= */
-.home-notice-number {
+
+/* 番号 */
+.Home-Detail-number {
   position: relative;
   z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 35px;
   height: 35px;
 
   margin-left: 14px;
 
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   flex-shrink: 0;
 
+  color: white;
   font-size: 15px;
   font-weight: 800;
-
-  color: white;
-
-  border: 2px solid rgba(255,255,255,0.95);
-
-  box-shadow:
-    0 6px 14px rgba(0,0,0,0.08),
-    inset 0 4px 8px rgba(255,255,255,0.3);
 
   background: linear-gradient(
     135deg,
     #5675ff,
     #3757ef
   );
+
+  border: 2px solid rgba(255,255,255,.95);
+  border-radius: 50%;
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,.08),
+    inset 0 4px 8px rgba(255,255,255,.3);
 }
 
-/* =========================================
-   番号後ろの斜めライン
-========================================= */
-.home-notice-number::before {
+/* 番号後ろのライン */
+.Home-Detail-number::before {
   content: "";
 
   position: absolute;
 
+  top: 50%;
+  left: -32px;
+
   width: 90px;
   height: 54px;
-
-  left: -32px;
-  top: 50%;
 
   transform:
     translateY(-46%)
     skewX(-13deg);
 
-  opacity: 0.6;
+  z-index: -1;
+
+  opacity: .6;
 
   border: 1.5px solid #c8d0ff;
-
-  z-index: -1;
 }
 
-/* =========================================
-   タイトル
-========================================= */
-.home-notice-card-bar-text {
+/* タイトル */
+.Home-Detail-title {
   position: relative;
   z-index: 3;
 
@@ -250,95 +246,68 @@ box-shadow:
 
   margin-left: 45px;
 
+  color: #353567;
   font-size: 14px;
   font-weight: 700;
 
-  color: #353567;
-
-  letter-spacing: 0.01em;
+  letter-spacing: .01em;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-
 /* =========================================
-   矢印
+   本文
 ========================================= */
-.notice-style-arrow {
-  position: relative;
-  z-index: 3;
 
-  font-size: 42px;
-  font-weight: 200;
+/* 本文カード */
+.Home-Detail-content {
+  min-height: 280px;
 
-  margin-left: 10px;
+  padding: 24px;
 
-  line-height: 1;
-
-  color: #4f6dff;
-}
-
-/* =========================================
-   本文カード
-========================================= */
-.home-notice-card-inner {
   background: linear-gradient(
     180deg,
     #ffffff,
     #f7f7ff
   );
 
+  border: 1.5px solid #ececff;
   border-radius: 18px;
 
-  padding: 24px;
-
-  min-height: 280px;
-
-  border: 1.5px solid #ececff;
-
   box-shadow:
-    0 4px 12px rgba(120,120,180,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.9);
+    0 4px 12px rgba(120,120,180,.08),
+    inset 0 1px 0 rgba(255,255,255,.9);
 }
 
-/* =========================================
-   サブタイトル
-========================================= */
-.home-notice-inner-title {
-  font-size: 13px;
-  font-weight: 700;
+/* サブタイトル */
+.Home-Detail-subtitle {
+  margin-bottom: 10px;
 
   color: #3f59b6;
-
-  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* =========================================
-   区切り線
-========================================= */
-.home-notice-divider {
+/* 区切り線 */
+.Home-Detail-divider {
   width: 100%;
   height: 2px;
 
-  background: #ff9fb5;
-
   margin-bottom: 20px;
+
+  background: #ff9fb5;
 }
 
-/* =========================================
-   本文
-========================================= */
-.home-notice-text {
+/* 本文 */
+.Home-Detail-text {
+  color: #4f5f90;
   font-size: 14px;
   font-weight: 500;
-
-  color: #4f5f90;
-
   line-height: 2;
 }

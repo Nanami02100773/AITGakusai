@@ -1,6 +1,6 @@
 "use client";
 
-import "./SurveySection.css";
+import "./Survey.css";
 
 export default function SurveySection() {
 

@@ -7,12 +7,12 @@ import {
   M_PLUS_Rounded_1c,
 } from "next/font/google";
 
-import HeroSection from "./components/HeroSection";
+import Hero from "./components/Hero";
 import NoticeSection from "./components/NoticeSection";
 import Carousel from "./components/Carousel";
 import Timetable from "./components/Timetable";
 import AwardSection from "./components/AwardSection";
-import ProfilePicture from "./components/ProfilePicture";
+import Sns from "./components/Sns";
 import NavigationBar from "./components/NavigationBar";
 import Loading from "./components/Loading";
 import Maintenance from "./components/Maintenance";
@@ -77,7 +77,7 @@ export default function Page() {
 
   return (
     <div className={rounded.className}>
-      <HeroSection image={images[index]} />
+      <Hero image={images[index]} />
 
       <Carousel />
 
@@ -87,7 +87,7 @@ export default function Page() {
 
       <AwardSection />
 
-      <ProfilePicture />
+      <Sns />
 
       <NavigationBar />
     </div>

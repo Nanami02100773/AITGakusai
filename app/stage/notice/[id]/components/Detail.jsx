@@ -1,4 +1,5 @@
 "use client";
+
 import "./Detail.css";
 
 export default function Detail({
@@ -7,39 +8,44 @@ export default function Detail({
   number,
 }) {
   return (
-    <div className="stage-notice-container">
-      <div className="stage-notice-card">
+    <div className="Stage-Detail-container">
+      <div className="Stage-Detail-card">
 
-        <div className="stage-notice-frame-top" />
-        <div className="stage-notice-frame-bottom" />
+        {/* フレーム */}
+        <div className="Stage-Detail-frame-top" />
+        <div className="Stage-Detail-frame-bottom" />
 
-        <div className="stage-notice-card-bar">
+        {/* ヘッダー */}
+        <div className="Stage-Detail-header">
 
-          <div
-            className={`
-              stage-notice-number
-            `}
-          >
+          {/* 番号 */}
+          <div className="Stage-Detail-number">
             {String(number || 0).padStart(2, "0")}
           </div>
 
-          <span className="stage-notice-card-bar-text">
+          {/* タイトル */}
+          <span className="Stage-Detail-title">
             {title}
           </span>
 
-
         </div>
 
-        <div className="stage-notice-card-inner">
-          <div className="stage-notice-inner-title">
+        {/* 本文 */}
+        <div className="Stage-Detail-content">
+
+          {/* サブタイトル */}
+          <div className="Stage-Detail-subtitle">
             {title}
           </div>
 
-          <div className="stage-notice-divider" />
+          {/* 区切り線 */}
+          <div className="Stage-Detail-divider" />
 
-          <p className="stage-notice-text">
+          {/* 本文テキスト */}
+          <p className="Stage-Detail-text">
             {body}
           </p>
+
         </div>
 
       </div>

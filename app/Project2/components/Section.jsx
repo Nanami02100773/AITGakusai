@@ -1,42 +1,43 @@
 "use client";
+
 import Link from "next/link";
-import "./Project2Section.css";
+import "./Section.css";
 
-export default function Project2Section() {
+export default function Section() {
   return (
-    <section className="Project2Section-root">
+    <section className="Project-Section-section">
 
-      <div className="Project2Section-container">
+      <div className="Project-Section-container">
 
-        {/* ===== タイトル ===== */}
-        <div className="Project2-section-title">
-          企画、紹介
+        {/* タイトル */}
+        <div className="Project-Section-title">
+          企画紹介
         </div>
 
-        {/* ===== 教室企画 ===== */}
-        <div className="Project2-box">
+        {/* 教室企画 */}
+        <div className="Project-Section-category">
 
-          <div className="Project2-feature">
+          <div className="Project-Section-header">
 
             <img
               src="/projectsection/school.png"
               alt="教室企画"
-              className="Project2-feature-image"
+              className="Project-Section-header-image"
             />
 
-            <div className="Project2-feature-text">
-              <div className="Project2-feature-title">
+            <div className="Project-Section-header-text">
+              <div className="Project-Section-header-title">
                 教室企画
               </div>
 
-              <div className="Project2-feature-desc">
+              <div className="Project-Section-header-description">
                 各教室で行われる展示や体験型の企画を楽しもう！
               </div>
             </div>
 
           </div>
 
-          <div className="Project2-grid">
+          <div className="Project-Section-grid">
 
             <Card
               title="スタンプラリー"
@@ -103,30 +104,30 @@ export default function Project2Section() {
 
         </div>
 
-        {/* ===== ステージ企画 ===== */}
-        <div className="Project2-box stage">
+        {/* ステージ企画 */}
+        <div className="Project-Section-category stage">
 
-          <div className="Project2-feature">
+          <div className="Project-Section-header">
 
             <img
               src="/projectsection/stage.png"
               alt="ステージ企画"
-              className="Project2-feature-image"
+              className="Project-Section-header-image"
             />
 
-            <div className="Project2-feature-text">
-              <div className="Project2-feature-title">
+            <div className="Project-Section-header-text">
+              <div className="Project-Section-header-title">
                 ステージ企画
               </div>
 
-              <div className="Project2-feature-desc">
+              <div className="Project-Section-header-description">
                 ライブやイベントなど、盛り上がる企画が盛りだくさん！
               </div>
             </div>
 
           </div>
 
-          <div className="Project2-grid">
+          <div className="Project-Section-grid">
 
             <Card
               title="LaughMusic"
@@ -152,13 +153,12 @@ export default function Project2Section() {
 
       </div>
 
-      <div className="Project2Section-line"></div>
+      <div className="Project-Section-line"></div>
 
     </section>
   );
 }
 
-/* ===== カード ===== */
 function Card({
   title,
   link,
@@ -168,24 +168,24 @@ function Card({
   return (
     <Link
       href={link}
-      className={`Project2-card ${className}`}
+      className={`Project-Section-card ${className}`}
     >
 
-      <div className="Project2-image fancy">
+      <div className="Project-Section-card-image-area fancy">
         <img
           src={image}
           alt={title}
-          className="Project2-card-image"
+          className="Project-Section-card-image"
         />
       </div>
 
-      <div className="Project2-bottom">
-        <p className="Project2-label">
+      <div className="Project-Section-card-footer">
+        <p className="Project-Section-card-title">
           {title}
         </p>
       </div>
 
-      <div className="Project2-arrow">
+      <div className="Project-Section-card-arrow">
         ＞
       </div>
 

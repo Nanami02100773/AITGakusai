@@ -2,7 +2,7 @@
    ページタイトル
 ========================= */
 
-.question-mascot-section-title {
+.Question-MascotCard-section-title {
   position: relative;
   z-index: 4;
 
@@ -42,7 +42,7 @@
    メインカード
 ======================================== */
 
-.question-card {
+.Question-MascotCard-card {
   width: 380px;
 
   background: #fff;
@@ -60,7 +60,7 @@
   box-sizing: border-box;
 }
 
-.question-card-inner {
+.Question-MascotCard-card-inner {
   width: 100%;
 
   box-sizing: border-box;
@@ -76,155 +76,155 @@
    キャラクター
 ======================================== */
 
-.question-hero{
-  display:flex;
-  align-items:center;
-  gap:15px;
+.Question-MascotCard-hero {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.question-image{
-  width:155px;
-  height:200px;
+.Question-MascotCard-image {
+  width: 155px;
+  height: 200px;
 
-  border-radius:22px;
+  border-radius: 22px;
 
-  border:2px solid #dce6ff;
+  border: 2px solid #dce6ff;
 
-  background:linear-gradient(
+  background: linear-gradient(
     180deg,
     #fafdff,
     #eef7ff
   );
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  overflow:hidden;
+  overflow: hidden;
 
   box-shadow:
     0 4px 12px rgba(100,140,255,.08);
 }
 
-.question-image img{
-  width:95%;
-  height:95%;
-  object-fit:contain;
+.Question-MascotCard-image img {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
 }
 
 /* ========================================
    テキスト
 ======================================== */
 
-.question-text{
-  flex:1;
-  min-width:0;
+.Question-MascotCard-text {
+  flex: 1;
+  min-width: 0;
 
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  position:relative;
+  position: relative;
 }
 
-.question-name-logo{
-  width:100%;
-  max-width:170px;
+.Question-MascotCard-name-logo {
+  width: 100%;
+  max-width: 170px;
 
-  height:auto;
+  height: auto;
 
-  display:block;
+  display: block;
 
-  margin:0 auto 12px;
+  margin: 0 auto 12px;
 }
 
-.question-text p{
-  margin:0;
+.Question-MascotCard-text p {
+  margin: 0;
 
-  text-align:center;
+  text-align: center;
 
-  font-size:11px;
+  font-size: 11px;
 
-  line-height:1.7;
+  line-height: 1.7;
 
-  color:#24346e;
+  color: #24346e;
 }
 
 /* ========================================
    特徴タイトル
 ======================================== */
 
-.question-feature-title{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.Question-MascotCard-feature-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  gap:12px;
+  gap: 12px;
 
-  margin:15px 0;
+  margin: 15px 0;
 }
 
-.question-line{
-  flex:1;
+.Question-MascotCard-line {
+  flex: 1;
 
-  height:2px;
+  height: 2px;
 
-  background:#c7dbff;
+  background: #c7dbff;
 
-  position:relative;
+  position: relative;
 }
 
-.question-line::before,
-.question-line::after{
-  content:"";
+.Question-MascotCard-line::before,
+.Question-MascotCard-line::after {
+  content: "";
 
-  position:absolute;
+  position: absolute;
 
-  top:50%;
+  top: 50%;
 
-  width:8px;
-  height:8px;
+  width: 8px;
+  height: 8px;
 
-  border-radius:50%;
+  border-radius: 50%;
 
-  background:#c7dbff;
+  background: #c7dbff;
 
-  transform:translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.question-line::before{
-  left:-4px;
+.Question-MascotCard-line::before {
+  left: -4px;
 }
 
-.question-line::after{
-  right:-4px;
+.Question-MascotCard-line::after {
+  right: -4px;
 }
 
-.question-feature-label{
-  display:inline-flex;
+.Question-MascotCard-feature-label {
+  display: inline-flex;
 
-  align-items:center;
-  justify-content:center;
+  align-items: center;
+  justify-content: center;
 
-  min-width:70px;
-  height:28px;
+  min-width: 70px;
+  height: 28px;
 
-  padding:0 18px;
+  padding: 0 18px;
 
-  background:linear-gradient(
+  background: linear-gradient(
     180deg,
     #5ea3ff,
     #4e8cff
   );
 
-  border:2px solid #7fb4ff;
+  border: 2px solid #7fb4ff;
 
-  border-radius:10px;
+  border-radius: 10px;
 
-  color:#fff;
+  color: #fff;
 
-  font-size:14px;
-  font-weight:900;
+  font-size: 14px;
+  font-weight: 900;
 
   box-shadow:
     0 4px 12px rgba(100,140,255,.18),
@@ -235,330 +235,334 @@
    グリッド
 ======================================== */
 
-.question-grid{
-  display:flex;
+.Question-MascotCard-grid {
+  display: flex;
 
-  gap:8px;
+  gap: 8px;
 
-  align-items:stretch;
+  align-items: stretch;
 }
 
-.question-left{
-  flex:.95;
+.Question-MascotCard-left {
+  flex: .95;
 }
 
-.question-right{
-  flex:1.05;
+.Question-MascotCard-right {
+  flex: 1.05;
 
-  height:215px;
+  height: 215px;
 
-  padding:8px;
+  padding: 8px;
 
-  background:#faf7ff;
+  background: #faf7ff;
 
-  border:2px solid #e6d9ff;
+  border: 2px solid #e6d9ff;
 
-  border-radius:10px;
+  border-radius: 10px;
 
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-.question-right ul{
-  margin:0;
-  padding:0;
+.Question-MascotCard-right ul {
+  margin: 0;
+  padding: 0;
 
-  list-style:none;
+  list-style: none;
 }
 
 /* ========================================
    左カード
 ======================================== */
 
-.question-item{
-  height:68px;
+.Question-MascotCard-item {
+  height: 68px;
 
-  padding:8px;
+  padding: 8px;
 
-  margin-bottom:5px;
+  margin-bottom: 5px;
 
-  border-radius:12px;
+  border-radius: 12px;
 
-  border:2px solid #eef3ff;
+  border: 2px solid #eef3ff;
 
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-.question-blue{
-  background:#eef5ff;
-  border-color:#c9dcff;
+.Question-MascotCard-blue {
+  background: #eef5ff;
+  border-color: #c9dcff;
 }
 
-.question-green{
-  background:#edf9f1;
-  border-color:#c9edd5;
+.Question-MascotCard-green {
+  background: #edf9f1;
+  border-color: #c9edd5;
 }
 
-.question-orange{
-  background:#fff3e9;
-  border-color:#ffd9bb;
+.Question-MascotCard-orange {
+  background: #fff3e9;
+  border-color: #ffd9bb;
 }
 
 /* =========================
    項目タイトル
 ========================= */
 
-.question-item-title{
-  display:flex;
-  align-items:center;
+.Question-MascotCard-item-title {
+  display: flex;
+  align-items: center;
 
-  gap:15px;
+  gap: 15px;
 
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
-.question-item-title img{
-  width:40px;
-  height:40px;
+.Question-MascotCard-item-title img {
+  width: 40px;
+  height: 40px;
 
-  object-fit:cover;
+  object-fit: cover;
 
-  border-radius:50%;
+  border-radius: 50%;
 
-  background:#fff;
+  background: #fff;
 
-  border:2px solid #dce6ff;
+  border: 2px solid #dce6ff;
 
-  padding:3px;
+  padding: 3px;
 
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-.question-blue .question-item-title img{
-  border-color:#8cb7ff;
-  box-shadow:0 0 8px rgba(79,132,255,.15);
+.Question-MascotCard-blue .Question-MascotCard-item-title img {
+  border-color: #8cb7ff;
+  box-shadow: 0 0 8px rgba(79,132,255,.15);
 }
 
-.question-green .question-item-title img{
-  border-color:#7fda9a;
-  box-shadow:0 0 8px rgba(73,192,111,.15);
+.Question-MascotCard-green .Question-MascotCard-item-title img {
+  border-color: #7fda9a;
+  box-shadow: 0 0 8px rgba(73,192,111,.15);
 }
 
-.question-orange .question-item-title img{
-  border-color:#ffbf8b;
-  box-shadow:0 0 8px rgba(255,148,73,.15);
+.Question-MascotCard-orange .Question-MascotCard-item-title img {
+  border-color: #ffbf8b;
+  box-shadow: 0 0 8px rgba(255,148,73,.15);
 }
 
-.question-item span{
-  display:block;
+.Question-MascotCard-item span {
+  display: block;
 
-  font-size:13px;
-  font-weight:700;
+  font-size: 13px;
+  font-weight: 700;
 
-  position:relative;
-  left:0px;
-  top:-5px;
+  position: relative;
+  left: 0px;
+  top: -5px;
 }
 
 /* 性別（青） */
-.question-blue span{
-  color:#4a83ff;
+
+.Question-MascotCard-blue span {
+  color: #4a83ff;
 }
 
 /* 性格（緑） */
-.question-green span{
-  color:#2bb673;
+
+.Question-MascotCard-green span {
+  color: #2bb673;
 }
 
 /* 好きなもの（オレンジ） */
-.question-orange span{
-  color:#ff8a3d;
+
+.Question-MascotCard-orange span {
+  color: #ff8a3d;
 }
-.question-item b{
-  display:block;
 
-  position:relative;
+.Question-MascotCard-item b {
+  display: block;
 
-  left:55px;   /* 左右調整 */
-  top:-16px;   /* 上下調整 */
+  position: relative;
 
-  font-size:10px;
+  left: 55px;
+  top: -16px;
 
-  color:#24346e;
+  font-size: 10px;
+
+  color: #24346e;
 }
 
 /* =========================
    その他タイトル
 ========================= */
 
-.question-other-title{
-  display:flex;
-  align-items:center;
+.Question-MascotCard-other-title {
+  display: flex;
+  align-items: center;
 
-  gap:8px;
+  gap: 8px;
 
-  margin:0 0 8px;
+  margin: 0 0 8px;
 
-  color:#a27cff;
+  color: #a27cff;
 
-  font-size:16px;
-  font-weight:800;
+  font-size: 16px;
+  font-weight: 800;
 }
 
-.question-other-title-icon{
-  width:40px;
-  height:40px;
+.Question-MascotCard-other-title-icon {
+  width: 40px;
+  height: 40px;
 
-  object-fit:cover;
+  object-fit: cover;
 
-  border-radius:50%;
+  border-radius: 50%;
 
-  background:#fff;
+  background: #fff;
 
-  border:2px solid #c9a7ff;
+  border: 2px solid #c9a7ff;
 
-  padding:3px;
+  padding: 3px;
 
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 /* =========================
    その他
 ========================= */
 
-.question-right ul{
-  margin:0;
-  padding:0;
+.Question-MascotCard-right ul {
+  margin: 0;
+  padding: 0;
 
-  list-style:none;
+  list-style: none;
 }
 
-.question-right li{
-  position:relative;
+.Question-MascotCard-right li {
+  position: relative;
 
-  padding-left:20px;
+  padding-left: 20px;
 
-  font-size:12px;
-  font-weight:700;
+  font-size: 12px;
+  font-weight: 700;
 
-  line-height:1.7;
+  line-height: 1.7;
 
-  color:#24346e;
+  color: #24346e;
 }
 
-.question-right li::before{
-  content:"";
+.Question-MascotCard-right li::before {
+  content: "";
 
-  position:absolute;
+  position: absolute;
 
-  left:4px;
-  top:7px;
+  left: 4px;
+  top: 7px;
 
-  width:7px;
-  height:7px;
+  width: 7px;
+  height: 7px;
 
-  border-radius:50%;
+  border-radius: 50%;
 
-  background:#a27cff;
+  background: #a27cff;
 }
 
 /* ========================================
    投票
 ======================================== */
 
-.question-vote{
-  margin-top:10px;
+.Question-MascotCard-vote {
+  margin-top: 10px;
 
-  padding:10px;
+  padding: 10px;
 
-  background:linear-gradient(
+  background: linear-gradient(
     180deg,
     #f8f9ff,
     #eef3ff
   );
 
-  border:2px solid #dde6ff;
+  border: 2px solid #dde6ff;
 
-  border-radius:10px;
+  border-radius: 10px;
 
-  text-align:center;
+  text-align: center;
 
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-.question-vote p{
-  margin:0 0 10px;
+.Question-MascotCard-vote p {
+  margin: 0 0 10px;
 
-  color:#4d86ff;
+  color: #4d86ff;
 
-  font-size:16px;
-  font-weight:800;
+  font-size: 16px;
+  font-weight: 800;
 }
 
-.question-vote button{
-  width:210px;
-  height:45px;
+.Question-MascotCard-vote button {
+  width: 210px;
+  height: 45px;
 
-  border:none;
+  border: none;
 
-  border-radius:999px;
+  border-radius: 999px;
 
-  background:linear-gradient(
+  background: linear-gradient(
     90deg,
     #4a83ff,
     #2d6eff
   );
 
-  color:#fff;
+  color: #fff;
 
-  font-size:20px;
-  font-weight:900;
+  font-size: 20px;
+  font-weight: 900;
 
-  cursor:pointer;
+  cursor: pointer;
 
   box-shadow:
     inset 0 2px 0 rgba(255,255,255,.4),
     0 8px 18px rgba(70,120,255,.25);
 
-  transition:.2s;
+  transition: .2s;
 
-  animation:voteGlow 3s ease-in-out infinite;
+  animation: voteGlow 3s ease-in-out infinite;
 }
 
-.question-vote button:hover{
-  transform:translateY(-2px);
+.Question-MascotCard-vote button:hover {
+  transform: translateY(-2px);
 }
 
-.question-vote button:active{
-  transform:scale(.97);
+.Question-MascotCard-vote button:active {
+  transform: scale(.97);
 }
 
-.question-vote small{
-  display:block;
+.Question-MascotCard-vote small {
+  display: block;
 
-  margin-top:8px;
+  margin-top: 8px;
 
-  color:#4d86ff;
+  color: #4d86ff;
 
-  font-size:12px;
+  font-size: 12px;
 }
 
 /* ========================================
    ボタンアニメーション
 ======================================== */
 
-@keyframes voteGlow{
-  0%{
-    filter:brightness(1);
-    transform:scale(1);
+@keyframes voteGlow {
+  0% {
+    filter: brightness(1);
+    transform: scale(1);
   }
 
-  50%{
-    filter:brightness(1.2);
-    transform:scale(1.03);
+  50% {
+    filter: brightness(1.2);
+    transform: scale(1.03);
   }
 
-  100%{
-    filter:brightness(1);
-    transform:scale(1);
+  100% {
+    filter: brightness(1);
+    transform: scale(1);
   }
 }

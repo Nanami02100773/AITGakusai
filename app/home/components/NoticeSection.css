@@ -1,17 +1,20 @@
-/* =================================================
-   セクション背景
-================================================= */
-.Home-notice-section {
-  background: #ffffff;
-  padding: 15px 0 20px;
+/* ==========================
+   お知らせセクション全体
+========================== */
+.Home-Notice-section {
   position: relative;
+
+  padding: 15px 0 20px;
+
+  background: #ffffff;
+
   overflow: visible;
 }
 
 /* =================================================
    メカフレーム
 ================================================= */
-.Home-notice-section::after {
+.Home-Notice-section::after {
   content: "";
 
   position: absolute;
@@ -31,221 +34,172 @@
   opacity: 0.92;
 
   filter:
-    drop-shadow(0 8px 18px rgba(160,175,255,0.12));
+    drop-shadow(
+      0 8px 18px rgba(160,175,255,0.12)
+    );
 
   background:
-/* =================================================
-   左上 青アクセント
-================================================= */
-linear-gradient(
-  135deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-top 3px left 3px / 23px 23px no-repeat,
 
-/* =================================================
-   右上 青アクセント
-================================================= */
-linear-gradient(
-  -135deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-top 3px right 3px / 23px 23px no-repeat,
+  /* 左上 青アクセント */
+  linear-gradient(
+    135deg,
+    #6f8dff 0 50%,
+    transparent 50% 100%
+  )
+  top 3px left 3px / 23px 23px no-repeat,
 
-/* =================================================
-   左下 青アクセント
-================================================= */
-linear-gradient(
-  45deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-bottom 8px left 3px / 23px 23px no-repeat,
+  /* 右上 青アクセント */
+  linear-gradient(
+    -135deg,
+    #6f8dff 0 50%,
+    transparent 50% 100%
+  )
+  top 3px right 3px / 23px 23px no-repeat,
 
-/* =================================================
-   右下 青アクセント
-================================================= */
-linear-gradient(
-  -45deg,
-  #6f8dff 0 50%,
-  transparent 50% 100%
-)
-bottom 8px right 3px / 23px 23px no-repeat,
+  /* 左下 青アクセント */
+  linear-gradient(
+    45deg,
+    #6f8dff 0 50%,
+    transparent 50% 100%
+  )
+  bottom 8px left 3px / 23px 23px no-repeat,
 
-/* =================================================
-   左上
-================================================= */
+  /* 右下 青アクセント */
+  linear-gradient(
+    -45deg,
+    #6f8dff 0 50%,
+    transparent 50% 100%
+  )
+  bottom 8px right 3px / 23px 23px no-repeat,
 
-/* =================================================
-   左上 外側ライン
-================================================= */
+  /* 左上 外側 上ライン */
+  linear-gradient(
+    135deg,
+    #b8c6ff 0 92%,
+    transparent 92% 100%
+  )
+  top 0 left 0 / 120px 3px no-repeat,
 
-/* 上ライン */
-linear-gradient(
-  135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top 0 left 0 / 120px 3px no-repeat,
+  /* 左上 外側 左ライン */
+  linear-gradient(
+    135deg,
+    #b8c6ff 0 92%,
+    transparent 92% 100%
+  )
+  top -10px left 0 / 3px 120px no-repeat,
 
-/* 左ライン */
-linear-gradient(
-  135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top -10px left 0 / 3px 120px no-repeat,
+  /* 左上 内側 上ライン */
+  linear-gradient(
+    135deg,
+    #d6deff 0 78%,
+    transparent 78% 100%
+  )
+  top 0 left 0 / 90px 10px no-repeat,
 
+  /* 左上 内側 左ライン */
+  linear-gradient(
+    135deg,
+    #d6deff 0 78%,
+    transparent 78% 100%
+  )
+  top -6px left 0 / 10px 90px no-repeat,
 
-/*/=================================================
-  太い内側フレーム
-=================================================*/
+  /* 右上 外側 上ライン */
+  linear-gradient(
+    -135deg,
+    #b8c6ff 0 92%,
+    transparent 92% 100%
+  )
+  top 0 right 0 / 120px 3px no-repeat,
 
-/* 上ライン（右側斜め） */
-linear-gradient(
-  135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top 0 left 0 / 90px 10px no-repeat,
+  /* 右上 外側 右ライン */
+  linear-gradient(
+    -135deg,
+    #b8c6ff 0 92%,
+    transparent 92% 100%
+  )
+  top -10px right 0 / 3px 120px no-repeat,
 
-/* 左ライン（下側斜め：向き変更） */
-linear-gradient(
-  135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top -6px left 0 / 10px 90px no-repeat,
+  /* 右上 内側 上ライン */
+  linear-gradient(
+    -135deg,
+    #d6deff 0 78%,
+    transparent 78% 100%
+  )
+  top 0 right 0 / 90px 10px no-repeat,
 
+  /* 右上 内側 右ライン */
+  linear-gradient(
+    -135deg,
+    #d6deff 0 78%,
+    transparent 78% 100%
+  )
+  top -6px right 0 / 10px 90px no-repeat,
 
+  /* 左下 外側 下ライン */
+  linear-gradient(
+    45deg,
+    #b8c6ff 0 92%,
+    transparent 92% 100%
+  )
+  bottom 5px left 0 / 120px 3px no-repeat,
 
-/* =================================================
-   右上
-================================================= */
+  /* 左下 外側 左ライン */
+  linear-gradient(
+    45deg,
+    #b8c6ff 0 92%,
+    transparent 92% 100%
+  )
+  bottom 5px left 0 / 3px 120px no-repeat,
 
-/* 外側ライン */
-linear-gradient(
-  -135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top 0 right 0 / 120px 3px no-repeat,
+  /* 左下 内側 下ライン */
+  linear-gradient(
+    45deg,
+    #d6deff 0 78%,
+    transparent 78% 100%
+  )
+  bottom 5px left 0 / 90px 10px no-repeat,
 
-linear-gradient(
-  -135deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-top -10px right 0 / 3px 120px no-repeat,
+  /* 左下 内側 左ライン */
+  linear-gradient(
+    45deg,
+    #d6deff 0 78%,
+    transparent 78% 100%
+  )
+  bottom 5px left 0 / 10px 90px no-repeat,
 
-/* =================================================
-   太い内側フレーム
-================================================= */
+  /* 右下 外側 下ライン */
+  linear-gradient(
+    -45deg,
+    #b8c6ff 0 92%,
+    transparent 92% 100%
+  )
+  bottom 5px right 0 / 120px 3px no-repeat,
 
-/* 上ライン */
-linear-gradient(
-  -135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top 0 right 0 / 90px 10px no-repeat,
+  /* 右下 外側 右ライン */
+  linear-gradient(
+    -45deg,
+    #b8c6ff 0 92%,
+    transparent 92% 100%
+  )
+  bottom 5px right 0 / 3px 120px no-repeat,
 
-/* 右ライン */
-linear-gradient(
-  -135deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-top -6px right 0 / 10px 90px no-repeat,
+  /* 右下 内側 下ライン */
+  linear-gradient(
+    -45deg,
+    #d6deff 0 78%,
+    transparent 78% 100%
+  )
+  bottom 5px right 0 / 90px 10px no-repeat,
 
-
-
-/* =================================================
-   左下
-================================================= */
-
-/* 外側ライン */
-linear-gradient(
-  45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 5px left 0 / 120px 3px no-repeat,
-
-linear-gradient(
-  45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 5px left 0 / 3px 120px no-repeat,
-
-
-/* =================================================
-   太い内側フレーム
-================================================= */
-
-/* 下ライン */
-linear-gradient(
-  45deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-bottom 5px left 0 / 90px 10px no-repeat,
-
-/* 左ライン */
-linear-gradient(
-  45deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-bottom 5px left 0 / 10px 90px no-repeat,
-
-
-
-/* =================================================
-   右下
-================================================= */
-
-/* 外側ライン */
-linear-gradient(
-  -45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 5px right 0 / 120px 3px no-repeat,
-
-linear-gradient(
-  -45deg,
-  #b8c6ff 0 92%,
-  transparent 92% 100%
-)
-bottom 5px right 0 / 3px 120px no-repeat,
-
-
-/* =================================================
-   太い内側フレーム
-================================================= */
-
-/* 下ライン */
-linear-gradient(
-  -45deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-bottom 5px right 0 / 90px 10px no-repeat,
-
-/* 右ライン */
-linear-gradient(
-  -45deg,
-  #d6deff 0 78%,
-  transparent 78% 100%
-)
-bottom 5px right 0 / 10px 90px no-repeat,
+  /* 右下 内側 右ライン */
+  linear-gradient(
+    -45deg,
+    #d6deff 0 78%,
+    transparent 78% 100%
+  )
+  bottom 5px right 0 / 10px 90px no-repeat;
 }
-
-
 
 /* =================================================
    タイトル
@@ -255,8 +209,8 @@ bottom 5px right 0 / 10px 90px no-repeat,
   z-index: 2;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   width: 240px;
   height: 44px;
@@ -269,22 +223,17 @@ bottom 5px right 0 / 10px 90px no-repeat,
     #6f8dff
   );
 
-  color: #fff;
-  font-size: 17px;
-  font-weight: bold;
-
-  /* ↓ 丸くする */
-  border-radius: 999px;
-
-  /* ↓ clip-path削除 */
-  clip-path: none;
-
   border: 2px solid rgba(255,255,255,0.55);
+  border-radius: 999px;
 
   box-shadow:
     0 8px 20px rgba(160,170,255,0.14),
     inset 0 2px 0 rgba(255,255,255,0.7),
     inset 0 -2px 0 rgba(255,255,255,0.55);
+
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
 
   overflow: hidden;
 }
@@ -292,92 +241,80 @@ bottom 5px right 0 / 10px 90px no-repeat,
 /* =================================================
    タイトルラッパー
 ================================================= */
-.Home-section-title-wrapper {
+.Home-Notice-title-wrapper {
   position: relative;
+
   width: fit-content;
 
-  /* 下余白だけ増やす */
   margin: 10px auto 40px;
 }
 
 /* =================================================
    背景ボックス
 ================================================= */
-.Home-box3 {
+.Home-Notice-list {
   position: relative;
   z-index: 2;
 
-  /* フレーム内に収まるよう少し小さく */
   width: calc(94% - 24px);
   max-width: 720px;
-  transform: translateY(2px);
+
+  height: 226px;
 
   margin: 0 auto;
 
-  /* 内側余白 */
   padding: 10px 18px;
 
-  /* ↓ 単色の薄い青に変更 */
- background: #e6eeff;
- 
+  background: #e6eeff;
+
+  transform: translateY(2px);
+
   overflow-y: auto;
   overflow-x: hidden;
-
-  /* フレーム高さと合わせる */
-  height: 226px;
 }
-
 
 /* =================================================
    スクロールバー
 ================================================= */
 
 /* Chrome / Edge / Safari */
-.Home-box3::-webkit-scrollbar {
+.Home-Notice-list::-webkit-scrollbar {
   width: 6px;
 }
 
-.Home-box3::-webkit-scrollbar-track {
+.Home-Notice-list::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.Home-box3::-webkit-scrollbar-thumb {
+.Home-Notice-list::-webkit-scrollbar-thumb {
   background: #ff9fb5;
+
   border-radius: 999px;
 }
 
-/* スマホSafari対策 */
-.Home-box3 {
+/* Firefox */
+.Home-Notice-list {
   scrollbar-color: #ff9fb5 transparent;
   scrollbar-width: thin;
 }
 
-
 /* =================================================
-   カードをフレームより下に
+   お知らせカード
 ================================================= */
-.Home-notice-item {
+.Home-Notice-item {
   position: relative;
   z-index: 2;
-  width: calc(100% + 14px);
-  margin-left: -7px;
-}
-
-/* =================================================
-   カード本体
-================================================= */
-.Home-notice-item {
-  position: relative;
 
   display: flex;
   align-items: center;
 
+  width: calc(100% + 14px);
   min-height: 64px;
 
+  margin-left: -7px;
   margin-bottom: 6px;
-  padding: 0 18px 0 0;
 
-  border-radius: 18px;
+  padding: 0 18px 0 0;
 
   background: linear-gradient(
     180deg,
@@ -385,20 +322,22 @@ bottom 5px right 0 / 10px 90px no-repeat,
     #f7f7ff
   );
 
-  text-decoration: none;
-  overflow: hidden;
-
   border: 1px solid #ececff;
+  border-radius: 18px;
 
   box-shadow:
     0 4px 12px rgba(120,120,180,0.08),
     inset 0 1px 0 rgba(255,255,255,0.9);
 
+  text-decoration: none;
+
+  overflow: hidden;
+
   transition: 0.25s ease;
 }
 
 /* ホバー */
-.Home-notice-item:hover {
+.Home-Notice-item:hover {
   transform: translateY(-2px);
 
   box-shadow:
@@ -408,15 +347,17 @@ bottom 5px right 0 / 10px 90px no-repeat,
 /* =================================================
    左の青背景
 ================================================= */
-.Home-notice-item::before {
+.Home-Notice-item::before {
   content: "";
 
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
 
   width: 85px;
   height: 90%;
+
+  background: #c8d0ff;
 
   clip-path: polygon(
     0 0,
@@ -426,14 +367,12 @@ bottom 5px right 0 / 10px 90px no-repeat,
   );
 
   opacity: 0.95;
-
-  background: #c8d0ff;
 }
 
 /* =================================================
    番号後ろの斜めライン
 ================================================= */
-.Home-notice-item .notice-number::before {
+.Home-Notice-item .notice-number::before {
   content: "";
 
   position: absolute;
@@ -441,63 +380,58 @@ bottom 5px right 0 / 10px 90px no-repeat,
   width: 90px;
   height: 54px;
 
-  left: -32px;
   top: 50%;
+  left: -32px;
+
+  border: 1.5px solid #c8d0ff;
+
+  opacity: 0.6;
 
   transform:
     translateY(-46%)
     skewX(-13deg);
-
-  opacity: 0.6;
-
-  border: 1.5px solid #c8d0ff;
 }
-
-
-
 
 /* =================================================
    番号
 ================================================= */
-.notice-number {
+.Home-Notice-number {
   position: relative;
   z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 35px;
   height: 35px;
 
   margin-left: 14px;
 
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   flex-shrink: 0;
-
-  font-size: 15px;
-  font-weight: 800;
-
-  color: white;
-
-  border: 2px solid rgba(255,255,255,0.95);
-
-  box-shadow:
-    0 6px 14px rgba(0,0,0,0.08),
-    inset 0 4px 8px rgba(255,255,255,0.3);
 
   background: linear-gradient(
     135deg,
     #5675ff,
     #3757ef
   );
+
+  border: 2px solid rgba(255,255,255,0.95);
+  border-radius: 50%;
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.08),
+    inset 0 4px 8px rgba(255,255,255,0.3);
+
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
 }
 
 /* =================================================
    テキスト
 ================================================= */
-.notice-text {
+.Home-Notice-text {
   position: relative;
   z-index: 3;
 
@@ -505,36 +439,36 @@ bottom 5px right 0 / 10px 90px no-repeat,
 
   margin-left: 45px;
 
+  color: #353567;
   font-size: 14px;
   font-weight: 700;
-
-  color: #353567;
-
   letter-spacing: 0.01em;
 }
 
 /* =================================================
    右側ドット装飾
 ================================================= */
-.notice-dots {
+.Home-Notice-dots {
   position: absolute;
 
-  right: 45px;
   top: 50%;
-
-  transform: translateY(-50%);
+  right: 45px;
 
   width: 40px;
   height: 40px;
 
-  opacity: 0.4;
-
+  background-image:
+    radial-gradient(
+      #9eaaff 1.5px,
+      transparent 1.5px
+    );
   background-size: 10px 10px;
+
+  opacity: 0.4;
 
   z-index: 2;
 
-  background-image:
-    radial-gradient(#9eaaff 1.5px, transparent 1.5px);
+  transform: translateY(-50%);
 
   mask-image: linear-gradient(
     135deg,
@@ -550,45 +484,16 @@ bottom 5px right 0 / 10px 90px no-repeat,
 }
 
 /* =================================================
-   右下ウェーブ装飾
-================================================= */
-.notice-wave {
-  position: absolute;
-
-  right: 0;
-  bottom: 0;
-
-  width: 72px;
-  height: 72px;
-
-  z-index: 1;
-
-  overflow: hidden;
-}
-
-
-
-
-/* =================================================
-   SVG位置
-================================================= */
-.notice-wave svg {
-  transform: translate(6px, 6px) scale(1.05);
-}
-
-/* =================================================
    矢印
 ================================================= */
-.notice-arrow {
+.Home-Notice-arrow {
   position: relative;
   z-index: 3;
 
-  font-size: 42px;
-  font-weight: 200;
-
   margin-left: 10px;
 
-  line-height: 1;
-
   color: #4f6dff;
+  font-size: 42px;
+  font-weight: 200;
+  line-height: 1;
 }
