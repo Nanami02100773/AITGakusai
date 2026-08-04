@@ -19,6 +19,8 @@ const App = () => {
     >
       <iframe
         src={url}
+        // 位置情報の取得 と クリップボードの書き込み(URL共有機能のため) を許可
+        allow="geolocation; clipboard-write"
         style={{
           width: "100%",
           height: "100%"
