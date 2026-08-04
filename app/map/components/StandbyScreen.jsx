@@ -6,7 +6,7 @@ import { useIframeParams } from '@/hooks/useIframeChildSearchParams';
 const App = () => {
   const searchParams = useSearchParams();
   // 読み込み時に持つ searchParams を iframe に渡す
-  const [url] = useState(`http://localhost:3001/?${searchParams.toString()}`);
+  const [url] = useState(`https://ait-guide.sysken.net/?${searchParams.toString()}`);
 
   useIframeParams();
 
