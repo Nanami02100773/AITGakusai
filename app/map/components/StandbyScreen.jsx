@@ -1,7 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { useSearchParams } from 'next/navigation';
+import { useIframeParams } from '@/hooks/useIframeChildSearchParams';
 
 const App = () => {
+  const searchParams = useSearchParams();
+  // 読み込み時に持つ searchParams を iframe に渡す
+  const [url] = useState(`http://localhost:3001/?${searchParams.toString()}`);
+
+  useIframeParams();
+
   return (
     <div
       style={{
@@ -10,7 +18,7 @@ const App = () => {
       }}
     >
       <iframe
-        src="https://ait-guide.sysken.net/?toId=1"
+        src={url}
         style={{
           width: "100%",
           height: "100%"
