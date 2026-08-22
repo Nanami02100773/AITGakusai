@@ -1,4 +1,5 @@
 import { M_PLUS_Rounded_1c } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 const rounded = M_PLUS_Rounded_1c({
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="ja">
       <body className={rounded.className}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
