@@ -1,0 +1,93 @@
+.enjoy-guide {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.enjoy-guide-card {
+  position: relative;
+
+  width: 290px;
+  min-height: 420px;
+
+  padding: 20px;
+
+  background: #fff;
+  border: 2px solid #ececf8;
+  border-radius: 24px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+}
+
+.enjoy-guide-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background: #6b6cff;
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enjoy-guide-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+
+  margin-bottom: 30px;
+}
+
+.enjoy-guide-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  height: 320px;
+}
+
+.enjoy-guide-text {
+  color: #444;
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 500;
+}
+
+.enjoy-guide-text p {
+  margin: 0;
+}
+
+.enjoy-guide-image {
+  width: 120px;
+  object-fit: contain;
+}
+
+.enjoy-guide-card::before,
+.enjoy-guide-card::after {
+  content: "✦";
+  position: absolute;
+  color: #ffd34f;
+  font-size: 22px;
+}
+
+.enjoy-guide-card::before {
+  top: 70px;
+  right: 30px;
+}
+
+.enjoy-guide-card::after {
+  bottom: 90px;
+  left: 25px;
+}

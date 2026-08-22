@@ -1,32 +1,91 @@
-/* 日付切り替え：ラッパー */
+/* =========================
+   日付切替
+========================= */
+
 .LaughMusicDate-toggle {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin: 10px 0 18px;
+  gap: 16px;
+
+  margin: 35px 0 20px;
 }
 
-/* ボタン通常状態 */
+/* =========================
+   ボタン
+========================= */
+
 .LaughMusicDate-toggle button {
-  padding: 10px 36px;
-  font-size: 13px;
-  background-color: #f7f7f7;
-  color: #444;
-  border: 1.5px solid #ccc;
-  border-radius: 16px;
+  min-width: 140px;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  border: 2px solid #d7e2ff;
+
+  background: #ffffff;
+
+  color: #6e7697;
+
+  font-size: 14px;
+  font-weight: 700;
+
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+
+  transition: all .25s ease;
+
+  box-shadow:
+    0 4px 12px rgba(120,140,255,.08),
+    inset 0 1px 0 rgba(255,255,255,.9);
 }
 
-/* ホバー時 */
+/* =========================
+   ホバー
+========================= */
+
 .LaughMusicDate-toggle button:hover {
-  background-color: #ededed;
+  border-color: #aac0ff;
+
+  box-shadow:
+    0 8px 18px rgba(120,140,255,.15);
 }
 
-/* 選択状態 */
+/* =========================
+   選択中
+========================= */
+
 .LaughMusicDate-toggle button.active {
-  background-color: #444;
-  color: #fff;
-  border-color: #444;
-  font-weight: 600;
+  background: linear-gradient(
+    135deg,
+    #86a7ff 0%,
+    #6f8dff 100%
+  );
+
+  color: #ffffff;
+
+  border-color: transparent;
+
+  box-shadow:
+    0 8px 18px rgba(111,141,255,.25),
+    inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 768px) {
+
+  .LaughMusicDate-toggle {
+    gap: 10px;
+  }
+
+  .LaughMusicDate-toggle button {
+    min-width: 120px;
+
+    padding: 10px 16px;
+
+    font-size: 13px;
+  }
+
 }

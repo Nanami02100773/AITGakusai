@@ -1,11 +1,39 @@
-.ProjectKurabuten-title {
-  width: 300px;
-  margin: 70px auto 16px auto; /* ← 上に80pxの空間を追加 */
-  background-color:  #999;
-  border-radius: 30px;
-  font-size: 2rem;
-  text-align: center;
-  padding: 12px 0;
-  color: white;
+.kurabuten-title {
+  position: absolute;
+
+  top: 70px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 260px;
+  height: 47px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  color: #fff;
+
+  font-size: 20px;
   font-weight: bold;
+
+  border-radius: 10px;
+
+  border: 2px solid rgba(255,255,255,0.55);
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,0.14),
+    inset 0 2px 0 rgba(255,255,255,0.7),
+    inset 0 -2px 0 rgba(255,255,255,0.55);
+
+  overflow: hidden;
 }

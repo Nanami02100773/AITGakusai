@@ -1,0 +1,124 @@
+/* メイン画像 */
+
+.Project-Event-image-area {
+  position: relative;
+
+  height: 350px;
+
+  overflow: hidden;
+}
+
+.Project-Event-image-area::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 60px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 245, 245, 0) 0%,
+    rgba(245, 245, 245, 0.6) 40%,
+    rgba(245, 245, 245, 0.6) 10%,
+    #f5f5f5 100%
+  );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* 画像 */
+
+.Project-Event-image {
+  object-fit: cover;
+}
+
+/* タイトル */
+
+.Project-Event-title {
+  position: absolute;
+
+  top: 70px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 260px;
+  height: 47px;
+
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  box-shadow:
+    0 8px 20px rgba(160, 170, 255, 0.14),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.55);
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  overflow: hidden;
+}
+
+/* 説明 */
+
+.Project-Event-description-box {
+  position: absolute;
+
+  bottom: 70px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  width: 90%;
+  max-width: 600px;
+
+  padding: 16px 18px;
+
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(0.5px);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.Project-Event-description-text {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+/* インジケーター */
+
+.Project-Event-card {
+}
+
+.Project-Event-indicator {
+}

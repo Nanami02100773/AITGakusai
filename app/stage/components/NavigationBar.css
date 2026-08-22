@@ -1,61 +1,329 @@
-/* 上部バー（トップバー） */
-.top-bar {
+/* =========================
+   トップバー
+========================= */
+.NavigationBar-Header-bar {
   position: fixed;
   top: 0;
+  left: 0;
+
   width: 100%;
   height: 50px;
-  background-color: #666;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  color: white;
-  padding: 0 15px;
+
+  padding: 0 10px;
+
+  background: #fff;
+
   z-index: 1000;
-  font-size: 20px;
 }
 
-/* 下部ナビゲーションバー */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #666;
+/* =========================
+   戻るボタン
+========================= */
+.NavigationBar-Button-back {
+  width: 30px;
+  height: 35px;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  border-top: 1px solid #999;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  transition: all 0.25s ease;
+}
+
+.NavigationBar-Image-backIcon {
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+
+  opacity: 0.7;
+
+  filter: grayscale(100%);
+
+  transition: all 0.25s ease;
+}
+
+.NavigationBar-Button-back:hover {
+  background: #eef2ff;
+}
+
+.NavigationBar-Button-back:hover .NavigationBar-Image-backIcon {
+  opacity: 1;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(59%)
+    sepia(86%)
+    saturate(1625%)
+    hue-rotate(200deg)
+    brightness(102%)
+    contrast(101%);
+}
+
+/* =========================
+   中央ロゴ
+========================= */
+.NavigationBar-Header-center {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 120px;
+  height: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  pointer-events: none;
+
+  transition: background-color 0.3s;
+}
+
+/* =========================
+   ロゴアニメーション
+========================= */
+.NavigationBar-Logo-track {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 36px;
+
+  will-change: transform;
+}
+
+.NavigationBar-Logo-slide {
+  width: 100%;
+  height: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.NavigationBar-Image-logo {
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+}
+
+/* =========================
+   ロゴ背景色
+========================= */
+.NavigationBar-Header-center.NavigationBar-State-active0,
+.NavigationBar-Header-center.NavigationBar-State-active1,
+.NavigationBar-Header-center.NavigationBar-State-active2 {
+  background: #e1e1e1;
+}
+
+/* =========================
+   下部ナビ
+========================= */
+.NavigationBar-Nav-bottom {
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+
+  background: #ffffff;
+
+  border-radius: 20px 20px 0 0;
+
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+
   z-index: 999;
 }
 
-.nav-item {
-  flex: 1;
-  text-align: center;
-  color: white;
-  font-size: 24px;
+/* =========================
+   ナビアイテム
+========================= */
+.NavigationBar-Nav-item {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
   text-decoration: none;
-  padding: 10px 0;
-  transition: background-color 0.2s;
 }
 
-.nav-item:hover {
-  background-color: #555;
+/* =========================
+   ホバー背景
+========================= */
+.NavigationBar-Nav-item::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: #eef2ff;
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
 }
 
-.nav-icon {
+.NavigationBar-Nav-item:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   アイコン共通
+========================= */
+.NavigationBar-Image-navIcon {
+  position: relative;
+
+  z-index: 1;
+
   display: block;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  transform: translateY(-10px);
+
+  opacity: 0.75;
+
+  filter:
+    grayscale(100%)
+    brightness(0.9)
+    contrast(1);
+
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease;
 }
 
-.nav-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 5px;
+/* =========================
+   アイコンサイズ
+========================= */
+.NavigationBar-Image-homeIcon {
+  width: 70px;
+  height: 70px;
 }
 
-.nav-button:hover {
-  opacity: 0.8;
+.NavigationBar-Image-stageIcon {
+  width: 65px;
+  height: 65px;
 }
 
+.NavigationBar-Image-mapIcon {
+  width: 80px;
+  height: 80px;
+}
+
+.NavigationBar-Image-calendarIcon {
+  width: 70px;
+  height: 70px;
+}
+
+.NavigationBar-Image-chatIcon {
+  width: 80px;
+  height: 80px;
+}
+
+/* =========================
+   アクティブ状態
+========================= */
+.NavigationBar-Nav-item.active {
+  position: relative;
+}
+
+.NavigationBar-Nav-item.active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -6px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 24px;
+  height: 4px;
+
+  background: #5bbad5;
+
+  border-radius: 10px;
+}
+
+/* =========================
+   アイコン色変更
+========================= */
+.NavigationBar-Nav-item:hover .NavigationBar-Image-navIcon,
+.NavigationBar-Nav-item.active .NavigationBar-Image-navIcon,
+.NavigationBar-Button-back:hover .NavigationBar-Image-backIcon {
+  opacity: 1;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(59%)
+    sepia(86%)
+    saturate(1625%)
+    hue-rotate(200deg)
+    brightness(102%)
+    contrast(101%);
+}
+
+/* =========================
+   タップ時
+========================= */
+.NavigationBar-Nav-item:active {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   アイコン区切り線
+========================= */
+.NavigationBar-Nav-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-60%);
+
+  width: 1px;
+  height: 60px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(191, 191, 191, 0.5),
+    transparent
+  );
+}

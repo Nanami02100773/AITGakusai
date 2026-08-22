@@ -1,11 +1,15 @@
-import NavigationBar from "../Project2/components/NavigationBar";
-import Project2 from "./components/Project2";
+import NavigationBar from "./components/NavigationBar";
+import ProjectEvent from "./components/Event";
+import Section from "./components/Section";
+import Survey from "./components/Survey";
 
 export default function Page() {
   return (
-  <div>
-    <Project2 />
-    <NavigationBar/>
+    <div>
+      <ProjectEvent />
+      <Section />
+      <Survey />
+      <NavigationBar />
     </div>
   );
 }

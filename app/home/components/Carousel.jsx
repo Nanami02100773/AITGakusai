@@ -5,52 +5,124 @@ import "./Carousel.css";
 
 export default function Carousel({ items = [] }) {
   const containerRef = useRef(null);
+
   const [currentPage, setCurrentPage] = useState(0);
   const [isStopped, setIsStopped] = useState(false);
 
-  // items が空のときのダミー（6ページ）
   const fallbackItems = [
-    { title: "学園祭のお知らせ①", description: "各企画を準備中です", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ②", description: "ステージ企画を準備中", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ③", description: "屋台情報を更新予定", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ④", description: "参加団体を紹介します", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ⑤", description: "タイムテーブル公開予定", image: "https://placehold.jp/600x400.png" },
-    { title: "学園祭のお知らせ⑥", description: "最新情報をお楽しみに", image: "https://placehold.jp/600x400.png" },
+    {
+      category: "マスコット総選挙",
+      title: "うちのリード君を応援しませんか？",
+      description:
+        "全国の学祭のマスコットキャラクターの総選挙を開催中。ぜひ投票をお願いします！",
+      image: "/homecarousel/generalelection.jpg",
+    },
+    {
+      category: "休憩所のご案内",
+      title: "ちょっとひと休みしませんか？",
+      description:
+        "楽しんだあとは休憩所でリフレッシュ！飲食や待ち合わせにもご利用いただけます。",
+      image: "/homecarousel/restarea.jpg",
+    },
+    {
+      category: "景品をゲットしよう！",
+      title: "回答して豪華景品を当てよう！！",
+      description:
+        "全体アンケートに答えると総合案内所で抽選で素敵な景品をプレゼント！",
+      image: "/homecarousel/present.jpg",
+    },
+    {
+      category: "献血にご協力を！！",
+      title: "あなたの献血が誰かの命を救う",
+      description:
+        "学祭会場内の献血バスで受付中です。",
+      image: "/homecarousel/kenketsu.jpg",
+    },
+    {
+      category: "歌王",
+      title: "出演者たちが十八番の１曲で真剣勝負！",
+      description:
+        "出演者が選んだ渾身の１曲で勝負！歌声に心を動かされたらぜひ投票にご参加ください。",
+      image: "/homecarousel/utao.jpg",
+    },
+    {
+      category: "〇✕ゲーム",
+      title: "〇か✕か、最後まで生き残れ！",
+      description:
+        "知識も運も試されるドキドキの〇✕ゲーム！最後まで勝ち残り豪華景品をゲットしよう！",
+      image: "/homecarousel/game.jpg",
+    },
   ];
 
-  const displayItems = items.length > 0 ? items : fallbackItems;
+  const displayItems =
+    items.length > 0 ? items : fallbackItems;
 
   useEffect(() => {
     const container = containerRef.current;
+
     if (!container) return;
 
     let animationId;
-    const speed = 1.2;        // 自動スクロール速度
-    const stopTime = 800;     // 中央で止まる時間
-    const cardWidth = 420 + 40;
+
+    const speed = 1.4;
+    const stopTime = 800;
 
     let isPaused = false;
-    let isUserInteracting = false;
     let lastStoppedIndex = -1;
 
     const scroll = () => {
-      if (!isPaused && !isUserInteracting) {
+      const list =
+        container.querySelector(
+          ".Home-Carousel-list"
+        );
+
+      const firstCard = list?.children[0];
+
+      if (!firstCard) {
+        animationId =
+          requestAnimationFrame(scroll);
+        return;
+      }
+
+      const cardWidth =
+        firstCard.offsetWidth + 28;
+
+      const totalWidth =
+        displayItems.length * cardWidth;
+
+      if (!isPaused) {
         setIsStopped(false);
+
         container.scrollLeft += speed;
 
-        const center = container.scrollLeft + container.clientWidth / 2;
-        const index = Math.floor(center / cardWidth);
-        const cardCenter = index * cardWidth + cardWidth / 2;
+        const center =
+          container.scrollLeft +
+          container.clientWidth / 2;
 
-        setCurrentPage(index % displayItems.length);
+        const index = Math.round(
+          (center - cardWidth / 2) /
+            cardWidth
+        );
 
-        // 中央に来たら一回止まる
+        const cardCenter =
+          index * cardWidth +
+          cardWidth / 2;
+
+        setCurrentPage(
+          ((index % displayItems.length) +
+            displayItems.length) %
+            displayItems.length
+        );
+
         if (
-          Math.abs(center - cardCenter) < speed &&
+          Math.abs(center - cardCenter) <=
+            speed &&
           index !== lastStoppedIndex
         ) {
           isPaused = true;
+
           lastStoppedIndex = index;
+
           setIsStopped(true);
 
           setTimeout(() => {
@@ -59,89 +131,133 @@ export default function Carousel({ items = [] }) {
           }, stopTime);
         }
 
-        // 無限ループ
         if (
           container.scrollLeft >=
-          container.scrollWidth - container.clientWidth
+          totalWidth
         ) {
-          container.scrollLeft = 0;
+          container.scrollLeft -=
+            totalWidth;
+
           lastStoppedIndex = -1;
+        }
+
+        if (
+          container.scrollLeft <= 0
+        ) {
+          container.scrollLeft +=
+            totalWidth;
         }
       }
 
-      animationId = requestAnimationFrame(scroll);
+      animationId =
+        requestAnimationFrame(scroll);
     };
 
-    // 手動操作検知
-    const onMouseDown = () => (isUserInteracting = true);
-    const onMouseUp = () => (isUserInteracting = false);
-    const onMouseLeave = () => (isUserInteracting = false);
-    const onTouchStart = () => (isUserInteracting = true);
-    const onTouchEnd = () => (isUserInteracting = false);
+    animationId =
+      requestAnimationFrame(scroll);
 
-    container.addEventListener("mousedown", onMouseDown);
-    container.addEventListener("mouseup", onMouseUp);
-    container.addEventListener("mouseleave", onMouseLeave);
-    container.addEventListener("touchstart", onTouchStart);
-    container.addEventListener("touchend", onTouchEnd);
-
-    animationId = requestAnimationFrame(scroll);
-
-    return () => {
+    return () =>
       cancelAnimationFrame(animationId);
-      container.removeEventListener("mousedown", onMouseDown);
-      container.removeEventListener("mouseup", onMouseUp);
-      container.removeEventListener("mouseleave", onMouseLeave);
-      container.removeEventListener("touchstart", onTouchStart);
-      container.removeEventListener("touchend", onTouchEnd);
-    };
   }, [displayItems.length]);
 
   return (
-    <div className="carousel-wrapper">
-      <div ref={containerRef} className="carousel-container horizontal">
-        <div className="carousel-list horizontal">
-          {displayItems.concat(displayItems).map((item, index) => {
-            const pageNumber = (index % displayItems.length) + 1;
-            const isCenter = index % displayItems.length === currentPage;
-            const shouldScale = isCenter && isStopped;
+    <div className="Home-Carousel-wrapper">
 
-            return (
-              <div
-                key={index}
-                className={`carousel-card horizontal ${
-                  shouldScale ? "is-center" : ""
-                }`}
-              >
-                <div className="carousel-page">{pageNumber}</div>
+      <div
+        ref={containerRef}
+        className="Home-Carousel-container"
+      >
+        <div className="Home-Carousel-list">
 
-                {item.image && (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="carousel-image"
-                  />
-                )}
+          {displayItems
+            .concat(displayItems)
+            .map((item, index) => {
 
-                <h2 className="carousel-title">{item.title}</h2>
-                <p className="carousel-description">{item.description}</p>
-              </div>
-            );
-          })}
+              const isCenter =
+                index %
+                  displayItems.length ===
+                currentPage;
+
+              const shouldScale =
+                isCenter && isStopped;
+
+              return (
+                <div
+                  key={index}
+                  className={`Home-Carousel-card ${
+                    shouldScale
+                      ? "is-center"
+                      : ""
+                  }`}
+                >
+
+                  <div className="Home-Carousel-cardTopLineLeft" />
+                  <div className="Home-Carousel-cardTopLineRight" />
+
+                  <div className="Home-Carousel-cardBottomLineLeft" />
+                  <div className="Home-Carousel-cardBottomLineRight" />
+
+                  <div className="Home-Carousel-frameTop" />
+
+                  <div className="Home-Carousel-frameBottom" />
+
+                  <div className="Home-Carousel-content">
+
+                    <div className="Home-Carousel-imagePlaceholder">
+
+                      {item.image ? (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                        />
+                      ) : (
+                        "画像"
+                      )}
+
+                    </div>
+
+                    <div className="Home-Carousel-textArea">
+
+                      <p className="Home-Carousel-category">
+                        {item.category}
+                      </p>
+
+                      <div className="Home-Carousel-dots" />
+
+                      <h2 className="Home-Carousel-title">
+                        {item.title}
+                      </h2>
+
+                      <p className="Home-Carousel-description">
+                        {item.description}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              );
+            })}
+
         </div>
       </div>
 
-      {/* ページインジケータ */}
-      <div className="carousel-indicator">
+      <div className="Home-Carousel-indicator">
+
         {displayItems.map((_, index) => (
           <span
             key={index}
-            className={`indicator-dot ${
-              index === currentPage ? "active" : ""
+            className={`Home-Carousel-indicatorDot ${
+              index === currentPage
+                ? "active"
+                : ""
             }`}
           />
         ))}
+
       </div>
+
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.maintenance-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff5f5;
+}
+
+.maintenance-box {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.maintenance-box h1 {
+  color: #d33;
+  margin-bottom: 20px;
+}
+
+.maintenance-box p {
+  color: #555;
+  margin: 8px 0;
+}

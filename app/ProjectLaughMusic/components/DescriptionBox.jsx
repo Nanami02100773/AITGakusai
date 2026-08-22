@@ -3,20 +3,20 @@ import "./DescriptionBox.css";
 
 function DescriptionBox() {
   const text =
-    "ここに企画の説明が入ります。企画の内容や目的、参加方法などを詳しく説明します。例えば、スタンプラリーでは、参加者が指定された場所を訪れてスタンプを集めることで、特典を得ることができます。また、工科展では、学生たちの研究やプロジェクトを展示し、来場者に技術やアイデアを紹介します。各企画の詳細は、公式ウェブサイトやSNSで随時更新されますので、ぜひチェックしてください！";
+    "大学の研究室やクラブ・プロジェクト団体が日頃の研究成果や活動内容を発表する展示企画です。学生たちが主体となって運営し、ものづくりや研究の魅力を来場者の皆さまにお届けします。各団体の工夫を凝らした展示や発表をぜひお楽しみください。";
 
   return (
-    <section>
-      {/* セクションタイトル */}
-      <div className="LaughMusic-section-wrapper">
-        <div className="LaughMusic-section-title">企画説明</div>
+    <div>
+      <div>
+        <div className="laughmusic-section-title">
+          企画説明
+        </div>
       </div>
 
-      {/* 説明ボックス */}
-      <div className="LaughMusic-description-box">
+      <div className="laughmusic-description-box">
         {text}
       </div>
-    </section>
+    </div>
   );
 }
 

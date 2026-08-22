@@ -17,6 +17,12 @@ const KouyasaiStageTTDay = [
     image: "/images/sample3.png",
     detail: "ゲストを迎えての特別ステージ企画です。",
   },
+   {
+    time: "12:00",
+    title: "スペシャルステージ",
+    image: "/images/sample3.png",
+    detail: "ゲストを迎えての特別ステージ企画です。",
+  },
 ];
 
 export default KouyasaiStageTTDay;

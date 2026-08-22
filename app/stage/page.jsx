@@ -1,20 +1,29 @@
 "use client";
 
-import React from "react";
-
-import NoticeSection from "./components/NoticeSection";
-import NavigationBar from "./components/NavigationBar";
-import StageScheduleSection from "./components/StageScheduleSection";
+import { Orbitron } from "next/font/google";
 
 import "./global.css";
 
-export default function App() {
+import Hero from "./components/Hero";
+import NoticeSection from "./components/NoticeSection";
+import StageSchedule from "./components/StageSchedule";
+import NavigationBar from "./components/NavigationBar";
+
+export const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["700", "800"],
+});
+
+export default function Page() {
   return (
     <div>
+      <Hero />
+
       <NoticeSection />
+
+      <StageSchedule />
+
       <NavigationBar />
-    
-      <StageScheduleSection />
     </div>
   );
 }

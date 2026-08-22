@@ -1,63 +1,525 @@
-/* 上部バー（トップバー） */
-.top-bar {
+/* =========================
+   トップバー
+========================= */
+.Home-top-bar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 50px;
-  background-color: #666;
+
+  background-color: #ffffff;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  padding: 0 15px;
+
+  padding: 0 10px;
+
   z-index: 1000;
+
   font-size: 20px;
 }
 
-/* 下部ナビゲーションバー */
-.bottom-nav {
+/* =========================
+   戻るボタン
+========================= */
+
+.Home-nav-back-icon {
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+
+  filter: grayscale(100%);
+  opacity: 0.7;
+
+  transition: all 0.25s ease;
+}
+
+.Home-nav-back-button:hover {
+  background: #eef2ff;
+}
+
+.Home-nav-back-button:hover .Home-nav-back-icon {
+  opacity: 1;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(67%)
+    sepia(31%)
+    saturate(1588%)
+    hue-rotate(198deg)
+    brightness(101%)
+    contrast(101%);
+}
+
+/* =========================
+   メニューボタン
+========================= */
+.Home-nav-button {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: none;
+  border: none;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  transition: all 0.25s ease;
+}
+
+.Home-nav-button:hover {
+  color: #6f8dff;
+  background: #eef2ff;
+}
+
+.Home-nav-button:active {
+  transform: scale(0.95);
+}
+
+/* 戻るボタン */
+.Home-menu-back {
+  font-size: 14px;
+  color: #5bbad5;
+
+  cursor: pointer;
+
+  padding: 10px 0px;
+
+  align-self: flex-start;
+
+  transition: 0.2s;
+}
+
+.Home-menu-back:active {
+  transform: translateX(-2px);
+}
+
+/* =========================
+   中央ロゴ
+========================= */
+.Home-top-bar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 120px;
+  height: 36px;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+
+  transition: background-color 0.3s;
+}
+
+/* ロゴ縦アニメ */
+.Home-logo-track {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 36px;
+}
+
+.Home-logo-slide {
+  width: 100%;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home-logo-slide img {
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+}
+
+.Home-top-bar-center {
+  overflow: hidden;
+}
+
+.Home-logo-track {
+  will-change: transform;
+}
+
+.Home-logo-slide {
+  flex-shrink: 0;
+}
+
+/* ロゴ背景色 */
+.Home-top-bar-center.Home-active-0 {
+  background: #e1e1e1;
+}
+
+.Home-top-bar-center.Home-active-1 {
+  background: #e1e1e1;
+}
+
+.Home-top-bar-center.Home-active-2 {
+  background: #e1e1e1;
+}
+
+/* =========================
+   サイドメニュー
+========================= */
+.Home-side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+
+  width: 260px;
+  height: 100vh;
+
+  background: #ffffff;
+
+  box-shadow: -6px 0 20px rgba(0, 0, 0, 0.1);
+
+  transition: right 0.3s ease;
+
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.Home-side-menu.Home-open {
+  right: 0;
+}
+
+/* =========================
+   メニューアイテム
+========================= */
+.Home-menu-item {
+  padding: 15px 10px;
+
+  text-decoration: none;
+
+  color: #333;
+
+  border-radius: 8px;
+
+  transition: 0.2s;
+}
+
+.Home-menu-item:hover {
+  background: #f3f6ff;
+}
+
+.Home-menu-header {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+}
+
+.Home-menu-header span {
+  margin-top: 30px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #333;
+
+  padding-bottom: 10px;
+
+  position: relative;
+}
+
+.Home-menu-header span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 80%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 120px;
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #5bbad5 20%,
+    #86a7ff 50%,
+    #5bbad5 80%,
+    transparent
+  );
+}
+
+.Home-menu-back {
+  background: none;
+  border: none;
+
+  padding: 0;
+
+  font-size: 16px;
+  color: #5bbad5;
+
+  cursor: pointer;
+}
+
+.Home-menu-header span {
+  margin-top: 20px;
+  margin-left: 12px;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* =========================
+   下部ナビ
+========================= */
+.Home-bottom-nav {
   position: fixed;
   bottom: 0;
+  left: 0;
+
   width: 100%;
-  height: 60px;
-  background-color: #666;
+  height: 70px;
+
+  background: #ffffff;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 1px solid #999;
+
+  border-radius: 20px 20px 0 0;
+
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+
   z-index: 999;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-/* ナビゲーションアイテム（リンク） */
-.nav-item {
+/* =========================
+   ナビアイコン
+========================= */
+.Home-nav-item {
   flex: 1;
-  text-align: center;
-  color: white;
-  font-size: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   text-decoration: none;
-  padding: 10px 0;
-  transition: background-color 0.2s;
+
+  position: relative;
+
+  height: 100%;
 }
 
-.nav-item:hover {
-  background-color: #555;
-}
+/* =========================
+   アイコン共通
+========================= */
+.Home-nav-icon-img {
+  object-fit: contain;
 
-/* アイコン部分（span） */
-.nav-icon {
   display: block;
+  margin: 0 auto;
+
+  transform: translateY(-10px);
+
+  opacity: 0.75;
+
+  filter:
+    grayscale(100%)
+    brightness(0.9)
+    contrast(1);
+
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease;
 }
 
-/* 戻る＆メニューボタン */
-.nav-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 5px;
+/* =========================
+   個別サイズ
+========================= */
+
+.Home-nav-home-icon {
+  width: 70px;
+  height: 70px;
 }
 
-.nav-button:hover {
-  opacity: 0.8;
+.Home-nav-stage-icon {
+  width: 65px;
+  height: 65px;
+}
+
+.Home-nav-map-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.Home-nav-calendar-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.Home-nav-chat-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* =========================
+   アクティブ
+========================= */
+
+.Home-nav-item.Home-active {
+  color: #5bbad5;
+
+  position: relative;
+}
+
+.Home-nav-item.Home-active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -6px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 24px;
+
+  height: 4px;
+
+  background: #5bbad5;
+
+  border-radius: 10px;
+}
+
+.Home-nav-item:active {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   ホバー
+========================= */
+
+.Home-nav-item:hover {
+  background: #eef2ff;
+}
+
+.Home-nav-item:hover .Home-nav-icon-img,
+.Home-nav-item.Home-active .Home-nav-icon-img,
+.Home-nav-back-button:hover .Home-nav-back-icon {
+  opacity: 1;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(59%)
+    sepia(86%)
+    saturate(1625%)
+    hue-rotate(200deg)
+    brightness(102%)
+    contrast(101%);
+}
+
+.Home-nav-menu-button:hover {
+  background: #eef2ff;
+}
+
+.Home-nav-menu-button:hover .Home-nav-menu-icon {
+  opacity: 1;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(59%)
+    sepia(86%)
+    saturate(1625%)
+    hue-rotate(200deg)
+    brightness(102%)
+    contrast(101%);
+}
+
+/* =========================
+   アイコン仕切り
+========================= */
+
+.Home-nav-item {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.Home-nav-item::before {
+  content: "";
+  position: absolute;
+
+  inset: 0px;
+
+  border-radius: 0px;
+
+  background: #eef2ff;
+
+  opacity: 0;
+
+  transition: opacity 0.25s;
+}
+
+.Home-nav-item:hover::before {
+  opacity: 1;
+}
+
+.Home-nav-icon-img {
+  position: relative;
+  z-index: 1;
+}
+
+.Home-nav-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-60%);
+
+  width: 1px;
+  height: 60px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(191, 191, 191, 0.5),
+    transparent
+  );
 }

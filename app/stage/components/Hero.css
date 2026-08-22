@@ -1,0 +1,811 @@
+/* =================================================
+   セクション全体
+================================================= */
+.Stage-Hero-section {
+  position: relative;
+  height: 430px;
+
+  background: linear-gradient(
+    150deg,
+    #5f6dff 0%,
+    #9fb3ff 40%,
+    #b8bdff 100%
+  );
+
+  overflow: hidden;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 90%,
+    94% 100%,
+    0 100%
+  );
+}
+
+/* =================================================
+   背景装飾
+================================================= */
+.Stage-Hero-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 10;
+  right: -100px;
+
+  width: 300px;
+  height: 250px;
+
+  background: linear-gradient(
+    135deg,
+    #7fa8ff,
+    #d89bff
+  );
+
+  transform: rotate(45deg);
+
+  opacity: 0.25;
+
+  border-radius: 40px;
+}
+
+/* =================================================
+   HERO
+================================================= */
+.Stage-Hero-container {
+  position: relative;
+
+  height: 250px;
+
+  margin-top: 50px;
+
+  overflow: visible;
+
+  z-index: 2;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    7% 100%,
+    0 80%
+  );
+}
+
+/* =================================================
+   メイン画像
+================================================= */
+.Stage-Hero-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =================================================
+   タイトル
+================================================= */
+.Stage-Hero-title {
+  position: absolute;
+
+  top: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 260px;
+  height: 47px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  border: 2px solid rgba(255,255,255,0.55);
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,0.14),
+    inset 0 2px 0 rgba(255,255,255,0.7),
+    inset 0 -2px 0 rgba(255,255,255,0.55);
+
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+
+  overflow: hidden;
+}
+
+/* =================================================
+   サムネ一覧
+================================================= */
+.Stage-Hero-thumbnail-list {
+  position: absolute;
+
+  left: 50%;
+  bottom: 50px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  width: fit-content;
+  max-width: 90%;
+
+  padding: 4px 10px;
+
+  background: rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  overflow-x: auto;
+
+  z-index: 20;
+}
+
+/* =================================================
+   サムネイル
+================================================= */
+.Stage-Hero-thumbnail-item {
+  width: 38px;
+  height: 38px;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.Stage-Hero-thumbnail-item:hover {
+  transform: scale(1.08);
+}
+
+.Stage-Hero-thumbnail-active {
+  border: 2px solid #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(120,140,255,0.45);
+}
+
+/* =================================================
+   下エリア
+================================================= */
+.Stage-Hero-bottom {
+  position: relative;
+
+  margin-top: 0;
+
+  padding-top: 0;
+  padding-bottom: 50px;
+}
+
+/* =================================================
+   白カード
+================================================= */
+.Stage-Hero-card {
+  position: relative;
+
+  top: -70px;
+
+  width: 87%;
+  max-width: 720px;
+
+  height: 180px;
+
+  margin: 0 auto;
+
+  padding: 5px 10px 15px;
+
+  background: #ffffff;
+
+  border: 10px solid #3d6dff;
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 28px rgba(80,100,255,0.16);
+
+  overflow: hidden;
+
+  text-align: center;
+
+  z-index: 3;
+}
+
+/* =================================================
+   内側ライン
+================================================= */
+.Stage-Hero-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border: 2px solid rgba(120,145,255,0.22);
+
+  pointer-events: none;
+}
+
+/* =================================================
+   外側フレーム
+================================================= */
+.Stage-Hero-frame {
+  position: absolute;
+
+  top: -18px;
+  right: -18px;
+  bottom: -18px;
+  left: -18px;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+/* =================================================
+   外枠ライン
+================================================= */
+.Stage-Hero-frame::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border: 6px solid rgba(255,255,255,0.45);
+
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.25);
+}
+
+/* =================================================
+   左上装飾
+================================================= */
+.Stage-Hero-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  width: 35px;
+  height: 35px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(127,155,255,0.55),
+    rgba(180,195,255,0.08)
+  );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    0 100%
+  );
+
+  z-index: 1;
+}
+
+/* =================================================
+   右下装飾
+================================================= */
+.Stage-Hero-corner-bottomRight {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  width: 35px;
+  height: 35px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(160,175,255,0.06),
+    rgba(120,145,255,0.45)
+  );
+
+  clip-path: polygon(
+    100% 0,
+    0 100%,
+    100% 100%
+  );
+
+  z-index: 1;
+}
+
+/* =================================================
+   上バー
+================================================= */
+.Stage-Hero-topLine {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 26px;
+
+  background: linear-gradient(
+    90deg,
+    #3d6dff,
+    #4f7cff
+  );
+
+  clip-path: polygon(
+    0 0,
+    48% 0,
+    53% 100%,
+    100% 100%,
+    100% 0
+  );
+
+  z-index: 2;
+}
+
+/* =================================================
+   上バーの斜線
+================================================= */
+.Stage-Hero-topLine::before {
+  content: "";
+
+  position: absolute;
+
+  top: 6px;
+  left: 88%;
+
+  transform: translateX(-50%);
+
+  width: 140px;
+  height: 12px;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 6px,
+      #ffffff 6px,
+      #ffffff 11px
+    );
+}
+
+/* =================================================
+   テキスト
+================================================= */
+.Stage-Hero-text {
+  position: relative;
+
+  z-index: 5;
+
+  padding-top: 10px;
+
+  color: #22345f;
+}
+
+/* =================================================
+   上文
+================================================= */
+.Stage-Hero-subText {
+  margin-top: 30px;
+  margin-bottom: 6px;
+
+  color: #22345f;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+/* =================================================
+   メイン
+================================================= */
+.Stage-Hero-mainText {
+  margin: 0;
+
+  background: linear-gradient(
+    180deg,
+    #6f8dff,
+    #3f63ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* =================================================
+   点線
+================================================= */
+.Stage-Hero-mainText::after {
+  content: "";
+
+  display: block;
+
+  width: 82%;
+  height: 3px;
+
+  margin: 8px auto 6px;
+
+  background: repeating-linear-gradient(
+    to right,
+    #b9c5ff 0px,
+    #b9c5ff 14px,
+    transparent 14px,
+    transparent 28px
+  );
+}
+
+/* =================================================
+   下文
+================================================= */
+.Stage-Hero-description {
+  padding: 0 8px;
+
+  color: #22345f;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* =================================================
+   下エリア
+================================================= */
+.Stage-Hero-bottom {
+  position: relative;
+
+  margin-top: 0;
+
+  padding-top: 0;
+  padding-bottom: 50px;
+}
+
+/* =================================================
+   白カード
+================================================= */
+.Stage-Hero-card {
+  position: relative;
+
+  top: -70px;
+  z-index: 3;
+
+  width: 87%;
+  max-width: 720px;
+
+  height: 180px;
+
+  margin: 0 auto;
+
+  padding: 5px 10px 15px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 10px solid #3d6dff;
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 28px rgba(80,100,255,0.16);
+
+  text-align: center;
+}
+
+/* =================================================
+   内側ライン
+================================================= */
+.Stage-Hero-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border: 2px solid rgba(120,145,255,0.22);
+
+  pointer-events: none;
+}
+
+/* =================================================
+   外側フレーム
+================================================= */
+.Stage-Hero-frame {
+  position: absolute;
+
+  top: -18px;
+  right: -18px;
+  bottom: -18px;
+  left: -18px;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+/* =================================================
+   外枠ライン
+================================================= */
+.Stage-Hero-frame::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border: 6px solid rgba(255,255,255,0.45);
+
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.25);
+}
+
+/* =================================================
+   左上装飾
+================================================= */
+.Stage-Hero-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  width: 35px;
+  height: 35px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(127,155,255,0.55),
+    rgba(180,195,255,0.08)
+  );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    0 100%
+  );
+
+  z-index: 1;
+}
+
+/* =================================================
+   右下装飾
+================================================= */
+.Stage-Hero-corner-bottom-right {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  width: 35px;
+  height: 35px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(160,175,255,0.06),
+    rgba(120,145,255,0.45)
+  );
+
+  clip-path: polygon(
+    100% 0,
+    0 100%,
+    100% 100%
+  );
+
+  z-index: 1;
+}
+
+/* =================================================
+   上バー
+================================================= */
+.Stage-Hero-top-bar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 26px;
+
+  background: linear-gradient(
+    90deg,
+    #3d6dff,
+    #4f7cff
+  );
+
+  clip-path: polygon(
+    0 0,
+    48% 0,
+    53% 100%,
+    100% 100%,
+    100% 0
+  );
+
+  z-index: 2;
+}
+
+/* =================================================
+   上バー斜線
+================================================= */
+.Stage-Hero-top-bar::before {
+  content: "";
+
+  position: absolute;
+
+  top: 6px;
+  left: 88%;
+
+  transform: translateX(-50%);
+
+  width: 140px;
+  height: 12px;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 6px,
+      #ffffff 6px,
+      #ffffff 11px
+    );
+}
+
+/* =================================================
+   テキスト
+================================================= */
+.Stage-Hero-text {
+  position: relative;
+
+  z-index: 5;
+
+  padding-top: 10px;
+
+  color: #22345f;
+}
+
+/* =================================================
+   サブタイトル
+================================================= */
+.Stage-Hero-sub-text {
+  margin-top: 30px;
+  margin-bottom: 6px;
+
+  color: #22345f;
+
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+/* =================================================
+   メインタイトル
+================================================= */
+.Stage-Hero-main-title {
+  margin: 0;
+
+  background: linear-gradient(
+    180deg,
+    #6f8dff,
+    #3f63ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* =================================================
+   点線
+================================================= */
+.Stage-Hero-main-title::after {
+  content: "";
+
+  display: block;
+
+  width: 82%;
+  height: 3px;
+
+  margin: 8px auto 6px;
+
+  background: repeating-linear-gradient(
+    to right,
+    #b9c5ff 0px,
+    #b9c5ff 14px,
+    transparent 14px,
+    transparent 28px
+  );
+}
+
+/* =================================================
+   説明文
+================================================= */
+.Stage-Hero-description {
+  padding: 0 8px;
+
+  color: #22345f;
+
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* =================================================
+   レスポンシブ
+================================================= */
+@media (max-width: 768px) {
+
+  .Stage-Hero-card {
+    top: -45px;
+
+    height: 165px;
+
+    padding: 5px 8px 10px;
+
+    border-width: 8px;
+  }
+
+  .Stage-Hero-sub-text {
+    margin-top: 16px;
+
+    font-size: 9px;
+  }
+
+  .Stage-Hero-main-title {
+    font-size: 30px;
+  }
+
+  .Stage-Hero-description {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .Stage-Hero-corner-bottom-right {
+    width: 26px;
+    height: 26px;
+  }
+
+  .Stage-Hero-card::after {
+    width: 22px;
+    height: 22px;
+  }
+
+  .Stage-Hero-top-bar {
+    height: 22px;
+  }
+
+  .Stage-Hero-top-bar::before {
+    width: 50px;
+    height: 10px;
+  }
+}

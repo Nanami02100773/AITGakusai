@@ -8,7 +8,7 @@ import DescriptionBox from "./components/DescriptionBox";
 import DetailTable from "./components/DetailTable";
 import NavigationBar from "./components/NavigationBar";
 
-import KouyasaiInfo from "./components/KouyasaiInfo";
+import KouyasaiCast from "./components/KouyasaiCast";
 import KouyasaiGame from "./components/KouyasaiGame";
 import KouyasaiStageTT from "./components/KouyasaiStageTT";
 
@@ -26,7 +26,7 @@ export default function Page() {
       <DescriptionBox />
       <DetailTable />
       <KouyasaiStageTT />
-      <KouyasaiInfo />
+      <KouyasaiCast />
       <KouyasaiGame />
 
       <NavigationBar />

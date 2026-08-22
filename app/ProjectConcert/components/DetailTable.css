@@ -1,72 +1,347 @@
-.Concert-detail-table {
-  width: 700px;
-  margin: 0 auto 16px auto;
-  background: #e0e0e0;
-  border-radius: 12px;
-  padding: 12px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* =====================================
+   詳細テーブル本体
+===================================== */
+.concert-detail-table {
+  width: 95%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  padding: 15px;
+
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border-radius: 5px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 6px 18px rgba(134,167,255,.12);
 }
 
-.Concert-detail-row {
+/* =====================================
+   詳細行
+===================================== */
+.concert-detail-row {
   display: flex;
-  align-items: flex-start; /* ★ここを変更 */
-  gap: 8px;
-  padding: 0 12px;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding: 10px 0;
 }
 
+/* =====================================
+   左ラベル
+===================================== */
+.concert-detail-label {
+  width: 90px;
+  height: 30px;
 
-.Concert-detail-label {
-  background: #c4c4c4;
-  border-radius: 6px;
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 9px;
+
   color: #fff;
-  padding: 4px 12px;
-  min-width: 60px;
-  font-size: 0.95rem;
-  text-align: center;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
 }
 
-/* value 全体 */
-.Concert-detail-value {
+.concert-detail-text {
+  position: relative;
+
+  left: 10px;
+  top: -3px;
+}
+
+/* =====================================
+   ラベルアイコン
+===================================== */
+.concert-detail-icon {
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.concert-detail-icon-image {
+  display: block;
+
+  object-fit: contain;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(100%);
+}
+
+/* =====================================
+   場所アイコン
+===================================== */
+.place-icon {
+  width: 54px;
+  height: 54px;
+}
+
+/* =====================================
+   時間アイコン
+===================================== */
+.clock-icon {
+  width: 65px;
+  height: 65px;
+
+  position: relative;
+
+  top: 1px;
+}
+
+/* =====================================
+   注意事項アイコン
+===================================== */
+.precautions-icon {
+  width: 29px;
+  height: 29px;
+
+  position: relative;
+
+  left: -1px;
+  top: -1px;
+}
+
+/* =====================================
+   右側コンテンツ
+===================================== */
+.concert-detail-content {
   flex: 1;
-  color: #333;
-  font-size: 0.95rem;
-  padding-left: 8px;
-  border-bottom: 2.5px solid #c4c4c4;
+
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-bottom: 6px; /* 既存に追加 */
+
+  justify-content: center;
+  align-items: flex-start;
 }
 
-/* 開場・受付時などの1行 */
-.Concert-detail-subrow {
+.concert-detail-value {
+  width: 95%;
+  max-width: 500px;
+
+  position: relative;
+
+  padding-bottom: 5px;
+
+  color: #3f4d6d;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.8;
+}
+
+/* =====================================
+   下線
+===================================== */
+.concert-detail-value::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: rgba(134,167,255,.35);
+}
+
+/* =====================================
+   装飾 //
+===================================== */
+.concert-detail-value::after {
+  content: "//";
+
+  position: absolute;
+
+  right: -15px;
+  bottom: -8px;
+
+  color: #ff9fb5;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* =====================================
+   セクションタイトル
+===================================== */
+.concert-section-wrapper {
+  width: 100%;
+}
+
+.concert-section-title {
+  position: relative;
+
+  z-index: 2;
+
   display: flex;
+
+  justify-content: center;
   align-items: center;
-  gap: 8px;
-  min-height: 20px;   /* ← 高さを固定（ここがポイント） */
-}
 
+  width: 240px;
+  height: 44px;
 
-/* 囲う側（主張控えめ） */
-.Concert-detail-sublabel {
-  padding: 2px 13px;
-  font-size: 0.75rem;
-  color: #666;
-  border: 1px solid #bbb;
+  margin: 20px auto 10px;
+
+  color: #fff;
+
+  font-size: 17px;
+  font-weight: bold;
+
   border-radius: 999px;
-  background: #f2f2f2;
-  white-space: nowrap;
 
-  height: 23px;
-  display: flex;
-  align-items: center;
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  border: 2px solid rgba(255,255,255,.55);
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,.14),
+    inset 0 2px 0 rgba(255,255,255,.7),
+    inset 0 -2px 0 rgba(255,255,255,.55);
+
+  overflow: hidden;
 }
 
+/* =====================================
+   開場・開演
+===================================== */
+.concert-time-box {
+  display: flex;
 
-/* 囲わない本文 */
-.Concert-detail-subtext {
-  font-size: 0.9rem;
-  color: #444;
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.concert-time-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+/* =====================================
+   情報ブロック
+===================================== */
+.concert-info-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+/* =====================================
+   青タグ
+===================================== */
+.concert-info-tag {
+  min-width: 60px;
+
+  padding: 2px 5px;
+
+  background: #ffffff;
+
+  color: #5b8cff;
+
+  border: 1px solid #b7d4ff;
+
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+/* =====================================
+   説明リスト
+===================================== */
+.concert-info-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+/* =====================================
+   説明文
+===================================== */
+.concert-info-description {
+  position: relative;
+
+  padding-left: 18px;
+
+  color: #3f4d6d;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.6;
+}
+
+/* =====================================
+   青丸
+===================================== */
+.concert-info-description::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 8px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #6f8dff;
 }

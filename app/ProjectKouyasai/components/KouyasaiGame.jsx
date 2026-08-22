@@ -1,7 +1,7 @@
 import React from "react";
 import "./KouyasaiGame.css";
 
-function KouyasaiGame() {
+function koyasaiGame() {
   const games = [
     "後夜ダンス",
     "ビンゴ",
@@ -10,15 +10,15 @@ function KouyasaiGame() {
   ];
 
   return (
-    <section className="Kouyasai-gameCorner-section">
-      <div className="Kouyasai-section-title">Game Corner</div>
+    <section className="koyasai-gameCorner-section">
+      <div className="koyasai-section-title">Game Corner</div>
 
-      <div className="Kouyasai-gameCorner-list">
+      <div className="koyasai-gameCorner-list">
         {games.map((game, index) => (
-          <div className="Kouyasai-gameCorner-item" key={index}>
-            <div className="Kouyasai-gameCorner-card">
-              <div className="Kouyasai-gameCorner-image"></div>
-              <p className="Kouyasai-gameCorner-label">
+          <div className="koyasai-gameCorner-item" key={index}>
+            <div className="koyasai-gameCorner-card">
+              <div className="koyasai-gameCorner-image"></div>
+              <p className="koyasai-gameCorner-label">
                 {game}
               </p>
             </div>
@@ -29,4 +29,4 @@ function KouyasaiGame() {
   );
 }
 
-export default KouyasaiGame;
+export default koyasaiGame;

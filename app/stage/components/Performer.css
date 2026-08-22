@@ -1,0 +1,470 @@
+/* ========================================
+   セクション
+======================================== */
+
+/* セクション全体 */
+.Stage-Performer-section {
+  padding: 30px 0;
+}
+
+
+/* ========================================
+   プロフィールカード
+======================================== */
+
+/* カード配置 */
+.Stage-Performer-profile-box {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 24px;
+}
+
+/* カード本体 */
+.Stage-Performer-profile {
+  position: relative;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+  max-width: 700px;
+
+  padding: 14px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(245, 247, 255, 0.9)
+    );
+
+  border: 1px solid rgba(200, 210, 255, 0.4);
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 25px rgba(120, 120, 200, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* カード（物販あり） */
+.Stage-Performer-profile.has {
+  height: 500px;
+}
+
+/* カード（物販なし） */
+.Stage-Performer-profile.none {
+  height: 420px;
+}
+
+/* ========================================
+   カード装飾
+======================================== */
+
+/* 左上ぼかし装飾 */
+.Stage-Performer-profile::before {
+  content: "";
+
+  position: absolute;
+  top: -60px;
+  left: -60px;
+
+  width: 160px;
+  height: 160px;
+
+  z-index: -1;
+
+  opacity: 0.5;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #e0e7ff 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      #cfd6ff 1.5px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle,
+      transparent 60%,
+      #d6dbff 61%,
+      transparent 63%
+    );
+
+  background-size:
+    100% 100%,
+    12px 12px,
+    100% 100%;
+
+  background-repeat:
+    no-repeat,
+    repeat,
+    no-repeat;
+
+  -webkit-mask-image:
+    radial-gradient(
+      circle,
+      black 60%,
+      transparent 100%
+    );
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black 60%,
+      transparent 100%
+    );
+}
+
+/* 右下ドット装飾 */
+.Stage-Performer-profile::after {
+  content: "";
+
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+
+  width: 150px;
+  height: 120px;
+
+  z-index: -1;
+
+  opacity: 0.5;
+
+  background-image:
+    radial-gradient(#cfd6ff 2px, transparent 2px),
+    radial-gradient(#ffd6f0 2px, transparent 2px);
+
+  background-size: 12px 12px;
+
+  -webkit-mask-image:
+    linear-gradient(
+      to top left,
+      black 40%,
+      transparent 100%
+    );
+
+  mask-image:
+    linear-gradient(
+      to top left,
+      black 40%,
+      transparent 100%
+    );
+}
+
+/* 右上ストライプ装飾 */
+.Stage-Performer-pattern-top {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 100px;
+  height: 100px;
+
+  opacity: 0.3;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #e0e7ff,
+      #e0e7ff 2px,
+      transparent 2px,
+      transparent 8px
+    );
+
+  border-radius: 12px;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   プロフィール画像
+======================================== */
+
+/* 写真エリア */
+.Stage-Performer-photo {
+  width: 100%;
+  height: 260px;
+
+  margin-bottom: 8px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  background: #dfe3ff;
+
+  border-radius: 16px;
+}
+
+/* 写真 */
+.Stage-Performer-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* ========================================
+   プロフィール情報
+======================================== */
+
+/* プロフィール全体 */
+.Stage-Performer-bio {
+  flex: none;
+
+  margin-bottom: 15px;
+
+  overflow: visible;
+}
+
+/* 出演者名 */
+.Stage-Performer-bio h3 {
+  display: block;
+
+  margin-bottom: 4px;
+
+  overflow: visible;
+
+  color: #2f3f66;
+  font-size: 17px;
+}
+
+/* 紹介文 */
+.Stage-Performer-bio p {
+  margin-top: 4px;
+
+  padding-top: 6px;
+
+  overflow: visible;
+
+  border-top: 2px dashed #d6dbff;
+
+  color: #5a6f8f;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+
+/* ========================================
+   物販情報
+======================================== */
+
+/* 物販情報全体 */
+.Stage-Performer-goods-info {
+  margin-top: auto;
+}
+
+/* ========================================
+   物販あり（上段）
+======================================== */
+
+/* 上段レイアウト */
+.Stage-Performer-goods-top {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  width: 400px;
+  height: 70px;
+
+  padding: 5px;
+
+  background: #eaf6ee;
+
+  border-radius: 12px;
+}
+
+/* 左エリア */
+.Stage-Performer-goods-left {
+  display: flex;
+  align-items: center;
+}
+
+/* 区切り線 */
+.Stage-Performer-divider {
+  width: 2px;
+  height: 35px;
+
+  background: #add1b7;
+
+  border-radius: 999px;
+}
+
+/* 右エリア */
+.Stage-Performer-goods-right {
+  flex: 1;
+}
+
+
+/* ========================================
+   アイコン
+======================================== */
+
+/* ステータスアイコン */
+.Stage-Performer-status-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+/* 時計アイコン */
+.Stage-Performer-time-icon {
+  width: 50px;
+  height: 50px;
+
+  margin-right: -20px; /* 今は0相当なので詰められる */
+
+   transform: translateX(-10px);
+  
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+
+/* ========================================
+   物販場所
+======================================== */
+
+/* 場所カード */
+.Stage-Performer-goods-place {
+  display: flex;
+  flex-direction: column;
+
+  width: 250px;
+  height: 50px;
+
+  padding: 10px 15px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border: 1px solid #d6f0dd;
+  border-radius: 10px;
+}
+
+/* ラベル */
+.Stage-Performer-goods-label {
+  color: #2e7d32;
+  font-size: 10px;
+}
+
+/* 場所名 */
+.Stage-Performer-goods-value {
+  color: #333;
+  font-size: 11px;
+}
+
+/* ========================================
+   物販時間
+======================================== */
+
+/* 時間エリア */
+.Stage-Performer-goods-time {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  width: 300px;
+  height: 58px;
+
+  margin-top: 10px;
+
+  padding: 10px 15px;
+
+  background: #eef0ff;
+
+  border-radius: 14px;
+}
+
+/* 時間区切り線 */
+.Stage-Performer-time-divider {
+  width: 2px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  background: #b8c9ff;
+
+  border-radius: 999px;
+}
+
+/* 時間表示ボックス */
+.Stage-Performer-goods-time-box {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+  height: 40px;
+
+  padding: 0 15px;
+
+  background: #f8f9ff;
+
+  border: 1px solid #ccd7ff;
+  border-radius: 12px;
+
+  color: #2f3f66;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   物販ステータス
+======================================== */
+
+/* 物販あり */
+.Stage-Performer-goods-status.available {
+  display: flex;
+  align-items: center;
+
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* 物販なし */
+.Stage-Performer-goods-status.none {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 130px;
+  height: 60px;
+
+  background: #fff2f2;
+
+  border-radius: 12px;
+
+  color: #d64545;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ×アイコン */
+.Stage-Performer-goods-status.none img {
+  width: 50px;
+  height: 50px;
+
+  margin-right: 4px;   /* 文字との間隔 */
+  margin-left: -6px;   /* 左右位置調整 */
+  margin-top: -2px;    /* 上下位置調整 */
+
+  object-fit: contain;
+}

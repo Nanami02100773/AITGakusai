@@ -1,0 +1,317 @@
+/* =================================================
+   セクション
+================================================= */
+.Home-Sns-section {
+  padding: 20px 0 100px;
+
+  background: #e4e7fe;
+
+  text-align: center;
+}
+
+/* =================================================
+   コンテナ
+================================================= */
+.Home-Sns-container {
+  width: 100%;
+}
+
+/* =================================================
+   SNS一覧
+================================================= */
+.Home-Sns-list {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 24px;
+
+  flex-wrap: wrap;
+}
+
+/* =================================================
+   SNSアイテム
+================================================= */
+.Home-Sns-item {
+  display: inline-flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+}
+
+/* =================================================
+   アイコン円
+================================================= */
+.Home-Sns-circle {
+  position: relative;
+
+  width: 71px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eef1ff,
+      #ffffff
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+
+  box-shadow:
+    0 6px 16px rgba(120,120,200,0.12);
+
+  transition:
+    transform 0.35s cubic-bezier(.22,1.2,.36,1),
+    box-shadow 0.25s ease,
+    background 0.3s ease;
+}
+
+/* =================================================
+   共通ネオン
+================================================= */
+.Home-Sns-circle::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 50%;
+
+  padding: 3px;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  animation:
+    snsNeon 2.8s ease-in-out infinite alternate;
+}
+
+/* =================================================
+   Instagram
+================================================= */
+.Home-Sns-instagram .Home-Sns-circle::before {
+  background:
+    linear-gradient(
+      135deg,
+      #ffb8d2 0%,
+      #ffc8a8 30%,
+      #c497ff 65%,
+      #b9d4ff 100%
+    );
+
+  filter:
+    drop-shadow(0 0 5px rgba(255,190,230,.95))
+    drop-shadow(0 0 12px rgba(255,120,210,.85))
+    drop-shadow(0 0 22px rgba(180,120,255,.75))
+    drop-shadow(0 0 36px rgba(120,180,255,.55));
+}
+
+/* =================================================
+   X
+================================================= */
+.Home-Sns-twitter .Home-Sns-circle::before {
+  background:
+    linear-gradient(
+      135deg,
+      #f0f2f5 0%,
+      #a7a7a7 50%,
+      #555555 100%
+    );
+
+  filter:
+    drop-shadow(0 0 5px rgba(255,255,255,.9))
+    drop-shadow(0 0 12px rgba(180,180,180,.75))
+    drop-shadow(0 0 22px rgba(120,120,120,.65))
+    drop-shadow(0 0 34px rgba(230,230,230,.45));
+}
+
+/* =================================================
+   Website
+================================================= */
+.Home-Sns-web .Home-Sns-circle::before {
+  background:
+    linear-gradient(
+      135deg,
+      #aee6ff 0%,
+      #73c7ff 45%,
+      #4b86da 100%
+    );
+
+  filter:
+    drop-shadow(0 0 5px rgba(140,220,255,.95))
+    drop-shadow(0 0 12px rgba(90,190,255,.85))
+    drop-shadow(0 0 22px rgba(70,140,255,.75))
+    drop-shadow(0 0 36px rgba(120,180,255,.55));
+}
+
+/* =================================================
+   LINE
+================================================= */
+.Home-Sns-line .Home-Sns-circle::before {
+  background:
+    linear-gradient(
+      135deg,
+      #c0ffd9 0%,
+      #7dffaf 50%,
+      #39c878 100%
+    );
+
+  filter:
+    drop-shadow(0 0 5px rgba(160,255,210,.95))
+    drop-shadow(0 0 12px rgba(100,255,170,.85))
+    drop-shadow(0 0 22px rgba(60,220,130,.75))
+    drop-shadow(0 0 36px rgba(100,255,180,.55));
+}
+
+/* =================================================
+   ネオンアニメーション
+================================================= */
+@keyframes snsNeon {
+  0% {
+    opacity: .82;
+
+    transform:
+      scale(1)
+      rotate(0deg);
+
+    filter:
+      brightness(1)
+      blur(0px);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.06)
+      rotate(.6deg);
+
+    filter:
+      brightness(1.28)
+      blur(.35px);
+  }
+
+  100% {
+    opacity: .9;
+
+    transform:
+      scale(1.02)
+      rotate(-.4deg);
+
+    filter:
+      brightness(1.12)
+      blur(.15px);
+  }
+}
+
+/* =================================================
+   アイコン画像
+================================================= */
+.Home-Sns-iconImage {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  object-fit: contain;
+
+  display: block;
+
+  z-index: 2;
+}
+
+/* =================================================
+   Instagram
+================================================= */
+.Home-Sns-instagram .Home-Sns-iconImage {
+  width: 50px;
+  height: 50px;
+
+  transform:
+    translate(-51%, -45%)
+    scale(2.1);
+}
+
+/* =================================================
+   X
+================================================= */
+.Home-Sns-twitter .Home-Sns-iconImage {
+  width: 54px;
+  height: 54px;
+
+  transform:
+    translate(-50%, -49%)
+    scale(1.9);
+}
+
+/* =================================================
+   Website
+================================================= */
+.Home-Sns-web .Home-Sns-iconImage {
+  width: 51px;
+  height: 51px;
+
+  transform:
+    translate(-50%, -47%)
+    scale(1.4);
+}
+
+/* =================================================
+   LINE
+================================================= */
+.Home-Sns-line .Home-Sns-iconImage {
+  width: 51px;
+  height: 51px;
+
+  transform:
+    translate(-49%, -50%)
+    scale(1.8);
+}
+
+/* =================================================
+   ラベル
+================================================= */
+.Home-Sns-label {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  color: #8f95c9;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+}
+
+/* =================================================
+   ラベルライン
+================================================= */
+.Home-Sns-label span {
+  width: 12px;
+  height: 2px;
+
+  background: #cfd6ff;
+
+  border-radius: 999px;
+}

@@ -1,0 +1,108 @@
+.faq-guide{
+  width:370px;
+
+  margin:30px auto;
+
+  padding:22px;
+
+  background:#fff;
+
+  border-radius:28px;
+
+  border:3px solid #dce4ff;
+
+  box-shadow:
+    0 10px 25px rgba(111,141,255,.10);
+}
+
+/*=========================
+タイトル
+=========================*/
+
+.faq-guide-header{
+  display:flex;
+  align-items:center;
+
+  gap:16px;
+
+  margin-bottom:22px;
+}
+
+.faq-guide-number{
+  width:60px;
+  height:60px;
+
+  border-radius:50%;
+
+  background:linear-gradient(
+    135deg,
+    #6f8dff,
+    #5b63ff
+  );
+
+  color:#fff;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:24px;
+  font-weight:800;
+
+  box-shadow:
+    0 6px 16px rgba(111,141,255,.25);
+}
+
+.faq-guide-header h2{
+  margin:0;
+
+  font-size:34px;
+  font-weight:800;
+
+  color:#233b96;
+}
+
+/*=========================
+画像
+=========================*/
+
+.faq-guide-image{
+  width:100%;
+
+  margin-bottom:24px;
+}
+
+.faq-guide-image img{
+  width:100%;
+
+  display:block;
+
+  border-radius:18px;
+
+  border:2px solid #dce4ff;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+}
+
+/*=========================
+説明
+=========================*/
+
+.faq-guide-list{
+  margin:0;
+
+  padding-left:30px;
+
+  color:#24358f;
+
+  font-size:22px;
+
+  font-weight:700;
+
+  line-height:1.8;
+}
+
+.faq-guide-list li{
+  margin-bottom:8px;
+}

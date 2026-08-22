@@ -1,0 +1,20 @@
+/* =========================
+   タイトル
+========================= */
+.Home-Title-section {
+  font-family: var(--font-rounded);
+}
+
+/* =========================
+   お知らせ本文
+========================= */
+.Home-Notice-text {
+  font-family: var(--font-rounded);
+}
+
+/* =========================
+   お知らせ番号
+========================= */
+.Home-Notice-number {
+  font-family: "Orbitron", sans-serif;
+}

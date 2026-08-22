@@ -3,12 +3,11 @@ import "./DescriptionBox.css";
 
 function DescriptionBox() {
   const text =
-    "ここに企画の説明が入ります。企画の内容や目的、参加方法などを詳しく説明します。例えば、スタンプラリーでは、参加者が指定された場所を訪れてスタンプを集めることで、特典を得ることができます。また、工科展では、学生たちの研究やプロジェクトを展示し、来場者に技術やアイデアを紹介します。各企画の詳細は、公式ウェブサイトやSNSで随時更新されますので、ぜひチェックしてください！";
-
+  "学内各所に設置されたスタンプラリーポイントを巡りスタンプを集めよう！4か所すべてのスタンプを集めた方には総合案内所にて豪華景品をプレゼント！さまざまな展示や企画を楽しみながら校内を探検しコンプリートを目指そう！";
   return (
     <div>
       <div>
-        <div className="ProjectStampRally-section-title">企画説明</div>
+        <div className="StampRally-section-title">企画説明</div>
       </div>
 
       <div className="ProjectStampRally-description-box">

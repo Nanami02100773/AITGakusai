@@ -1,29 +1,54 @@
 "use client";
+
 import "./Detail.css";
 
-export default function Detail({ title }) {
+export default function Detail({
+  title,
+  body,
+  number,
+}) {
   return (
-    <div className="notice-container">
-      {/* 大きい外枠カード */}
-      <div className="notice-card">
-        {/* 外枠カード内のバー */}
-        <div className="notice-card-bar">
-          <span className="notice-card-bar-text">{title}</span>
+    <div className="Stage-Detail-container">
+      <div className="Stage-Detail-card">
+
+        {/* フレーム */}
+        <div className="Stage-Detail-frame-top" />
+        <div className="Stage-Detail-frame-bottom" />
+
+        {/* ヘッダー */}
+        <div className="Stage-Detail-header">
+
+          {/* 番号 */}
+          <div className="Stage-Detail-number">
+            {String(number || 0).padStart(2, "0")}
+          </div>
+
+          {/* タイトル */}
+          <span className="Stage-Detail-title">
+            {title}
+          </span>
+
         </div>
 
-        {/* 内側カード */}
-        <div className="notice-card-inner">
-          {/* ★ 区切り線の上の文言 */}
-          <div className="notice-inner-title">{title}</div>
+        {/* 本文 */}
+        <div className="Stage-Detail-content">
 
-          <div className="notice-divider" />
+          {/* サブタイトル */}
+          <div className="Stage-Detail-subtitle">
+            {title}
+          </div>
 
-          <p className="notice-text">
-            お知らせの詳細内容がここに入ります。
+          {/* 区切り線 */}
+          <div className="Stage-Detail-divider" />
+
+          {/* 本文テキスト */}
+          <p className="Stage-Detail-text">
+            {body}
           </p>
+
         </div>
+
       </div>
     </div>
   );
 }
-

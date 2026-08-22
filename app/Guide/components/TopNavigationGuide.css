@@ -1,0 +1,340 @@
+.home-guide-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 30px 16px 60px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    180deg,
+    #edf6ff 0%,
+    #f8fbff 45%,
+    #ffffff 100%
+  );
+}
+
+/*==================================
+ タイトル
+==================================*/
+
+.Guide-section-title {
+  width: 240px;
+  height: 44px;
+
+  margin: 0 auto 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  border: 2px solid rgba(255,255,255,.55);
+
+  box-shadow:
+    0 8px 20px rgba(160,170,255,.16),
+    inset 0 2px 0 rgba(255,255,255,.7);
+}
+
+/*==================================
+ カード
+==================================*/
+
+.guide-card {
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 2px solid #d9e5ff;
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 28px rgba(134,167,255,.12);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guide-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 25px;
+}
+
+/*==================================
+ 上部画像
+==================================*/
+
+.menu-preview-box {
+  width: 380px;
+  height: 250px;
+
+  margin-bottom: 30px;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    180deg,
+    #f7faff,
+    #edf4ff
+  );
+
+  border: 2px solid #d9e5ff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.menu-preview-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.image-placeholder {
+  color: #7b97ff;
+
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*==================================
+ 一覧
+==================================*/
+
+.guide-detail-box {
+  width: 380px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/*==================================
+ ガイド1項目
+==================================*/
+
+.guide-item {
+  position: relative;
+
+  width: 380px;
+  height: 120px;
+}
+
+/*==================================
+ 青カード
+==================================*/
+
+.guide-left {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 380px;
+  height: 120px;
+
+  background: linear-gradient(
+    180deg,
+    #86a7ff 0%,
+    #6f8dff 55%,
+    #5b7eff 100%
+  );
+
+  border: 1px solid #7f9dff;
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 10px 24px rgba(134,167,255,.18);
+
+  z-index: 1;
+}
+
+/*==================================
+ 画像ボックス
+==================================*/
+
+.guide-image-box {
+  position: absolute;
+
+  left: 15px;
+  top: 17px;
+
+  width: 85px;
+  height: 85px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f7faff
+  );
+
+  border: 2px solid #d8e5ff;
+
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 5px 12px rgba(134,167,255,.14);
+}
+
+.guide-image-box img {
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+}
+
+/*==================================
+ アイコン
+==================================*/
+
+.guide-item-image {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide-item-image img {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+}
+
+/*==================================
+ 右カード
+==================================*/
+
+.guide-text {
+  position: absolute;
+
+  left: 110px;
+  top: 10px;
+
+  width: 280px;
+  height: 100px;
+
+  padding: 18px 22px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8fbff 100%
+  );
+
+  border: 2px solid #dbe6ff;
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 4px 10px rgba(79,108,255,.08),
+    0 12px 28px rgba(79,108,255,.18),
+    0 2px 4px rgba(0,0,0,.05);
+
+  z-index: 2;
+
+  transition: .25s ease;
+}
+
+/*==================================
+ タイトル
+==================================*/
+
+.guide-text h3 {
+  margin: 0 0 8px;
+
+  color: #4f6cff;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/*==================================
+ 説明文
+==================================*/
+
+.guide-text p {
+  margin: 0;
+
+  color: #6b7b9d;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/*==================================
+ ホバー
+==================================*/
+
+.guide-item:hover .guide-left {
+  background: linear-gradient(
+    180deg,
+    #95b3ff 0%,
+    #7d9cff 55%,
+    #6f8dff 100%
+  );
+
+  box-shadow:
+    0 14px 28px rgba(134,167,255,.28);
+
+  transition: .25s;
+}
+
+.guide-item:hover .guide-image-box {
+  border-color: #aac2ff;
+
+  box-shadow:
+    0 8px 18px rgba(134,167,255,.20);
+
+  transition: .25s;
+}
+
+.guide-item:hover .guide-text {
+  transform: translateY(-2px);
+
+  border-color: #b9cdff;
+
+  box-shadow:
+    0 14px 28px rgba(134,167,255,.20);
+}

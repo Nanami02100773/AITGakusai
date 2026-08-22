@@ -1,88 +1,313 @@
-.home-notice-container {
+/* =========================================
+   コンテナ・カード
+========================================= */
+
+.Home-Detail-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 96px;
+
+  padding-top: 110px;
   padding-bottom: 96px;
 }
 
-/* ===== 上部バー ===== */
-.home-notice-top-bar {
-  width: 85%;
-  max-width: 640px;
-  height: 44px;
-  background: #848484;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  margin-bottom: 28px;
-}
+.Home-Detail-card {
+  position: relative;
 
-.home-notice-top-text {
-  color: #fff;
-  font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* ===== 外枠カード ===== */
-.home-notice-card {
   width: 90%;
-  max-width: 680px;
-  background: #d9d9d9;
-  border-radius: 28px;
+  max-width: 720px;
+
   padding: 18px;
+
+  background: #f9fbff;
+
+  border-radius: 24px;
 }
 
-/* ===== 内側 ===== */
-.home-notice-card-inner {
-  background: #f2f2f2;
-  border-radius: 22px;
-  padding: 24px;
-  min-height: 220px;
+/* サイバーフレーム */
+.Home-Detail-card::before {
+  content: "";
+
+  position: absolute;
+  inset: -20px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(#b8c6ff,#b8c6ff)
+      top center / 100% 3px no-repeat,
+
+    linear-gradient(#b8c6ff,#b8c6ff)
+      bottom center / 100% 3px no-repeat,
+
+    linear-gradient(#b8c6ff,#b8c6ff)
+      left center / 3px 100% no-repeat,
+
+    linear-gradient(#b8c6ff,#b8c6ff)
+      right center / 3px 100% no-repeat,
+
+    linear-gradient(
+      135deg,
+      #6f8dff 0 40%,
+      transparent 40%
+    )
+      top left / 38px 38px no-repeat,
+
+    linear-gradient(
+      -135deg,
+      #6f8dff 0 40%,
+      transparent 40%
+    )
+      top right / 38px 38px no-repeat,
+
+    linear-gradient(
+      45deg,
+      #6f8dff 0 40%,
+      transparent 40%
+    )
+      bottom left / 38px 38px no-repeat,
+
+    linear-gradient(
+      -45deg,
+      #6f8dff 0 40%,
+      transparent 40%
+    )
+      bottom right / 38px 38px no-repeat;
+
+  opacity: .95;
+}
+/* =========================================
+   フレーム・ヘッダー
+========================================= */
+
+/* 上フレーム */
+.Home-Detail-frame-top {
+  position: absolute;
+
+  top: -20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 140px;
+  height: 14px;
+
+  background: #b8c6ff;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    85% 100%,
+    15% 100%
+  );
 }
 
-/* 区切り線の上の文言 */
-.home-notice-inner-title {
-  font-size: 13px;
-  color: #848484;
-  margin-bottom: 6px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* 下フレーム */
+.Home-Detail-frame-bottom {
+  position: absolute;
+
+  bottom: -20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 140px;
+  height: 14px;
+
+  background: #b8c6ff;
+
+  clip-path: polygon(
+    15% 0,
+    85% 0,
+    100% 100%,
+    0 100%
+  );
 }
 
-/* 細い区切り線 */
-.home-notice-divider {
-  height: 2px;
-  width: 100%;
-  background: #929292;
-  margin-bottom: 20px;
-}
+/* ヘッダー */
+.Home-Detail-header {
+  position: relative;
 
-/* テキスト */
-.home-notice-text {
-  font-size: 14px;
-  color: #979797;
-}
-
-/* ===== 外枠カード内のバー ===== */
-.home-notice-card-bar {
-  background: #848484;
-  border-radius: 12px;
-  height: 40px;
   display: flex;
   align-items: center;
-  padding: 0 16px;
-  margin-bottom: 14px;
+
+  min-height: 64px;
+
+  margin-bottom: 18px;
+  padding: 0 18px 0 0;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f7f7ff
+  );
+
+  border: 1px solid #ececff;
+  border-radius: 18px;
+
+  box-shadow:
+    0 4px 10px rgba(120,120,180,.1),
+    0 1px 4px rgba(120,120,180,.1),
+    inset 0 1px 0 rgba(255,255,255,.9);
 }
 
-.home-notice-card-bar-text {
-  color: #fff;
+/* 左背景 */
+.Home-Detail-header::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 85px;
+  height: 90%;
+
+  background: #c8d0ff;
+
+  opacity: .95;
+
+  clip-path: polygon(
+    0 0,
+    88% 0,
+    72% 100%,
+    0 100%
+  );
+}
+
+/* =========================================
+   番号・タイトル
+========================================= */
+
+/* 番号 */
+.Home-Detail-number {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  margin-left: 14px;
+
+  flex-shrink: 0;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+
+  background: linear-gradient(
+    135deg,
+    #5675ff,
+    #3757ef
+  );
+
+  border: 2px solid rgba(255,255,255,.95);
+  border-radius: 50%;
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,.08),
+    inset 0 4px 8px rgba(255,255,255,.3);
+}
+
+/* 番号後ろのライン */
+.Home-Detail-number::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: -32px;
+
+  width: 90px;
+  height: 54px;
+
+  transform:
+    translateY(-46%)
+    skewX(-13deg);
+
+  z-index: -1;
+
+  opacity: .6;
+
+  border: 1.5px solid #c8d0ff;
+}
+
+/* タイトル */
+.Home-Detail-title {
+  position: relative;
+  z-index: 3;
+
+  flex: 1;
+
+  margin-left: 45px;
+
+  color: #353567;
   font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: .01em;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* =========================================
+   本文
+========================================= */
+
+/* 本文カード */
+.Home-Detail-content {
+  min-height: 280px;
+
+  padding: 24px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f7f7ff
+  );
+
+  border: 1.5px solid #ececff;
+  border-radius: 18px;
+
+  box-shadow:
+    0 4px 12px rgba(120,120,180,.08),
+    inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+/* サブタイトル */
+.Home-Detail-subtitle {
+  margin-bottom: 10px;
+
+  color: #3f59b6;
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 区切り線 */
+.Home-Detail-divider {
+  width: 100%;
+  height: 2px;
+
+  margin-bottom: 20px;
+
+  background: #ff9fb5;
+}
+
+/* 本文 */
+.Home-Detail-text {
+  color: #4f5f90;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
 }

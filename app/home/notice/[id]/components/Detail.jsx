@@ -1,26 +1,60 @@
 "use client";
+
 import "./Detail.css";
+import { orbitron } from "../../../page";
 
-export default function Detail({ title, body }) {
+export default function Detail({
+  title,
+  body,
+  number,
+}) {
   return (
-    <div className="home-notice-container">
-      <div className="home-notice-card">
-        {/* 上部バー */}
-        <div className="home-notice-card-bar">
-          <span className="home-notice-card-bar-text">{title}</span>
+    <div className="Home-Detail-container">
+      <div className="Home-Detail-card">
+
+        {/* フレーム */}
+        <div className="Home-Detail-frame-top" />
+        <div className="Home-Detail-frame-bottom" />
+
+        {/* ヘッダー */}
+        <div className="Home-Detail-header">
+
+          {/* 番号 */}
+          <div
+            className={`
+              Home-Detail-number
+              ${orbitron.className}
+            `}
+          >
+            {String(number || 0).padStart(2, "0")}
+          </div>
+
+          {/* タイトル */}
+          <span className="Home-Detail-title">
+            {title}
+          </span>
+
         </div>
 
-        <div className="home-notice-card-inner">
-          {/* 区切り線の上の文言 */}
-          <div className="home-notice-inner-title">{title}</div>
+        {/* 本文 */}
+        <div className="Home-Detail-content">
 
-          <div className="home-notice-divider" />
+          {/* サブタイトル */}
+          <div className="Home-Detail-subtitle">
+            {title}
+          </div>
 
-          <p className="home-notice-text">{body}</p>
+          {/* 区切り線 */}
+          <div className="Home-Detail-divider" />
+
+          {/* 本文 */}
+          <p className="Home-Detail-text">
+            {body}
+          </p>
+
         </div>
+
       </div>
     </div>
   );
 }
-
-

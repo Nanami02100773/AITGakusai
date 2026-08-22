@@ -1,105 +1,383 @@
-/* タイトル */
-.title.time_table {
-  background-color: #999;
-  color: white;
-  padding: 10px 40px;
-  border-radius: 20px;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 20px auto 10px;
-  text-align: center;
-  width: 300px;
+/* =================================================
+   セクション
+================================================= */
+.Home-Timetable-section {
+  position: relative;
+
+  padding: 30px 0 10px;
+
+  /* ↓ 真っ白 */
+  background: #ffffff;
+
+  overflow: visible;
 }
 
-/* 1日目 用（コンパクト） */
-.title.time_table.day-title {
-  width: 160px;          /* ← 今より狭い */
-  padding: 6px 20px;     /* 高さも少し小さく */
-  font-size: 18px;       /* 文字サイズも調整 */
-  border-radius: 16px;
-  margin: 16px auto 8px;
-}
+/* =================================================
+   コンテナ
+================================================= */
+.Home-Timetable-container {
+  position: relative;
+  z-index: 2;
 
+  width: 95%;
+  max-width: 640px;
 
-/* セクション全体 */
-.timetable-section {
-  text-align: center;
-}
+  margin-left: auto;
+  margin-right: auto;
 
-/* テーブル外枠ボックス */
-.box {
-  width: fit-content;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #b3b3b3;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  max-height: 600px;
+  /* =========================
+     ▼ 開始位置調整
+     数値を変えるだけ
+  ========================= */
+  /* さらに細かく動かす */
+  transform: translateY(-15px);
+
+  padding: 20px 10px;
+
+  height: 655px;
+
   overflow-y: auto;
-  max-width: 800px;
+  overflow-x: hidden;
+
+  /* ↓ 背景色変更 */
+  background: #e6eeff;
+
+  border:
+    1px solid rgba(230,236,255,0.9);
 }
 
-/* テーブル本体 */
-table {
-  margin: 0 auto;
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  font-family: sans-serif;
-  table-layout: fixed;
+/* =================================================
+   中身を前面へ
+================================================= */
+.Home-Timetable-container > * {
+  position: relative;
+  z-index: 2;
 }
 
-/* 各セル */
-td, th {
-  border: 5px solid #b3b3b3;
-  padding: 12px;
-  text-align: center;
+/* =================================================
+   スクロールバー
+================================================= */
+
+.Home-Timetable-container::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* 最初の列 */
-td:first-child, th:first-child {
-  width: 150px;
-  text-align: center;
-  background-color: #fff;
+.Home-Timetable-container::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-/* ヘッダー行 */
-th {
-  background-color: #e0e0e0;
-  font-weight: bold;
-  font-size: 14px;
-  border-bottom: 15px solid #b3b3b3;
+.Home-Timetable-container::-webkit-scrollbar-thumb {
+  background: #ff9fb5;
+  border-radius: 999px;
 }
 
-thead th {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  height: 35px;
-  font-size: 13px;
-  background-color: #e6e6e6;
-}
-
-thead th:first-child {
-  background-color: #e6e6e6 !important;
-}
-
-/* 中央黒線セル */
-.divider-cell {
-  width: 13px;
-  background-color: rgb(108, 108, 108);
-  border-left: 8px solid #b3b3b3;
-  border-right: 8px solid #b3b3b3;
-  padding: 0;
-}
-
-/* 中央線のヘッダーだけ色を変える */
-.divider-cell.divider-head {
-  background-color: #b3b3b3;
-}
-
-/* 表示調整用に空にするだけのセル（中身なし） */
-.divider-space {
+.Home-Timetable-container::-webkit-scrollbar-button {
   display: none;
+  width: 0;
+  height: 0;
 }
 
+.Home-Timetable-container {
+  scrollbar-color: #ff9fb5 transparent;
+  scrollbar-width: thin;
+}
+
+/* =================================================
+   日ごとの余白
+================================================= */
+.Home-Timetable-container > div + div {
+  margin-top: 24px;
+}
+
+/* =================================================
+   日付タイトル
+================================================= */
+.Home-Timetable-dayTitle {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 10px auto 20px;
+
+  padding-top: 10px;
+
+  text-align: center;
+}
+
+/* =================================================
+   タイトル左右ライン
+================================================= */
+.Home-Timetable-dayTitle::before,
+.Home-Timetable-dayTitle::after {
+  content: "";
+
+  width: 80px;
+  height: 3px;
+
+  margin: 0 20px;
+
+  border-radius: 999px;
+
+  background: #7f95ff;
+
+  opacity: 0.9;
+}
+
+/* =================================================
+   左ライン
+================================================= */
+.Home-Timetable-dayTitle::before {
+  transform: translateX(-5px);
+}
+
+/* =================================================
+   右ライン
+================================================= */
+.Home-Timetable-dayTitle::after {
+  transform: translateX(5px);
+}
+
+/* =================================================
+   下の白プレート
+================================================= */
+.Home-Timetable-dayTitle span {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 20px;
+  height: 65px;
+
+  padding: 0 30px;
+
+  background: #f8f9ff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 0 2px rgba(220,228,255,0.9),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+/* =================================================
+   日付文字
+================================================= */
+.Home-Timetable-dayTitle span b {
+  position: relative;
+
+  top: 6px;
+
+  color: #3d4679;
+
+  font-size: 22px;
+  font-weight: 900;
+
+  letter-spacing: 0.04em;
+}
+
+/* =================================================
+   2日目だけ上余白
+================================================= */
+.Home-Timetable-dayTitleSecond {
+  margin-top: 50px;
+}
+
+/* =================================================
+   上ラベル
+================================================= */
+.Home-Timetable-dayTitle span small {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 28px;
+
+  border-radius: 5px;
+
+  background: #7f95ff;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  letter-spacing: 0.18em;
+
+  box-shadow:
+    0 4px 10px rgba(150,160,255,0.18);
+}
+
+/* =================================================
+   リスト
+================================================= */
+.Home-Timetable-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* =================================================
+   行カード
+================================================= */
+.Home-Timetable-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 62px;
+
+  padding: 0 12px 0 0;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fafbff
+    );
+
+  border:
+    1px solid rgba(232,236,255,0.95);
+
+  box-shadow:
+    0 5px 14px rgba(120,130,200,0.07);
+}
+
+/* 左アクセント */
+.Home-Timetable-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 7px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #7fa1ff,
+      #6283ff
+    );
+}
+
+/* =================================================
+   時間
+================================================= */
+.Home-Timetable-time {
+  min-width: 118px;
+
+  margin-left: 14px;
+
+  padding: 10px 10px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f5f7ff,
+      #eef2ff
+    );
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #55639c;
+
+  text-align: center;
+}
+
+/* =================================================
+   アイコン
+================================================= */
+.Home-Timetable-icon {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-left: 25px;
+
+  background: #ffffff;
+
+  border: 2px solid #dbe4ff;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 2px 8px rgba(102, 110, 176, 0.08);
+}
+
+.Home-Timetable-iconImage {
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+  display: block;
+}
+
+/* =================================================
+   内容
+================================================= */
+.Home-Timetable-content {
+  position: relative;
+
+  flex: 1;
+
+  margin-left: 12px;
+
+  text-align: left;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #3d4679;
+}
+
+.Home-Timetable-content::before {
+  content: "";
+
+  position: absolute;
+
+  left: -65px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 2px;
+  height: 28px;
+
+  border-radius: 999px;
+
+  background: #d7dfff;
+}

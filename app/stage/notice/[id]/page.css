@@ -1,0 +1,21 @@
+/* =========================
+   タイトル
+========================= */
+.Stage-Detail-title,
+.Stage-Detail-subtitle {
+  font-family: var(--font-rounded);
+}
+
+/* =========================
+   お知らせ本文
+========================= */
+.Stage-Detail-text {
+  font-family: var(--font-rounded);
+}
+
+/* =========================
+   お知らせ番号
+========================= */
+.Stage-Detail-number {
+  font-family: "Orbitron", sans-serif;
+}

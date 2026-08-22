@@ -1,27 +1,72 @@
 "use client";
+
 import Link from "next/link";
 import "./NoticeSection.css";
-import { noticeData } from "./data/noticeData";
+import { useEffect, useState } from "react";
+import { orbitron } from "../page";
 
 const NoticeSection = () => {
-  return (
-    <section className="notice-section">
-      <h2 className="title1">お知らせ</h2>
+  const [notices, setNotices] = useState([]);
 
-      <div className="box3">
-        <ul>
-          {noticeData.map((notice) => (
-            <li key={notice.id} className="notice-item">
-              <Link
-                href={`/stage/notice/${notice.id}`}
-                className="notice-link"
-              >
-                {notice.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+  useEffect(() => {
+    const saved = JSON.parse(
+      localStorage.getItem("notices") || "[]"
+    );
+
+    const filtered = saved.filter(
+      (n) => n.category === "stage"
+    );
+
+    setNotices(filtered);
+  }, []);
+
+  return (
+    <section className="Stage-Notice-section">
+
+      {/* タイトル */}
+      <div className="Stage-Notice-title-wrapper">
+        <div className="Stage-section-title">
+          お知らせ
+        </div>
       </div>
+
+      {/* お知らせ一覧 */}
+      <div className="Stage-Notice-list">
+        {notices.length === 0 ? (
+          <div className="Stage-Notice-empty">
+            現在ステージに関するお知らせはありません
+          </div>
+        ) : (
+          notices.map((notice, index) => (
+            <Link
+              key={notice.id}
+              href={`/stage/notice/${notice.id}`}
+              className={`Stage-Notice-item n${index + 1}`}
+            >
+              <div
+                className={`
+                  Stage-Notice-number
+                  n${index + 1}
+                  ${orbitron.className}
+                `}
+              >
+                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <div className="Stage-Notice-text">
+                {notice.title}
+              </div>
+
+              <div className="Stage-Notice-dots" />
+
+              <div className="Stage-Notice-arrow">
+                ›
+              </div>
+            </Link>
+          ))
+        )}
+      </div>
+
     </section>
   );
 };

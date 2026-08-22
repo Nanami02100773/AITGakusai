@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  position: relative;
+  background: #ffffff;
+}
+
+/* =========================
+   背景グラデーション
+========================= */
+
+body::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1900px;
+
+  background: linear-gradient(
+    180deg,
+    #4b7cff 0%,
+    #7ea6ff 35%,
+    #c8dcff 70%,
+    #ffffff 100%
+  );
+
+  z-index: -10;
+}
+
+/* =========================
+   ページ全体
+========================= */
+
+.Question-MascotDetail-page {
+  margin: -23px auto 0;
+  padding: 20px;
+}
+
+/* =========================
+   ラッパー
+========================= */
+
+.Question-MascotDetail-card-wrapper {
+  position: relative;
+
+  width: 320px;
+
+  margin: 0 auto;
+
+  top: 200px;
+}
+
+/* =========================
+   装飾コンテナ
+========================= */
+
+.Question-MascotDetail-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* =========================
+   青い台座
+========================= */
+
+.Question-MascotDetail-top-base {
+  position: absolute;
+
+  top: -155px;
+  right: 50px;
+
+  width: 250px;
+  height: 23px;
+
+  background: #1f73d8;
+
+  transform: skewX(-18deg);
+
+  z-index: -2;
+}
+
+/* =========================
+   水色ストライプ
+========================= */
+
+.Question-MascotDetail-top-dots {
+  position: absolute;
+
+  top: -155px;
+  right: 165px;
+
+  width: 110px;
+  height: 25px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #6cb8ff 0px,
+      #42a4ff 12px,
+      transparent 12px,
+      transparent 24px
+    );
+
+  transform: skewX(-18deg);
+
+  z-index: -1;
+}
+
+/* =========================
+   左側の白い装飾
+========================= */
+
+.Question-MascotDetail-card-white-left {
+  position: absolute;
+
+  top: -250px;
+  right: 80px;
+
+  width: 270px;
+  height: 95px;
+
+  background: #ffffff;
+
+  border-bottom: 2px solid #bac4ff;
+  border-left: 2px solid #bac4ff;
+
+  z-index: 3;
+}
+
+/* =========================
+   中央の斜め白パーツ
+========================= */
+
+.Question-MascotDetail-card-white-center {
+  position: absolute;
+
+  top: -250px;
+  right: 10px;
+
+  width: 100px;
+  height: 95px;
+
+  background: #ffffff;
+
+  border-bottom: 2px solid #bac4ff;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    55% 100%,
+    0% 100%
+  );
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 10px 20px rgba(0, 0, 0, 0.06);
+
+  z-index: 2;
+}
+
+/* =========================
+   青い斜めパーツ
+========================= */
+
+.Question-MascotDetail-card-blue-center {
+  position: absolute;
+
+  top: -248px;
+  right: -40px;
+
+  width: 100px;
+  height: 116px;
+
+  background: #1f73d8;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    45% 100%,
+    0% 100%
+  );
+
+  z-index: 1;
+}

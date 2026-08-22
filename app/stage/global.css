@@ -1,8 +1,24 @@
-.background-box {
-  background-color: #e7e7e7;
-  padding: 40px;
-  max-width: 1000px;
-  margin: 40px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
+.Stage-Schedule-content {
+  background: linear-gradient(
+    180deg,
+    #e9edff,
+    #b9c4f1
+  );
+
+  padding: 16px;
+
+  width: 95%;
+  max-width: 800px;
+
+  margin: 20px auto 100px;
+
+  border-radius: 5px;
+}
+
+.StageSchedule-container {
+  margin-bottom: 100px;
+}
+
+body {
+  background: #ffffff;
 }
