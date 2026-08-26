@@ -1,34 +1,112 @@
 "use client";
 
+import { useState } from "react";
 import "./HomeGuide.css";
 
 export default function HomeGuide() {
-  return (
-    <section className="home-guide">
+  const [openItem, setOpenItem] = useState(null);
 
-      {/* タイトル */}
-      <div className="home-guide-header">
-        <div className="home-guide-number">
+  const items = [
+    {
+      title: "学祭の広告",
+      text: "学祭で行われるイベントや企画などの情報を紹介しています。タップすると、詳しい内容を確認できます。",
+    },
+    {
+      title: "最新のお知らせ",
+      text: "落とし物や重要なお知らせなど、最新の情報を随時更新しています。",
+    },
+    {
+      title: "タイムテーブル",
+      text: "学祭期間中のイベントやステージのスケジュールを確認できます。",
+    },
+    {
+      title: "グランプリ",
+      text: "2日目の夜に投票結果を集計し、グランプリを決定します。",
+    },
+    {
+      title: "公式SNS",
+      text: "愛工大祭の公式SNSを確認できます。",
+    },
+  ];
+
+  const handleToggle = (index) => {
+    setOpenItem(openItem === index ? null : index);
+  };
+
+  return (
+    <section className="Home-Guide-section">
+
+      {/* ページタイトル */}
+      <div className="Home-Guide-header">
+        <div className="Home-Guide-number">
           03
         </div>
 
-        <h2>ホーム</h2>
+        <h1>ホーム</h1>
       </div>
 
-      {/* スマホ画像 */}
-      <div className="home-guide-image">
-        <img
-          src="/guide/home.png"
-          alt="ホーム画面"
-        />
-      </div>
 
-      {/* 説明 */}
-      <ul className="home-guide-list">
-        <li>最新のお知らせを確認できます。</li>
-        <li>注目企画を表示します。</li>
-        <li>下へスクロールすると各機能へ移動できます。</li>
-      </ul>
+      {/* ホーム画面全体 */}
+      <div className="Home-Guide-content">
+
+        {/* ホーム画面画像 */}
+        <div className="Home-Guide-image-box">
+          <div className="Home-Guide-image">
+            <img
+              src="/guide/home.png"
+              alt="ホーム画面"
+            />
+          </div>
+        </div>
+
+
+        {/* ホーム画面タイトル */}
+        <div className="Home-Guide-divider">
+          ホーム画面
+        </div>
+
+
+        {/* ホーム画面の説明 */}
+        <div className="Home-Guide-notice">
+
+          {items.map((item, index) => (
+            <div
+              className="Home-Guide-notice-item"
+              key={item.title}
+            >
+
+              {/* 項目タイトル */}
+              <button
+                className="Home-Guide-notice-title"
+                onClick={() => handleToggle(index)}
+              >
+                <span className="Home-Guide-notice-dot"></span>
+
+                <h2>{item.title}</h2>
+
+                <span
+                  className={`Home-Guide-arrow ${
+                    openItem === index ? "is-open" : ""
+                  }`}
+                >
+                  &gt;
+                </span>
+              </button>
+
+
+              {/* 本文 */}
+              {openItem === index && (
+                <div className="Home-Guide-notice-text">
+                  {item.text}
+                </div>
+              )}
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
 
     </section>
   );

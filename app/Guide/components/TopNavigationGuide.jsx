@@ -1,82 +1,117 @@
 "use client";
 
+import { useState } from "react";
 import "./TopNavigationGuide.css";
 
 export default function TopNavigationGuide() {
+  const [openItem, setOpenItem] = useState(null);
+
+  const items = [
+    {
+      number: "01",
+      title: "戻るボタン",
+      text: "左側にあるマークを押すと、一つ前のページに戻ることができます。",
+    },
+    {
+      number: "02",
+      title: "ロゴエリア",
+      text: "愛工大祭のロゴなどが表示されます。",
+    },
+    {
+      number: "03",
+      title: "メニュー",
+      text: "アプリの操作説明を確認できます。",
+    },
+  ];
+
+  const handleToggle = (index) => {
+    setOpenItem(openItem === index ? null : index);
+  };
+
   return (
-    <div className="guide-card">
+    <section className="TopNavigationGuide">
 
-      {/* タイトル */}
-      <div className="guide-header">
-        <div className="Guide-section-title">
-          01. メニュー
+      {/* ページタイトル */}
+      <div className="TopNavigationGuide-header">
+        <div className="TopNavigationGuide-number">
+          01
         </div>
+
+        <h1>上部メニュー</h1>
       </div>
 
-      {/* メニュー全体画像 */}
-      <div className="menu-preview-box">
-        {/* 画像がある場合 */}
-        {/* <img src="/guide/home-menu.png" alt="メニュー画面" /> */}
 
-        {/* 画像がない場合 */}
-        <div className="image-placeholder">
-          メニュー画面
+      {/* 上部メニュー全体 */}
+      <div className="TopNavigationGuide-content">
+
+        {/* 上部メニュー画像 */}
+        <div className="TopNavigationGuide-image-box">
+          <div className="TopNavigationGuide-image">
+            <img
+              src="/guide/top-navigation.png"
+              alt="上部メニュー"
+            />
+          </div>
         </div>
+
+
+        {/* 上部メニュータイトル */}
+        <div className="TopNavigationGuide-divider">
+          上部メニュー
+        </div>
+
+
+        {/* 上部メニューの説明 */}
+        <div className="TopNavigationGuide-notice">
+
+          {items.map((item, index) => (
+            <div
+              className="TopNavigationGuide-notice-item"
+              key={item.title}
+            >
+
+              <button
+                className="TopNavigationGuide-notice-title"
+                onClick={() => handleToggle(index)}
+              >
+
+                {/* 左端のドット */}
+                <span className="TopNavigationGuide-notice-dot"></span>
+
+                {/* 番号 */}
+                <span className="TopNavigationGuide-item-number">
+                  {item.number}
+                </span>
+
+                {/* 項目名 */}
+                <h2>{item.title}</h2>
+
+                {/* 矢印 */}
+                <span
+                  className={`TopNavigationGuide-arrow ${
+                    openItem === index ? "is-open" : ""
+                  }`}
+                >
+                  &gt;
+                </span>
+
+              </button>
+
+
+              {/* 説明本文 */}
+              {openItem === index && (
+                <div className="TopNavigationGuide-notice-text">
+                  {item.text}
+                </div>
+              )}
+
+            </div>
+          ))}
+
+        </div>
+
       </div>
 
-      {/* 説明一覧 */}
-      <div className="guide-detail-box">
-
-        {/* 戻る */}
-        <div className="guide-item">
-
-          <div className="guide-left">
-            <div className="guide-image-box">
-              <img src="/guide/back.png" alt="戻る" />
-            </div>
-          </div>
-
-          <div className="guide-text">
-            <h3>戻る</h3>
-            <p>前の画面へ戻ります。</p>
-          </div>
-
-        </div>
-
-        {/* メニュー */}
-        <div className="guide-item">
-
-          <div className="guide-left">
-            <div className="guide-image-box">
-              <img src="/guide/menu.png" alt="メニュー" />
-            </div>
-          </div>
-
-          <div className="guide-text">
-            <h3>メニュー</h3>
-            <p>操作説明やログインページを表示します。</p>
-          </div>
-
-        </div>
-
-        {/* ロゴ */}
-        <div className="guide-item">
-
-          <div className="guide-left">
-            <div className="guide-image-box">
-              <img src="/guide/logo.png" alt="ロゴ" />
-            </div>
-          </div>
-
-          <div className="guide-text">
-            <h3>ロゴエリア</h3>
-            <p>学祭ロゴやお知らせが表示されます。</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+    </section>
   );
 }

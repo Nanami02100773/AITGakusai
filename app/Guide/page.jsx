@@ -9,7 +9,7 @@ import ProjectGuide from "./components/ProjectGuide";
 import QuestionnaireGuide from "./components/QuestionnaireGuide";
 import FaqGuide from "./components/FaqGuide";
 import MascotGuide from "./components/MascotGuide";
-import LoginGuide from "./components/LoginGuide";
+// import LoginGuide from "./components/LoginGuide";
 import EnjoyGuide from "./components/EnjoyGuide";
 
 import NavigationBar from "./components/NavigationBar";
@@ -29,7 +29,7 @@ export default function Page() {
       <QuestionnaireGuide />
       <FaqGuide />
       <MascotGuide />
-      <LoginGuide />
+      {/* <LoginGuide /> */}
       <EnjoyGuide />
 
       <NavigationBar />

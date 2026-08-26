@@ -1,32 +1,62 @@
+"use client";
+
 import "./EnjoyGuide.css";
 
 export default function EnjoyGuide() {
   return (
-    <section className="enjoy-guide">
-      <div className="enjoy-guide-card">
-        <div className="enjoy-guide-number">10</div>
+    <section className="Enjoy-Guide-section">
 
-        <h2 className="enjoy-guide-title">楽しもう！</h2>
+      {/* ==========================
+          タイトル
+      ========================== */}
 
-        <div className="enjoy-guide-content">
-          <div className="enjoy-guide-text">
-            <p>工大祭2025を</p>
-            <p>思いっきり</p>
-            <p>楽しんでください！</p>
+      <div className="Enjoy-Guide-header">
 
-            <br />
+        <div className="Enjoy-Guide-number">
+          10
+        </div>
 
-            <p>最高の思い出を</p>
-            <p>一緒につくろう！</p>
-          </div>
+        <h1>
+          楽しもう！
+        </h1>
+
+      </div>
+
+
+      {/* ==========================
+          メインボックス
+      ========================== */}
+
+      <div className="Enjoy-Guide-content">
+
+        {/* ==========================
+            マスコット画像
+        ========================== */}
+
+        <div className="Enjoy-Guide-image-box">
 
           <img
             src="/mascot.png"
-            alt="マスコット"
-            className="enjoy-guide-image"
+            alt="愛工大祭マスコット"
           />
+
         </div>
+
+
+        {/* ==========================
+            メッセージ
+        ========================== */}
+
+        <div className="Enjoy-Guide-text">
+
+          <p>愛工大祭を思いっきり楽しんでください！</p>
+
+          <p>最高の思い出を一緒につくろう！</p>
+
+        </div>
+
       </div>
+
     </section>
   );
 }

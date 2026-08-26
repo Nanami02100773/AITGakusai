@@ -1,35 +1,38 @@
-/* タイトル */
+/* ==========================
+   操作説明タイトル
+========================== */
+
 .guide-title {
-  background-color: #999;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
+  position: relative;
+
+  width: 260px;
+  height: 47px;
+
+  margin: 70px auto 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  color: #fff;
+
   font-size: 20px;
-  width: 300px;
-  /* 中央揃え */
-  margin: 70px auto 20px;
-  text-align: center;
-  display: block;
-}
+  font-weight: bold;
 
-/* 説明ボックス */
-.guide-box {
-  background: #f5f5f5;
-  padding: 25px;
-  border-radius: 16px;
-  max-width: 500px;
-  width: 95%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
+  border-radius: 10px;
 
-/* 説明文 */
-.guide-box p {
-  margin-bottom: 15px;
-  font-size: 16px;
-  line-height: 1.6;
-}
+  border: 2px solid rgba(255, 255, 255, 0.55);
 
-.guide-box p:last-child {
-  margin-bottom: 0;
+  box-shadow:
+    0 8px 20px rgba(160, 170, 255, 0.14),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.55);
+
+  box-sizing: border-box;
 }

@@ -1,108 +1,524 @@
-.map-guide{
-  width:370px;
-
-  margin:30px auto;
-
-  padding:22px;
-
-  background:#fff;
-
-  border-radius:28px;
-
-  border:3px solid #dce4ff;
-
-  box-shadow:
-    0 10px 25px rgba(111,141,255,.10);
-}
-
 /* ==========================
-タイトル
+   セクション
 ========================== */
 
-.map-guide-header{
-  display:flex;
-  align-items:center;
+.Map-Guide-section {
 
-  gap:16px;
+  width: 100%;
 
-  margin-bottom:22px;
+  padding: 15px 16px 30px;
+
+  background: #fff;
+
+  box-sizing: border-box;
+
 }
 
-.map-guide-number{
-  width:60px;
-  height:60px;
 
-  border-radius:50%;
+/* ==========================
+   ページタイトル
+========================== */
 
-  background:linear-gradient(
+.Map-Guide-header {
+
+  width: 400px;
+
+  max-width: 100%;
+
+  margin: 0 auto 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================
+   番号
+========================== */
+
+.Map-Guide-number {
+
+  width: 60px;
+
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(
     135deg,
-    #6f8dff,
-    #5b63ff
+    #5675ff,
+    #3757ef
   );
 
-  color:#fff;
+  border: 3px solid #fff;
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  border-radius: 50%;
 
-  font-size:24px;
-  font-weight:800;
+  color: #fff;
 
-  box-shadow:
-    0 6px 16px rgba(111,141,255,.25);
-}
+  font-size: 25px;
 
-.map-guide-header h2{
-  margin:0;
-
-  font-size:34px;
-  font-weight:800;
-
-  color:#233b96;
-}
-
-/* ==========================
-画像
-========================== */
-
-.map-guide-image{
-  width:100%;
-
-  margin-bottom:24px;
-}
-
-.map-guide-image img{
-  width:100%;
-
-  display:block;
-
-  border-radius:18px;
-
-  border:2px solid #dce4ff;
+  font-weight: 700;
 
   box-shadow:
-    0 8px 20px rgba(0,0,0,.08);
+    0 5px 14px rgba(79, 109, 255, 0.22);
+
+  box-sizing: border-box;
+
 }
+
 
 /* ==========================
-説明
+   マップ文字
 ========================== */
 
-.map-guide-list{
-  margin:0;
+.Map-Guide-header h1 {
 
-  padding-left:30px;
+  position: relative;
 
-  color:#24358f;
+  margin: 0;
 
-  font-size:22px;
+  padding-bottom: 8px;
 
-  font-weight:700;
+  color: #353567;
 
-  line-height:1.8;
+  font-size: 30px;
+
+  font-weight: 700;
+
 }
 
-.map-guide-list li{
-  margin-bottom:8px;
+
+/* ==========================
+   アンダーバー
+========================== */
+
+.Map-Guide-header h1::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 180px;
+
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #5675ff,
+    #9eaaff
+  );
+
+  border-radius: 999px;
+
+}
+
+
+/* ==========================
+   マップ全体
+========================== */
+
+.Map-Guide-content {
+
+  width: 420px;
+
+  max-width: 100%;
+
+  margin: 0 auto;
+
+  padding: 28px 15px 32px;
+
+  background: linear-gradient(
+    180deg,
+    #e6eeff,
+    #edf3ff
+  );
+
+  border: 1px solid #d5ddff;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 22px rgba(79, 109, 255, 0.08);
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================
+   画像ボックス
+========================== */
+
+.Map-Guide-image-box {
+
+  width: 380px;
+
+  max-width: 100%;
+
+  height: 300px;
+
+  margin: 0 auto;
+
+  padding: 18px;
+
+  background: #fff;
+
+  border: 3px solid #c8d0ff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 20px rgba(79, 109, 255, 0.12),
+    0 2px 5px rgba(79, 109, 255, 0.05);
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================
+   マップ画像
+========================== */
+
+.Map-Guide-image {
+
+  width: 100%;
+
+}
+
+
+.Map-Guide-image img {
+
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  border-radius: 14px;
+
+}
+
+
+/* ==========================
+   マップタイトル
+========================== */
+
+.Map-Guide-divider {
+
+  width: 180px;
+
+  height: 36px;
+
+  margin: 18px auto 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  border: 2px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 5px 12px rgba(79, 109, 255, 0.14),
+    inset 0 2px 0 rgba(255, 255, 255, 0.65);
+
+  color: #fff;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================
+   説明ボックス
+========================== */
+
+.Map-Guide-notice {
+
+  width: 390px;
+
+  max-width: 100%;
+
+  margin: 0 auto;
+
+  padding: 16px;
+
+  background: #c8d0ff;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 14px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================
+   項目
+========================== */
+
+.Map-Guide-notice-item {
+
+  margin-bottom: 7px;
+
+}
+
+
+.Map-Guide-notice-item:last-child {
+
+  margin-bottom: 0;
+
+}
+
+
+/* ==========================
+   項目タイトル
+========================== */
+
+.Map-Guide-notice-title {
+
+  width: 100%;
+
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 10px 16px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f8f9ff
+  );
+
+  border: 1px solid #e0e4f8;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 8px rgba(90, 100, 160, 0.07);
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+/* ==========================
+   タップ時
+========================== */
+
+.Map-Guide-notice-title:active {
+
+  transform: scale(0.98);
+
+  box-shadow:
+    0 2px 5px rgba(90, 100, 160, 0.08);
+
+}
+
+
+/* ==========================
+   ドット
+========================== */
+
+.Map-Guide-notice-dot {
+
+  width: 13px;
+
+  height: 13px;
+
+  flex-shrink: 0;
+
+  background: linear-gradient(
+    135deg,
+    #5675ff,
+    #3757ef
+  );
+
+  border: 1.5px solid #fff;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 2px 6px rgba(79, 109, 255, 0.2);
+
+}
+
+
+/* ==========================
+   項目文字
+========================== */
+
+.Map-Guide-notice-title h2 {
+
+  margin: 0;
+
+  color: #353567;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  flex: 1;
+
+  transition: color 0.2s ease;
+
+}
+
+
+/* ==========================
+   矢印
+========================== */
+
+.Map-Guide-arrow {
+
+  color: #4f6dff;
+
+  font-size: 27px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease,
+    color 0.2s ease;
+
+}
+
+
+/* ==========================
+   開いたとき
+========================== */
+
+.Map-Guide-arrow.is-open {
+
+  transform: rotate(90deg);
+
+  color: #3757ef;
+
+}
+
+
+/* ==========================
+   説明本文
+========================== */
+
+.Map-Guide-notice-text {
+
+  width: calc(100% - 18px);
+
+  margin-top: 5px;
+
+  margin-left: auto;
+
+  padding: 14px 18px;
+
+  background: #e6eeff;
+
+  border: 1px solid #c8d0ff;
+
+  border-radius: 10px;
+
+  color: #353567;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================
+   ホバー時
+========================== */
+
+.Map-Guide-notice-title:hover {
+
+  transform: translateY(-2px);
+
+  background: #eef2ff;
+
+  border-color: #b8c6ff;
+
+  box-shadow:
+    0 6px 14px rgba(79, 109, 255, 0.14);
+
+}
+
+
+/* ==========================
+   ホバー時の文字
+========================== */
+
+.Map-Guide-notice-title:hover h2 {
+
+  color: #3757ef;
+
+}
+
+
+/* ==========================
+   ホバー時の矢印
+========================== */
+
+.Map-Guide-notice-title:hover .Map-Guide-arrow {
+
+  color: #3757ef;
+
 }
