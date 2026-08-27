@@ -87,7 +87,7 @@
   width: 100%;
   height: 100%;
 
-  gap: 25px;
+  gap: px;
 
   box-sizing: border-box;
 }
@@ -96,31 +96,24 @@
 /* =================================================
    王冠画像エリア
 ================================================= */
-
 .Home-Award-crownIconWrap {
   position: relative;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   width: 140px;
   height: 110px;
 
-  margin: 0;
+  margin: 0 0 0 20px; /* ← ここを追加・変更 */
 
   background: #ffffff;
-
   border: 2.5px solid #9bbcff;
-
   border-radius: 14px;
 
   flex-shrink: 0;
-
   box-sizing: border-box;
 }
-
 
 /* =================================================
    王冠画像
@@ -131,7 +124,7 @@
 
   z-index: 2;
 
-  width: 125px;
+  width: 140px;
   height: auto;
 
   object-fit: contain;
@@ -356,44 +349,3 @@
 }
 
 
-/* =================================================
-   スマホ調整
-================================================= */
-
-@media (max-width: 500px) {
-
-  .Home-Award-crownArea {
-    width: calc(100% - 30px);
-
-    height: 150px;
-
-    padding: 10px 12px;
-  }
-
-  .Home-Award-crownTextWrap {
-    gap: 12px;
-  }
-
-  .Home-Award-crownIconWrap {
-    width: 120px;
-    height: 105px;
-  }
-
-  .Home-Award-crownIcon {
-    width: 110px;
-  }
-
-  .Home-Award-crownText {
-    font-size: 8px;
-    line-height: 1.75;
-  }
-
-  .Home-Award-crownSubtitle {
-    font-size: 15px;
-    margin-bottom: 13px;
-  }
-
-  .Home-Award-card {
-    width: 90%;
-  }
-}
