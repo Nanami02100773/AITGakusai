@@ -50,7 +50,7 @@
 
   transform: translateX(-50%);
 
-  width: calc(100% - 30px);
+  width: calc(100% - 25px);
   max-width: 490px;
 
   height: 150px;
@@ -84,7 +84,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 100%;
+  width: 95%;
   height: 100%;
 
   gap: px;
@@ -105,7 +105,7 @@
   width: 140px;
   height: 110px;
 
-  margin: 0 0 0 20px; /* ← ここを追加・変更 */
+  margin: 0 0 0 10px; /* ← ここを追加・変更 */
 
   background: #ffffff;
   border: 2.5px solid #9bbcff;
