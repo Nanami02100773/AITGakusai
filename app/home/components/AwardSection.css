@@ -41,7 +41,7 @@
    グランプリとは
 ================================================= */
 .Home-Award-crownSubtitle {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   font-size: 17px;
   font-weight: 900;
@@ -64,10 +64,11 @@
 
   transform: translateX(-50%);
 
-  width: calc(100% - 15px);
+  width: calc(100% - 40px);
   max-width: 450px;
+  height: 150px;
 
-  padding: 10px 15px 15px;
+  padding: 5px 5px 15px;
 
   background:
     linear-gradient(
@@ -91,11 +92,11 @@
 /* =================================================
    テキスト・王冠
 ================================================= */
+
 .Home-Award-crownTextWrap {
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 10px;
 }
 
@@ -103,7 +104,8 @@
    王冠画像
 ================================================= */
 .Home-Award-crownIconWrap {
-  margin-top: 10px;
+  margin-top: 5px;
+  left: 15px;
 
   position: relative;
 
@@ -112,11 +114,11 @@
   justify-content: center;
 
   width: 120px;
-  height: 110px;
+  height: 105px;
 
   background: #ffffff;
 
-  border-radius: 999px;
+  border-radius: 10px;
 
   border: 2.5px solid #9bbcff;
 
@@ -140,28 +142,26 @@
 /* =================================================
    テキスト
 ================================================= */
+
 .Home-Award-crownText {
   position: relative;
 
   flex: 1;
 
   margin-top: 18px;
-
   padding-bottom: 15px;
 
   font-size: 11px;
   font-weight: 900;
 
   line-height: 1.9;
-
   letter-spacing: .05em;
 
-  text-align: left;
+  text-align: center;
 
   color: #163b8f;
 
   white-space: normal;
-
   word-break: keep-all;
 }
 
@@ -286,4 +286,29 @@
   font-weight: 700;
 
   color: #66759e;
+}
+
+.Home-Award-crownTextWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Home-Award-crownText {
+  position: relative;
+  flex: 1;
+  margin-top: 18px;
+  padding-bottom: 15px;
+
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.9;
+  letter-spacing: .05em;
+
+  text-align: center;
+
+  color: #163b8f;
+  white-space: normal;
+  word-break: keep-all;
 }

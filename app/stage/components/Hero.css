@@ -412,11 +412,11 @@
    上文
 ================================================= */
 .Stage-Hero-subText {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 6px;
 
   color: #22345f;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.05em;
@@ -437,7 +437,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  font-size: 38px;
+  font-size: 34px;
   font-weight: 900;
   line-height: 1;
 }
@@ -450,17 +450,17 @@
 
   display: block;
 
-  width: 82%;
-  height: 3px;
+  width: 75%;
+  height: 2px;
 
   margin: 8px auto 6px;
 
   background: repeating-linear-gradient(
     to right,
-    #b9c5ff 0px,
-    #b9c5ff 14px,
+    #ffb9b9 0px,
+    #ffb9b9 14px,
     transparent 14px,
-    transparent 28px
+    transparent 0px
   );
 }
 

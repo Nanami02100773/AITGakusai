@@ -533,8 +533,8 @@
   justify-content: center;
   align-items: center;
 
-  width: calc(100% - 20px);
-  min-height: 140px;
+  width: calc(100% - 10px);
+  min-height: 150px;
 
   margin: 30px auto;
 
@@ -548,7 +548,7 @@
     0 4px 12px rgba(120, 120, 180, 0.08);
 
   color: #6d79c7;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   text-align: center;
 }

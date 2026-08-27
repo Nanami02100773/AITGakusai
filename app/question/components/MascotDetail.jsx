@@ -7,6 +7,9 @@ const MascotDetail = () => {
   return (
     <div className="Question-MascotDetail-page">
 
+      {/* 背景グラデーション */}
+      <div className="Question-MascotDetail-background"></div>
+
       <div className="Question-MascotDetail-card-wrapper">
 
         {/* 上部装飾 */}

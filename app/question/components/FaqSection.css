@@ -96,7 +96,7 @@
   align-items: center;
 
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
 
   flex-shrink: 0;
 
@@ -109,7 +109,7 @@
 ======================================== */
 
 .Question-FaqSection-title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 800;
 
   color: #3851a8;
@@ -122,10 +122,10 @@
 
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -5px;
 
   width: 170px;
-  height: 3px;
+  height: 2px;
 
   background: linear-gradient(
     to right,

@@ -8,10 +8,9 @@ body {
    背景グラデーション
 ========================= */
 
-body::before {
-  content: "";
-
+.Question-MascotDetail-background {
   position: absolute;
+
   top: 0;
   left: 0;
 
@@ -58,7 +57,9 @@ body::before {
 
 .Question-MascotDetail-decoration {
   position: absolute;
+
   inset: 0;
+
   pointer-events: none;
 }
 
