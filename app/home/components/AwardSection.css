@@ -87,17 +87,19 @@
   width: 95%;
   height: 100%;
 
-  gap: px;
+  gap: 20px;
 
   box-sizing: border-box;
 }
 
-
 /* =================================================
    王冠画像エリア
 ================================================= */
+
 .Home-Award-crownIconWrap {
+
   position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,13 +107,18 @@
   width: 140px;
   height: 110px;
 
-  margin: 0 0 0 10px; /* ← ここを追加・変更 */
+  margin: 0;
+
+  /* ← 左右位置を調整 */
+  transform: translateX(0px);
 
   background: #ffffff;
+
   border: 2.5px solid #9bbcff;
   border-radius: 14px;
 
   flex-shrink: 0;
+
   box-sizing: border-box;
 }
 
@@ -132,16 +139,15 @@
   display: block;
 }
 
-
 /* =================================================
    テキスト全体
 ================================================= */
 
 .Home-Award-crownText {
+
   position: relative;
 
   flex: 1;
-
   min-width: 0;
 
   margin: 0;
@@ -151,16 +157,15 @@
 
   font-size: 9px;
   font-weight: 700;
-
   line-height: 1.8;
 
   letter-spacing: 0.03em;
 
-  text-align: center;
+  /* 左揃え */
+  text-align: left;
 
   white-space: normal;
-
-  word-break: keep-all;
+  word-break: normal;
 
   box-sizing: border-box;
 }
@@ -171,9 +176,10 @@
 ================================================= */
 
 .Home-Award-crownSubtitle {
+
   position: relative;
 
-  display: inline-block;
+  display: block;
 
   margin: 0 0 15px;
 
@@ -182,21 +188,24 @@
   color: #0046eb;
 
   font-size: 17px;
+
   font-weight: 900;
 
   line-height: 1;
 
   letter-spacing: 0.04em;
 
+  /* 中央揃え */
   text-align: center;
-}
 
+}
 
 /* =================================================
    赤いアンダーライン
 ================================================= */
 
 .Home-Award-crownSubtitle::after {
+
   content: "";
 
   position: absolute;
@@ -207,9 +216,16 @@
   width: 100%;
   height: 3px;
 
-  background: #ff7f9f;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 127, 159, 0),
+    #ff7f9f 20%,
+    #ff7f9f 80%,
+    rgba(255, 127, 159, 0)
+  );
 
   border-radius: 999px;
+
 }
 
 
@@ -334,18 +350,18 @@
 /* =================================================
    カード説明
 ================================================= */
-
-.Home-Award-cardDescription {
-  margin-top: 14px;
-
-  padding-bottom: 8px;
-
-  border-bottom: 3px dashed #dfe7ff;
-
-  font-size: 15px;
+.Home-Award-crownDescription {
+  width: 100%;
+  color: #163b8f;
+  font-size: 9px;
   font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
 
-  color: #66759e;
+  text-align: center;
+
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
-
 

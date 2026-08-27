@@ -66,12 +66,8 @@ export default function AwardSection() {
 
                   {/* 説明文 */}
                   <div className="Home-Award-crownDescription">
-                    模擬店・工科展などの各出展企画を対象に
-                    <br />
-                    来場者や審査員による投票を実施し
-                    <br />
-                    学園祭を代表するグランプリを決定します
-                  </div>
+  模擬店・工科展などの各出展企画を対象に、来場者や審査員による投票を実施し、学園祭を代表するグランプリを決定します。
+</div>
 
                 </div>
 
