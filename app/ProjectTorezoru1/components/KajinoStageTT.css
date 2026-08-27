@@ -1,7 +1,10 @@
+/* ==========================================
+   タイムテーブル本体
+========================================== */
+
 .kajino-kajinoTT {
   width: 100%;
   max-width: 700px;
-
   margin: 0 auto;
 
   background: #ffffff;
@@ -13,7 +16,11 @@
     0 4px 12px rgba(0, 0, 0, 0.08);
 
   padding: 20px;
+
+  box-sizing: border-box;
 }
+
+
 /* ==========================================
    外側背景
 ========================================== */
@@ -23,7 +30,6 @@
   max-width: 740px;
 
   margin: 0 auto 40px;
-
   padding: 15px;
 
   border-radius: 16px;
@@ -33,15 +39,29 @@
     #f4f8ff,
     #e8f1ff
   );
+
+  box-sizing: border-box;
 }
+
+
+/* ==========================================
+   スクロールエリア
+========================================== */
 
 .kajino-kajinoTT-scroll-area {
   max-height: 650px;
+
   overflow-y: auto;
+  overflow-x: hidden;
 
   padding-right: 20px;
   margin-right: -10px;
 }
+
+
+/* ==========================================
+   スクロールバー
+========================================== */
 
 .kajino-kajinoTT-scroll-area::-webkit-scrollbar {
   width: 6px;
@@ -52,24 +72,35 @@
 }
 
 .kajino-kajinoTT-scroll-area::-webkit-scrollbar-thumb {
-  background: rgba(120,130,255,.35);
+  background: rgba(120, 130, 255, 0.35);
   border-radius: 999px;
 }
 
-.kajino-kajinoTT-time-slot{
+
+/* ==========================================
+   タイムライン全体
+========================================== */
+
+.kajino-kajinoTT-time-slot {
   position: relative;
+
   list-style: none;
+
   margin: 0;
   padding: 0;
 }
 
-.kajino-kajinoTT-time-slot::before{
+
+/* ==========================================
+   タイムライン縦線
+========================================== */
+
+.kajino-kajinoTT-time-slot::before {
   content: "";
 
   position: absolute;
 
   left: 20px;
-
   top: 10px;
   bottom: 10px;
 
@@ -84,14 +115,32 @@
   );
 }
 
-.kajino-kajinoTT-time-slot-item::after{
+
+/* ==========================================
+   各時間枠
+========================================== */
+
+.kajino-kajinoTT-time-slot-item {
+  position: relative;
+
+  padding-left: 70px;
+  padding-bottom: 20px;
+
+  margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   各時間枠の区切り線
+========================================== */
+
+.kajino-kajinoTT-time-slot-item::after {
   content: "";
 
   position: absolute;
 
   left: 70px;
   right: 0;
-
   bottom: 0;
 
   height: 1px;
@@ -99,21 +148,16 @@
   background: #dbe2ff;
 }
 
-.kajino-kajinoTT-time-slot-item:last-child::after{
+.kajino-kajinoTT-time-slot-item:last-child::after {
   display: none;
 }
 
-.kajino-kajinoTT-time-slot-item{
-  position: relative;
 
-  padding-left: 70px;
+/* ==========================================
+   タイムラインの丸
+========================================== */
 
-  padding-bottom: 20px;
-
-  margin-bottom: 10px;
-}
-
-.kajino-kajinoTT-time-slot-item::before{
+.kajino-kajinoTT-time-slot-item::before {
   content: "";
 
   position: absolute;
@@ -135,10 +179,15 @@
   border: 2px solid #fff;
 
   box-shadow:
-    0 0 0 1px rgba(104,115,155,.35);
+    0 0 0 1px rgba(104, 115, 155, 0.35);
 }
 
-.kajino-kajinoTT-time{
+
+/* ==========================================
+   時間
+========================================== */
+
+.kajino-kajinoTT-time {
   font-size: 16px;
   font-weight: 700;
 
@@ -147,16 +196,22 @@
   margin-bottom: 10px;
 }
 
-.kajino-kajinoTT-event{
+
+/* ==========================================
+   企画カード
+========================================== */
+
+.kajino-kajinoTT-event {
   position: relative;
 
-  background: #fff;
-
-  border-radius: 10px;
-
+  width: 100%;
   min-height: 50px;
 
   padding: 0 22px 0 0;
+
+  background: #ffffff;
+
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
@@ -164,16 +219,21 @@
 
   overflow: hidden;
 
-  cursor: pointer;
-
-  border: 2px solid rgba(210,220,255,.65);
+  border: 2px solid rgba(210, 220, 255, 0.65);
 
   box-shadow:
-    0 8px 20px rgba(120,140,255,.10),
-    inset 0 1px 0 rgba(255,255,255,.95);
+    0 8px 20px rgba(120, 140, 255, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  box-sizing: border-box;
 }
 
-.kajino-kajinoTT-event::before{
+
+/* ==========================================
+   左側カラーライン
+========================================== */
+
+.kajino-kajinoTT-event::before {
   content: "";
 
   position: absolute;
@@ -191,8 +251,14 @@
   );
 }
 
-.kajino-kajinoTT-event-left{
+
+/* ==========================================
+   企画名エリア
+========================================== */
+
+.kajino-kajinoTT-event-left {
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -201,52 +267,16 @@
   padding-left: 10px;
 }
 
-.kajino-kajinoTT-event-title{
+
+/* ==========================================
+   企画名
+========================================== */
+
+.kajino-kajinoTT-event-title {
   font-size: 16px;
   font-weight: 700;
 
   color: #4f67d8;
-}
 
-.kajino-kajinoTT-toggle-icon{
-  width: 13px;
-  height: 13px;
-
-  border-right: 4px solid #8aa0ff;
-  border-bottom: 4px solid #8aa0ff;
-
-  transform: rotate(45deg);
-
-  transition: .25s;
-}
-
-.kajino-kajinoTT-toggle-icon.open{
-  transform: rotate(-135deg);
-}
-
-.kajino-kajinoTT-event-detail{
-  margin-top: 14px;
-
-  background: linear-gradient(
-    180deg,
-    #dae4ff 0%,
-    #e5eaff 100%
-  );
-
-  border-radius: 18px;
-
-  border: 1px solid #d9e2ff;
-
-  padding: 18px;
-}
-
-.kajino-kajinoTT-event-image{
-  width: 100%;
-  height: 200px;
-
-  object-fit: cover;
-
-  border-radius: 16px;
-
-  margin-bottom: 14px;
+  text-align: center;
 }

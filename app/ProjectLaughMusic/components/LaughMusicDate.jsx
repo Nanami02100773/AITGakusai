@@ -12,14 +12,14 @@ const LaughMusicDate = ({
         className={selectedDay === 1 ? "active" : ""}
         onClick={() => onDayChange(1)}
       >
-        Day1
+        1日目
       </button>
 
       <button
         className={selectedDay === 2 ? "active" : ""}
         onClick={() => onDayChange(2)}
       >
-        Day2
+        2日目
       </button>
     </div>
   );

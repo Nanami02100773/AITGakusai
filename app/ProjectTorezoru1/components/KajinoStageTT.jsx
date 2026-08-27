@@ -9,7 +9,6 @@ import Day1Data from "./data/KajinoStageTTDay1";
 import Day2Data from "./data/KajinoStageTTDay2";
 
 const KajinoStageTT = () => {
-  const [openIndex, setOpenIndex] = useState(null);
   const [selectedDay, setSelectedDay] = useState(1);
 
   const data =
@@ -45,6 +44,7 @@ const KajinoStageTT = () => {
               <ul className="kajino-kajinoTT-time-slot">
 
                 {data.map((item, index) => (
+
                   <li
                     key={index}
                     className="kajino-kajinoTT-time-slot-item"
@@ -52,58 +52,28 @@ const KajinoStageTT = () => {
 
                     <div className="kajino-kajinoTT-slot-header">
 
+                      {/* 時間 */}
                       <div className="kajino-kajinoTT-time">
                         {item.time}
                       </div>
 
-                      <div
-                        className="kajino-kajinoTT-event"
-                        onClick={() =>
-                          setOpenIndex(
-                            openIndex === index
-                              ? null
-                              : index
-                          )
-                        }
-                      >
+                      {/* 企画 */}
+                      <div className="kajino-kajinoTT-event">
 
                         <div className="kajino-kajinoTT-event-left">
+
                           <span className="kajino-kajinoTT-event-title">
                             {item.title}
                           </span>
-                        </div>
 
-                        <span
-                          className={`kajino-kajinoTT-toggle-icon ${
-                            openIndex === index
-                              ? "open"
-                              : ""
-                          }`}
-                        />
+                        </div>
 
                       </div>
 
                     </div>
 
-                    {openIndex === index && (
-                      <div className="kajino-kajinoTT-event-detail">
-
-                        {item.image && (
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="kajino-kajinoTT-event-image"
-                          />
-                        )}
-
-                        {item.detail && (
-                          <p>{item.detail}</p>
-                        )}
-
-                      </div>
-                    )}
-
                   </li>
+
                 ))}
 
               </ul>
