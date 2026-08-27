@@ -34,111 +34,74 @@ export default function BottomNavigationGuide() {
   };
 
   return (
-    <section className="Bottom-Guide-section">
+    <section className="BottomNavigation-Guide-section">
 
-      {/* ==========================
-          ページタイトル
-      ========================== */}
-      <div className="Bottom-Guide-header">
-
-        <div className="Bottom-Guide-number">
-          02
+      {/* ページタイトル */}
+      <div className="BottomNavigation-Guide-header">
+        <div className="BottomNavigation-Guide-number">
+          04
         </div>
 
-        <h1>
-          下部メニュー
-        </h1>
-
+        <h1>下部メニュー</h1>
       </div>
 
 
-      {/* ==========================
-          下部メニュー全体
-      ========================== */}
-      <div className="Bottom-Guide-content">
+      {/* 下部メニュー全体 */}
+      <div className="BottomNavigation-Guide-content">
 
-
-        {/* ==========================
-            下部メニュー画像
-        ========================== */}
-        <div className="Bottom-Guide-image-box">
-
-          <div className="Bottom-Guide-image">
-
+        {/* 下部メニュー画像 */}
+        <div className="BottomNavigation-Guide-image-box">
+          <div className="BottomNavigation-Guide-image">
             <img
               src="/guide/bottom-navigation.png"
               alt="下部メニュー"
             />
-
           </div>
-
         </div>
 
 
-        {/* ==========================
-            タイトル
-        ========================== */}
-        <div className="Bottom-Guide-divider">
+        {/* 下部メニュータイトル */}
+        <div className="BottomNavigation-Guide-divider">
           下部メニュー
         </div>
 
 
-        {/* ==========================
-            説明ボックス
-        ========================== */}
-        <div className="Bottom-Guide-notice">
+        {/* 下部メニューの説明 */}
+        <div className="BottomNavigation-Guide-notice">
 
           {items.map((item, index) => (
-
             <div
-              className="Bottom-Guide-notice-item"
+              className="BottomNavigation-Guide-notice-item"
               key={item.title}
             >
 
-              {/* ==========================
-                  項目タイトル
-              ========================== */}
+              {/* 項目タイトル */}
               <button
-                type="button"
-                className="Bottom-Guide-notice-title"
+                className="BottomNavigation-Guide-notice-title"
                 onClick={() => handleToggle(index)}
               >
+                <span className="BottomNavigation-Guide-notice-dot"></span>
 
-                {/* ドット */}
-                <span className="Bottom-Guide-notice-dot"></span>
+                <h2>{item.title}</h2>
 
-
-                {/* タイトル */}
-                <h2>
-                  {item.title}
-                </h2>
-
-
-                {/* 矢印 */}
                 <span
-                  className={`Bottom-Guide-arrow ${
+                  className={`BottomNavigation-Guide-arrow ${
                     openItem === index ? "is-open" : ""
                   }`}
                 >
                   &gt;
                 </span>
-
               </button>
 
 
-              {/* ==========================
-                  説明本文
-              ========================== */}
+              {/* 本文 */}
               {openItem === index && (
-
-                <div className="Bottom-Guide-notice-text">
+                <div className="BottomNavigation-Guide-notice-text">
                   {item.text}
                 </div>
-
               )}
 
             </div>
-
           ))}
 
         </div>

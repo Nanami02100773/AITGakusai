@@ -2,7 +2,7 @@
    セクション
 ========================== */
 
-.Bottom-Guide-section {
+.BottomNavigation-Guide-section {
 
   width: 100%;
 
@@ -19,7 +19,7 @@
    ページタイトル
 ========================== */
 
-.Bottom-Guide-header {
+.BottomNavigation-Guide-header {
 
   width: 400px;
 
@@ -42,7 +42,7 @@
    番号
 ========================== */
 
-.Bottom-Guide-number {
+.BottomNavigation-Guide-number {
 
   width: 60px;
 
@@ -84,7 +84,7 @@
    下部メニュー文字
 ========================== */
 
-.Bottom-Guide-header h1 {
+.BottomNavigation-Guide-header h1 {
 
   position: relative;
 
@@ -105,7 +105,7 @@
    アンダーバー
 ========================== */
 
-.Bottom-Guide-header h1::after {
+.BottomNavigation-Guide-header h1::after {
 
   content: "";
 
@@ -134,9 +134,11 @@
    下部メニュー全体
 ========================== */
 
-.Bottom-Guide-content {
+.BottomNavigation-Guide-content {
 
   width: 420px;
+
+  max-width: 100%;
 
   margin: 0 auto;
 
@@ -161,10 +163,10 @@
 
 
 /* ==========================
-   下部メニュー画像ボックス
+   画像ボックス
 ========================== */
 
-.Bottom-Guide-image-box {
+.BottomNavigation-Guide-image-box {
 
   width: 380px;
 
@@ -183,9 +185,7 @@
   border-radius: 12px;
 
   box-shadow:
-
     0 8px 20px rgba(79, 109, 255, 0.12),
-
     0 2px 5px rgba(79, 109, 255, 0.05);
 
   box-sizing: border-box;
@@ -197,21 +197,22 @@
    下部メニュー画像
 ========================== */
 
-.Bottom-Guide-image {
+.BottomNavigation-Guide-image {
 
-  width: 90%;
+  width: 100%;
 
 }
 
-.Bottom-Guide-image img {
 
-  width: 90%;
+.BottomNavigation-Guide-image img {
+
+  width: 100%;
 
   height: auto;
 
   display: block;
 
-  border-radius: 11px;
+  border-radius: 14px;
 
 }
 
@@ -220,7 +221,7 @@
    下部メニュータイトル
 ========================== */
 
-.Bottom-Guide-divider {
+.BottomNavigation-Guide-divider {
 
   width: 180px;
 
@@ -263,9 +264,9 @@
    説明ボックス
 ========================== */
 
-.Bottom-Guide-notice {
+.BottomNavigation-Guide-notice {
 
-  width: 380px;
+  width: 390px;
 
   max-width: 100%;
 
@@ -280,24 +281,25 @@
   border-radius: 14px;
 
   box-shadow:
-
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 
   box-sizing: border-box;
 
 }
 
+
 /* ==========================
    項目
 ========================== */
 
-.Bottom-Guide-notice-item {
+.BottomNavigation-Guide-notice-item {
 
   margin-bottom: 7px;
 
 }
 
-.Bottom-Guide-notice-item:last-child {
+
+.BottomNavigation-Guide-notice-item:last-child {
 
   margin-bottom: 0;
 
@@ -308,16 +310,17 @@
    項目タイトル
 ========================== */
 
-.Bottom-Guide-notice-title {
+.BottomNavigation-Guide-notice-title {
 
-  width: calc(100% - 0px);
+  width: 100%;
+
   min-height: 42px;
 
   display: flex;
-  align-items: center;
-  gap: 16px;
 
-  margin: 0 auto;
+  align-items: center;
+
+  gap: 16px;
 
   padding: 10px 16px;
 
@@ -328,6 +331,7 @@
   );
 
   border: 1px solid #e0e4f8;
+
   border-radius: 12px;
 
   box-shadow:
@@ -336,6 +340,7 @@
   box-sizing: border-box;
 
   cursor: pointer;
+
   text-align: left;
 
   transition:
@@ -343,23 +348,35 @@
     background 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
+
 }
 
 
-
 /* ==========================
-   一番左の〇
+   タップ時
 ========================== */
 
-.Bottom-Guide-notice-dot {
+.BottomNavigation-Guide-notice-title:active {
+
+  transform: scale(0.98);
+
+  box-shadow:
+    0 2px 5px rgba(90, 100, 160, 0.08);
+
+}
+
+
+/* ==========================
+   ドット
+========================== */
+
+.BottomNavigation-Guide-notice-dot {
 
   width: 13px;
 
   height: 13px;
 
   flex-shrink: 0;
-
-  margin-right: 8px;
 
   background: linear-gradient(
     135deg,
@@ -378,56 +395,10 @@
 
 
 /* ==========================
-   アイコンボックス
-========================== */
-
-.Bottom-Guide-notice-icon {
-
-  width: 38px;
-
-  height: 38px;
-
-  flex-shrink: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  background: #eef2ff;
-
-  border: 1px solid #c8d0ff;
-
-  border-radius: 9px;
-
-  box-sizing: border-box;
-
-}
-
-
-/* ==========================
-   説明一覧のアイコン
-========================== */
-
-.Bottom-Guide-notice-icon img {
-
-  width: 27px;
-
-  height: 27px;
-
-  object-fit: contain;
-
-  display: block;
-
-}
-
-
-/* ==========================
    項目文字
 ========================== */
 
-.Bottom-Guide-notice-title h2 {
+.BottomNavigation-Guide-notice-title h2 {
 
   margin: 0;
 
@@ -450,7 +421,7 @@
    矢印
 ========================== */
 
-.Bottom-Guide-arrow {
+.BottomNavigation-Guide-arrow {
 
   color: #4f6dff;
 
@@ -468,10 +439,10 @@
 
 
 /* ==========================
-   開いたとき
+   開いたときの矢印
 ========================== */
 
-.Bottom-Guide-arrow.is-open {
+.BottomNavigation-Guide-arrow.is-open {
 
   transform: rotate(90deg);
 
@@ -484,7 +455,7 @@
    説明本文
 ========================== */
 
-.Bottom-Guide-notice-text {
+.BottomNavigation-Guide-notice-text {
 
   width: calc(100% - 18px);
 
@@ -514,10 +485,10 @@
 
 
 /* ==========================
-   項目ホバー
+   ホバー時
 ========================== */
 
-.Bottom-Guide-notice-title:hover {
+.BottomNavigation-Guide-notice-title:hover {
 
   transform: translateY(-2px);
 
@@ -535,7 +506,7 @@
    ホバー時の文字
 ========================== */
 
-.Bottom-Guide-notice-title:hover h2 {
+.BottomNavigation-Guide-notice-title:hover h2 {
 
   color: #3757ef;
 
@@ -546,7 +517,7 @@
    ホバー時の矢印
 ========================== */
 
-.Bottom-Guide-notice-title:hover .Bottom-Guide-arrow {
+.BottomNavigation-Guide-notice-title:hover .BottomNavigation-Guide-arrow {
 
   color: #3757ef;
 
