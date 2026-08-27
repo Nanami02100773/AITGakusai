@@ -41,7 +41,9 @@ export default function AwardSection() {
 
               <div className="Home-Award-crownTextWrap">
 
-                {/* 王冠画像 */}
+                {/* =================================================
+                    王冠画像
+                ================================================= */}
                 <div className="Home-Award-crownIconWrap">
 
                   <img
@@ -52,16 +54,24 @@ export default function AwardSection() {
 
                 </div>
 
-                {/* テキスト */}
+                {/* =================================================
+                    テキスト
+                ================================================= */}
                 <div className="Home-Award-crownText">
 
+                  {/* 見出し */}
                   <div className="Home-Award-crownSubtitle">
                     グランプリとは？
                   </div>
 
-                  模擬店・工科展などの各出展企画を対象に
-                  来場者や審査員による投票を実施し
-                  学園祭を代表するグランプリを決定します
+                  {/* 説明文 */}
+                  <div className="Home-Award-crownDescription">
+                    模擬店・工科展などの各出展企画を対象に
+                    <br />
+                    来場者や審査員による投票を実施し
+                    <br />
+                    学園祭を代表するグランプリを決定します
+                  </div>
 
                 </div>
 
@@ -69,7 +79,9 @@ export default function AwardSection() {
 
             </div>
 
-            {/* 青ライン */}
+            {/* =================================================
+                青ライン
+            ================================================= */}
             <div className="Home-Award-crownLine"></div>
 
             {/* =================================================

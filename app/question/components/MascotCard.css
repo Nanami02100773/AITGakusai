@@ -140,14 +140,11 @@
 
 .Question-MascotCard-text p {
   margin: 0;
-
   text-align: center;
-
   font-size: 11px;
-
-  line-height: 1.7;
-
+  line-height: 1.5;
   color: #24346e;
+  font-weight: 700;
 }
 
 /* ========================================
@@ -565,4 +562,31 @@
     filter: brightness(1);
     transform: scale(1);
   }
+}
+
+/* ========================================
+   ロゴ下の赤いグラデーションライン
+======================================== */
+
+.Question-MascotCard-name-dots {
+
+  width: 180px;
+  height: 3px;
+
+  margin: 0 auto 15px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #ffdce4 10%,
+    #ffb6c6 25%,
+    #ff9fb5 40%,
+    #ff9fb5 50%,
+    #ff9fb5 60%,
+    #ffb6c6 75%,
+    #ffdce4 90%,
+    transparent 100%
+  );
+
+  border-radius: 999px;
 }

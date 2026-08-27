@@ -98,7 +98,7 @@ export default function Hero() {
           <div className="Stage-Hero-text">
 
             <p className="Stage-Hero-subText">
-              人気アイドルやバンドのライブ、楽しいミニゲームなど
+              人気アイドルやバンドのライブ楽しいミニゲームなど
             </p>
 
             <h2 className="Stage-Hero-mainText">

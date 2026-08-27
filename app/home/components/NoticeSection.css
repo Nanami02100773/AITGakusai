@@ -370,9 +370,10 @@
 }
 
 /* =================================================
-   番号後ろの斜めライン
+   番号の後ろの斜めメカライン
 ================================================= */
-.Home-Notice-item .notice-number::before {
+
+.Home-Notice-item .Home-Notice-number::before {
   content: "";
 
   position: absolute;
@@ -392,12 +393,14 @@
     skewX(-13deg);
 }
 
+
 /* =================================================
    番号
 ================================================= */
+
 .Home-Notice-number {
   position: relative;
-  z-index: 3;
+  z-index: 4;
 
   display: flex;
   justify-content: center;

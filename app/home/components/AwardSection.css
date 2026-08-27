@@ -1,17 +1,18 @@
 /* =================================================
    セクション
 ================================================= */
+
 .Home-Award-section {
   padding: 10px 0 70px;
-
   background: #ffffff;
-
   overflow: visible;
 }
 
+
 /* =================================================
-   賞一覧
+   賞一覧全体
 ================================================= */
+
 .Home-Award-list {
   position: relative;
 
@@ -22,40 +23,25 @@
 
   padding: 180px 0 20px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #edf2ff 0%,
-      #e7eeff 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #edf2ff 0%,
+    #e7eeff 100%
+  );
 
-  border: 0px solid #9ab5ff;
+  border: none;
 
   box-shadow:
-    0 10px 20px rgba(120,140,255,.10);
+    0 10px 20px rgba(120, 140, 255, 0.10);
 
   overflow: visible;
 }
 
-/* =================================================
-   グランプリとは
-================================================= */
-.Home-Award-crownSubtitle {
-  margin-bottom: 20px;
-
-  font-size: 17px;
-  font-weight: 900;
-
-  letter-spacing: .06em;
-
-  color: #0f2f7a;
-
-  line-height: 1;
-}
 
 /* =================================================
-   王冠エリア
+   グランプリ説明エリア
 ================================================= */
+
 .Home-Award-crownArea {
   position: absolute;
 
@@ -64,83 +50,98 @@
 
   transform: translateX(-50%);
 
-  width: calc(100% - 40px);
-  max-width: 450px;
+  width: calc(100% - 30px);
+  max-width: 490px;
+
   height: 150px;
 
-  padding: 5px 5px 15px;
+  padding: 10px 20px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f6f8ff 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8faff 100%
+  );
 
-  border-radius: 10px;
+  border-radius: 14px;
 
   box-shadow:
-    0 8px 18px rgba(120,140,255,.10);
+    0 8px 18px rgba(120, 140, 255, 0.10);
 
   box-sizing: border-box;
 
   z-index: 10;
-
-  min-height: 30px;
 }
 
+
 /* =================================================
-   テキスト・王冠
+   王冠＋テキスト
 ================================================= */
 
 .Home-Award-crownTextWrap {
   display: flex;
+
   align-items: center;
   justify-content: center;
-  gap: 10px;
+
+  width: 100%;
+  height: 100%;
+
+  gap: 25px;
+
+  box-sizing: border-box;
 }
+
+
+/* =================================================
+   王冠画像エリア
+================================================= */
+
+.Home-Award-crownIconWrap {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 140px;
+  height: 110px;
+
+  margin: 0;
+
+  background: #ffffff;
+
+  border: 2.5px solid #9bbcff;
+
+  border-radius: 14px;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+}
+
 
 /* =================================================
    王冠画像
 ================================================= */
-.Home-Award-crownIconWrap {
-  margin-top: 5px;
-  left: 15px;
-
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 120px;
-  height: 105px;
-
-  background: #ffffff;
-
-  border-radius: 10px;
-
-  border: 2.5px solid #9bbcff;
-
-  flex-shrink: 0;
-}
 
 .Home-Award-crownIcon {
   position: relative;
 
   z-index: 2;
 
-  width: 160px;
-
+  width: 125px;
   height: auto;
 
-  flex-shrink: 0;
-
   object-fit: contain;
+
+  display: block;
 }
 
+
 /* =================================================
-   テキスト
+   テキスト全体
 ================================================= */
 
 .Home-Award-crownText {
@@ -148,31 +149,85 @@
 
   flex: 1;
 
-  margin-top: 18px;
-  padding-bottom: 15px;
+  min-width: 0;
 
-  font-size: 11px;
-  font-weight: 900;
-
-  line-height: 1.9;
-  letter-spacing: .05em;
-
-  text-align: center;
+  margin: 0;
+  padding: 0;
 
   color: #163b8f;
 
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.03em;
+
+  text-align: center;
+
   white-space: normal;
+
   word-break: keep-all;
+
+  box-sizing: border-box;
 }
 
+
 /* =================================================
-   ライン
+   「グランプリとは？」タイトル
 ================================================= */
+
+.Home-Award-crownSubtitle {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 0 15px;
+
+  padding-bottom: 7px;
+
+  color: #0046eb;
+
+  font-size: 17px;
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: 0.04em;
+
+  text-align: center;
+}
+
+
+/* =================================================
+   赤いアンダーライン
+================================================= */
+
+.Home-Award-crownSubtitle::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: #ff7f9f;
+
+  border-radius: 999px;
+}
+
+
+/* =================================================
+   青ライン
+================================================= */
+
 .Home-Award-crownLine {
   position: absolute;
 
   top: 185px;
-
   left: 50%;
 
   transform: translateX(-50%);
@@ -180,20 +235,21 @@
   width: 93%;
   height: 5px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #5d8fff 0%,
-      #8eb8ff 50%,
-      #5d8fff 100%
-    );
+  background: linear-gradient(
+    90deg,
+    #5d8fff 0%,
+    #8eb8ff 50%,
+    #5d8fff 100%
+  );
 
   z-index: 20;
 }
 
+
 /* =================================================
-   カード
+   賞カード
 ================================================= */
+
 .Home-Award-card {
   position: relative;
 
@@ -212,14 +268,18 @@
   border-radius: 15px;
 
   box-shadow:
-    0 8px 18px rgba(120,140,255,.06);
+    0 8px 18px rgba(120, 140, 255, 0.06);
 
   min-height: 80px;
+
+  box-sizing: border-box;
 }
+
 
 /* =================================================
    左バー
 ================================================= */
+
 .Home-Award-leftBar {
   position: absolute;
 
@@ -231,17 +291,18 @@
 
   border-radius: 999px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #5d8fff 0%,
-      #7cb2ff 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #5d8fff 0%,
+    #7cb2ff 100%
+  );
 }
+
 
 /* =================================================
    カードタイトル
 ================================================= */
+
 .Home-Award-cardTitle {
   position: relative;
 
@@ -254,6 +315,11 @@
 
   color: #132c73;
 }
+
+
+/* =================================================
+   カードタイトルの丸
+================================================= */
 
 .Home-Award-cardTitle::before {
   content: "";
@@ -271,16 +337,17 @@
   background: #5e97ff;
 }
 
+
 /* =================================================
    カード説明
 ================================================= */
+
 .Home-Award-cardDescription {
   margin-top: 14px;
 
   padding-bottom: 8px;
 
-  border-bottom:
-    3px dashed #dfe7ff;
+  border-bottom: 3px dashed #dfe7ff;
 
   font-size: 15px;
   font-weight: 700;
@@ -288,27 +355,45 @@
   color: #66759e;
 }
 
-.Home-Award-crownTextWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
 
-.Home-Award-crownText {
-  position: relative;
-  flex: 1;
-  margin-top: 18px;
-  padding-bottom: 15px;
+/* =================================================
+   スマホ調整
+================================================= */
 
-  font-size: 11px;
-  font-weight: 900;
-  line-height: 1.9;
-  letter-spacing: .05em;
+@media (max-width: 500px) {
 
-  text-align: center;
+  .Home-Award-crownArea {
+    width: calc(100% - 30px);
 
-  color: #163b8f;
-  white-space: normal;
-  word-break: keep-all;
+    height: 150px;
+
+    padding: 10px 12px;
+  }
+
+  .Home-Award-crownTextWrap {
+    gap: 12px;
+  }
+
+  .Home-Award-crownIconWrap {
+    width: 120px;
+    height: 105px;
+  }
+
+  .Home-Award-crownIcon {
+    width: 110px;
+  }
+
+  .Home-Award-crownText {
+    font-size: 8px;
+    line-height: 1.75;
+  }
+
+  .Home-Award-crownSubtitle {
+    font-size: 15px;
+    margin-bottom: 13px;
+  }
+
+  .Home-Award-card {
+    width: 90%;
+  }
 }
