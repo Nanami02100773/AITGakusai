@@ -265,7 +265,7 @@
 
 .Bottom-Guide-notice {
 
-  width: 390px;
+  width: 380px;
 
   max-width: 100%;
 
@@ -310,7 +310,7 @@
 
 .Bottom-Guide-notice-title {
 
-  width: calc(100% - 40px);
+  width: calc(100% - 0px);
   min-height: 42px;
 
   display: flex;
