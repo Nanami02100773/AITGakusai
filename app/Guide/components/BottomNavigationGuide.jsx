@@ -10,22 +10,27 @@ export default function BottomNavigationGuide() {
     {
       title: "ホーム",
       text: "学祭の最新情報やおすすめ企画を確認できます。",
+      icon: "/guide/icons/home.png",
     },
     {
       title: "ステージ情報",
       text: "ライブやイベントなどのステージ情報を確認できます。",
+      icon: "/guide/icons/stage.png",
     },
     {
       title: "マップ",
       text: "屋台や教室など、学内の場所を検索できます。",
+      icon: "/guide/icons/map.png",
     },
     {
       title: "企画紹介",
       text: "各企画の詳しい情報やアンケートを確認できます。",
+      icon: "/guide/icons/企画.png",
     },
     {
       title: "よくある質問",
       text: "FAQやマスコット紹介などを確認できます。",
+      icon: "/guide/icons/faq.png",
     },
   ];
 
@@ -80,7 +85,16 @@ export default function BottomNavigationGuide() {
                 className="BottomNavigation-Guide-notice-title"
                 onClick={() => handleToggle(index)}
               >
+
+                {/* 青い丸 */}
                 <span className="BottomNavigation-Guide-notice-dot"></span>
+
+                {/* アイコン画像 */}
+                <img
+                  className="BottomNavigation-Guide-icon"
+                  src={item.icon}
+                  alt=""
+                />
 
                 <h2>{item.title}</h2>
 
@@ -91,6 +105,7 @@ export default function BottomNavigationGuide() {
                 >
                   &gt;
                 </span>
+
               </button>
 
 

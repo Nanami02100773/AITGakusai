@@ -522,3 +522,21 @@
   color: #3757ef;
 
 }
+
+/* ==========================
+   アイコン画像
+========================== */
+
+.BottomNavigation-Guide-icon {
+
+  width: 28px;
+
+  height: 28px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+
+  display: block;
+
+}
