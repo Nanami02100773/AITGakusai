@@ -533,10 +533,23 @@
 
   height: 28px;
 
+  padding: 6px;
+
   flex-shrink: 0;
 
   object-fit: contain;
 
   display: block;
+
+  background: #ffffff;
+
+  border: 1px solid #d5ddff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 3px 8px rgba(79, 109, 255, 0.10);
+
+  box-sizing: content-box;
 
 }

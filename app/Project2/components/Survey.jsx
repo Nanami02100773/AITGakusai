@@ -7,23 +7,18 @@ export default function SurveySection() {
   const surveys = [
     {
       title: "アプリ満足度",
-      image: "/stagequestionnaire/app.png",
     },
     {
       title: "全体",
-      image: "/stagequestionnaire/whole.png",
     },
     {
       title: "脱出ゲーム",
-      image: "/stagequestionnaire/dassyutsu.png",
     },
     {
       title: "メイク",
-      image: "/stagequestionnaire/lip.png",
     },
     {
       title: "クラブ・工科",
-      image: "/stagequestionnaire/kurakou.png",
     },
   ];
 
@@ -42,10 +37,12 @@ export default function SurveySection() {
       <div className="Survey-blue-bg"></div>
       <div className="Survey-blue-bg2"></div>
 
+
       {/* タイトル */}
       <div className="Home-section-title">
         アンケート
       </div>
+
 
       {/* カード一覧 */}
       <div className="Survey-container">
@@ -60,22 +57,9 @@ export default function SurveySection() {
             {/* 左アクセント */}
             <div className="Survey-left-accent"></div>
 
+
             {/* 左側 */}
             <div className="Survey-left">
-
-              <div className="Survey-circle">
-
-                <div className="Survey-circle-inner">
-
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="Survey-icon"
-                  />
-
-                </div>
-
-              </div>
 
               <div className="Survey-text">
 
@@ -86,6 +70,7 @@ export default function SurveySection() {
               </div>
 
             </div>
+
 
             {/* 右側 */}
             <div className="Survey-right">

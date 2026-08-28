@@ -16,6 +16,8 @@ import Sns from "./components/Sns";
 import NavigationBar from "./components/NavigationBar";
 import Loading from "./components/Loading";
 import Maintenance from "./components/Maintenance";
+import Tutorial from "./components/Tutorial";
+
 
 /* ===== フォント ===== */
 export const orbitron = Orbitron({
@@ -27,6 +29,7 @@ const rounded = M_PLUS_Rounded_1c({
   subsets: ["latin"],
   weight: ["500", "700", "800"],
 });
+
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
@@ -40,6 +43,8 @@ export default function Page() {
 
   const [index, setIndex] = useState(0);
 
+
+  /* ===== システム確認 ===== */
   useEffect(() => {
     const checkSystem = async () => {
       try {
@@ -62,6 +67,8 @@ export default function Page() {
     checkSystem();
   }, []);
 
+
+  /* ===== カルーセル ===== */
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex(
@@ -72,11 +79,16 @@ export default function Page() {
     return () => clearInterval(timer);
   }, [images.length]);
 
-  // if (loading) return <Loading />;
-  if (isMaintenance) return <Maintenance />;
+
+  /* ===== メンテナンス ===== */
+  if (isMaintenance) {
+    return <Maintenance />;
+  }
+
 
   return (
     <div className={rounded.className}>
+
       <Hero image={images[index]} />
 
       <Carousel />
@@ -90,6 +102,10 @@ export default function Page() {
       <Sns />
 
       <NavigationBar />
+
+      {/* ===== チュートリアル ===== */}
+      <Tutorial />
+
     </div>
   );
 }

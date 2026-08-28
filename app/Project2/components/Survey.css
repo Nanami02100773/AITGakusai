@@ -1,92 +1,158 @@
 /* =================================================
    セクション全体
 ================================================= */
+
 .SurveySection {
+
   position: relative;
+
   padding: 100px 0 150px;
-  background: linear-gradient(180deg, #eef4ff, #e7efff);
+
+  background: linear-gradient(
+    180deg,
+    #eef4ff,
+    #e7efff
+  );
+
   overflow: hidden;
+
 }
+
 
 /* =================================================
    上部装飾
 ================================================= */
+
 .Survey-top-line {
+
   position: absolute;
+
   top: 0;
   left: 0;
+
   width: 100%;
   height: 2px;
+
   background: #dbe4ff;
+
 }
 
+
 .Survey-white-left {
+
   position: absolute;
+
   top: 0;
   right: 100px;
+
   width: 300px;
   height: 48px;
+
   background: #fff;
+
   clip-path: polygon(
     0 0,
     100% 0,
     82% 100%,
     30% 100%
   );
+
 }
+
 
 .Survey-white-left::after {
+
   content: "";
+
   position: absolute;
+
   left: 0;
   right: 0;
   bottom: 0;
+
   height: 2px;
+
   background: #dbe4ff;
+
 }
+
 
 .Survey-white-center {
+
   position: absolute;
+
   top: 0;
   right: -100px;
+
   width: 300px;
   height: 48px;
+
   background: #fff;
+
 }
 
+
 .Survey-white-center::after {
+
   content: "";
+
   position: absolute;
+
   left: 0;
   right: 0;
   bottom: 0;
+
   height: 2px;
+
   background: #dbe4ff;
+
 }
+
 
 .Survey-diagonal-line {
+
   position: absolute;
+
   top: 0;
   right: 300px;
+
   width: 100px;
   height: 2px;
+
   background: #dbe4ff;
+
   transform: rotate(28deg);
+
   transform-origin: left center;
+
 }
+
 
 .Survey-diagonal-line-2 {
+
   position: absolute;
+
   top: 105px;
   right: -124px;
+
   width: 260px;
   height: 2px;
+
   background: #dbe4ff;
+
   transform: rotate(28deg);
+
 }
 
+
+/* =================================================
+   青背景
+================================================= */
+
 .Survey-blue-bg {
+
   position: absolute;
+
   top: 48px;
   right: 20px;
 
@@ -108,32 +174,46 @@
   );
 
   z-index: 0;
+
 }
 
+
 .Survey-blue-bg2 {
+
   position: absolute;
+
   top: 45px;
   right: -100px;
+
   width: 220px;
   height: 70px;
+
   background: #fff;
+
   clip-path: polygon(
     0 0,
     70% 0,
     100% 100%,
     60% 100%
   );
+
 }
+
 
 /* =================================================
    タイトル
 ================================================= */
+
 .Home-section-title {
+
   position: relative;
+
   z-index: 5;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   width: 220px;
@@ -148,41 +228,70 @@
   );
 
   color: #fff;
+
   font-size: 18px;
+
   font-weight: 800;
 
   border-radius: 999px;
 
-  border: 2px solid rgba(255,255,255,.6);
+  border: 2px solid rgba(
+    255,
+    255,
+    255,
+    .6
+  );
 
   box-shadow:
-    0 8px 20px rgba(134,167,255,.18),
-    inset 0 2px 0 rgba(255,255,255,.7);
+    0 8px 20px rgba(
+      134,
+      167,
+      255,
+      .18
+    ),
+    inset 0 2px 0 rgba(
+      255,
+      255,
+      255,
+      .7
+    );
+
 }
+
 
 /* =================================================
    コンテナ
 ================================================= */
+
 .Survey-container {
+
   width: 90%;
+
   max-width: 340px;
 
   margin: 0 auto;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 14px;
+
 }
+
 
 /* =================================================
    カード
 ================================================= */
+
 .Survey-item {
+
   position: relative;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   height: 68px;
@@ -193,7 +302,13 @@
     #fafcff
   );
 
-  border: 2px solid rgba(210,220,255,.7);
+  border: 2px solid rgba(
+    210,
+    220,
+    255,
+    .7
+  );
+
   border-radius: 15px;
 
   overflow: hidden;
@@ -206,20 +321,41 @@
     border-color .25s;
 
   box-shadow:
-    0 8px 20px rgba(120,140,255,.10),
-    inset 0 1px 0 rgba(255,255,255,.95);
+    0 8px 20px rgba(
+      120,
+      140,
+      255,
+      .10
+    ),
+    inset 0 1px 0 rgba(
+      255,
+      255,
+      255,
+      .95
+    );
+
 }
 
+
 .Survey-item:hover {
+
   transform: translateY(-2px);
 
   border-color: #9eb6ff;
 
   box-shadow:
-    0 14px 30px rgba(120,140,255,.18);
+    0 14px 30px rgba(
+      120,
+      140,
+      255,
+      .18
+    );
+
 }
 
+
 .Survey-item::before {
+
   content: "";
 
   position: absolute;
@@ -235,151 +371,95 @@
     #86a7ff,
     #6f8dff
   );
+
 }
 
+
 .Survey-left-accent {
+
   display: none;
+
 }
+
 
 /* =================================================
    左側
 ================================================= */
+
 .Survey-left {
+
   position: relative;
 
   flex: 1;
 
-  display: flex;
-  align-items: center;
-
-  padding-left: 30px;
-}
-
-/* =================================================
-   アイコン
-================================================= */
-.Survey-circle {
-  position: relative;
-
-  width: 47px;
-  height: 47px;
-
-  border-radius: 50%;
-  background: #fff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: visible;
-  flex-shrink: 0;
-
-  box-shadow:
-    0 4px 10px rgba(120,140,255,.10);
-}
-
-/* ネオンリング */
-.Survey-circle::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  border-radius: 50%;
-
-  padding: 2.5px;   /* ← 2.5px → 1.5pxで細く */
-
-  background: linear-gradient(
-    135deg,
-    #b9d2ff 0%,
-    #8fb0ff 40%,
-    #9d8cff 70%,
-    #c8dcff 100%
-  );
-
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  filter:
-    drop-shadow(0 0 2px rgba(120,170,255,.45))
-    drop-shadow(0 0 5px rgba(90,130,255,.30))
-    drop-shadow(0 0 9px rgba(90,130,255,.18));
-
-  animation: surveyNeon 2.5s ease-in-out infinite alternate;
-}
-
-.Survey-circle-inner {
-  width: 100%;
   height: 100%;
 
-  border-radius: 50%;
-
-  background: #fff;
-
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
+  padding-left: 10px;
+
 }
 
-.Survey-icon {
-  width: 25px;
-  height: 25px;
-
-  object-fit: contain;
-
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(40%)
-    sepia(89%)
-    saturate(2464%)
-    hue-rotate(209deg)
-    brightness(100%)
-    contrast(102%);
-}
 
 /* =================================================
    文字
 ================================================= */
-.Survey-text {
-  position: absolute;
 
-  left: 65px;     /* アイコンの右から開始 */
-  right: 0;       /* 区切り線まで */
+.Survey-text {
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
+  width: 100%;
+
 }
 
+
 .Survey-label {
+
   color: #4f67d8;
 
   font-size: 17px;
+
   font-weight: 700;
+
 }
+
 
 /* =================================================
    右側
 ================================================= */
+
 .Survey-right {
+
   position: relative;
 
   width: 58px;
 
+  height: 100%;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
 }
+
 
 /* =================================================
    区切り線
 ================================================= */
+
 .Survey-right-line {
+
   position: absolute;
 
   left: 0;
@@ -394,12 +474,16 @@
     #ff9fb5 80%,
     transparent 100%
   );
+
 }
+
 
 /* =================================================
    矢印
 ================================================= */
+
 .Survey-arrow {
+
   width: 28px;
   height: 28px;
 
@@ -408,18 +492,26 @@
   background: #eef3ff;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   color: #6f8dff;
 
   font-size: 15px;
+
   font-weight: bold;
 
   transition: .25s;
+
 }
 
+
 .Survey-item:hover .Survey-arrow {
+
   transform: translateX(4px);
+
   background: #dfe8ff;
+
 }
