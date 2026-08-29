@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { orbitron } from "../page";
 import "./TopNavigationGuide.css";
 
 export default function TopNavigationGuide() {
@@ -33,11 +34,15 @@ export default function TopNavigationGuide() {
 
       {/* ページタイトル */}
       <div className="TopNavigationGuide-header">
-        <div className="TopNavigationGuide-number">
+
+        <div
+          className={`TopNavigationGuide-number ${orbitron.className}`}
+        >
           01
         </div>
 
         <h1>上部メニュー</h1>
+
       </div>
 
 
@@ -46,12 +51,16 @@ export default function TopNavigationGuide() {
 
         {/* 上部メニュー画像 */}
         <div className="TopNavigationGuide-image-box">
+
           <div className="TopNavigationGuide-image">
+
             <img
               src="/guide/top-navigation.png"
               alt="上部メニュー"
             />
+
           </div>
+
         </div>
 
 
@@ -65,12 +74,14 @@ export default function TopNavigationGuide() {
         <div className="TopNavigationGuide-notice">
 
           {items.map((item, index) => (
+
             <div
               className="TopNavigationGuide-notice-item"
               key={item.title}
             >
 
               <button
+                type="button"
                 className="TopNavigationGuide-notice-title"
                 onClick={() => handleToggle(index)}
               >
@@ -78,13 +89,18 @@ export default function TopNavigationGuide() {
                 {/* 左端のドット */}
                 <span className="TopNavigationGuide-notice-dot"></span>
 
+
                 {/* 番号 */}
-                <span className="TopNavigationGuide-item-number">
+                <span
+                  className={`TopNavigationGuide-item-number ${orbitron.className}`}
+                >
                   {item.number}
                 </span>
 
+
                 {/* 項目名 */}
                 <h2>{item.title}</h2>
+
 
                 {/* 矢印 */}
                 <span
@@ -100,12 +116,15 @@ export default function TopNavigationGuide() {
 
               {/* 説明本文 */}
               {openItem === index && (
+
                 <div className="TopNavigationGuide-notice-text">
                   {item.text}
                 </div>
+
               )}
 
             </div>
+
           ))}
 
         </div>

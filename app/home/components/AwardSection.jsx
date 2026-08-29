@@ -66,8 +66,8 @@ export default function AwardSection() {
 
                   {/* 説明文 */}
                   <div className="Home-Award-crownDescription">
-  模擬店・工科展などの各出展企画を対象に、来場者や審査員による投票を実施し、学園祭を代表するグランプリを決定します。
-</div>
+                    模擬店・工科展などの各出展企画を対象に、来場者や審査員による投票を実施し、学園祭を代表するグランプリを決定します。
+                  </div>
 
                 </div>
 
@@ -86,7 +86,9 @@ export default function AwardSection() {
             {awards.map((title, i) => (
               <div
                 key={i}
-                className="Home-Award-card"
+                className={`Home-Award-card ${
+                  i === 0 ? "Home-Award-card-first" : ""
+                }`}
               >
 
                 {/* 左バー */}

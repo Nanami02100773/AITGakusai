@@ -14,7 +14,9 @@ const NoticeSection = () => {
     );
 
     const filtered = saved.filter(
-      (n) => n.category === "stage"
+      (n) =>
+        n.category === "stage" &&
+        n.status !== "private"
     );
 
     setNotices(filtered);
@@ -32,17 +34,23 @@ const NoticeSection = () => {
 
       {/* お知らせ一覧 */}
       <div className="Stage-Notice-list">
+
         {notices.length === 0 ? (
+
           <div className="Stage-Notice-empty">
             現在ステージに関するお知らせはありません
           </div>
+
         ) : (
+
           notices.map((notice, index) => (
+
             <Link
               key={notice.id}
               href={`/stage/notice/${notice.id}`}
               className={`Stage-Notice-item n${index + 1}`}
             >
+
               <div
                 className={`
                   Stage-Notice-number
@@ -62,9 +70,13 @@ const NoticeSection = () => {
               <div className="Stage-Notice-arrow">
                 ›
               </div>
+
             </Link>
+
           ))
+
         )}
+
       </div>
 
     </section>

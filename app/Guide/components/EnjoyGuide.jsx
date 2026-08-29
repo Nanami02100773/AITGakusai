@@ -1,5 +1,6 @@
 "use client";
 
+import { orbitron } from "../page";
 import "./EnjoyGuide.css";
 
 export default function EnjoyGuide() {
@@ -12,7 +13,7 @@ export default function EnjoyGuide() {
 
       <div className="Enjoy-Guide-header">
 
-        <div className="Enjoy-Guide-number">
+        <div className={`Enjoy-Guide-number ${orbitron.className}`}>
           10
         </div>
 

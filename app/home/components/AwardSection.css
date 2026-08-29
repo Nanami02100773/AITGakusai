@@ -3,9 +3,13 @@
 ================================================= */
 
 .Home-Award-section {
+
   padding: 10px 0 70px;
+
   background: #ffffff;
+
   overflow: visible;
+
 }
 
 
@@ -14,9 +18,11 @@
 ================================================= */
 
 .Home-Award-list {
+
   position: relative;
 
   width: 95%;
+
   max-width: 520px;
 
   margin: 0 auto;
@@ -24,17 +30,23 @@
   padding: 180px 0 20px;
 
   background: linear-gradient(
+
     180deg,
+
     #edf2ff 0%,
+
     #e7eeff 100%
+
   );
 
   border: none;
 
   box-shadow:
+
     0 10px 20px rgba(120, 140, 255, 0.10);
 
   overflow: visible;
+
 }
 
 
@@ -43,14 +55,17 @@
 ================================================= */
 
 .Home-Award-crownArea {
+
   position: absolute;
 
   top: 20px;
+
   left: 50%;
 
   transform: translateX(-50%);
 
   width: calc(100% - 30px);
+
   max-width: 490px;
 
   height: 150px;
@@ -58,19 +73,25 @@
   padding: 10px 20px;
 
   background: linear-gradient(
+
     180deg,
+
     #ffffff 0%,
+
     #f8faff 100%
+
   );
 
   border-radius: 14px;
 
   box-shadow:
+
     0 8px 18px rgba(120, 140, 255, 0.10);
 
   box-sizing: border-box;
 
   z-index: 10;
+
 }
 
 
@@ -79,18 +100,23 @@
 ================================================= */
 
 .Home-Award-crownTextWrap {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   width: 100%;
+
   height: 100%;
 
   gap: 25px;
 
   box-sizing: border-box;
+
 }
+
 
 /* =================================================
    王冠画像エリア
@@ -101,43 +127,52 @@
   position: relative;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   width: 140px;
+
   height: 110px;
 
   margin: 0;
 
-  /* ← 左右位置を調整 */
   transform: translateX(0px);
 
   background: #ffffff;
 
   border: 2.5px solid #9bbcff;
+
   border-radius: 14px;
 
   flex-shrink: 0;
 
   box-sizing: border-box;
+
 }
+
 
 /* =================================================
    王冠画像
 ================================================= */
 
 .Home-Award-crownIcon {
+
   position: relative;
 
   z-index: 2;
 
   width: 140px;
+
   height: auto;
 
   object-fit: contain;
 
   display: block;
+
 }
+
 
 /* =================================================
    テキスト全体
@@ -148,26 +183,31 @@
   position: relative;
 
   flex: 1;
+
   min-width: 0;
 
   margin: 0;
+
   padding: 0;
 
   color: #163b8f;
 
   font-size: 9px;
+
   font-weight: 700;
+
   line-height: 1.8;
 
   letter-spacing: 0.03em;
 
-  /* 左揃え */
   text-align: left;
 
   white-space: normal;
+
   word-break: normal;
 
   box-sizing: border-box;
+
 }
 
 
@@ -195,10 +235,10 @@
 
   letter-spacing: 0.04em;
 
-  /* 中央揃え */
   text-align: center;
 
 }
+
 
 /* =================================================
    赤いアンダーライン
@@ -211,17 +251,25 @@
   position: absolute;
 
   left: 0;
+
   bottom: -5px;
 
   width: 100%;
+
   height: 3px;
 
   background: linear-gradient(
+
     90deg,
+
     rgba(255, 127, 159, 0),
+
     #ff7f9f 20%,
+
     #ff7f9f 80%,
+
     rgba(255, 127, 159, 0)
+
   );
 
   border-radius: 999px;
@@ -234,24 +282,33 @@
 ================================================= */
 
 .Home-Award-crownLine {
+
   position: absolute;
 
   top: 185px;
+
   left: 50%;
 
   transform: translateX(-50%);
 
   width: 93%;
+
   height: 5px;
 
   background: linear-gradient(
+
     90deg,
+
     #5d8fff 0%,
+
     #8eb8ff 50%,
+
     #5d8fff 100%
+
   );
 
   z-index: 20;
+
 }
 
 
@@ -260,16 +317,23 @@
 ================================================= */
 
 .Home-Award-card {
+
   position: relative;
 
-  width: 90%;
+  width: 94%;
 
-  margin: 30px auto 10px;
+  height: 120px;
+
+  margin: 15px auto 5px;
 
   padding:
+
     24px
+
     22px
+
     18px
+
     70px;
 
   background: #ffffff;
@@ -277,11 +341,24 @@
   border-radius: 15px;
 
   box-shadow:
+
     0 8px 18px rgba(120, 140, 255, 0.06);
 
-  min-height: 80px;
+  min-height: 100px;
 
   box-sizing: border-box;
+
+}
+
+
+/* =================================================
+   一番上の賞カード
+================================================= */
+
+.Home-Award-card-first {
+
+  margin-top: 30px;
+
 }
 
 
@@ -290,21 +367,29 @@
 ================================================= */
 
 .Home-Award-leftBar {
+
   position: absolute;
 
   left: 35px;
+
   top: 24px;
 
   width: 7px;
+
   height: calc(100% - 40px);
 
   border-radius: 999px;
 
   background: linear-gradient(
+
     180deg,
+
     #5d8fff 0%,
+
     #7cb2ff 100%
+
   );
+
 }
 
 
@@ -313,16 +398,19 @@
 ================================================= */
 
 .Home-Award-cardTitle {
+
   position: relative;
 
   padding-left: 30px;
 
   font-size: 16px;
+
   font-weight: 900;
 
   line-height: 1.4;
 
   color: #132c73;
+
 }
 
 
@@ -331,37 +419,50 @@
 ================================================= */
 
 .Home-Award-cardTitle::before {
+
   content: "";
 
   position: absolute;
 
   left: 0;
+
   top: 8px;
 
   width: 10px;
+
   height: 10px;
 
   border-radius: 50%;
 
   background: #5e97ff;
+
 }
 
 
 /* =================================================
    カード説明
 ================================================= */
+
 .Home-Award-crownDescription {
+
   width: 100%;
+
   color: #163b8f;
+
   font-size: 9px;
+
   font-weight: 700;
+
   line-height: 1.8;
+
   letter-spacing: 0.03em;
 
   text-align: center;
 
   white-space: normal;
-  word-break: normal;
-  overflow-wrap: break-word;
-}
 
+  word-break: normal;
+
+  overflow-wrap: break-word;
+
+}

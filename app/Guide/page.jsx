@@ -1,3 +1,10 @@
+"use client";
+
+import {
+  Orbitron,
+  M_PLUS_Rounded_1c,
+} from "next/font/google";
+
 import GuidePage from "./components/GuidePage";
 import TopNavigationGuide from "./components/TopNavigationGuide";
 import BottomNavigationGuide from "./components/BottomNavigationGuide";
@@ -14,25 +21,52 @@ import EnjoyGuide from "./components/EnjoyGuide";
 
 import NavigationBar from "./components/NavigationBar";
 
+
+/* =========================
+   フォント
+========================= */
+
+export const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+});
+
+const rounded = M_PLUS_Rounded_1c({
+  subsets: ["latin"],
+  weight: ["500", "700", "800"],
+});
+
+
 export default function Page() {
   return (
-    <div>
+    <div className={rounded.className}>
+
       <GuidePage />
 
       <TopNavigationGuide />
+
       <BottomNavigationGuide />
 
       <HomeGuide />
+
       <StageGuide />
+
       <MapGuide />
+
       <ProjectGuide />
+
       <QuestionnaireGuide />
+
       <FaqGuide />
+
       <MascotGuide />
+
       {/* <LoginGuide /> */}
+
       <EnjoyGuide />
 
       <NavigationBar />
+
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { orbitron } from "../page";
 import "./HomeGuide.css";
 
 export default function HomeGuide() {
@@ -38,11 +39,15 @@ export default function HomeGuide() {
 
       {/* ページタイトル */}
       <div className="Home-Guide-header">
-        <div className="Home-Guide-number">
+
+        <div
+          className={`Home-Guide-number ${orbitron.className}`}
+        >
           03
         </div>
 
         <h1>ホーム</h1>
+
       </div>
 
 
@@ -51,12 +56,16 @@ export default function HomeGuide() {
 
         {/* ホーム画面画像 */}
         <div className="Home-Guide-image-box">
+
           <div className="Home-Guide-image">
+
             <img
               src="/guide/home.png"
               alt="ホーム画面"
             />
+
           </div>
+
         </div>
 
 
@@ -70,6 +79,7 @@ export default function HomeGuide() {
         <div className="Home-Guide-notice">
 
           {items.map((item, index) => (
+
             <div
               className="Home-Guide-notice-item"
               key={item.title}
@@ -77,9 +87,11 @@ export default function HomeGuide() {
 
               {/* 項目タイトル */}
               <button
+                type="button"
                 className="Home-Guide-notice-title"
                 onClick={() => handleToggle(index)}
               >
+
                 <span className="Home-Guide-notice-dot"></span>
 
                 <h2>{item.title}</h2>
@@ -91,17 +103,21 @@ export default function HomeGuide() {
                 >
                   &gt;
                 </span>
+
               </button>
 
 
               {/* 本文 */}
               {openItem === index && (
+
                 <div className="Home-Guide-notice-text">
                   {item.text}
                 </div>
+
               )}
 
             </div>
+
           ))}
 
         </div>

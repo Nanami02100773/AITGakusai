@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { orbitron } from "../page";
 import "./FaqGuide.css";
 
 export default function FaqGuide() {
@@ -24,7 +25,7 @@ export default function FaqGuide() {
 
       <div className="Faq-Guide-header">
 
-        <div className="Faq-Guide-number">
+        <div className={`Faq-Guide-number ${orbitron.className}`}>
           08
         </div>
 

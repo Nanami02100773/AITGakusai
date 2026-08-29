@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { orbitron } from "../page";
 import "./BottomNavigationGuide.css";
 
 export default function BottomNavigationGuide() {
@@ -43,11 +44,15 @@ export default function BottomNavigationGuide() {
 
       {/* ページタイトル */}
       <div className="BottomNavigation-Guide-header">
-        <div className="BottomNavigation-Guide-number">
-          04
+
+        <div
+          className={`BottomNavigation-Guide-number ${orbitron.className}`}
+        >
+          02
         </div>
 
         <h1>下部メニュー</h1>
+
       </div>
 
 
@@ -56,12 +61,16 @@ export default function BottomNavigationGuide() {
 
         {/* 下部メニュー画像 */}
         <div className="BottomNavigation-Guide-image-box">
+
           <div className="BottomNavigation-Guide-image">
+
             <img
               src="/guide/bottom-navigation.png"
               alt="下部メニュー"
             />
+
           </div>
+
         </div>
 
 
@@ -75,6 +84,7 @@ export default function BottomNavigationGuide() {
         <div className="BottomNavigation-Guide-notice">
 
           {items.map((item, index) => (
+
             <div
               className="BottomNavigation-Guide-notice-item"
               key={item.title}
@@ -82,12 +92,14 @@ export default function BottomNavigationGuide() {
 
               {/* 項目タイトル */}
               <button
+                type="button"
                 className="BottomNavigation-Guide-notice-title"
                 onClick={() => handleToggle(index)}
               >
 
                 {/* 青い丸 */}
                 <span className="BottomNavigation-Guide-notice-dot"></span>
+
 
                 {/* アイコン画像 */}
                 <img
@@ -96,8 +108,12 @@ export default function BottomNavigationGuide() {
                   alt=""
                 />
 
+
+                {/* 項目名 */}
                 <h2>{item.title}</h2>
 
+
+                {/* 矢印 */}
                 <span
                   className={`BottomNavigation-Guide-arrow ${
                     openItem === index ? "is-open" : ""
@@ -111,12 +127,15 @@ export default function BottomNavigationGuide() {
 
               {/* 本文 */}
               {openItem === index && (
+
                 <div className="BottomNavigation-Guide-notice-text">
                   {item.text}
                 </div>
+
               )}
 
             </div>
+
           ))}
 
         </div>

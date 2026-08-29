@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { orbitron } from "../page";
 import "./MascotGuide.css";
 
 export default function MascotGuide() {
@@ -24,7 +25,7 @@ export default function MascotGuide() {
 
       <div className="Mascot-Guide-header">
 
-        <div className="Mascot-Guide-number">
+        <div className={`Mascot-Guide-number ${orbitron.className}`}>
           09
         </div>
 

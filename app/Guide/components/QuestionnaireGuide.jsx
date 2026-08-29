@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { orbitron } from "../page";
 import "./QuestionnaireGuide.css";
 
 export default function QuestionnaireGuide() {
@@ -24,7 +25,7 @@ export default function QuestionnaireGuide() {
 
       <div className="Questionnaire-Guide-header">
 
-        <div className="Questionnaire-Guide-number">
+        <div className={`Questionnaire-Guide-number ${orbitron.className}`}>
           07
         </div>
 

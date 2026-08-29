@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { orbitron } from "../page";
 import "./StageGuide.css";
 
 export default function StageGuide() {
@@ -35,7 +36,9 @@ export default function StageGuide() {
 
       <div className="Stage-Guide-header">
 
-        <div className="Stage-Guide-number">
+        <div
+          className={`Stage-Guide-number ${orbitron.className}`}
+        >
           04
         </div>
 

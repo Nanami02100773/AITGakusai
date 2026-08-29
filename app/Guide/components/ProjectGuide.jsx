@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import "./ProjectGuide.css";
+import { orbitron } from "../page";
 
 export default function ProjectGuide() {
   const [openItem, setOpenItem] = useState(null);
@@ -26,7 +27,7 @@ export default function ProjectGuide() {
 
       <div className="Project-Guide-header">
 
-        <div className="Project-Guide-number">
+        <div className={`Project-Guide-number ${orbitron.className}`}>
           06
         </div>
 
@@ -83,6 +84,8 @@ export default function ProjectGuide() {
               className="Project-Guide-notice-item"
               key={item.title}
             >
+
+              {/* 項目タイトル */}
 
               <button
                 type="button"

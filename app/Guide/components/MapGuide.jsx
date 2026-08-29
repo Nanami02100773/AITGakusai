@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { orbitron } from "../page";
 import "./MapGuide.css";
 
 export default function MapGuide() {
@@ -30,7 +31,9 @@ export default function MapGuide() {
 
       <div className="Map-Guide-header">
 
-        <div className="Map-Guide-number">
+        <div
+          className={`Map-Guide-number ${orbitron.className}`}
+        >
           05
         </div>
 
