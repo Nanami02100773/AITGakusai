@@ -6,7 +6,7 @@
 
   width: 100%;
 
-  padding: 15px 16px 30px;
+  padding: 12px 14px 25px;
 
   background: #fff;
 
@@ -21,17 +21,17 @@
 
 .Home-Guide-header {
 
-  width: 400px;
+  width: 360px;
 
   max-width: 100%;
 
-  margin: 0 auto 22px;
+  margin: 0 auto 18px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 20px;
+  gap: 16px;
 
   box-sizing: border-box;
 
@@ -44,9 +44,9 @@
 
 .Home-Guide-number {
 
-  width: 60px;
+  width: 52px;
 
-  height: 60px;
+  height: 52px;
 
   flex-shrink: 0;
 
@@ -57,13 +57,9 @@
   justify-content: center;
 
   background: linear-gradient(
-
     135deg,
-
     #5675ff,
-
     #3757ef
-
   );
 
   border: 3px solid #fff;
@@ -72,13 +68,12 @@
 
   color: #fff;
 
-  font-size: 25px;
+  font-size: 22px;
 
   font-weight: 700;
 
   box-shadow:
-
-    0 5px 14px rgba(79, 109, 255, 0.22);
+    0 4px 11px rgba(79, 109, 255, 0.22);
 
   box-sizing: border-box;
 
@@ -95,11 +90,11 @@
 
   margin: 0;
 
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 
   color: #353567;
 
-  font-size: 30px;
+  font-size: 26px;
 
   font-weight: 700;
 
@@ -120,18 +115,14 @@
 
   bottom: 0;
 
-  width: 180px;
+  width: 150px;
 
-  height: 4px;
+  height: 3px;
 
   background: linear-gradient(
-
     90deg,
-
     #5675ff,
-
     #9eaaff
-
   );
 
   border-radius: 999px;
@@ -145,31 +136,26 @@
 
 .Home-Guide-content {
 
-  width: 420px;
+  width: 390px;
 
   max-width: 100%;
 
   margin: 0 auto;
 
-  padding: 28px 15px 32px;
+  padding: 22px 13px 26px;
 
   background: linear-gradient(
-
     180deg,
-
     #e6eeff,
-
     #edf3ff
-
   );
 
   border: 1px solid #d5ddff;
 
-  border-radius: 20px;
+  border-radius: 17px;
 
   box-shadow:
-
-    0 8px 22px rgba(79, 109, 255, 0.08);
+    0 6px 17px rgba(79, 109, 255, 0.08);
 
   box-sizing: border-box;
 
@@ -182,27 +168,26 @@
 
 .Home-Guide-image-box {
 
-  width: 380px;
+  width: 350px;
 
   max-width: 100%;
 
-  height: 300px;
+  height: 255px;
 
   margin: 0 auto;
 
-  padding: 18px;
+  padding: 14px;
 
   background: #fff;
 
-  border: 3px solid #c8d0ff;
+  border: 2px solid #c8d0ff;
 
-  border-radius: 12px;
+  border-radius: 11px;
 
   box-shadow:
+    0 6px 16px rgba(79, 109, 255, 0.12),
 
-    0 8px 20px rgba(79, 109, 255, 0.12),
-
-    0 2px 5px rgba(79, 109, 255, 0.05);
+    0 2px 4px rgba(79, 109, 255, 0.05);
 
   box-sizing: border-box;
 
@@ -228,7 +213,7 @@
 
   display: block;
 
-  border-radius: 14px;
+  border-radius: 11px;
 
 }
 
@@ -239,11 +224,11 @@
 
 .Home-Guide-divider {
 
-  width: 180px;
+  width: 160px;
 
-  height: 36px;
+  height: 32px;
 
-  margin: 18px auto 14px;
+  margin: 15px auto 12px;
 
   display: flex;
 
@@ -252,13 +237,9 @@
   justify-content: center;
 
   background: linear-gradient(
-
     90deg,
-
     #86a7ff,
-
     #6f8dff
-
   );
 
   border: 2px solid rgba(255, 255, 255, 0.65);
@@ -266,14 +247,13 @@
   border-radius: 999px;
 
   box-shadow:
-
-    0 5px 12px rgba(79, 109, 255, 0.14),
+    0 4px 10px rgba(79, 109, 255, 0.14),
 
     inset 0 2px 0 rgba(255, 255, 255, 0.65);
 
   color: #fff;
 
-  font-size: 18px;
+  font-size: 16px;
 
   font-weight: 700;
 
@@ -288,22 +268,21 @@
 
 .Home-Guide-notice {
 
-  width: 390px;
+  width: 360px;
 
   max-width: 100%;
 
   margin: 0 auto;
 
-  padding: 16px;
+  padding: 13px;
 
   background: #c8d0ff;
 
   border: 1px solid rgba(255, 255, 255, 0.7);
 
-  border-radius: 14px;
+  border-radius: 12px;
 
   box-shadow:
-
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 
   box-sizing: border-box;
@@ -317,7 +296,7 @@
 
 .Home-Guide-notice-item {
 
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 
 }
 
@@ -337,33 +316,28 @@
 
   width: 100%;
 
-  min-height: 42px;
+  min-height: 38px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 16px;
+  gap: 12px;
 
-  padding: 10px 16px;
+  padding: 8px 13px;
 
   background: linear-gradient(
-
     180deg,
-
     #ffffff,
-
     #f8f9ff
-
   );
 
   border: 1px solid #e0e4f8;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   box-shadow:
-
-    0 3px 8px rgba(90, 100, 160, 0.07);
+    0 2px 6px rgba(90, 100, 160, 0.07);
 
   box-sizing: border-box;
 
@@ -372,7 +346,6 @@
   text-align: left;
 
   transition:
-
     transform 0.2s ease,
 
     background 0.2s ease,
@@ -393,8 +366,7 @@
   transform: scale(0.98);
 
   box-shadow:
-
-    0 2px 5px rgba(90, 100, 160, 0.08);
+    0 2px 4px rgba(90, 100, 160, 0.08);
 
 }
 
@@ -405,29 +377,24 @@
 
 .Home-Guide-notice-dot {
 
-  width: 13px;
+  width: 11px;
 
-  height: 13px;
+  height: 11px;
 
   flex-shrink: 0;
 
   background: linear-gradient(
-
     135deg,
-
     #5675ff,
-
     #3757ef
-
   );
 
-  border: 1.5px solid #fff;
+  border: 1px solid #fff;
 
   border-radius: 50%;
 
   box-shadow:
-
-    0 2px 6px rgba(79, 109, 255, 0.2);
+    0 2px 5px rgba(79, 109, 255, 0.2);
 
 }
 
@@ -442,7 +409,7 @@
 
   color: #353567;
 
-  font-size: 17px;
+  font-size: 15px;
 
   font-weight: 700;
 
@@ -463,14 +430,13 @@
 
   color: #4f6dff;
 
-  font-size: 27px;
+  font-size: 24px;
 
   font-weight: 400;
 
   line-height: 1;
 
   transition:
-
     transform 0.25s ease,
 
     color 0.2s ease;
@@ -497,23 +463,23 @@
 
 .Home-Guide-notice-text {
 
-  width: calc(100% - 18px);
+  width: calc(100% - 15px);
 
   margin-top: 5px;
 
   margin-left: auto;
 
-  padding: 14px 18px;
+  padding: 11px 14px;
 
   background: #e6eeff;
 
   border: 1px solid #c8d0ff;
 
-  border-radius: 10px;
+  border-radius: 9px;
 
   color: #353567;
 
-  font-size: 14px;
+  font-size: 13px;
 
   font-weight: 500;
 
@@ -537,8 +503,7 @@
   border-color: #b8c6ff;
 
   box-shadow:
-
-    0 6px 14px rgba(79, 109, 255, 0.14);
+    0 5px 11px rgba(79, 109, 255, 0.14);
 
 }
 

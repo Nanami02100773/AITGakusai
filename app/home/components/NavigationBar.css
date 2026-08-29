@@ -523,3 +523,34 @@
     transparent
   );
 }
+
+.Home-menu-tutorial {
+  display: block;
+
+  width: auto;
+
+  margin: 0;
+  padding: 15px 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #333;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  text-align: left;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.Home-menu-tutorial:hover {
+  background: #f3f6ff;
+}

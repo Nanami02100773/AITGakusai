@@ -3,16 +3,21 @@
 ========================== */
 
 .TopNavigationGuide {
+
   width: 100%;
-  padding: 15px 0 30px;
+
+  padding: 12px 0 25px;
 
   background: #fff;
 
   box-sizing: border-box;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
 }
 
 
@@ -21,17 +26,21 @@
 ========================== */
 
 .TopNavigationGuide-header {
-  width: 400px;
-  max-width: 90%;
 
-  margin: 0 auto 22px;
+  width: 350px;
+
+  max-width: 88%;
+
+  margin: 0 auto 18px;
 
   display: flex;
+
   align-items: center;
 
-  gap: 18px;
+  gap: 14px;
 
   box-sizing: border-box;
+
 }
 
 
@@ -40,13 +49,17 @@
 ========================== */
 
 .TopNavigationGuide-number {
-  width: 60px;
-  height: 60px;
+
+  width: 50px;
+
+  height: 50px;
 
   flex-shrink: 0;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   background: linear-gradient(
@@ -55,18 +68,21 @@
     #3757ef
   );
 
-  border: 3px solid #fff;
+  border: 2px solid #fff;
+
   border-radius: 50%;
 
   color: #fff;
 
-  font-size: 25px;
+  font-size: 21px;
+
   font-weight: 700;
 
   box-shadow:
-    0 5px 14px rgba(79, 109, 255, 0.22);
+    0 4px 11px rgba(79, 109, 255, 0.20);
 
   box-sizing: border-box;
+
 }
 
 
@@ -75,15 +91,19 @@
 ========================== */
 
 .TopNavigationGuide-header h1 {
+
   position: relative;
 
   margin: 0;
-  padding-bottom: 8px;
+
+  padding-bottom: 6px;
 
   color: #353567;
 
-  font-size: 30px;
+  font-size: 25px;
+
   font-weight: 700;
+
 }
 
 
@@ -92,15 +112,18 @@
 ========================== */
 
 .TopNavigationGuide-header h1::after {
+
   content: "";
 
   position: absolute;
 
   left: 0;
+
   bottom: 0;
 
-  width: 180px;
-  height: 4px;
+  width: 150px;
+
+  height: 3px;
 
   background: linear-gradient(
     90deg,
@@ -109,6 +132,7 @@
   );
 
   border-radius: 999px;
+
 }
 
 
@@ -117,12 +141,14 @@
 ========================== */
 
 .TopNavigationGuide-content {
-  width: 440px;
-  max-width: 94%;
+
+  width: 390px;
+
+  max-width: 92%;
 
   margin: 0 auto;
 
-  padding: 28px 15px 32px;
+  padding: 22px 12px 25px;
 
   background: linear-gradient(
     180deg,
@@ -131,12 +157,14 @@
   );
 
   border: 1px solid #d5ddff;
-  border-radius: 20px;
+
+  border-radius: 17px;
 
   box-shadow:
-    0 8px 22px rgba(79, 109, 255, 0.08);
+    0 6px 18px rgba(79, 109, 255, 0.07);
 
   box-sizing: border-box;
+
 }
 
 
@@ -145,22 +173,27 @@
 ========================== */
 
 .TopNavigationGuide-image-box {
-  width: 380px;
+
+  width: 335px;
+
   max-width: 100%;
 
   margin: 0 auto;
-  padding: 15px;
+
+  padding: 11px;
 
   background: #fff;
 
-  border: 3px solid #c8d0ff;
-  border-radius: 13px;
+  border: 2px solid #c8d0ff;
+
+  border-radius: 11px;
 
   box-shadow:
-    0 8px 20px rgba(79, 109, 255, 0.12),
-    0 2px 5px rgba(79, 109, 255, 0.05);
+    0 6px 15px rgba(79, 109, 255, 0.10),
+    0 2px 4px rgba(79, 109, 255, 0.04);
 
   box-sizing: border-box;
+
 }
 
 
@@ -169,16 +202,21 @@
 ========================== */
 
 .TopNavigationGuide-image {
+
   width: 100%;
+
 }
 
 .TopNavigationGuide-image img {
+
   width: 100%;
+
   height: auto;
 
   display: block;
 
-  border-radius: 11px;
+  border-radius: 9px;
+
 }
 
 
@@ -187,13 +225,17 @@
 ========================== */
 
 .TopNavigationGuide-divider {
-  width: 190px;
-  height: 40px;
 
-  margin: 19px auto 15px;
+  width: 165px;
+
+  height: 35px;
+
+  margin: 16px auto 12px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   background: linear-gradient(
@@ -202,19 +244,22 @@
     #6f8dff
   );
 
-  border: 2px solid rgba(255, 255, 255, 0.65);
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+
   border-radius: 999px;
 
   box-shadow:
-    0 5px 12px rgba(79, 109, 255, 0.14),
+    0 4px 10px rgba(79, 109, 255, 0.12),
     inset 0 2px 0 rgba(255, 255, 255, 0.65);
 
   color: #fff;
 
-  font-size: 19px;
+  font-size: 16px;
+
   font-weight: 700;
 
   box-sizing: border-box;
+
 }
 
 
@@ -223,21 +268,26 @@
 ========================== */
 
 .TopNavigationGuide-notice {
-  width: 390px;
+
+  width: 350px;
+
   max-width: 100%;
 
   margin: 0 auto;
-  padding: 15px;
+
+  padding: 11px;
 
   background: #c8d0ff;
 
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 14px;
+
+  border-radius: 12px;
 
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 
   box-sizing: border-box;
+
 }
 
 
@@ -246,11 +296,15 @@
 ========================== */
 
 .TopNavigationGuide-notice-item {
-  margin-bottom: 8px;
+
+  margin-bottom: 6px;
+
 }
 
 .TopNavigationGuide-notice-item:last-child {
+
   margin-bottom: 0;
+
 }
 
 
@@ -259,15 +313,18 @@
 ========================== */
 
 .TopNavigationGuide-notice-title {
+
   width: 100%;
-  min-height: 48px;
+
+  min-height: 42px;
 
   display: flex;
+
   align-items: center;
 
-  gap: 12px;
+  gap: 9px;
 
-  padding: 10px 15px;
+  padding: 8px 12px;
 
   background: linear-gradient(
     180deg,
@@ -276,10 +333,11 @@
   );
 
   border: 1px solid #e0e4f8;
-  border-radius: 12px;
+
+  border-radius: 10px;
 
   box-shadow:
-    0 3px 8px rgba(90, 100, 160, 0.07);
+    0 2px 6px rgba(90, 100, 160, 0.06);
 
   box-sizing: border-box;
 
@@ -292,20 +350,23 @@
     background 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
+
 }
 
 
 /* ==========================
    左端のドット
 ========================== */
+
 .TopNavigationGuide-notice-dot {
 
-  width: 13px;
-  height: 13px;
+  width: 10px;
+
+  height: 10px;
 
   flex-shrink: 0;
 
-  margin-right: 15px;
+  margin-right: 9px;
 
   background: linear-gradient(
     135deg,
@@ -313,34 +374,40 @@
     #3757ef
   );
 
-  border: 1.5px solid #fff;
+  border: 1px solid #fff;
+
   border-radius: 50%;
 
   box-shadow:
-    0 2px 6px rgba(79, 109, 255, 0.2);
+    0 2px 5px rgba(79, 109, 255, 0.18);
+
 }
+
 
 /* ==========================
    項目番号
 ========================== */
 
 .TopNavigationGuide-item-number {
+
   position: relative;
 
-  width: 30px;
+  width: 26px;
 
   flex-shrink: 0;
 
   color: #5675ff;
 
-  font-size: 14px;
+  font-size: 12px;
+
   font-weight: 800;
 
   font-style: italic;
 
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 
   text-align: center;
+
 }
 
 
@@ -349,15 +416,18 @@
 ========================== */
 
 .TopNavigationGuide-item-number::after {
+
   content: "";
 
   position: absolute;
 
-  left:50%;
+  left: 50%;
+
   bottom: -3px;
 
-  width: 24px;
-  height: 2px;
+  width: 20px;
+
+  height: 1.5px;
 
   transform: translateX(-50%);
 
@@ -368,6 +438,7 @@
   );
 
   border-radius: 999px;
+
 }
 
 
@@ -376,16 +447,19 @@
 ========================== */
 
 .TopNavigationGuide-notice-title h2 {
+
   margin: 0;
 
   color: #353567;
 
-  font-size: 17px;
+  font-size: 15px;
+
   font-weight: 700;
 
   line-height: 1.3;
 
   flex: 1;
+
 }
 
 
@@ -394,9 +468,11 @@
 ========================== */
 
 .TopNavigationGuide-arrow {
+
   color: #4f6dff;
 
-  font-size: 28px;
+  font-size: 24px;
+
   font-weight: 400;
 
   line-height: 1;
@@ -404,6 +480,7 @@
   transition:
     transform 0.2s ease,
     color 0.2s ease;
+
 }
 
 
@@ -412,7 +489,9 @@
 ========================== */
 
 .TopNavigationGuide-arrow.is-open {
+
   transform: rotate(90deg);
+
 }
 
 
@@ -421,26 +500,31 @@
 ========================== */
 
 .TopNavigationGuide-notice-text {
-  width: calc(100% - 16px);
 
-  margin-top: 6px;
+  width: calc(100% - 12px);
+
+  margin-top: 5px;
+
   margin-left: auto;
 
-  padding: 14px 17px;
+  padding: 11px 13px;
 
   background: #e6eeff;
 
   border: 1px solid #c8d0ff;
-  border-radius: 10px;
+
+  border-radius: 9px;
 
   color: #353567;
 
-  font-size: 14px;
+  font-size: 12px;
+
   font-weight: 500;
 
   line-height: 1.5;
 
   box-sizing: border-box;
+
 }
 
 
@@ -449,22 +533,28 @@
 ========================== */
 
 .TopNavigationGuide-notice-title:hover {
-  transform: translateY(-2px);
+
+  transform: translateY(-1px);
 
   background: #eef2ff;
 
   border-color: #b8c6ff;
 
   box-shadow:
-    0 6px 14px rgba(79, 109, 255, 0.14);
+    0 4px 10px rgba(79, 109, 255, 0.12);
+
 }
 
 
 .TopNavigationGuide-notice-title:hover h2 {
+
   color: #3757ef;
+
 }
 
 
 .TopNavigationGuide-notice-title:hover .TopNavigationGuide-arrow {
+
   color: #3757ef;
+
 }

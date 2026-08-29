@@ -11,7 +11,10 @@ export default function Tutorial() {
   const [page, setPage] = useState(0);
 
 
-  /* ===== 初回だけ表示 ===== */
+  /* =================================================
+     初回だけ表示
+  ================================================= */
+
   useEffect(() => {
     const completed =
       localStorage.getItem("tutorialCompleted");
@@ -21,6 +24,36 @@ export default function Tutorial() {
     }
   }, []);
 
+
+  /* =================================================
+     「チュートリアルをもう一度」を
+     NavigationBarから受け取る
+  ================================================= */
+
+  useEffect(() => {
+    const handleOpenTutorial = () => {
+      setPage(0);
+      setShowGuide(false);
+      setShowTutorial(true);
+    };
+
+    window.addEventListener(
+      "openTutorial",
+      handleOpenTutorial
+    );
+
+    return () => {
+      window.removeEventListener(
+        "openTutorial",
+        handleOpenTutorial
+      );
+    };
+  }, []);
+
+
+  /* =================================================
+     チュートリアル内容
+  ================================================= */
 
   const tutorialData = [
     {
@@ -45,6 +78,7 @@ export default function Tutorial() {
       ),
     },
 
+
     {
       label: "上部メニュー",
 
@@ -67,6 +101,7 @@ export default function Tutorial() {
       ),
     },
 
+
     {
       label: "下部メニュー",
 
@@ -88,6 +123,7 @@ export default function Tutorial() {
         </>
       ),
     },
+
 
     {
       label: "準備OK！",
@@ -117,11 +153,17 @@ export default function Tutorial() {
     page === tutorialData.length - 1;
 
 
-  /* ===== 次へ ===== */
+  /* =================================================
+     次へ
+  ================================================= */
+
   const nextPage = () => {
+
     if (isLastPage) {
+
       setShowTutorial(false);
 
+      /* 初回表示済みとして保存 */
       localStorage.setItem(
         "tutorialCompleted",
         "true"
@@ -134,20 +176,29 @@ export default function Tutorial() {
       return;
     }
 
-    setPage(page + 1);
+    setPage((prev) => prev + 1);
   };
 
 
-  /* ===== 戻る ===== */
+  /* =================================================
+     戻る
+  ================================================= */
+
   const prevPage = () => {
+
     if (page > 0) {
-      setPage(page - 1);
+      setPage((prev) => prev - 1);
     }
+
   };
 
 
-  /* ===== チュートリアル終了後 ===== */
+  /* =================================================
+     チュートリアル終了後
+  ================================================= */
+
   if (!showTutorial) {
+
     return (
       <>
         {showGuide && (
@@ -157,8 +208,13 @@ export default function Tutorial() {
         )}
       </>
     );
+
   }
 
+
+  /* =================================================
+     チュートリアル本体
+  ================================================= */
 
   return (
     <>
@@ -166,17 +222,29 @@ export default function Tutorial() {
 
         <div className="Tutorial-card">
 
+
+          {/* =================================================
+              ラベル
+          ================================================= */}
+
           <div className="Tutorial-label">
             {current.label}
           </div>
 
+
+          {/* =================================================
+              タイトル
+          ================================================= */}
 
           <h2 className="Tutorial-title">
             {current.title}
           </h2>
 
 
-          {/* ===== 説明画像ボックス ===== */}
+          {/* =================================================
+              説明画像
+          ================================================= */}
+
           <div className="Tutorial-image-box">
 
             <img
@@ -188,69 +256,100 @@ export default function Tutorial() {
           </div>
 
 
+          {/* =================================================
+              説明文
+          ================================================= */}
+
           <p className="Tutorial-text">
             {current.text}
           </p>
 
 
-{/* ===== 操作部分 ===== */}
-<div
-  className={
-    isLastPage
-      ? "Tutorial-controls Tutorial-controls-last"
-      : "Tutorial-controls"
-  }
->
+          {/* =================================================
+              操作部分
+          ================================================= */}
 
-  {/* ===== 戻る ===== */}
-  <button
-    className="Tutorial-arrow Tutorial-arrow-prev"
-    onClick={prevPage}
-    disabled={page === 0}
-  >
-    ←
-  </button>
+          <div
+            className={
+              isLastPage
+                ? "Tutorial-controls Tutorial-controls-last"
+                : "Tutorial-controls"
+            }
+          >
 
 
-{/* ===== ドット ===== */}
-{!isLastPage && (
-  <div className="Tutorial-dots">
-    {tutorialData.map((_, index) => (
-      <span
-        key={index}
-        className={
-          index === page
-            ? "Tutorial-dot Tutorial-dot-active"
-            : "Tutorial-dot"
-        }
-      />
-    ))}
-  </div>
-)}
+            {/* =================================================
+                戻る
+            ================================================= */}
+
+            <button
+              className="Tutorial-arrow Tutorial-arrow-prev"
+              onClick={prevPage}
+              disabled={page === 0}
+            >
+              ←
+            </button>
 
 
-  {/* ===== 次へ ===== */}
-  {!isLastPage && (
-    <button
-      className="Tutorial-arrow"
-      onClick={nextPage}
-    >
-      →
-    </button>
-  )}
+            {/* =================================================
+                ドット
+            ================================================= */}
+
+            {!isLastPage && (
+
+              <div className="Tutorial-dots">
+
+                {tutorialData.map((_, index) => (
+
+                  <span
+                    key={index}
+                    className={
+                      index === page
+                        ? "Tutorial-dot Tutorial-dot-active"
+                        : "Tutorial-dot"
+                    }
+                  />
+
+                ))}
+
+              </div>
+
+            )}
 
 
-  {/* ===== スタート ===== */}
-  {isLastPage && (
-    <button
-      className="Tutorial-start"
-      onClick={nextPage}
-    >
-      スタート
-    </button>
-  )}
+            {/* =================================================
+                次へ
+            ================================================= */}
 
-</div>
+            {!isLastPage && (
+
+              <button
+                className="Tutorial-arrow"
+                onClick={nextPage}
+              >
+                →
+              </button>
+
+            )}
+
+
+            {/* =================================================
+                スタート
+            ================================================= */}
+
+            {isLastPage && (
+
+              <button
+                className="Tutorial-start"
+                onClick={nextPage}
+              >
+                スタート
+              </button>
+
+            )}
+
+          </div>
+
         </div>
 
       </div>

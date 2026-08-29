@@ -110,7 +110,9 @@ const NavigationBar = () => {
           isMenuOpen ? "Home-open" : ""
         }`}
       >
+
         <div className="Home-menu-header">
+
           <button
             className="Home-menu-back"
             onClick={() => setIsMenuOpen(false)}
@@ -119,8 +121,11 @@ const NavigationBar = () => {
           </button>
 
           <span>Menu</span>
+
         </div>
 
+
+        {/* 操作説明 */}
         <Link
           href="/Guide"
           className="Home-menu-item"
@@ -129,6 +134,23 @@ const NavigationBar = () => {
           操作説明
         </Link>
 
+
+        {/* チュートリアルをもう一度 */}
+        <button
+  type="button"
+  className="Home-menu-item Home-menu-tutorial"
+  onClick={() => {
+    setIsMenuOpen(false);
+
+    window.dispatchEvent(
+      new Event("openTutorial")
+    );
+  }}
+>
+  チュートリアル
+</button>
+
+        {/* 学祭用ログイン */}
         <Link
           href="/Login"
           className="Home-menu-item"
@@ -136,7 +158,9 @@ const NavigationBar = () => {
         >
           学祭用ログイン
         </Link>
+
       </div>
+
 
       <nav className="Home-bottom-nav">
 
