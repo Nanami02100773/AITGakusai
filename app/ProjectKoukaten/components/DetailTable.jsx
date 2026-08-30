@@ -7,23 +7,26 @@ function DetailTable() {
       icon: "/project/place.png",
       iconClass: "place-icon",
       label: "場所",
-      value: "AITプラザ",
+      value: "AITプラザ1階",
     },
     {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value: "10:00～17:00",
+      value: [
+        "10/10（土）　10:00～17:00",
+        "11/11（日）　10:00~16:15"
+      ]
     },
     {
       icon: "/project/Precautions.png",
       iconClass: "precautions-icon",
       label: "注意事項",
       value: [
-        "スタンプは1人1回までです",
-        "景品は数に限りがあります",
-        "総合案内所で交換してください",
-        "学祭と執行のスタンプラリーがあります",
+        "展示品は許可なく触れないでください。",
+        "AIT プラザ内は飲食喫煙禁止です。",
+        "大学祭実行委員の指示に従ってください。従わずに生じた事故、トラブルに関して大学祭実行委員会は一切責任を負いません。",
+  
       ],
     },
   ];

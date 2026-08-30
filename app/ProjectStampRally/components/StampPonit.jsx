@@ -6,6 +6,7 @@ import "./StampPoint.css";
 function StampRally() {
   return (
     <section className="StampRally-section">
+
       {/* タイトル */}
       <div className="StampRally-section-title">
         スタンプポイント
@@ -13,17 +14,31 @@ function StampRally() {
 
       {/* リスト */}
       <div className="StampRally-list">
+
         <div className="StampRally-item">
+
           <div className="StampRally-card">
-            
-            {/* 画像差し込み用 白いボックス */}
+
+            {/* スタンプポイント画像 */}
             <div className="StampRally-image-box">
-              IMAGE
+              <img
+                src="/ProjectStamp/StampPoint.svg"
+                alt="スタンプポイント"
+                className="StampRally-image"
+              />
             </div>
 
+            {/* 説明文 */}
+            <p className="StampRally-description">
+              ★の位置がスタンプポイントです
+            </p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 }

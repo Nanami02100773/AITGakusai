@@ -7,13 +7,15 @@ function DetailTable() {
       icon: "/project/place.png",
       iconClass: "place-icon",
       label: "場所",
-      value: "工科展／楽市楽座／脱出ゲーム／MAKE",
+      value: "工科展／楽市楽座／工科展／脱出ゲーム",
     },
     {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value: "10:00～17:00",
+      value: ["受付・景品交換　10:00～17:00",
+      "三叉路案内所　16:30（終了）"
+      ],
     },
     {
       icon: "/project/Precautions.png",

@@ -8,6 +8,7 @@
   margin: 0 auto;
 }
 
+
 /* =====================================
    リスト
 ===================================== */
@@ -17,14 +18,15 @@
   justify-content: center;
 }
 
+
 /* =====================================
    アイテム
 ===================================== */
 
 .StampRally-item {
-  width: 100%;
-  max-width: 760px;
+  width: 450px;
 }
+
 
 /* =====================================
    カード
@@ -44,8 +46,9 @@
   box-sizing: border-box;
 
   box-shadow:
-    0 6px 18px rgba(134,167,255,.12);
+    0 6px 18px rgba(134, 167, 255, .12);
 }
+
 
 /* =====================================
    画像ボックス
@@ -58,30 +61,32 @@
   background: #ffffff;
 
   border-radius: 5px;
-
-  border: 2px solid rgba(134,167,255,.25);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #86a7ff;
-
-  font-size: 14px;
-  font-weight: 700;
+  border: 2px solid rgba(134, 167, 255, .25);
 
   box-sizing: border-box;
+
+  overflow: hidden;
+
+  position: relative;
 }
+
 
 /* =====================================
    実画像
 ===================================== */
 
 .StampRally-image {
-  width: 100%;
-  height: 100%;
+  width: 230%;
+  height: auto;
 
-  object-fit: cover;
+  max-width: none;
+
+  display: block;
+
+  position: relative;
+
+  left: -110px;
+  top: -60px;
 
   border-radius: 3px;
 }
@@ -114,5 +119,22 @@
   border-radius: 5px;
 
   box-shadow:
-    0 3px 8px rgba(111,141,255,.18);
+    0 3px 8px rgba(111, 141, 255, .18);
+}
+
+/* =====================================
+   説明文
+===================================== */
+
+.StampRally-description {
+  margin: 12px 0 0;
+
+  text-align: center;
+
+  color: #5f6f91;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.6;
 }
