@@ -1,13 +1,9 @@
-/* =================================================
-   セクション
-================================================= */
-.Stage-TT-section {
-  padding: 10px 0;
-}
+
 
 /* =================================================
    外枠
 ================================================= */
+
 .Stage-TT-container {
   height: 650px;
 
@@ -22,6 +18,7 @@
   );
 
   border: 1px solid #e3e8ff;
+
   border-radius: 10px;
 
   box-shadow:
@@ -29,21 +26,29 @@
     inset 0 1px 0 rgba(255,255,255,0.9);
 }
 
+
 /* =================================================
    スクロール
 ================================================= */
+
 .Stage-TT-scroll {
   height: 100%;
 
   margin-right: -10px;
+
   padding-right: 20px;
 
   overflow-y: auto;
+
+  scrollbar-color: #ff9fb5 transparent;
+  scrollbar-width: thin;
 }
+
 
 /* =================================================
    スクロールバー
 ================================================= */
+
 .Stage-TT-scroll::-webkit-scrollbar {
   width: 6px;
 }
@@ -53,22 +58,30 @@
 }
 
 .Stage-TT-scroll::-webkit-scrollbar-thumb {
-  background: rgba(120,130,255,0.35);
+  background: #ff9fb5;
 
   border-radius: 999px;
 }
 
+
 /* =================================================
    タイムライン
 ================================================= */
+
 .Stage-TT-list {
   position: relative;
 
   margin: 0;
+
   padding: 0;
 
   list-style: none;
 }
+
+
+/* =================================================
+   縦線
+================================================= */
 
 .Stage-TT-list::before {
   content: "";
@@ -77,6 +90,7 @@
 
   top: 10px;
   bottom: 10px;
+
   left: 20px;
 
   width: 4px;
@@ -90,16 +104,75 @@
   border-radius: 999px;
 }
 
+
 /* =================================================
    アイテム
 ================================================= */
+
 .Stage-TT-item {
   position: relative;
 
   margin-bottom: 10px;
+
   padding-bottom: 20px;
+
   padding-left: 70px;
 }
+
+
+/* =================================================
+   タイムライン丸
+================================================= */
+
+.Stage-TT-dot {
+  position: absolute;
+
+  top: 2px;
+  left: 11px;
+
+  width: 20px;
+  height: 20px;
+
+  background: #ffffff;
+
+  border: 4px solid #ffffff;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 1px rgba(104,115,155,0.35),
+    0 3px 8px rgba(70,100,160,0.15);
+
+  z-index: 3;
+}
+
+
+/* =================================================
+   丸の中心
+================================================= */
+
+.Stage-TT-dot::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 14px;
+  height: 14px;
+
+  transform: translate(-50%, -50%);
+
+  background: #6f8dff;
+
+  border-radius: 50%;
+}
+
+
+/* =================================================
+   下ライン
+================================================= */
 
 .Stage-TT-item::after {
   content: "";
@@ -119,81 +192,115 @@
   display: none;
 }
 
-.Stage-TT-item::before {
-  content: "";
 
-  position: absolute;
+/* =================================================
+   外側カード
+================================================= */
 
-  top: 2px;
-  left: 13px;
+.Stage-TT-card {
+  position: relative;
 
-  width: 18px;
-  height: 18px;
+  padding: 13px 10px 10px;
 
   background: linear-gradient(
-    135deg,
-    #b3c7ff 0%,
-    #6159ff 100%
+    180deg,
+    #ffffff,
+    #f7f7ff
   );
 
-  border: 2px solid #ffffff;
-  border-radius: 50%;
+  border: 1px solid #ececff;
+
+  border-radius: 18px;
 
   box-shadow:
-    0 0 0 1px rgba(104,115,155,0.35);
-
-  z-index: 3;
+    0 4px 12px rgba(120,120,180,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
 }
+
 
 /* =================================================
    時間
 ================================================= */
-.Stage-TT-time {
-  margin-bottom: 10px;
 
-  color: #6e7697;
+.Stage-TT-time {
+  margin-bottom: 8px;
+
+  padding-left: 8px;
+
+  color: #4f67d8;
 
   font-size: 16px;
+
   font-weight: 700;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.03em;
 }
+
 
 /* =================================================
    イベント
 ================================================= */
+
 .Stage-TT-event {
   position: relative;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
-  min-height: 50px;
+  min-height: 58px;
 
-  padding: 0 22px 0 0;
+  padding: 0 10px 0 0;
 
   overflow: hidden;
 
-  background: #ffffff;
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f7f7ff
+  );
 
-  border: 2px solid rgba(210,220,255,0.65);
-  border-radius: 10px;
+  border: 1px solid #ececff;
+
+  border-radius: 12px;
 
   box-shadow:
-    0 8px 20px rgba(120,140,255,0.10),
-    inset 0 1px 0 rgba(255,255,255,0.95);
+    0 4px 12px rgba(120,120,180,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+
+  cursor: pointer;
 
   transition: 0.2s ease;
 }
 
-.Stage-TT-event::before {
-  content: "";
 
+/* =================================================
+   ホバー
+================================================= */
+
+.Stage-TT-event:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(120,120,180,0.14);
+}
+
+
+/* =================================================
+   左青ライン
+================================================= */
+
+.Stage-TT-event-line {
   position: absolute;
 
   top: 0;
   left: 0;
 
-  width: 10px;
+  width: 6px;
   height: 100%;
 
   background: linear-gradient(
@@ -203,136 +310,383 @@
   );
 }
 
-.Stage-TT-event:hover {
-  transform: translateY(-2px);
-}
-
-/* =================================================
-   左側
-================================================= */
-.Stage-TT-event-left {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-
-  padding-left: 18px;
-}
 
 /* =================================================
    アイコン
 ================================================= */
+
 .Stage-TT-event-icon {
   display: flex;
-  justify-content: center;
-  align-items: center;
 
-  width: 36px;
-  height: 36px;
+  align-items: center;
+  justify-content: center;
 
   flex-shrink: 0;
 
-  padding: 4px;
+  width: 40px;
+  height: 40px;
 
-  background: #ffffff;
+  margin-left: 20px;
 
-  border: 1.5px solid #d9e2ff;
-  border-radius: 50px;
+  background: #f2f6ff;
+
+  border: 1px solid #c8d0ff;
+
+  border-radius: 50%;
+
+  overflow: hidden;
 }
 
+
+/* =================================================
+   アイコン画像
+================================================= */
+
 .Stage-TT-event-icon img {
-  width: 100%;
-  height: 100%;
+  width: 33px;
+  height: 33px;
 
   object-fit: contain;
 }
 
+
+/* =================================================
+   イベント内容
+================================================= */
+
+.Stage-TT-event-content {
+  flex: 1;
+
+  min-width: 0;
+
+  margin-left: 12px;
+}
+
+
 /* =================================================
    タイトル
 ================================================= */
+
 .Stage-TT-event-title {
-  color: #4f67d8;
+  color: #353567;
 
   font-size: 14px;
+
   font-weight: 700;
-  line-height: 1.4;
+
+  line-height: 1.3;
 }
+
+
+/* =================================================
+   赤い3点
+================================================= */
+
+.Stage-TT-event-dots {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  margin-top: 5px;
+}
+
+
+/* =================================================
+   ドット
+================================================= */
+
+.Stage-TT-event-dots span {
+  display: block;
+
+  width: 5px;
+  height: 5px;
+
+  background: #ff9fb5;
+
+  border-radius: 50%;
+}
+
+
+/* =================================================
+   矢印の丸
+================================================= */
+
+.Stage-TT-toggle-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  margin-left: 5px;
+
+  background: #e6eeff;
+
+  border-radius: 50%;
+}
+
 
 /* =================================================
    矢印
 ================================================= */
+
 .Stage-TT-toggle-icon {
-  width: 13px;
-  height: 13px;
+  display: block;
 
-  border-right: 4px solid #8aa0ff;
-  border-bottom: 4px solid #8aa0ff;
+  width: 10px;
+  height: 10px;
 
-  transform: rotate(45deg);
+  border-right: 3px solid #4f67d8;
+
+  border-bottom: 3px solid #4f67d8;
+
+  transform:
+    rotate(45deg)
+    translate(-1px, -1px);
+
+  border-radius: 2px;
 
   transition: transform 0.25s ease;
 }
 
-.Stage-TT-toggle-icon.Stage-TT-toggle-icon-open {
-  transform: rotate(-135deg);
+
+/* =================================================
+   開いた状態
+================================================= */
+
+.Stage-TT-toggle-icon-open {
+  transform:
+    rotate(-135deg)
+    translate(-1px, -1px);
 }
+
 
 /* =================================================
    詳細
 ================================================= */
+
 .Stage-TT-detail {
-  margin-top: 14px;
+  margin-top: 10px;
 
-  padding: 18px;
+  padding: 12px;
 
-  background: linear-gradient(
-    180deg,
-    #dae4ff 0%,
-    #e5eaff 100%
-  );
+  background: #e6eeff;
 
-  border: 1px solid #d9e2ff;
-  border-radius: 18px;
+  border: 1px solid #c8d0ff;
+
+  border-radius: 14px;
 
   box-shadow:
-    0 6px 18px rgba(90,110,255,0.08);
+    0 5px 14px rgba(120,120,180,0.08);
 
   animation: Stage-TT-fade-in 0.25s ease;
 }
 
-.Stage-TT-detail-image {
-  width: 100%;
-  height: 200px;
 
-  margin-bottom: 14px;
+/* =================================================
+   詳細画像
+================================================= */
+
+.Stage-TT-detail-image {
+  display: block;
+
+  width: 100%;
+  height: 180px;
+
+  margin-bottom: 10px;
 
   object-fit: cover;
 
-  border: 1px solid #dfe5ff;
-  border-radius: 16px;
+  border: 1px solid #ececff;
 
-  box-shadow:
-    0 8px 20px rgba(120,140,255,0.10);
+  border-radius: 12px;
 }
+
+
+/* =================================================
+   詳細文章
+================================================= */
 
 .Stage-TT-detail-text {
-  color: #4a4a6a;
+  margin: 0;
 
-  font-size: 14px;
+  color: #353567;
+
+  font-size: 13px;
+
   line-height: 1.7;
 }
+
 
 /* =================================================
    アニメーション
 ================================================= */
+
 @keyframes Stage-TT-fade-in {
+
   from {
     opacity: 0;
-    transform: translateY(-6px);
+
+    transform: translateY(-5px);
   }
 
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
+
+}
+
+
+/* =================================================
+   スマホ
+================================================= */
+
+@media (max-width: 480px) {
+
+  .Stage-TT-container {
+    height: 650px;
+
+    padding:
+      15px
+      10px
+      10px
+      15px;
+  }
+
+
+  .Stage-TT-scroll {
+    padding-right: 10px;
+  }
+
+
+  .Stage-TT-list::before {
+    left: 17px;
+
+    width: 4px;
+  }
+
+
+  .Stage-TT-item {
+    padding-left: 55px;
+
+    margin-bottom: 9px;
+
+    padding-bottom: 16px;
+  }
+
+
+  .Stage-TT-dot {
+    top: 2px;
+
+    left: 5px;
+
+    width: 25px;
+    height: 25px;
+
+    border-width: 4px;
+  }
+
+
+  .Stage-TT-dot::after {
+    width: 13px;
+    height: 13px;
+  }
+
+
+  .Stage-TT-item::after {
+    left: 55px;
+  }
+
+
+  .Stage-TT-card {
+    padding: 12px 8px 9px;
+
+    border-radius: 17px;
+  }
+
+
+  .Stage-TT-time {
+    margin-bottom: 7px;
+
+    padding-left: 7px;
+
+    font-size: 15px;
+  }
+
+
+  .Stage-TT-event {
+    min-height: 55px;
+
+    padding-right: 8px;
+
+    border-radius: 11px;
+  }
+
+
+  .Stage-TT-event-line {
+    width: 6px;
+  }
+
+
+  .Stage-TT-event-icon {
+    width: 38px;
+    height: 38px;
+
+    margin-left: 9px;
+  }
+
+
+  .Stage-TT-event-icon img {
+    width: 31px;
+    height: 31px;
+  }
+
+
+  .Stage-TT-event-content {
+    margin-left: 10px;
+  }
+
+
+  .Stage-TT-event-title {
+    font-size: 14px;
+  }
+
+
+  .Stage-TT-event-dots {
+    gap: 4px;
+
+    margin-top: 4px;
+  }
+
+
+  .Stage-TT-event-dots span {
+    width: 5px;
+    height: 5px;
+  }
+
+
+  .Stage-TT-toggle-button {
+    width: 36px;
+    height: 36px;
+
+    margin-left: 4px;
+  }
+
+
+  .Stage-TT-toggle-icon {
+    width: 9px;
+    height: 9px;
+
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+  }
+
 }

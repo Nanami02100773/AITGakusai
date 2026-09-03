@@ -13,11 +13,19 @@ const StageTT = ({ data = [] }) => {
   return (
     <section className="Stage-TT-section">
 
+      {/* =================================================
+          タイトル
+      ================================================= */}
       <h2 className="Stage-section-title">
         タイムテーブル
       </h2>
 
+
+      {/* =================================================
+          タイムテーブル外枠
+      ================================================= */}
       <div className="Stage-TT-container">
+
         <div className="Stage-TT-scroll">
 
           <ul className="Stage-TT-list">
@@ -28,62 +36,116 @@ const StageTT = ({ data = [] }) => {
                 className="Stage-TT-item"
               >
 
-                <div className="Stage-TT-header">
+                {/* =================================================
+                    タイムラインの丸
+                ================================================= */}
+                <div className="Stage-TT-dot"></div>
 
+
+                {/* =================================================
+                    大きなカード
+                ================================================= */}
+                <div className="Stage-TT-card">
+
+                  {/* =================================================
+                      時間
+                  ================================================= */}
                   <div className="Stage-TT-time">
                     {item.time}
                   </div>
 
+
+                  {/* =================================================
+                      イベントカード
+                  ================================================= */}
                   <div
-                    className="Stage-TT-event"
+                    className={`Stage-TT-event ${
+                      openIndex === index
+                        ? "Stage-TT-event-open"
+                        : ""
+                    }`}
                     onClick={() => toggleDetail(index)}
                   >
-                    <div className="Stage-TT-event-left">
 
-                      <div className="Stage-TT-event-icon">
-                        <img
-                          src={item.icon}
-                          alt={item.title}
-                        />
-                      </div>
+                    {/* 左側の青ライン */}
+                    <div className="Stage-TT-event-line"></div>
 
-                      <span className="Stage-TT-event-title">
-                        {item.title}
-                      </span>
+
+                    {/* =================================================
+                        アイコン
+                    ================================================= */}
+                    <div className="Stage-TT-event-icon">
+
+                      <img
+                        src={item.icon}
+                        alt={item.title}
+                      />
 
                     </div>
 
-                    <span
-                      className={`Stage-TT-toggle-icon ${
-                        openIndex === index
-                          ? "Stage-TT-toggle-icon-open"
-                          : ""
-                      }`}
-                    />
+
+                    {/* =================================================
+                        イベント内容
+                    ================================================= */}
+                    <div className="Stage-TT-event-content">
+
+                      <div className="Stage-TT-event-title">
+                        {item.title}
+                      </div>
+
+
+                      {/* 赤い3点 */}
+                      <div className="Stage-TT-event-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+
+                    </div>
+
+
+                    {/* =================================================
+                        矢印
+                    ================================================= */}
+                    <div className="Stage-TT-toggle-button">
+
+                      <span
+                        className={`Stage-TT-toggle-icon ${
+                          openIndex === index
+                            ? "Stage-TT-toggle-icon-open"
+                            : ""
+                        }`}
+                      />
+
+                    </div>
 
                   </div>
+
+
+                  {/* =================================================
+                      詳細
+                  ================================================= */}
+                  {openIndex === index && (
+                    <div className="Stage-TT-detail">
+
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="Stage-TT-detail-image"
+                        />
+                      )}
+
+                      {item.detail && (
+                        <p className="Stage-TT-detail-text">
+                          {item.detail}
+                        </p>
+                      )}
+
+                    </div>
+                  )}
 
                 </div>
-
-                {openIndex === index && (
-                  <div className="Stage-TT-detail">
-
-                    {item.image && (
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="Stage-TT-detail-image"
-                      />
-                    )}
-
-                    {item.detail && (
-                      <p className="Stage-TT-detail-text">
-                        {item.detail}
-                      </p>
-                    )}
-
-                  </div>
-                )}
 
               </li>
             ))}
@@ -91,6 +153,7 @@ const StageTT = ({ data = [] }) => {
           </ul>
 
         </div>
+
       </div>
 
     </section>
