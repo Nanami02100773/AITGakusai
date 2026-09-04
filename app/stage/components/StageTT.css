@@ -128,10 +128,10 @@
   position: absolute;
 
   top: 2px;
-  left: 11px;
+  left: 12px;
 
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 
   background: #ffffff;
 
@@ -159,8 +159,8 @@
   top: 50%;
   left: 50%;
 
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
 
   transform: translate(-50%, -50%);
 
@@ -326,7 +326,7 @@
   width: 40px;
   height: 40px;
 
-  margin-left: 20px;
+  margin-left: 30px;
 
   background: #f2f6ff;
 

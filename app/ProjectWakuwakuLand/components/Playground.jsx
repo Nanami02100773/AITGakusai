@@ -1,144 +1,266 @@
 "use client";
+
 import React from "react";
 import "./Playground.css";
 
-/* データ */
+/* ==========================================
+   ゲーム・体験データ
+========================================== */
+
 const cardData = [
   {
-    label: "ラベル1",
-    overlayText: "NEW!",
-    title: "紹介文1",
-    subdesc1: "これは紹介1の補足説明です。",
-    location: "場所1",
-    subdesc2: "これは場所1の補足説明です。",
-    noticeTitle: "注意事項1",
-    noticeDesc: "これは注意事項1です。",
+    title: "動物園",
+    category: "ふれあい体験",
+    location: "1号館 1階ピロティ",
+
+    content:
+      "動物とふれあったり、動物との接し方を学んだりしながら、動物園を楽しみます！",
+
+    notices: [
+      "動物にらんぼうをしないでね。",
+      "動物をフェンスの外に出さないでね。",
+      "動物にうんちやおしっこをかけられるときがあるので気をつけてね。",
+      "動物園に入れないときがあります。",
+      "大学祭実行委員の指示に従ってください。",
+    ],
   },
+
   {
-    label: "ラベル2",
-    overlayText: "注目！",
-    title: "紹介文2",
-    subdesc1: "これは紹介2の補足説明です。",
-    location: "場所2",
-    subdesc2: "これは場所2の補足説明です。",
-    noticeTitle: "注意事項2",
-    noticeDesc: "これは注意事項2です。",
+    title: "エアー遊具",
+    category: "ふわふわ遊具",
+    location: "第1本部棟前",
+
+    content:
+      "大きなエアー遊具で思いっきり遊ぼう！子どもから大人まで楽しめる体験です。",
+
+    notices: [
+      "中で食べたり飲んだりしないでね。",
+      "靴は脱いで入ってね。",
+      "時間制だから時間は守ってね。",
+      "大学祭実行委員の指示に従い、順番を守ってね。",
+      "荷物は荷物預け場所に預けてね。",
+      "ポケットの中の物も出してね。",
+      "万が一の破損・紛失・盗難等について、責任は負いません。",
+      "怪我やトラブルについては自己責任となりますのでご了承ください。",
+    ],
   },
+
   {
-    label: "ラベル3",
-    overlayText: "限定公開",
-    title: "紹介文3",
-    subdesc1: "これは紹介3の補足説明です。",
-    location: "場所3",
-    subdesc2: "これは場所3の補足説明です。",
-    noticeTitle: "注意事項3",
-    noticeDesc: "これは注意事項3です。",
+    title: "さかなつり",
+    category: "ゲーム",
+    location: "さかなつりテント",
+
+    content:
+      "釣りざおを使って魚を釣ろう！制限時間30秒で、何匹釣れるか挑戦してみよう！",
+
+    notices: [
+      "制限時間は30秒です。",
+      "4人まで一緒にゲームできます。",
+      "おにいさん、おねえさんの言うことをよく聞いて、楽しく遊んでね。",
+      "大学祭実行委員の指示に従ってください。",
+      "お荷物はご自分で管理してください。",
+      "万が一の破損・紛失・盗難等について、責任は負いません。",
+    ],
   },
+
   {
-    label: "ラベル4",
-    overlayText: "特別企画",
-    title: "紹介文4",
-    subdesc1: "これは紹介4の補足説明です。",
-    location: "場所4",
-    subdesc2: "これは場所4の補足説明です。",
-    noticeTitle: "注意事項4",
-    noticeDesc: "これは注意事項4です。",
+    title: "ボウリング",
+    category: "ゲーム",
+    location: "ボウリングテント",
+
+    content:
+      "ボールを転がして、なるべく多くのピンを倒そう！1人2回まで挑戦できます。",
+
+    notices: [
+      "1人2回まで投げることができます。",
+      "ボールは上から投げず、下から投げよう。",
+      "おにいさん、おねえさんの言うことをよく聞いて、楽しく遊んでね。",
+      "大学祭実行委員の指示に従ってください。",
+      "お荷物はご自分で管理してください。",
+      "万が一の破損・紛失・盗難等について、責任は負いません。",
+    ],
   },
+
   {
-    label: "ラベル5",
-    overlayText: "特別企画",
-    title: "紹介文5",
-    subdesc1: "これは紹介5の補足説明です。",
-    location: "場所5",
-    subdesc2: "これは場所5の補足説明です。",
-    noticeTitle: "注意事項5",
-    noticeDesc: "これは注意事項5です。",
+    title: "射的",
+    category: "ゲーム",
+    location: "射的テント",
+
+    content:
+      "射的銃を使って的を狙おう！1人5回まで挑戦できます。",
+
+    notices: [
+      "1人5回まで撃つことができます。",
+      "合計点数を得点カードに書いてもらってね。",
+      "おにいさん、おねえさんの言うことをよく聞いて、楽しく遊んでね。",
+      "大学祭実行委員の指示に従ってください。",
+      "お荷物はご自分で管理してください。",
+      "万が一の破損・紛失・盗難等について、責任は負いません。",
+    ],
   },
 ];
 
-const kirakiraparc = () => {
-  return (
-    <section>
 
-      {/* タイトル */}
+/* ==========================================
+   コンポーネント
+========================================== */
+
+export default function Playground() {
+  return (
+    <section className="kirakiraparc-section">
+
+      {/* ==========================================
+          セクションタイトル
+      ========================================== */}
+
       <div className="kirakiraparc-section-wrapper">
-        <div className="kirakiraparc-section-title">
+        <h2 className="kirakiraparc-section-title">
           ゲーム紹介
-        </div>
+        </h2>
       </div>
 
-      {/* カード一覧 */}
+
+      {/* ==========================================
+          カード一覧
+      ========================================== */}
+
       <main className="kirakiraparc-card-list">
+
         {cardData.map((item, index) => (
-          <div
+          <article
             className="kirakiraparc-card"
             key={index}
           >
 
-            {/* 左側 */}
+            {/* ==========================================
+                左側
+            ========================================== */}
+
             <div className="kirakiraparc-card-left">
 
               <div className="kirakiraparc-thumb-wrapper">
 
-                {/* 上部バー */}
+                {/* 企画名 */}
                 <div className="kirakiraparc-overlay-box">
-                  {item.overlayText}
+                  {item.title}
                 </div>
 
-                {/* 画像 */}
-                <div className="kirakiraparc-thumb"></div>
 
-                {/* ラベル */}
-                <div className="kirakiraparc-label">
-                  {item.label}
+                {/* ==========================================
+                    メインビジュアル
+                ========================================== */}
+
+                <div className="kirakiraparc-thumb">
+
+                  {/* 中央キャッチ */}
+                  <div className="kirakiraparc-thumb-content">
+                    <span className="kirakiraparc-thumb-small">
+                      SPECIAL
+                    </span>
+
+                    <span className="kirakiraparc-thumb-title">
+                      {item.category}
+                    </span>
+                  </div>
+
+
+                  {/* 場所 */}
+                  <div className="kirakiraparc-location-box">
+
+                    <span className="kirakiraparc-location-label">
+                      場所
+                    </span>
+
+                    <span className="kirakiraparc-location-text">
+                      {item.location}
+                    </span>
+
+                  </div>
+
                 </div>
 
               </div>
 
             </div>
 
-            {/* 区切り線 */}
+
+            {/* ==========================================
+                区切り線
+            ========================================== */}
+
             <div className="kirakiraparc-card-divider"></div>
 
-            {/* 右側 */}
+
+            {/* ==========================================
+                右側
+            ========================================== */}
+
             <div className="kirakiraparc-card-right">
 
-              <div className="kirakiraparc-sub1-title">
-                📄 {item.title}
+              {/* ==========================================
+                  内容
+              ========================================== */}
+
+              <div className="kirakiraparc-sub-title">
+                <span className="kirakiraparc-sub-icon">
+                  📄
+                </span>
+
+                <span>
+                  内容
+                </span>
               </div>
 
-              <div className="kirakiraparc-introduction1-subdesc">
-                {item.subdesc1}
-              </div>
+
+              <p className="kirakiraparc-description">
+                {item.content}
+              </p>
+
+
+              {/* ==========================================
+                  区切り
+              ========================================== */}
 
               <div className="kirakiraparc-dotted-line"></div>
 
-              <div className="kirakiraparc-sub2-title">
-                📍 {item.location}
+
+              {/* ==========================================
+                  注意事項
+              ========================================== */}
+
+              <div className="kirakiraparc-sub-title">
+                <span className="kirakiraparc-sub-icon">
+                  ⚠️
+                </span>
+
+                <span>
+                  注意事項
+                </span>
               </div>
 
-              <div className="kirakiraparc-introduction2-subdesc">
-                {item.subdesc2}
-              </div>
 
-              <div className="kirakiraparc-dotted-line"></div>
+              {/* 注意事項 */}
+              <ul className="kirakiraparc-notice-list">
 
-              <div className="kirakiraparc-sub3-title">
-                ⚠️ {item.noticeTitle}
-              </div>
+                {item.notices.map((notice, noticeIndex) => (
+                  <li key={noticeIndex}>
+                    <span className="kirakiraparc-notice-dot"></span>
 
-              <div className="kirakiraparc-introduction3-subdesc">
-                {item.noticeDesc}
-              </div>
+                    <span className="kirakiraparc-notice-text">
+                      {notice}
+                    </span>
+                  </li>
+                ))}
+
+              </ul>
 
             </div>
 
-          </div>
+          </article>
         ))}
+
       </main>
 
     </section>
   );
-};
-
-export default kirakiraparc;
+}
