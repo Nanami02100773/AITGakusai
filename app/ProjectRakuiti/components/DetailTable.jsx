@@ -7,23 +7,25 @@ function DetailTable() {
       icon: "/project/place.png",
       iconClass: "place-icon",
       label: "場所",
-      value: "AITプラザ",
+      value: "セントラルパーク",
     },
     {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value: "10:00～17:00",
+      value:
+        "10月10日（土）10:30～19:00\n10月11日（日）10:30～19:00\n夜間営業 17:00～19:00",
     },
     {
       icon: "/project/Precautions.png",
       iconClass: "precautions-icon",
       label: "注意事項",
       value: [
-        "スタンプは1人1回までです",
-        "景品は数に限りがあります",
-        "総合案内所で交換してください",
-        "学祭と執行のスタンプラリーがあります",
+        "雨天決行です",
+        "夜間営業は17:00～19:00です",
+        "夜間営業は指定されたブースのみ行います",
+        "セントラルパークは全面禁煙です",
+        "大学祭実行委員の指示に従ってください",
       ],
     },
   ];
@@ -65,7 +67,12 @@ function DetailTable() {
                     ))}
                   </ul>
                 ) : (
-                  item.value
+                  item.value.split("\n").map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      {i < item.value.split("\n").length - 1 && <br />}
+                    </React.Fragment>
+                  ))
                 )}
               </div>
             </div>

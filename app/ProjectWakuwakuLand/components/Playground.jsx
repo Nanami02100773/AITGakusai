@@ -12,6 +12,7 @@ const cardData = [
     title: "動物園",
     category: "ふれあい体験",
     location: "1号館 1階ピロティ",
+    image: "/img/playground/animal.jpg",
 
     content:
       "動物とふれあったり、動物との接し方を学んだりしながら、動物園を楽しみます！",
@@ -29,6 +30,7 @@ const cardData = [
     title: "エアー遊具",
     category: "ふわふわ遊具",
     location: "第1本部棟前",
+    image: "/img/playground/air.jpg",
 
     content:
       "大きなエアー遊具で思いっきり遊ぼう！子どもから大人まで楽しめる体験です。",
@@ -49,6 +51,7 @@ const cardData = [
     title: "さかなつり",
     category: "ゲーム",
     location: "さかなつりテント",
+    image: "/img/playground/fishing.jpg",
 
     content:
       "釣りざおを使って魚を釣ろう！制限時間30秒で、何匹釣れるか挑戦してみよう！",
@@ -67,6 +70,7 @@ const cardData = [
     title: "ボウリング",
     category: "ゲーム",
     location: "ボウリングテント",
+    image: "/img/playground/bowling.jpg",
 
     content:
       "ボールを転がして、なるべく多くのピンを倒そう！1人2回まで挑戦できます。",
@@ -85,6 +89,7 @@ const cardData = [
     title: "射的",
     category: "ゲーム",
     location: "射的テント",
+    image: "/img/playground/shooting.jpg",
 
     content:
       "射的銃を使って的を狙おう！1人5回まで挑戦できます。",
@@ -121,12 +126,13 @@ export default function Playground() {
 
 
       {/* ==========================================
-          カード一覧
+          タイトル以外を囲う背景ボックス
       ========================================== */}
 
       <main className="kirakiraparc-card-list">
 
         {cardData.map((item, index) => (
+
           <article
             className="kirakiraparc-card"
             key={index}
@@ -138,34 +144,49 @@ export default function Playground() {
 
             <div className="kirakiraparc-card-left">
 
-              <div className="kirakiraparc-thumb-wrapper">
+              <div className="kirakiraparc-thumb">
 
                 {/* 企画名 */}
-                <div className="kirakiraparc-overlay-box">
-                  {item.title}
+
+                <div className="kirakiraparc-thumb-title-area">
+
+                  <span className="kirakiraparc-thumb-main-title">
+                    {item.title}
+                  </span>
+
+                  <span className="kirakiraparc-thumb-category">
+                    ～ {item.category} ～
+                  </span>
+
                 </div>
 
 
                 {/* ==========================================
-                    メインビジュアル
+                    丸い画像
                 ========================================== */}
 
-                <div className="kirakiraparc-thumb">
+                <div className="kirakiraparc-image-circle">
 
-                  {/* 中央キャッチ */}
-                  <div className="kirakiraparc-thumb-content">
-                    <span className="kirakiraparc-thumb-small">
-                      SPECIAL
-                    </span>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="kirakiraparc-image"
+                  />
 
-                    <span className="kirakiraparc-thumb-title">
-                      {item.category}
-                    </span>
+                </div>
+
+
+                {/* ==========================================
+                    場所
+                ========================================== */}
+
+                <div className="kirakiraparc-location-box">
+
+                  <div className="kirakiraparc-location-icon">
+                    ●
                   </div>
 
-
-                  {/* 場所 */}
-                  <div className="kirakiraparc-location-box">
+                  <div className="kirakiraparc-location-content">
 
                     <span className="kirakiraparc-location-label">
                       場所
@@ -202,6 +223,7 @@ export default function Playground() {
               ========================================== */}
 
               <div className="kirakiraparc-sub-title">
+
                 <span className="kirakiraparc-sub-icon">
                   📄
                 </span>
@@ -209,6 +231,7 @@ export default function Playground() {
                 <span>
                   内容
                 </span>
+
               </div>
 
 
@@ -218,7 +241,7 @@ export default function Playground() {
 
 
               {/* ==========================================
-                  区切り
+                  点線
               ========================================== */}
 
               <div className="kirakiraparc-dotted-line"></div>
@@ -228,28 +251,37 @@ export default function Playground() {
                   注意事項
               ========================================== */}
 
-              <div className="kirakiraparc-sub-title">
-                <span className="kirakiraparc-sub-icon">
+              <div className="kirakiraparc-notice-title">
+
+                <span className="kirakiraparc-warning-icon">
                   ⚠️
                 </span>
 
                 <span>
                   注意事項
                 </span>
+
               </div>
 
 
-              {/* 注意事項 */}
+              {/* ==========================================
+                  注意事項リスト
+              ========================================== */}
+
               <ul className="kirakiraparc-notice-list">
 
                 {item.notices.map((notice, noticeIndex) => (
+
                   <li key={noticeIndex}>
+
                     <span className="kirakiraparc-notice-dot"></span>
 
                     <span className="kirakiraparc-notice-text">
                       {notice}
                     </span>
+
                   </li>
+
                 ))}
 
               </ul>
@@ -257,6 +289,7 @@ export default function Playground() {
             </div>
 
           </article>
+
         ))}
 
       </main>

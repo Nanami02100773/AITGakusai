@@ -3,16 +3,16 @@ import "./Synopsis.css";
 
 function DasstsDescriptionBox() {
   const text =
-    "この企画では、来場者が気軽に参加しながら楽しめる体験や展示を用意しています。会場内を巡って挑戦する企画や、学生による研究や成果の紹介を通して、新しい発見や学びに出会うことができます。友人同士はもちろん、初めての方でも楽しめる内容となっていますので、ぜひお気軽にご参加ください。";
+    "大学祭に来たあなたは、ふと近くの教室に入ると、そこには南京錠で閉ざされた箱に時限爆弾が！カウントダウンはすでに始まっています。生きて帰るためには、いくつかの謎を解いて南京錠を開け、時限爆弾を止めなければなりません。あなたは仲間と協力して、制限時間10分以内にこの密室から無事に脱出できるでしょうか？";
 
   return (
     <section>
-      {/* Synopsis タイトル */}
       <div className="dasstsu-synopsis-wrapper">
-        <div className="dasstsu-section-title">あらすじ</div>
+        <div className="dasstsu-section-title">
+          あらすじ
+        </div>
       </div>
 
-      {/* Synopsis 本文 */}
       <div className="dasstsu-synopsis-box">
         {text}
       </div>

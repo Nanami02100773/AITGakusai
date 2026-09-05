@@ -2,31 +2,35 @@ import React from "react";
 import "./DetailTable.css";
 
 function DetailTable() {
-  const details = [
-    {
-      icon: "/project/place.png",
-      iconClass: "place-icon",
-      label: "場所",
-      value: "AITプラザ",
-    },
-    {
-      icon: "/project/clock.png",
-      iconClass: "clock-icon",
-      label: "時間",
-      value: "10:00～17:00",
-    },
-    {
-      icon: "/project/Precautions.png",
-      iconClass: "precautions-icon",
-      label: "注意事項",
-      value: [
-        "スタンプは1人1回までです",
-        "景品は数に限りがあります",
-        "総合案内所で交換してください",
-        "学祭と執行のスタンプラリーがあります",
-      ],
-    },
-  ];
+const details = [
+  {
+    icon: "/project/place.png",
+    iconClass: "place-icon",
+    label: "場所",
+    value: "1号館 2階",
+  },
+  {
+    icon: "/project/clock.png",
+    iconClass: "clock-icon",
+    label: "時間",
+    value: ["10月10日（土）10:30～16:30",
+    "10月11日（日）10:30～16:00",
+    ]
+  },
+  {
+    icon: "/project/Precautions.png",
+    iconClass: "precautions-icon",
+    label: "注意事項",
+    value: [
+      "予約された時間の15分前までにお越しください",
+      "予約は1回につき1つのメニューまでです",
+      "1人3回までメニューを予約できます",
+      "キャンセルする場合は30分前までに受付へお申し出ください",
+      "進行状況により予約時間が前後する場合があります",
+      "大学祭実行委員の指示に従ってください",
+    ],
+  },
+];
 
   return (
     <section>

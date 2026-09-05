@@ -7,24 +7,25 @@ function DetailTable() {
       icon: "/project/place.png",
       iconClass: "place-icon",
       label: "場所",
-      value: "AITプラザ",
+      value: "メインストリート 献血バス付近",
     },
     {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value: "10:00～17:00",
+      value:
+        "10月10日（土）10:30～16:20\n10月11日（日）10:30～16:20",
     },
     {
       icon: "/project/Precautions.png",
       iconClass: "precautions-icon",
       label: "注意事項",
       value: [
-        "スタンプは1人1回までです",
-        "景品は数に限りがあります",
-        "総合案内所で交換してください",
-        "学祭と執行のスタンプラリーがあります",
-      ],
+        "雨天決行です",
+        "献血の可否については赤十字血液センターの方の案内に従ってください",
+        "献血後に体調が悪くなった場合は、スタッフへお申し出ください",
+        "受付後にくじ引きへ参加できます",
+      ]
     },
   ];
 
@@ -65,7 +66,12 @@ function DetailTable() {
                     ))}
                   </ul>
                 ) : (
-                  item.value
+                  item.value.split("\n").map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      {i < item.value.split("\n").length - 1 && <br />}
+                    </React.Fragment>
+                  ))
                 )}
               </div>
             </div>
