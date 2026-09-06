@@ -1,0 +1,375 @@
+/* ==========================================
+   セクション
+========================================== */
+
+.kajino-card-list {
+  width: 390px;
+
+  max-width: calc(100% - 20px);
+
+  margin: 0 auto;
+
+  padding: 5px 0 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   背景ボックス
+========================================== */
+
+.kajino-card-wrapper {
+  width: 100%;
+
+  margin: 0 auto;
+
+  padding: 8px;
+
+  background: linear-gradient(
+    180deg,
+    #f4f8ff,
+    #e8f1ff
+  );
+
+  border-radius: 12px;
+
+  border: 1px solid #dce8ff;
+
+  box-shadow:
+    0 10px 25px rgba(134, 167, 255, 0.15);
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   カード
+========================================== */
+
+.kajino-card {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 auto 9px;
+
+  padding: 12px 11px 40px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  border: 1px solid #e1eaff;
+
+  box-shadow:
+    0 3px 10px rgba(100, 130, 200, 0.06);
+
+  box-sizing: border-box;
+}
+
+.kajino-card:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================
+   カード上部
+========================================== */
+
+.kajino-card-header {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 9px;
+
+  gap: 7px;
+}
+
+
+/* ==========================================
+   タイトル部分
+========================================== */
+
+.kajino-card-header-text {
+  flex-shrink: 0;
+
+  width: 155px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 3px;
+}
+
+
+/* ==========================================
+   ゲーム名
+========================================== */
+
+.kajino-overlay-box {
+  width: fit-content;
+
+  padding: 4px 10px;
+
+  background: linear-gradient(
+    90deg,
+    #86a7ff,
+    #6f8dff
+  );
+
+  border: 1px solid #6f8dff;
+
+  border-radius: 6px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.02em;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   キャッチコピー
+========================================== */
+
+.kajino-sub1-title {
+  width: fit-content;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: none;
+
+  border: none;
+
+  color: #3f4d6d;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* ==========================================
+   横ライン
+========================================== */
+
+.kajino-header-line {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 2px;
+
+  margin-top: 15px;
+
+  background: #ff9fb5;
+
+  border-radius: 999px;
+}
+
+
+/* ==========================================
+   カード内容
+========================================== */
+
+.kajino-card-content {
+  display: flex;
+
+  width: 100%;
+
+  gap: 9px;
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   左側
+========================================== */
+
+.kajino-card-left {
+  width: 37%;
+
+  flex-shrink: 0;
+}
+
+
+/* ==========================================
+   画像エリア
+========================================== */
+
+.kajino-thumb-wrapper {
+  width: 100%;
+}
+
+.kajino-thumb {
+  width: 100%;
+
+  height: 100px;
+
+  background: linear-gradient(
+    135deg,
+    #eef4ff,
+    #dde7fb
+  );
+
+  border: 1px solid #dce8ff;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   右側
+========================================== */
+
+.kajino-card-right {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   ポイント
+========================================== */
+
+.kajino-point {
+  display: flex;
+
+  align-items: flex-start;
+
+  width: 100%;
+
+  min-height: 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   番号
+========================================== */
+
+.kajino-point-number {
+  width: 23px;
+
+  height: 23px;
+
+  flex-shrink: 0;
+
+  margin-right: 6px;
+
+  margin-top: 1px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #6f8dff,
+    #5874dc
+  );
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 2px 5px rgba(111, 141, 255, 0.18);
+}
+
+
+/* ==========================================
+   説明文
+========================================== */
+
+.kajino-introduction1-subdesc,
+.kajino-introduction2-subdesc {
+  margin: 0;
+
+  padding: 0;
+
+  color: #3f4d6d;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.01em;
+}
+
+
+/* ==========================================
+   人数
+========================================== */
+
+.kajino-label {
+  position: absolute;
+
+  left: 13px;
+
+  bottom: 10px;
+
+  padding: 4px 12px;
+
+  background: #f4f8ff;
+
+  border: 1px solid #cddcff;
+
+  border-radius: 999px;
+
+  color: #6f8dff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   カード間
+========================================== */
+
+.kajino-card + .kajino-card {
+  margin-top: 9px;
+}

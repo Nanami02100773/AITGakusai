@@ -8,7 +8,7 @@ import DescriptionBox from "./components/DescriptionBox";
 import NavigationBar from "./components/NavigationBar";
 import DetailTable from "./components/DetailTable";
 import KajinoStageTTWrapper from "./components/KajinoStageTTWrapper";
-import IntroductoryItems from "./components/IntroductoryItems";
+import Game from "./components/Game";
 
 import img1 from "./components/images/スクリーンショット (1).png";
 import img2 from "./components/images/スクリーンショット 2024-06-12 110056.png";
@@ -30,7 +30,7 @@ export default function Page() {
       {/* ▼ Day切り替え＋ステージTT */}
       <KajinoStageTTWrapper />
 
-      <IntroductoryItems />
+      <Game />
     </main>
   );
 }
