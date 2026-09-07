@@ -29,6 +29,7 @@
 .IntroductoryItems-card-list {
   width: 100%;
   padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -38,7 +39,6 @@
 
 .IntroductoryItems-card-wrapper {
   width: 95%;
-  max-width: 470px;
 
   margin: 0 auto;
   padding: 5px;
@@ -196,17 +196,16 @@
 
 /* ==========================================
    画像
+   → カードの下側に合わせる
 ========================================== */
 
 .IntroductoryItems-thumb {
   position: absolute;
 
-  top: 50%;
   right: 8px;
+  bottom: 8px;
 
-  transform: translateY(-50%);
-
-  width: 170px;
+  width: 180px;
   height: 150px;
 
   overflow: hidden;
@@ -400,104 +399,4 @@
     0 4px 12px rgba(80, 120, 190, 0.10);
 
   transform: translateY(-1px);
-}
-
-
-/* ==========================================
-   スマホ
-========================================== */
-
-@media (max-width: 480px) {
-
-  .IntroductoryItems-section {
-    padding: 8px 0 100px;
-  }
-
-
-  /* ========================================
-     タイトル
-  ======================================== */
-
-  .IntroductoryItems-section-title {
-    width: 240px;
-    height: 44px;
-  }
-
-
-  /* ========================================
-     カード
-  ======================================== */
-
-  .IntroductoryItems-card {
-    min-height: 180px;
-
-    padding: 10px;
-    padding-right: 130px;
-  }
-
-
-  /* ========================================
-     上部
-  ======================================== */
-
-  .IntroductoryItems-top {
-    width: 75%;
-  }
-
-
-  /* ========================================
-     ピンクライン
-  ======================================== */
-
-  .IntroductoryItems-red-line {
-    width: 75%;
-  }
-
-
-  /* ========================================
-     紹介文
-  ======================================== */
-
-  .IntroductoryItems-description {
-    width: 75%;
-  }
-
-
-  /* ========================================
-     画像
-  ======================================== */
-
-  .IntroductoryItems-thumb {
-    width: 180px;
-    height: 150px;
-  }
-
-
-  /* ========================================
-     写真枚数
-  ======================================== */
-
-  .IntroductoryItems-photo-count {
-    top: 7px;
-    right: 7px;
-
-    min-width: 42px;
-    height: 22px;
-
-    font-size: 9px;
-  }
-
-
-  /* ========================================
-     写真ドット
-  ======================================== */
-
-  .IntroductoryItems-photo-dots {
-    bottom: 7px;
-
-    gap: 4px;
-
-    padding: 5px 8px;
-  }
-
 }
