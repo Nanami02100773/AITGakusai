@@ -21,7 +21,7 @@ const StageTTWrapper = () => {
       <Date onDayChange={handleDayChange} />
 
       {/* ✅ こっちはグレー背景に含める */}
-      <div className="background-box">
+      <div className="Stage-background-box ">
         <StageTT data={currentData} />
         <SpeakerIntroduction />
       </div>

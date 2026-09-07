@@ -161,100 +161,104 @@ export default function Carousel({ items = [] }) {
   }, [displayItems.length]);
 
   return (
-    <div className="Home-Carousel-wrapper">
+    <div className="Home-Carousel-page">
 
-      <div
-        ref={containerRef}
-        className="Home-Carousel-container"
-      >
-        <div className="Home-Carousel-list">
+      <div className="Home-Carousel-wrapper">
 
-          {displayItems
-            .concat(displayItems)
-            .map((item, index) => {
+        <div
+          ref={containerRef}
+          className="Home-Carousel-container"
+        >
+          <div className="Home-Carousel-list">
 
-              const isCenter =
-                index %
-                  displayItems.length ===
-                currentPage;
+            {displayItems
+              .concat(displayItems)
+              .map((item, index) => {
 
-              const shouldScale =
-                isCenter && isStopped;
+                const isCenter =
+                  index %
+                    displayItems.length ===
+                  currentPage;
 
-              return (
-                <div
-                  key={index}
-                  className={`Home-Carousel-card ${
-                    shouldScale
-                      ? "is-center"
-                      : ""
-                  }`}
-                >
+                const shouldScale =
+                  isCenter && isStopped;
 
-                  <div className="Home-Carousel-cardTopLineLeft" />
-                  <div className="Home-Carousel-cardTopLineRight" />
+                return (
+                  <div
+                    key={index}
+                    className={`Home-Carousel-card ${
+                      shouldScale
+                        ? "is-center"
+                        : ""
+                    }`}
+                  >
 
-                  <div className="Home-Carousel-cardBottomLineLeft" />
-                  <div className="Home-Carousel-cardBottomLineRight" />
+                    <div className="Home-Carousel-cardTopLineLeft" />
+                    <div className="Home-Carousel-cardTopLineRight" />
 
-                  <div className="Home-Carousel-frameTop" />
+                    <div className="Home-Carousel-cardBottomLineLeft" />
+                    <div className="Home-Carousel-cardBottomLineRight" />
 
-                  <div className="Home-Carousel-frameBottom" />
+                    <div className="Home-Carousel-frameTop" />
 
-                  <div className="Home-Carousel-content">
+                    <div className="Home-Carousel-frameBottom" />
 
-                    <div className="Home-Carousel-imagePlaceholder">
+                    <div className="Home-Carousel-content">
 
-                      {item.image ? (
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                        />
-                      ) : (
-                        "画像"
-                      )}
+                      <div className="Home-Carousel-imagePlaceholder">
 
-                    </div>
+                        {item.image ? (
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                          />
+                        ) : (
+                          "画像"
+                        )}
 
-                    <div className="Home-Carousel-textArea">
+                      </div>
 
-                      <p className="Home-Carousel-category">
-                        {item.category}
-                      </p>
+                      <div className="Home-Carousel-textArea">
 
-                      <div className="Home-Carousel-dots" />
+                        <p className="Home-Carousel-category">
+                          {item.category}
+                        </p>
 
-                      <h2 className="Home-Carousel-title">
-                        {item.title}
-                      </h2>
+                        <div className="Home-Carousel-dots" />
 
-                      <p className="Home-Carousel-description">
-                        {item.description}
-                      </p>
+                        <h2 className="Home-Carousel-title">
+                          {item.title}
+                        </h2>
+
+                        <p className="Home-Carousel-description">
+                          {item.description}
+                        </p>
+
+                      </div>
 
                     </div>
 
                   </div>
+                );
+              })}
 
-                </div>
-              );
-            })}
+          </div>
+        </div>
+
+        <div className="Home-Carousel-indicator">
+
+          {displayItems.map((_, index) => (
+            <span
+              key={index}
+              className={`Home-Carousel-indicatorDot ${
+                index === currentPage
+                  ? "active"
+                  : ""
+              }`}
+            />
+          ))}
 
         </div>
-      </div>
-
-      <div className="Home-Carousel-indicator">
-
-        {displayItems.map((_, index) => (
-          <span
-            key={index}
-            className={`Home-Carousel-indicatorDot ${
-              index === currentPage
-                ? "active"
-                : ""
-            }`}
-          />
-        ))}
 
       </div>
 

@@ -1,3 +1,7 @@
+/* ==========================================
+   タイムテーブル
+========================================== */
+
 .Stage-Schedule-content {
   background: linear-gradient(
     180deg,
@@ -6,19 +10,18 @@
   );
 
   padding: 16px;
-
   width: 95%;
-  max-width: 800px;
-
-  margin: 20px auto 100px;
+  margin: 0 auto 30px;
+  box-sizing: border-box;
 
   border-radius: 5px;
 }
 
-.StageSchedule-container {
-  margin-bottom: 100px;
-}
 
-body {
-  background: #ffffff;
+/* ==========================================
+   ステージスケジュール
+========================================== */
+
+.StageSchedule-container {
+  margin-bottom: 0;
 }
