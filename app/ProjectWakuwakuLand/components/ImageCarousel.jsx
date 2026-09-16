@@ -7,7 +7,15 @@ import React, {
 
 import "./ImageCarousel.css";
 
-function ImageCarousel({ images = [] }) {
+import no1Image from "./images/No.1.jpg";
+import no2Image from "./images/No.2.jpg";
+import no3Image from "./images/No.3.jpg";
+
+function ImageCarousel({ images = [
+  no1Image.src,
+  no2Image.src,
+  no3Image.src
+] }) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -81,7 +89,7 @@ function ImageCarousel({ images = [] }) {
           <img
             key={idx}
             src={src}
-            alt={`carousel-${idx}`}
+            alt={`carousel-${idx + 1}`}
             className={className}
           />
         );

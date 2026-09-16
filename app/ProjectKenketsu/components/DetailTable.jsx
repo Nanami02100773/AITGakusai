@@ -13,8 +13,16 @@ function DetailTable() {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value:
-        "10月10日（土）10:30～16:20\n10月11日（日）10:30～16:20",
+      items: [
+        {
+          tag: "10月10日（土）",
+          value: "10:30～16:20",
+        },
+        {
+          tag: "10月11日（日）",
+          value: "10:30～16:20",
+        },
+      ],
     },
     {
       icon: "/project/Precautions.png",
@@ -34,53 +42,127 @@ function DetailTable() {
 
   return (
     <section>
+
+      {/* ==========================================
+          セクションタイトル
+      ========================================== */}
+
       <div className="kenketsu-section-wrapper">
+
         <div className="kenketsu-section-title">
           詳細情報
         </div>
+
       </div>
 
+
+      {/* ==========================================
+          詳細テーブル
+      ========================================== */}
+
       <div className="kenketsu-detail-table">
+
         {details.map((item, index) => (
           <div
             className="kenketsu-detail-row"
             key={index}
           >
+
+            {/* ==========================================
+                左側ラベル
+            ========================================== */}
+
             <div className="kenketsu-detail-label">
+
               <span className="kenketsu-detail-icon">
+
                 <img
                   src={item.icon}
                   alt={item.label}
                   className={`kenketsu-detail-icon-image ${item.iconClass}`}
                 />
+
               </span>
 
               <span className="kenketsu-detail-text">
                 {item.label}
               </span>
+
             </div>
 
+
+            {/* ==========================================
+                右側コンテンツ
+            ========================================== */}
+
             <div className="kenketsu-detail-content">
+
               <div className="kenketsu-detail-value">
-                {Array.isArray(item.value) ? (
-                  <ul className="kenketsu-note-list">
-                    {item.value.map((note, i) => (
-                      <li key={i}>{note}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  item.value.split("\n").map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      {i < item.value.split("\n").length - 1 && <br />}
-                    </React.Fragment>
-                  ))
+
+                {/* ==========================================
+                    場所
+                ========================================== */}
+
+                {item.label === "場所" && (
+                  <span>
+                    {item.value}
+                  </span>
                 )}
+
+
+                {/* ==========================================
+                    時間
+                ========================================== */}
+
+                {item.label === "時間" && (
+                  <div className="kenketsu-date-list">
+
+                    {item.items.map((time, i) => (
+                      <div
+                        className="kenketsu-date-row"
+                        key={i}
+                      >
+
+                        <div className="kenketsu-date-box">
+                          {time.tag}
+                        </div>
+
+                        <div className="kenketsu-time">
+                          {time.value}
+                        </div>
+
+                      </div>
+                    ))}
+
+                  </div>
+                )}
+
+
+                {/* ==========================================
+                    注意事項
+                ========================================== */}
+
+                {item.label === "注意事項" && (
+                  <ul className="kenketsu-note-list">
+
+                    {item.value.map((note, i) => (
+                      <li key={i}>
+                        {note}
+                      </li>
+                    ))}
+
+                  </ul>
+                )}
+
               </div>
+
             </div>
+
           </div>
         ))}
+
       </div>
+
     </section>
   );
 }

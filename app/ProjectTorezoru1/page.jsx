@@ -10,16 +10,15 @@ import DetailTable from "./components/DetailTable";
 import KajinoStageTTWrapper from "./components/KajinoStageTTWrapper";
 import Game from "./components/Game";
 
-import img1 from "./components/images/スクリーンショット (1).png";
-import img2 from "./components/images/スクリーンショット 2024-06-12 110056.png";
-import img3 from "./components/images/スクリーンショット 2024-07-03 114934.png";
 
 export default function Page() {
+
   return (
     <main className="kajino-page">
+
       <Title />
 
-      <ImageCarousel images={[img1, img2, img3]} />
+      <ImageCarousel />
 
       <DescriptionBox />
 
@@ -28,9 +27,11 @@ export default function Page() {
       <DetailTable />
 
       {/* ▼ Day切り替え＋ステージTT */}
+
       <KajinoStageTTWrapper />
 
       <Game />
+
     </main>
   );
 }

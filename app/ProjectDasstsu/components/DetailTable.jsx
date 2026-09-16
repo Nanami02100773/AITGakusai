@@ -13,7 +13,16 @@ function DetailTable() {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value: "10月10日（土）10:30～16:30\n10月11日（日）10:30～16:30",
+      items: [
+        {
+          tag: "10月10日（土）",
+          value: "10:30～16:30",
+        },
+        {
+          tag: "10月11日（日）",
+          value: "10:30～16:30",
+        },
+      ],
     },
     {
       icon: "/project/Precautions.png",
@@ -36,53 +45,127 @@ function DetailTable() {
 
   return (
     <section>
+
+      {/* ==========================================
+          セクションタイトル
+      ========================================== */}
+
       <div className="dasstsu-section-wrapper">
+
         <div className="dasstsu-section-title">
           詳細情報
         </div>
+
       </div>
 
+
+      {/* ==========================================
+          詳細テーブル
+      ========================================== */}
+
       <div className="dasstsu-detail-table">
+
         {details.map((item, index) => (
           <div
             className="dasstsu-detail-row"
             key={index}
           >
+
+            {/* ==========================================
+                左側ラベル
+            ========================================== */}
+
             <div className="dasstsu-detail-label">
+
               <span className="dasstsu-detail-icon">
+
                 <img
                   src={item.icon}
                   alt={item.label}
                   className={`dasstsu-detail-icon-image ${item.iconClass}`}
                 />
+
               </span>
 
               <span className="dasstsu-detail-text">
                 {item.label}
               </span>
+
             </div>
 
+
+            {/* ==========================================
+                右側コンテンツ
+            ========================================== */}
+
             <div className="dasstsu-detail-content">
+
               <div className="dasstsu-detail-value">
-                {Array.isArray(item.value) ? (
-                  <ul className="dasstsu-note-list">
-                    {item.value.map((note, i) => (
-                      <li key={i}>{note}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  item.value.split("\n").map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      {i < item.value.split("\n").length - 1 && <br />}
-                    </React.Fragment>
-                  ))
+
+                {/* ==========================================
+                    場所
+                ========================================== */}
+
+                {item.label === "場所" && (
+                  <span>
+                    {item.value}
+                  </span>
                 )}
+
+
+                {/* ==========================================
+                    時間
+                ========================================== */}
+
+                {item.label === "時間" && (
+                  <div className="dasstsu-date-list">
+
+                    {item.items.map((time, i) => (
+                      <div
+                        className="dasstsu-date-row"
+                        key={i}
+                      >
+
+                        <span className="dasstsu-date-box">
+                          {time.tag}
+                        </span>
+
+                        <span className="dasstsu-time">
+                          {time.value}
+                        </span>
+
+                      </div>
+                    ))}
+
+                  </div>
+                )}
+
+
+                {/* ==========================================
+                    注意事項
+                ========================================== */}
+
+                {item.label === "注意事項" && (
+                  <ul className="dasstsu-note-list">
+
+                    {item.value.map((note, i) => (
+                      <li key={i}>
+                        {note}
+                      </li>
+                    ))}
+
+                  </ul>
+                )}
+
               </div>
+
             </div>
+
           </div>
         ))}
+
       </div>
+
     </section>
   );
 }

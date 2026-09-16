@@ -1,7 +1,13 @@
+/* ========================================
+   全体
+======================================== */
+
 .make-image-carousel {
+
   position: relative;
 
   width: 95%;
+
   max-width: 720px;
 
   height: 260px;
@@ -30,22 +36,31 @@
   );
 
   box-shadow:
-    0 10px 25px rgba(134,167,255,.15);
+    0 10px 25px rgba(
+      134,
+      167,
+      255,
+      .15
+    );
 }
+
 
 /* ========================================
    上中央フレーム
 ======================================== */
 
 .make-frame-top-center {
+
   position: absolute;
 
   top: 0;
+
   left: 50%;
 
   transform: translateX(-50%);
 
   width: 280px;
+
   height: 17px;
 
   background: #86a7ff;
@@ -60,19 +75,23 @@
   z-index: 20;
 }
 
+
 /* ========================================
    下中央フレーム
 ======================================== */
 
 .make-frame-bottom-center {
+
   position: absolute;
 
   bottom: 0;
+
   left: 50%;
 
   transform: translateX(-50%);
 
   width: 280px;
+
   height: 8px;
 
   background: #86a7ff;
@@ -87,35 +106,23 @@
   z-index: 20;
 }
 
+
 /* ========================================
-   上下装飾
+   上部装飾
 ======================================== */
 
-.make-frame-top,
-.make-frame-bottom {
-  position: absolute;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 150px;
-  height: 20px;
-
-  background: #a8bfff;
-
-  z-index: 21;
-}
-
 .make-frame-top {
+
   position: absolute;
 
   top: 0;
+
   left: 50%;
 
   transform: translateX(-50%);
 
   width: 150px;
+
   height: 23px;
 
   background: #a8bfff;
@@ -130,26 +137,35 @@
   z-index: 21;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   color: #ffffff;
+
   font-size: 11px;
+
   font-weight: 700;
+
   letter-spacing: 0.05em;
 }
+
 
 /* ========================================
    左上
 ======================================== */
 
 .make-frame-corner-tl {
+
   position: absolute;
 
   top: 0;
+
   left: 0;
 
   width: 30px;
+
   height: 30px;
 
   background: #86a7ff;
@@ -163,17 +179,21 @@
   z-index: 20;
 }
 
+
 /* ========================================
    右上
 ======================================== */
 
 .make-frame-corner-tr {
+
   position: absolute;
 
   top: 0;
+
   right: 0;
 
   width: 30px;
+
   height: 30px;
 
   background: #86a7ff;
@@ -187,17 +207,21 @@
   z-index: 20;
 }
 
+
 /* ========================================
    左下
 ======================================== */
 
 .make-frame-corner-bl {
+
   position: absolute;
 
   bottom: 0;
+
   left: 0;
 
   width: 30px;
+
   height: 30px;
 
   background: #86a7ff;
@@ -211,17 +235,21 @@
   z-index: 20;
 }
 
+
 /* ========================================
    右下
 ======================================== */
 
 .make-frame-corner-br {
+
   position: absolute;
 
   bottom: 0;
+
   right: 0;
 
   width: 30px;
+
   height: 30px;
 
   background: #86a7ff;
@@ -235,18 +263,23 @@
   z-index: 20;
 }
 
+
 /* ========================================
    内側パネル
 ======================================== */
 
 .make-image-carousel::before {
+
   content: "";
 
   position: absolute;
 
   top: 30px;
+
   left: 30px;
+
   right: 30px;
+
   bottom: 15px;
 
   background: #ffffff;
@@ -256,26 +289,34 @@
   z-index: 1;
 }
 
+
 /* ========================================
-   共通カード
+   共通画像
 ======================================== */
 
 .make-carousel-image {
+
   position: absolute;
 
   width: 75%;
+
   height: 200px;
 
   object-fit: cover;
 
-  background: #fff;
+  background: #ffffff;
 
   border-radius: 20px;
 
   border: 2px solid #e3e3e3;
 
   box-shadow:
-    0 12px 15px rgba(0,0,0,.18);
+    0 12px 15px rgba(
+      0,
+      0,
+      0,
+      .18
+    );
 
   transition:
     transform .6s ease,
@@ -288,12 +329,15 @@
   z-index: 10;
 }
 
+
 /* ========================================
    中央
 ======================================== */
 
 .make-carousel-image.center {
+
   left: 50%;
+
   top: 53%;
 
   transform:
@@ -305,11 +349,13 @@
   z-index: 15;
 }
 
+
 /* ========================================
    左
 ======================================== */
 
 .make-carousel-image.left {
+
   left: -18%;
 
   top: 54%;
@@ -324,11 +370,13 @@
   z-index: 10;
 }
 
+
 /* ========================================
    右
 ======================================== */
 
 .make-carousel-image.right {
+
   right: -18%;
 
   left: auto;
@@ -345,11 +393,13 @@
   z-index: 10;
 }
 
+
 /* ========================================
    非表示
 ======================================== */
 
 .make-carousel-image.hidden {
+
   opacity: 0;
 
   pointer-events: none;

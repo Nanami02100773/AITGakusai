@@ -19,7 +19,7 @@ function DetailTable() {
           value: "10:00～17:00",
         },
         {
-          tag: "11/11（日）",
+          tag: "10/11（日）",
           value: "10:00～16:15",
         },
       ],

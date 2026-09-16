@@ -1,22 +1,26 @@
 const KajinoStageTTDay1 = [
+
   {
-    time: "10:00",
-    title: "オープニング",
+    time: "11:30",
+    title: "ジャズバンド演奏",
     image: "/images/sample1.png",
-    detail: "イベント開始のご挨拶です。",
+    detail: "ジャズバンドによる演奏をお楽しみください。",
   },
+
   {
-    time: "11:00",
-    title: "ゲーム大会",
+    time: "13:00",
+    title: "ビンゴ",
     image: "/images/sample2.png",
-    detail: "参加型ゲーム大会を開催！",
+    detail: "みんなで楽しめるビンゴ大会を開催します。",
   },
+
   {
-    time: "12:00",
-    title: "スペシャルステージ",
+    time: "14:15",
+    title: "ジャズバンド演奏",
     image: "/images/sample3.png",
-    detail: "ゲストを迎えての特別ステージ企画です。",
+    detail: "ジャズバンドによる演奏をお楽しみください。",
   },
+
 ];
 
 export default KajinoStageTTDay1;
