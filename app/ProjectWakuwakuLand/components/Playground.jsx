@@ -3,6 +3,12 @@
 import React from "react";
 import "./Playground.css";
 
+import no1Image from "./Play/No.1.jpg";
+import no2Image from "./Play/No.2.jpg";
+import no3Image from "./Play/No.3.jpg";
+import no5Image from "./Play/No.5.jpg";
+import no6Image from "./Play/No.6.jpg";
+
 /* ==========================================
    ゲーム・体験データ
 ========================================== */
@@ -12,7 +18,7 @@ const cardData = [
     title: "動物園",
     category: "ふれあい体験",
     location: "1号館 1階ピロティ",
-    image: "/img/playground/animal.jpg",
+    image: no1Image,
 
     content:
       "動物とふれあったり、動物との接し方を学んだりしながら、動物園を楽しみます！",
@@ -30,7 +36,7 @@ const cardData = [
     title: "エアー遊具",
     category: "ふわふわ遊具",
     location: "第1本部棟前",
-    image: "/img/playground/air.jpg",
+    image: no2Image,
 
     content:
       "大きなエアー遊具で思いっきり遊ぼう！子どもから大人まで楽しめる体験です。",
@@ -51,7 +57,7 @@ const cardData = [
     title: "さかなつり",
     category: "ゲーム",
     location: "さかなつりテント",
-    image: "/img/playground/fishing.jpg",
+    image: no3Image,
 
     content:
       "釣りざおを使って魚を釣ろう！制限時間30秒で、何匹釣れるか挑戦してみよう！",
@@ -70,7 +76,7 @@ const cardData = [
     title: "ボウリング",
     category: "ゲーム",
     location: "ボウリングテント",
-    image: "/img/playground/bowling.jpg",
+    image: no3Image,
 
     content:
       "ボールを転がして、なるべく多くのピンを倒そう！1人2回まで挑戦できます。",
@@ -89,7 +95,7 @@ const cardData = [
     title: "射的",
     category: "ゲーム",
     location: "射的テント",
-    image: "/img/playground/shooting.jpg",
+    image: no5Image,
 
     content:
       "射的銃を使って的を狙おう！1人5回まで挑戦できます。",
@@ -101,6 +107,25 @@ const cardData = [
       "大学祭実行委員の指示に従ってください。",
       "お荷物はご自分で管理してください。",
       "万が一の破損・紛失・盗難等について、責任は負いません。",
+    ],
+  },
+
+  {
+    title: "景品交換所",
+    category: "景品交換",
+    location: "景品交換所テント",
+    image: no6Image,
+
+    content:
+      "射的・ボウリング・さかなつり・エアー遊具をすべて楽しんだら、得点カードを持って景品交換所へ！得点に応じた景品や、コンプリート特典を受け取ろう！",
+
+    notices: [
+      "得点カードを忘れずに持ってきてね。",
+      "4つのゲームをすべて楽しんだら、コンプリート特典がもらえるよ。",
+      "景品は先着順で、なくなり次第終了です。",
+      "景品の交換は1人1回までです。",
+      "景品交換所では大学祭実行委員の指示に従ってください。",
+      "景品の数には限りがあります。",
     ],
   },
 ];
@@ -144,7 +169,12 @@ export default function Playground() {
 
             <div className="kirakiraparc-card-left">
 
-              <div className="kirakiraparc-thumb">
+              <div
+                className="kirakiraparc-thumb"
+                style={{
+                  "--playground-bg": `url(${item.image.src})`,
+                }}
+              >
 
                 {/* 企画名 */}
 
@@ -162,13 +192,13 @@ export default function Playground() {
 
 
                 {/* ==========================================
-                    丸い画像
+                    四角い写真
                 ========================================== */}
 
                 <div className="kirakiraparc-image-circle">
 
                   <img
-                    src={item.image}
+                    src={item.image.src}
                     alt={item.title}
                     className="kirakiraparc-image"
                   />

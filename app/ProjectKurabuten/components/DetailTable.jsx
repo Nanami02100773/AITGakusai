@@ -7,23 +7,38 @@ function DetailTable() {
       icon: "/project/place.png",
       iconClass: "place-icon",
       label: "場所",
-      value: "AITプラザ",
+      value: (
+        <>
+          サッカー場/愛和会館2階講堂/10号館2～5階/14号館101・102/セントラルガーデン
+        </>
+      ),
     },
     {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value: "10:00～17:00",
+      items: [
+        {
+          tag: "10/10（土）",
+          value: "10:30～16:00",
+        },
+        {
+          tag: "10/11（日）",
+          value: "10:30～16:00",
+        },
+      ],
     },
     {
       icon: "/project/Precautions.png",
       iconClass: "precautions-icon",
       label: "注意事項",
       value: [
-        "スタンプは1人1回までです",
-        "景品は数に限りがあります",
-        "総合案内所で交換してください",
-        "学祭と執行のスタンプラリーがあります",
+        "他の来場者や出展団体の迷惑になる行為はご遠慮ください。",
+        "通路をふさがないよう、周囲にご配慮ください。",
+        "展示物や会場内の備品にはお手を触れないようご注意ください。",
+        "展示教室内での飲食・喫煙は禁止です。",
+        "出展団体からの過度な勧誘等にはご注意ください。",
+        "会場内では大学祭実行委員の案内・指示に従ってください。",
       ],
     },
   ];
@@ -58,15 +73,40 @@ function DetailTable() {
 
             <div className="kurabuten-detail-content">
               <div className="kurabuten-detail-value">
-                {Array.isArray(item.value) ? (
+
+                {item.label === "場所" && (
+                  <span>{item.value}</span>
+                )}
+
+                {item.label === "時間" && (
+                  <div className="kurabuten-time-list">
+                    {item.items.map((time, i) => (
+                      <div
+                        className="kurabuten-time"
+                        key={i}
+                      >
+                        <span className="kurabuten-time-tag">
+                          {time.tag}
+                        </span>
+
+                        <span>
+                          {time.value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {item.label === "注意事項" && (
                   <ul className="kurabuten-note-list">
                     {item.value.map((note, i) => (
-                      <li key={i}>{note}</li>
+                      <li key={i}>
+                        {note}
+                      </li>
                     ))}
                   </ul>
-                ) : (
-                  item.value
                 )}
+
               </div>
             </div>
           </div>

@@ -1,21 +1,32 @@
 /* ==========================================
+
    セクション
+
 ========================================== */
 
 .kirakiraparc-section {
+
   width: 100%;
+
   padding: 0 0 100px;
+
   box-sizing: border-box;
+
 }
 
 
 /* ==========================================
+
    カード一覧
+
    ※ タイトル以外を囲う背景ボックス
+
 ========================================== */
 
 .kirakiraparc-card-list {
+
   width: 96%;
+
   max-width: 820px;
 
   margin: 0 auto;
@@ -25,179 +36,335 @@
   box-sizing: border-box;
 
   background: linear-gradient(
+
     180deg,
+
     #f4f8ff,
+
     #e8f1ff
+
   );
 
   border-radius: 14px;
 
   box-shadow:
+
     0 7px 18px rgba(134, 167, 255, 0.13);
+
 }
 
 
 /* ==========================================
+
    カード
+
 ========================================== */
 
 .kirakiraparc-card {
+
   position: relative;
+
   display: flex;
+
   width: 94%;
+
   max-width: 760px;
+
   margin: 0 auto 13px;
+
   padding: 9px;
+
   box-sizing: border-box;
+
   background: #ffffff;
+
   border: 1px solid #dfeaff;
+
   border-radius: 16px;
+
   box-shadow:
+
     0 4px 14px rgba(134, 167, 255, 0.12);
+
   gap: 9px;
+
   overflow: hidden;
+
 }
 
+
 /* ==========================================
+
    左側
+
 ========================================== */
 
 .kirakiraparc-card-left {
+
   width: 42%;
+
   flex-shrink: 0;
+
   display: flex;
+
 }
 
 
 /* ==========================================
+
    左側メインボックス
+
 ========================================== */
 
 .kirakiraparc-thumb {
+
   position: relative;
+
   width: 100%;
+
   height: auto;
+
   min-height: 285px;
+
   overflow: hidden;
+
   box-sizing: border-box;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   background: linear-gradient(
+
     145deg,
+
     #f4f8ff,
+
     #e8f1ff
+
   );
-  border: 1px solid #dce7ff;
+
+
+
   border-radius: 12px;
+
 }
 
+
 /* ==========================================
+
+   左側の背景写真
+
+========================================== */
+
+.kirakiraparc-thumb::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+
+    linear-gradient(
+
+      rgba(255, 255, 255, 0.84),
+
+      rgba(255, 255, 255, 0.84)
+
+    ),
+
+    var(--playground-bg);
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  opacity: 0.8;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+}
+
+
+/* ==========================================
+
+   左側の内容を前面に表示
+
+========================================== */
+
+.kirakiraparc-thumb > * {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+/* ==========================================
+
    最後のカード
+
 ========================================== */
 
 .kirakiraparc-card:last-child {
+
   margin-bottom: 0;
+
 }
 
+
 /* ==========================================
+
    企画名
+
 ========================================== */
 
 .kirakiraparc-thumb-title-area {
+
   position: absolute;
 
   top: 18px;
+
   left: 5px;
+
   right: 5px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
   text-align: center;
 
   z-index: 2;
+
 }
 
 
 /* ==========================================
+
    企画名タイトル
+
 ========================================== */
 
 .kirakiraparc-thumb-main-title {
+
   color: #6f8dff;
 
   font-size: 21px;
+
   font-weight: 900;
 
   line-height: 1.2;
 
   letter-spacing: 0.05em;
+
 }
 
 
 /* ==========================================
+
    カテゴリー
+
 ========================================== */
 
 .kirakiraparc-thumb-category {
+
   margin-top: 3px;
 
   color: #86a7ff;
 
   font-size: 12px;
+
   font-weight: 800;
 
   letter-spacing: 0.04em;
+
 }
 
 
 /* ==========================================
-   丸い画像
+
+   四角い写真
+
 ========================================== */
 
 .kirakiraparc-image-circle {
+
   position: absolute;
+
   top: 50%;
+
   left: 50%;
-  width: 140px;
+
+  width: 160px;
+
   height: 140px;
+
   transform: translate(-50%, -50%);
+
   overflow: hidden;
+
   background: #ffffff;
-  border: 5px solid #ffffff;
-  border-radius: 50%;
+
+  border: 3px solid #ffffff;
+
+  border-radius: 10px;
+
   box-shadow:
+
     0 5px 14px rgba(134, 167, 255, 0.20);
+
   z-index: 1;
+
   box-sizing: border-box;
+
 }
 
 
 /* ==========================================
-   画像
+
+   写真
+
 ========================================== */
 
 .kirakiraparc-image {
+
   width: 100%;
+
   height: 100%;
 
   display: block;
 
   object-fit: cover;
+
 }
 
 
 /* ==========================================
+
    場所ボックス
+
 ========================================== */
 
 .kirakiraparc-location-box {
+
   position: absolute;
 
   left: 6px;
+
   right: 6px;
+
   bottom: 7px;
 
   min-height: auto;
@@ -207,9 +374,10 @@
   box-sizing: border-box;
 
   display: flex;
+
   align-items: center;
 
-  gap: 6px;
+  gap: 10px;
 
   background: rgba(255, 255, 255, 0.97);
 
@@ -218,24 +386,32 @@
   border-radius: 9px;
 
   box-shadow:
+
     0 5px 15px rgba(134, 167, 255, 0.14);
 
   z-index: 3;
+
 }
 
 
 /* ==========================================
+
    場所アイコン
+
 ========================================== */
 
 .kirakiraparc-location-icon {
-  width: 23px;
-  height: 23px;
+
+  width: 15px;
+
+  height: 15px;
 
   flex-shrink: 0;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   color: #ffffff;
@@ -245,54 +421,73 @@
   border-radius: 50%;
 
   font-size: 7px;
+
 }
 
 
 /* ==========================================
+
    場所内容
+
 ========================================== */
 
 .kirakiraparc-location-content {
+
   min-width: 0;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 2px;
+
 }
 
 
 /* ==========================================
+
    場所ラベル
+
 ========================================== */
 
 .kirakiraparc-location-label {
+
   color: #6f8dff;
 
   font-size: 8px;
+
   font-weight: 800;
+
 }
 
 
 /* ==========================================
+
    場所テキスト
+
 ========================================== */
 
 .kirakiraparc-location-text {
+
   color: #3f4d6d;
 
   font-size: 9px;
+
   font-weight: 800;
 
   line-height: 1.35;
+
 }
 
 
 /* ==========================================
+
    区切り線
+
 ========================================== */
 
 .kirakiraparc-card-divider {
+
   width: 2px;
 
   flex-shrink: 0;
@@ -302,14 +497,18 @@
   background: #d5e0ff;
 
   border-radius: 999px;
+
 }
 
 
 /* ==========================================
+
    右側
+
 ========================================== */
 
 .kirakiraparc-card-right {
+
   flex: 1;
 
   min-width: 0;
@@ -319,17 +518,22 @@
   box-sizing: border-box;
 
   display: flex;
+
   flex-direction: column;
 
   justify-content: flex-start;
+
 }
 
 
 /* ==========================================
+
    内容タイトル
+
 ========================================== */
 
 .kirakiraparc-sub-title {
+
   width: fit-content;
 
   min-height: 30px;
@@ -339,14 +543,19 @@
   box-sizing: border-box;
 
   display: flex;
+
   align-items: center;
 
   gap: 5px;
 
   background: linear-gradient(
+
     90deg,
+
     #86a7ff,
+
     #6f8dff
+
   );
 
   border: 1px solid #6f8dff;
@@ -356,15 +565,20 @@
   color: #ffffff;
 
   font-size: 11px;
+
   font-weight: 800;
+
 }
 
 
 /* ==========================================
+
    注意事項タイトル
+
 ========================================== */
 
 .kirakiraparc-notice-title {
+
   width: fit-content;
 
   min-height: 30px;
@@ -374,6 +588,7 @@
   box-sizing: border-box;
 
   display: flex;
+
   align-items: center;
 
   gap: 5px;
@@ -387,32 +602,43 @@
   color: #ffffff;
 
   font-size: 11px;
+
   font-weight: 800;
+
 }
 
 
 /* ==========================================
+
    内容・注意事項アイコン
+
 ========================================== */
 
 .kirakiraparc-sub-icon,
+
 .kirakiraparc-warning-icon {
+
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   font-size: 11px;
 
   line-height: 1;
+
 }
 
 
 /* ==========================================
+
    内容説明文
+
 ========================================== */
 
 .kirakiraparc-description {
+
   margin: 7px 0 0;
 
   color: #3f4d6d;
@@ -422,47 +648,62 @@
   line-height: 1.55;
 
   letter-spacing: 0.01em;
+
 }
 
 
 /* ==========================================
+
    点線
+
 ========================================== */
 
 .kirakiraparc-dotted-line {
+
   width: 100%;
 
   margin: 8px 0;
 
   border-top: 1px dotted #b9c9f5;
+
 }
 
 
 /* ==========================================
+
    注意事項リスト
+
 ========================================== */
 
 .kirakiraparc-notice-list {
+
   width: 100%;
 
   margin: 7px 0 0;
+
   padding: 0;
 
   list-style: none;
 
   box-sizing: border-box;
+
 }
 
 
 /* ==========================================
+
    注意事項
+
 ========================================== */
 
 .kirakiraparc-notice-list li {
+
   display: flex;
+
   align-items: flex-start;
 
   margin: 0 0 5px;
+
   padding: 0;
 
   color: #3f4d6d;
@@ -470,36 +711,47 @@
   font-size: 10px;
 
   line-height: 1.5;
+
 }
 
 
 /* ==========================================
+
    青い●
+
 ========================================== */
 
 .kirakiraparc-notice-dot {
+
   width: 6px;
+
   height: 6px;
 
   flex-shrink: 0;
 
   margin-top: 5px;
+
   margin-right: 6px;
 
   background: #6f8dff;
 
   border-radius: 50%;
+
 }
 
 
 /* ==========================================
+
    注意事項テキスト
+
 ========================================== */
 
 .kirakiraparc-notice-text {
+
   flex: 1;
 
   min-width: 0;
 
   line-height: 1.5;
+
 }
