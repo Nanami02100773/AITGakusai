@@ -2,10 +2,26 @@ import React from "react";
 import "./AwardSection.css";
 
 const awards = [
-  "ベスト・オブ・ブース賞",
-  "ベストオブ工科展賞",
-  "瑞若会特別賞",
-  "後援会賞",
+  {
+    title: "ベスト・オブ・ブース賞",
+    description:
+      "全模擬店の中から、お客様による投票で最も高い評価を得た団体に贈られる賞です。多くのお客様から支持を集めた、最も優れた模擬店が選ばれます。",
+  },
+  {
+    title: "ベストオブ工科展",
+    description:
+      "工科展に参加する団体の中から、最も優秀な団体に贈られる賞です。工科展を代表する、特に優れた活動を行った団体が選ばれます。",
+  },
+  {
+    title: "同窓会特別賞",
+    description:
+      "一般団体のみを対象とした特別賞です。工科展での活動内容や取り組みなどを通して、特に優れた団体が選ばれ、同窓会から贈られる賞です。",
+  },
+  {
+    title: "後援会特別賞",
+    description:
+      "一般団体のみを対象とした特別賞です。工科展での活動内容や取り組みなどを通して、特に優れた団体が選ばれ、後援会から贈られる賞です。",
+  },
 ];
 
 export default function AwardSection() {
@@ -19,52 +35,36 @@ export default function AwardSection() {
         グランプリ
       </h2>
 
-      {/* =================================================
-          説明エリア
-      ================================================= */}
       <div className="Home-Award-container">
 
         <div className="Home-Award-crown">
 
-          {/* =================================================
-              賞一覧
-          ================================================= */}
           <div className="Home-Award-list">
 
             <div className="Home-Award-cornerLeftBottom"></div>
             <div className="Home-Award-cornerRightBottom"></div>
 
             {/* =================================================
-                王冠＋説明ボックス
+                グランプリとは？
             ================================================= */}
             <div className="Home-Award-crownArea">
 
               <div className="Home-Award-crownTextWrap">
 
-                {/* =================================================
-                    王冠画像
-                ================================================= */}
                 <div className="Home-Award-crownIconWrap">
-
                   <img
                     src="/Award/crown.png"
                     alt="crown"
                     className="Home-Award-crownIcon"
                   />
-
                 </div>
 
-                {/* =================================================
-                    テキスト
-                ================================================= */}
                 <div className="Home-Award-crownText">
 
-                  {/* 見出し */}
                   <div className="Home-Award-crownSubtitle">
                     グランプリとは？
                   </div>
 
-                  {/* 説明文 */}
                   <div className="Home-Award-crownDescription">
                     模擬店・工科展などの各出展企画を対象に、来場者や審査員による投票を実施し、学園祭を代表するグランプリを決定します。
                   </div>
@@ -75,15 +75,12 @@ export default function AwardSection() {
 
             </div>
 
-            {/* =================================================
-                青ライン
-            ================================================= */}
             <div className="Home-Award-crownLine"></div>
 
             {/* =================================================
-                カード一覧
+                賞一覧
             ================================================= */}
-            {awards.map((title, i) => (
+            {awards.map((award, i) => (
               <div
                 key={i}
                 className={`Home-Award-card ${
@@ -91,17 +88,14 @@ export default function AwardSection() {
                 }`}
               >
 
-                {/* 左バー */}
                 <div className="Home-Award-leftBar"></div>
 
-                {/* タイトル */}
                 <div className="Home-Award-cardTitle">
-                  {title}
+                  {award.title}
                 </div>
 
-                {/* 説明 */}
                 <div className="Home-Award-cardDescription">
-                  説明：——————————————
+                  {award.description}
                 </div>
 
               </div>

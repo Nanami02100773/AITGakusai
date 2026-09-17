@@ -69,7 +69,11 @@ const MascotCard = () => {
               <div className="Question-MascotCard-item Question-MascotCard-blue">
 
                 <div className="Question-MascotCard-item-title">
-                  <img src="/mascot/male.png" alt="" />
+                  <img
+                    src="/mascot/male.png"
+                    alt=""
+                  />
+
                   <span>性別</span>
                 </div>
 
@@ -80,7 +84,11 @@ const MascotCard = () => {
               <div className="Question-MascotCard-item Question-MascotCard-green">
 
                 <div className="Question-MascotCard-item-title">
-                  <img src="/mascot/heart.png" alt="" />
+                  <img
+                    src="/mascot/heart.png"
+                    alt=""
+                  />
+
                   <span>性格</span>
                 </div>
 
@@ -91,7 +99,11 @@ const MascotCard = () => {
               <div className="Question-MascotCard-item Question-MascotCard-orange">
 
                 <div className="Question-MascotCard-item-title">
-                  <img src="/mascot/food.png" alt="" />
+                  <img
+                    src="/mascot/food.png"
+                    alt=""
+                  />
+
                   <span>好きなもの</span>
                 </div>
 
@@ -120,7 +132,9 @@ const MascotCard = () => {
                 <li>猫舌</li>
                 <li>おっちょこちょい</li>
                 <li>モテモテ</li>
-                <li>シャチに追いかけまわされたせいで海洋恐怖症になった。</li>
+                <li>
+                  シャチに追いかけまわされたせいで海洋恐怖症になった。
+                </li>
               </ul>
 
             </div>
@@ -130,9 +144,18 @@ const MascotCard = () => {
           {/* 投票 */}
           <div className="Question-MascotCard-vote">
 
-            <p>＼ このマスコットを応援しよう！ ／</p>
+            <p>
+              ＼ このマスコットを応援しよう！ ／
+            </p>
 
-            <button>投票する</button>
+            <a
+              href="https://gakumado.mynavi.jp/contests/mascot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="Question-MascotCard-vote-button"
+            >
+              投票する
+            </a>
 
             <small>
               あなたの応援が力になります！

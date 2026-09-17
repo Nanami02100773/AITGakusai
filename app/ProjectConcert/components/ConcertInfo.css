@@ -3,19 +3,26 @@
 ========================================== */
 
 .Concert-performer-section {
+
   padding: 0 0 100px;
+
 }
+
 
 /* ==========================================
    タイトル
 ========================================== */
 
 .Concert-section-title {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   width: 240px;
+
   height: 44px;
 
   margin: 20px auto 10px;
@@ -27,7 +34,9 @@
   );
 
   color: #fff;
+
   font-size: 17px;
+
   font-weight: bold;
 
   border-radius: 999px;
@@ -38,13 +47,18 @@
     0 8px 20px rgba(160,170,255,.14),
     inset 0 2px 0 rgba(255,255,255,.7),
     inset 0 -2px 0 rgba(255,255,255,.55);
+
 }
+
 
 /* ==========================================
    全体エリア
 ========================================== */
+
 .Concert-scroll-area {
+
   width: 97%;
+
   max-width: 500px;
 
   margin: 0 auto;
@@ -61,27 +75,39 @@
 
   box-shadow:
     0 10px 25px rgba(134,167,255,.15);
+
+  box-sizing: border-box;
+
 }
+
 
 /* ==========================================
    出演者ブロック
 ========================================== */
 
 .Concert-profile-box {
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
   margin-bottom: 30px;
+
 }
+
 
 /* ==========================================
    名前
 ========================================== */
 
 .Concert-name {
+
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   min-width: 150px;
@@ -91,6 +117,7 @@
   margin-bottom: 15px;
 
   font-size: 15px;
+
   font-weight: 600;
 
   color: #5f6dbe;
@@ -103,18 +130,23 @@
 
   box-shadow:
     0 2px 8px rgba(111,141,255,.08);
+
 }
+
+
 /* ==========================================
    カード
 ========================================== */
+
 .Concert-card {
+
   width: 100%;
 
   padding: 20px;
 
   border-radius: 10px;
 
-  background:  #ffffff;
+  background: #ffffff;
 
   border: 1px solid rgba(134,167,255,.25);
 
@@ -122,15 +154,22 @@
     0 10px 25px rgba(134,167,255,.12);
 
   position: relative;
+
   overflow: hidden;
+
+  box-sizing: border-box;
+
 }
 
 
 /* ==========================================
-   画像
+   画像エリア
 ========================================== */
+
 .Concert-image {
+
   width: 100%;
+
   height: 280px;
 
   background: #ffffff;
@@ -147,19 +186,34 @@
   position: relative;
 
   margin-bottom: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
 }
 
-/* 左上アクセント */
+
+/* ==========================================
+   左上アクセント
+========================================== */
 
 .Concert-image::before {
+
   content: "";
 
   position: absolute;
 
   top: 10px;
+
   left: 10px;
 
   width: 30px;
+
   height: 30px;
 
   background: linear-gradient(
@@ -175,19 +229,26 @@
   );
 
   z-index: 2;
+
 }
 
-/* 右下アクセント */
+
+/* ==========================================
+   右下アクセント
+========================================== */
 
 .Concert-image::after {
+
   content: "";
 
   position: absolute;
 
   right: 10px;
+
   bottom: 10px;
 
   width: 30px;
+
   height: 30px;
 
   background: linear-gradient(
@@ -203,21 +264,35 @@
   );
 
   z-index: 2;
+
 }
+
+
+/* ==========================================
+   写真本体
+========================================== */
 
 .Concert-image img {
+
   width: 100%;
+
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
+
+  object-position: center;
 
   display: block;
+
 }
+
 
 /* ==========================================
    紹介文
 ========================================== */
+
 .Concert-description-inner {
+
   font-size: 13px;
 
   color: #4b5f8f;
@@ -227,14 +302,18 @@
   border-top: 2px dashed rgba(134,167,255,.35);
 
   padding-top: 10px;
+
 }
+
 
 /* ==========================================
    SNSボックス
 ========================================== */
 
-.Concert-sns-wrapper{
+.Concert-sns-wrapper {
+
   width: 100%;
+
   max-width: 400px;
 
   margin: 20px auto 0;
@@ -249,15 +328,22 @@
 
   box-shadow:
     0 10px 25px rgba(134,167,255,.12);
+
+  box-sizing: border-box;
+
 }
+
 
 /* ==========================================
    SNSタイトル
 ========================================== */
 
-.Concert-sns-title{
+.Concert-sns-title {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   gap: 12px;
@@ -265,6 +351,7 @@
   margin-bottom: 15px;
 
   font-size: 12px;
+
   font-weight: 700;
 
   color: #5f6dbe;
@@ -272,14 +359,19 @@
   letter-spacing: .08em;
 
   position: relative;
+
   z-index: 2;
+
 }
 
+
 .Concert-sns-title::before,
-.Concert-sns-title::after{
+.Concert-sns-title::after {
+
   content: "";
 
   width: 60px;
+
   height: 2px;
 
   border-radius: 999px;
@@ -290,40 +382,53 @@
     rgba(134,167,255,.8),
     rgba(111,141,255,1)
   );
+
 }
 
-.Concert-sns-title::after{
+
+.Concert-sns-title::after {
+
   background: linear-gradient(
     90deg,
     rgba(111,141,255,1),
     rgba(134,167,255,.8),
     rgba(134,167,255,0)
   );
+
 }
+
 
 /* ==========================================
    SNS並び
 ========================================== */
 
-.Concert-sns{
+.Concert-sns {
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   gap: 20px;
 
   position: relative;
+
   z-index: 2;
+
 }
+
 
 /* ==========================================
    SNSアイコン
 ========================================== */
 
-.Concert-sns a{
+.Concert-sns a {
+
   position: relative;
 
   width: 50px;
+
   height: 50px;
 
   border-radius: 50%;
@@ -331,7 +436,9 @@
   background: #ffffff;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   box-shadow:
@@ -340,15 +447,20 @@
   transition:
     transform .3s ease,
     box-shadow .3s ease;
+
 }
 
-.Concert-sns a::before{
+
+.Concert-sns a::before {
+
   content: "";
 
   position: absolute;
+
   inset: 0;
 
   border-radius: 50%;
+
   padding: 3px;
 
   background: linear-gradient(
@@ -363,19 +475,31 @@
     linear-gradient(#fff 0 0);
 
   -webkit-mask-composite: xor;
+
   mask-composite: exclude;
+
 }
 
-.Concert-sns a:hover{
-  transform: translateY(-4px) scale(1.06);
+
+.Concert-sns a:hover {
+
+  transform:
+    translateY(-4px)
+    scale(1.06);
+
 }
 
-.Concert-sns img{
+
+.Concert-sns img {
+
   width: 28px;
+
   height: 28px;
 
   object-fit: contain;
 
   position: relative;
+
   z-index: 2;
+
 }

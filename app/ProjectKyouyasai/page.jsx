@@ -12,20 +12,23 @@ import KyouyasaiCast from "./components/KyouyasaiCast";
 import KyouyasaiGame from "./components/KyouyasaiGame";
 import KyouyasaiStageTT from "./components/KyouyasaiStageTT";
 
-import img1 from "./components/images/スクリーンショット (1).png";
-import img2 from "./components/images/スクリーンショット 2024-06-12 110056.png";
-import img3 from "./components/images/スクリーンショット 2024-07-03 114934.png";
+import img1 from "./components/images/No.1.jpg";
+import img2 from "./components/images/No.2.jpg";
+import img3 from "./components/images/No.3.jpg";
+
 
 export default function Page() {
+
   return (
     <div className="kyouyasai-page">
+
       <Title />
 
       <ImageCarousel
         images={[
-          img1,
-          img2,
-          img3,
+          img1.src,
+          img2.src,
+          img3.src,
         ]}
       />
 
@@ -40,6 +43,7 @@ export default function Page() {
       <KyouyasaiGame />
 
       <NavigationBar />
+
     </div>
   );
 }

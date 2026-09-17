@@ -7,9 +7,9 @@ import React, {
 
 import "./ImageCarousel.css";
 
-import image1 from "./images/1.jpg";
-import image2 from "./images/2.jpg";
-import image3 from "./images/3.jpg";
+import image1 from "./images/No.1.jpg";
+import image2 from "./images/No.2.jpg";
+import image3 from "./images/No.3.jpg";
 
 
 function ImageCarousel() {

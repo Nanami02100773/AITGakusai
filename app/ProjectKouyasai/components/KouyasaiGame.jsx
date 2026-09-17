@@ -1,32 +1,81 @@
+"use client";
+
 import React from "react";
 import "./KouyasaiGame.css";
 
-function koyasaiGame() {
+import no1Image from "./Game/No.1.jpg";
+import no2Image from "./Game/No.2.jpg";
+import no3Image from "./Game/No.3.jpg";
+import no4Image from "./Game/No.4.jpg";
+import no5Image from "./Game/No.5.jpg";
+
+
+function KouyasaiGame() {
+
   const games = [
-    "後夜ダンス",
-    "ビンゴ",
-    "仕掛け花火",
-    "打上花火",
+    {
+      name: "後夜ダンス",
+      image: no1Image,
+    },
+    {
+      name: "ビンゴ",
+      image: no2Image,
+    },
+    {
+      name: "火舞",
+      image: no3Image,
+    },
+    {
+      name: "仕掛け花火",
+      image: no4Image,
+    },
+    {
+      name: "打上花火",
+      image: no5Image,
+    },
   ];
+
 
   return (
     <section className="koyasai-gameCorner-section">
-      <div className="koyasai-section-title">Game Corner</div>
+
+      <div className="koyasai-section-title">
+          イベント
+      </div>
+
 
       <div className="koyasai-gameCorner-list">
+
         {games.map((game, index) => (
-          <div className="koyasai-gameCorner-item" key={index}>
+
+          <div
+            className="koyasai-gameCorner-item"
+            key={index}
+          >
+
             <div className="koyasai-gameCorner-card">
-              <div className="koyasai-gameCorner-image"></div>
+
+              <img
+                src={game.image.src}
+                alt={game.name}
+                className="koyasai-gameCorner-image"
+              />
+
               <p className="koyasai-gameCorner-label">
-                {game}
+                {game.name}
               </p>
+
             </div>
+
           </div>
+
         ))}
+
       </div>
+
     </section>
   );
 }
 
-export default koyasaiGame;
+
+export default KouyasaiGame;
