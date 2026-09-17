@@ -48,11 +48,9 @@ function DetailTable() {
       ========================================== */}
 
       <div className="kenketsu-section-wrapper">
-
         <div className="kenketsu-section-title">
           詳細情報
         </div>
-
       </div>
 
 
@@ -123,13 +121,13 @@ function DetailTable() {
                         key={i}
                       >
 
-                        <div className="kenketsu-date-box">
+                        <span className="kenketsu-date-box">
                           {time.tag}
-                        </div>
+                        </span>
 
-                        <div className="kenketsu-time">
+                        <span className="kenketsu-time">
                           {time.value}
-                        </div>
+                        </span>
 
                       </div>
                     ))}

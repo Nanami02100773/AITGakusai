@@ -42,7 +42,6 @@
 
 }
 
-
 .kenketsu-note-list li {
 
   position: relative;
@@ -60,7 +59,6 @@
   line-height: 1.6;
 
 }
-
 
 .kenketsu-note-list li::before {
 
@@ -136,7 +134,6 @@
 
 }
 
-
 .kenketsu-detail-text {
 
   position: relative;
@@ -177,7 +174,6 @@
   flex-shrink: 0;
 
 }
-
 
 .kenketsu-detail-icon-image {
 
@@ -266,7 +262,6 @@
 
 }
 
-
 .kenketsu-detail-value {
 
   width: 95%;
@@ -290,6 +285,10 @@
 }
 
 
+/* =====================================
+   下線
+===================================== */
+
 .kenketsu-detail-value::before {
 
   content: "";
@@ -308,6 +307,10 @@
 
 }
 
+
+/* =====================================
+   装飾 //
+===================================== */
 
 .kenketsu-detail-value::after {
 
@@ -344,6 +347,8 @@
 
   gap: 8px;
 
+  margin-bottom: 5px;
+
 }
 
 
@@ -372,9 +377,11 @@
 
 .kenketsu-date-box {
 
-  width: 135px;
+  width: 105px;
 
-  height: 36px;
+  min-width: 105px;
+
+  height: 27px;
 
   display: flex;
 
@@ -382,23 +389,27 @@
 
   justify-content: center;
 
-  padding: 0;
+  padding: 0 6px;
 
   box-sizing: border-box;
 
   flex-shrink: 0;
 
-  border: 1px solid #86a7ff;
+  border: 1px solid #b7d4ff;
 
-  border-radius: 7px;
+  border-radius: 5px;
 
   background: #ffffff;
 
-  color: #6f8dff;
+  color: #5b8cff;
 
-  font-size: 14px;
+  font-size: 12px;
 
   font-weight: 700;
+
+  line-height: 1;
+
+  text-align: center;
 
   white-space: nowrap;
 
@@ -411,11 +422,21 @@
 
 .kenketsu-time {
 
+  display: flex;
+
+  align-items: center;
+
+  margin: 0;
+
+  padding: 0;
+
   color: #3f4d6d;
 
-  font-size: 14px;
+  font-size: 12px;
 
   font-weight: 500;
+
+  line-height: 1.5;
 
   white-space: nowrap;
 
@@ -431,7 +452,6 @@
   width: 100%;
 
 }
-
 
 .kenketsu-section-title {
 
@@ -468,8 +488,11 @@
   border: 2px solid rgba(255,255,255,0.55);
 
   box-shadow:
+
     0 8px 20px rgba(160,170,255,0.14),
+
     inset 0 2px 0 rgba(255,255,255,0.7),
+
     inset 0 -2px 0 rgba(255,255,255,0.55);
 
   overflow: hidden;

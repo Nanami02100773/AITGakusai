@@ -13,8 +13,17 @@ function DetailTable() {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value:
-        "10月10日（土）10:30～19:00\n10月11日（日）10:30～19:00\n夜間営業 17:00～19:00",
+      items: [
+        {
+          tag: "10月10日（土）",
+          value: "10:30～19:00",
+        },
+        {
+          tag: "10月11日（日）",
+          value: "10:30～19:00",
+        },
+      ],
+      note: "※夜間営業 17:00～19:00",
     },
     {
       icon: "/project/Precautions.png",
@@ -31,55 +40,117 @@ function DetailTable() {
   ];
 
   return (
-    <section>
-      <div className="rakuichi-section-wrapper">
-        <div className="rakuichi-section-title">
-          詳細情報
-        </div>
-      </div>
+    <div className="rakuichi-section-wrapper">
 
-      <div className="rakuichi-detail-table">
+      {/* =====================================
+          セクションタイトル
+      ===================================== */}
+
+      <h2 className="rakuichi-section-title">
+        企画詳細
+      </h2>
+
+      {/* =====================================
+          詳細テーブル
+      ===================================== */}
+
+      <section className="rakuichi-detail-table">
+
         {details.map((item, index) => (
           <div
             className="rakuichi-detail-row"
             key={index}
           >
+
+            {/* =====================================
+                左ラベル
+            ===================================== */}
+
             <div className="rakuichi-detail-label">
-              <span className="rakuichi-detail-icon">
+
+              <div className="rakuichi-detail-icon">
                 <img
                   src={item.icon}
-                  alt={item.label}
+                  alt=""
                   className={`rakuichi-detail-icon-image ${item.iconClass}`}
                 />
-              </span>
+              </div>
 
               <span className="rakuichi-detail-text">
                 {item.label}
               </span>
+
             </div>
 
+            {/* =====================================
+                右側
+            ===================================== */}
+
             <div className="rakuichi-detail-content">
+
               <div className="rakuichi-detail-value">
-                {Array.isArray(item.value) ? (
-                  <ul className="rakuichi-note-list">
-                    {item.value.map((note, i) => (
-                      <li key={i}>{note}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  item.value.split("\n").map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      {i < item.value.split("\n").length - 1 && <br />}
-                    </React.Fragment>
-                  ))
+
+                {/* 場所 */}
+
+                {item.label === "場所" && (
+                  <span>
+                    {item.value}
+                  </span>
                 )}
+
+                {/* 時間 */}
+
+                {item.label === "時間" && (
+                  <div className="rakuichi-time-list">
+
+                    {item.items.map((time, i) => (
+                      <div
+                        className="rakuichi-time"
+                        key={i}
+                      >
+
+                        <span className="rakuichi-time-tag">
+                          {time.tag}
+                        </span>
+
+                        <span>
+                          {time.value}
+                        </span>
+
+                      </div>
+                    ))}
+
+                    <div className="rakuichi-time-note">
+                      {item.note}
+                    </div>
+
+                  </div>
+                )}
+
+                {/* 注意事項 */}
+
+                {item.label === "注意事項" && (
+                  <ul className="rakuichi-note-list">
+
+                    {item.value.map((note, i) => (
+                      <li key={i}>
+                        {note}
+                      </li>
+                    ))}
+
+                  </ul>
+                )}
+
               </div>
+
             </div>
+
           </div>
         ))}
-      </div>
-    </section>
+
+      </section>
+
+    </div>
   );
 }
 

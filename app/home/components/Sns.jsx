@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import "./Sns.css";
 
@@ -22,17 +23,17 @@ const SnsSection = () => {
             rel="noopener noreferrer"
           >
             <div className="Home-Sns-circle">
-
               <img
                 src="/snsicons/Instagram.png"
                 alt="Instagram"
                 className="Home-Sns-iconImage"
               />
-
             </div>
 
             <div className="Home-Sns-label">
-              <span></span>Instagram<span></span>
+              <span></span>
+              Instagram
+              <span></span>
             </div>
           </a>
 
@@ -44,17 +45,17 @@ const SnsSection = () => {
             rel="noopener noreferrer"
           >
             <div className="Home-Sns-circle">
-
               <img
                 src="/snsicons/X.png"
                 alt="X"
                 className="Home-Sns-iconImage"
               />
-
             </div>
 
             <div className="Home-Sns-label">
-              <span></span>X<span></span>
+              <span></span>
+              X
+              <span></span>
             </div>
           </a>
 
@@ -66,17 +67,17 @@ const SnsSection = () => {
             rel="noopener noreferrer"
           >
             <div className="Home-Sns-circle">
-
               <img
                 src="/snsicons/HP.png"
                 alt="Website"
                 className="Home-Sns-iconImage"
               />
-
             </div>
 
             <div className="Home-Sns-label">
-              <span></span>Website<span></span>
+              <span></span>
+              Website
+              <span></span>
             </div>
           </a>
 
@@ -88,17 +89,17 @@ const SnsSection = () => {
             rel="noopener noreferrer"
           >
             <div className="Home-Sns-circle">
-
               <img
                 src="/snsicons/LINE.png"
                 alt="LINE"
                 className="Home-Sns-iconImage"
               />
-
             </div>
 
             <div className="Home-Sns-label">
-              <span></span>LINE<span></span>
+              <span></span>
+              LINE
+              <span></span>
             </div>
           </a>
 

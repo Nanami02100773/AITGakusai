@@ -6,12 +6,20 @@ const ArtistListData = [
 
     image: wacciImage,
 
-    bio: "wacciは、心に寄り添う歌詞とメロディーを届ける5人組バンドです。幅広い世代に愛される楽曲を中心に、さまざまな場所で音楽を届けています。",
+    bio: "「泣きっ面にワッチ」。聞く人全ての「暮らし」の中にそっと入り込んでいけるようなPopsを作るべく結成したバンド、wacci。泣いたあとにちょっと笑えるような、笑ったあとはもっと笑えるような歌を届けます。",
 
-    x: "",
-    instagram: "",
-    youtube: "",
-    website: "",
+    // X
+    x: "https://x.com/wacci_jp",
+
+    // Instagram
+    instagram: "https://www.instagram.com/wacci_official/",
+
+    // YouTube
+    youtube:
+      "https://www.youtube.com/channel/UCNMn4Nhl-E3iaSMab0Y_b4A",
+
+    // 公式サイト
+    website: "https://wacci.jp/",
   },
 ];
 

@@ -13,7 +13,16 @@ function DetailTable() {
       icon: "/project/clock.png",
       iconClass: "clock-icon",
       label: "時間",
-      value: "10月10,11日 10:30～16:30",
+      value: [
+        {
+          date: "10月10日（土）",
+          time: "10:30～16:30",
+        },
+        {
+          date: "10月11日（日）",
+          time: "10:30～16:30",
+        },
+      ],
     },
     {
       icon: "/project/Precautions.png",
@@ -36,19 +45,36 @@ function DetailTable() {
 
   return (
     <section>
+
+      {/* ==========================================
+          セクションタイトル
+      ========================================== */}
+
       <div className="kajino-section-wrapper">
         <div className="kajino-section-title">
           詳細情報
         </div>
       </div>
 
+
+      {/* ==========================================
+          詳細テーブル
+      ========================================== */}
+
       <div className="kajino-detail-table">
+
         {details.map((item, index) => (
           <div
             className="kajino-detail-row"
             key={index}
           >
+
+            {/* ==========================================
+                左ラベル
+            ========================================== */}
+
             <div className="kajino-detail-label">
+
               <span className="kajino-detail-icon">
                 <img
                   src={item.icon}
@@ -60,29 +86,82 @@ function DetailTable() {
               <span className="kajino-detail-text">
                 {item.label}
               </span>
+
             </div>
 
+
+            {/* ==========================================
+                右側
+            ========================================== */}
+
             <div className="kajino-detail-content">
+
               <div className="kajino-detail-value">
-                {Array.isArray(item.value) ? (
-                  <ul className="kajino-note-list">
-                    {item.value.map((note, i) => (
-                      <li key={i}>{note}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  item.value.split("\n").map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      {i < item.value.split("\n").length - 1 && <br />}
-                    </React.Fragment>
-                  ))
+
+                {/* ==========================================
+                    場所
+                ========================================== */}
+
+                {item.label === "場所" && (
+                  <span>
+                    {item.value}
+                  </span>
                 )}
+
+
+                {/* ==========================================
+                    時間
+                ========================================== */}
+
+                {item.label === "時間" && (
+                  <div className="kajino-date-content">
+
+                    {item.value.map((day, i) => (
+                      <div
+                        className="kajino-date-row"
+                        key={i}
+                      >
+
+                        <span className="kajino-date">
+                          {day.date}
+                        </span>
+
+                        <span className="kajino-time">
+                          {day.time}
+                        </span>
+
+                      </div>
+                    ))}
+
+                  </div>
+                )}
+
+
+                {/* ==========================================
+                    注意事項
+                ========================================== */}
+
+                {item.label === "注意事項" && (
+                  <ul className="kajino-note-list">
+
+                    {item.value.map((note, i) => (
+                      <li key={i}>
+                        {note}
+                      </li>
+                    ))}
+
+                  </ul>
+                )}
+
               </div>
+
             </div>
+
           </div>
         ))}
+
       </div>
+
     </section>
   );
 }

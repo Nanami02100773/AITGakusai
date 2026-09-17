@@ -1,4 +1,5 @@
 const StageTTData1 = [
+
   {
     time: "10:30〜10:45",
     title: "オープニング",
@@ -6,97 +7,95 @@ const StageTTData1 = [
     detail: "イベントの開始挨拶",
     image: "/stagetimeTT/opening.jpg",
   },
+
   {
-    time: "10:45〜11:10",
-    title: "ダンサー1組目",
-    icon: "/stagetime/note.png",
-    detail: "ダンスパフォーマンス",
+    time: "10:45〜11:05",
+    title: "演者様1",
+    icon: "/stagetime/microphone.png",
+    detail: "ゲストパフォーマンス",
     image: "/stagetimeTT/opening2.jpg",
   },
+
   {
-    time: "11:10〜11:15",
-    title: "準備",
-    icon: "/stagetime/preparation.png",
-    detail: "次の演目の準備",
+    time: "11:05〜11:15",
+    title: "演者様2",
+    icon: "/stagetime/microphone.png",
+    detail: "ゲストパフォーマンス",
     image: "/stagetimeTT/preparation1.jpg",
   },
+
   {
     time: "11:15〜11:45",
-    title: "出演者様",
+    title: "演者様3",
     icon: "/stagetime/microphone.png",
     detail: "ゲストパフォーマンス",
     image: "/stagetimeTT/cleaning.jpg",
   },
+
   {
-    time: "11:45〜11:50",
-    title: "準備",
-    icon: "/stagetime/preparation.png",
-    detail: "転換準備",
-    image: "/stagetimeTT/preparation2.jpg",
-  },
-  {
-    time: "11:50〜12:10",
-    title: "○×ゲーム",
-    icon: "/stagetime/game.png",
-    detail: "参加型ゲーム企画",
-    image: "/stagetimeTT/〇✕game.jpg",
-  },
-  {
-    time: "12:10〜12:20",
-    title: "準備",
-    icon: "/stagetime/preparation.png",
-    detail: "転換準備",
-    image: "/stagetimeTT/preparation3.jpg",
-  },
-  {
-    time: "12:20〜12:50",
-    title: "アイドル1組目",
-    icon: "/stagetime/star.png",
-    detail: "アイドルライブ",
-    image: "/stagetimeTT/preparation4.jpg",
-  },
-  {
-    time: "12:50〜13:20",
+    time: "11:45〜12:15",
     title: "歌王",
     icon: "/stagetime/crown.png",
     detail: "歌唱パフォーマンス企画",
     image: "/stagetimeTT/utao.jpg",
   },
+
   {
-    time: "13:20〜13:40",
-    title: "出演者様",
+    time: "12:15〜12:45",
+    title: "演者様4",
     icon: "/stagetime/microphone.png",
     detail: "ゲストパフォーマンス",
-    image: "/stagetimeTT/preparation5.jpg",
+    image: "/stagetimeTT/preparation2.jpg",
   },
+
   {
-    time: "13:40〜13:45",
+    time: "12:45〜13:10",
+    title: "イントロドン",
+    icon: "/stagetime/game.png",
+    detail: "参加型ゲーム企画",
+    image: "/stagetimeTT/〇✕game.jpg",
+  },
+
+  {
+    time: "13:10〜13:40",
+    title: "演者様5",
+    icon: "/stagetime/microphone.png",
+    detail: "ゲストパフォーマンス",
+    image: "/stagetimeTT/preparation3.jpg",
+  },
+
+  {
+    time: "13:40〜14:00",
+    title: "○×ゲーム",
+    icon: "/stagetime/game.png",
+    detail: "参加型ゲーム企画",
+    image: "/stagetimeTT/preparation4.jpg",
+  },
+
+  {
+    time: "14:00〜14:20",
+    title: "演者様6",
+    icon: "/stagetime/microphone.png",
+    detail: "ゲストパフォーマンス",
+    image: "/stagetimeTT/utao.jpg",
+  },
+
+  {
+    time: "14:20〜14:25",
     title: "準備",
     icon: "/stagetime/preparation.png",
     detail: "転換準備",
     image: "/stagetimeTT/setting1.jpg",
   },
-  {
-    time: "13:45〜14:15",
-    title: "芸人1組目",
-    icon: "/stagetime/comedian.png",
-    detail: "お笑いライブ",
-    image: "/stagetimeTT/setting2.jpg",
-  },
-  {
-    time: "14:15〜14:25",
-    title: "準備",
-    icon: "/stagetime/preparation.png",
-    detail: "転換準備",
-    image: "/stagetimeTT/ending1.jpg",
-  },
+
   {
     time: "14:25〜14:55",
-    title: "芸人2組目",
-    icon: "/stagetime/comedian.png",
-    detail: "お笑いライブ",
-    image: "/stagetimeTT/ending2.jpg",
+    title: "演者様7",
+    icon: "/stagetime/microphone.png",
+    detail: "ゲストパフォーマンス",
+    image: "/stagetimeTT/setting2.jpg",
   },
+
   {
     time: "14:55〜15:05",
     title: "エンディング",
@@ -104,41 +103,47 @@ const StageTTData1 = [
     detail: "前半終了",
     image: "/stagetimeTT/ending1.jpg",
   },
+
   {
-    time: "15:05〜16:00",
-    title: "セッティング・リハーサル",
+    time: "15:05〜15:50",
+    title: "リハーサル",
     icon: "/stagetime/setting.png",
     detail: "機材準備・リハーサル",
     image: "/stagetimeTT/setting1.jpg",
   },
+
   {
-    time: "16:00〜16:10",
+    time: "15:50〜16:00",
     title: "オープニング",
     icon: "/stagetime/opening.png",
     detail: "後半開始",
     image: "/stagetimeTT/opening.jpg",
   },
+
   {
-    time: "16:10〜17:10",
-    title: "演者様①演奏",
-    icon: "/stagetime/guitar.png",
-    detail: "ライブパフォーマンス",
+    time: "16:00〜17:00",
+    title: "演者様8",
+    icon: "/stagetime/microphone.png",
+    detail: "ゲストパフォーマンス",
     image: "/stagetimeTT/opening2.jpg",
   },
+
   {
-    time: "17:10〜17:45",
-    title: "セッティング・リハーサル",
+    time: "17:00〜17:45",
+    title: "リハーサル",
     icon: "/stagetime/setting.png",
     detail: "転換・準備",
     image: "/stagetimeTT/setting2.jpg",
   },
+
   {
     time: "17:45〜18:45",
-    title: "演者様②演奏",
-    icon: "/stagetime/guitar.png",
-    detail: "ライブパフォーマンス",
+    title: "演者様9",
+    icon: "/stagetime/microphone.png",
+    detail: "ゲストパフォーマンス",
     image: "/stagetimeTT/cleaning.jpg",
   },
+
   {
     time: "18:45〜18:55",
     title: "片付け",
@@ -146,13 +151,15 @@ const StageTTData1 = [
     detail: "撤収作業",
     image: "/stagetimeTT/cleaning.jpg",
   },
+
   {
     time: "18:55〜19:55",
-    title: "ビンゴゲーム",
+    title: "ビンゴ",
     icon: "/stagetime/card.png",
     detail: "参加型イベント",
     image: "/stagetimeTT/bingogame.jpg",
   },
+
   {
     time: "19:55〜20:00",
     title: "エンディング",
@@ -160,6 +167,7 @@ const StageTTData1 = [
     detail: "イベント終了",
     image: "/stagetimeTT/ending2.jpg",
   },
+
 ];
 
 export default StageTTData1;

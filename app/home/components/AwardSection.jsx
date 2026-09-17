@@ -3,12 +3,12 @@ import "./AwardSection.css";
 
 const awards = [
   {
-    title: "ベスト・オブ・ブース賞",
+    title: "ベスト・オブブース賞",
     description:
       "全模擬店の中から、お客様による投票で最も高い評価を得た団体に贈られる賞です。多くのお客様から支持を集めた、最も優れた模擬店が選ばれます。",
   },
   {
-    title: "ベストオブ工科展",
+    title: "ベスト・オブ工科展",
     description:
       "工科展に参加する団体の中から、最も優秀な団体に贈られる賞です。工科展を代表する、特に優れた活動を行った団体が選ばれます。",
   },
@@ -35,14 +35,22 @@ export default function AwardSection() {
         グランプリ
       </h2>
 
+
+      {/* =================================================
+          グランプリ全体
+      ================================================= */}
       <div className="Home-Award-container">
 
         <div className="Home-Award-crown">
 
           <div className="Home-Award-list">
 
+            {/* =================================================
+                下部飾り
+            ================================================= */}
             <div className="Home-Award-cornerLeftBottom"></div>
             <div className="Home-Award-cornerRightBottom"></div>
+
 
             {/* =================================================
                 グランプリとは？
@@ -51,6 +59,7 @@ export default function AwardSection() {
 
               <div className="Home-Award-crownTextWrap">
 
+                {/* 王冠アイコン */}
                 <div className="Home-Award-crownIconWrap">
                   <img
                     src="/Award/crown.png"
@@ -59,6 +68,8 @@ export default function AwardSection() {
                   />
                 </div>
 
+
+                {/* 説明 */}
                 <div className="Home-Award-crownText">
 
                   <div className="Home-Award-crownSubtitle">
@@ -75,7 +86,12 @@ export default function AwardSection() {
 
             </div>
 
+
+            {/* =================================================
+                王冠下ライン
+            ================================================= */}
             <div className="Home-Award-crownLine"></div>
+
 
             {/* =================================================
                 賞一覧
@@ -88,14 +104,37 @@ export default function AwardSection() {
                 }`}
               >
 
+                {/* =================================================
+                    左側バー
+                ================================================= */}
                 <div className="Home-Award-leftBar"></div>
 
-                <div className="Home-Award-cardTitle">
-                  {award.title}
+
+                {/* =================================================
+                    番号
+                ================================================= */}
+                <div className="Home-Award-number">
+
+                  <span>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
                 </div>
 
-                <div className="Home-Award-cardDescription">
-                  {award.description}
+
+                {/* =================================================
+                    カード内容
+                ================================================= */}
+                <div className="Home-Award-cardContent">
+
+                  <div className="Home-Award-cardTitle">
+                    {award.title}
+                  </div>
+
+                  <div className="Home-Award-cardDescription">
+                    {award.description}
+                  </div>
+
                 </div>
 
               </div>
