@@ -3,15 +3,24 @@
 ========================================== */
 
 .LaughMusic-performer-section {
-  padding: 0 0 20px;
+
+  width: 100%;
+
+  padding: 0 0 80px;
+
+  box-sizing: border-box;
+
 }
+
 
 /* ==========================================
    タイトル
 ========================================== */
 
 .LaughMusic-section-title {
+
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -26,30 +35,38 @@
     #6f8dff
   );
 
-  color: #fff;
+  color: #ffffff;
+
   font-size: 17px;
   font-weight: bold;
 
   border-radius: 999px;
 
-  border: 2px solid rgba(255,255,255,.55);
+  border: 2px solid rgba(255, 255, 255, 0.55);
 
   box-shadow:
-    0 8px 20px rgba(160,170,255,.14),
-    inset 0 2px 0 rgba(255,255,255,.7),
-    inset 0 -2px 0 rgba(255,255,255,.55);
+    0 8px 20px rgba(160, 170, 255, 0.14),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.55);
+
+  box-sizing: border-box;
+
 }
+
 
 /* ==========================================
    全体エリア
 ========================================== */
+
 .LaughMusic-scroll-area {
-  width: 100%;
+
+  width: 97%;
+
   max-width: 500px;
 
   margin: 0 auto;
 
-  padding: 25px 10px 1px;
+  padding: 24px 12px 1px;
 
   border-radius: 10px;
 
@@ -60,27 +77,38 @@
   );
 
   box-shadow:
-    0 10px 25px rgba(134,167,255,.15);
+    0 10px 25px rgba(134, 167, 255, 0.15);
+
+  box-sizing: border-box;
+
 }
+
 
 /* ==========================================
    出演者ブロック
 ========================================== */
 
 .LaughMusic-profile-box {
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+
 }
 
+
 /* ==========================================
-   名前
+   出演者名
 ========================================== */
 
 .LaughMusic-name {
+
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -88,9 +116,10 @@
 
   padding: 5px 12px;
 
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   font-size: 15px;
+
   font-weight: 600;
 
   color: #5f6dbe;
@@ -102,57 +131,83 @@
   border-radius: 5px;
 
   box-shadow:
-    0 2px 8px rgba(111,141,255,.08);
+    0 2px 8px rgba(111, 141, 255, 0.08);
+
+  box-sizing: border-box;
+
 }
+
 
 /* ==========================================
    カード
 ========================================== */
-.LaughMusic-card {
-  width: 98%;
 
-  padding: 20px;
+.LaughMusic-card {
+
+  width: 100%;
+
+  padding: 12px;
 
   border-radius: 10px;
 
-  background:  #ffffff;
+  background: #ffffff;
 
-  border: 1px solid rgba(134,167,255,.25);
+  border: 1px solid rgba(134, 167, 255, 0.25);
 
   box-shadow:
-    0 10px 25px rgba(134,167,255,.12);
+    0 10px 25px rgba(134, 167, 255, 0.12);
 
   position: relative;
+
   overflow: hidden;
+
+  box-sizing: border-box;
+
 }
 
 
 /* ==========================================
-   画像
+   画像エリア
 ========================================== */
+
 .LaughMusic-image {
+
   width: 100%;
+
   height: 280px;
 
   background: #ffffff;
 
-  border-radius: 16px;
+  border-radius: 14px;
 
   overflow: hidden;
 
-  border: 2px solid rgba(134,167,255,.28);
+  border: 2px solid rgba(134, 167, 255, 0.28);
 
   box-shadow:
-    0 8px 20px rgba(134,167,255,.12);
+    0 8px 20px rgba(134, 167, 255, 0.12);
 
   position: relative;
 
   margin-bottom: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
 }
 
-/* 左上アクセント */
+
+/* ==========================================
+   左上アクセント
+========================================== */
 
 .LaughMusic-image::before {
+
   content: "";
 
   position: absolute;
@@ -165,8 +220,8 @@
 
   background: linear-gradient(
     135deg,
-    rgba(127,155,255,.55),
-    rgba(180,195,255,.08)
+    rgba(127, 155, 255, 0.55),
+    rgba(180, 195, 255, 0.08)
   );
 
   clip-path: polygon(
@@ -176,11 +231,18 @@
   );
 
   z-index: 2;
+
+  pointer-events: none;
+
 }
 
-/* 右下アクセント */
+
+/* ==========================================
+   右下アクセント
+========================================== */
 
 .LaughMusic-image::after {
+
   content: "";
 
   position: absolute;
@@ -193,8 +255,8 @@
 
   background: linear-gradient(
     135deg,
-    rgba(160,175,255,.06),
-    rgba(120,145,255,.45)
+    rgba(160, 175, 255, 0.06),
+    rgba(120, 145, 255, 0.45)
   );
 
   clip-path: polygon(
@@ -204,179 +266,487 @@
   );
 
   z-index: 2;
+
+  pointer-events: none;
+
 }
+
+
+/* ==========================================
+   写真本体
+========================================== */
 
 .LaughMusic-image img {
+
   width: 100%;
+
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
+
+  object-position: center;
 
   display: block;
+
 }
+
+
+/* ==========================================
+   紹介全体
+========================================== */
+
+.LaughMusic-description {
+
+  position: relative;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================================
+   PROFILEタイトル
+========================================== */
+
+.LaughMusic-description-title {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 2px 0 6px;
+
+  padding-bottom: 7px;
+
+  color: #5f6dbe;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-align: center;
+
+  border-bottom: 2px dashed rgba(134, 167, 255, 0.35);
+
+  box-sizing: border-box;
+
+}
+
 
 /* ==========================================
    紹介文
 ========================================== */
+
 .LaughMusic-description-inner {
+
+  width: 100%;
+
+  padding-top: 6px;
+
   font-size: 13px;
 
   color: #4b5f8f;
 
   line-height: 1.8;
 
-  border-top: 2px dashed rgba(134,167,255,.35);
+  box-sizing: border-box;
 
-  padding-top: 10px;
 }
+
 
 /* ==========================================
    SNSボックス
 ========================================== */
+
 .LaughMusic-sns-wrapper {
-   width: 100%;
-  max-width: 400px;
 
-  margin: 20px auto 0;
+  width: 100%;
 
-  padding: 15px;
+  max-width: 440px;
 
-  border-radius: 10px;
+  margin: 18px auto 0;
+
+  padding: 18px 8px 28px;
+
+  border-radius: 12px;
 
   background: #f1f6ff;
 
-  border: 1px solid rgba(134,167,255,.25);
+  border: 1px solid rgba(134, 167, 255, 0.25);
 
   box-shadow:
-    0 10px 25px rgba(134,167,255,.12);
+    0 8px 20px rgba(134, 167, 255, 0.12);
+
+  box-sizing: border-box;
+
 }
+
 
 /* ==========================================
    SNSタイトル
 ========================================== */
 
 .LaughMusic-sns-title {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  gap: 12px;
+  gap: 10px;
 
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
-  font-size: 12px;
+  font-size: 14px;
+
   font-weight: 700;
 
   color: #5f6dbe;
 
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
 
   position: relative;
+
   z-index: 2;
+
 }
 
-/* 左右の線 */
+
+/* ==========================================
+   SNSタイトル左右ライン
+========================================== */
 
 .LaughMusic-sns-title::before,
 .LaughMusic-sns-title::after {
+
   content: "";
 
-  width: 60px;      /* 線の長さ調整 */
+  width: 55px;
+
   height: 2px;
 
   border-radius: 999px;
 
   background: linear-gradient(
     90deg,
-    rgba(134,167,255,0),
-    rgba(134,167,255,.8),
-    rgba(111,141,255,1)
+    rgba(134, 167, 255, 0),
+    rgba(134, 167, 255, 0.8),
+    rgba(111, 141, 255, 1)
   );
+
 }
 
+
 .LaughMusic-sns-title::after {
+
   background: linear-gradient(
     90deg,
-    rgba(111,141,255,1),
-    rgba(134,167,255,.8),
-    rgba(134,167,255,0)
+    rgba(111, 141, 255, 1),
+    rgba(134, 167, 255, 0.8),
+    rgba(134, 167, 255, 0)
   );
+
 }
+
 
 /* ==========================================
    SNS並び
 ========================================== */
 
 .LaughMusic-sns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  gap: 20px;
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  gap: 14px;
 
   position: relative;
+
   z-index: 2;
+
 }
+
 
 /* ==========================================
-   SNSアイコン
+   SNSアイコン全体
 ========================================== */
+
 .LaughMusic-sns a {
+
   position: relative;
 
-  width: 50px;
-  height: 50px;
+  width: 58px;
 
-  border-radius: 50%;
+  height: 88px;
 
-  background:  #ffffff;
+  display: block;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
 
-  box-shadow:
-    0 6px 16px rgba(134,167,255,.15);
+  text-decoration: none;
 
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+  background: transparent;
+
+  transition: transform 0.3s ease;
+
 }
 
+
+/* ==========================================
+   SNS外側の〇
+========================================== */
+
 .LaughMusic-sns a::before {
+
   content: "";
 
   position: absolute;
-  inset: 0;
+
+  top: 0;
+
+  left: 50%;
+
+  width: 54px;
+
+  height: 54px;
+
+  transform: translateX(-50%);
 
   border-radius: 50%;
-  padding: 3px;
 
-  background: linear-gradient(
-    135deg,
-    #b7c8ff,
-    #7f9dff,
-    #c9b7ff
-  );
+  background: #ffffff;
 
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  border: 3px solid #8da7ff;
 
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  box-shadow:
+    0 5px 15px rgba(134, 167, 255, 0.18);
+
+  box-sizing: border-box;
+
+  z-index: 0;
+
 }
 
-.LaughMusic-sns a:hover {
-  transform: translateY(-4px) scale(1.06);
-}
+
+/* ==========================================
+   SNS画像
+========================================== */
 
 .LaughMusic-sns img {
-  width: 28px;
-  height: 28px;
+
+  position: absolute;
+
+  top: 27px;
+
+  left: 50%;
+
+  width: 40px;
+
+  height: 40px;
+
+  transform: translate(-50%, -50%);
 
   object-fit: contain;
 
-  position: relative;
+  object-position: center;
+
+  display: block;
+
+  border-radius: 50%;
+
+  box-sizing: border-box;
+
   z-index: 2;
+
+}
+
+
+/* ==========================================
+   X
+========================================== */
+
+.LaughMusic-sns a[aria-label="X"] img {
+
+  width: 40px;
+
+  height: 40px;
+
+  top: 27px;
+
+}
+
+
+/* ==========================================
+   Instagram
+========================================== */
+
+.LaughMusic-sns a[aria-label="Instagram"] img {
+
+  width: 40px;
+
+  height: 40px;
+
+  top: 27px;
+
+}
+
+
+/* ==========================================
+   YouTube
+========================================== */
+
+.LaughMusic-sns a[aria-label="YouTube"] img {
+
+  width: 40px;
+
+  height: 40px;
+
+  top: 27px;
+
+}
+
+
+/* ==========================================
+   公式サイト
+========================================== */
+
+.LaughMusic-sns a[aria-label="公式サイト"] img {
+
+  width: 40px;
+
+  height: 40px;
+
+  top: 27px;
+
+}
+
+
+/* ==========================================
+   SNS名
+========================================== */
+
+.LaughMusic-sns a::after {
+
+  content: attr(aria-label);
+
+  position: absolute;
+
+  top: 63px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: max-content;
+
+  color: #5f6dbe;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
+
+  background: transparent;
+
+  border: none;
+
+  box-shadow: none;
+
+  z-index: 3;
+
+}
+
+
+/* ==========================================
+   ホバー
+========================================== */
+
+.LaughMusic-sns a:hover {
+
+  transform: translateY(-4px);
+
+}
+
+
+/* ==========================================
+   狭い画面での微調整
+========================================== */
+
+@media (max-width: 400px) {
+
+  .LaughMusic-sns {
+
+    gap: 8px;
+
+  }
+
+
+  .LaughMusic-sns a {
+
+    width: 52px;
+
+    height: 84px;
+
+  }
+
+
+  .LaughMusic-sns a::before {
+
+    width: 50px;
+
+    height: 50px;
+
+  }
+
+
+  .LaughMusic-sns img {
+
+    width: 36px;
+
+    height: 36px;
+
+    top: 25px;
+
+  }
+
+
+  .LaughMusic-sns a[aria-label="X"] img,
+  .LaughMusic-sns a[aria-label="Instagram"] img,
+  .LaughMusic-sns a[aria-label="YouTube"] img,
+  .LaughMusic-sns a[aria-label="公式サイト"] img {
+
+    width: 36px;
+
+    height: 36px;
+
+    top: 25px;
+
+  }
+
+
+  .LaughMusic-sns a::after {
+
+    top: 60px;
+
+    font-size: 10px;
+
+  }
+
 }

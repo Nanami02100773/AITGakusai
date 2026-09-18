@@ -3,7 +3,9 @@
 ========================================== */
 
 .koyasaiStageTT-section {
+
   padding-bottom: 0px;
+
 }
 
 
@@ -12,8 +14,11 @@
 ========================================== */
 
 .koyasaiStageTT {
+
   width: 98%;
+
   max-width: 900px;
+
   height: 380px;
 
   margin: 0 auto;
@@ -21,16 +26,20 @@
   background: #ffffff;
 
   border: 1px solid #e5e7eb;
+
   border-radius: 10px;
 
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.08);
 
   padding: 20px;
+
 }
 
 .koyasaiStageTT-bg {
+
   width: 97%;
+
   max-width: 940px;
 
   margin: 0 auto 40px;
@@ -48,52 +57,78 @@
 }
 
 .koyasaiStageTT {
+
   max-height: 500px;
+
   overflow-y: auto;
+
 }
 
 .koyasaiStageTT-scroll-area {
+
   max-height: 500px;
+
   overflow-y: auto;
 
   padding-right: 20px;
+
   margin-right: -10px;
+
 }
 
 .koyasaiStageTT-scroll-area::-webkit-scrollbar {
+
   width: 6px;
+
 }
 
 .koyasaiStageTT-scroll-area::-webkit-scrollbar-thumb {
-  background: rgba(120,130,255,0.35);
+
+  background: #ff9fb5;
+
   border-radius: 999px;
+
 }
 
 .koyasaiStageTT-wrapper {
+
   background: transparent;
+
   border: none;
+
   box-shadow: none;
+
   padding: 0;
+
 }
+
 
 /* ==========================================
    タイムライン
 ========================================== */
 
 .koyasaiStageTT-time-slot {
+
   position: relative;
+
   list-style: none;
+
   margin: 0;
+
   padding: 0;
+
 }
 
 .koyasaiStageTT-time-slot::before {
+
   content: "";
 
   position: absolute;
 
   left: 20px;
+
   top: 10px;
+
   bottom: 10px;
 
   width: 4px;
@@ -105,13 +140,16 @@
     #86a7ff 0%,
     #6f8dff 100%
   );
+
 }
+
 
 /* ==========================================
    アイテム
 ========================================== */
 
 .koyasaiStageTT-time-slot-item {
+
   position: relative;
 
   padding-left: 70px;
@@ -119,14 +157,17 @@
   padding-bottom: 20px;
 
   margin-bottom: 10px;
+
 }
 
 .koyasaiStageTT-time-slot-item::after {
+
   content: "";
 
   position: absolute;
 
   left: 70px;
+
   right: 0;
 
   bottom: 0;
@@ -134,21 +175,27 @@
   height: 1px;
 
   background: #dbe2ff;
+
 }
 
 .koyasaiStageTT-time-slot-item:last-child::after {
+
   display: none;
+
 }
 
 .koyasaiStageTT-time-slot-item::before {
+
   content: "";
 
   position: absolute;
 
   left: 13px;
+
   top: 2px;
 
   width: 18px;
+
   height: 18px;
 
   border-radius: 50%;
@@ -165,36 +212,48 @@
     0 0 0 1px rgba(104,115,155,0.35);
 
   z-index: 3;
+
 }
+
 
 /* ==========================================
    ヘッダー
 ========================================== */
 
 .koyasaiStageTT-slot-header {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 8px;
+
 }
+
 
 /* ==========================================
    時間
 ========================================== */
 
 .koyasaiStageTT-time {
+
   font-size: 16px;
+
   font-weight: 700;
 
   color: #6e7697;
 
   margin-bottom: 10px;
+
 }
+
 
 /* ==========================================
    イベント
 ========================================== */
 
 .koyasaiStageTT-event {
+
   position: relative;
 
   background: #ffffff;
@@ -206,7 +265,9 @@
   padding: 12px 18px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   overflow: hidden;
@@ -220,17 +281,21 @@
   transition: .2s ease;
 
   cursor: pointer;
+
 }
 
 .koyasaiStageTT-event::before {
+
   content: "";
 
   position: absolute;
 
   top: 0;
+
   left: 0;
 
   width: 10px;
+
   height: 100%;
 
   background: linear-gradient(
@@ -238,79 +303,107 @@
     #86a7ff,
     #6f8dff
   );
+
 }
 
 .koyasaiStageTT-event:hover {
+
   transform: translateY(-2px);
+
 }
 
 .koyasaiStageTT-event-left {
+
   position: absolute;
 
   left: 10px;
+
   right: 40px;
 
   top: 0;
+
   bottom: 0;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
 }
 
 .koyasaiStageTT-event-title {
+
   text-align: center;
 
   font-size: 16px;
+
   font-weight: 700;
 
   color: #4f67d8;
+
 }
 
 .koyasaiStageTT-toggle-icon {
+
   position: absolute;
+
   right: 18px;
 
   width: 13px;
+
   height: 13px;
 
   border-right: 4px solid #8aa0ff;
+
   border-bottom: 4px solid #8aa0ff;
 
   transform: rotate(45deg);
 
   transition: .25s;
+
 }
 
 .koyasaiStageTT-toggle-icon.open {
+
   transform: rotate(-135deg);
+
 }
+
 
 /* ==========================================
    開閉矢印
 ========================================== */
 
 .koyasaiStageTT-toggle-icon {
+
   width: 13px;
+
   height: 13px;
 
   border-right: 4px solid #8aa0ff;
+
   border-bottom: 4px solid #8aa0ff;
 
   transform: rotate(45deg);
 
   transition: .25s;
+
 }
 
 .koyasaiStageTT-toggle-icon.open {
+
   transform: rotate(-135deg);
+
 }
+
 
 /* ==========================================
    詳細
 ========================================== */
 
 .koyasaiStageTT-event-detail {
+
   margin-top: 14px;
 
   background: linear-gradient(
@@ -329,10 +422,13 @@
     0 6px 18px rgba(90,110,255,0.08);
 
   animation: fadeIn .25s ease;
+
 }
 
 .koyasaiStageTT-event-image {
+
   width: 100%;
+
   height: 220px;
 
   object-fit: cover;
@@ -345,9 +441,11 @@
 
   box-shadow:
     0 8px 20px rgba(120,140,255,0.10);
+
 }
 
 .koyasaiStageTT-event-detail p {
+
   margin: 0;
 
   color: #4d5f86;
@@ -355,16 +453,30 @@
   line-height: 1.8;
 
   font-size: 14px;
+
 }
 
+
+/* ==========================================
+   アニメーション
+========================================== */
+
 @keyframes fadeIn {
+
   from {
+
     opacity: 0;
+
     transform: translateY(-6px);
+
   }
 
   to {
+
     opacity: 1;
+
     transform: translateY(0);
+
   }
+
 }

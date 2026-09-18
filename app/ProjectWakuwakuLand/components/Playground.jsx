@@ -9,6 +9,9 @@ import no3Image from "./Play/No.3.jpg";
 import no5Image from "./Play/No.5.jpg";
 import no6Image from "./Play/No.6.jpg";
 
+import documentImage from "./Play/Document.png";
+import precautionsImage from "./Play/Precautions.png";
+
 /* ==========================================
    ゲーム・体験データ
 ========================================== */
@@ -144,9 +147,11 @@ export default function Playground() {
       ========================================== */}
 
       <div className="kirakiraparc-section-wrapper">
+
         <h2 className="kirakiraparc-section-title">
           ゲーム紹介
         </h2>
+
       </div>
 
 
@@ -178,7 +183,9 @@ export default function Playground() {
                 }}
               >
 
-                {/* 企画名 */}
+                {/* ==========================================
+                    企画名
+                ========================================== */}
 
                 <div className="kirakiraparc-thumb-title-area">
 
@@ -263,7 +270,12 @@ export default function Playground() {
               <div className="kirakiraparc-sub-title">
 
                 <span className="kirakiraparc-sub-icon">
-                  📄
+
+                  <img
+                    src={documentImage.src}
+                    alt=""
+                  />
+
                 </span>
 
                 <span>
@@ -292,7 +304,12 @@ export default function Playground() {
               <div className="kirakiraparc-notice-title">
 
                 <span className="kirakiraparc-warning-icon">
-                  ⚠️
+
+                  <img
+                    src={precautionsImage.src}
+                    alt=""
+                  />
+
                 </span>
 
                 <span>
