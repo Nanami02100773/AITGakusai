@@ -1,6 +1,6 @@
 const KyouyasaiData = [
   {
-    name: "出演者A",
+    name: "出演者1",
     image: "/images/sample.jpg",
     bio: "紹介文が入ります",
     sns: {
@@ -10,8 +10,9 @@ const KyouyasaiData = [
       website: "https://example.com",
     },
   },
+
   {
-    name: "出演者B",
+    name: "出演者2",
     image: "/images/sample2.jpg",
     bio: "こちらは別の出演者の紹介文です",
     sns: {
