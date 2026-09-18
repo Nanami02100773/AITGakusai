@@ -1,21 +1,42 @@
 const KyouyasaiStageTTDay = [
   {
-    time: "10:00",
+    time: "15:05〜15:50",
+    title: "リハーサル",
+  },
+
+  {
+    time: "15:50〜16:00",
     title: "オープニング",
-    image: "/images/sample1.png",
-    detail: "イベント開始のご挨拶です。",
   },
+
   {
-    time: "11:00",
-    title: "ゲーム大会",
-    image: "/images/sample2.png",
-    detail: "参加型ゲーム大会を開催！",
+    time: "16:00〜17:00",
+    title: "演者様8",
   },
+
   {
-    time: "12:00",
-    title: "スペシャルステージ",
-    image: "/images/sample3.png",
-    detail: "ゲストを迎えての特別ステージ企画です。",
+    time: "17:00〜17:45",
+    title: "リハーサル",
+  },
+
+  {
+    time: "17:45〜18:45",
+    title: "演者様9",
+  },
+
+  {
+    time: "18:45〜18:55",
+    title: "片付け",
+  },
+
+  {
+    time: "18:55〜19:55",
+    title: "ビンゴ",
+  },
+
+  {
+    time: "19:55〜20:00",
+    title: "エンディング",
   },
 ];
 

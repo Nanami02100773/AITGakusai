@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "./KouyasaiStageTT.css";
 
 import DayData from "./data/KouyasaiStageTTDay";
 
 const KouyasaiStageTT = () => {
-  const [openIndex, setOpenIndex] =
-    useState(null);
-
   return (
     <section className="koyasaiStageTT-section">
 
@@ -17,93 +14,65 @@ const KouyasaiStageTT = () => {
           タイムテーブル
         </h2>
       </div>
+
       <div className="koyasaiStageTT-bg">
 
-      <div className="koyasaiStageTT">
+        <div className="koyasaiStageTT">
 
-        <div className="koyasaiStageTT-scroll-area">
+          <div className="koyasaiStageTT-scroll-area">
 
-          <div className="koyasaiStageTT-wrapper">
+            <div className="koyasaiStageTT-wrapper">
 
-            <ul className="koyasaiStageTT-time-slot">
+              <ul className="koyasaiStageTT-time-slot">
 
-              {DayData.map((item, index) => (
-                <li
-                  key={index}
-                  className="koyasaiStageTT-time-slot-item"
-                >
-                  <div
-                    className="koyasaiStageTT-slot-header"
-                    onClick={() =>
-                      setOpenIndex(
-                        openIndex === index
-                          ? null
-                          : index
-                      )
-                    }
+                {DayData.map((item, index) => (
+                  <li
+                    key={index}
+                    className="koyasaiStageTT-time-slot-item"
                   >
-                    <span className="koyasaiStageTT-time">
-                      {item.time}
-                    </span>
 
-                    <div className="koyasaiStageTT-event">
+                    {/* 時間 */}
+                    <div className="koyasaiStageTT-slot-header">
 
-                      <div className="koyasaiStageTT-event-left">
+                      <span className="koyasaiStageTT-time">
+                        {item.time}
+                      </span>
 
-                        {item.icon && (
-                          <div className="koyasaiStageTT-event-icon">
-                            <img
-                              src={item.icon}
-                              alt={item.title}
-                            />
-                          </div>
-                        )}
+                      {/* 企画 */}
+                      <div className="koyasaiStageTT-event">
 
-                        <span className="koyasaiStageTT-event-title">
-                          {item.title}
-                        </span>
+                        <div className="koyasaiStageTT-event-left">
+
+                          {item.icon && (
+                            <div className="koyasaiStageTT-event-icon">
+                              <img
+                                src={item.icon}
+                                alt={item.title}
+                              />
+                            </div>
+                          )}
+
+                          <span className="koyasaiStageTT-event-title">
+                            {item.title}
+                          </span>
+
+                        </div>
 
                       </div>
 
-                      <span
-                        className={`koyasaiStageTT-toggle-icon ${
-                          openIndex === index
-                            ? "open"
-                            : ""
-                        }`}
-                      />
-
                     </div>
-                  </div>
 
-                  {openIndex === index && (
-                    <div className="koyasaiStageTT-event-detail">
+                  </li>
+                ))}
 
-                      {item.image && (
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="koyasaiStageTT-event-image"
-                        />
-                      )}
+              </ul>
 
-                      {item.detail && (
-                        <p>{item.detail}</p>
-                      )}
-
-                    </div>
-                  )}
-
-                </li>
-              ))}
-
-            </ul>
+            </div>
 
           </div>
 
         </div>
 
-      </div>
       </div>
 
     </section>

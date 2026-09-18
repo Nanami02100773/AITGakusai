@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "./KyouyasaiStageTT.css";
 
 import DayData from "./data/KyouyasaiStageTTDay";
 
 const KyouyasaiStageTT = () => {
-  const [openIndex, setOpenIndex] =
-    useState(null);
-
   return (
     <section className="kyoyasaiStageTT-section">
 
@@ -17,81 +14,56 @@ const KyouyasaiStageTT = () => {
           タイムテーブル
         </h2>
       </div>
+
       <div className="kyoyasaiStageTT-bg">
 
-      <div className="kyoyasaiStageTT">
+        <div className="kyoyasaiStageTT">
 
-        <div className="kyoyasaiStageTT-scroll-area">
+          <div className="kyoyasaiStageTT-scroll-area">
 
-          <div className="kyoyasaiStageTT-wrapper">
+            <div className="kyoyasaiStageTT-wrapper">
 
-            <ul className="kyoyasaiStageTT-time-slot">
+              <ul className="kyoyasaiStageTT-time-slot">
 
-              {DayData.map((item, index) => (
-                <li
-                  key={index}
-                  className="kyoyasaiStageTT-time-slot-item"
-                >
-                  <div
-                    className="kyoyasaiStageTT-slot-header"
-                    onClick={() =>
-                      setOpenIndex(
-                        openIndex === index
-                          ? null
-                          : index
-                      )
-                    }
+                {DayData.map((item, index) => (
+                  <li
+                    key={index}
+                    className="kyoyasaiStageTT-time-slot-item"
                   >
-                    <span className="kyoyasaiStageTT-time">
-                      {item.time}
-                    </span>
 
-                    <div className="kyoyasaiStageTT-event">
-<div className="kyoyasaiStageTT-event-left">
-  <span className="kyoyasaiStageTT-event-title">
-    {item.title}
-  </span>
-</div>
+                    <div className="kyoyasaiStageTT-slot-header">
 
-                      <span
-                        className={`kyoyasaiStageTT-toggle-icon ${
-                          openIndex === index
-                            ? "open"
-                            : ""
-                        }`}
-                      />
+                      {/* 時間 */}
+                      <span className="kyoyasaiStageTT-time">
+                        {item.time}
+                      </span>
 
-                    </div>
-                  </div>
+                      {/* 企画名 */}
+                      <div className="kyoyasaiStageTT-event">
 
-                  {openIndex === index && (
-                    <div className="kyoyasaiStageTT-event-detail">
+                        <div className="kyoyasaiStageTT-event-left">
 
-                      {item.image && (
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="kyoyasaiStageTT-event-image"
-                        />
-                      )}
+                          <span className="kyoyasaiStageTT-event-title">
+                            {item.title}
+                          </span>
 
-                      {item.detail && (
-                        <p>{item.detail}</p>
-                      )}
+                        </div>
+
+                      </div>
 
                     </div>
-                  )}
 
-                </li>
-              ))}
+                  </li>
+                ))}
 
-            </ul>
+              </ul>
+
+            </div>
 
           </div>
 
         </div>
 
-      </div>
       </div>
 
     </section>

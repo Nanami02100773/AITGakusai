@@ -76,7 +76,7 @@ const cardData = [
     title: "ボウリング",
     category: "ゲーム",
     location: "ボウリングテント",
-    image: no3Image,
+    image: null,
 
     content:
       "ボールを転がして、なるべく多くのピンを倒そう！1人2回まで挑戦できます。",
@@ -172,7 +172,9 @@ export default function Playground() {
               <div
                 className="kirakiraparc-thumb"
                 style={{
-                  "--playground-bg": `url(${item.image.src})`,
+                  "--playground-bg": item.image
+                    ? `url(${item.image.src})`
+                    : "none",
                 }}
               >
 
@@ -192,16 +194,22 @@ export default function Playground() {
 
 
                 {/* ==========================================
-                    四角い写真
+                    写真・NO IMAGE
                 ========================================== */}
 
                 <div className="kirakiraparc-image-circle">
 
-                  <img
-                    src={item.image.src}
-                    alt={item.title}
-                    className="kirakiraparc-image"
-                  />
+                  {item.image ? (
+                    <img
+                      src={item.image.src}
+                      alt={item.title}
+                      className="kirakiraparc-image"
+                    />
+                  ) : (
+                    <span className="kirakiraparc-no-image">
+                      NO IMAGE
+                    </span>
+                  )}
 
                 </div>
 

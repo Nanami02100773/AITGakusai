@@ -11,6 +11,7 @@ const LaughMusicCastDay2 = [
       website: "https://example.com",
     },
   },
+
   {
     name: "出演者D",
     image: "/images/sample.jpg",

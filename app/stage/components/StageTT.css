@@ -208,7 +208,7 @@
     #f7f7ff
   );
 
-  border: 1px solid #ececff;
+  border: 2px solid #ececff;
 
   border-radius: 18px;
 
@@ -264,13 +264,10 @@
     #f7f7ff
   );
 
-  border: 1px solid #ececff;
+  border: 2px solid #ececff;
 
   border-radius: 12px;
 
-  box-shadow:
-    0 4px 12px rgba(120,120,180,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.9);
 
   cursor: pointer;
 

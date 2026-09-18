@@ -6,6 +6,8 @@ import "./IntroductoryItems.css";
 
 /* ==========================================
    No.1
+   Group/No.1
+   画像：3枚
 ========================================== */
 
 import no1Image1 from "./Group/No.1/1.jpg";
@@ -15,6 +17,8 @@ import no1Image3 from "./Group/No.1/3.jpg";
 
 /* ==========================================
    No.2
+   Group/No.2
+   画像：4枚
 ========================================== */
 
 import no2Image1 from "./Group/No.2/1.jpg";
@@ -25,6 +29,8 @@ import no2Image4 from "./Group/No.2/4.jpg";
 
 /* ==========================================
    No.3
+   Group/No.3
+   画像：2枚
 ========================================== */
 
 import no3Image1 from "./Group/No.3/1.jpg";
@@ -33,13 +39,26 @@ import no3Image2 from "./Group/No.3/2.jpg";
 
 /* ==========================================
    No.4
+   Group/No.4
+   画像：1枚
+   漫画動画研究会
 ========================================== */
 
 import no4Image1 from "./Group/No.4/1.jpg";
-import no4Image2 from "./Group/No.4/2.jpg";
-import no4Image3 from "./Group/No.4/3.jpg";
-import no4Image4 from "./Group/No.4/4.jpg";
-import no4Image5 from "./Group/No.4/5.jpg";
+
+
+/* ==========================================
+   No.5
+   Group/No.5
+   画像：5枚
+   自由ヶ丘ボードゲームサークル
+========================================== */
+
+import no5Image1 from "./Group/No.5/1.jpg";
+import no5Image2 from "./Group/No.5/2.jpg";
+import no5Image3 from "./Group/No.5/3.jpg";
+import no5Image4 from "./Group/No.5/4.jpg";
+import no5Image5 from "./Group/No.5/5.jpg";
 
 
 /* ==========================================
@@ -47,6 +66,10 @@ import no4Image5 from "./Group/No.4/5.jpg";
 ========================================== */
 
 const cardData = [
+
+  /* ==========================================
+     No.1
+  ========================================== */
 
   {
     group: "フリーサウンドサークル",
@@ -61,6 +84,10 @@ const cardData = [
     ],
   },
 
+
+  /* ==========================================
+     No.2
+  ========================================== */
 
   {
     group: "DJ・DTM部",
@@ -77,6 +104,10 @@ const cardData = [
   },
 
 
+  /* ==========================================
+     No.3
+  ========================================== */
+
   {
     group: "サバイバルゲーム部",
 
@@ -90,6 +121,30 @@ const cardData = [
   },
 
 
+  /* ==========================================
+     No.4
+     漫画動画研究会
+     画像：1枚
+  ========================================== */
+
+  {
+    group: "漫画動画研究会",
+
+    subdesc1:
+      "普段は部室でイラストや漫画を描き、コミティアや博麗神社例大祭などのイベントに参加しています！",
+
+    images: [
+      no4Image1,
+    ],
+  },
+
+
+  /* ==========================================
+     No.5
+     自由ヶ丘ボードゲームサークル
+     画像：5枚
+  ========================================== */
+
   {
     group: "自由ヶ丘ボードゲームサークル",
 
@@ -97,11 +152,11 @@ const cardData = [
       "私達ボードゲームサークルは月曜日の4限後に集まり、ボードゲームをして交流をしているサークルです。ボードゲームをしているサークルではありますが、過去には近くの小学校の卒業生を送る会に参加させていただき、クイズやなぞなぞなども企画しました。自由ヶ丘キャンパス312教室で活動しています！",
 
     images: [
-      no4Image1,
-      no4Image2,
-      no4Image3,
-      no4Image4,
-      no4Image5,
+      no5Image1,
+      no5Image2,
+      no5Image3,
+      no5Image4,
+      no5Image5,
     ],
   },
 
@@ -132,10 +187,12 @@ const IntroductoryItems = () => {
 
           const images = cardData[index].images;
 
+          /* 画像が1枚以下の場合 */
           if (!images || images.length <= 1) {
             return 0;
           }
 
+          /* 次の画像へ */
           return (current + 1) % images.length;
 
         })
@@ -175,8 +232,30 @@ const IntroductoryItems = () => {
 
           {cardData.map((item, index) => {
 
+            /* ==================================
+               画像枚数
+            ================================== */
+
             const imageCount = item.images.length;
-            const currentImage = currentImages[index];
+
+
+            /* ==================================
+               現在の画像番号
+            ================================== */
+
+            const currentImage =
+              currentImages[index] || 0;
+
+
+            /* ==================================
+               安全な画像番号
+            ================================== */
+
+            const safeImageIndex =
+              imageCount > 0
+                ? currentImage % imageCount
+                : 0;
+
 
             return (
 
@@ -229,14 +308,15 @@ const IntroductoryItems = () => {
 
                     <>
 
+
                       {/* ==============================
                           写真
                       ============================== */}
 
                       <img
-                        key={`${index}-${currentImage}`}
-                        src={item.images[currentImage].src}
-                        alt={`${item.group} 写真 ${currentImage + 1}`}
+                        key={`${index}-${safeImageIndex}`}
+                        src={item.images[safeImageIndex].src}
+                        alt={`${item.group} 写真 ${safeImageIndex + 1}`}
                         className="IntroductoryItems-thumb-image"
                       />
 
@@ -248,7 +328,9 @@ const IntroductoryItems = () => {
                       {imageCount > 1 && (
 
                         <div className="IntroductoryItems-photo-count">
-                          {currentImage + 1} / {imageCount}
+
+                          {safeImageIndex + 1} / {imageCount}
+
                         </div>
 
                       )}
@@ -267,7 +349,7 @@ const IntroductoryItems = () => {
                             <span
                               key={imageIndex}
                               className={
-                                imageIndex === currentImage
+                                imageIndex === safeImageIndex
                                   ? "IntroductoryItems-photo-dot active"
                                   : "IntroductoryItems-photo-dot"
                               }
@@ -282,6 +364,10 @@ const IntroductoryItems = () => {
                     </>
 
                   ) : (
+
+                    /* ==============================
+                       写真なし
+                    ============================== */
 
                     <div className="IntroductoryItems-no-image">
                       PHOTO

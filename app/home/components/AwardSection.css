@@ -228,11 +228,11 @@
 
   width: 94%;
 
-  min-height: 145px;
+  min-height: 120px;
 
   margin: 20px auto 5px;
 
-  padding: 20px 15px 20px 80px;
+  padding: 25px 15px 5px 80px;
 
   display: flex;
 
@@ -344,11 +344,15 @@
 ================================================= */
 
 .Home-Award-cardContent {
+
   width: 100%;
 
   min-width: 0;
 
   text-align: left;
+
+  /* 番号と賞名の高さを合わせる */
+  transform: translateY(-8px);
 }
 
 
@@ -357,13 +361,14 @@
 ================================================= */
 
 .Home-Award-cardTitle {
+
   position: relative;
 
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 
   color: #132c73;
 
-  font-size: 17px;
+  font-size: 20px;
 
   font-weight: 700;
 
@@ -393,7 +398,7 @@
 
   color: #163b8f;
 
-  font-size: 11px;
+  font-size: 12px;
 
   font-weight: 700;
 

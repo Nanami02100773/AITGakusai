@@ -1,30 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "./LaughMusicStageTT.css";
 
 import Day1Data from "./data/LaughMusicStageTTDay1";
 import Day2Data from "./data/LaughMusicStageTTDay2";
 
-const LaughMusicStageTT = ({
-  selectedDay,
-}) => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const data =
-    selectedDay === 1
-      ? Day1Data
-      : Day2Data;
-
-  // タップして詳細を表示しない企画
-  const noDetailTitles = [
-    "オープニング",
-    "準備",
-    "〇✕ゲーム",
-    "アイドルリハーサル",
-    "歌王",
-    "エンディング",
-  ];
+const LaughMusicStageTT = ({ selectedDay }) => {
+  const data = selectedDay === 1 ? Day1Data : Day2Data;
 
   return (
     <section className="LaughMusicStageTT-section">
@@ -43,101 +26,41 @@ const LaughMusicStageTT = ({
 
             <ul className="LaughMusicStageTT-time-slot">
 
-              {data.map((item, index) => {
+              {data.map((item, index) => (
+                <li
+                  key={index}
+                  className="LaughMusicStageTT-time-slot-item"
+                >
 
-                // 詳細表示しない企画かどうか
-                const noDetail =
-                  noDetailTitles.includes(item.title);
+                  {/* 時間 */}
+                  <span className="LaughMusicStageTT-time">
+                    {item.time}
+                  </span>
 
-                return (
-                  <li
-                    key={index}
-                    className="LaughMusicStageTT-time-slot-item"
-                  >
+                  {/* イベント */}
+                  <div className="LaughMusicStageTT-event">
 
-                    <div
-                      className={`LaughMusicStageTT-slot-header ${
-                        noDetail
-                          ? "no-detail"
-                          : ""
-                      }`}
-                      onClick={() => {
-                        // 詳細なしの企画は何もしない
-                        if (noDetail) return;
+                    <div className="LaughMusicStageTT-event-left">
 
-                        setOpenIndex(
-                          openIndex === index
-                            ? null
-                            : index
-                        );
-                      }}
-                    >
-
-                      {/* 時間 */}
-                      <span className="LaughMusicStageTT-time">
-                        {item.time}
-                      </span>
-
-                      {/* イベント */}
-                      <div className="LaughMusicStageTT-event">
-
-                        <div className="LaughMusicStageTT-event-left">
-
-                          {item.icon && (
-                            <div className="LaughMusicStageTT-event-icon">
-                              <img
-                                src={item.icon}
-                                alt={item.title}
-                              />
-                            </div>
-                          )}
-
-                          <span className="LaughMusicStageTT-event-title">
-                            {item.title}
-                          </span>
-
-                        </div>
-
-                        {/* 詳細がある企画だけ矢印を表示 */}
-                        {!noDetail && (
-                          <span
-                            className={`LaughMusicStageTT-toggle-icon ${
-                              openIndex === index
-                                ? "open"
-                                : ""
-                            }`}
+                      {item.icon && (
+                        <div className="LaughMusicStageTT-event-icon">
+                          <img
+                            src={item.icon}
+                            alt={item.title}
                           />
-                        )}
-
-                      </div>
-
-                    </div>
-
-                    {/* 詳細がある企画だけ表示 */}
-                    {!noDetail &&
-                      openIndex === index && (
-                        <div className="LaughMusicStageTT-event-detail">
-
-                          {item.image && (
-                            <img
-                              src={item.image}
-                              alt={item.title}
-                              className="LaughMusicStageTT-event-image"
-                            />
-                          )}
-
-                          {item.detail && (
-                            <p>
-                              {item.detail}
-                            </p>
-                          )}
-
                         </div>
                       )}
 
-                  </li>
-                );
-              })}
+                      <span className="LaughMusicStageTT-event-title">
+                        {item.title}
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </li>
+              ))}
 
             </ul>
 
