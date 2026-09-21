@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import Date from "./Date";
 import StageTT from "./StageTT";
-import Performer from "./Performer";
+// import Performer from "./Performer";
 
 import StageTTData1 from "./data/StageTTData1";
 import StageTTData2 from "./data/StageTTData2";
@@ -37,7 +37,7 @@ const StageSchedule = () => {
       {/* 日別コンテンツ */}
       <div className="Stage-Schedule-content">
         <StageTT data={timetableData} />
-        <Performer speakers={speakerData} />
+        {/* <Performer speakers={speakerData} /> */}
       </div>
     </>
   );

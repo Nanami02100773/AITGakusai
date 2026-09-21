@@ -28,7 +28,7 @@ function LaughMusicGameCorner() {
   return (
     <section className="LaughMusic-gameCorner-section">
 
-      <div className="LaughMusic-section-title">
+      <div className="laughmusic-section-title">
         イベント
       </div>
 

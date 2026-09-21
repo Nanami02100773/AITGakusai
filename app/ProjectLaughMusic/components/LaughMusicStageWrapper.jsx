@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import LaughMusicDate from "./LaughMusicDate";
 import LaughMusicStageTT from "./LaughMusicStageTT";
-import LaughMusicCast from "./LaughMusicCast";
+// import LaughMusicCast from "./LaughMusicCast";
 
 
 import LaughMusicCastDay1 from "./data/LaughMusicCastDay1";
@@ -30,10 +30,10 @@ return (
       <LaughMusicStageTT
         selectedDay={selectedDay}
       />
-
+{/* 
       <LaughMusicCast
         artists={artists}
-      />
+      /> */}
     </div>
   </>
 );

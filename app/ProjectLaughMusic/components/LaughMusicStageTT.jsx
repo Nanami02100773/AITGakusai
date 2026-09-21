@@ -13,7 +13,7 @@ const LaughMusicStageTT = ({ selectedDay }) => {
     <section className="LaughMusicStageTT-section">
 
       <div className="LaughMusic-section-wrapper">
-        <h2 className="LaughMusic-section-title">
+        <h2 className="laughmusic-section-title">
           タイムテーブル
         </h2>
       </div>

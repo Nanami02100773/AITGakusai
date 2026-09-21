@@ -6,7 +6,15 @@ import "./StageTT.css";
 const StageTT = ({ data = [] }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleDetail = (index) => {
+  const toggleDetail = (index, item) => {
+    // 演者様関連の項目は開かない
+    if (
+      item.title?.includes("演者") ||
+      item.title?.includes("出演")
+    ) {
+      return;
+    }
+
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -30,125 +38,136 @@ const StageTT = ({ data = [] }) => {
 
           <ul className="Stage-TT-list">
 
-            {data.map((item, index) => (
-              <li
-                key={index}
-                className="Stage-TT-item"
-              >
+            {data.map((item, index) => {
 
-                {/* =================================================
-                    タイムラインの丸
-                ================================================= */}
-                <div className="Stage-TT-dot"></div>
+              const isPerformer =
+                item.title?.includes("演者") ||
+                item.title?.includes("出演");
 
-
-                {/* =================================================
-                    大きなカード
-                ================================================= */}
-                <div className="Stage-TT-card">
+              return (
+                <li
+                  key={index}
+                  className="Stage-TT-item"
+                >
 
                   {/* =================================================
-                      時間
+                      タイムラインの丸
                   ================================================= */}
-                  <div className="Stage-TT-time">
-                    {item.time}
-                  </div>
+                  <div className="Stage-TT-dot"></div>
 
 
                   {/* =================================================
-                      イベントカード
+                      大きなカード
                   ================================================= */}
-                  <div
-                    className={`Stage-TT-event ${
-                      openIndex === index
-                        ? "Stage-TT-event-open"
-                        : ""
-                    }`}
-                    onClick={() => toggleDetail(index)}
-                  >
-
-                    {/* 左側の青ライン */}
-                    <div className="Stage-TT-event-line"></div>
-
+                  <div className="Stage-TT-card">
 
                     {/* =================================================
-                        アイコン
+                        時間
                     ================================================= */}
-                    <div className="Stage-TT-event-icon">
-
-                      <img
-                        src={item.icon}
-                        alt={item.title}
-                      />
-
+                    <div className="Stage-TT-time">
+                      {item.time}
                     </div>
 
 
                     {/* =================================================
-                        イベント内容
+                        イベントカード
                     ================================================= */}
-                    <div className="Stage-TT-event-content">
+                    <div
+                      className={`Stage-TT-event ${
+                        openIndex === index
+                          ? "Stage-TT-event-open"
+                          : ""
+                      }`}
+                      onClick={() => toggleDetail(index, item)}
+                    >
 
-                      <div className="Stage-TT-event-title">
-                        {item.title}
-                      </div>
-
-
-                      {/* 赤い3点 */}
-                      <div className="Stage-TT-event-dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-
-                    </div>
+                      {/* 左側の青ライン */}
+                      <div className="Stage-TT-event-line"></div>
 
 
-                    {/* =================================================
-                        矢印
-                    ================================================= */}
-                    <div className="Stage-TT-toggle-button">
+                      {/* =================================================
+                          アイコン
+                      ================================================= */}
+                      <div className="Stage-TT-event-icon">
 
-                      <span
-                        className={`Stage-TT-toggle-icon ${
-                          openIndex === index
-                            ? "Stage-TT-toggle-icon-open"
-                            : ""
-                        }`}
-                      />
-
-                    </div>
-
-                  </div>
-
-
-                  {/* =================================================
-                      詳細
-                  ================================================= */}
-                  {openIndex === index && (
-                    <div className="Stage-TT-detail">
-
-                      {item.image && (
                         <img
-                          src={item.image}
+                          src={item.icon}
                           alt={item.title}
-                          className="Stage-TT-detail-image"
                         />
-                      )}
 
-                      {item.detail && (
-                        <p className="Stage-TT-detail-text">
-                          {item.detail}
-                        </p>
+                      </div>
+
+
+                      {/* =================================================
+                          イベント内容
+                      ================================================= */}
+                      <div className="Stage-TT-event-content">
+
+                        <div className="Stage-TT-event-title">
+                          {item.title}
+                        </div>
+
+
+                        {/* 赤い3点 */}
+                        {!isPerformer && (
+                          <div className="Stage-TT-event-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </div>
+                        )}
+
+                      </div>
+
+
+                      {/* =================================================
+                          矢印
+                      ================================================= */}
+                      {!isPerformer && (
+                        <div className="Stage-TT-toggle-button">
+
+                          <span
+                            className={`Stage-TT-toggle-icon ${
+                              openIndex === index
+                                ? "Stage-TT-toggle-icon-open"
+                                : ""
+                            }`}
+                          />
+
+                        </div>
                       )}
 
                     </div>
-                  )}
 
-                </div>
 
-              </li>
-            ))}
+                    {/* =================================================
+                        詳細
+                    ================================================= */}
+                    {!isPerformer && openIndex === index && (
+                      <div className="Stage-TT-detail">
+
+                        {item.image && (
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="Stage-TT-detail-image"
+                          />
+                        )}
+
+                        {item.detail && (
+                          <p className="Stage-TT-detail-text">
+                            {item.detail}
+                          </p>
+                        )}
+
+                      </div>
+                    )}
+
+                  </div>
+
+                </li>
+              );
+            })}
 
           </ul>
 

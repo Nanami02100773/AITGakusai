@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Date from "./Date";
 import StageTT from "./StageTT";
-import SpeakerIntroduction from "./SpeakerIntroduction";
+// import SpeakerIntroduction from "./SpeakerIntroduction";
 import StageTTdata from "./data/StageTTdata";
 import StageTTdata2 from "./data/StageTTdata2";
 
@@ -23,7 +23,7 @@ const StageTTWrapper = () => {
       {/* ✅ こっちはグレー背景に含める */}
       <div className="Stage-background-box ">
         <StageTT data={currentData} />
-        <SpeakerIntroduction />
+        {/* <SpeakerIntroduction /> */}
       </div>
     </>
   );
