@@ -1,6 +1,6 @@
 import './Title.css';
 
-function Title({ text = "CONCERT"}) {
+function Title({ text = "CONCERT2026"}) {
   return (
     <div className="concert-title">{text}</div>
   );

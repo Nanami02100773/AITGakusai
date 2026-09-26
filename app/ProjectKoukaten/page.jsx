@@ -5,7 +5,7 @@ import ImageCarousel from "./components/ImageCarousel";
 // もしファイル名が DescriptionBox.jsx の場合：
 import DescriptionBox from "./components/DescriptionBox";
 import DetailTable from "./components/DetailTable";
-import IntroductoryItems from "./components/IntroductoryItems";
+import Group from "./components/Group";
 import NavigationBar from "./components/NavigationBar";
 
 
@@ -16,7 +16,7 @@ export default function Page() {
       <ImageCarousel />
       <DescriptionBox />
       <DetailTable />
-      <IntroductoryItems />
+      <Group />
       <NavigationBar />
     </div>
   );

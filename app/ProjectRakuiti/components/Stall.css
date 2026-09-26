@@ -13,6 +13,7 @@
   box-sizing: border-box;
 }
 
+
 /* ==========================================
    カード一覧の背景
 ========================================== */
@@ -112,8 +113,9 @@
 ========================================== */
 
 .rakuichi-thumb {
+  position: relative;
+
   width: 100%;
-  height: 205px;
 
   box-sizing: border-box;
 
@@ -128,6 +130,110 @@
   border: 1px solid #dfe9fa;
 
   overflow: hidden;
+}
+
+
+/* ==========================================
+   写真本体
+========================================== */
+
+.rakuichi-thumb-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  animation: rakuichi-photo-fade 0.45s ease;
+}
+
+
+/* ==========================================
+   写真切り替えアニメーション
+========================================== */
+
+@keyframes rakuichi-photo-fade {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* ==========================================
+   写真枚数
+========================================== */
+
+.rakuichi-photo-count {
+  position: absolute;
+
+  top: 7px;
+  right: 7px;
+
+  padding: 3px 7px;
+
+  box-sizing: border-box;
+
+  background: rgba(45, 60, 100, 0.68);
+
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* ==========================================
+   写真ドット
+========================================== */
+
+.rakuichi-photo-dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 7px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 4px 7px;
+
+  background: rgba(45, 60, 100, 0.48);
+
+  border-radius: 20px;
+}
+
+
+/* ==========================================
+   写真ドット
+========================================== */
+
+.rakuichi-photo-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.rakuichi-photo-dot.active {
+  background: #ffffff;
 }
 
 
@@ -408,9 +514,56 @@
   ------------------------------------------ */
 
   .rakuichi-thumb {
-    height: 170px;
+    width: 100%;
+    height: auto;
 
     border-radius: 9px;
+  }
+
+
+  /* ------------------------------------------
+     写真本体
+  ------------------------------------------ */
+
+  .rakuichi-thumb-image {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    object-position: center;
+  }
+
+
+  /* ------------------------------------------
+     写真枚数
+  ------------------------------------------ */
+
+  .rakuichi-photo-count {
+    top: 5px;
+    right: 5px;
+
+    padding: 2px 6px;
+
+    font-size: 9px;
+  }
+
+
+  /* ------------------------------------------
+     写真ドット
+  ------------------------------------------ */
+
+  .rakuichi-photo-dots {
+    bottom: 5px;
+
+    gap: 3px;
+
+    padding: 3px 6px;
+  }
+
+  .rakuichi-photo-dot {
+    width: 4px;
+    height: 4px;
   }
 
 

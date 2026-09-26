@@ -1,10 +1,21 @@
 import React from "react";
 import "./Game.css";
 
+import image1 from "./Game/1.jpg";
+import image2 from "./Game/2.jpg";
+import image3 from "./Game/3.jpg";
+import image4 from "./Game/4.jpg";
+import image5 from "./Game/5.jpg";
+import image6 from "./Game/6.jpg";
+import image7 from "./Game/7.jpg";
+import image8 from "./Game/8.jpg";
+
+
 const cardData = [
   {
     group: "ポーカー",
     label: "1～4人",
+    image: image1,
     title: "役をそろえてディーラーに勝利！",
     points: [
       "5枚のカードを使って役を作るゲームです。",
@@ -12,9 +23,11 @@ const cardData = [
       "ロイヤルストレートフラッシュなら最大15倍の配当！",
     ],
   },
+
   {
     group: "ブラックジャック",
     label: "1～4人",
+    image: image2,
     title: "21に近づけてディーラーに勝とう！",
     points: [
       "カードの合計を21に近づけるゲームです。",
@@ -22,9 +35,11 @@ const cardData = [
       "Aと絵札によるブラックジャックなら3倍の配当！",
     ],
   },
+
   {
     group: "大富豪",
     label: "2～4人",
+    image: image3,
     title: "誰よりも早くカードを出し切れ！",
     points: [
       "カードの強さを見極めながら、手札を誰よりも早くなくします。",
@@ -32,9 +47,11 @@ const cardData = [
       "革命や8切りなどの特殊ルールも登場！",
     ],
   },
+
   {
     group: "ドボン",
     label: "2～4人",
+    image: image4,
     title: "カードを出して誰よりも早くあがろう！",
     points: [
       "場のカードと同じマークや数字のカードを出していきます。",
@@ -42,19 +59,23 @@ const cardData = [
       "条件を満たせば「ドボン」を宣言して一気にあがれます！",
     ],
   },
+
   {
     group: "ジャックポット",
     label: "1人",
-    title: "サイコロを振ってコインを集めよう！",
+    image: image5,
+    title: "サイコロの出目を予想して勝負！",
     points: [
-      "2つのサイコロを振り、出た目の合計の場所にコインを置きます。",
-      "コインが3枚以上たまっている場所に当たれば、コインをすべてもらえます。",
-      "ゾロ目や1のゾロ目には特別なチャンスがあります！",
+      "3つのサイコロを振り、出た目や組み合わせを予想するゲームです。",
+      "サイコロの合計や特定の数字、組み合わせなどにコインを賭けます。",
+      "賭け方によって配当が異なり、高い配当を狙うことができます！",
     ],
   },
+
   {
     group: "ビッグシックス",
     label: "1人～",
+    image: image6,
     title: "狙った場所にコインを賭けて勝負！",
     points: [
       "JOKERやFLAG、数字など好きな場所にコインを賭けます。",
@@ -62,9 +83,11 @@ const cardData = [
       "場所によって配当が異なり、最大20枚まで賭けられます！",
     ],
   },
+
   {
     group: "ルーレット",
     label: "1人～",
+    image: image7,
     title: "数字を予想してコインを賭けよう！",
     points: [
       "好きな数字や色、奇数・偶数などにコインを賭けます。",
@@ -72,9 +95,11 @@ const cardData = [
       "賭け方によって配当が変わり、大きな配当も狙えます！",
     ],
   },
+
   {
     group: "ダーツ",
     label: "1～2人",
+    image: image8,
     title: "3本のダーツで高得点を狙え！",
     points: [
       "1人3本のダーツを投げて得点を競います。",
@@ -83,6 +108,7 @@ const cardData = [
     ],
   },
 ];
+
 
 const Game = () => {
   return (
@@ -93,9 +119,11 @@ const Game = () => {
       ========================================== */}
 
       <div className="kajino-section-wrapper">
+
         <div className="kajino-section-title">
           ゲーム一覧
         </div>
+
       </div>
 
 
@@ -104,9 +132,11 @@ const Game = () => {
       ========================================== */}
 
       <main className="kajino-card-list">
+
         <div className="kajino-card-wrapper">
 
           {cardData.map((item, index) => (
+
             <div
               className="kajino-card"
               key={index}
@@ -121,18 +151,23 @@ const Game = () => {
                 <div className="kajino-card-header-text">
 
                   {/* ゲーム名 */}
+
                   <div className="kajino-overlay-box">
                     {item.group}
                   </div>
 
+
                   {/* キャッチコピー */}
+
                   <div className="kajino-sub1-title">
                     {item.title}
                   </div>
 
                 </div>
 
+
                 {/* 横ライン */}
+
                 <div className="kajino-header-line"></div>
 
               </div>
@@ -145,11 +180,19 @@ const Game = () => {
               <div className="kajino-card-content">
 
                 {/* 左側 */}
+
                 <div className="kajino-card-left">
 
                   <div className="kajino-thumb-wrapper">
 
-                    <div className="kajino-thumb"></div>
+                    <div className="kajino-thumb">
+
+                      <img
+                        src={item.image.src}
+                        alt={item.group}
+                      />
+
+                    </div>
 
                   </div>
 
@@ -157,9 +200,11 @@ const Game = () => {
 
 
                 {/* 右側 */}
+
                 <div className="kajino-card-right">
 
                   {item.points.map((point, pointIndex) => (
+
                     <div
                       className="kajino-point"
                       key={pointIndex}
@@ -174,6 +219,7 @@ const Game = () => {
                       </div>
 
                     </div>
+
                   ))}
 
                 </div>
@@ -190,9 +236,11 @@ const Game = () => {
               </div>
 
             </div>
+
           ))}
 
         </div>
+
       </main>
 
     </section>

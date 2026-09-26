@@ -95,7 +95,7 @@ export default function Section() {
             />
 
             <Card
-              title="Concert"
+              title="Concert2026"
               link="/ProjectConcert"
               image="/projectsection/concert.png"
             />

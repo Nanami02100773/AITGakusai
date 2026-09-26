@@ -9,7 +9,7 @@
 
   margin: 0 auto;
 
-  padding: 5px 0 70px;
+  padding: 5px 0 100px;
 
   box-sizing: border-box;
 }
@@ -66,6 +66,7 @@
   box-sizing: border-box;
 }
 
+
 .kajino-card:last-child {
   margin-bottom: 0;
 }
@@ -114,6 +115,8 @@
 .kajino-overlay-box {
   width: fit-content;
 
+  max-width: 100%;
+
   padding: 4px 10px;
 
   background: linear-gradient(
@@ -137,6 +140,8 @@
   letter-spacing: 0.02em;
 
   box-sizing: border-box;
+
+  white-space: nowrap;
 }
 
 
@@ -146,6 +151,8 @@
 
 .kajino-sub1-title {
   width: fit-content;
+
+  max-width: 100%;
 
   margin: 0;
 
@@ -220,10 +227,19 @@
   width: 100%;
 }
 
+
 .kajino-thumb {
   width: 100%;
 
   height: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
 
   background: linear-gradient(
     135deg,
@@ -236,6 +252,21 @@
   border-radius: 10px;
 
   box-sizing: border-box;
+}
+
+
+/* ==========================================
+   ゲーム画像
+========================================== */
+
+.kajino-thumb img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
 }
 
 
@@ -300,8 +331,8 @@
 
   background: linear-gradient(
     135deg,
-    #6f8dff,
-    #5874dc
+    #a9c4ff,
+    #91aff2
   );
 
   color: #ffffff;
@@ -311,7 +342,7 @@
   font-weight: 700;
 
   box-shadow:
-    0 2px 5px rgba(111, 141, 255, 0.18);
+    0 2px 5px rgba(145, 175, 242, 0.14);
 }
 
 
