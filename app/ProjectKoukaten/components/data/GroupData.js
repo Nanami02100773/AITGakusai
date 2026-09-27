@@ -31,6 +31,7 @@ import no3Image1 from "../Group/No.3/1.jpg";
 ========================================== */
 
 import no4Image1 from "../Group/No.4/1.jpg";
+import no4Image2 from "../Group/No.4/2.jpg";
 
 
 /* ==========================================
@@ -192,6 +193,7 @@ const cardData = [
 
     images: [
       no4Image1,
+      no4Image2,
     ],
   },
 

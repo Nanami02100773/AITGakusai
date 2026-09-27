@@ -8,24 +8,25 @@ const MenuData = {
 
   focusTitle: "メニュー紹介",
 
-  menuNote: "※当日内容が変更されることがあります",
-
   menu: [
     {
       category: "オケのたこ焼き",
       type: "",
       items: [],
     },
+
     {
       category: "オケのタピオカ",
       type: "",
       items: [],
     },
+
     {
       category: "オケのチョコバナナ",
       type: "",
       items: [],
     },
+
     {
       category: "オケのうどん",
       type: "",

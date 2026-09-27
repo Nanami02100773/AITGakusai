@@ -4,9 +4,7 @@
 
 .Rakuiti-01-shop-detail {
   width: 100%;
-
   padding-bottom: 140px;
-
   box-sizing: border-box;
 }
 
@@ -17,24 +15,17 @@
 
 .Rakuiti-01-shop-icon-area {
   position: relative;
-
   width: 380px;
   max-width: calc(100% - 32px);
-
   height: 230px;
-
   margin: 70px auto 0;
-
   border-radius: 28px;
-
   overflow: hidden;
-
   background: linear-gradient(
     135deg,
     #eaf3ff,
     #d7e8ff
   );
-
   box-shadow:
     0 12px 30px rgba(92, 124, 220, 0.16);
 }
@@ -46,10 +37,8 @@
 
 .Rakuiti-01-shop-icon-area img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: contain;
 }
 
@@ -60,42 +49,39 @@
 
 .Rakuiti-01-image-button {
   position: absolute;
-
   top: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 36px;
   height: 36px;
-
   padding: 0;
-
   transform: translateY(-50%);
-
   border: none;
-
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.82);
-
   color: #6f8dff;
-
   font-size: 28px;
   font-weight: 500;
-
   line-height: 1;
-
   cursor: pointer;
-
   box-shadow:
     0 4px 12px rgba(80, 110, 190, 0.18);
 }
 
+
+/* =================================
+   前へ
+================================= */
+
 .Rakuiti-01-image-button-prev {
   left: 12px;
 }
+
+
+/* =================================
+   次へ
+================================= */
 
 .Rakuiti-01-image-button-next {
   right: 12px;
@@ -108,7 +94,6 @@
 
 .Rakuiti-01-image-button:hover {
   background: rgba(255, 255, 255, 0.96);
-
   color: #5574dc;
 }
 
@@ -119,15 +104,11 @@
 
 .Rakuiti-01-image-dots {
   position: absolute;
-
   left: 50%;
   bottom: 10px;
-
   display: flex;
   align-items: center;
-
   gap: 6px;
-
   transform: translateX(-50%);
 }
 
@@ -139,17 +120,11 @@
 .Rakuiti-01-image-dot {
   width: 7px;
   height: 7px;
-
   padding: 0;
-
   border: none;
-
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.75);
-
   cursor: pointer;
-
   box-shadow:
     0 1px 4px rgba(70, 100, 180, 0.15);
 }
@@ -162,7 +137,6 @@
 .Rakuiti-01-image-dot-active {
   width: 9px;
   height: 9px;
-
   background: #6f8dff;
 }
 
@@ -174,38 +148,27 @@
 .Rakuiti-01-shop-name {
   position: relative;
   z-index: 2;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 240px;
   height: 44px;
-
   margin: 20px auto 10px;
-
   background: linear-gradient(
     90deg,
     #86a7ff,
     #6f8dff
   );
-
   color: #fff;
-
   font-size: 17px;
   font-weight: bold;
-
   border-radius: 999px;
-
   clip-path: none;
-
   border: 2px solid rgba(255, 255, 255, 0.55);
-
   box-shadow:
     0 8px 20px rgba(160, 170, 255, 0.14),
     inset 0 2px 0 rgba(255, 255, 255, 0.7),
     inset 0 -2px 0 rgba(255, 255, 255, 0.55);
-
   overflow: hidden;
 }
 
@@ -218,14 +181,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 20px;
-
   color: #5574c9;
-
   font-size: 14px;
   font-weight: 700;
-
   line-height: 1.4;
 }
 
@@ -236,18 +195,12 @@
 
 .Rakuiti-01-shop-tabs {
   display: flex;
-
   width: 470px;
   max-width: calc(100% - 32px);
-
   margin: 0 auto;
-
   background: #ffffff;
-
   border-radius: 16px 16px 0 0;
-
   overflow: hidden;
-
   box-shadow:
     0 5px 18px rgba(91, 121, 205, 0.12);
 }
@@ -259,22 +212,13 @@
 
 .Rakuiti-01-tab {
   position: relative;
-
   flex: 1;
-
   padding: 15px 0 14px;
-
-  background: #edf4ff;
-
   color: #6f8dff;
-
   font-size: 14px;
   font-weight: 800;
-
   text-align: center;
-
   cursor: pointer;
-
   transition:
     color 0.2s ease,
     background 0.2s ease;
@@ -282,10 +226,29 @@
 
 
 /* =================================
+   紹介文タブ
+================================= */
+
+.Rakuiti-01-tab:first-child {
+  background: #edf4ff;
+}
+
+
+/* =================================
+   メニュータブ
+================================= */
+
+.Rakuiti-01-tab:last-child {
+  background: #edf4ff;
+}
+
+
+/* =================================
    タブ ホバー
 ================================= */
 
-.Rakuiti-01-tab:hover {
+.Rakuiti-01-tab:first-child:hover,
+.Rakuiti-01-tab:last-child:hover {
   background: #e4edff;
 }
 
@@ -296,7 +259,6 @@
 
 .Rakuiti-01-tab-active {
   color: #315fcf;
-
   background: #ffffff;
 }
 
@@ -307,19 +269,13 @@
 
 .Rakuiti-01-tab-active::after {
   content: "";
-
   position: absolute;
-
   left: 50%;
   bottom: 0;
-
   width: 82px;
   height: 4px;
-
   transform: translateX(-50%);
-
   border-radius: 999px;
-
   background: #6f8dff;
 }
 
@@ -331,17 +287,11 @@
 .Rakuiti-01-shop-description {
   width: 470px;
   max-width: calc(100% - 32px);
-
   margin: 0 auto;
-
   padding: 22px 24px 24px;
-
   box-sizing: border-box;
-
   background: #ffffff;
-
   border-radius: 0 0 18px 18px;
-
   box-shadow:
     0 8px 22px rgba(91, 121, 205, 0.12);
 }
@@ -353,14 +303,10 @@
 
 .Rakuiti-01-shop-description p {
   margin: 0;
-
   color: #4b5875;
-
   font-size: 13px;
   font-weight: 500;
-
   line-height: 1.8;
-
   letter-spacing: 0.02em;
 }
 
@@ -372,7 +318,6 @@
 .Rakuiti-01-shop-menu {
   width: 470px;
   max-width: calc(100% - 32px);
-
   margin: 0 auto;
 }
 
@@ -383,15 +328,10 @@
 
 .Rakuiti-01-menu-sheet {
   width: 100%;
-
   padding: 24px;
-
   box-sizing: border-box;
-
   background: #ffffff;
-
   border-radius: 0 0 18px 18px;
-
   box-shadow:
     0 8px 22px rgba(91, 121, 205, 0.12);
 }
@@ -404,23 +344,17 @@
 .Rakuiti-01-menu-title {
   display: flex;
   align-items: baseline;
-
   margin-bottom: 5px;
-
   color: #315fcf;
-
   font-size: 19px;
   font-weight: 800;
-
   letter-spacing: 0.02em;
 }
 
 
 .Rakuiti-01-menu-title span {
   margin-left: 5px;
-
   color: #8290ad;
-
   font-size: 12px;
   font-weight: 700;
 }
@@ -432,18 +366,12 @@
 
 .Rakuiti-01-menu-note {
   margin-bottom: 20px;
-
   padding: 7px 10px;
-
   background: #f6f8ff;
-
   border-radius: 7px;
-
   color: #7b88a4;
-
   font-size: 11px;
   font-weight: 600;
-
   line-height: 1.4;
 }
 
@@ -454,7 +382,6 @@
 
 .Rakuiti-01-menu-section {
   margin-bottom: 22px;
-
   padding-bottom: 2px;
 }
 
@@ -470,21 +397,15 @@
 
 .Rakuiti-01-menu-category {
   margin-bottom: 9px;
-
   padding: 8px 12px;
-
   background: linear-gradient(
     90deg,
     #edf4ff,
     #f7f9ff
   );
-
   border-left: 5px solid #6f8dff;
-
   border-radius: 7px;
-
   color: #315ebd;
-
   font-size: 15px;
   font-weight: 800;
 }
@@ -496,11 +417,8 @@
 
 .Rakuiti-01-menu-type {
   margin-bottom: 5px;
-
   padding-left: 2px;
-
   color: #657392;
-
   font-size: 12px;
   font-weight: 800;
 }
@@ -522,13 +440,9 @@
 .Rakuiti-01-menu-row {
   display: flex;
   align-items: center;
-
   width: 100%;
-
   min-height: 32px;
-
   box-sizing: border-box;
-
   border-bottom: 1px solid #f0f3fa;
 }
 
@@ -544,12 +458,9 @@
 
 .Rakuiti-01-menu-name {
   flex-shrink: 0;
-
   color: #46536f;
-
   font-size: 14px;
   font-weight: 700;
-
   white-space: nowrap;
 }
 
@@ -560,11 +471,8 @@
 
 .Rakuiti-01-menu-dots {
   flex: 1;
-
   height: 1px;
-
   margin: 0 10px;
-
   border-bottom: 1px dotted #c5d1e8;
 }
 
@@ -575,15 +483,10 @@
 
 .Rakuiti-01-menu-price {
   flex-shrink: 0;
-
   min-width: 55px;
-
   color: #46536f;
-
   font-size: 14px;
   font-weight: 800;
-
   text-align: right;
-
   white-space: nowrap;
 }

@@ -2,14 +2,10 @@
    全体
 ================================= */
 
-.Rakuiti-03-shop-detail {
-
+.Rakuiti-14-shop-detail {
   width: 100%;
-
   padding-bottom: 140px;
-
   box-sizing: border-box;
-
 }
 
 
@@ -17,43 +13,94 @@
    ヘッダー画像
 ================================= */
 
-.Rakuiti-03-shop-icon-area {
-
+.Rakuiti-14-shop-icon-area {
   position: relative;
-
   width: 380px;
-
   max-width: calc(100% - 32px);
-
   height: 230px;
-
   margin: 70px auto 0;
-
   border-radius: 28px;
-
   overflow: hidden;
-
   background: linear-gradient(
     135deg,
     #eaf3ff,
     #d7e8ff
   );
-
   box-shadow:
     0 12px 30px rgba(92, 124, 220, 0.16);
-
 }
 
-.Rakuiti-03-shop-icon-area img {
-
+.Rakuiti-14-shop-icon-area img {
   display: block;
-
   width: 100%;
-
   height: 100%;
-
   object-fit: contain;
+}
 
+
+/* =================================
+   画像切り替えボタン
+================================= */
+
+.Rakuiti-14-image-button {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.82);
+  color: #6f8dff;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow:
+    0 4px 12px rgba(80, 110, 190, 0.18);
+}
+
+.Rakuiti-14-image-button-prev {
+  left: 12px;
+}
+
+.Rakuiti-14-image-button-next {
+  right: 12px;
+}
+
+
+/* =================================
+   画像ドット
+================================= */
+
+.Rakuiti-14-image-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transform: translateX(-50%);
+}
+
+.Rakuiti-14-image-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.Rakuiti-14-image-dot-active {
+  width: 9px;
+  height: 9px;
+  background: #6f8dff;
 }
 
 
@@ -61,49 +108,31 @@
    店名
 ================================= */
 
-.Rakuiti-03-shop-name {
-
+.Rakuiti-14-shop-name {
   position: relative;
-
   z-index: 2;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   width: 240px;
-
   height: 44px;
-
   margin: 20px auto 10px;
-
   background: linear-gradient(
     90deg,
     #86a7ff,
     #6f8dff
   );
-
   color: #fff;
-
   font-size: 17px;
-
   font-weight: bold;
-
   border-radius: 999px;
-
   clip-path: none;
-
   border: 2px solid rgba(255, 255, 255, 0.55);
-
   box-shadow:
     0 8px 20px rgba(160, 170, 255, 0.14),
     inset 0 2px 0 rgba(255, 255, 255, 0.7),
     inset 0 -2px 0 rgba(255, 255, 255, 0.55);
-
   overflow: hidden;
-
 }
 
 
@@ -111,24 +140,15 @@
    出展団体
 ================================= */
 
-.Rakuiti-03-shop-org {
-
+.Rakuiti-14-shop-org {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   margin-bottom: 20px;
-
   color: #5574c9;
-
   font-size: 14px;
-
   font-weight: 700;
-
   line-height: 1.4;
-
 }
 
 
@@ -136,25 +156,16 @@
    タブ全体
 ================================= */
 
-.Rakuiti-03-shop-tabs {
-
+.Rakuiti-14-shop-tabs {
   display: flex;
-
   width: 470px;
-
   max-width: calc(100% - 32px);
-
   margin: 0 auto;
-
   background: #ffffff;
-
   border-radius: 16px 16px 0 0;
-
   overflow: hidden;
-
   box-shadow:
     0 5px 18px rgba(91, 121, 205, 0.12);
-
 }
 
 
@@ -162,28 +173,18 @@
    タブ
 ================================= */
 
-.Rakuiti-03-tab {
-
+.Rakuiti-14-tab {
   position: relative;
-
   flex: 1;
-
   padding: 15px 0 14px;
-
   color: #6f8dff;
-
   font-size: 14px;
-
   font-weight: 800;
-
   text-align: center;
-
   cursor: pointer;
-
   transition:
     color 0.2s ease,
     background 0.2s ease;
-
 }
 
 
@@ -191,21 +192,17 @@
    紹介文タブ
 ================================= */
 
-.Rakuiti-03-tab:first-child {
-
+.Rakuiti-14-tab:first-child {
   background: #edf4ff;
-
 }
 
 
 /* =================================
-   メニュータブ
+   出展概要タブ
 ================================= */
 
-.Rakuiti-03-tab:last-child {
-
+.Rakuiti-14-tab:last-child {
   background: #edf4ff;
-
 }
 
 
@@ -213,11 +210,9 @@
    タブ ホバー
 ================================= */
 
-.Rakuiti-03-tab:first-child:hover,
-.Rakuiti-03-tab:last-child:hover {
-
+.Rakuiti-14-tab:first-child:hover,
+.Rakuiti-14-tab:last-child:hover {
   background: #e4edff;
-
 }
 
 
@@ -225,12 +220,9 @@
    選択中タブ
 ================================= */
 
-.Rakuiti-03-tab-active {
-
+.Rakuiti-14-tab-active {
   color: #315fcf;
-
   background: #ffffff;
-
 }
 
 
@@ -238,26 +230,16 @@
    選択中タブの下線
 ================================= */
 
-.Rakuiti-03-tab-active::after {
-
+.Rakuiti-14-tab-active::after {
   content: "";
-
   position: absolute;
-
   left: 50%;
-
   bottom: 0;
-
   width: 82px;
-
   height: 4px;
-
   transform: translateX(-50%);
-
   border-radius: 999px;
-
   background: #6f8dff;
-
 }
 
 
@@ -265,25 +247,16 @@
    紹介文カード
 ================================= */
 
-.Rakuiti-03-shop-description {
-
+.Rakuiti-14-shop-description {
   width: 470px;
-
   max-width: calc(100% - 32px);
-
   margin: 0 auto;
-
   padding: 22px 24px 24px;
-
   box-sizing: border-box;
-
   background: #ffffff;
-
   border-radius: 0 0 18px 18px;
-
   box-shadow:
     0 8px 22px rgba(91, 121, 205, 0.12);
-
 }
 
 
@@ -291,111 +264,68 @@
    紹介文
 ================================= */
 
-.Rakuiti-03-shop-description p {
-
+.Rakuiti-14-shop-description p {
   margin: 0;
-
   color: #4b5875;
-
   font-size: 13px;
-
   font-weight: 500;
-
   line-height: 1.8;
-
   letter-spacing: 0.02em;
-
 }
 
 
 /* =================================
-   メニュー全体
+   出展概要全体
 ================================= */
 
-.Rakuiti-03-shop-menu {
-
+.Rakuiti-14-shop-menu {
   width: 470px;
-
   max-width: calc(100% - 32px);
-
   margin: 0 auto;
-
 }
 
 
 /* =================================
-   メニューシート
+   出展概要シート
 ================================= */
 
-.Rakuiti-03-menu-sheet {
-
+.Rakuiti-14-menu-sheet {
   width: 100%;
-
   padding: 24px;
-
   box-sizing: border-box;
-
   background: #ffffff;
-
   border-radius: 0 0 18px 18px;
-
   box-shadow:
     0 8px 22px rgba(91, 121, 205, 0.12);
-
 }
 
 
 /* =================================
-   メニュータイトル
+   出展概要タイトル
 ================================= */
 
-.Rakuiti-03-menu-title {
-
+.Rakuiti-14-menu-title {
   display: flex;
-
   align-items: baseline;
-
-  margin-bottom: 5px;
-
+  margin-bottom: 20px;
   color: #315fcf;
-
   font-size: 19px;
-
   font-weight: 800;
-
   letter-spacing: 0.02em;
-
-}
-
-.Rakuiti-03-menu-title span {
-
-  margin-left: 5px;
-
-  color: #8290ad;
-
-  font-size: 12px;
-
-  font-weight: 700;
-
 }
 
 
 /* =================================
-   メニューカテゴリー
+   出展概要セクション
 ================================= */
 
-.Rakuiti-03-menu-section {
-
+.Rakuiti-14-menu-section {
   margin-bottom: 22px;
-
   padding-bottom: 2px;
-
 }
 
-.Rakuiti-03-menu-section:last-of-type {
-
+.Rakuiti-14-menu-section:last-child {
   margin-bottom: 0;
-
 }
 
 
@@ -403,167 +333,143 @@
    カテゴリー名
 ================================= */
 
-.Rakuiti-03-menu-category {
-
+.Rakuiti-14-menu-category {
   margin-bottom: 9px;
-
   padding: 8px 12px;
-
   background: linear-gradient(
     90deg,
     #edf4ff,
     #f7f9ff
   );
-
   border-left: 5px solid #6f8dff;
-
   border-radius: 7px;
-
   color: #315ebd;
-
   font-size: 15px;
-
   font-weight: 800;
-
 }
 
 
 /* =================================
-   ベース・トッピング
+   遊び方一覧
 ================================= */
 
-.Rakuiti-03-menu-type {
-
-  margin-bottom: 5px;
-
-  padding-left: 2px;
-
-  color: #657392;
-
-  font-size: 12px;
-
-  font-weight: 800;
-
-}
-
-
-/* =================================
-   商品一覧
-================================= */
-
-.Rakuiti-03-menu-list {
-
+.Rakuiti-14-menu-list {
   width: 100%;
-
 }
 
 
 /* =================================
-   商品1行
+   遊び方1行
 ================================= */
 
-.Rakuiti-03-menu-row {
-
-  display: flex;
-
-  align-items: center;
-
+.Rakuiti-14-menu-rule {
   width: 100%;
-
   min-height: 32px;
-
+  padding: 7px 2px;
   box-sizing: border-box;
-
   border-bottom: 1px solid #f0f3fa;
-
-}
-
-.Rakuiti-03-menu-row:last-child {
-
-  border-bottom: none;
-
-}
-
-
-/* =================================
-   商品名
-================================= */
-
-.Rakuiti-03-menu-name {
-
-  flex-shrink: 0;
-
   color: #46536f;
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  white-space: nowrap;
-
-}
-
-
-/* =================================
-   点線
-================================= */
-
-.Rakuiti-03-menu-dots {
-
-  flex: 1;
-
-  height: 1px;
-
-  margin: 0 10px;
-
-  border-bottom: 1px dotted #c5d1e8;
-
-}
-
-
-/* =================================
-   価格
-================================= */
-
-.Rakuiti-03-menu-price {
-
-  flex-shrink: 0;
-
-  min-width: 55px;
-
-  color: #46536f;
-
-  font-size: 14px;
-
-  font-weight: 800;
-
-  text-align: right;
-
-  white-space: nowrap;
-
-}
-
-
-/* =================================
-   メニュー表 下部注意書き
-================================= */
-
-.Rakuiti-03-menu-bottom-note {
-
-  margin-top: 18px;
-
-  padding-top: 10px;
-
-  border-top: 1px solid #eef1f7;
-
-  color: #7b88a4;
-
-  font-size: 11px;
-
+  font-size: 13px;
   font-weight: 600;
+  line-height: 1.6;
+}
 
+.Rakuiti-14-menu-rule:last-child {
+  border-bottom: none;
+}
+
+
+/* =================================
+   注意書き
+================================= */
+
+.Rakuiti-14-menu-note {
+  margin-top: 10px;
+  padding: 7px 10px;
+  background: #f6f8ff;
+  border-radius: 7px;
+  color: #7b88a4;
+  font-size: 11px;
+  font-weight: 600;
   line-height: 1.5;
+}
 
-  text-align: left;
 
+/* =================================
+   クリア特典一覧
+================================= */
+
+.Rakuiti-14-reward-list {
+  width: 100%;
+}
+
+
+/* =================================
+   クリア特典1行
+================================= */
+
+.Rakuiti-14-reward-row {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 42px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f0f3fa;
+}
+
+.Rakuiti-14-reward-row:last-child {
+  border-bottom: none;
+}
+
+
+/* =================================
+   階級
+================================= */
+
+.Rakuiti-14-reward-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 58px;
+  padding: 7px 4px;
+  box-sizing: border-box;
+  color: #5574c9;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* =================================
+   特典内容
+================================= */
+
+.Rakuiti-14-reward-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 7px 4px 7px 10px;
+  color: #46536f;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+/* =================================
+   参加費
+================================= */
+
+.Rakuiti-14-fee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  background: #edf4ff;
+  border-radius: 10px;
+  color: #315fcf;
+  font-size: 20px;
+  font-weight: 800;
 }

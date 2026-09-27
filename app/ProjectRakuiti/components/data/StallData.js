@@ -31,7 +31,13 @@ import no12Image1 from "../Group/No.12/1.jpg";
 
 import no13Image1 from "../Group/No.13/1.jpg";
 
+import no14Image1 from "../Group/No.14/1.jpg";
+import no14Image2 from "../Group/No.14/2.jpg";
+import no14Image3 from "../Group/No.14/3.jpg";
+
+
 const cardData = [
+
   {
     group: "愛知工業大学管弦楽団",
     title: "愛知工業大学管弦楽団",
@@ -194,6 +200,21 @@ const cardData = [
     food: "しお・コンソメ・のりしお・チーズ",
     link: "/ProjectRakuiti-13-",
   },
+
+  {
+    group: "学生団体WinDra",
+    title: "WinDraチャレンジ",
+    images: [
+      no14Image1,
+      no14Image2,
+      no14Image3,
+    ],
+    subdesc1:
+      "ストラックアウトにチャレンジしてみませんか？こんにちは！学生団体WinDraです。私たちは「ドラゴンズを学生の力で盛り上げる」をスローガンに掲げて活動しています！ブースに足を運んで少しでもドラゴンズの魅力を知ってもらえたら嬉しいです！ドラゴンズの青いユニフォームが目印です！ぜひお越しください！",
+    food: "ストラックアウト",
+    link: "/ProjectRakuiti-14-",
+  },
+
 ];
 
 export default cardData;

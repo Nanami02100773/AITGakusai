@@ -6,7 +6,7 @@ import Title from "./components/Title";
 import ImageCarousel from "./components/ImageCarousel";
 import DescriptionBox from "./components/DescriptionBox";
 import DetailTable from "./components/DetailTable";
-import IntroductoryItems from "./components/IntroductoryItems";
+import Group from "./components/Group";
 import NavigationBar from "./components/NavigationBar";
 
 
@@ -22,7 +22,7 @@ export default function Page() {
 
       <DetailTable />
 
-      <IntroductoryItems />
+      <Group />
 
       <NavigationBar />
 

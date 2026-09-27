@@ -1,138 +1,170 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./ShopDetail.css";
 import MenuData from "./data/MenuData";
 
+import no3Image from "../../ProjectRakuiti/components/Group/No.3/1.jpg";
+
 function ShopDetail() {
-const [activeTab, setActiveTab] = useState("intro");
+  const [activeTab, setActiveTab] = useState("intro");
 
-useEffect(() => {
-window.scrollTo(0, 0);
-}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-return ( <div className="Rakuiti-03-shop-detail">
+  return (
+    <div className="Rakuiti-03-shop-detail">
+
+      {/* ==========================================
+          ヘッダー画像
+      ========================================== */}
+
+      <div className="Rakuiti-03-shop-icon-area">
+
+        <img
+          src={no3Image.src}
+          alt={`${MenuData.shopName} 画像`}
+        />
+
+      </div>
 
 
-  {/* ヘッダー画像 */}
-  <div className="Rakuiti-03-shop-icon-area"></div>
+      {/* ==========================================
+          店名
+      ========================================== */}
 
-  {/* 店名 */}
-  <div className="Rakuiti-03-shop-name">
-    模擬店名
-  </div>
+      <div className="Rakuiti-03-shop-name">
+        {MenuData.shopName}
+      </div>
 
-  {/* 出展団体 */}
-  <div className="Rakuiti-03-shop-org">
-    出展団体
-  </div>
 
-  {/* タブ */}
-  <div className="Rakuiti-03-shop-tabs">
+      {/* ==========================================
+          出展団体
+      ========================================== */}
 
-    <div
-      className={`Rakuiti-03-tab ${
-        activeTab === "intro"
-          ? "Rakuiti-03-tab-active"
-          : ""
-      }`}
-      onClick={() => setActiveTab("intro")}
-    >
-      紹介文
-    </div>
+      <div className="Rakuiti-03-shop-org">
+        {MenuData.organization}
+      </div>
 
-    <div
-      className={`Rakuiti-03-tab ${
-        activeTab === "menu"
-          ? "Rakuiti-03-tab-active"
-          : ""
-      }`}
-      onClick={() => setActiveTab("menu")}
-    >
-      メニュー
-    </div>
 
-  </div>
+      {/* ==========================================
+          タブ
+      ========================================== */}
 
-  {/* 紹介文 */}
-  {activeTab === "intro" && (
-    <div className="Rakuiti-03-shop-description">
+      <div className="Rakuiti-03-shop-tabs">
 
-      <p>
-        ここに紹介文が入ります。
-      </p>
+        <div
+          className={`Rakuiti-03-tab ${
+            activeTab === "intro"
+              ? "Rakuiti-03-tab-active"
+              : ""
+          }`}
+          onClick={() => setActiveTab("intro")}
+        >
+          紹介文
+        </div>
 
-      <div className="Rakuiti-03-shop-focus">
-
-        <h3 className="Rakuiti-03-shop-focus-title">
-          お店の紹介
-        </h3>
-
-        <div className="Rakuiti-03-shop-focus-images">
-
-          <div className="Rakuiti-03-image-box">
-            <img src="/shop/1.jpg" alt="" />
-          </div>
-
-          <div className="Rakuiti-03-image-box">
-            <img src="/shop/2.jpg" alt="" />
-          </div>
-
-          <div className="Rakuiti-03-image-box">
-            <img src="/shop/3.jpg" alt="" />
-          </div>
-
-          <div className="Rakuiti-03-image-box">
-            <img src="/shop/4.jpg" alt="" />
-          </div>
-
-          <div className="Rakuiti-03-image-box">
-            <img src="/shop/5.jpg" alt="" />
-          </div>
-
+        <div
+          className={`Rakuiti-03-tab ${
+            activeTab === "menu"
+              ? "Rakuiti-03-tab-active"
+              : ""
+          }`}
+          onClick={() => setActiveTab("menu")}
+        >
+          メニュー
         </div>
 
       </div>
 
-    </div>
-  )}
 
-{/* メニュー */}
-{activeTab === "menu" && (
-  <div className="Rakuiti-03-shop-menu">
-    <div className="Rakuiti-03-menu-sheet">
+      {/* ==========================================
+          紹介文
+      ========================================== */}
 
-      <div className="Rakuiti-03-menu-col Rakuiti-03-menu-col-left">
-        {MenuData.map((item, index) => (
-          <div
-            key={index}
-            className="Rakuiti-03-menu-row"
-          >
-            {item.name}
+      {activeTab === "intro" && (
+        <div className="Rakuiti-03-shop-description">
+
+          <p>
+            {MenuData.description}
+          </p>
+
+        </div>
+      )}
+
+
+      {/* ==========================================
+          メニュー
+      ========================================== */}
+
+      {activeTab === "menu" && (
+        <div className="Rakuiti-03-shop-menu">
+
+          <div className="Rakuiti-03-menu-sheet">
+
+            <div className="Rakuiti-03-menu-title">
+              メニュー表
+              <span>(円)</span>
+            </div>
+
+
+            {MenuData.menu.map((section, index) => (
+              <div
+                className="Rakuiti-03-menu-section"
+                key={index}
+              >
+
+                <div className="Rakuiti-03-menu-category">
+                  {section.category}
+                </div>
+
+                <div className="Rakuiti-03-menu-type">
+                  {section.type}
+                </div>
+
+                <div className="Rakuiti-03-menu-list">
+
+                  {section.items.map((item, itemIndex) => (
+                    <div
+                      className="Rakuiti-03-menu-row"
+                      key={itemIndex}
+                    >
+
+                      <div className="Rakuiti-03-menu-name">
+                        {item.name}
+                      </div>
+
+                      <div className="Rakuiti-03-menu-dots"></div>
+
+                      <div className="Rakuiti-03-menu-price">
+                        {item.price}
+                      </div>
+
+                    </div>
+                  ))}
+
+                </div>
+
+              </div>
+            ))}
+
+
+            {/* ==========================================
+                メニュー注意書き
+            ========================================== */}
+
+            <div className="Rakuiti-03-menu-bottom-note">
+              ※当日内容が変更されることがあります
+            </div>
+
           </div>
-        ))}
-      </div>
 
-      <div className="Rakuiti-03-menu-line"></div>
-
-      <div className="Rakuiti-03-menu-col Rakuiti-03-menu-col-right">
-        {MenuData.map((item, index) => (
-          <div
-            key={index}
-            className="Rakuiti-03-menu-row"
-          >
-            {item.price}円
-          </div>
-        ))}
-      </div>
+        </div>
+      )}
 
     </div>
-  </div>
-)}
-
-</div>
-
-);
+  );
 }
 
 export default ShopDetail;
