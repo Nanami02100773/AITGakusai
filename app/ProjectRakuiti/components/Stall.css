@@ -116,6 +116,7 @@
   position: relative;
 
   width: 100%;
+  aspect-ratio: 4 / 3;
 
   box-sizing: border-box;
 
@@ -141,7 +142,7 @@
   display: block;
 
   width: 100%;
-  height: auto;
+  height: 100%;
 
   object-fit: contain;
 
@@ -515,23 +516,9 @@
 
   .rakuichi-thumb {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
 
     border-radius: 9px;
-  }
-
-
-  /* ------------------------------------------
-     写真本体
-  ------------------------------------------ */
-
-  .rakuichi-thumb-image {
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-
-    object-position: center;
   }
 
 

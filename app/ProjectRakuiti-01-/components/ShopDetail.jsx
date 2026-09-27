@@ -13,30 +13,26 @@ function ShopDetail() {
   const [activeTab, setActiveTab] = useState("intro");
   const [activeImage, setActiveImage] = useState(0);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const shopImages = [
+  const images = [
     no1Image1,
     no1Image2,
     no1Image3,
     no1Image4,
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handlePrevImage = () => {
     setActiveImage((prev) =>
-      prev === 0
-        ? shopImages.length - 1
-        : prev - 1
+      prev === 0 ? images.length - 1 : prev - 1
     );
   };
 
   const handleNextImage = () => {
     setActiveImage((prev) =>
-      prev === shopImages.length - 1
-        ? 0
-        : prev + 1
+      prev === images.length - 1 ? 0 : prev + 1
     );
   };
 
@@ -50,10 +46,11 @@ function ShopDetail() {
       <div className="Rakuiti-01-shop-icon-area">
 
         <img
-          src={shopImages[activeImage].src}
-          alt={`${MenuData.shopName} 画像${activeImage + 1}`}
+          src={images[activeImage].src}
+          alt={`${MenuData.shopName} 画像`}
         />
 
+        {/* 左矢印 */}
         <button
           type="button"
           className="Rakuiti-01-image-button Rakuiti-01-image-button-prev"
@@ -63,6 +60,7 @@ function ShopDetail() {
           ‹
         </button>
 
+        {/* 右矢印 */}
         <button
           type="button"
           className="Rakuiti-01-image-button Rakuiti-01-image-button-next"
@@ -72,9 +70,10 @@ function ShopDetail() {
           ›
         </button>
 
+        {/* ドット */}
         <div className="Rakuiti-01-image-dots">
 
-          {shopImages.map((_, index) => (
+          {images.map((_, index) => (
             <button
               type="button"
               key={index}
@@ -84,7 +83,7 @@ function ShopDetail() {
                   : ""
               }`}
               onClick={() => setActiveImage(index)}
-              aria-label={`画像${index + 1}`}
+              aria-label={`${index + 1}枚目の画像`}
             />
           ))}
 
@@ -171,9 +170,6 @@ function ShopDetail() {
               <span>(円)</span>
             </div>
 
-            <div className="Rakuiti-01-menu-note">
-              {MenuData.menuNote}
-            </div>
 
             {MenuData.menu.map((section, index) => (
               <div
@@ -214,6 +210,15 @@ function ShopDetail() {
 
               </div>
             ))}
+
+
+            {/* ==========================================
+                メニュー注意書き
+            ========================================== */}
+
+            <div className="Rakuiti-01-menu-bottom-note">
+              ※当日内容が変更されることがあります
+            </div>
 
           </div>
 

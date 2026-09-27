@@ -12,13 +12,10 @@ import no4Image1 from "../Group/No.4/1.jpg";
 import no5Image1 from "../Group/No.5/1.jpg";
 
 import no6Image1 from "../Group/No.6/1.jpg";
-import no6Image2 from "../Group/No.6/2.jpg";
 
 import no7Image1 from "../Group/No.7/1.jpg";
 
 import no8Image1 from "../Group/No.8/1.jpg";
-import no8Image2 from "../Group/No.8/2.jpg";
-import no8Image3 from "../Group/No.8/3.jpg";
 
 import no9Image1 from "../Group/No.9/1.jpg";
 
@@ -26,6 +23,7 @@ import no10Image1 from "../Group/No.10/1.jpg";
 import no10Image2 from "../Group/No.10/2.jpg";
 
 import no11Image1 from "../Group/No.11/1.jpg";
+import no11Image2 from "../Group/No.11/2.jpg";
 
 import no12Image1 from "../Group/No.12/1.jpg";
 
@@ -55,7 +53,7 @@ const cardData = [
 
   {
     group: "愛知工業大学競技バンド部",
-    title: "競技バンド部",
+    title: "愛知工業大学競技バンド部",
     images: [
       no2Image1,
     ],
@@ -102,27 +100,26 @@ const cardData = [
   },
 
   {
-    group: "からあげDJあげ太郎",
+    group: "DJ・DTM部",
     title: "からあげDJあげ太郎",
     images: [
       no6Image1,
-      no6Image2,
     ],
     subdesc1:
-      "大学祭のお供にぴったりのドリンクをご用意しています！",
-    food: "ドリンク",
+      "こんにちは、DJ• DTM部です!私たちは「音楽を作る (DTM) 」と「音楽を繋ぐ (DJ) 」を中心に、日々楽しく活動しています。【DTM活動】火、金曜日の活動日にみんなで作曲を行い、お互いの曲を聴き合ってアドバイスを交換しています。同人音楽即売会(M3) に参加し、部員の楽曲をまとめたCDを制作 、販売するのも大きな目標の一つです！【DJ活動】 空き時間に機材を使って自由に練習ができます。腕を磨いて外部のイベントに出演したり、自らイベントを主催する部員もいたりと、自分のペースで自由に挑戦できる環境です。",
+    food: "からあげ",
     link: "/ProjectRakuiti-06-",
   },
 
   {
-    group: "ヒルズ",
+    group: "Community Circle 『Hill's』",
     title: "ヒルズ",
     images: [
       no7Image1,
     ],
     subdesc1:
       "みなさんこんにちは！大学祭は楽しんでいますか？Community Circle『Hill's』です！普段は愛知工業大学自由ヶ丘キャンパスで活動していて、サークル仲間と楽しく料理をする活動をしています！今年の大学祭では、美味しいチュロスとお団子を販売させていただきます！よろしくお願いします！",
-    food: "チュロス・団子3本セット",
+    food: "チュロス・お団子",
     link: "/ProjectRakuiti-07-",
   },
 
@@ -131,12 +128,10 @@ const cardData = [
     title: "シス研の団子",
     images: [
       no8Image1,
-      no8Image2,
-      no8Image3,
     ],
     subdesc1:
       "システム工学研究会ことシス研では、お団子を販売しています🍡 定番のみたらしやあんこはもちろん、少し変わった味もご用意する予定です！シス研メンバーが心を込めて作るお団子、ぜひご賞味ください！！",
-    food: "みたらし・きなこ・あんこ",
+    food: "お団子",
     link: "/ProjectRakuiti-08-",
   },
 
@@ -166,10 +161,11 @@ const cardData = [
   },
 
   {
-    group: "唐揚げ＆🍟 ポテト",
-    title: "唐揚げ＆🍟 ポテト",
+    group: "ギター部",
+    title: "🍗唐揚げ＆🍟 ポテト",
     images: [
       no11Image1,
+      no11Image2
     ],
     subdesc1:
       "揚げたてアツアツ！みんな大好き定番メニュー！外はカリッと、中はジューシーな唐揚げと、ホクホクで香ばしいフライドポテトをご用意しました！小腹が空いたときにも、友達との食べ歩きにもぴったり！揚げたてのおいしさをぜひ味わってください！",
@@ -190,7 +186,7 @@ const cardData = [
   },
 
   {
-    group: "ポテポテポテト",
+    group: "基礎スキー部",
     title: "ポテポテポテト",
     images: [
       no13Image1,
