@@ -21,6 +21,7 @@ import no9Image1 from "../Group/No.9/1.jpg";
 
 import no10Image1 from "../Group/No.10/1.jpg";
 import no10Image2 from "../Group/No.10/2.jpg";
+import no10Image3 from "../Group/No.10/3.jpg";
 
 import no11Image1 from "../Group/No.11/1.jpg";
 import no11Image2 from "../Group/No.11/2.jpg";
@@ -33,6 +34,7 @@ import no14Image1 from "../Group/No.14/1.jpg";
 import no14Image2 from "../Group/No.14/2.jpg";
 import no14Image3 from "../Group/No.14/3.jpg";
 
+import no15Image1 from "../Group/No.15/1.jpg";
 
 const cardData = [
 
@@ -153,6 +155,7 @@ const cardData = [
     images: [
       no10Image1,
       no10Image2,
+      no10Image3,
     ],
     subdesc1:
       "こんにちは！脱出ゲーム研究会によるたこ焼き屋「たこ焼き処 かぎ屋」です！外はカリッと、中はトロトロの極上たこ焼きはいかがですか？ソース、マヨネーズ、かつお節をお好みでたっぷりかけて召し上がれ！最終日の午後には、噂の「激安！たこなしたこ焼き」が登場するかも……！？ぜひお立ち寄りください！",
@@ -180,7 +183,7 @@ const cardData = [
       no12Image1,
     ],
     subdesc1:
-      "熱々ソースの焼きそば・焼きそばパン、ジューシーなホットドッグ、パリッと弾けるフランクフルトをご用意しました！小腹が空いた時、お昼時にどうぞ！！情報科の仲間14人が集まった「フランクな焼きそばやさん」です！サークルや部活ではなく、有志で参加しました。ワイワイ楽しく美味しい屋台グルメをお届けします！ぜひ食べに来てください！",
+      "熱々ソースの焼きそば・焼きそばパン、ジューシーなホットドッグ、パリッと弾けるフランクフルトをご用意しました！小腹が空いた時、お昼時にどうぞ！！",
     food: "焼きそば・焼きそばパン・ホットドッグ・フランクフルト",
     link: "/ProjectRakuiti-12-",
   },
@@ -209,6 +212,23 @@ const cardData = [
       "ストラックアウトにチャレンジしてみませんか？こんにちは！学生団体WinDraです。私たちは「ドラゴンズを学生の力で盛り上げる」をスローガンに掲げて活動しています！ブースに足を運んで少しでもドラゴンズの魅力を知ってもらえたら嬉しいです！ドラゴンズの青いユニフォームが目印です！ぜひお越しください！",
     food: "ストラックアウト",
     link: "/ProjectRakuiti-14-",
+  },
+
+    {
+    group: "漫画動画研究会",
+
+    title: "わらび餅",
+
+    images: [
+      no15Image1,
+    ],
+
+    subdesc1:
+      "わらび餅を販売します！",
+
+    food: "わらび餅・ドリンク",
+
+    link: "/ProjectRakuiti-15-",
   },
 
 ];

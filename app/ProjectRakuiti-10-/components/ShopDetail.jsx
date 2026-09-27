@@ -1,138 +1,174 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./ShopDetail.css";
 import MenuData from "./data/MenuData";
 
+import no10Image1 from "../../ProjectRakuiti/components/Group/No.10/1.jpg";
+import no10Image2 from "../../ProjectRakuiti/components/Group/No.10/2.jpg";
+import no10Image3 from "../../ProjectRakuiti/components/Group/No.10/3.jpg";
+import no10Image4 from "../../ProjectRakuiti/components/Group/No.10/4.jpg";
+
 function ShopDetail() {
-const [activeTab, setActiveTab] = useState("intro");
+  const [activeTab, setActiveTab] = useState("intro");
+  const [activeImage, setActiveImage] = useState(0);
 
-useEffect(() => {
-window.scrollTo(0, 0);
-}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-return ( <div className="Rakuiti-06-shop-detail">
+  const shopImages = [
+    no10Image1,
+    no10Image2,
+    no10Image3,
+  ];
 
+  const handlePrevImage = () => {
+    setActiveImage((prev) =>
+      prev === 0 ? shopImages.length - 1 : prev - 1
+    );
+  };
 
-  {/* ヘッダー画像 */}
-  <div className="Rakuiti-06-shop-icon-area"></div>
+  const handleNextImage = () => {
+    setActiveImage((prev) =>
+      prev === shopImages.length - 1 ? 0 : prev + 1
+    );
+  };
 
-  {/* 店名 */}
-  <div className="Rakuiti-06-shop-name">
-    模擬店名
-  </div>
+  return (
+    <div className="Rakuiti-10-shop-detail">
 
-  {/* 出展団体 */}
-  <div className="Rakuiti-06-shop-org">
-    出展団体
-  </div>
+      {/* =================================
+          ショップ画像
+      ================================= */}
 
-  {/* タブ */}
-  <div className="Rakuiti-06-shop-tabs">
+      <div className="Rakuiti-10-shop-icon-area">
 
-    <div
-      className={`Rakuiti-06-tab ${
-        activeTab === "intro"
-          ? "Rakuiti-06-tab-active"
-          : ""
-      }`}
-      onClick={() => setActiveTab("intro")}
-    >
-      紹介文
-    </div>
+        <img
+          src={shopImages[activeImage].src}
+          alt={`${MenuData.shopName} 画像`}
+        />
 
-    <div
-      className={`Rakuiti-06-tab ${
-        activeTab === "menu"
-          ? "Rakuiti-06-tab-active"
-          : ""
-      }`}
-      onClick={() => setActiveTab("menu")}
-    >
-      メニュー
-    </div>
+        <button
+          type="button"
+          className="Rakuiti-10-image-button Rakuiti-10-image-button-prev"
+          onClick={handlePrevImage}
+          aria-label="前の画像"
+        >
+          ‹
+        </button>
 
-  </div>
+        <button
+          type="button"
+          className="Rakuiti-10-image-button Rakuiti-10-image-button-next"
+          onClick={handleNextImage}
+          aria-label="次の画像"
+        >
+          ›
+        </button>
 
-  {/* 紹介文 */}
-  {activeTab === "intro" && (
-    <div className="Rakuiti-06-shop-description">
-
-      <p>
-        ここに紹介文が入ります。
-      </p>
-
-      <div className="Rakuiti-06-shop-focus">
-
-        <h3 className="Rakuiti-06-shop-focus-title">
-          お店の紹介
-        </h3>
-
-        <div className="Rakuiti-06-shop-focus-images">
-
-          <div className="Rakuiti-06-image-box">
-            <img src="/shop/1.jpg" alt="" />
-          </div>
-
-          <div className="Rakuiti-06-image-box">
-            <img src="/shop/2.jpg" alt="" />
-          </div>
-
-          <div className="Rakuiti-06-image-box">
-            <img src="/shop/3.jpg" alt="" />
-          </div>
-
-          <div className="Rakuiti-06-image-box">
-            <img src="/shop/4.jpg" alt="" />
-          </div>
-
-          <div className="Rakuiti-06-image-box">
-            <img src="/shop/5.jpg" alt="" />
-          </div>
-
+        <div className="Rakuiti-10-image-dots">
+          {shopImages.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              className={`Rakuiti-10-image-dot ${
+                activeImage === index
+                  ? "Rakuiti-10-image-dot-active"
+                  : ""
+              }`}
+              onClick={() => setActiveImage(index)}
+              aria-label={`${index + 1}枚目の画像`}
+            />
+          ))}
         </div>
 
       </div>
 
-    </div>
-  )}
 
-{/* メニュー */}
-{activeTab === "menu" && (
-  <div className="Rakuiti-06-shop-menu">
-    <div className="Rakuiti-06-menu-sheet">
+      {/* =================================
+          店名
+      ================================= */}
 
-      <div className="Rakuiti-06-menu-col Rakuiti-06-menu-col-left">
-        {MenuData.map((item, index) => (
-          <div
-            key={index}
-            className="Rakuiti-06-menu-row"
-          >
-            {item.name}
-          </div>
-        ))}
+      <div className="Rakuiti-10-shop-name">
+        {MenuData.shopName}
       </div>
 
-      <div className="Rakuiti-06-menu-line"></div>
 
-      <div className="Rakuiti-06-menu-col Rakuiti-06-menu-col-right">
-        {MenuData.map((item, index) => (
-          <div
-            key={index}
-            className="Rakuiti-06-menu-row"
-          >
-            {item.price}円
-          </div>
-        ))}
+      {/* =================================
+          団体名
+      ================================= */}
+
+      <div className="Rakuiti-10-shop-org">
+        {MenuData.organization}
       </div>
 
+
+      {/* =================================
+          タブ
+      ================================= */}
+
+      <div className="Rakuiti-10-shop-tabs">
+
+        <button
+          type="button"
+          className={`Rakuiti-10-tab ${
+            activeTab === "intro"
+              ? "Rakuiti-10-tab-active"
+              : ""
+          }`}
+          onClick={() => setActiveTab("intro")}
+        >
+          紹介
+        </button>
+
+       
+      </div>
+
+
+      {/* =================================
+          紹介
+      ================================= */}
+
+      {activeTab === "intro" && (
+        <div className="Rakuiti-10-shop-description">
+
+      
+
+
+          {/* 商品紹介 */}
+
+          <div className="Rakuiti-10-shop-focus">
+
+            <h3 className="Rakuiti-10-shop-focus-title">
+              商品紹介
+            </h3>
+
+            <p>
+              {MenuData.productDescription}
+            </p>
+
+            <div className="Rakuiti-10-shop-focus-images">
+
+              <div className="Rakuiti-10-image-box">
+                <img
+                  src={no10Image4.src}
+                  alt="たこ焼き"
+                />
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      )}
+
+
+
+
     </div>
-  </div>
-)}
-
-</div>
-
-);
+  );
 }
 
 export default ShopDetail;

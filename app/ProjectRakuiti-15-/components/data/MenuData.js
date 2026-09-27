@@ -1,20 +1,21 @@
-const MenuData = [
-  {
-    name: "たこ焼き",
-    price: 100,
-  },
-  {
-    name: "焼きそば",
-    price: 200,
-  },
-  {
-    name: "フランクフルト",
-    price: 150,
-  },
-  {
-    name: "ジュース",
-    price: 100,
-  },
-];
+const MenuData = {
+  shopName: "わらび餅",
+
+  organization: "漫画動画研究会",
+
+  description:
+    "漫画動画研究会",
+
+  menu: [
+    {
+      name: "わらび餅",
+      price: "",
+    },
+    {
+      name: "ドリンク",
+      price: "",
+    },
+  ],
+};
 
 export default MenuData;
