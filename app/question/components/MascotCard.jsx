@@ -1,9 +1,48 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./MascotCard.css";
 
+import leadImageWalk from "./Mascot/リード君歩く.jpg";
+import voteImage from "./Mascot/投票お願い.png";
+
+import nameImage from "./Mascot/name.png";
+import maleImage from "./Mascot/male.png";
+import heartImage from "./Mascot/heart.png";
+import foodImage from "./Mascot/food.png";
+import starImage from "./Mascot/star.png";
+
 const MascotCard = () => {
+
+  /* ========================================
+     リード君画像
+  ======================================== */
+
+  const mascotImages = [
+    leadImageWalk,
+    voteImage,
+  ];
+
+  const [mascotIndex, setMascotIndex] = useState(0);
+
+  /* ========================================
+     リード君画像切り替え
+  ======================================== */
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setMascotIndex((prev) =>
+        (prev + 1) % mascotImages.length
+      );
+
+    }, 3000);
+
+    return () => clearInterval(interval);
+
+  }, []);
+
   return (
     <>
       {/* タイトル */}
@@ -20,10 +59,12 @@ const MascotCard = () => {
             <div className="Question-MascotCard-mascot-area">
 
               <div className="Question-MascotCard-image">
+
                 <img
-                  src="/mascot/mascot.jpg"
+                  src={mascotImages[mascotIndex].src}
                   alt="リード君"
                 />
+
               </div>
 
               <div className="Question-MascotCard-dot-line"></div>
@@ -33,7 +74,7 @@ const MascotCard = () => {
             <div className="Question-MascotCard-text">
 
               <img
-                src="/mascot/name.png"
+                src={nameImage.src}
                 alt="リード君"
                 className="Question-MascotCard-name-logo"
               />
@@ -69,12 +110,14 @@ const MascotCard = () => {
               <div className="Question-MascotCard-item Question-MascotCard-blue">
 
                 <div className="Question-MascotCard-item-title">
+
                   <img
-                    src="/mascot/male.png"
+                    src={maleImage.src}
                     alt=""
                   />
 
                   <span>性別</span>
+
                 </div>
 
                 <b>オス</b>
@@ -84,12 +127,14 @@ const MascotCard = () => {
               <div className="Question-MascotCard-item Question-MascotCard-green">
 
                 <div className="Question-MascotCard-item-title">
+
                   <img
-                    src="/mascot/heart.png"
+                    src={heartImage.src}
                     alt=""
                   />
 
                   <span>性格</span>
+
                 </div>
 
                 <b>情熱的・仲間思い</b>
@@ -99,12 +144,14 @@ const MascotCard = () => {
               <div className="Question-MascotCard-item Question-MascotCard-orange">
 
                 <div className="Question-MascotCard-item-title">
+
                   <img
-                    src="/mascot/food.png"
+                    src={foodImage.src}
                     alt=""
                   />
 
                   <span>好きなもの</span>
+
                 </div>
 
                 <b>魚</b>
@@ -118,7 +165,7 @@ const MascotCard = () => {
               <h3 className="Question-MascotCard-other-title">
 
                 <img
-                  src="/mascot/star.png"
+                  src={starImage.src}
                   alt=""
                   className="Question-MascotCard-other-title-icon"
                 />

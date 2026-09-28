@@ -252,7 +252,7 @@
 .Question-FaqSection-answer-icon span {
   display: inline-block;
 
-  transform: scale(1.05);
+  transform: translateY(-1px) scale(1.05);
 
   letter-spacing: 0px;
 

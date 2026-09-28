@@ -8,7 +8,7 @@ const MenuData = {
 
   focusTitle: "お店の紹介",
 
-  menuNote: "※トッピング増加の可能性あり",
+ 
 
   menu: [
     {

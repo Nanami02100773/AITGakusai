@@ -3,12 +3,20 @@
 import { useEffect, useState } from "react";
 import "./Hero.css";
 
+import leadImageHappy from "./Mascot/リード君幸せ.png";
+import leadImageRun from "./Mascot/リード君走る.png";
+
 export default function Hero() {
 
   const heroImages = [
     "/homehero/1.jpg",
     "/homehero/2.jpg",
     "/homehero/3.jpg",
+  ];
+
+  const mascotImages = [
+    leadImageHappy,
+    leadImageRun,
   ];
 
   const messages = [
@@ -20,10 +28,12 @@ export default function Hero() {
 
   const [index, setIndex] = useState(0);
   const [heroIndex, setHeroIndex] = useState(0);
+  const [mascotIndex, setMascotIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
 
   /* =========================
-     吹き出し切り替え
+     吹き出し＋リード君
+     同時切り替え
   ========================= */
   useEffect(() => {
 
@@ -33,8 +43,14 @@ export default function Hero() {
 
       setTimeout(() => {
 
+        /* 文字切り替え */
         setIndex((prev) =>
           (prev + 1) % messages.length
+        );
+
+        /* リード君切り替え */
+        setMascotIndex((prev) =>
+          (prev + 1) % mascotImages.length
         );
 
         setAnimate(false);
@@ -45,7 +61,7 @@ export default function Hero() {
 
     return () => clearInterval(interval);
 
-  }, [messages.length]);
+  }, [messages.length, mascotImages.length]);
 
   /* =========================
      ヒーロー画像切り替え
@@ -64,7 +80,7 @@ export default function Hero() {
 
   }, []);
 
-    return (
+  return (
     <section className="Home-Hero-section">
 
       {/* =================================================
@@ -115,6 +131,7 @@ export default function Hero() {
 
       </div>
 
+
       {/* =================================================
           キャラクター
       ================================================= */}
@@ -141,13 +158,14 @@ export default function Hero() {
               <div className="Home-Hero-mascot-circle">
 
                 <img
-                  src="/homehero/mascot.jpg"
+                  src={mascotImages[mascotIndex].src}
                   alt="リード君"
                   className="Home-Hero-mascot-image"
                 />
 
               </div>
-                            {/* 吹き出し */}
+
+              {/* 吹き出し */}
               <span className="Home-Hero-balloon-text">
                 {messages[index]}
               </span>

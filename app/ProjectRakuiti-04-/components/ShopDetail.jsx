@@ -169,10 +169,6 @@ function ShopDetail() {
               <span>(円)</span>
             </div>
 
-            <div className="Rakuiti-04-menu-note">
-              {MenuData.menuNote}
-            </div>
-
             {MenuData.menu.map((section, index) => (
               <div
                 className="Rakuiti-04-menu-section"
@@ -212,6 +208,16 @@ function ShopDetail() {
 
               </div>
             ))}
+
+
+            {/* ==========================================
+                メニュー注意書き
+            ========================================== */}
+
+            <div className="Rakuiti-04-menu-bottom-note">
+              <div>※当日内容が変更されることがあります</div>
+              <div>※トッピング増加の可能性あり</div>
+            </div>
 
           </div>
 

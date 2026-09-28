@@ -109,11 +109,7 @@
 
   border: 2px solid #dce6ff;
 
-  background: linear-gradient(
-    180deg,
-    #fafdff,
-    #eef7ff
-  );
+  background: #ffffff;
 
   display: flex;
 
@@ -130,9 +126,9 @@
 
 .Question-MascotCard-image img {
 
-  width: 95%;
+  width: 100%;
 
-  height: 95%;
+  height: 100%;
 
   object-fit: contain;
 
