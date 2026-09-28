@@ -23,7 +23,7 @@ const NoticeSection = () => {
         const initialNotices = [
           {
             id: "welcome-1",
-            title: "第〇回 愛工大祭がスタートしました！",
+            title: "第66回 愛工大祭がスタートしました！",
             body: "本日はご来場いただきありがとうございます。ステージ企画や展示企画、模擬店など様々なイベントをお楽しみください。",
             category: "all",
             status: "public",
@@ -31,7 +31,7 @@ const NoticeSection = () => {
           {
             id: "welcome-2",
             title: "公式アプリ公開のお知らせ",
-            body: "愛工大祭公式アプリでは企画一覧、マップ、タイムテーブルなどをご確認いただけます。",
+            body: "今年度実装された愛工大祭公式アプリでは企画一覧、マップ、タイムテーブルなどをご確認いただけます。",
             category: "all",
             status: "public",
           },

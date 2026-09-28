@@ -1,15 +1,23 @@
 /* ==============================
+
    セクションタイトル
+
 ================================ */
+
 .make-section-title {
+
   position: relative;
+
   z-index: 2;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   width: 240px;
+
   height: 44px;
 
   margin: 20px auto 10px;
@@ -21,7 +29,9 @@
   );
 
   color: #fff;
+
   font-size: 17px;
+
   font-weight: bold;
 
   border-radius: 999px;
@@ -34,13 +44,20 @@
     inset 0 -2px 0 rgba(255,255,255,0.55);
 
   overflow: hidden;
+
 }
 
+
 /* ==============================
+
    企画説明ボックス
+
 ================================ */
+
 .Koukaten-description-box {
+
   width: 95%;
+
   max-width: 700px;
 
   min-height: 100px;
@@ -58,8 +75,11 @@
   border-radius: 10px;
 
   color: #3f4d6d;
+
   font-size: 14px;
+
   font-weight: 500;
+
   line-height: 1.8;
 
   letter-spacing: 0.03em;
@@ -68,4 +88,7 @@
 
   box-shadow:
     0 10px 25px rgba(134,167,255,.15);
+
+  white-space: pre-line;
+
 }

@@ -7,7 +7,7 @@ function DetailTable() {
       icon: "/project/place.png",
       iconClass: "place-icon",
       label: "場所",
-      value: "AITプラザ1階",
+      value: "AITプラザ1階前",
     },
     {
       icon: "/project/clock.png",

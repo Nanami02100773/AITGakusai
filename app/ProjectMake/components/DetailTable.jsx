@@ -20,7 +20,10 @@ function DetailTable() {
         },
         {
           tag: "10月11日（日）",
-          value: "10:30～16:00",
+          value: [
+            "10:30～12:30",
+            "13:30～15:00",
+          ],
         },
       ],
     },
@@ -126,9 +129,25 @@ function DetailTable() {
                           {time.tag}
                         </span>
 
-                        <span className="make-time">
-                          {time.value}
-                        </span>
+
+                        <div className="make-time-list">
+
+                          {Array.isArray(time.value) ? (
+                            time.value.map((value, j) => (
+                              <span
+                                className="make-time"
+                                key={j}
+                              >
+                                {value}
+                              </span>
+                            ))
+                          ) : (
+                            <span className="make-time">
+                              {time.value}
+                            </span>
+                          )}
+
+                        </div>
 
                       </div>
                     ))}

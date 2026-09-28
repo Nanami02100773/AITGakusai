@@ -36,6 +36,9 @@ import no14Image3 from "../Group/No.14/3.jpg";
 
 import no15Image1 from "../Group/No.15/1.jpg";
 
+import no16Image1 from "../Group/No.16/1.jpg";
+import no16Image2 from "../Group/No.16/2.jpg";
+
 const cardData = [
 
   {
@@ -229,6 +232,23 @@ const cardData = [
     food: "わらび餅・ドリンク",
 
     link: "/ProjectRakuiti-15-",
+  },
+
+    {
+    group: "ハンドボールサークル",
+    title: "ハンドボールサークル",
+
+    images: [
+      no16Image1,
+      no16Image2,
+    ],
+
+    subdesc1:
+      "こんにちはハンドボールサークルです！私たちのサークルは月に数回ハンドボールをしたりみんなでご飯に行ったりとワイワイキャハキャハ楽しんでいるサークルです！そんな私たちがこの度、黄金のチュロスとGo！Hey！餅！を出店させて頂くことになりました！チュロスの甘さと五平餅のしょっぱさのハーモニーを感じたときにはきっとみなさんスタンディングオベーションでしょう。全米が泣いた。五平餅だけにね(笑)。",
+
+    food: "五平餅・チュロス",
+
+    link: "/ProjectRakuiti-16-",
   },
 
 ];
