@@ -11,15 +11,15 @@ export default function SurveySection() {
     {
       title: "全体",
     },
-    {
-      title: "脱出ゲーム",
-    },
-    {
-      title: "メイク",
-    },
-    {
-      title: "クラブ・工科",
-    },
+    // {
+    //   title: "脱出ゲーム",
+    // },
+    // {
+    //   title: "メイク",
+    // },
+    // {
+    //   title: "クラブ・工科",
+    // },
   ];
 
   return (

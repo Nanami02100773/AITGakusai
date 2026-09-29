@@ -6,17 +6,17 @@ const LaughMusicStageTTDay1 = [
 
   {
     time: "10:45〜11:05",
-    title: "演者様1",
+    title: "常笑",
   },
 
   {
     time: "11:05〜11:15",
-    title: "演者様2",
+    title: "YUK BEATBOX",
   },
 
   {
     time: "11:15〜11:45",
-    title: "演者様3",
+    title: "skip-a",
   },
 
   {
@@ -26,7 +26,7 @@ const LaughMusicStageTTDay1 = [
 
   {
     time: "12:15〜12:45",
-    title: "演者様4",
+    title: "Pulse",
   },
 
   {
@@ -36,7 +36,7 @@ const LaughMusicStageTTDay1 = [
 
   {
     time: "13:10〜13:40",
-    title: "演者様5",
+    title: "大道芸人Kei",
   },
 
   {
@@ -46,7 +46,7 @@ const LaughMusicStageTTDay1 = [
 
   {
     time: "14:00〜14:20",
-    title: "演者様6",
+    title: "名古屋大学落語研究会",
   },
 
   {
@@ -56,7 +56,7 @@ const LaughMusicStageTTDay1 = [
 
   {
     time: "14:25〜14:55",
-    title: "演者様7",
+    title: "アイデンティティ",
   },
 
   {

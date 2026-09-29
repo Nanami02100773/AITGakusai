@@ -1,218 +1,250 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./MascotCard.css";
 
 import leadImageWalk from "./Mascot/リード君歩く.jpg";
-import voteImage from "./Mascot/投票お願い.png";
-
 import nameImage from "./Mascot/name.png";
-import maleImage from "./Mascot/male.png";
-import heartImage from "./Mascot/heart.png";
-import foodImage from "./Mascot/food.png";
-import starImage from "./Mascot/star.png";
+
+import MascotCardData from "./data/MascotCard.js";
 
 const MascotCard = () => {
 
-  /* ========================================
-     リード君画像
-  ======================================== */
+  /* ==========================================
+     プロフィール
+  ========================================== */
 
-  const mascotImages = [
-    leadImageWalk,
-    voteImage,
+  const profileItems = [
+    {
+      label: "名前",
+      value: MascotCardData.name,
+      type: "important",
+    },
+    {
+      label: "種族",
+      value: MascotCardData.species,
+      type: "important",
+    },
+    {
+      label: "性別",
+      value: MascotCardData.gender,
+      type: "important",
+    },
+    {
+      label: "性格",
+      value: MascotCardData.personality,
+      type: "normal",
+    },
+    {
+      label: "好きなこと",
+      value: MascotCardData.favorite,
+      type: "normal",
+    },
+    {
+      label: "好きな食べ物",
+      value: MascotCardData.favoriteFood,
+      type: "normal",
+    },
+    {
+      label: "習慣",
+      value: MascotCardData.habit,
+      type: "small",
+    },
+    {
+      label: "趣味",
+      value: MascotCardData.hobby,
+      type: "small",
+    },
+    {
+      label: "MBTI",
+      value: MascotCardData.mbti,
+      type: "small",
+    },
   ];
 
-  const [mascotIndex, setMascotIndex] = useState(0);
-
-  /* ========================================
-     リード君画像切り替え
-  ======================================== */
-
-  useEffect(() => {
-
-    const interval = setInterval(() => {
-
-      setMascotIndex((prev) =>
-        (prev + 1) % mascotImages.length
-      );
-
-    }, 3000);
-
-    return () => clearInterval(interval);
-
-  }, []);
 
   return (
-    <>
-      {/* タイトル */}
+    <section className="Question-MascotCard-section">
+
+
+      {/* ==========================================
+          セクションタイトル
+      ========================================== */}
+
       <div className="Question-MascotCard-section-title">
-        マスコット紹介
+
+        <span>
+          マスコット紹介
+        </span>
+
       </div>
 
-      <div className="Question-MascotCard-card">
-        <div className="Question-MascotCard-card-inner">
 
-          {/* 上部プロフィール */}
-          <div className="Question-MascotCard-hero">
+      {/* ==========================================
+          メインカード
+      ========================================== */}
 
-            <div className="Question-MascotCard-mascot-area">
+      <section className="Question-MascotCard-card">
 
-              <div className="Question-MascotCard-image">
 
-                <img
-                  src={mascotImages[mascotIndex].src}
-                  alt="リード君"
-                />
+        {/* ==========================================
+            上部ビジュアル
+        ========================================== */}
 
-              </div>
+        <div className="Question-MascotCard-visual">
 
-              <div className="Question-MascotCard-dot-line"></div>
 
-            </div>
+          {/* ==========================================
+              名前・ロゴ
+          ========================================== */}
 
-            <div className="Question-MascotCard-text">
+          <div className="Question-MascotCard-visual-info">
 
-              <img
-                src={nameImage.src}
-                alt="リード君"
-                className="Question-MascotCard-name-logo"
-              />
+            <img
+              src={nameImage.src}
+              alt={MascotCardData.name}
+              className="Question-MascotCard-name-logo"
+            />
 
-              <div className="Question-MascotCard-name-dots"></div>
-
-              <p>
-                みんなをリードする元気いっぱいのペンギン！
-                好奇心旺盛でいつも新しいことにチャレンジしているよ！
-              </p>
-
-            </div>
-
-          </div>
-
-          {/* 特徴 */}
-          <h2 className="Question-MascotCard-feature-title">
-
-            <span className="Question-MascotCard-line"></span>
-
-            <span className="Question-MascotCard-feature-label">
-              特徴
-            </span>
-
-            <span className="Question-MascotCard-line"></span>
-
-          </h2>
-
-          <div className="Question-MascotCard-grid">
-
-            <div className="Question-MascotCard-left">
-
-              <div className="Question-MascotCard-item Question-MascotCard-blue">
-
-                <div className="Question-MascotCard-item-title">
-
-                  <img
-                    src={maleImage.src}
-                    alt=""
-                  />
-
-                  <span>性別</span>
-
-                </div>
-
-                <b>オス</b>
-
-              </div>
-
-              <div className="Question-MascotCard-item Question-MascotCard-green">
-
-                <div className="Question-MascotCard-item-title">
-
-                  <img
-                    src={heartImage.src}
-                    alt=""
-                  />
-
-                  <span>性格</span>
-
-                </div>
-
-                <b>情熱的・仲間思い</b>
-
-              </div>
-
-              <div className="Question-MascotCard-item Question-MascotCard-orange">
-
-                <div className="Question-MascotCard-item-title">
-
-                  <img
-                    src={foodImage.src}
-                    alt=""
-                  />
-
-                  <span>好きなもの</span>
-
-                </div>
-
-                <b>魚</b>
-
-              </div>
-
-            </div>
-
-            <div className="Question-MascotCard-right">
-
-              <h3 className="Question-MascotCard-other-title">
-
-                <img
-                  src={starImage.src}
-                  alt=""
-                  className="Question-MascotCard-other-title-icon"
-                />
-
-                その他
-
-              </h3>
-
-              <ul>
-                <li>ゼン君の先輩</li>
-                <li>猫舌</li>
-                <li>おっちょこちょい</li>
-                <li>モテモテ</li>
-                <li>
-                  シャチに追いかけまわされたせいで海洋恐怖症になった。
-                </li>
-              </ul>
-
-            </div>
-
-          </div>
-
-          {/* 投票 */}
-          <div className="Question-MascotCard-vote">
-
-            <p>
-              ＼ このマスコットを応援しよう！ ／
+            <p className="Question-MascotCard-subtitle">
+              {MascotCardData.subtitle}
             </p>
 
-            <a
-              href="https://gakumado.mynavi.jp/contests/mascot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="Question-MascotCard-vote-button"
-            >
-              投票する
-            </a>
+            <div className="Question-MascotCard-species">
+              {MascotCardData.species}
+            </div>
 
-            <small>
-              あなたの応援が力になります！
-            </small>
+          </div>
+
+
+          {/* ==========================================
+              リード君画像
+          ========================================== */}
+
+          <div className="Question-MascotCard-visual-mascot">
+
+            <div className="Question-MascotCard-image-box">
+
+              <img
+                src={leadImageWalk.src}
+                alt={MascotCardData.name}
+                className="Question-MascotCard-image"
+              />
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        {/* ==========================================
+            紹介文
+        ========================================== */}
+
+        <div className="Question-MascotCard-description-box">
+
+          <p className="Question-MascotCard-description">
+            {MascotCardData.description}
+          </p>
+
+        </div>
+
+
+        {/* ==========================================
+            プロフィール
+        ========================================== */}
+
+        <div className="Question-MascotCard-profile-area">
+
+
+          {/* ==========================================
+              見出し
+          ========================================== */}
+
+          <div className="Question-MascotCard-profile-heading">
+
+            <span className="Question-MascotCard-profile-line"></span>
+
+            <h3>
+              プロフィール
+            </h3>
+
+            <span className="Question-MascotCard-profile-line"></span>
+
+          </div>
+
+
+          {/* ==========================================
+              プロフィール一覧
+          ========================================== */}
+
+          <div className="Question-MascotCard-profile">
+
+            {profileItems.map((item) => (
+
+              <div
+                key={item.label}
+                className={`Question-MascotCard-profile-item Question-MascotCard-profile-item-${item.type}`}
+              >
+
+                <div className="Question-MascotCard-profile-content">
+
+                  <div className="Question-MascotCard-profile-label">
+                    {item.label}
+                  </div>
+
+                  <div className="Question-MascotCard-profile-value">
+                    {item.value}
+                  </div>
+
+                </div>
+
+              </div>
+
+            ))}
 
           </div>
 
         </div>
-      </div>
-    </>
+
+
+        {/* ==========================================
+            投票
+        ========================================== */}
+
+        <div className="Question-MascotCard-vote">
+
+          <p className="Question-MascotCard-vote-title">
+            {MascotCardData.voteTitle}
+          </p>
+
+
+          <a
+            href={MascotCardData.voteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="Question-MascotCard-vote-button"
+          >
+
+            <span>
+              {MascotCardData.voteButton}
+            </span>
+
+          </a>
+
+
+          <p className="Question-MascotCard-vote-text">
+            {MascotCardData.voteText}
+          </p>
+
+        </div>
+
+
+      </section>
+
+    </section>
   );
 };
 

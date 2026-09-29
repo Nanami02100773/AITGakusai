@@ -1,24 +1,32 @@
-/* =========================
-   ページタイトル
-========================= */
+/* ==========================================
+   セクション
+========================================== */
 
-.Question-MascotCard-section-title {
+.Question-MascotCard-section {
+  width: 100%;
 
+  padding: 150px 0 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   セクションタイトル
+========================================== */
+
+.Question-MascotCard-section-title  {
   position: relative;
-
-  z-index: 4;
+  z-index: 2;
 
   display: flex;
-
+  align-items: center;
   justify-content: center;
 
-  align-items: center;
+  width: 240px;
+  height: 44px;
 
-  width: 220px;
-
-  height: 40px;
-
-  margin: 130px auto 0;
+  margin: 20px auto 10px;
 
   background: linear-gradient(
     90deg,
@@ -27,751 +35,720 @@
   );
 
   color: #fff;
-
-  font-size: 16px;
-
+  font-size: 17px;
   font-weight: bold;
 
   border-radius: 999px;
 
-  border: 2px solid rgba(255,255,255,.55);
+  border: 2px solid rgba(255,255,255,0.55);
 
   box-shadow:
-    0 8px 20px rgba(160,170,255,.14),
-    inset 0 2px 0 rgba(255,255,255,.7),
-    inset 0 -2px 0 rgba(255,255,255,.55);
+    0 8px 20px rgba(160,170,255,0.14),
+    inset 0 2px 0 rgba(255,255,255,0.7),
+    inset 0 -2px 0 rgba(255,255,255,0.55);
 
   overflow: hidden;
-
 }
 
-
-/* ========================================
+/* ==========================================
    メインカード
-======================================== */
+========================================== */
 
 .Question-MascotCard-card {
+  width: calc(100% - 32px);
+  max-width: 390px;
 
-  width: 380px;
-
-  background: #fff;
-
-  border-radius: 10px;
-
-  margin: 20px auto 50px;
-
-  position: relative;
+  margin: 0 auto;
 
   overflow: hidden;
 
-  padding: 0;
+  border: 1px solid rgba(120, 150, 225, 0.3);
 
-  box-sizing: border-box;
-
-}
-
-.Question-MascotCard-card-inner {
-
-  width: 100%;
-
-  box-sizing: border-box;
-
-  padding: 10px;
-
-  transform: none;
-
-  margin-bottom: 0;
-
-}
-
-
-/* ========================================
-   キャラクター
-======================================== */
-
-.Question-MascotCard-hero {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 15px;
-
-}
-
-.Question-MascotCard-image {
-
-  width: 155px;
-
-  height: 200px;
-
-  border-radius: 22px;
-
-  border: 2px solid #dce6ff;
+  border-radius: 24px;
 
   background: #ffffff;
 
-  display: flex;
+  box-shadow:
+    0 10px 30px rgba(65, 90, 160, 0.14);
 
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   上部ビジュアル
+========================================== */
+
+.Question-MascotCard-visual {
+  width: 100%;
+  min-height: 225px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 16px 14px 8px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 255, 255, 0.2) 0 28%,
+      transparent 29%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(255, 255, 255, 0.1) 0 22%,
+      transparent 23%
+    ),
+    linear-gradient(
+      135deg,
+      #4168c8,
+      #5e83dc
+    );
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   左：名前・ロゴ
+========================================== */
+
+.Question-MascotCard-visual-info {
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
 
-  align-items: center;
+  padding-left: 4px;
 
-  overflow: hidden;
-
-  box-shadow:
-    0 4px 12px rgba(100,140,255,.08);
-
-}
-
-.Question-MascotCard-image img {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: contain;
-
+  box-sizing: border-box;
 }
 
 
-/* ========================================
-   テキスト
-======================================== */
-
-.Question-MascotCard-text {
-
-  flex: 1;
-
-  min-width: 0;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  position: relative;
-
-}
+/* ==========================================
+   ロゴ
+========================================== */
 
 .Question-MascotCard-name-logo {
-
-  width: 100%;
-
-  max-width: 170px;
+  width: 125px;
+  max-width: 100%;
 
   height: auto;
 
   display: block;
 
-  margin: 0 auto 12px;
-
-}
-
-.Question-MascotCard-text p {
-
-  margin: 0;
-
-  text-align: center;
-
-  font-size: 11px;
-
-  line-height: 1.5;
-
-  color: #24346e;
-
-  font-weight: 700;
-
+  filter:
+    drop-shadow(
+      0 4px 5px rgba(20, 50, 120, 0.22)
+    );
 }
 
 
-/* ========================================
-   特徴タイトル
-======================================== */
+/* ==========================================
+   愛工大祭マスコット
+========================================== */
 
-.Question-MascotCard-feature-title {
+.Question-MascotCard-subtitle {
+  margin: 8px 0 7px;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 12px;
-
-  margin: 15px 0;
-
-}
-
-.Question-MascotCard-line {
-
-  flex: 1;
-
-  height: 2px;
-
-  background: #c7dbff;
-
-  position: relative;
-
-}
-
-.Question-MascotCard-line::before,
-
-.Question-MascotCard-line::after {
-
-  content: "";
-
-  position: absolute;
-
-  top: 50%;
-
-  width: 8px;
-
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #c7dbff;
-
-  transform: translateY(-50%);
-
-}
-
-.Question-MascotCard-line::before {
-
-  left: -4px;
-
-}
-
-.Question-MascotCard-line::after {
-
-  right: -4px;
-
-}
-
-.Question-MascotCard-feature-label {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-width: 70px;
-
-  height: 28px;
-
-  padding: 0 18px;
-
-  background: linear-gradient(
-    180deg,
-    #5ea3ff,
-    #4e8cff
-  );
-
-  border: 2px solid #7fb4ff;
-
-  border-radius: 10px;
-
-  color: #fff;
-
-  font-size: 14px;
-
-  font-weight: 900;
-
-  box-shadow:
-    0 4px 12px rgba(100,140,255,.18),
-    inset 0 2px 0 rgba(255,255,255,.25);
-
-}
-
-
-/* ========================================
-   グリッド
-======================================== */
-
-.Question-MascotCard-grid {
-
-  display: flex;
-
-  gap: 8px;
-
-  align-items: stretch;
-
-}
-
-.Question-MascotCard-left {
-
-  flex: .95;
-
-}
-
-.Question-MascotCard-right {
-
-  flex: 1.05;
-
-  height: 215px;
-
-  padding: 8px;
-
-  background: #faf7ff;
-
-  border: 2px solid #e6d9ff;
-
-  border-radius: 10px;
-
-  box-sizing: border-box;
-
-}
-
-.Question-MascotCard-right ul {
-
-  margin: 0;
-
-  padding: 0;
-
-  list-style: none;
-
-}
-
-
-/* ========================================
-   左カード
-======================================== */
-
-.Question-MascotCard-item {
-
-  height: 68px;
-
-  padding: 8px;
-
-  margin-bottom: 5px;
-
-  border-radius: 12px;
-
-  border: 2px solid #eef3ff;
-
-  box-sizing: border-box;
-
-}
-
-.Question-MascotCard-blue {
-
-  background: #eef5ff;
-
-  border-color: #c9dcff;
-
-}
-
-.Question-MascotCard-green {
-
-  background: #edf9f1;
-
-  border-color: #c9edd5;
-
-}
-
-.Question-MascotCard-orange {
-
-  background: #fff3e9;
-
-  border-color: #ffd9bb;
-
-}
-
-
-/* =========================
-   項目タイトル
-========================= */
-
-.Question-MascotCard-item-title {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 15px;
-
-  margin-bottom: 5px;
-
-}
-
-.Question-MascotCard-item-title img {
-
-  width: 40px;
-
-  height: 40px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  background: #fff;
-
-  border: 2px solid #dce6ff;
-
-  padding: 3px;
-
-  box-sizing: border-box;
-
-}
-
-.Question-MascotCard-blue .Question-MascotCard-item-title img {
-
-  border-color: #8cb7ff;
-
-  box-shadow: 0 0 8px rgba(79,132,255,.15);
-
-}
-
-.Question-MascotCard-green .Question-MascotCard-item-title img {
-
-  border-color: #7fda9a;
-
-  box-shadow: 0 0 8px rgba(73,192,111,.15);
-
-}
-
-.Question-MascotCard-orange .Question-MascotCard-item-title img {
-
-  border-color: #ffbf8b;
-
-  box-shadow: 0 0 8px rgba(255,148,73,.15);
-
-}
-
-.Question-MascotCard-item span {
-
-  display: block;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  position: relative;
-
-  left: 0px;
-
-  top: -5px;
-
-}
-
-
-/* 性別（青） */
-
-.Question-MascotCard-blue span {
-
-  color: #4a83ff;
-
-}
-
-
-/* 性格（緑） */
-
-.Question-MascotCard-green span {
-
-  color: #2bb673;
-
-}
-
-
-/* 好きなもの（オレンジ） */
-
-.Question-MascotCard-orange span {
-
-  color: #ff8a3d;
-
-}
-
-.Question-MascotCard-item b {
-
-  display: block;
-
-  position: relative;
-
-  left: 55px;
-
-  top: -16px;
-
-  font-size: 10px;
-
-  color: #24346e;
-
-}
-
-
-/* =========================
-   その他タイトル
-========================= */
-
-.Question-MascotCard-other-title {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  margin: 0 0 8px;
-
-  color: #a27cff;
-
-  font-size: 16px;
-
-  font-weight: 800;
-
-}
-
-.Question-MascotCard-other-title-icon {
-
-  width: 40px;
-
-  height: 40px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  background: #fff;
-
-  border: 2px solid #c9a7ff;
-
-  padding: 3px;
-
-  box-sizing: border-box;
-
-}
-
-
-/* =========================
-   その他
-========================= */
-
-.Question-MascotCard-right ul {
-
-  margin: 0;
-
-  padding: 0;
-
-  list-style: none;
-
-}
-
-.Question-MascotCard-right li {
-
-  position: relative;
-
-  padding-left: 20px;
+  color: #ffffff;
 
   font-size: 12px;
+  font-weight: 800;
 
+  line-height: 1.4;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* ==========================================
+   種族
+========================================== */
+
+.Question-MascotCard-species {
+  min-width: 74px;
+  height: 31px;
+
+  padding: 0 13px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #4264b8;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  box-shadow:
+    0 3px 8px rgba(30, 60, 130, 0.12);
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   右：リード君
+========================================== */
+
+.Question-MascotCard-visual-mascot {
+  width: 55%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   画像ボックス
+========================================== */
+
+.Question-MascotCard-image-box {
+  width: 165px;
+  height: 165px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 23px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 8px 18px rgba(30, 60, 130, 0.17),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   リード君画像
+========================================== */
+
+.Question-MascotCard-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: scale(1.05);
+}
+
+
+/* ==========================================
+   紹介文ボックス
+========================================== */
+
+.Question-MascotCard-description-box {
+  width: calc(100% - 32px);
+
+  margin: 16px auto 0;
+
+  padding: 17px 16px;
+
+  border: 1px solid #d6e1ff;
+
+  border-radius: 15px;
+
+  background: #f8faff;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   紹介文
+========================================== */
+
+.Question-MascotCard-description {
+  margin: 0;
+
+  color: #4264a8;
+
+  font-size: 13px;
   font-weight: 700;
 
-  line-height: 1.7;
+  line-height: 1.8;
 
-  color: #24346e;
-
-}
-
-.Question-MascotCard-right li::before {
-
-  content: "";
-
-  position: absolute;
-
-  left: 4px;
-
-  top: 7px;
-
-  width: 7px;
-
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: #a27cff;
-
+  text-align: left;
 }
 
 
-/* ========================================
-   投票
-======================================== */
+/* ==========================================
+   プロフィールエリア
+========================================== */
 
-.Question-MascotCard-vote {
+.Question-MascotCard-profile-area {
+  width: calc(100% - 32px);
 
-  margin-top: 10px;
+  margin: 28px auto 0;
 
-  padding: 10px;
+  box-sizing: border-box;
+}
 
-  background: linear-gradient(
-    180deg,
-    #f8f9ff,
-    #eef3ff
-  );
 
-  border: 2px solid #dde6ff;
+/* ==========================================
+   プロフィール見出し
+========================================== */
 
-  border-radius: 10px;
+.Question-MascotCard-profile-heading {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+
+/* ==========================================
+   プロフィール見出し文字
+========================================== */
+
+.Question-MascotCard-profile-heading h3 {
+  margin: 0;
+
+  flex-shrink: 0;
+
+  color: #4264b8;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   プロフィール線
+========================================== */
+
+.Question-MascotCard-profile-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: #c7d6fa;
+}
+
+
+/* ==========================================
+   プロフィール一覧
+========================================== */
+
+.Question-MascotCard-profile {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   プロフィール項目
+========================================== */
+
+.Question-MascotCard-profile-item {
+  min-width: 0;
+
+  border: 1px solid #d7e2fa;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   重要項目
+========================================== */
+
+.Question-MascotCard-profile-item-important {
+  background: #edf3ff;
+
+  border-color: #cbdcff;
+}
+
+
+/* ==========================================
+   通常項目
+========================================== */
+
+.Question-MascotCard-profile-item-normal {
+  background: #ffffff;
+}
+
+
+/* ==========================================
+   小項目
+========================================== */
+
+.Question-MascotCard-profile-item-small {
+  background: #fbfcff;
+}
+
+
+/* ==========================================
+   プロフィール内容
+========================================== */
+
+.Question-MascotCard-profile-content {
+  min-height: 76px;
+
+  padding: 10px 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   text-align: center;
 
   box-sizing: border-box;
-
 }
 
-.Question-MascotCard-vote p {
 
-  margin: 0 0 10px;
+/* ==========================================
+   プロフィールラベル
+========================================== */
 
-  color: #4d86ff;
+.Question-MascotCard-profile-label {
+  margin-bottom: 6px;
 
-  font-size: 16px;
+  color: #8293b9;
 
+  font-size: 8px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* ==========================================
+   プロフィール値
+========================================== */
+
+.Question-MascotCard-profile-value {
+  color: #27478e;
+
+  font-size: 11px;
   font-weight: 800;
 
+  line-height: 1.45;
+
+  word-break: break-word;
 }
 
 
-/* ========================================
+/* ==========================================
+   投票エリア
+========================================== */
+
+.Question-MascotCard-vote {
+  width: calc(100% - 32px);
+
+  margin: 24px auto 20px;
+
+  padding: 20px 14px 18px;
+
+  border: 1px solid #f4d9e3;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff6f9,
+      #fffafb
+    );
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   投票タイトル
+========================================== */
+
+.Question-MascotCard-vote-title {
+  margin: 0 0 13px;
+
+  color: #d65b82;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+
+/* ==========================================
    投票ボタン
-======================================== */
+========================================== */
 
 .Question-MascotCard-vote-button {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 210px;
-
-  height: 45px;
+  width: 240px;
+  max-width: 90%;
+  height: 50px;
 
   margin: 0 auto;
 
-  box-sizing: border-box;
-
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border-radius: 999px;
 
   background: linear-gradient(
-    90deg,
-    #4a83ff,
-    #2d6eff
+    135deg,
+    #ff789f,
+    #ff91ae
   );
 
-  color: #fff;
-
-  font-size: 20px;
-
-  font-weight: 900;
+  color: #ffffff;
 
   text-decoration: none;
 
-  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
 
   box-shadow:
-    inset 0 2px 0 rgba(255,255,255,.4),
-    0 8px 18px rgba(70,120,255,.25);
+    0 6px 14px rgba(255, 120, 159, 0.22);
 
-  transition: .2s;
-
-  animation: voteGlow 3s ease-in-out infinite;
-
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
+
+/* ==========================================
+   投票ボタン ホバー
+========================================== */
 
 .Question-MascotCard-vote-button:hover {
-
   transform: translateY(-2px);
 
+  box-shadow:
+    0 9px 18px rgba(255, 120, 159, 0.28);
 }
+
+
+/* ==========================================
+   投票ボタン アクティブ
+========================================== */
 
 .Question-MascotCard-vote-button:active {
-
-  transform: scale(.97);
-
+  transform: translateY(0);
 }
 
 
-/* ========================================
+/* ==========================================
    投票説明
-======================================== */
+========================================== */
 
-.Question-MascotCard-vote small {
+.Question-MascotCard-vote-text {
+  margin: 11px 0 0;
 
-  display: block;
+  color: #a98090;
 
-  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 600;
 
-  color: #4d86ff;
-
-  font-size: 12px;
-
+  line-height: 1.5;
 }
 
 
-/* ========================================
-   ボタンアニメーション
-======================================== */
+/* ==========================================
+   小さいスマホ
+========================================== */
 
-@keyframes voteGlow {
+@media (max-width: 380px) {
 
-  0% {
-
-    filter: brightness(1);
-
-    transform: scale(1);
-
+  .Question-MascotCard-section {
+    padding-top: 130px;
   }
 
-  50% {
 
-    filter: brightness(1.2);
+  .Question-MascotCard-section-title {
+    width: 220px;
+    height: 42px;
 
-    transform: scale(1.03);
-
+    font-size: 16px;
   }
 
-  100% {
 
-    filter: brightness(1);
+  .Question-MascotCard-card {
+    width: calc(100% - 24px);
 
-    transform: scale(1);
-
+    border-radius: 22px;
   }
 
-}
+
+  /* ------------------------------------------
+     ビジュアル
+  ------------------------------------------ */
+
+  .Question-MascotCard-visual {
+    min-height: 215px;
+
+    padding: 15px 10px 7px;
+  }
 
 
-/* ========================================
-   ロゴ下の赤いグラデーションライン
-======================================== */
+  .Question-MascotCard-visual-info {
+    width: 44%;
+  }
 
-.Question-MascotCard-name-dots {
 
-  width: 180px;
+  .Question-MascotCard-name-logo {
+    width: 115px;
+  }
 
-  height: 3px;
 
-  margin: 0 auto 15px;
+  .Question-MascotCard-subtitle {
+    margin-top: 7px;
 
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    #ffdce4 10%,
-    #ffb6c6 25%,
-    #ff9fb5 40%,
-    #ff9fb5 50%,
-    #ff9fb5 60%,
-    #ffb6c6 75%,
-    #ffdce4 90%,
-    transparent 100%
-  );
+    font-size: 11px;
+  }
 
-  border-radius: 999px;
+
+  .Question-MascotCard-species {
+    min-width: 70px;
+    height: 30px;
+
+    padding: 0 12px;
+
+    font-size: 10px;
+  }
+
+
+  /* ------------------------------------------
+     画像
+  ------------------------------------------ */
+
+  .Question-MascotCard-visual-mascot {
+    width: 56%;
+  }
+
+
+  .Question-MascotCard-image-box {
+    width: 155px;
+    height: 155px;
+
+    border-radius: 21px;
+  }
+
+
+  .Question-MascotCard-image {
+    transform: scale(1.04);
+  }
+
+
+  /* ------------------------------------------
+     紹介文
+  ------------------------------------------ */
+
+  .Question-MascotCard-description-box {
+    width: calc(100% - 24px);
+
+    padding: 15px 14px;
+  }
+
+
+  .Question-MascotCard-description {
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+
+  /* ------------------------------------------
+     プロフィール
+  ------------------------------------------ */
+
+  .Question-MascotCard-profile-area {
+    width: calc(100% - 24px);
+
+    margin-top: 24px;
+  }
+
+
+  .Question-MascotCard-profile-heading {
+    gap: 9px;
+
+    margin-bottom: 13px;
+  }
+
+
+  .Question-MascotCard-profile-heading h3 {
+    font-size: 16px;
+  }
+
+
+  .Question-MascotCard-profile {
+    gap: 7px;
+  }
+
+
+  .Question-MascotCard-profile-content {
+    min-height: 72px;
+
+    padding: 8px 4px;
+  }
+
+
+  .Question-MascotCard-profile-label {
+    font-size: 7px;
+  }
+
+
+  .Question-MascotCard-profile-value {
+    font-size: 10px;
+  }
+
+
+  /* ------------------------------------------
+     投票
+  ------------------------------------------ */
+
+  .Question-MascotCard-vote {
+    width: calc(100% - 24px);
+
+    margin-top: 22px;
+  }
+
+
+  .Question-MascotCard-vote-button {
+    width: 220px;
+  }
 
 }
