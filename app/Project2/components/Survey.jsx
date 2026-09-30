@@ -6,16 +6,16 @@ export default function SurveySection() {
 
   const surveys = [
     {
+      title: "愛工大祭について",
+    },
+    {
       title: "アプリ満足度",
     },
     {
-      title: "全体",
+      title: "企画：MAKE",
     },
     // {
     //   title: "脱出ゲーム",
-    // },
-    // {
-    //   title: "メイク",
     // },
     // {
     //   title: "クラブ・工科",

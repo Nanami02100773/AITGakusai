@@ -153,7 +153,7 @@ const cardData = [
   },
 
   {
-    group: "たこ焼き処 かぎ屋",
+    group: "脱出ゲーム研究会",
     title: "たこ焼き処 かぎ屋",
     images: [
       no10Image1,

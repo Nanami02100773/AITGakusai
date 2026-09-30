@@ -453,24 +453,7 @@
   }
 
 
-  /* ------------------------------------------
-     タイトル
-  ------------------------------------------ */
-
-  .rakuichi-section-wrapper {
-    width: calc(100% - 32px);
-
-    margin: 0 auto 10px;
-  }
-
-  .rakuichi-section-title {
-    padding-left: 10px;
-
-    font-size: 19px;
-
-    border-left-width: 4px;
-  }
-
+ 
 
   /* ------------------------------------------
      カード一覧
