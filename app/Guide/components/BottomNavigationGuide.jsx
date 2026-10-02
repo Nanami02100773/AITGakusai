@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { orbitron } from "../page";
 import "./BottomNavigationGuide.css";
+
+import image2 from "./data/2.jpg";
 
 export default function BottomNavigationGuide() {
   const [openItem, setOpenItem] = useState(null);
@@ -42,78 +45,53 @@ export default function BottomNavigationGuide() {
   return (
     <section className="BottomNavigation-Guide-section">
 
-      {/* ページタイトル */}
       <div className="BottomNavigation-Guide-header">
-
-        <div
-          className={`BottomNavigation-Guide-number ${orbitron.className}`}
-        >
+        <div className={`BottomNavigation-Guide-number ${orbitron.className}`}>
           02
         </div>
 
         <h1>下部メニュー</h1>
-
       </div>
 
-
-      {/* 下部メニュー全体 */}
       <div className="BottomNavigation-Guide-content">
 
-        {/* 下部メニュー画像 */}
+        {/* 写真2 */}
         <div className="BottomNavigation-Guide-image-box">
-
           <div className="BottomNavigation-Guide-image">
-
-            <img
-              src="/guide/bottom-navigation.png"
+            <Image
+              src={image2}
               alt="下部メニュー"
             />
-
           </div>
-
         </div>
 
-
-        {/* 下部メニュータイトル */}
         <div className="BottomNavigation-Guide-divider">
           下部メニュー
         </div>
 
-
-        {/* 下部メニューの説明 */}
         <div className="BottomNavigation-Guide-notice">
 
           {items.map((item, index) => (
-
             <div
               className="BottomNavigation-Guide-notice-item"
               key={item.title}
             >
 
-              {/* 項目タイトル */}
               <button
                 type="button"
                 className="BottomNavigation-Guide-notice-title"
                 onClick={() => handleToggle(index)}
               >
-
-                {/* 青い丸 */}
                 <span className="BottomNavigation-Guide-notice-dot"></span>
 
-
-                {/* アイコン画像 */}
                 <img
                   className="BottomNavigation-Guide-icon"
                   src={item.icon}
                   alt=""
                 />
 
-
-                {/* 項目名 */}
                 <h2>{item.title}</h2>
 
-
-                {/* 矢印 */}
                 <span
                   className={`BottomNavigation-Guide-arrow ${
                     openItem === index ? "is-open" : ""
@@ -121,27 +99,19 @@ export default function BottomNavigationGuide() {
                 >
                   &gt;
                 </span>
-
               </button>
 
-
-              {/* 本文 */}
               {openItem === index && (
-
                 <div className="BottomNavigation-Guide-notice-text">
                   {item.text}
                 </div>
-
               )}
 
             </div>
-
           ))}
 
         </div>
-
       </div>
-
     </section>
   );
 }

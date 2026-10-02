@@ -4,6 +4,8 @@ import { useState } from "react";
 import { orbitron } from "../page";
 import "./HomeGuide.css";
 
+import image3 from "./data/3.png";
+
 export default function HomeGuide() {
   const [openItem, setOpenItem] = useState(null);
 
@@ -54,13 +56,13 @@ export default function HomeGuide() {
       {/* ホーム画面全体 */}
       <div className="Home-Guide-content">
 
-        {/* ホーム画面画像 */}
+        {/* 写真3 */}
         <div className="Home-Guide-image-box">
 
           <div className="Home-Guide-image">
 
             <img
-              src="/guide/home.png"
+              src={image3.src}
               alt="ホーム画面"
             />
 

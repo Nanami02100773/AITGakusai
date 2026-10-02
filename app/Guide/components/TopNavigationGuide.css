@@ -79,7 +79,12 @@
   font-weight: 700;
 
   box-shadow:
-    0 4px 11px rgba(79, 109, 255, 0.20);
+    0 4px 11px rgba(
+      79,
+      109,
+      255,
+      0.20
+    );
 
   box-sizing: border-box;
 
@@ -161,7 +166,12 @@
   border-radius: 17px;
 
   box-shadow:
-    0 6px 18px rgba(79, 109, 255, 0.07);
+    0 6px 18px rgba(
+      79,
+      109,
+      255,
+      0.07
+    );
 
   box-sizing: border-box;
 
@@ -171,7 +181,6 @@
 /* ==========================
    画像ボックス
 ========================== */
-
 .TopNavigationGuide-image-box {
 
   width: 335px;
@@ -180,22 +189,29 @@
 
   margin: 0 auto;
 
-  padding: 11px;
+  padding: 10px;
 
-  background: #fff;
+  background: #f0f5ff;
 
-  border: 2px solid #c8d0ff;
+  border: 2px solid #cbd8ff;
 
   border-radius: 11px;
 
   box-shadow:
-    0 6px 15px rgba(79, 109, 255, 0.10),
-    0 2px 4px rgba(79, 109, 255, 0.04);
+    0 6px 15px rgba(79, 109, 255, 0.08),
+    0 2px 4px rgba(79, 109, 255, 0.03);
 
   box-sizing: border-box;
 
-}
+  display: flex;
 
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+}
 
 /* ==========================
    画像
@@ -205,17 +221,36 @@
 
   width: 100%;
 
+  height: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: transparent;
+
 }
 
+
+/* ==========================
+   画像本体
+========================== */
+
 .TopNavigationGuide-image img {
+
+  display: block;
 
   width: 100%;
 
   height: auto;
 
-  display: block;
+  max-width: 100%;
 
-  border-radius: 9px;
+  object-fit: contain;
+
+  background: transparent;
 
 }
 
@@ -244,13 +279,28 @@
     #6f8dff
   );
 
-  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  border: 1.5px solid rgba(
+    255,
+    255,
+    255,
+    0.65
+  );
 
   border-radius: 999px;
 
   box-shadow:
-    0 4px 10px rgba(79, 109, 255, 0.12),
-    inset 0 2px 0 rgba(255, 255, 255, 0.65);
+    0 4px 10px rgba(
+      79,
+      109,
+      255,
+      0.12
+    ),
+    inset 0 2px 0 rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
 
   color: #fff;
 
@@ -279,12 +329,22 @@
 
   background: #c8d0ff;
 
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.7
+  );
 
   border-radius: 12px;
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    inset 0 1px 0 rgba(
+      255,
+      255,
+      255,
+      0.5
+    );
 
   box-sizing: border-box;
 
@@ -300,6 +360,7 @@
   margin-bottom: 6px;
 
 }
+
 
 .TopNavigationGuide-notice-item:last-child {
 
@@ -337,7 +398,12 @@
   border-radius: 10px;
 
   box-shadow:
-    0 2px 6px rgba(90, 100, 160, 0.06);
+    0 2px 6px rgba(
+      90,
+      100,
+      160,
+      0.06
+    );
 
   box-sizing: border-box;
 
@@ -379,7 +445,12 @@
   border-radius: 50%;
 
   box-shadow:
-    0 2px 5px rgba(79, 109, 255, 0.18);
+    0 2px 5px rgba(
+      79,
+      109,
+      255,
+      0.18
+    );
 
 }
 
@@ -496,16 +567,29 @@
 
 
 /* ==========================
+   説明＋画像
+========================== */
+
+.TopNavigationGuide-notice-content {
+
+  width: calc(100% - 12px);
+
+  margin-left: auto;
+
+  padding-bottom: 6px;
+
+}
+
+
+/* ==========================
    説明本文
 ========================== */
 
 .TopNavigationGuide-notice-text {
 
-  width: calc(100% - 12px);
+  width: 100%;
 
   margin-top: 5px;
-
-  margin-left: auto;
 
   padding: 11px 13px;
 
@@ -529,6 +613,56 @@
 
 
 /* ==========================
+   説明画像
+========================== */
+
+.TopNavigationGuide-photo {
+
+  width: 100%;
+
+  margin-top: 8px;
+
+  padding: 6px;
+
+  background: #fff;
+
+  border: 1px solid #c8d0ff;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 3px 8px rgba(
+      79,
+      109,
+      255,
+      0.08
+    );
+
+  box-sizing: border-box;
+
+}
+
+
+/* ==========================
+   説明画像本体
+========================== */
+
+.TopNavigationGuide-photo img {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  border-radius: 6px;
+
+  object-fit: contain;
+
+}
+
+
+/* ==========================
    ホバー
 ========================== */
 
@@ -541,7 +675,12 @@
   border-color: #b8c6ff;
 
   box-shadow:
-    0 4px 10px rgba(79, 109, 255, 0.12);
+    0 4px 10px rgba(
+      79,
+      109,
+      255,
+      0.12
+    );
 
 }
 
@@ -553,7 +692,8 @@
 }
 
 
-.TopNavigationGuide-notice-title:hover .TopNavigationGuide-arrow {
+.TopNavigationGuide-notice-title:hover
+.TopNavigationGuide-arrow {
 
   color: #3757ef;
 

@@ -1,10 +1,122 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { orbitron } from "../page";
 import "./TopNavigationGuide.css";
 
+import image1 from "./data/1.png";
+import image2 from "./data/2.jpg";
+import image3 from "./data/3.png";
+
+
+// =================================================
+// 透過部分を自動でカット
+// =================================================
+
+function useTransparentCrop(image) {
+  const [croppedImage, setCroppedImage] = useState(image.src);
+
+  useEffect(() => {
+    const img = new Image();
+
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+
+      ctx.drawImage(
+        img,
+        0,
+        0,
+        img.naturalWidth,
+        img.naturalHeight
+      );
+
+      const imageData = ctx.getImageData(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+
+      const data = imageData.data;
+
+      let minX = canvas.width;
+      let minY = canvas.height;
+      let maxX = 0;
+      let maxY = 0;
+
+      let found = false;
+
+      // 透明ではない部分を探す
+      for (let y = 0; y < canvas.height; y++) {
+        for (let x = 0; x < canvas.width; x++) {
+
+          const index =
+            (y * canvas.width + x) * 4;
+
+          const alpha = data[index + 3];
+
+          if (alpha > 5) {
+            found = true;
+
+            if (x < minX) minX = x;
+            if (y < minY) minY = y;
+            if (x > maxX) maxX = x;
+            if (y > maxY) maxY = y;
+          }
+        }
+      }
+
+      // 全部透明だった場合
+      if (!found) {
+        setCroppedImage(image.src);
+        return;
+      }
+
+      const width = maxX - minX + 1;
+      const height = maxY - minY + 1;
+
+      const cropCanvas = document.createElement("canvas");
+
+      cropCanvas.width = width;
+      cropCanvas.height = height;
+
+      const cropCtx =
+        cropCanvas.getContext("2d");
+
+      cropCtx.drawImage(
+        img,
+        minX,
+        minY,
+        width,
+        height,
+        0,
+        0,
+        width,
+        height
+      );
+
+      setCroppedImage(
+        cropCanvas.toDataURL("image/png")
+      );
+    };
+
+    img.src = image.src;
+  }, [image]);
+
+  return croppedImage;
+}
+
+
+// =================================================
+// メイン
+// =================================================
+
 export default function TopNavigationGuide() {
+
   const [openItem, setOpenItem] = useState(null);
 
   const items = [
@@ -12,27 +124,52 @@ export default function TopNavigationGuide() {
       number: "01",
       title: "戻るボタン",
       text: "左側にあるマークを押すと、一つ前のページに戻ることができます。",
+      image: image1,
     },
     {
       number: "02",
       title: "ロゴエリア",
       text: "愛工大祭のロゴなどが表示されます。",
+      image: image2,
     },
     {
       number: "03",
       title: "メニュー",
       text: "アプリの操作説明を確認できます。",
+      image: image3,
     },
   ];
 
+  const currentImage =
+    openItem !== null
+      ? items[openItem].image
+      : image1;
+
+  const croppedImage =
+    useTransparentCrop(currentImage);
+
+  const currentAlt =
+    openItem !== null
+      ? items[openItem].title
+      : "上部メニュー";
+
+
   const handleToggle = (index) => {
-    setOpenItem(openItem === index ? null : index);
+    setOpenItem(
+      openItem === index
+        ? null
+        : index
+    );
   };
+
 
   return (
     <section className="TopNavigationGuide">
 
-      {/* ページタイトル */}
+      {/* ==========================
+          ページタイトル
+      ========================== */}
+
       <div className="TopNavigationGuide-header">
 
         <div
@@ -46,17 +183,24 @@ export default function TopNavigationGuide() {
       </div>
 
 
-      {/* 上部メニュー全体 */}
+      {/* ==========================
+          メインカード
+      ========================== */}
+
       <div className="TopNavigationGuide-content">
 
-        {/* 上部メニュー画像 */}
+
+        {/* ==========================
+            大きい画像ボックス
+        ========================== */}
+
         <div className="TopNavigationGuide-image-box">
 
           <div className="TopNavigationGuide-image">
 
             <img
-              src="/guide/top-navigation.png"
-              alt="上部メニュー"
+              src={croppedImage}
+              alt={currentAlt}
             />
 
           </div>
@@ -64,13 +208,19 @@ export default function TopNavigationGuide() {
         </div>
 
 
-        {/* 上部メニュータイトル */}
+        {/* ==========================
+            タイトル
+        ========================== */}
+
         <div className="TopNavigationGuide-divider">
           上部メニュー
         </div>
 
 
-        {/* 上部メニューの説明 */}
+        {/* ==========================
+            説明
+        ========================== */}
+
         <div className="TopNavigationGuide-notice">
 
           {items.map((item, index) => (
@@ -83,29 +233,28 @@ export default function TopNavigationGuide() {
               <button
                 type="button"
                 className="TopNavigationGuide-notice-title"
-                onClick={() => handleToggle(index)}
+                onClick={() =>
+                  handleToggle(index)
+                }
               >
 
-                {/* 左端のドット */}
                 <span className="TopNavigationGuide-notice-dot"></span>
 
-
-                {/* 番号 */}
                 <span
                   className={`TopNavigationGuide-item-number ${orbitron.className}`}
                 >
                   {item.number}
                 </span>
 
+                <h2>
+                  {item.title}
+                </h2>
 
-                {/* 項目名 */}
-                <h2>{item.title}</h2>
-
-
-                {/* 矢印 */}
                 <span
                   className={`TopNavigationGuide-arrow ${
-                    openItem === index ? "is-open" : ""
+                    openItem === index
+                      ? "is-open"
+                      : ""
                   }`}
                 >
                   &gt;
@@ -114,7 +263,6 @@ export default function TopNavigationGuide() {
               </button>
 
 
-              {/* 説明本文 */}
               {openItem === index && (
 
                 <div className="TopNavigationGuide-notice-text">
@@ -134,3 +282,4 @@ export default function TopNavigationGuide() {
     </section>
   );
 }
+
