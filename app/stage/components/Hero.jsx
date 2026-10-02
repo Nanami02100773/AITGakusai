@@ -1,27 +1,31 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import "./Hero.css";
 
+import image1 from "./data/1.jpg";
+import image2 from "./data/2.jpg";
+import image3 from "./data/3.jpg";
+import image4 from "./data/4.jpg";
+import image5 from "./data/5.jpg";
+import image6 from "./data/6.jpg";
+
 const images = [
-  "/img/1.jpg",
-  "/img/2.jpg",
-  "/img/3.jpg",
-  "/img/4.jpg",
-  "/img/5.jpg",
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
 ];
 
 export default function Hero() {
-  const [mainImage, setMainImage] = useState(images[0]);
+  const [mainImage, setMainImage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setMainImage((prev) => {
-        const currentIndex = images.indexOf(prev);
-        const nextIndex = (currentIndex + 1) % images.length;
-
-        return images[nextIndex];
-      });
+      setMainImage((prev) => (prev + 1) % images.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -35,9 +39,11 @@ export default function Hero() {
       ================================================= */}
       <div className="Stage-Hero-container">
 
-        <img
-          src={mainImage}
+        <Image
+          src={images[mainImage]}
           alt="ステージ"
+          fill
+          priority
           className="Stage-Hero-image"
         />
 
@@ -49,17 +55,23 @@ export default function Hero() {
         {/* サムネイル */}
         <div className="Stage-Hero-thumbnail-list">
           {images.map((img, i) => (
-            <img
+            <button
               key={i}
-              src={img}
-              alt=""
-              className={`Stage-Hero-thumbnail-item ${
-                mainImage === img
+              type="button"
+              className={`Stage-Hero-thumbnail-button ${
+                mainImage === i
                   ? "Stage-Hero-thumbnail-active"
                   : ""
               }`}
-              onClick={() => setMainImage(img)}
-            />
+              onClick={() => setMainImage(i)}
+            >
+              <Image
+                src={img}
+                alt={`ステージ${i + 1}`}
+                fill
+                className="Stage-Hero-thumbnail-item"
+              />
+            </button>
           ))}
         </div>
 
@@ -70,15 +82,7 @@ export default function Hero() {
       ================================================= */}
       <div className="Stage-Hero-bottom">
 
-        {/* =================================================
-            白カード
-        ================================================= */}
         <div className="Stage-Hero-card">
-
-          <div className="Stage-Hero-frame-topLeft"></div>
-          <div className="Stage-Hero-frame-topRight"></div>
-          <div className="Stage-Hero-frame-bottomLeft"></div>
-          <div className="Stage-Hero-frame-bottomRight"></div>
 
           {/* 外側フレーム */}
           <div className="Stage-Hero-frame"></div>
@@ -86,15 +90,10 @@ export default function Hero() {
           {/* 上バー */}
           <div className="Stage-Hero-topLine"></div>
 
-          {/* 左上装飾 */}
-          <div className="Stage-Hero-corner-topLeft"></div>
-
           {/* 右下装飾 */}
           <div className="Stage-Hero-corner-bottomRight"></div>
 
-          {/* =================================================
-              テキスト
-          ================================================= */}
+          {/* テキスト */}
           <div className="Stage-Hero-text">
 
             <p className="Stage-Hero-subText">

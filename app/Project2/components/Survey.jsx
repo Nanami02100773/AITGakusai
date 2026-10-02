@@ -23,7 +23,7 @@ export default function SurveySection() {
   ];
 
   return (
-    <section className="SurveySection">
+    <section className="Home-Survey-section">
 
       {/* 上部装飾 */}
       <div className="Survey-top-line"></div>

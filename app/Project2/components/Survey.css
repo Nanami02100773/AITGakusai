@@ -2,7 +2,7 @@
    セクション全体
 ================================================= */
 
-.SurveySection {
+.Home-Survey-section {
 
   position: relative;
 
@@ -15,7 +15,6 @@
   );
 
   overflow: hidden;
-
 }
 
 
@@ -34,7 +33,6 @@
   height: 2px;
 
   background: #dbe4ff;
-
 }
 
 
@@ -56,7 +54,6 @@
     82% 100%,
     30% 100%
   );
-
 }
 
 
@@ -73,7 +70,6 @@
   height: 2px;
 
   background: #dbe4ff;
-
 }
 
 
@@ -88,7 +84,6 @@
   height: 48px;
 
   background: #fff;
-
 }
 
 
@@ -105,7 +100,6 @@
   height: 2px;
 
   background: #dbe4ff;
-
 }
 
 
@@ -122,9 +116,7 @@
   background: #dbe4ff;
 
   transform: rotate(28deg);
-
   transform-origin: left center;
-
 }
 
 
@@ -141,7 +133,6 @@
   background: #dbe4ff;
 
   transform: rotate(28deg);
-
 }
 
 
@@ -174,7 +165,6 @@
   );
 
   z-index: 0;
-
 }
 
 
@@ -196,7 +186,6 @@
     100% 100%,
     60% 100%
   );
-
 }
 
 
@@ -211,9 +200,7 @@
   z-index: 5;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   width: 220px;
@@ -230,7 +217,6 @@
   color: #fff;
 
   font-size: 18px;
-
   font-weight: 800;
 
   border-radius: 999px;
@@ -255,7 +241,6 @@
       255,
       .7
     );
-
 }
 
 
@@ -266,7 +251,6 @@
 .Survey-container {
 
   width: 90%;
-
   max-width: 340px;
 
   margin: 0 auto;
@@ -276,7 +260,6 @@
   flex-direction: column;
 
   gap: 14px;
-
 }
 
 
@@ -333,7 +316,6 @@
       255,
       .95
     );
-
 }
 
 
@@ -350,7 +332,6 @@
       255,
       .18
     );
-
 }
 
 
@@ -371,14 +352,12 @@
     #86a7ff,
     #6f8dff
   );
-
 }
 
 
 .Survey-left-accent {
 
   display: none;
-
 }
 
 
@@ -401,7 +380,6 @@
   justify-content: center;
 
   padding-left: 10px;
-
 }
 
 
@@ -414,11 +392,9 @@
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
   width: 100%;
-
 }
 
 
@@ -429,7 +405,6 @@
   font-size: 17px;
 
   font-weight: 700;
-
 }
 
 
@@ -442,15 +417,12 @@
   position: relative;
 
   width: 58px;
-
   height: 100%;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
-
 }
 
 
@@ -474,7 +446,6 @@
     #ff9fb5 80%,
     transparent 100%
   );
-
 }
 
 
@@ -494,7 +465,6 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   color: #6f8dff;
@@ -504,7 +474,6 @@
   font-weight: bold;
 
   transition: .25s;
-
 }
 
 
@@ -513,5 +482,4 @@
   transform: translateX(4px);
 
   background: #dfe8ff;
-
 }

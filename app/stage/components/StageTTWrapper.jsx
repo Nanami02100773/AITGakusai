@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Date from "./Date";
 import StageTT from "./StageTT";
 // import SpeakerIntroduction from "./SpeakerIntroduction";
-import StageTTdata from "./data/StageTTdata";
-import StageTTdata2 from "./data/StageTTdata2";
+import StageTTdata from "./data/StageTTData";
+import StageTTdata2 from "./data/StageTTData2";
 
 const StageTTWrapper = () => {
   const [selectedDay, setSelectedDay] = useState(1);

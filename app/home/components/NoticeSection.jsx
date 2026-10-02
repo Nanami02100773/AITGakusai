@@ -14,69 +14,88 @@ const NoticeSection = () => {
         localStorage.getItem("notices") || "[]"
       );
 
-      if (saved.length === 0) {
+      // =================================================
+      // デフォルトのお知らせ
+      // =================================================
 
-        // =================================================
-        // 初期のお知らせ
-        // =================================================
+      const defaultNotices = [
+        {
+          id: "welcome-1",
+          title: "第66回 愛工大祭がスタートしました！",
+          body: "本日はご来場いただきありがとうございます。ステージ企画や展示企画、模擬店など様々なイベントをお楽しみください。",
+          category: "all",
+          status: "public",
+          isDefault: true,
+        },
+        {
+          id: "welcome-2",
+          title: "公式アプリ公開のお知らせ",
+          body: "今年度実装された愛工大祭公式アプリでは企画一覧、マップ、タイムテーブルなどをご確認いただけます。",
+          category: "all",
+          status: "public",
+          isDefault: true,
+        },
+        {
+          id: "welcome-3",
+          title: "ご来場の皆様へ",
+          body: "混雑時はスタッフの案内に従って安全にお楽しみください。ゴミの分別にもご協力をお願いいたします。",
+          category: "all",
+          status: "public",
+          isDefault: true,
+        },
+      ];
 
-        const initialNotices = [
-          {
-            id: "welcome-1",
-            title: "第66回 愛工大祭がスタートしました！",
-            body: "本日はご来場いただきありがとうございます。ステージ企画や展示企画、模擬店など様々なイベントをお楽しみください。",
-            category: "all",
-            status: "public",
-          },
-          {
-            id: "welcome-2",
-            title: "公式アプリ公開のお知らせ",
-            body: "今年度実装された愛工大祭公式アプリでは企画一覧、マップ、タイムテーブルなどをご確認いただけます。",
-            category: "all",
-            status: "public",
-          },
-          {
-            id: "welcome-3",
-            title: "ご来場の皆様へ",
-            body: "混雑時はスタッフの案内に従って安全にお楽しみください。ゴミの分別にもご協力をお願いいたします。",
-            category: "all",
-            status: "public",
-          },
-        ];
+      // =================================================
+      // 手動で追加したお知らせ
+      // デフォルトのお知らせ以外を取得
+      // =================================================
 
-        localStorage.setItem(
-          "notices",
-          JSON.stringify(initialNotices)
-        );
+      const manualNotices = saved.filter(
+        (notice) =>
+          notice.id !== "welcome-1" &&
+          notice.id !== "welcome-2" &&
+          notice.id !== "welcome-3"
+      );
 
-        setNotices(initialNotices);
+      // =================================================
+      // 手動のお知らせを上
+      // デフォルトを下
+      // =================================================
 
-      } else {
+      const allNotices = [
+        ...manualNotices,
+        ...defaultNotices,
+      ];
 
-        // =================================================
-        // ホームに表示するお知らせ
-        //
-        // category が all
-        // ＋
-        // status が public
-        // のものだけ表示
-        // =================================================
+      // =================================================
+      // 保存
+      // =================================================
 
-        const filtered = saved.filter(
-          (notice) =>
-            notice.category === "all" &&
-            notice.status !== "private"
-        );
+      localStorage.setItem(
+        "notices",
+        JSON.stringify(allNotices)
+      );
 
-        setNotices(filtered);
-      }
+      // =================================================
+      // ホームに表示
+      // category が all
+      // status が public
+      // =================================================
+
+      const filtered = allNotices.filter(
+        (notice) =>
+          notice.category === "all" &&
+          notice.status !== "private"
+      );
+
+      setNotices(filtered);
     };
 
     // 初回読み込み
     loadNotices();
 
     // =================================================
-    // 同じタブ内で localStorage が更新されたとき用
+    // localStorage 更新
     // =================================================
 
     const handleStorage = () => {
@@ -99,7 +118,9 @@ const NoticeSection = () => {
   return (
     <section className="Home-Notice-section">
 
-      {/* タイトル */}
+      {/* =================================================
+          タイトル
+      ================================================= */}
 
       <div className="Home-Notice-title-wrapper">
 
@@ -109,7 +130,9 @@ const NoticeSection = () => {
 
       </div>
 
-      {/* お知らせ一覧 */}
+      {/* =================================================
+          お知らせ一覧
+      ================================================= */}
 
       <div className="Home-Notice-list">
 
