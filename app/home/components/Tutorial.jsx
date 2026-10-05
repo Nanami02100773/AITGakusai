@@ -4,10 +4,14 @@ import { useEffect, useState } from "react";
 import "./Tutorial.css";
 import TutorialGuide from "./TutorialGuide";
 
+import image1 from "./Tutorial/1.jpg";
+import image2 from "./Tutorial/2.jpg";
+import image3 from "./Tutorial/3.jpg";
+import image4 from "./Tutorial/4.jpg";
+
 export default function Tutorial() {
   const [showTutorial, setShowTutorial] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
-
   const [page, setPage] = useState(0);
 
 
@@ -67,7 +71,7 @@ export default function Tutorial() {
         </>
       ),
 
-      image: "/images/tutorial1.png",
+      image: image1,
 
       text: (
         <>
@@ -77,7 +81,6 @@ export default function Tutorial() {
         </>
       ),
     },
-
 
     {
       label: "上部メニュー",
@@ -90,7 +93,7 @@ export default function Tutorial() {
         </>
       ),
 
-      image: "/images/tutorial2.png",
+      image: image2,
 
       text: (
         <>
@@ -100,7 +103,6 @@ export default function Tutorial() {
         </>
       ),
     },
-
 
     {
       label: "下部メニュー",
@@ -113,7 +115,7 @@ export default function Tutorial() {
         </>
       ),
 
-      image: "/images/tutorial3.png",
+      image: image3,
 
       text: (
         <>
@@ -124,7 +126,6 @@ export default function Tutorial() {
       ),
     },
 
-
     {
       label: "準備OK！",
 
@@ -134,7 +135,7 @@ export default function Tutorial() {
         </>
       ),
 
-      image: "/images/tutorial4.png",
+      image: image4,
 
       text: (
         <>
@@ -158,12 +159,9 @@ export default function Tutorial() {
   ================================================= */
 
   const nextPage = () => {
-
     if (isLastPage) {
-
       setShowTutorial(false);
 
-      /* 初回表示済みとして保存 */
       localStorage.setItem(
         "tutorialCompleted",
         "true"
@@ -185,11 +183,9 @@ export default function Tutorial() {
   ================================================= */
 
   const prevPage = () => {
-
     if (page > 0) {
       setPage((prev) => prev - 1);
     }
-
   };
 
 
@@ -198,7 +194,6 @@ export default function Tutorial() {
   ================================================= */
 
   if (!showTutorial) {
-
     return (
       <>
         {showGuide && (
@@ -208,7 +203,6 @@ export default function Tutorial() {
         )}
       </>
     );
-
   }
 
 
@@ -221,7 +215,6 @@ export default function Tutorial() {
       <div className="Tutorial-overlay">
 
         <div className="Tutorial-card">
-
 
           {/* =================================================
               ラベル
@@ -245,14 +238,18 @@ export default function Tutorial() {
               説明画像
           ================================================= */}
 
-          <div className="Tutorial-image-box">
-
+          <div
+            className={`Tutorial-image-box ${
+              isLastPage
+                ? "Tutorial-image-box-last"
+                : ""
+            }`}
+          >
             <img
-              src={current.image}
+              src={current.image.src}
               alt=""
               className="Tutorial-image"
             />
-
           </div>
 
 
@@ -277,7 +274,6 @@ export default function Tutorial() {
             }
           >
 
-
             {/* =================================================
                 戻る
             ================================================= */}
@@ -296,11 +292,9 @@ export default function Tutorial() {
             ================================================= */}
 
             {!isLastPage && (
-
               <div className="Tutorial-dots">
 
                 {tutorialData.map((_, index) => (
-
                   <span
                     key={index}
                     className={
@@ -309,11 +303,9 @@ export default function Tutorial() {
                         : "Tutorial-dot"
                     }
                   />
-
                 ))}
 
               </div>
-
             )}
 
 
@@ -322,14 +314,12 @@ export default function Tutorial() {
             ================================================= */}
 
             {!isLastPage && (
-
               <button
                 className="Tutorial-arrow"
                 onClick={nextPage}
               >
                 →
               </button>
-
             )}
 
 
@@ -338,14 +328,12 @@ export default function Tutorial() {
             ================================================= */}
 
             {isLastPage && (
-
               <button
                 className="Tutorial-start"
                 onClick={nextPage}
               >
                 スタート
               </button>
-
             )}
 
           </div>
