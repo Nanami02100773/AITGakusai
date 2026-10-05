@@ -71,7 +71,7 @@ export default function BottomNavigationGuide() {
           </div>
         </div>
 
-        <div className="BottomNavigation-Guide-divider">
+        <div className="Guide-section-title">
           下部メニュー
         </div>
 

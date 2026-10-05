@@ -3,7 +3,6 @@
 import "./Survey.css";
 
 export default function SurveySection() {
-
   const surveys = [
     {
       title: "愛工大祭について",
@@ -23,7 +22,7 @@ export default function SurveySection() {
   ];
 
   return (
-    <section className="Home-Survey-section">
+    <section className="Survey-section">
 
       {/* 上部装飾 */}
       <div className="Survey-top-line"></div>
@@ -39,7 +38,7 @@ export default function SurveySection() {
 
 
       {/* タイトル */}
-      <div className="Home-section-title">
+      <div className="Survey-section-title">
         アンケート
       </div>
 

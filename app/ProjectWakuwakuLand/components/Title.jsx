@@ -1,6 +1,6 @@
 import './Title.css';
 
-function Title({ text = "きらきらPARC"}) {
+function Title({ text = "きらきらPAKE"}) {
   return (
     <div className="kirakiraparc-title">{text}</div>
   );

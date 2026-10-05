@@ -62,7 +62,7 @@ export default function MapGuide() {
         </div>
 
         {/* ===== 見出し ===== */}
-        <div className="Map-Guide-divider">
+        <div className="Guide-section-title">
           マップ
         </div>
 

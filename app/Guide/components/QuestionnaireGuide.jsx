@@ -69,7 +69,7 @@ export default function QuestionnaireGuide() {
             タイトル
         ========================== */}
 
-        <div className="Questionnaire-Guide-divider">
+        <div className="Guide-section-title">
           アンケート
         </div>
 

@@ -64,7 +64,7 @@ export default function ProjectGuide() {
             タイトル
         ========================== */}
 
-        <div className="Project-Guide-divider">
+        <div className="Guide-section-title">
           企画紹介
         </div>
 

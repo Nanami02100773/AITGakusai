@@ -3,9 +3,11 @@
 ===================================== */
 
 .StampRally-section {
-  padding: 10px 0 100px;
-  max-width: 95%;
+  width: 100%;
+  padding: 10px 5px 100px;
+  max-width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 
@@ -24,7 +26,9 @@
 ===================================== */
 
 .StampRally-item {
-  width: 450px;
+  width: 440px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -33,20 +37,23 @@
 ===================================== */
 
 .StampRally-card {
+  width: 100%;
+
   background: linear-gradient(
     180deg,
     #f4f8ff,
     #e8f1ff
   );
 
-  border-radius: 5px;
+  border: 1px solid #d5ddff;
+  border-radius: 16px;
 
   padding: 15px;
 
   box-sizing: border-box;
 
   box-shadow:
-    0 6px 18px rgba(134, 167, 255, .12);
+    0 6px 15px rgba(134, 167, 255, 0.12);
 }
 
 
@@ -56,12 +63,17 @@
 
 .StampRally-image-box {
   width: 100%;
-  height: 280px;
+  height: 300px;
 
-  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  border-radius: 5px;
-  border: 2px solid rgba(134, 167, 255, .25);
+  background: #fff;
+
+  border-radius: 11px;
+
+  border: 2px solid rgba(134, 167, 255, 0.25);
 
   box-sizing: border-box;
 
@@ -72,34 +84,32 @@
 
 
 /* =====================================
-   実画像
+   スタンプポイント画像
 ===================================== */
 
 .StampRally-image {
-  width: 230%;
-  height: auto;
-
-  max-width: none;
-
   display: block;
 
-  position: relative;
+  width: 100%;
+  height: 100%;
 
-  left: -110px;
-  top: -60px;
+  object-fit: contain;
+  object-position: center center;
 
-  border-radius: 3px;
+  /* ★ 左右・上下位置 */
+  transform: translate(0px, 0px);
 }
+
 
 /* =====================================
    ラベル
 ===================================== */
 
 .StampRally-label {
-  margin-top: 12px;
+  margin: 12px auto 0;
 
   width: 120px;
-  height: 40px;
+  height: 36px;
 
   display: flex;
   align-items: center;
@@ -113,21 +123,24 @@
 
   color: #fff;
 
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
 
-  border-radius: 5px;
+  border-radius: 999px;
 
   box-shadow:
-    0 3px 8px rgba(111, 141, 255, .18);
+    0 3px 8px rgba(111, 141, 255, 0.18);
+
+  box-sizing: border-box;
 }
+
 
 /* =====================================
    説明文
 ===================================== */
 
 .StampRally-description {
-  margin: 12px 0 0;
+  margin: 11px 0 0;
 
   text-align: center;
 

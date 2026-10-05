@@ -72,7 +72,7 @@ export default function HomeGuide() {
 
 
         {/* ホーム画面タイトル */}
-        <div className="Home-Guide-divider">
+        <div className="Guide-section-title">
           ホーム画面
         </div>
 

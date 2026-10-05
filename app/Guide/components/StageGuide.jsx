@@ -80,7 +80,7 @@ export default function StageGuide() {
             タイトル
         ========================== */}
 
-        <div className="Stage-Guide-divider">
+        <div className="Guide-section-title">
           ステージ
         </div>
 

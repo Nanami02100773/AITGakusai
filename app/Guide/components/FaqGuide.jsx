@@ -69,7 +69,7 @@ export default function FaqGuide() {
             タイトル
         ========================== */}
 
-        <div className="Faq-Guide-divider">
+        <div className="Guide-section-title">
           よくある質問
         </div>
 

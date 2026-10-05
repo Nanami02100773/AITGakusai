@@ -2,8 +2,7 @@
    セクション全体
 ================================================= */
 
-.Home-Survey-section {
-
+.Survey-section {
   position: relative;
 
   padding: 150px 0 150px;
@@ -23,7 +22,6 @@
 ================================================= */
 
 .Survey-top-line {
-
   position: absolute;
 
   top: 0;
@@ -37,7 +35,6 @@
 
 
 .Survey-white-left {
-
   position: absolute;
 
   top: 0;
@@ -58,7 +55,6 @@
 
 
 .Survey-white-left::after {
-
   content: "";
 
   position: absolute;
@@ -74,7 +70,6 @@
 
 
 .Survey-white-center {
-
   position: absolute;
 
   top: 0;
@@ -88,7 +83,6 @@
 
 
 .Survey-white-center::after {
-
   content: "";
 
   position: absolute;
@@ -104,7 +98,6 @@
 
 
 .Survey-diagonal-line {
-
   position: absolute;
 
   top: 0;
@@ -121,7 +114,6 @@
 
 
 .Survey-diagonal-line-2 {
-
   position: absolute;
 
   top: 105px;
@@ -141,7 +133,6 @@
 ================================================= */
 
 .Survey-blue-bg {
-
   position: absolute;
 
   top: 48px;
@@ -169,7 +160,6 @@
 
 
 .Survey-blue-bg2 {
-
   position: absolute;
 
   top: 45px;
@@ -193,8 +183,7 @@
    タイトル
 ================================================= */
 
-.Home-section-title {
-
+.Survey-section-title {
   position: relative;
 
   z-index: 5;
@@ -249,14 +238,12 @@
 ================================================= */
 
 .Survey-container {
-
   width: 90%;
   max-width: 340px;
 
   margin: 0 auto;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 14px;
@@ -268,13 +255,10 @@
 ================================================= */
 
 .Survey-item {
-
   position: relative;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   height: 68px;
@@ -320,7 +304,6 @@
 
 
 .Survey-item:hover {
-
   transform: translateY(-2px);
 
   border-color: #9eb6ff;
@@ -336,7 +319,6 @@
 
 
 .Survey-item::before {
-
   content: "";
 
   position: absolute;
@@ -356,7 +338,6 @@
 
 
 .Survey-left-accent {
-
   display: none;
 }
 
@@ -366,7 +347,6 @@
 ================================================= */
 
 .Survey-left {
-
   position: relative;
 
   flex: 1;
@@ -374,9 +354,7 @@
   height: 100%;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   padding-left: 10px;
@@ -388,7 +366,6 @@
 ================================================= */
 
 .Survey-text {
-
   display: flex;
 
   justify-content: center;
@@ -399,11 +376,9 @@
 
 
 .Survey-label {
-
   color: #4f67d8;
 
   font-size: 17px;
-
   font-weight: 700;
 }
 
@@ -413,14 +388,12 @@
 ================================================= */
 
 .Survey-right {
-
   position: relative;
 
   width: 58px;
   height: 100%;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 }
@@ -431,7 +404,6 @@
 ================================================= */
 
 .Survey-right-line {
-
   position: absolute;
 
   left: 0;
@@ -454,7 +426,6 @@
 ================================================= */
 
 .Survey-arrow {
-
   width: 28px;
   height: 28px;
 
@@ -463,14 +434,12 @@
   background: #eef3ff;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   color: #6f8dff;
 
   font-size: 15px;
-
   font-weight: bold;
 
   transition: .25s;
@@ -478,7 +447,6 @@
 
 
 .Survey-item:hover .Survey-arrow {
-
   transform: translateX(4px);
 
   background: #dfe8ff;

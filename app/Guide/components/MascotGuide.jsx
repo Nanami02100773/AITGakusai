@@ -69,7 +69,7 @@ export default function MascotGuide() {
             タイトル
         ========================== */}
 
-        <div className="Mascot-Guide-divider">
+        <div className="Guide-section-title">
           マスコット紹介
         </div>
 

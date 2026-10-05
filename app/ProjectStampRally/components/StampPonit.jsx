@@ -3,6 +3,8 @@
 import React from "react";
 import "./StampPoint.css";
 
+import stampImage from "./Stamp/Stamp.jpg";
+
 function StampRally() {
   return (
     <section className="StampRally-section">
@@ -22,7 +24,7 @@ function StampRally() {
             {/* スタンプポイント画像 */}
             <div className="StampRally-image-box">
               <img
-                src="/ProjectStamp/StampPoint.svg"
+                src={stampImage.src}
                 alt="スタンプポイント"
                 className="StampRally-image"
               />
@@ -30,13 +32,13 @@ function StampRally() {
 
             {/* 説明文 */}
             <p className="StampRally-description">
-              ★の位置がスタンプポイントです
+              🐟の位置がスタンプポイントです
             </p>
 
           </div>
 
         </div>
-
+🐟
       </div>
 
     </section>

@@ -7,7 +7,7 @@ function DetailTable() {
       icon: "/project/place.png",
       iconClass: "place-icon",
       label: "場所",
-      value: "AITプラザ1階前",
+      value: "AITプラザ前",
     },
     {
       icon: "/project/clock.png",
@@ -15,12 +15,8 @@ function DetailTable() {
       label: "時間",
       items: [
         {
-          tag: "10/10（土）",
-          value: "10:00～17:00",
-        },
-        {
-          tag: "10/11（日）",
-          value: "10:00～16:15",
+          tag: "両日",
+          value: "10:30～16:30",
         },
       ],
     },
@@ -29,8 +25,6 @@ function DetailTable() {
       iconClass: "precautions-icon",
       label: "注意事項",
       value: [
-        "展示品は許可なく触れないでください。",
-        "AIT プラザ内は飲食喫煙禁止です。",
         "大学祭実行委員の指示に従ってください。従わずに生じた事故、トラブルに関して大学祭実行委員会は一切責任を負いません。",
       ],
     },

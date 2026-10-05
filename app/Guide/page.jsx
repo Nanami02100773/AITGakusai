@@ -5,7 +5,7 @@ import {
   M_PLUS_Rounded_1c,
 } from "next/font/google";
 
-import GuidePage from "./components/GuidePage";
+import Title from "./components/Title";
 import TopNavigationGuide from "./components/TopNavigationGuide";
 import BottomNavigationGuide from "./components/BottomNavigationGuide";
 
@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <div className={rounded.className}>
 
-      <GuidePage />
+      <Title />
 
       <TopNavigationGuide />
 

@@ -5,8 +5,6 @@ import { orbitron } from "../page";
 import "./TopNavigationGuide.css";
 
 import image1 from "./data/1.png";
-import image2 from "./data/2.jpg";
-import image3 from "./data/3.png";
 
 
 // =================================================
@@ -53,7 +51,6 @@ function useTransparentCrop(image) {
       // 透明ではない部分を探す
       for (let y = 0; y < canvas.height; y++) {
         for (let x = 0; x < canvas.width; x++) {
-
           const index =
             (y * canvas.width + x) * 4;
 
@@ -116,7 +113,6 @@ function useTransparentCrop(image) {
 // =================================================
 
 export default function TopNavigationGuide() {
-
   const [openItem, setOpenItem] = useState(null);
 
   const items = [
@@ -124,25 +120,22 @@ export default function TopNavigationGuide() {
       number: "01",
       title: "戻るボタン",
       text: "左側にあるマークを押すと、一つ前のページに戻ることができます。",
-      image: image1,
     },
     {
       number: "02",
       title: "ロゴエリア",
       text: "愛工大祭のロゴなどが表示されます。",
-      image: image2,
     },
     {
       number: "03",
       title: "メニュー",
       text: "アプリの操作説明を確認できます。",
-      image: image3,
     },
   ];
 
 
   // =================================================
-  // 画像は常に image1 で固定
+  // 画像は image1 で固定
   // =================================================
 
   const croppedImage =
@@ -213,7 +206,7 @@ export default function TopNavigationGuide() {
             タイトル
         ========================== */}
 
-        <div className="TopNavigationGuide-divider">
+        <div className="Guide-section-title">
           上部メニュー
         </div>
 
