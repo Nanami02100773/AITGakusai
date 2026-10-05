@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import "./ProjectGuide.css";
 import { orbitron } from "../page";
+
+import image6 from "./data/6.png";
 
 export default function ProjectGuide() {
   const [openItem, setOpenItem] = useState(null);
@@ -26,15 +29,11 @@ export default function ProjectGuide() {
       ========================== */}
 
       <div className="Project-Guide-header">
-
         <div className={`Project-Guide-number ${orbitron.className}`}>
           06
         </div>
 
-        <h1>
-          企画紹介
-        </h1>
-
+        <h1>企画紹介</h1>
       </div>
 
 
@@ -44,7 +43,6 @@ export default function ProjectGuide() {
 
       <div className="Project-Guide-content">
 
-
         {/* ==========================
             画像ボックス
         ========================== */}
@@ -52,12 +50,11 @@ export default function ProjectGuide() {
         <div className="Project-Guide-image-box">
 
           <div className="Project-Guide-image">
-
-            <img
-              src="/guide/project.png"
+            <Image
+              src={image6}
               alt="企画紹介"
+              priority
             />
-
           </div>
 
         </div>
@@ -79,13 +76,10 @@ export default function ProjectGuide() {
         <div className="Project-Guide-notice">
 
           {items.map((item, index) => (
-
             <div
               className="Project-Guide-notice-item"
               key={item.title}
             >
-
-              {/* 項目タイトル */}
 
               <button
                 type="button"
@@ -93,19 +87,11 @@ export default function ProjectGuide() {
                 onClick={() => handleToggle(index)}
               >
 
-                {/* ドット */}
-
                 <span className="Project-Guide-notice-dot"></span>
-
-
-                {/* タイトル */}
 
                 <h2>
                   {item.title}
                 </h2>
-
-
-                {/* 矢印 */}
 
                 <span
                   className={`Project-Guide-arrow ${
@@ -118,20 +104,13 @@ export default function ProjectGuide() {
               </button>
 
 
-              {/* ==========================
-                  説明本文
-              ========================== */}
-
               {openItem === index && (
-
                 <div className="Project-Guide-notice-text">
                   {item.text}
                 </div>
-
               )}
 
             </div>
-
           ))}
 
         </div>

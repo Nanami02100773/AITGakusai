@@ -6,12 +6,11 @@
 
   width: 100%;
 
-  padding: 12px 14px 25px;
+  padding: 10px 5px 100px;
 
   background: #fff;
 
   box-sizing: border-box;
-
 }
 
 
@@ -21,20 +20,19 @@
 
 .Mascot-Guide-header {
 
-  width: 360px;
+  width: 340px;
 
   max-width: 100%;
 
-  margin: 0 auto 18px;
+  margin: 0 auto 16px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 16px;
+  gap: 14px;
 
   box-sizing: border-box;
-
 }
 
 
@@ -44,9 +42,9 @@
 
 .Mascot-Guide-number {
 
-  width: 52px;
+  width: 48px;
 
-  height: 52px;
+  height: 48px;
 
   flex-shrink: 0;
 
@@ -68,15 +66,14 @@
 
   color: #fff;
 
-  font-size: 22px;
+  font-size: 20px;
 
   font-weight: 700;
 
   box-shadow:
-    0 4px 11px rgba(79, 109, 255, 0.22);
+    0 4px 10px rgba(79, 109, 255, 0.22);
 
   box-sizing: border-box;
-
 }
 
 
@@ -90,14 +87,13 @@
 
   margin: 0;
 
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 
   color: #353567;
 
-  font-size: 26px;
+  font-size: 24px;
 
   font-weight: 700;
-
 }
 
 
@@ -115,7 +111,7 @@
 
   bottom: 0;
 
-  width: 150px;
+  width: 140px;
 
   height: 3px;
 
@@ -126,7 +122,6 @@
   );
 
   border-radius: 999px;
-
 }
 
 
@@ -136,13 +131,13 @@
 
 .Mascot-Guide-content {
 
-  width: 390px;
+  width: 370px;
 
   max-width: 100%;
 
   margin: 0 auto;
 
-  padding: 22px 13px 26px;
+  padding: 20px 12px 24px;
 
   background: linear-gradient(
     180deg,
@@ -152,18 +147,17 @@
 
   border: 1px solid #d5ddff;
 
-  border-radius: 17px;
+  border-radius: 16px;
 
   box-shadow:
-    0 6px 17px rgba(79, 109, 255, 0.08);
+    0 6px 15px rgba(79, 109, 255, 0.08);
 
   box-sizing: border-box;
-
 }
 
 
 /* ==========================
-   画像ボックス
+   マスコット画像ボックス
 ========================== */
 
 .Mascot-Guide-image-box {
@@ -172,25 +166,33 @@
 
   max-width: 100%;
 
-  height: 255px;
+  height: 350px;
 
   margin: 0 auto;
 
-  padding: 14px;
+  padding: 0;
 
-  background: #fff;
+  position: relative;
 
-  border: 2px solid #c8d0ff;
+  background: #f0f5ff;
+
+  border: 2px solid #cbd8ff;
 
   border-radius: 11px;
 
   box-shadow:
-    0 6px 16px rgba(79, 109, 255, 0.12),
-
-    0 2px 4px rgba(79, 109, 255, 0.05);
+    0 6px 15px rgba(79, 109, 255, 0.08),
+    0 2px 4px rgba(79, 109, 255, 0.03);
 
   box-sizing: border-box;
 
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
 }
 
 
@@ -200,21 +202,41 @@
 
 .Mascot-Guide-image {
 
-  width: 100%;
+  width: 140%;
 
+  height: auto;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transform: translate(-25px, -15px);
+
+  background: transparent;
 }
 
 
+/* ==========================
+   画像本体
+========================== */
+
 .Mascot-Guide-image img {
+
+  display: block;
 
   width: 100%;
 
   height: auto;
 
-  display: block;
+  max-width: none;
 
-  border-radius: 11px;
+  object-fit: contain;
 
+  background: transparent;
 }
 
 
@@ -224,11 +246,11 @@
 
 .Mascot-Guide-divider {
 
-  width: 160px;
+  width: 150px;
 
-  height: 32px;
+  height: 30px;
 
-  margin: 15px auto 12px;
+  margin: 14px auto 11px;
 
   display: flex;
 
@@ -242,23 +264,26 @@
     #6f8dff
   );
 
-  border: 2px solid rgba(255, 255, 255, 0.65);
+  border: 2px solid rgba(
+    255,
+    255,
+    255,
+    0.65
+  );
 
   border-radius: 999px;
 
   box-shadow:
-    0 4px 10px rgba(79, 109, 255, 0.14),
-
+    0 4px 9px rgba(79, 109, 255, 0.14),
     inset 0 2px 0 rgba(255, 255, 255, 0.65);
 
   color: #fff;
 
-  font-size: 16px;
+  font-size: 15px;
 
   font-weight: 700;
 
   box-sizing: border-box;
-
 }
 
 
@@ -268,25 +293,34 @@
 
 .Mascot-Guide-notice {
 
-  width: 360px;
+  width: 340px;
 
   max-width: 100%;
 
   margin: 0 auto;
 
-  padding: 13px;
+  padding: 12px;
 
   background: #c8d0ff;
 
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.7
+  );
 
-  border-radius: 12px;
+  border-radius: 11px;
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    inset 0 1px 0 rgba(
+      255,
+      255,
+      255,
+      0.5
+    );
 
   box-sizing: border-box;
-
 }
 
 
@@ -296,15 +330,12 @@
 
 .Mascot-Guide-notice-item {
 
-  margin-bottom: 6px;
-
+  margin-bottom: 5px;
 }
-
 
 .Mascot-Guide-notice-item:last-child {
 
   margin-bottom: 0;
-
 }
 
 
@@ -316,15 +347,15 @@
 
   width: 100%;
 
-  min-height: 38px;
+  min-height: 36px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 12px;
+  gap: 11px;
 
-  padding: 8px 13px;
+  padding: 7px 12px;
 
   background: linear-gradient(
     180deg,
@@ -334,10 +365,15 @@
 
   border: 1px solid #e0e4f8;
 
-  border-radius: 10px;
+  border-radius: 9px;
 
   box-shadow:
-    0 2px 6px rgba(90, 100, 160, 0.07);
+    0 2px 5px rgba(
+      90,
+      100,
+      160,
+      0.07
+    );
 
   box-sizing: border-box;
 
@@ -350,7 +386,6 @@
     background 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
-
 }
 
 
@@ -363,8 +398,12 @@
   transform: scale(0.98);
 
   box-shadow:
-    0 2px 4px rgba(90, 100, 160, 0.08);
-
+    0 2px 4px rgba(
+      90,
+      100,
+      160,
+      0.08
+    );
 }
 
 
@@ -374,9 +413,9 @@
 
 .Mascot-Guide-notice-dot {
 
-  width: 11px;
+  width: 10px;
 
-  height: 11px;
+  height: 10px;
 
   flex-shrink: 0;
 
@@ -391,8 +430,12 @@
   border-radius: 50%;
 
   box-shadow:
-    0 2px 5px rgba(79, 109, 255, 0.2);
-
+    0 2px 5px rgba(
+      79,
+      109,
+      255,
+      0.2
+    );
 }
 
 
@@ -406,7 +449,7 @@
 
   color: #353567;
 
-  font-size: 15px;
+  font-size: 14px;
 
   font-weight: 700;
 
@@ -414,8 +457,8 @@
 
   flex: 1;
 
-  transition: color 0.2s ease;
-
+  transition:
+    color 0.2s ease;
 }
 
 
@@ -427,7 +470,7 @@
 
   color: #4f6dff;
 
-  font-size: 24px;
+  font-size: 22px;
 
   font-weight: 400;
 
@@ -436,12 +479,11 @@
   transition:
     transform 0.25s ease,
     color 0.2s ease;
-
 }
 
 
 /* ==========================
-   開いたとき
+   開いたときの矢印
 ========================== */
 
 .Mascot-Guide-arrow.is-open {
@@ -449,7 +491,6 @@
   transform: rotate(90deg);
 
   color: #3757ef;
-
 }
 
 
@@ -459,30 +500,29 @@
 
 .Mascot-Guide-notice-text {
 
-  width: calc(100% - 15px);
+  width: calc(100% - 14px);
 
-  margin-top: 5px;
+  margin-top: 4px;
 
   margin-left: auto;
 
-  padding: 11px 14px;
+  padding: 10px 13px;
 
   background: #e6eeff;
 
   border: 1px solid #c8d0ff;
 
-  border-radius: 9px;
+  border-radius: 8px;
 
   color: #353567;
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 500;
 
   line-height: 1.5;
 
   box-sizing: border-box;
-
 }
 
 
@@ -499,8 +539,12 @@
   border-color: #b8c6ff;
 
   box-shadow:
-    0 5px 11px rgba(79, 109, 255, 0.14);
-
+    0 4px 10px rgba(
+      79,
+      109,
+      255,
+      0.14
+    );
 }
 
 
@@ -511,7 +555,6 @@
 .Mascot-Guide-notice-title:hover h2 {
 
   color: #3757ef;
-
 }
 
 
@@ -522,5 +565,4 @@
 .Mascot-Guide-notice-title:hover .Mascot-Guide-arrow {
 
   color: #3757ef;
-
 }

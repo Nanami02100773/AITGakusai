@@ -140,19 +140,20 @@ export default function TopNavigationGuide() {
     },
   ];
 
-  const currentImage =
-    openItem !== null
-      ? items[openItem].image
-      : image1;
+
+  // =================================================
+  // 画像は常に image1 で固定
+  // =================================================
 
   const croppedImage =
-    useTransparentCrop(currentImage);
+    useTransparentCrop(image1);
 
-  const currentAlt =
-    openItem !== null
-      ? items[openItem].title
-      : "上部メニュー";
+  const currentAlt = "上部メニュー";
 
+
+  // =================================================
+  // 項目の開閉
+  // =================================================
 
   const handleToggle = (index) => {
     setOpenItem(
@@ -282,4 +283,3 @@ export default function TopNavigationGuide() {
     </section>
   );
 }
-

@@ -3,15 +3,10 @@
 ========================== */
 
 .Project-Guide-section {
-
   width: 100%;
-
   padding: 10px 12px 22px;
-
   background: #fff;
-
   box-sizing: border-box;
-
 }
 
 
@@ -20,21 +15,17 @@
 ========================== */
 
 .Project-Guide-header {
-
   width: 340px;
-
   max-width: 100%;
 
-  margin: 0 auto 15px;
+  margin: 0 auto 16px;
 
   display: flex;
-
   align-items: center;
 
-  gap: 13px;
+  gap: 14px;
 
   box-sizing: border-box;
-
 }
 
 
@@ -43,17 +34,13 @@
 ========================== */
 
 .Project-Guide-number {
-
-  width: 46px;
-
-  height: 46px;
+  width: 48px;
+  height: 48px;
 
   flex-shrink: 0;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   background: linear-gradient(
@@ -62,21 +49,18 @@
     #3757ef
   );
 
-  border: 2px solid #fff;
-
+  border: 3px solid #fff;
   border-radius: 50%;
 
   color: #fff;
 
   font-size: 20px;
-
   font-weight: 700;
 
   box-shadow:
-    0 3px 9px rgba(79, 109, 255, 0.18);
+    0 4px 10px rgba(79, 109, 255, 0.22);
 
   box-sizing: border-box;
-
 }
 
 
@@ -85,19 +69,15 @@
 ========================== */
 
 .Project-Guide-header h1 {
-
   position: relative;
 
   margin: 0;
-
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 
   color: #353567;
 
   font-size: 24px;
-
   font-weight: 700;
-
 }
 
 
@@ -106,17 +86,14 @@
 ========================== */
 
 .Project-Guide-header h1::after {
-
   content: "";
 
   position: absolute;
 
   left: 0;
-
   bottom: 0;
 
-  width: 145px;
-
+  width: 140px;
   height: 3px;
 
   background: linear-gradient(
@@ -126,7 +103,6 @@
   );
 
   border-radius: 999px;
-
 }
 
 
@@ -135,14 +111,12 @@
 ========================== */
 
 .Project-Guide-content {
-
   width: 370px;
-
   max-width: 100%;
 
   margin: 0 auto;
 
-  padding: 19px 11px 23px;
+  padding: 20px 12px 24px;
 
   background: linear-gradient(
     180deg,
@@ -151,14 +125,12 @@
   );
 
   border: 1px solid #d5ddff;
-
-  border-radius: 15px;
+  border-radius: 16px;
 
   box-shadow:
-    0 6px 15px rgba(79, 109, 255, 0.06);
+    0 6px 15px rgba(79, 109, 255, 0.08);
 
   box-sizing: border-box;
-
 }
 
 
@@ -167,54 +139,69 @@
 ========================== */
 
 .Project-Guide-image-box {
-
-  width: 325px;
-
+  width: 350px;
   max-width: 100%;
 
-  height: 245px;
+  height: 350px;
 
   margin: 0 auto;
+  padding: 10px;
 
-  padding: 12px;
+  background: #f0f5ff;
 
-  background: #fff;
-
-  border: 2px solid #c8d0ff;
-
-  border-radius: 10px;
+  border: 2px solid #cbd8ff;
+  border-radius: 11px;
 
   box-shadow:
-    0 5px 13px rgba(79, 109, 255, 0.08),
-
+    0 6px 15px rgba(79, 109, 255, 0.08),
     0 2px 4px rgba(79, 109, 255, 0.03);
 
   box-sizing: border-box;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
 
 /* ==========================
    企画紹介画像
+   ※画像の大きさはここで調整
 ========================== */
 
 .Project-Guide-image {
+  width: 150%;
+  height: 150%;
 
-  width: 100%;
+  flex-shrink: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
 }
 
 
+/* ==========================
+   画像本体
+========================== */
+
 .Project-Guide-image img {
-
-  width: 100%;
-
-  height: auto;
-
   display: block;
 
-  border-radius: 9px;
+  width: 100%;
+  height: 100%;
 
+  max-width: none;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center center;
+
+  background: transparent;
 }
 
 
@@ -223,17 +210,13 @@
 ========================== */
 
 .Project-Guide-divider {
-
   width: 150px;
+  height: 30px;
 
-  height: 31px;
-
-  margin: 13px auto 10px;
+  margin: 14px auto 11px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   background: linear-gradient(
@@ -242,23 +225,30 @@
     #6f8dff
   );
 
-  border: 2px solid rgba(255, 255, 255, 0.65);
+  border: 2px solid rgba(
+    255,
+    255,
+    255,
+    0.65
+  );
 
   border-radius: 999px;
 
   box-shadow:
-    0 3px 8px rgba(79, 109, 255, 0.1),
-
-    inset 0 2px 0 rgba(255, 255, 255, 0.65);
+    0 4px 9px rgba(79, 109, 255, 0.14),
+    inset 0 2px 0 rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
 
   color: #fff;
 
   font-size: 15px;
-
   font-weight: 700;
 
   box-sizing: border-box;
-
 }
 
 
@@ -267,26 +257,32 @@
 ========================== */
 
 .Project-Guide-notice {
-
-  width: 345px;
-
+  width: 340px;
   max-width: 100%;
 
   margin: 0 auto;
-
-  padding: 11px;
+  padding: 12px;
 
   background: #c8d0ff;
 
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.7
+  );
 
   border-radius: 11px;
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    inset 0 1px 0 rgba(
+      255,
+      255,
+      255,
+      0.5
+    );
 
   box-sizing: border-box;
-
 }
 
 
@@ -295,16 +291,12 @@
 ========================== */
 
 .Project-Guide-notice-item {
-
   margin-bottom: 5px;
-
 }
 
 
 .Project-Guide-notice-item:last-child {
-
   margin-bottom: 0;
-
 }
 
 
@@ -313,18 +305,15 @@
 ========================== */
 
 .Project-Guide-notice-title {
-
   width: 100%;
-
-  min-height: 40px;
+  min-height: 36px;
 
   display: flex;
-
   align-items: center;
 
-  gap: 10px;
+  gap: 11px;
 
-  padding: 7px 11px;
+  padding: 7px 12px;
 
   background: linear-gradient(
     180deg,
@@ -333,16 +322,19 @@
   );
 
   border: 1px solid #e0e4f8;
-
   border-radius: 9px;
 
   box-shadow:
-    0 2px 6px rgba(90, 100, 160, 0.05);
+    0 2px 5px rgba(
+      90,
+      100,
+      160,
+      0.07
+    );
 
   box-sizing: border-box;
 
   cursor: pointer;
-
   text-align: left;
 
   transition:
@@ -350,7 +342,6 @@
     background 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
-
 }
 
 
@@ -359,12 +350,15 @@
 ========================== */
 
 .Project-Guide-notice-title:active {
-
   transform: scale(0.98);
 
   box-shadow:
-    0 2px 4px rgba(90, 100, 160, 0.06);
-
+    0 2px 4px rgba(
+      90,
+      100,
+      160,
+      0.08
+    );
 }
 
 
@@ -373,10 +367,8 @@
 ========================== */
 
 .Project-Guide-notice-dot {
-
-  width: 9px;
-
-  height: 9px;
+  width: 10px;
+  height: 10px;
 
   flex-shrink: 0;
 
@@ -387,12 +379,15 @@
   );
 
   border: 1px solid #fff;
-
   border-radius: 50%;
 
   box-shadow:
-    0 2px 4px rgba(79, 109, 255, 0.15);
-
+    0 2px 5px rgba(
+      79,
+      109,
+      255,
+      0.2
+    );
 }
 
 
@@ -401,21 +396,19 @@
 ========================== */
 
 .Project-Guide-notice-title h2 {
-
   margin: 0;
 
   color: #353567;
 
   font-size: 14px;
-
   font-weight: 700;
 
   line-height: 1.3;
 
   flex: 1;
 
-  transition: color 0.2s ease;
-
+  transition:
+    color 0.2s ease;
 }
 
 
@@ -424,11 +417,9 @@
 ========================== */
 
 .Project-Guide-arrow {
-
   color: #4f6dff;
 
-  font-size: 21px;
-
+  font-size: 22px;
   font-weight: 400;
 
   line-height: 1;
@@ -436,7 +427,6 @@
   transition:
     transform 0.25s ease,
     color 0.2s ease;
-
 }
 
 
@@ -445,11 +435,9 @@
 ========================== */
 
 .Project-Guide-arrow.is-open {
-
   transform: rotate(90deg);
 
   color: #3757ef;
-
 }
 
 
@@ -458,31 +446,26 @@
 ========================== */
 
 .Project-Guide-notice-text {
-
   width: calc(100% - 14px);
 
   margin-top: 4px;
-
   margin-left: auto;
 
-  padding: 10px 12px;
+  padding: 10px 13px;
 
   background: #e6eeff;
 
   border: 1px solid #c8d0ff;
-
   border-radius: 8px;
 
   color: #353567;
 
   font-size: 12px;
-
   font-weight: 500;
 
   line-height: 1.5;
 
   box-sizing: border-box;
-
 }
 
 
@@ -491,16 +474,19 @@
 ========================== */
 
 .Project-Guide-notice-title:hover {
-
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 
   background: #eef2ff;
 
   border-color: #b8c6ff;
 
   box-shadow:
-    0 4px 9px rgba(79, 109, 255, 0.1);
-
+    0 4px 10px rgba(
+      79,
+      109,
+      255,
+      0.14
+    );
 }
 
 
@@ -509,9 +495,7 @@
 ========================== */
 
 .Project-Guide-notice-title:hover h2 {
-
   color: #3757ef;
-
 }
 
 
@@ -520,7 +504,5 @@
 ========================== */
 
 .Project-Guide-notice-title:hover .Project-Guide-arrow {
-
   color: #3757ef;
-
 }

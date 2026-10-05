@@ -429,10 +429,10 @@
 ========================================== */
 
 .BottomNavigation-Guide-icon {
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
 
-  padding: 5px;
+  padding: 0px;
 
   flex-shrink: 0;
 

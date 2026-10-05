@@ -161,35 +161,37 @@
 
 }
 
-
 /* ==========================
    画像ボックス
 ========================== */
 
 .Faq-Guide-image-box {
 
-  width: 330px;
+  width: 350px;
 
   max-width: 100%;
 
-  height: 240px;
+  height: 350px;
 
   margin: 0 auto;
 
-  padding: 13px;
+  padding: 10px;
 
-  background: #fff;
+  position: relative;
 
-  border: 2px solid #c8d0ff;
+  background: #f0f5ff;
 
-  border-radius: 10px;
+  border: 2px solid #cbd8ff;
+
+  border-radius: 11px;
 
   box-shadow:
-    0 5px 14px rgba(79, 109, 255, 0.12),
-
-    0 2px 4px rgba(79, 109, 255, 0.05);
+    0 6px 15px rgba(79, 109, 255, 0.08),
+    0 2px 4px rgba(79, 109, 255, 0.03);
 
   box-sizing: border-box;
+
+  overflow: hidden;
 
 }
 
@@ -202,6 +204,16 @@
 
   width: 100%;
 
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
 }
 
 
@@ -209,14 +221,21 @@
 
   width: 100%;
 
-  height: auto;
+  height: 100%;
+
+  max-width: none;
+
+  max-height: none;
+
+  object-fit: contain;
+
+  object-position: center center;
 
   display: block;
 
-  border-radius: 10px;
+  transform: translateY(0px);
 
 }
-
 
 /* ==========================
    よくある質問タイトル
@@ -248,7 +267,6 @@
 
   box-shadow:
     0 4px 9px rgba(79, 109, 255, 0.14),
-
     inset 0 2px 0 rgba(255, 255, 255, 0.65);
 
   color: #fff;

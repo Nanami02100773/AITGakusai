@@ -7,6 +7,12 @@ import "./BottomNavigationGuide.css";
 
 import image2 from "./data/2.jpg";
 
+import icon21 from "./data/2.1.png";
+import icon22 from "./data/2.2.png";
+import icon23 from "./data/2.3.png";
+import icon24 from "./data/2.4.png";
+import icon25 from "./data/2.5.png";
+
 export default function BottomNavigationGuide() {
   const [openItem, setOpenItem] = useState(null);
 
@@ -14,27 +20,27 @@ export default function BottomNavigationGuide() {
     {
       title: "ホーム",
       text: "学祭の最新情報やおすすめ企画を確認できます。",
-      icon: "/guide/icons/home.png",
+      icon: icon21.src,
     },
     {
       title: "ステージ情報",
       text: "ライブやイベントなどのステージ情報を確認できます。",
-      icon: "/guide/icons/stage.png",
+      icon: icon22.src,
     },
     {
       title: "マップ",
       text: "屋台や教室など、学内の場所を検索できます。",
-      icon: "/guide/icons/map.png",
+      icon: icon23.src,
     },
     {
       title: "企画紹介",
       text: "各企画の詳しい情報やアンケートを確認できます。",
-      icon: "/guide/icons/企画.png",
+      icon: icon24.src,
     },
     {
       title: "よくある質問",
       text: "FAQやマスコット紹介などを確認できます。",
-      icon: "/guide/icons/faq.png",
+      icon: icon25.src,
     },
   ];
 

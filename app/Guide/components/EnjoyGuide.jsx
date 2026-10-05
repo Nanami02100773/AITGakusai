@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { orbitron } from "../page";
 import "./EnjoyGuide.css";
+
+import image10 from "./data/10.jpg";
 
 export default function EnjoyGuide() {
   return (
@@ -31,14 +34,15 @@ export default function EnjoyGuide() {
       <div className="Enjoy-Guide-content">
 
         {/* ==========================
-            マスコット画像
+            画像
         ========================== */}
 
         <div className="Enjoy-Guide-image-box">
 
-          <img
-            src="/mascot.png"
-            alt="愛工大祭マスコット"
+          <Image
+            src={image10}
+            alt="愛工大祭を楽しもう"
+            priority
           />
 
         </div>

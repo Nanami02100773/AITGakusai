@@ -4,6 +4,8 @@ import { useState } from "react";
 import { orbitron } from "../page";
 import "./StageGuide.css";
 
+import image4 from "./data/4.png";
+
 export default function StageGuide() {
 
   const [openItem, setOpenItem] = useState(null);
@@ -17,10 +19,10 @@ export default function StageGuide() {
       title: "ステージのタイムテーブル",
       text: "ステージで行われる企画のスケジュールを確認できます。タップすると詳しい内容を確認できます。",
     },
-    {
-      title: "出演様紹介",
-      text: "その日にステージへ出演してくださる演者様の一覧を確認できます。",
-    },
+    // {
+    //   title: "出演様紹介",
+    //   text: "その日にステージへ出演してくださる演者様の一覧を確認できます。",
+    // },
   ];
 
   const handleToggle = (index) => {
@@ -65,7 +67,7 @@ export default function StageGuide() {
           <div className="Stage-Guide-image">
 
             <img
-              src="/guide/stage.png"
+              src={image4.src}
               alt="ステージ情報"
             />
 

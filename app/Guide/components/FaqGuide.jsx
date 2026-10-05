@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { orbitron } from "../page";
 import "./FaqGuide.css";
+
+import image8 from "./data/8.jpg";
 
 export default function FaqGuide() {
   const [openItem, setOpenItem] = useState(null);
@@ -51,9 +54,10 @@ export default function FaqGuide() {
 
           <div className="Faq-Guide-image">
 
-            <img
-              src="/guide/faq.png"
+            <Image
+              src={image8}
               alt="よくある質問"
+              priority
             />
 
           </div>

@@ -4,18 +4,32 @@ import { useState } from "react";
 import { orbitron } from "../page";
 import "./MapGuide.css";
 
+import image5 from "./data/5.jpg";
+
 export default function MapGuide() {
   const [openItem, setOpenItem] = useState(null);
 
   const items = [
-    {
-      title: "マップについて",
-      text: "大学内の各施設や場所を確認できます。建物名をタップすると、その場所までの経路を表示できます。",
+       {
+      title: "デジタルマップについて",
+      text: "このマップは行きたい場所へ経路を示してくれるものになっています。",
     },
     {
-      title: "ご利用について",
-      text: "八草キャンパスは敷地が広く、場所が分かりにくいこともありますので、ぜひご活用ください。場所が分からない場合は、お近くの大学祭実行委員にお気軽にお尋ねください。",
+      title: "施設関連",
+      text: "トイレや休憩所、案内所などの施設をマップから確認できます。",
     },
+    {
+      title: "企画場所",
+      text: "工科展や模擬店など、各企画が行われている場所を確認できます。",
+    },
+     {
+      title: "操作方法",
+      text: "マップの下部にHelpという操作の仕方などの説明文が載っている部分があります。操作に困ったら読んでみてください",
+    },
+    // {
+    //   title: "打上花火時",
+    //   text: "打上花火を見る際の場所や注意事項などを確認できます。",
+    // },
   ];
 
   const handleToggle = (index) => {
@@ -25,95 +39,50 @@ export default function MapGuide() {
   return (
     <section className="Map-Guide-section">
 
-      {/* ==========================
-          ページタイトル
-      ========================== */}
-
+      {/* ===== ヘッダー ===== */}
       <div className="Map-Guide-header">
-
-        <div
-          className={`Map-Guide-number ${orbitron.className}`}
-        >
+        <div className={`Map-Guide-number ${orbitron.className}`}>
           05
         </div>
 
-        <h1>
-          マップ
-        </h1>
-
+        <h1>マップ</h1>
       </div>
 
-
-      {/* ==========================
-          マップ全体
-      ========================== */}
-
+      {/* ===== コンテンツ ===== */}
       <div className="Map-Guide-content">
 
-
-        {/* ==========================
-            画像ボックス
-        ========================== */}
-
+        {/* ===== 画像 ===== */}
         <div className="Map-Guide-image-box">
-
           <div className="Map-Guide-image">
-
             <img
-              src="/guide/map.png"
+              src={image5.src}
               alt="マップ画面"
             />
-
           </div>
-
         </div>
 
-
-        {/* ==========================
-            タイトル
-        ========================== */}
-
+        {/* ===== 見出し ===== */}
         <div className="Map-Guide-divider">
           マップ
         </div>
 
-
-        {/* ==========================
-            説明ボックス
-        ========================== */}
-
+        {/* ===== 説明 ===== */}
         <div className="Map-Guide-notice">
 
           {items.map((item, index) => (
-
             <div
               className="Map-Guide-notice-item"
               key={item.title}
             >
-
-              {/* ==========================
-                  項目タイトル
-              ========================== */}
 
               <button
                 type="button"
                 className="Map-Guide-notice-title"
                 onClick={() => handleToggle(index)}
               >
-
-                {/* ドット */}
-
                 <span className="Map-Guide-notice-dot"></span>
 
-
-                {/* タイトル */}
-
-                <h2>
-                  {item.title}
-                </h2>
-
-
-                {/* 矢印 */}
+                <h2>{item.title}</h2>
 
                 <span
                   className={`Map-Guide-arrow ${
@@ -122,28 +91,18 @@ export default function MapGuide() {
                 >
                   &gt;
                 </span>
-
               </button>
 
-
-              {/* ==========================
-                  説明本文
-              ========================== */}
-
               {openItem === index && (
-
                 <div className="Map-Guide-notice-text">
                   {item.text}
                 </div>
-
               )}
 
             </div>
-
           ))}
 
         </div>
-
       </div>
 
     </section>

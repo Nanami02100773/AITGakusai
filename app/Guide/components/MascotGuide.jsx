@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { orbitron } from "../page";
 import "./MascotGuide.css";
+
+import image9 from "./data/9.png";
 
 export default function MascotGuide() {
   const [openItem, setOpenItem] = useState(null);
@@ -51,9 +54,10 @@ export default function MascotGuide() {
 
           <div className="Mascot-Guide-image">
 
-            <img
-              src="/guide/mascot.png"
+            <Image
+              src={image9}
               alt="マスコット紹介"
+              priority
             />
 
           </div>
