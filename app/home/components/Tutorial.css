@@ -195,18 +195,18 @@
 
 
 /* ===== 最終ページ ===== */
+
 .Tutorial-controls-last {
   justify-content: center;
+  align-items: center;
 }
-
 
 /* ===== 最終ページの戻る矢印 ===== */
+
 .Tutorial-controls-last .Tutorial-arrow-prev {
   position: absolute;
-
   left: 0;
 }
-
 
 /* ===== 最終ページのドット ===== */
 .Tutorial-controls-last .Tutorial-dots {
