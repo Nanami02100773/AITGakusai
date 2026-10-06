@@ -38,7 +38,7 @@ function StampRally() {
           </div>
 
         </div>
-🐟
+
       </div>
 
     </section>

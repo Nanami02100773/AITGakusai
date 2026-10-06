@@ -4,9 +4,13 @@
 
 .StampRally-section {
   width: 100%;
+
   padding: 10px 5px 100px;
+
   max-width: 100%;
+
   margin: 0 auto;
+
   box-sizing: border-box;
 }
 
@@ -17,6 +21,7 @@
 
 .StampRally-list {
   display: flex;
+
   justify-content: center;
 }
 
@@ -27,7 +32,9 @@
 
 .StampRally-item {
   width: 440px;
+
   max-width: 100%;
+
   box-sizing: border-box;
 }
 
@@ -46,6 +53,7 @@
   );
 
   border: 1px solid #d5ddff;
+
   border-radius: 16px;
 
   padding: 15px;
@@ -63,10 +71,13 @@
 
 .StampRally-image-box {
   width: 100%;
+
   height: 300px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   background: #fff;
@@ -91,12 +102,13 @@
   display: block;
 
   width: 100%;
+
   height: 100%;
 
   object-fit: contain;
+
   object-position: center center;
 
-  /* ★ 左右・上下位置 */
   transform: translate(0px, 0px);
 }
 
@@ -109,10 +121,13 @@
   margin: 12px auto 0;
 
   width: 120px;
+
   height: 36px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   background: linear-gradient(
@@ -124,6 +139,7 @@
   color: #fff;
 
   font-size: 14px;
+
   font-weight: 700;
 
   border-radius: 999px;
@@ -147,6 +163,7 @@
   color: #5f6f91;
 
   font-size: 14px;
+
   font-weight: 600;
 
   line-height: 1.6;

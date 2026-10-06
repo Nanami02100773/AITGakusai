@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 
 import Title from "./components/Title";
@@ -9,16 +10,12 @@ import DetailTable from "./components/DetailTable";
 import LaughMusicStageWrapper from "./components/LaughMusicStageWrapper";
 import LaughMusicGameCorner from "./components/LaughMusicGameCorner";
 
-import img1 from "./components/images/スクリーンショット (1).png";
-import img2 from "./components/images/スクリーンショット 2024-06-12 110056.png";
-import img3 from "./components/images/スクリーンショット 2024-07-03 114934.png";
-
 export default function Page() {
   return (
     <main>
       <Title text="Laugh＆Music" />
 
-      <ImageCarousel images={[img1, img2, img3]} />
+      <ImageCarousel />
 
       <DescriptionBox />
 
@@ -29,7 +26,6 @@ export default function Page() {
       {/* Day切り替え + ステージTT */}
       <LaughMusicStageWrapper />
 
-      
       <LaughMusicGameCorner />
     </main>
   );

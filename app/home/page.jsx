@@ -19,7 +19,10 @@ import Maintenance from "./components/Maintenance";
 import Tutorial from "./components/Tutorial";
 
 
-/* ===== フォント ===== */
+/* =================================================
+   フォント
+================================================= */
+
 export const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["500", "700"],
@@ -31,9 +34,37 @@ const rounded = M_PLUS_Rounded_1c({
 });
 
 
+/* =================================================
+   表示設定
+================================================= */
+
+/*
+  準備中画面を表示する
+  true  → 表示
+  false → 通常画面
+*/
+const SHOW_LOADING = false;
+
+
+/*
+  メンテナンス画面を表示する
+  true  → 表示
+  false → 通常画面
+*/
+const SHOW_MAINTENANCE = false;
+
+
+/*
+  ※両方 true にした場合は
+  メンテナンス画面を優先します
+*/
+
+
 export default function Page() {
-  const [loading, setLoading] = useState(true);
-  const [isMaintenance, setIsMaintenance] = useState(false);
+
+  /* =================================================
+     ヒーロー画像
+  ================================================= */
 
   const images = [
     "/images/festival1.jpg",
@@ -44,47 +75,46 @@ export default function Page() {
   const [index, setIndex] = useState(0);
 
 
-  /* ===== システム確認 ===== */
+  /* =================================================
+     カルーセル
+  ================================================= */
+
   useEffect(() => {
-    const checkSystem = async () => {
-      try {
-        await new Promise((resolve) =>
-          setTimeout(resolve, 2000)
-        );
 
-        const systemError = false;
-
-        if (systemError) {
-          setIsMaintenance(true);
-        }
-      } catch {
-        setIsMaintenance(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    checkSystem();
-  }, []);
-
-
-  /* ===== カルーセル ===== */
-  useEffect(() => {
     const timer = setInterval(() => {
+
       setIndex(
         (prev) => (prev + 1) % images.length
       );
+
     }, 4000);
 
     return () => clearInterval(timer);
+
   }, [images.length]);
 
 
-  /* ===== メンテナンス ===== */
-  if (isMaintenance) {
+  /* =================================================
+     メンテナンス
+  ================================================= */
+
+  if (SHOW_MAINTENANCE) {
     return <Maintenance />;
   }
 
+
+  /* =================================================
+     準備中
+  ================================================= */
+
+  if (SHOW_LOADING) {
+    return <Loading />;
+  }
+
+
+  /* =================================================
+     通常ホーム画面
+  ================================================= */
 
   return (
     <div className={rounded.className}>
@@ -104,6 +134,7 @@ export default function Page() {
       <NavigationBar />
 
       {/* ===== チュートリアル ===== */}
+
       <Tutorial />
 
     </div>

@@ -7,25 +7,45 @@ import React, {
 
 import "./ImageCarousel.css";
 
-function ImageCarousel({ images = [] }) {
+import img1 from "./images/1.jpg";
+import img2 from "./images/2.jpg";
+import img3 from "./images/3.jpg";
+
+
+function ImageCarousel() {
+
+  const images = [
+    img1,
+    img2,
+    img3,
+  ];
+
+
   const [current, setCurrent] = useState(0);
 
+
   useEffect(() => {
+
     if (images.length <= 1) return;
 
     const timer = setInterval(() => {
+
       setCurrent(
         (prev) =>
           (prev + 1) % images.length
       );
+
     }, 7000);
 
     return () => clearInterval(timer);
+
   }, [images.length]);
+
 
   if (!images.length) {
     return null;
   }
+
 
   return (
     <div className="laughmusic-image-carousel">
@@ -34,10 +54,12 @@ function ImageCarousel({ images = [] }) {
       <div className="laughmusic-frame-top-center" />
       <div className="laughmusic-frame-bottom-center" />
 
+
       {/* 上下装飾 */}
       <div className="laughmusic-frame-top">
         開催風景
       </div>
+
 
       {/* 四隅 */}
       <div className="laughmusic-frame-corner-tl" />
@@ -45,23 +67,26 @@ function ImageCarousel({ images = [] }) {
       <div className="laughmusic-frame-corner-bl" />
       <div className="laughmusic-frame-corner-br" />
 
-      {images.map((src, idx) => {
+
+      {/* 画像 */}
+      {images.map((image, idx) => {
 
         let className =
           "laughmusic-carousel-image";
 
-        if (idx === current) {
-          className += " center";
-        }
 
-        else if (
+        if (idx === current) {
+
+          className += " center";
+
+        } else if (
           idx ===
           (current + 1) % images.length
         ) {
-          className += " right";
-        }
 
-        else if (
+          className += " right";
+
+        } else if (
           idx ===
           (
             current -
@@ -70,24 +95,30 @@ function ImageCarousel({ images = [] }) {
           ) %
             images.length
         ) {
+
           className += " left";
+
+        } else {
+
+          className += " hidden";
+
         }
 
-        else {
-          className += " hidden";
-        }
 
         return (
           <img
             key={idx}
-            src={src}
-            alt={`carousel-${idx}`}
+            src={image.src}
+            alt={`開催風景 ${idx + 1}`}
             className={className}
           />
         );
+
       })}
+
     </div>
   );
 }
+
 
 export default ImageCarousel;

@@ -1,25 +1,476 @@
-.maintenance-container {
-  height: 100vh;
+/* =================================================
+   全体
+================================================= */
+
+.Maintenance-screen {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100dvh;
+
+  overflow: hidden;
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: #fff5f5;
+  justify-content: center;
+
+  background: #ffffff;
+
+  color: #4f6dff;
+
+  z-index: 99999;
 }
 
-.maintenance-box {
-  background: white;
-  padding: 40px 60px;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+/* =================================================
+   コンテンツ
+================================================= */
+
+.Maintenance-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  padding: 30px 20px;
+
+  box-sizing: border-box;
+
   text-align: center;
 }
 
-.maintenance-box h1 {
-  color: #d33;
-  margin-bottom: 20px;
+
+/* =================================================
+   スピナー
+================================================= */
+
+.Maintenance-spinner {
+  position: relative;
+
+  width: 86px;
+  height: 86px;
+
+  margin: 0 auto 55px;
 }
 
-.maintenance-box p {
-  color: #555;
-  margin: 8px 0;
+
+/* =================================================
+   スピナーの角棒
+================================================= */
+
+.Maintenance-spinner-bar {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 9px;
+  height: 24px;
+
+  margin-left: -4.5px;
+  margin-top: -12px;
+
+  border-radius: 10px;
+
+  background: #d6deff;
+
+  transform-origin: 4.5px 43px;
+
+  animation:
+    Maintenance-spinner-animation
+    2s
+    ease-in-out
+    infinite;
+}
+
+
+/* =================================================
+   12本を順番に動かす
+================================================= */
+
+.Maintenance-spinner-bar:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.Maintenance-spinner-bar:nth-child(2) {
+  animation-delay: -0.166s;
+}
+
+.Maintenance-spinner-bar:nth-child(3) {
+  animation-delay: -0.333s;
+}
+
+.Maintenance-spinner-bar:nth-child(4) {
+  animation-delay: -0.5s;
+}
+
+.Maintenance-spinner-bar:nth-child(5) {
+  animation-delay: -0.666s;
+}
+
+.Maintenance-spinner-bar:nth-child(6) {
+  animation-delay: -0.833s;
+}
+
+.Maintenance-spinner-bar:nth-child(7) {
+  animation-delay: -1s;
+}
+
+.Maintenance-spinner-bar:nth-child(8) {
+  animation-delay: -1.166s;
+}
+
+.Maintenance-spinner-bar:nth-child(9) {
+  animation-delay: -1.333s;
+}
+
+.Maintenance-spinner-bar:nth-child(10) {
+  animation-delay: -1.5s;
+}
+
+.Maintenance-spinner-bar:nth-child(11) {
+  animation-delay: -1.666s;
+}
+
+.Maintenance-spinner-bar:nth-child(12) {
+  animation-delay: -1.833s;
+}
+
+
+/* =================================================
+   スピナーアニメーション
+================================================= */
+
+@keyframes Maintenance-spinner-animation {
+
+  0% {
+    background: #4f6dff;
+  }
+
+  12% {
+    background: #6f8dff;
+  }
+
+  24% {
+    background: #86a7ff;
+  }
+
+  40% {
+    background: #b8c6ff;
+  }
+
+  60% {
+    background: #c8d0ff;
+  }
+
+  100% {
+    background: #e2e7ff;
+  }
+
+}
+
+
+/* =================================================
+   タイトル
+================================================= */
+
+.Maintenance-title {
+  margin: 0;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+
+  line-height: 1.4;
+
+  color: #4f6dff;
+}
+
+
+/* =================================================
+   メッセージ
+================================================= */
+
+.Maintenance-message {
+  margin: 38px 0 0;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 2.1;
+
+  letter-spacing: 0.08em;
+
+  color: #6f8dff;
+}
+
+
+/* =================================================
+   波 共通
+================================================= */
+
+.Maintenance-wave {
+  position: absolute;
+
+  left: 0;
+
+  width: 100vw;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =================================================
+   上の波
+   5つの波
+   左右が高く、中央が低い
+   1層目：少し濃い色
+================================================= */
+
+.Maintenance-wave-top {
+  top: 0;
+
+  height: 125px;
+
+  background:
+    radial-gradient(
+      ellipse 24% 80px at 10% 0%,
+      #d6deff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 24% 60px at 30% 0%,
+      #d6deff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 24% 40px at 50% 0%,
+      #d6deff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 24% 60px at 70% 0%,
+      #d6deff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 24% 80px at 90% 0%,
+      #d6deff 98%,
+      transparent 100%
+    );
+}
+
+
+/* =================================================
+   上の波 2層目
+================================================= */
+
+.Maintenance-wave-top::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 16px;
+
+  width: 100%;
+
+  height: 105px;
+
+  background:
+    radial-gradient(
+      ellipse 23% 80px at 10% 0%,
+      #e6ecff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 23% 60px at 30% 0%,
+      #e6ecff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 23% 40px at 50% 0%,
+      #e6ecff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 23% 60px at 70% 0%,
+      #e6ecff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 23% 80px at 90% 0%,
+      #e6ecff 98%,
+      transparent 100%
+    );
+
+  opacity: 0.85;
+}
+
+
+/* =================================================
+   下の波
+   5つの波
+   左右が高く、中央が低い
+   1層目：少し濃い色
+================================================= */
+
+.Maintenance-wave-bottom {
+  bottom: 0;
+
+  height: 125px;
+
+  background:
+    radial-gradient(
+      ellipse 24% 80px at 10% 100%,
+      #d6deff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 24% 60px at 30% 100%,
+      #d6deff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 24% 40px at 50% 100%,
+      #d6deff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 24% 60px at 70% 100%,
+      #d6deff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 24% 80px at 90% 100%,
+      #d6deff 98%,
+      transparent 100%
+    );
+}
+
+
+/* =================================================
+   下の波 2層目
+================================================= */
+
+.Maintenance-wave-bottom::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 16px;
+
+  width: 100%;
+
+  height: 105px;
+
+  background:
+    radial-gradient(
+      ellipse 23% 80px at 10% 100%,
+      #e6ecff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 23% 60px at 30% 100%,
+      #e6ecff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 23% 40px at 50% 100%,
+      #e6ecff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 23% 60px at 70% 100%,
+      #e6ecff 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 23% 80px at 90% 100%,
+      #e6ecff 98%,
+      transparent 100%
+    );
+
+  opacity: 0.8;
+}
+
+
+/* =================================================
+   かなり小さいスマートフォン
+================================================= */
+
+@media (max-width: 360px) {
+
+  .Maintenance-content {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+
+  /* =================================================
+     スピナー
+  ================================================= */
+
+  .Maintenance-spinner {
+    width: 82px;
+    height: 82px;
+
+    margin-bottom: 50px;
+  }
+
+
+  .Maintenance-spinner-bar {
+    width: 8px;
+    height: 22px;
+
+    margin-left: -4px;
+    margin-top: -11px;
+
+    transform-origin: 4px 41px;
+  }
+
+
+  /* =================================================
+     タイトル
+  ================================================= */
+
+  .Maintenance-title {
+    font-size: 30px;
+  }
+
+
+  /* =================================================
+     メッセージ
+  ================================================= */
+
+  .Maintenance-message {
+    margin-top: 34px;
+
+    font-size: 15px;
+
+    line-height: 2.05;
+
+    letter-spacing: 0.05em;
+  }
+
+
+  /* =================================================
+     波
+  ================================================= */
+
+  .Maintenance-wave-top,
+  .Maintenance-wave-bottom {
+    height: 105px;
+  }
+
 }
