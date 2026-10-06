@@ -7,7 +7,7 @@ function DetailTable() {
       icon: "/project/place.png",
       iconClass: "place-icon",
       label: "場所",
-      value: "工科展／楽市楽座／工科展／脱出ゲーム",
+      value: "工科展／楽市楽座／脱出ゲーム／講義実験棟",
     },
     {
       icon: "/project/clock.png",
