@@ -106,13 +106,17 @@ const StageTT = ({ data = [] }) => {
                         <div className="Stage-TT-detail">
 
                           {/* 写真 */}
-                          {item.image && (
-                            <img
-                              src={item.image.src}
-                              alt={item.title}
-                              className="Stage-TT-detail-image"
-                            />
-                          )}
+{item.image ? (
+  <img
+    src={item.image.src}
+    alt={item.title}
+    className="Stage-TT-detail-image"
+  />
+) : (
+  <div className="Stage-TT-detail-no-image">
+    NO IMAGE
+  </div>
+)}
 
                           {/* 紹介文 */}
                           {item.detail && (

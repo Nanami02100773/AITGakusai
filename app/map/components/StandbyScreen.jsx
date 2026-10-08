@@ -6,11 +6,12 @@ import { Suspense } from "react";
 const App = () => {
   return (
     <div
-      style={{
-        height: "100vh",
-        padding: "50px 0 70px",
-      }}
-    >
+  style={{
+    height: "100vh",
+    padding: "60px 0 90px",
+    boxSizing: "border-box",
+  }}
+>
       <Suspense>
         <AITGuideIframe />
       </Suspense>

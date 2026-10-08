@@ -9,9 +9,7 @@ export default function SurveySection() {
     },
     {
       title: "アプリ満足度",
-    },
-    {
-      title: "企画：MAKE",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLScB7WqU5jATBfb7bxedWU6mnj2CXpD5Lo7smAGL-0hH91ZqHw/viewform?usp=publish-editor",
     },
     // {
     //   title: "脱出ゲーム",
@@ -36,55 +34,66 @@ export default function SurveySection() {
       <div className="Survey-blue-bg"></div>
       <div className="Survey-blue-bg2"></div>
 
-
       {/* タイトル */}
       <div className="Survey-section-title">
         アンケート
       </div>
 
-
       {/* カード一覧 */}
       <div className="Survey-container">
 
-        {surveys.map((item, index) => (
+        {surveys.map((item, index) => {
 
-          <div
-            className="Survey-item"
-            key={index}
-          >
+          const content = (
+            <>
+              {/* 左アクセント */}
+              <div className="Survey-left-accent"></div>
 
-            {/* 左アクセント */}
-            <div className="Survey-left-accent"></div>
+              {/* 左側 */}
+              <div className="Survey-left">
 
+                <div className="Survey-text">
 
-            {/* 左側 */}
-            <div className="Survey-left">
+                  <div className="Survey-label">
+                    {item.title}
+                  </div>
 
-              <div className="Survey-text">
-
-                <div className="Survey-label">
-                  {item.title}
                 </div>
 
               </div>
 
-            </div>
+              {/* 右側 */}
+              <div className="Survey-right">
 
+                <div className="Survey-right-line"></div>
 
-            {/* 右側 */}
-            <div className="Survey-right">
+                <div className="Survey-arrow">
+                  ▶
+                </div>
 
-              <div className="Survey-right-line"></div>
-
-              <div className="Survey-arrow">
-                ▶
               </div>
+            </>
+          );
 
+          return item.url ? (
+            <a
+              className="Survey-item"
+              key={index}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {content}
+            </a>
+          ) : (
+            <div
+              className="Survey-item"
+              key={index}
+            >
+              {content}
             </div>
-
-          </div>
-
-        ))}
+          );
+        })}
 
       </div>
 

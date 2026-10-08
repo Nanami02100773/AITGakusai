@@ -47,14 +47,13 @@ const StageTTData1 = [
     icon: "/hometime/microphone.png",
     isPerformer: true,
   },
-  {
-    time: "12:45〜13:10",
-    title: "イントロドン",
-    icon: "/hometime/game.png",
-    image: marubatsuGameImage,
-    detail:
-      "曲のイントロを聴いて曲名を当てる参加型ゲーム！みんなで一緒に楽しもう！",
-  },
+ {
+  time: "12:45〜13:10",
+  title: "イントロドン",
+  icon: "/hometime/game.png",
+  detail:
+    "曲のイントロを聴いて曲名を当てる参加型ゲーム！みんなで一緒に楽しもう！",
+},
   {
     time: "13:10〜13:40",
     title: "大道芸人Kei",
