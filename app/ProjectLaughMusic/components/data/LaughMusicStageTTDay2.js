@@ -12,11 +12,11 @@ const LaughMusicStageTTDay2 = [
     title: "歌王",
   },
   {
-    time: "11:55〜12:20",
-    title: "超！反抗 × ～Chu♡ - Lollipop♡ CHU × Re:bellious",
+    time: "11:55〜12:45",
+    title: "超！反抗×CHU♡-Lollipop♡CHU×Re:belious-",
   },
   {
-    time: "12:20〜12:50",
+    time: "12:45〜12:50",
     title: "準備",
   },
   {

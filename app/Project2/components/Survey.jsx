@@ -6,6 +6,7 @@ export default function SurveySection() {
   const surveys = [
     {
       title: "愛工大祭について",
+      url: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=2tDUHRGA_EGIntfuP-yetlqbRsC00dBPumWMN5vXSyhUM1RGV1NWVzY4Q0xCMkFLQVZWMzhJQktTRi4u&origin=QRCode",
     },
     {
       title: "アプリ満足度",
@@ -41,9 +42,7 @@ export default function SurveySection() {
 
       {/* カード一覧 */}
       <div className="Survey-container">
-
         {surveys.map((item, index) => {
-
           const content = (
             <>
               {/* 左アクセント */}
@@ -51,26 +50,20 @@ export default function SurveySection() {
 
               {/* 左側 */}
               <div className="Survey-left">
-
                 <div className="Survey-text">
-
                   <div className="Survey-label">
                     {item.title}
                   </div>
-
                 </div>
-
               </div>
 
               {/* 右側 */}
               <div className="Survey-right">
-
                 <div className="Survey-right-line"></div>
 
                 <div className="Survey-arrow">
                   ▶
                 </div>
-
               </div>
             </>
           );
@@ -94,7 +87,6 @@ export default function SurveySection() {
             </div>
           );
         })}
-
       </div>
 
     </section>

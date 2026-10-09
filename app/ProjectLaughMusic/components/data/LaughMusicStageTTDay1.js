@@ -16,7 +16,7 @@ const LaughMusicStageTTDay1 = [
 
   {
     time: "11:15〜11:45",
-    title: "skip-a",
+    title: "skip-A",
   },
 
   {

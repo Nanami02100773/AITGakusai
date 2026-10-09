@@ -8,17 +8,13 @@
     #f4f8ff,
     #e8f1ff
   );
-
   border-radius: 10px;
   padding: 18px;
   width: 400px;
   max-width: 95%;
   margin: 10px auto 100px;
   box-sizing: border-box;
-
-  box-shadow:
-    0 6px 18px rgba(134, 167, 255, .12);
-
+  box-shadow: 0 6px 18px rgba(134, 167, 255, .12);
   text-align: center;
 }
 
@@ -26,149 +22,30 @@
   background: #fff;
   border-radius: 10px;
   padding: 20px;
-
   border: 1px solid rgba(134, 167, 255, .18);
 }
 
 /* =====================================
-   ゲージ
-===================================== */
-
-.kenketsu-gauge-container {
-  position: relative;
-
-  width: 200px;
-  height: 120px;
-
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.kenketsu-gauge-container svg {
-  display: block;
-}
-
-.kenketsu-gauge-base {
-  stroke: #d9e6ff;
-  stroke-width: 10;
-  fill: none;
-}
-
-.kenketsu-gauge-progress {
-  stroke: #ff9fb5;
-  stroke-width: 10;
-  stroke-linecap: round;
-  fill: none;
-
-  transition: stroke-dashoffset .6s ease;
-}
-
-.kenketsu-gauge-dot {
-  fill: #fff;
-  stroke: #ff9fb5;
-  stroke-width: 3;
-
-  transition:
-    cx .6s ease,
-    cy .6s ease;
-}
-
-/* =====================================
-   中央人数
+   合計人数
 ===================================== */
 
 .kenketsu-center-box {
-  position: absolute;
-
-  left: 50%;
-  top: 62%;
-
-  transform: translate(-50%, -50%);
-
-  width: 88px;
-  height: 52px;
-
+  min-height: 70px;
+  padding: 12px;
+  box-sizing: border-box;
   background: linear-gradient(
     180deg,
     #f4f8ff,
     #e8f1ff
   );
-
   border: 2px solid #a2bbff;
   border-radius: 10px;
-
   color: #6f8dff;
   font-size: 24px;
   font-weight: 700;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  box-shadow:
-    0 4px 10px rgba(134, 167, 255, .12);
-}
-
-/* =====================================
-   テキスト
-===================================== */
-
-.kenketsu-goal-text {
-  margin-top: 18px;
-
-  color: #3f4d6d;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.kenketsu-gauge-text {
-  margin-top: 8px;
-
-  color: #6b7692;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.kenketsu-update-time {
-  margin-top: 10px;
-
-  color: #8b97b3;
-  font-size: 12px;
-  text-align: right;
-}
-
-/* =====================================
-   入力欄（使う場合）
-===================================== */
-
-.kenketsu-input-section {
-  margin-top: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.kenketsu-input-section input[type="number"] {
-  width: 90px;
-
-  padding: 8px;
-
-  border: 2px solid #86a7ff;
-  border-radius: 8px;
-
-  outline: none;
-
-  font-size: 14px;
-}
-
-.kenketsu-input-section input[type="number"]:focus {
-  border-color: #6f8dff;
-
-  box-shadow:
-    0 0 0 3px rgba(134, 167, 255, .2);
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(134, 167, 255, .12);
 }
