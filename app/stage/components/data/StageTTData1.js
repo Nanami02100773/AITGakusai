@@ -7,6 +7,7 @@ import endingImage from "../stagetimeTT/ending1.jpg";
 import preparation1Image from "../stagetimeTT/preparation1.jpg";
 import setting1Image from "../stagetimeTT/setting1.jpg";
 import setting2Image from "../stagetimeTT/setting2.jpg";
+import introDonImage from "../stagetimeTT/introDon.jpg";
 
 const StageTTData1 = [
   {
@@ -47,10 +48,11 @@ const StageTTData1 = [
     icon: "/hometime/microphone.png",
     isPerformer: true,
   },
- {
+{
   time: "12:45〜13:10",
   title: "イントロドン",
   icon: "/hometime/game.png",
+  image: introDonImage,
   detail:
     "曲のイントロを聴いて曲名を当てる参加型ゲーム！みんなで一緒に楽しもう！",
 },

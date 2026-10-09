@@ -5,6 +5,7 @@ import "./LaughMusicGameCorner.css";
 
 import no1Image from "./Game/No.1.jpg";
 import no2Image from "./Game/No.2.jpg";
+import no3Image from "./Game/No.3.jpg";
 
 
 function LaughMusicGameCorner() {
@@ -16,7 +17,7 @@ function LaughMusicGameCorner() {
     },
     {
       name: "イントロドン",
-      image: null,
+      image: no3Image,
     },
     {
       name: "〇✕ゲーム",
